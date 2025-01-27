@@ -47,7 +47,7 @@ Untuk eksploit ini, dengan metode _flashing_ apa pun, akan perlu besi berani kec
 
 ::: info
 
-To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the console is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
+Untuk menguji fungsi besi berani, tahan di atas atau sekitar tombol (A)(B)(X)(Y) ketika konsol menyala apakah mode tidur bisa aktif. If it does, both displays will go black as long as the magnet is held in that spot.
 
 :::
 
