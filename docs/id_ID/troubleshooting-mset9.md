@@ -12,11 +12,11 @@ Python is not installed on the computer you are using. Download it from the [Pyt
 
 :::details ModuleNotFoundError: No module named 'pyfatfs'
 
-The pyfatfs module, which is needed to use the MSET9 installer on macOS, isn't installed on your computer.
+Modul "pyfatfs" yang digunakan untuk MSET9 installer di komputer macOS belum dipasang.
 
-1. Open a separate Terminal window
-2. Type `python3 -m pip install pyfatfs`, then press Enter
-3. Start again from [Section I Step 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+1. Buka Terminal yang baru
+2. Ketik `python3 -m pip install pyfatfs`, lalu tekan Enter
+3. Mulai lagi dari [Bagian I Langkah 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 :::
 
@@ -146,11 +146,11 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 
 :::
 
-## MSET9 (exploit)
+## MSET9 (eksploit)
 
-:::details Red screen after reinserting SD card (Section II Step 11)
+:::details Layar merah setelah menyisip kartu SD (Bagian II Langkah 11)
 
-You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
+Mungkin belum ditaruh `SafeB9S.bin` di akar kartu SD, atau berkasnya rusak. Salin `SafeB9S.bin` dari `.zip` MSET9, timpa berkas yang ada lalu ikuti instruksi ini untuk menghapus _trigger file_ (berkas pemicu):
 
 1. Matikan paksa daya konsol dengan menahan tombol Power selama 20 detik
 2. Sisipkan kartu SD ke komputer Anda
