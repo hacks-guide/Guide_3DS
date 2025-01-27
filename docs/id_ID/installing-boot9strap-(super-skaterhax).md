@@ -8,11 +8,11 @@ head:
     - src: /assets/js/link-common.js
 ---
 
-# Installing boot9strap (super-skaterhax)
+# Memasang boot9strap (super-skaterhax)
 
 :::details Perincian Teknis (opsional)
 
-For technical details on the exploits that you will be using on this page, see [here](https://github.com/zoogie/super-skaterhax).
+Untuk perincian teknis perihal eksploit pada laman ini, lihat di [sini](https://github.com/zoogie/super-skaterhax).
 
 :::
 
@@ -32,7 +32,7 @@ The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL.
 
 #### Bagian I - Persiapan
 
-In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher.
+Di bagian ini akan menaruh berkas untuk mengaktifkan super-skaterhax dan Homebrew Launcher.
 
 1. Matikan daya konsol
 
@@ -77,7 +77,7 @@ If you haven't already, make sure you have a working Internet connection set up 
 
 :::
 
-1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
+1. Saat di HOME Menu, tekan tombol L dan R bersamaan untuk membuka kamera
    - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/super/` for EUR/USA/JPN, `https://zoogie.github.io/web/korea` for KOR)
 2. Tap the QR code button and scan one of the following QR codes for your console's region [here](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
    - If you get a security certificate warning, please ensure that the system date is today's
