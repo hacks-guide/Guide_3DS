@@ -2,19 +2,19 @@
 
 :::details Perincian Teknis (opsional)
 
-In order to exploit the Browser application, we need to bypass the browser version check, which is designed to disallow the use of the browser without updating to the latest system version.
+Untuk mengeksploit aplikasi Browser, harus melangkaui pemeriksaan versi Browser, karena penggunaan peramban akan ditahan jika belum memperbarui sistem ke versi terbaru.
 
-A public proxy server is available, which, with the help of the SSLoth exploit, can bypass this check.
+Tersedia server Proxy publik, yang dengan bantuan eksploit SSLoth, bisa melangkaui pemeriksaan ini.
 
-Once the bypass is active, an exploit webpage will be accessible which will do the rest of the job.
+Sesudah pelangkauannya aktif, laman web eksploit akan bisa diakses dan memulai tugasnya.
 
-For technical details on the exploits that you will be using on this page, see [here](https://github.com/MrNbaYoh/3ds-ssloth) (SSLoth) and [here](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
+Untuk perincian teknis perihal eksploit pada laman ini, lihat di [sini](https://github.com/MrNbaYoh/3ds-ssloth) (SSLoth) dan [sini](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
 
 :::
 
 ## Catatan Kompatibilitas
 
-SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing the use of new-browserhax or old-browserhax (compatible with versions 11.4.0 through 11.13.0 in all regions), which can then be used in conjunction with universal-otherapp.
+SSLoth mengizinkan pengguna pada versi 11.13.0 ke bawah melangkaui periksa versi Browser, jadi bisa menggunakan new-browserhax atau old-browserhax (kompatibel di versi 11.4.0 hingga 11.13.0 di semua daerah), lalu akan digunakan bersama universal-otherapp.
 
 ## Apa yang Perlu
 
@@ -27,13 +27,13 @@ SSLoth allows users on version 11.13.0 and below to bypass the browser version c
 
 ### Bagian I - Persiapan
 
-In this section, you will copy the files needed to trigger both browserhax and universal-otherapp.
+Di bagian ini akan menaruh berkas untuk mengaktifkan browserhax dan universal-otherapp.
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
+3. Salin `otherapp.bin` ke akar kartu SD dan ubah nama menjadi `arm11code.bin`
    - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
-   - If you do not see the `.bin` extension, do not add it to the end of the filename
+   - Jika tidak terlihat ekstensi `.bin`, jangan tambahkan di ujung nama berkas
 4. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
 5. Buat folder dengan nama `boot9strap` di akar kartu SD
 6. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
@@ -41,38 +41,38 @@ In this section, you will copy the files needed to trigger both browserhax and u
 8. Sisip kembali kartu SD ke konsol
 9. Nyalakan daya konsol
 
-### Section II - SSLoth
+### Bagian II - SSLoth
 
-In this section, you will change your Internet connection settings to use a proxy network designed to bypass the browser version check, allowing the browser to function without a system update. This will allow you to access the browser exploit webpage in the next section.
+Di bagian ini akan mengubah pengaturan sambungan Internet ke jejaring Proxy untuk melangkaui periksa versi Browser, sehingga Browser bisa berfungsi tanpa pembaruan sistem. Ini agar bisa mengakses laman web eksploit Browser di bagian berikutnya.
 
 <!--@include: ./_include/addproxy.md -->
 
-1. Press "Back" twice, then "Close" to go back to the HOME Menu
+1. Tekan "Back" dua kali, lalu "Close" untuk kembali ke HOME Menu
 
-### Section III - Launching SafeB9SInstaller
+### Bagian III - Menjalankan SafeB9SInstaller
 
-In this section, you will visit the browser exploit webpage, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
+Di bagian ini akan membuka laman web eksploit Browser dengan universal-otherapp untuk menjalankan pemasang boot9strap (_custom firmware_).
 
-1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
-   - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
-2. Tap the QR code button and scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
-   - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
-   - If you get a security certificate warning, press (A) to allow the connection
+1. Saat di HOME Menu, tekan tombol L dan R bersamaan untuk membuka kamera
+   - Jika tidak bisa membuka kamera, buka Internet Browser dan coba ketik sendiri URL `https://zoogie.github.io/web/nbhax/`
+2. Sentuh tombol kode QR dan pindai [kode QR ini](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
+   - Jika mogok atau muncul kode galat, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
+   - Jika muncul peringatan sertifikat keamanan, tekan (A) untuk boleh menyambung
 3. Sentuh tombol "PROCEED TO HAXX"
 4. Jika eksploit berhasil akan muncul SafeB9SInstaller
-   - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+   - Jika muncul galat, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
 
-### Section IV - Installing boot9strap
+### Bagian IV - Memasang boot9strap
 
 Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
 2. Saat selesai, tekan (A) untuk nyalakan ulang konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section V - Restoring default proxy
+### Section V - Memulihkan Proxy bawaan
 
 <!--@include: ./_include/rmproxy.md -->
 
