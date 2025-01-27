@@ -39,7 +39,7 @@ Jika kamera TIDAK terbuka, metode ini tidak bisa diikuti. Jika seperti itu, ikut
 
 ### Bagian II - Persiapan
 
-Di bagian ini akan menyiapkan berkas untuk masuk ke eksploit safecerthax.
+Di bagian ini akan menaruh berkas untuk mengaktifkan eksploit safecerthax.
 
 1. Sisipkan kartu SD ke komputer Anda
 2. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
