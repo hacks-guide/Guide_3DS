@@ -68,7 +68,7 @@ Jika perlu, periksa dulu galat di kartu SD sebelum mengikuti panduan ini dengan 
 
 Dengan memodif konsol, ada kemungkinan kecil (tapi terjadi) konsol bisa _brick_ (matot). _**Salah menaruh berkas TIDAK akan membuat matot konsol**_, tapi bisa terjadi jika melewati instruksi.
 
-Singkatnya: Memodif konsol itu aman, tapi _**tanggung jawab sendiri**_ jika ada salah.
+Singkatnya: Memodif konsol itu aman, tapi _**tanggung jawab sendiri**_ jika salah.
 
 :::
 
