@@ -59,21 +59,21 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan super-skaterhax dan Homebre
    - Pengaturan daerah bisa dikembalikan ke biasa lagi setelah selesai dari laman ini
    - Jika muncul [peringatan](/images/screenshots/skaterhax/country-change-notice.png) akan kehilangan akses fitur Nintendo Network ID, ini aman menekan OK untuk lanjut
 
-9. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
+9. Pilih opsi berikut disesuaikan dengan daerah konsol ([gambar](/images/screenshots/skaterhax/skater-lang.png))
    - USA: United States, Do Not Set
    - EUR: United Kingdom, Do Not Set
    - JPN: 日本, 設定しない
    - KOR: 대한민국, 설정하지 않음
 
-10. Exit System Settings
+10. Keluar dari System Settings
 
-#### Section II - super-skaterhax
+#### Bagian II - super-skaterhax
 
-In this section, you will visit the browser exploit webpage, which will launch the Homebrew Launcher.
+Di bagian ini akan membuka laman web eksploit Browser untuk menjalankan Homebrew Launcher.
 
 ::: info
 
-If you haven't already, make sure you have a working Internet connection set up on your console.
+Jika sekiranya belum, pastikan konsol sudah tersambung ke internet.
 
 :::
 
