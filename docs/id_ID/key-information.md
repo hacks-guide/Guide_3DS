@@ -1,18 +1,18 @@
-# Key Information
+# Informasi Penting
 
 ::: info
 
-If this is your first time modding a 3DS (or you're unfamiliar with technology), keep reading! Otherwise, if you have prior experience and know what you're doing, continue to [Get Started](get-started).
+Jika ini pertama kalinya memodif 3DS (atau tidak biasa dengan teknologi), lanjut baca! Atau tidak, jika sebelumnya sudah pernah lakukan dan tahu harus apa, lanjut ke [Memulai](get-started).
 
 :::
 
-This page covers some of the base computer terminology and 3DS-specific information that you should know before following this guide.
+Laman ini menjabar beberapa istilah dasar komputer dan info spesifik-3DS yang harus diketahui sebelum mengikuti panduan ini.
 
-Each section is collapsed by default. Click or tap on the name of the section to open it.
+Daftar tiap bagian masih diciutkan. Jadi sentuh dulu nama bagiannya untuk membuka.
 
-## Compatibility
+## Kompatibilitas
 
-:::: details What consoles is this guide compatible with?
+:::: details Panduan ini kompatibel dengan konsol apa?
 
 ::: info
 
@@ -20,11 +20,11 @@ Each section is collapsed by default. Click or tap on the name of the section to
 
 :::
 
-This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware. It is NOT compatible with the DSi family of consoles (DSi, DSi XL/LL). For DSi-family consoles, consult [this guide](https://dsi.cfw.guide) instead.
+Panduan ini bisa untuk semua jenis konsol ecer Nintendo 3DS (termasuk 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, dan New 2DS XL/LL), terlepas dari daerah atau _firmware_. Ini TIDAK kompatibel untuk jenis konsol DSi (DSi, DSi XL/LL). Untuk jenis konsol DSi, rujuk ke [panduan ini](https://dsi.cfw.guide).
 
 ::::
 
-:::: details What kind of computer / hardware do I need to follow this guide?
+:::: details Untuk panduan ini, perlu komputer/peranti keras seperti apa?
 
 ::: info
 
@@ -32,11 +32,11 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 :::
 
-In most cases, you can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. Depending on your computer/phone/electronic device, you may need to purchase a USB to SD card adapter to allow your computer to read your SD card.
+Untuk mengikuti panduan di sini harus bisa mengunduh berkas dari Internet dan menyalinnya ke kartu SD. Tergantung komputer/ponsel/perangkat elektronik, mungkin perlu juga adaptor USB ke kartu SD agar perangkat bisa membaca kartu SD.
 
 ::::
 
-:::: details What kind of SD card does my console use/need?
+:::: details Untuk konsol saya, perlu kartu SD seperti apa?
 
 ::: info
 
@@ -44,7 +44,7 @@ In most cases, you can follow this guide as long as you are able to download fil
 
 :::
 
-The location of the SD card slot and the type of SD card that is accepted depends on the model of your 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
+Letak slot kartu SD dan jenis kartu SD yang bisa disisip tergantung pada model 3DS. Informasi lebih lanjut bisa dilihat di [laman dukungan resmi Nintendo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
 The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD cards larger than **128GB** are not recommended due to known issues with custom themes and GBA/DS graphics.
 
