@@ -119,7 +119,7 @@ ___
 
 ::: tip
 
-Selesai dah! _Custom firmware_ sudah disetel lengkap.
+Selesai dah! _Custom firmware_ konsol kini sudah disetel.
 
 :::
 
