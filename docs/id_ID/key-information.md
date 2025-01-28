@@ -64,11 +64,11 @@ Jika perlu, periksa dulu galat di kartu SD sebelum mengikuti panduan ini dengan 
 
 :::: warning
 
-:::details Potential risks (Disclaimer)
+:::details Potensi risiko (Sangkalan)
 
-By modding your console, you subject it to the remote (but non-zero) possibility of the console being bricked (rendered non-functional). _**Incorrect file placement will NOT brick your console**_, but purposely skipping instructions might.
+Dengan memodif konsol, ada kemungkinan kecil (tapi terjadi) konsol bisa _brick_ (matot). _**Salah menaruh berkas TIDAK akan membuat matot konsol**_, tapi bisa terjadi jika melewati instruksi.
 
-In short: Modding your console is safe, but it's _**your responsibility**_ if something goes wrong.
+Singkatnya: Memodif konsol itu aman, tapi _**tanggung jawab sendiri**_ jika ada salah.
 
 :::
 
