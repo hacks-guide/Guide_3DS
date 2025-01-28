@@ -38,7 +38,7 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan super-skaterhax dan Homebre
 
 2. Sisipkan kartu SD ke komputer Anda
 
-3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card, overwriting any existing files
+3. Salin semuanya dari folder `.zip` Super-skaterhax ke akar kartu SD, timpa berkas yang ada
 
    ::: info
 
@@ -50,14 +50,14 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan super-skaterhax dan Homebre
 
 5. Nyalakan daya konsol
 
-6. Launch System Settings
+6. Buka System Settings
 
-7. Select "Other Settings"
+7. Pilih "Other Settings"
 
-8. Navigate to "Profile" -> "Region Settings"
-   - These settings will be temporarily changed to increase the success rate of the exploit
-   - You can restore your region settings back to normal once you have finished this page
-   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
+8. Navigasi ke "Profile" -> "Region Settings"
+   - Pengaturan ini akan kita ubah sementara untuk meningkatkan keberhasilan eksploit
+   - Pengaturan daerah bisa dikembalikan ke biasa lagi setelah selesai dari laman ini
+   - Jika muncul [peringatan](/images/screenshots/skaterhax/country-change-notice.png) akan kehilangan akses fitur Nintendo Network ID, ini aman menekan OK untuk lanjut
 
 9. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
    - USA: United States, Do Not Set
