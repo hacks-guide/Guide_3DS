@@ -46,17 +46,17 @@ Untuk mengikuti panduan di sini harus bisa mengunduh berkas dari Internet dan me
 
 Letak slot kartu SD dan jenis kartu SD yang didukung tergantung pada model 3DS. Informasi lebih lanjut bisa dilihat di [laman dukungan resmi Nintendo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
-The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD cards larger than **128GB** are not recommended due to known issues with custom themes and GBA/DS graphics.
+3DS bisa membaca kartu SD ukuran berapa pun (bahkan lebih dari 32GB), tapi kartunya harus diformat ke FAT32 (**bukan** exFAT atau NTFS). Gunakan salah satu alat berikut untuk memformat kartu SD, tergantung sistem operasi: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). Kartu SD ukuran lebih dari **128GB** tidak dianjurkan karena ada isu dengan grafik GBA/DS dan tema kustom.
 
 ::: warning
 
-To follow this guide, you'll need an SD card with a capacity of at least **2GB**.
+Untuk mengikuti panduan ini perlu kartu SD setidaknya **2GB**.
 
 :::
 
 ::: info
 
-If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\))
+Jika perlu, periksa dulu galat di kartu SD sebelum mengikuti panduan ini dengan [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), atau [F3XSwift (Mac)](f3xswift-\(mac\))
 
 :::
 
