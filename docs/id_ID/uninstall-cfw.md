@@ -105,7 +105,7 @@ The purpose of this section is to verify that the console will boot and that cri
    - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
 9. Buka System Settings di konsol
    - If the console crashes at this point, the test has failed
-10. Select "Other Settings"
+10. Pilih "Other Settings"
 11. Select "Profile"
 12. Select "User Name"
 13. If you are able to enter a new user name, the test was successful
