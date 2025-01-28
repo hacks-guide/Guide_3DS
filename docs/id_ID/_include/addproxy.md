@@ -1,6 +1,6 @@
 ::: info
 
-If you haven't already, make sure you have a working Internet connection set up on your console.
+Jika sekiranya belum, pastikan konsol sudah tersambung ke internet.
 
 :::
 
