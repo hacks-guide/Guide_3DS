@@ -78,43 +78,43 @@ Jika sekiranya belum, pastikan konsol sudah tersambung ke internet.
 :::
 
 1. Saat di HOME Menu, tekan tombol L dan R bersamaan untuk membuka kamera
-   - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/super/` for EUR/USA/JPN, `https://zoogie.github.io/web/korea` for KOR)
-2. Tap the QR code button and scan one of the following QR codes for your console's region [here](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
-   - If you get a security certificate warning, please ensure that the system date is today's
-3. Press (Select) to open the bookmark tab
-   - If your (Select) button does not respond, tap the star icon on the bottom-left corner of the screen
-4. Tap "Bookmark this page"
-5. Press (B) once to return to the browser
-6. Press (ZR) to open the tab list
-   - If your (ZR) button does not respond, tap the two overlapped squares near the bottom-right corner of the screen
-7. Make sure that the only tab open is the super-skaterhax website
-   - This tab should be highlighted in blue on the tab list
-   - If other tabs are open, close them
-8. Press (B) once to return to the browser
-9. Press (Start) to open the context menu
-   - If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
-10. Tap on "Settings"
-11. Tap on "Delete Cookies"
+   - Jika tidak bisa membuka kamera, buka Internet Browser dan coba ketik sendiri URL `https://zoogie.github.io/web/super/` untuk EUR/USA/JPN; atau `https://zoogie.github.io/web/korea` untuk KOR
+2. Sentuh tombol kode QR dan pindai salah satu kode QR berikut sesuai daerah konsol di [sini](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
+   - Jika ada peringatan sertifikat keamanan, pastikan tanggal sistem itu hari ini
+3. Tekan (Select) untuk membuka tab markah
+   - Jika tombol (Select) tidak tanggap, sentuh ikon bintang di pojok kiri-bawah layar
+4. Sentuh "Bookmark this page"
+5. Tekan (B) sekali untuk kembali ke Browser
+6. Tekan (ZR) untuk membuka daftar tab
+   - Jika tombol (ZR) tidak tanggap, sentuh gambar dua kotak bertumpuk di pojok kanan-bawah layar
+7. Pastikan tab yang terbuka hanya situs super-skaterhax
+   - Tab ini harus bersorot warna biru di daftar tab
+   - Tutup tab yang lain jika ada
+8. Tekan (B) sekali untuk kembali ke Browser
+9. Tekan (Start) untuk membuka menu konteks
+   - Jika tombol (Start) tidak tanggap, sentuh menu 3-garis di pojok kanan-bawah layar
+10. Sentuh "Settings"
+11. Sentuh "Delete Cookies"
 12. Tekan (A) untuk lanjut
-13. Press (Home) to return to the HOME Menu, then immediately press (A) to launch the browser again
-14. Select the "GO GO!" button on the top of the bottom screen
-15. Press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
+13. Tekan (Home) untuk ke HOME Menu, lalu langsung tekan (A) untuk membuka Browser lagi
+14. Pilih tombol "GO GO!" di layar bawah bagian atas
+15. Tekan (A) untuk abaikan [sembulan](/images/screenshots/skaterhax/skater-popup.png)
     - Jika konsolnya macet di layar kuning, tahan tombol POWER sampai daya mati, lalu coba lagi bagian ini
     - Jika konsolnya macet di layar merah, tahan tombol POWER sampai daya mati, ulangi Langkah 3 Bagian II, lalu coba lagi bagian ini
-    - If your console [shows the word Text on the top-left corner of the bottom screen](/images/screenshots/skaterhax/skater-old3ds.png), you have an Old 3DS and this exploit **will not work on your device**. If this is the case, you should follow [MSET9](installing-boot9strap-\(mset9\)) instead
-    - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
-16. Your console will have booted into the Homebrew Launcher
-17. Launch nimdsphax from the list of homebrew
+    - Jika [ada tulisan "Text" di pojok kiri-atas layar bawah](/images/screenshots/skaterhax/skater-old3ds.png), berarti konsol Anda Old 3DS dan eksploit ini **tidak berfungsi di konsol tersebut**. Jika begitu, maka ikuti saja [MSET9](installing-boot9strap-\(mset9\))
+    - Jika muncul galat lain, coba lagi hingga 5 kali, dan jika masih galat, [ikuti panduan sidik gangguan ini](troubleshooting-super-skaterhax)
+16. Konsol akan menyala ke Homebrew Launcher
+17. Buka nimdsphax dari daftar _homebrew_
 18. Jika eksploit berhasil akan muncul SafeB9SInstaller
     - Jika konsolnya macet di layar merah atau hijau, tahan tombol POWER sampai daya mati, lalu coba lagi bagian ini
-    - This may take up to five attempts
+    - Ini mungkin perlu dicoba lima kali
 
 #### Bagian III - Memasang boot9strap
 
 Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-super-skaterhax)
 2. Saat selesai, tekan (A) untuk nyalakan ulang konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -125,7 +125,7 @@ ___
 
 ::: info
 
-You may now restore your region settings back to normal.
+Sekarang pengaturan daerah bisa dikembalikan ke biasa lagi.
 
 :::
 
