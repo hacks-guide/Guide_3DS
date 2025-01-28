@@ -18,17 +18,17 @@ Untuk perincian teknis perihal eksploit pada laman ini, lihat di [sini](https://
 
 ### Catatan Kompatibilitas
 
-Super-skaterhax (when used to launch the Homebrew Launcher) is compatible with New models on version 11.15.0 and above in all regions.
+Super-skaterhax (jika untuk membuka Homebrew Launcher) bisa untuk 3DS "New" dari _firmware_ 11.15.0 ke atas di semua daerah kecuali CHN/TWN.
 
 ::: warning
 
-The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL. Please ensure that the console you are modding is a New 3DS, New 3DS XL, or New 2DS XL before continuing.
+Instruksi di sini hanya berlaku untuk New 3DS, New 3DS XL, dan New 2DS XL. Mohon pastikan konsol yang akan dimodif itu New 3DS, New 3DS XL, atau New 2DS XL sebelum lanjut.
 
 :::
 
 ### Apa yang Perlu
 
-- The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
+- Berkas zip [Super-skaterhax](https://skater.nintendohomebrew.com) yang sesuai versi dan daerah konsol
 
 #### Bagian I - Persiapan
 
