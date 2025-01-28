@@ -76,6 +76,6 @@ ___
 
 ::: tip
 
-Your 3DS has successfully been region changed!
+Daerah konsol 3DS sekarang sudah diubah!
 
 :::
