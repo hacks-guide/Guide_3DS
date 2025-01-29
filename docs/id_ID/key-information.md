@@ -78,11 +78,11 @@ Singkatnya: Memodif konsol itu aman, tapi _**tanggung jawab sendiri**_ jika keli
 
 ::: warning
 
-Following this guide alone should not result in data loss, but SD card corruption is always a possibility. You should make a backup of your SD card contents (especially the `Nintendo 3DS` folder) if you have important data.
+Mengikuti panduan ini saja seharusnya tidak kehilangan data, tapi kartu SD rusak mungkin bisa terjadi. Jangan lupa membuat cadangan isi kartu SD (terlebih folder `Nintendo 3DS`) jika terdapat data penting.
 
 :::
 
-:::: details What does "root of SD" or "/luma/" mean?
+:::: details Apa maksudnya "akar kartu SD" atau "/luma/"?
 
 ::: info
 
