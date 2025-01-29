@@ -1,7 +1,7 @@
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
+2. Jika diminta membuat cadangan berkas esensial, tekan (A) untuk lakukan, lalu tekan (A) lagi sesudah selesai untuk lanjut
 3. Jika diminta membetulkan waktu & tanggal RTC, lakukan dengan menekan (A), lalu tekan (A) lagi untuk lanjut
-   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+   - Perlu diingat jika harus membetulkan waktu dan tanggal RTC, betulkan juga di System Settings setelah panduan ini
 4. Tekan (Home) untuk membuka menu tindakan
 5. Pilih "Scripts..."
 6. Select "ctrtransfer"
