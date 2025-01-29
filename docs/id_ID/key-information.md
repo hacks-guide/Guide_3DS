@@ -78,7 +78,7 @@ Singkatnya: Memodif konsol itu aman, tapi _**tanggung jawab sendiri**_ jika keli
 
 ::: warning
 
-Mengikuti panduan ini saja seharusnya tidak kehilangan data, tapi kartu SD rusak mungkin bisa terjadi. Jangan lupa membuat cadangan isi kartu SD (terlebih folder `Nintendo 3DS`) jika terdapat data penting.
+Mengikuti panduan ini saja seharusnya tidak kehilangan data, tapi kartu SD rusak mungkin bisa terjadi. Jangan lupa cadangkan isi kartu SD (terlebih folder `Nintendo 3DS`) jika ada data penting.
 
 :::
 
