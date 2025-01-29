@@ -118,11 +118,11 @@ Tanda **kurung sudut** (\< dan \>) biasanya untuk merujuk pengenal spesifik-sist
 
 :::
 
-In this guide, you will copy files that are downloaded on your computer/phone to your console's SD card. Many of these files come from GitHub, which is a website used by developers to publish their open-source releases. When downloading files from GitHub, you should download the file that _isn't_ source code.
+Di panduan ini kita akan menyalin berkas unduhan dari komputer/ponsel ke kartu SD konsol. Sebagian besar berkas di sini dari GitHub, yaitu situs tempat para pengembang menerbitkan _release_ sumber terbuka. Saat mengunduh berkas dari GitHub, unduh _yang bukan_ kode sumber.
 
 ::::
 
-:::: details How do I extract/open a ZIP file?
+:::: details Bagaimana cara ekstrak/buka ZIP?
 
 ::: info
 
@@ -130,15 +130,15 @@ In this guide, you will copy files that are downloaded on your computer/phone to
 
 :::
 
-Some of the files that you will be asked to download come in the `.zip` file format, which is used to package multiple files into one file.
+Berkas yang akan diminta unduh biasanya `.zip`, ini format untuk mengemas banyak berkas menjadi satu.
 
-When you are told to "copy (file) from (file).zip", that means that you need to open (or "extract") the ZIP file. Inside the ZIP file will be the file you're looking for, after which you can copy it to the specified location on your SD card.
+Jika disuruh "menyalin (berkas) dari (berkas).zip", berarti harus membuka (atau "ekstrak") berkas ZIP dulu. Sesudah menemukan berkas di dalam berkas ZIP, salin ke letak yang ditentukan di kartu SD.
 
-On most operating systems, you can extract files by double-clicking the file. If this doesn't work, you can install a reputable third-party extraction tool like [7-zip](https://7-zip.org/) instead.
+Di hampir semua sistem operasi, berkas bisa diekstrak dengan pencet dua kali. Jika itu tidak bisa, boleh saja pasang alat ekstraksi pihak ketiga ternama seperti [7-zip](https://7-zip.org/).
 
 ::::
 
-:::: details What are file extensions?
+:::: details Apa itu ekstensi berkas?
 
 ::: info
 
@@ -146,17 +146,17 @@ On most operating systems, you can extract files by double-clicking the file. If
 
 :::
 
-If your computer is running Windows, file extensions may be hidden by default, which may make it harder to find the files you're looking for. To enable file extensions, follow [these instructions](file-extensions-\(windows\)).
+Jika menggunakan Windows, ekstensi berkas disembunyikan secara bawaan sehingga susah mencari berkas yang dicari. Untuk mengaktifkan ekstensi, ikuti [instruksi ini](file-extensions-\(windows\)).
 
 ::::
 
-## Getting help
+## Mencari bantuan
 
-If you experience an issue while following this guide, there are many ways that you can get help!
+Jika ada masalah saat mengikuti panduan ini, ada banyak cara untuk mencari bantuan!
 
-- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- Jika punya pertanyaan lain yang belum terjawab di laman ini, mungkin ada di [Perihal Sebelum Pasang](faq#pre-installation-faq).
+- Jika ada isu ketika mengikuti panduan ini, coba ke laman [Sidik Gangguan](troubleshooting) untuk mencari solusi.
+- Jika sumber daya kami di sini kurang membantu, bisa minta bantuan bertemu langsung di [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
 ::: tip
 
