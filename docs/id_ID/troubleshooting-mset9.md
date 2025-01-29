@@ -12,7 +12,7 @@ Python is not installed on the computer you are using. Download it from the [Pyt
 
 :::details ModuleNotFoundError: No module named 'pyfatfs'
 
-Modul "pyfatfs" yang digunakan MSET9 installer pada komputer macOS belum dipasang.
+Modul "pyfatfs" yang diperlukan MSET9 installer untuk komputer macOS belum dipasang.
 
 1. Buka Terminal yang baru
 2. Ketik `python3 -m pip install pyfatfs`, lalu tekan Enter
