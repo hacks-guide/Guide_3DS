@@ -68,7 +68,7 @@ Jika perlu, periksa dulu galat di kartu SD sebelum mengikuti panduan ini dengan 
 
 Dengan memodif konsol, ada kemungkinan kecil (tapi terjadi) konsol bisa _brick_ (matot). _**Salah menaruh berkas TIDAK akan membuat matot konsol**_, tapi bisa terjadi jika melewati instruksi.
 
-Singkatnya: Memodif konsol itu aman, tapi _**tanggung jawab sendiri**_ jika keliru.
+Singkatnya: Memodif konsol itu aman, tapi _**tanggung jawab sendiri**_ jika ada salah.
 
 :::
 
@@ -90,9 +90,9 @@ Mengikuti panduan ini saja seharusnya tidak kehilangan data, tapi kartu SD rusak
 
 :::
 
-When copying files to the SD card, it is important to copy them to the right location - otherwise, the console will not detect the file and the exploit or software you are trying to use will not work. A term you will see frequently on this guide is **root of the SD card**, which means you are not inside any folder on your SD card. The directory that appears when you first open your SD card on your computer is called the 'root'.
+Saat menyalin berkas ke kartu SD, harus bisa menyalin ke letak yang benar - jika tidak, konsol tidak akan membaca berkas dan eksploit; atau aplikasi yang digunakan tidak berfungsi. Istilah yang akan sering dilihat di panduan ini yaitu **akar kartu SD**, yang berarti tidak di dalam folder apa pun di kartu SD. Direktori yang muncul saat pertama kali membuka kartu SD di komputer disebut 'akar' (_root_).
 
-You may also see folder names indicated like this: `/folder/`. The slashes are used to indicate directories and are not part of the name of the folder. For example, `/folder1/folder2/` would refer to `folder2` inside of `folder1`:
+Ada juga jalur folder yang ditulis seperti ini: `/folder/`. Garis miring ini adalah pemisah direktori dan bukan bagian dari nama folder. Contoh, `/folder1/folder2/` merujuk ke `folder2` di dalam `folder1`:
 
 ::: info
 
@@ -100,7 +100,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 :::
 
-**Angle brackets** (\< and \>) are also occasionally used to refer to system-specific identifiers. For example, if the guide says `<ID0>`, it is referring to the system-specific identifier inside of the `Nintendo 3DS` folder, rather than a folder literally named "ID0":
+Tanda **kurung sudut** (\< dan \>) biasanya untuk merujuk pengenal spesifik-sistem. Contoh, jika panduan bertulis `<ID0>`, ini merujuk ke pengenal spesifik-sistem yang ada di folder `Nintendo 3DS`, bukan berarti folder bernama "ID0":
 
 ::: info
 
@@ -110,7 +110,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 ::::
 
-:::: details How do I download files from GitHub?
+:::: details Bagaimana cara unduh dari GitHub?
 
 ::: info
 
