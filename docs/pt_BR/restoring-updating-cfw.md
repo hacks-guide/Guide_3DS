@@ -27,6 +27,6 @@ A última versão do Luma3DS foi instalada no seu cartão SD e na memória inter
 
 ::: tip
 
-Se quiser reinstalar ou atualizar outros aplicativos de homebrew (ex. FBI, Homebrew Launcher), continue em [Finalizando a Instalação](finalizing-setup)
+Continue to [Finalizing Setup](finalizing-setup) to install or update homebrew applications (e.g. FBI, Homebrew Launcher).
 
 :::
