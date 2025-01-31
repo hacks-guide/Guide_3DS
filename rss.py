@@ -35,7 +35,7 @@ with open(rss, "w") as xml:
     xml.write("<rss version=\"2.0\">\n")
     xml.write("\t<channel>\n")
     xml.write("\t\t<title>Plailect Guide Feed</title>\n")
-    xml.write("\t\t<lastBuildDate>{0}</lastBuildDate>\n".format(datetime.datetime.utcnow().strftime("%a, %d %b %Y %X +0000")))
+    xml.write(f"\t\t<lastBuildDate>{datetime.datetime.utcnow().strftime("%a, %d %b %Y %X +0000")}</lastBuildDate>\n")
     xml.write("\t\t<link>https://github.com/hacks-guide/Guide_3DS/</link>\n")
 
     for filename in os.listdir(dir):
@@ -47,7 +47,7 @@ with open(rss, "w") as xml:
                 tor = bencodepy.decode(raw)
                 trackers = []
                 infohash = hashlib.sha1(bencodepy.encode(tor[b"info"])).hexdigest().upper()
-                magp = {"xt": "urn:btih:{0}".format(infohash), "dn": tor[b"info"][b"name"], "xl": tor[b"info"][b"length"]}
+                magp = {"xt": f"urn:btih:{infohash}", "dn": tor[b"info"][b"name"], "xl": tor[b"info"][b"length"]}
                 magstr = urllib.parse.urlencode(magp)
                 if b'announce-list' in tor:
                     for anncl in tor[b'announce-list']:
@@ -66,16 +66,16 @@ with open(rss, "w") as xml:
     for i in items:
         pubdate = datetime.datetime.utcfromtimestamp(int(i["ts"]))
         xml.write("\t\t<item>\n")
-        xml.write("\t\t\t<title>{0}</title>\n".format(i["name"]))
-        xml.write("\t\t\t<description>{0}</description>\n".format(i["name"]))
-        xml.write("\t\t\t<guid>{0}</guid>\n".format(i["infohash"]))
-        xml.write("\t\t\t<link>magnet:?xt=urn:btih:{0}</link>\n".format(i["infohash"]))
-        xml.write("\t\t\t<pubDate>{0}</pubDate>\n".format(pubdate.strftime("%a, %d %b %Y %X +0000")))
-        xml.write("\t\t\t<contentLength>{0}</contentLength>\n".format(i["length"]))
-        xml.write("\t\t\t<infoHash>{0}</infoHash>\n".format(i["infohash"]))
-        xml.write("\t\t\t<magnetURI>magnet:?xt=urn:btih:{0}</magnetURI>\n".format(i["infohash"]))
+        xml.write(f"\t\t\t<title>{i['name']}</title>\n")
+        xml.write(f"\t\t\t<description>{i['name']}</description>\n".format(i["name"]))
+        xml.write(f"\t\t\t<guid>{i['infohash']}</guid>\n")
+        xml.write(f"\t\t\t<link>magnet:?xt=urn:btih:{i['infohash']}</link>\n")
+        xml.write(f"\t\t\t<pubDate>{pubdate.strftime("%a, %d %b %Y %X +0000")}</pubDate>\n")
+        xml.write(f"\t\t\t<contentLength>{i['lenght']}</contentLength>\n")
+        xml.write(f"\t\t\t<infoHash>{i['infohash']}</infoHash>\n")
+        xml.write(f"\t\t\t<magnetURI>magnet:?xt=urn:btih:{i['infohash']}</magnetURI>\n")
         #xml.write("\t\t\t<fileName>{0}</fileName><fileName>\n".format(name))
-        xml.write("\t\t\t<enclosure url=\"magnet:?xt=urn:btih:{0}\" type=\"application/x-bittorrent\" />\n".format(i["infohash"]))
+        xml.write("\t\t\t<enclosure url=\"magnet:?xt=urn:btih:{i[infohash]}\" type=\"application/x-bittorrent\" />\n")
 
         if i["trackers"]:
             xml.write("\t\t\t<trackers>\n")
@@ -83,7 +83,7 @@ with open(rss, "w") as xml:
 
             for tracker in i["trackers"]:
                 xml.write("\t\t\t\t\t<tracker>\n")
-                xml.write("\t\t\t\t\t\t{0}\n".format(tracker))
+                xml.write(f"\t\t\t\t\t\t{tracker}\n")
                 xml.write("\t\t\t\t\t</tracker>\n")
 
             xml.write("\t\t\t\t</group>\n")
