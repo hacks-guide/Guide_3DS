@@ -27,6 +27,6 @@
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup) to install or update homebrew applications (e.g. FBI, Homebrew Launcher).
+Συνέχεια στην [Ολοκλήρωση εγκατάστασης](finalizing-setup) για εγκατάσταση ή ενημέρωση εφαρμογών homebrew (π.χ. FBI, Homebrew Launcher).
 
 :::
