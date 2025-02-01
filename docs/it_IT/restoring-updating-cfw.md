@@ -27,6 +27,6 @@ La versione più recente di Luma3DS è ora installata sulla scheda SD e nella me
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup) to install or update homebrew applications (e.g. FBI, Homebrew Launcher).
+Prosegui con il [Completamento dell'installazione](finalizing-setup) per installare o aggiornare le applicazioni homebrew (ad esempio FBI, Homebrew Launcher).
 
 :::
