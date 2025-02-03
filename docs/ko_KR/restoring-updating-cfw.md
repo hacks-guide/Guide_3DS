@@ -27,6 +27,6 @@
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup) to install or update homebrew applications (e.g. FBI, Homebrew Launcher).
+[마무리 단계](finalizing-setup)로 이동해 설치를 계속하거나 홈브류 앱들을 업데이트하세요 (예. FBI, Homebrew Launcher).
 
 :::
