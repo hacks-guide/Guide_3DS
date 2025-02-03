@@ -87,7 +87,7 @@ Se este for o caso, tente os passos abaixo, os quais são listados de mais fáci
 1. Desligue o console, remova o cartão SD, insira-o novamente e, em seguida, ligue seu console
 2. Desligue o console, remova o cartão SD, insira-o no seu computador, baixe a versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extraia `boot.firm` do `Luma3DS.zip` e coloque-o na raiz do seu cartão SD (substituindo qualquer arquivo existente)
 3. Desligue o console, remova o cartão SD, insira-o no seu computador e reformate o cartão SD de acordo com o sistema operacional do seu computador: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)) _(isso irá apagar os dados do seu cartão SD)_
-4. Verifique se há erros no seu cartão SD de acordo com o sistema operacional do seu computador: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xquickt-\(mac\)). Se o seu cartão SD estiver marcado como defeituoso, então você terá que substituir o cartão SD
+4. Verifique se há erros no seu cartão SD de acordo com o sistema operacional do seu computador: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)). Se o seu cartão SD estiver marcado como defeituoso, então você terá que substituir o cartão SD
 5. Sua entrada de cartão SD pode estar com problemas. Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter mais ajuda
 
 :::
