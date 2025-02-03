@@ -1,4 +1,4 @@
-# Restoring / Updating CFW
+# Memulihkan / Memperbarui CFW
 
 ## Bacaan Penting
 
