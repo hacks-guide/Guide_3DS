@@ -1,4 +1,4 @@
-1. Press (Home) to bring up the action menu
+1. Presiona el botón (HOME) para abrir el menú de acciones
 2. Select "Scripts..."
 3. Select "GM9Megascript"
 4. Select "Backup Options"
@@ -6,15 +6,15 @@
 6. Press (A) to confirm
    - This process will take some time
    - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
-7. Press (A) to continue
-8. Press (B) to return to the main menu
+7. Presiona (A) para continuar
+8. Presiona (B) para regresar al menú principal
 9. Select "Exit"
 10. Press (A) to relock write permissions if prompted
-11. Navigate to `[S:] SYSNAND VIRTUAL`
+11. Ve a `[S:] SYSNAND VIRTUAL`
 12. Pulsa (A) en `essential.exefs` para seleccionarlo
 13. Seleciona "Copy to 0:/gm9/out"
     - If you see "Destination already exists", press (A) on "Overwrite file(s)"
-14. Press (A) to continue
+14. Presiona (A) para continuar
 15. Hold (R) and press (Start) at the same time to power off your console
 16. Inserta la tarjeta SD en tu computadora
 17. Copia los archivos `<fecha>_<numerodeserie>_sysnand_##.bin`,`<fecha>_<numerodeserie>_sysnand_##.bin.sha` y `essential.exefs` en la carpeta `/gm9/out/` de tu tarjeta SD a una ubicación segura en tu computadora
