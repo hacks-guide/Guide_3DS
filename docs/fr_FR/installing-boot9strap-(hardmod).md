@@ -16,7 +16,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on _all_ versions that you have a corresponding `.firm` for.
 
-## What You Need
+## Ce dont vous avez besoin
 
 - Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
 - The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
@@ -66,7 +66,7 @@ This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on _all_ versions that 
 In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Insérez votre carte SD dans votre ordinateur
 3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer
 5. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
