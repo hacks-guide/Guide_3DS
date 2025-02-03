@@ -1,4 +1,4 @@
-1. Press (Home) to bring up the action menu
+1. Presiona el botón (HOME) para abrir el menú de acciones
 2. Select "More..."
 3. Selecciona "SD format menu"
 4. Selecciona "No EmuNAND"
