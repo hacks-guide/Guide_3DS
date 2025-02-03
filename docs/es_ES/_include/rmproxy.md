@@ -7,4 +7,4 @@ En esta sección, restaurarás la configuración de Internet a su estado origina
 5. Click OK, then click Save
 6. When prompted, click "Test" to perform the connection test
    - The test should succeed
-7. Power off your console
+7. Apaga la consola
