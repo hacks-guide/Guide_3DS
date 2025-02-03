@@ -33,17 +33,17 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 ### Section II - Flashing ntrboot
 
 1. Launch `ntrboot_flasher_nds.nds` on your console using your flashcart
-2. Press (A) to continue
+2. Presiona (A) para continuar
 3. Use (Up) and (Down) to select your flashcart
-4. Press (A) to continue
+4. Presiona (A) para continuar
 5. Select "Dump flash" to make a backup of your flashcart's memory
 6. Input the key combo given to confirm
-7. Press (A) to continue
+7. Presiona (A) para continuar
 8. Use (Up) and (Down) to select your flashcart
-9. Press (A) to continue
+9. Presiona (A) para continuar
 10. Select "Inject FIRM" to install boot9strap to your flashcart
 11. Input the key combo given to confirm
-12. Press (A) to continue
+12. Presiona (A) para continuar
 13. Apaga la consola
 
 ___
