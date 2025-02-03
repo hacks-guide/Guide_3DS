@@ -123,7 +123,7 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 5. If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
    - If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it
 6. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
-7. Press (Home) to bring up the action menu
+7. Presiona el botón (HOME) para abrir el menú de acciones
 8. Select "Scripts..."
 9. Select "finalize"
 10. Follow the prompts in the script, answering any questions that you are asked
