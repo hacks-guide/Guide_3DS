@@ -24,7 +24,7 @@
 - [문제 해결 (마무리 단계)](troubleshooting-finalizing-setup)
 - [문제 해결 (A9LH를 B9S로 업데이트)](troubleshooting-a9lh-to-b9s)
 - [문제 해결 (B9S 업데이트)](troubleshooting-updating-b9s)
-- [Troubleshooting (Post-Install)](troubleshooting-post-install)
+- [문제 해결 (마무리 단계)](troubleshooting-post-install)
 
 :::
 
@@ -74,7 +74,7 @@
 - [문제 해결 (마무리 단계)](troubleshooting-finalizing-setup)
 - [문제 해결 (MSET9)](troubleshooting-mset9)
 - [문제 해결 (ntrboot)](troubleshooting-ntrboot)
-- [Troubleshooting (Post-Install)](troubleshooting-post-install)
+- [문제 해결 (마무리 단계)](troubleshooting-post-install)
 - [문제 해결 (Soundhax)](troubleshooting-soundhax)
 - [문제 해결 (safecerthax)](troubleshooting-safecerthax)
 - [문제 해결 (SSLoth-Browser)](troubleshooting-ssloth-browser)
