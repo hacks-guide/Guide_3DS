@@ -92,7 +92,7 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
 5. Tekan kombo yang diberikan untuk membuka izin tulis SysNAND (lvl1)
    - Proses ini akan lumayan lama
 6. Sesudah selesai, tekan (A) untuk lanjut
-7. Press (B) to decline relocking write permissions if prompted
+7. Tekan (B) untuk **tidak** menutup ulang izin tulis jika diminta
 8. Tekan (B) untuk kembali ke menu utama
 
 ### Bagian V - Memulihkan Simpanan DSiWare
@@ -104,22 +104,22 @@ Jika tadi tidak mencadang simpanan (_save_) DSiWare, lewati bagian ini.
 :::
 
 1. Navigasi ke `[0:] SDCARD` -> `gm9` -> `out`
-2. Press (Y) on the `00030004` folder to copy it
+2. Tekan (Y) di folder `00030004` untuk menyalin
 3. Tekan (B) dua kali untuk kembali ke menu utama
 4. Navigasi ke `[2:] SYSNAND TWLN` -> `title`
-5. Press (Y) to paste the `00030004` folder
-6. Select "Copy path(s)"
+5. Tekan (Y) untuk menempel folder `00030004`
+6. Pilih "Copy path(s)"
 7. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
-8. Select "Overwrite file(s)"
+8. Pilih "Overwrite file(s)"
    - Proses ini agak lama jika terdapat banyak permainan DSiWare
-9. Press (B) to decline relocking write permissions if prompted
+9. Tekan (B) untuk **tidak** menutup ulang izin tulis jika diminta
 10. Tekan (B) dua kali untuk kembali ke menu utama
 
-### Section VI - Restore GBA VC Saves
+### Bagian VI - Memulihkan Simpanan GBA VC
 
 ::: info
 
-If you did not backup GBA VC Saves earlier, skip this section.
+Jika tadi tidak mencadang simpanan (save) GBA VC, lewati bagian ini.
 
 :::
 
@@ -129,14 +129,14 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
 
 :::
 
-1. Hold (R) and press (Start) at the same time to power off your console
-2. Power on your console into SysNAND
+1. Tahan (R) dan tekan (Start) bersamaan untuk matikan daya konsol
+2. Nyalakan daya konsol ke SysNAND
 3. Lakukan cara berikut untuk memulihkan simpanan tiap permainan GBA VC yang diinginkan:
    - Buka permainan GBA VC
    - Keluar dari GBA VC
    - Nyalakan konsol selagi menahan (Start) untuk ke menu Luma3DS chainloader
    - Masuk ke GodMode9 dengan menekan (A)
-   - Navigate to `[0:] SDCARD` -> `gm9`
+   - Navigasi ke `[0:] SDCARD` -> `gm9`
    - Tekan (Y) pada `<TitleID>.gbavc.sav` yang ingin dipulihkan untuk disalin
    - Tekan (B) untuk kembali ke menu utama
    - Navigasi ke `[S:] SYSNAND VIRTUAL`
@@ -148,32 +148,32 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
    - Buka permainan GBA VC
    - Keluar dari GBA VC
 
-### Section VII - Backup SysNAND
+### Bagian VII - Mencadang SysNAND
 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
-1. **Backup every file on your SD card to a folder on your computer; all files will be deleted in the following steps**
+1. **Cadangkan dulu SEMUA berkas dari kartu SD ke komputer; isi kartu SD akan dihapus di langkah berikut**
 
-### Section VIII - Format SD card
+### Bagian VIII - Memformat kartu SD
 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 
 <!--@include: ./_include/format-sd-gm9.md -->
 
-1. Hold (R) and press (B) at the same time to eject your SD card
+1. Tahan (R) dan tekan (B) bersamaan untuk mengeluarkan kartu SD
 2. Sisipkan kartu SD ke komputer Anda
-3. Copy all your files back to your SD card
-   - Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+3. Salin balik semua berkas ke kartu SD
+   - Pastikan sudah menimpa `boot.firm` di kartu SD dengan berkas dari cadangan tadi
 4. Sisip kembali kartu SD ke konsol
-5. Press (A) to remount your SD card
-6. Press (Start) to reboot
+5. Tekan (A) untuk me-_mount_ ulang kartu SD
+6. Tekan (Start) untuk nyalakan ulang
 
 ___
 
 ::: tip
 
-Return to [Finalizing Setup](finalizing-setup)
+Kembali ke [Penyiapan Akhir](finalizing-setup)
 
 :::
