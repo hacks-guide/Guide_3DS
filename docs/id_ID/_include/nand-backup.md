@@ -15,7 +15,7 @@
 13. Pilih "Copy to 0:/gm9/out"
     - If you see "Destination already exists", press (A) on "Overwrite file(s)"
 14. Tekan (A) untuk lanjut
-15. Hold (R) and press (Start) at the same time to power off your console
+15. Tahan (R) dan tekan (Start) bersamaan untuk matikan daya konsol
 16. Sisipkan kartu SD ke komputer Anda
 17. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
     - Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
