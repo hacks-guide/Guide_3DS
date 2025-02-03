@@ -67,11 +67,11 @@ ___
 
 ### Mem-flash ntrboot (Satu Sistem 3DS)
 
-Metode ini hanya perlu konsol 3DS belum diretas dan _flashcart_ yang kompatibel. Metode ini menggunakan _flashcart_ untuk menjalankan `.nds` ntrboot flasher di 3DS. Ini berarti _flashcart_ harus bisa menjalankan `.nds` di _firmware_ 3DS. See the flashcart table above for more information.
+Metode ini hanya perlu konsol 3DS belum diretas dan _flashcart_ yang kompatibel. Metode ini menggunakan _flashcart_ untuk menjalankan `.nds` ntrboot flasher di 3DS. Ini berarti _flashcart_ harus bisa menjalankan `.nds` di _firmware_ 3DS. Lihat tabel _flashcart_ di atas untuk informasi lanjut.
 
 ::: tip
 
-Continue to [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single-system\))
+Lanjut ke [Mem-_flash_ ntrboot (Satu Sistem 3DS)](flashing-ntrboot-\(3ds-single-system\))
 
 :::
 
@@ -83,7 +83,7 @@ Metode ini perlu akses sementara ke jenis konsol 3DS lain yang sudah ada boot9st
 
 ::: tip
 
-Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-system\))
+Lanjut ke [Mem-_flash_ ntrboot (Beberapa Sistem 3DS)](flashing-ntrboot-\(3ds-multi-system\))
 
 :::
 
@@ -95,7 +95,7 @@ Metode ini perlu akses sementara ke Nintendo DS atau Nintendo DS Lite yang bisa 
 
 ::: tip
 
-Continue to [Flashing ntrboot (NDS)](flashing-ntrboot-\(nds\))
+Lanjut ke [Mem-_flash_ ntrboot (NDS)](flashing-ntrboot-\(nds\))
 
 :::
 
@@ -103,10 +103,10 @@ ___
 
 ### Mem-flash ntrboot (DSi)
 
-Metode ini perlu akses sementara ke konsol Nintendo DSi yang bisa membaca _flashcart_ Anda. Metode ini juga perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di DSi. Berarti _flashcart_ harus bisa menjalankan `.nds` di _firmware_ DSi. See the flashcart table above for more information.
+Metode ini perlu akses sementara ke konsol Nintendo DSi yang bisa membaca _flashcart_ Anda. Metode ini juga perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di DSi. Berarti _flashcart_ harus bisa menjalankan `.nds` di _firmware_ DSi. Lihat tabel _flashcart_ di atas untuk informasi lanjut.
 
 ::: tip
 
-Continue to [Flashing ntrboot (DSi)](flashing-ntrboot-\(dsi\))
+Lanjut ke [Mem-_flash_ ntrboot (DSi)](flashing-ntrboot-\(dsi\))
 
 :::
