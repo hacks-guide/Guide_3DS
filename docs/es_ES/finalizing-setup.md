@@ -100,7 +100,7 @@ In this section, you will use a series of scripts to automate homebrew installat
    - From this point forward, you can access GodMode9 by holding START while powering on your console
 4. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 5. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-6. Press (Home) to bring up the action menu
+6. Presiona el botón (HOME) para abrir el menú de acciones
 7. Select "Scripts..."
 8. Select "finalize"
 9. Follow the prompts in the script, answering any questions that you are asked
