@@ -87,11 +87,11 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigasi ke `[E:] EMUNAND VIRTUAL`
 3. Tekan (A) pada `nand.bin` untuk memilih, lalu pilih "NAND image options...", dan pilih "Restore SysNAND (safe)"
-4. Press (A) to unlock SysNAND overwriting, then input the key combo given
-   - This will not overwrite your boot9strap installation
-5. Input the key combo given to unlock SysNAND (lvl1) writing
+4. Tekan (A) untuk membuka izin penimpaan SysNAND, lalu tekan kombo yang diberikan
+   - Ini tidak akan menghapus boot9strap di konsol
+5. Tekan kombo yang diberikan untuk membuka izin tulis SysNAND (lvl1)
    - Proses ini akan lumayan lama
-6. Once it is completed, press (A) to continue
+6. Sesudah selesai, tekan (A) untuk lanjut
 7. Press (B) to decline relocking write permissions if prompted
 8. Tekan (B) untuk kembali ke menu utama
 
