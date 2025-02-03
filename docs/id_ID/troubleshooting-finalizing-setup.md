@@ -117,7 +117,7 @@ Ensure that your SD card is not [locked](/images/sdlock.png). If the SD card is 
 The script has detected that the Nintendo 3DS folder is missing AND that you have already made a NAND backup before. If you intend to install homebrew applications, you should do the following:
 
 1. Press (B) to cancel making another NAND backup
-2. Hold (R) and press (Start) at the same time to power off your console
+2. Tahan (R) dan tekan (Start) bersamaan untuk matikan daya konsol
 3. Copy the contents of `/gm9/backups/` to a safe location on your computer
 4. Delete `/gm9/backups/` from your SD card
 5. If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
