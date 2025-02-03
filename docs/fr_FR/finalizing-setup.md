@@ -1,6 +1,6 @@
 # Finalizing Setup
 
-## Required Reading
+## Lecture Requise
 
 The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
@@ -36,7 +36,7 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 
 :::
 
-## What You Need
+## Ce dont vous avez besoin
 
 - [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
 - [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
@@ -48,7 +48,7 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 In this section, you will copy the files necessary to follow the rest of the instructions on this page.
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Insérez votre carte SD dans votre ordinateur
 3. Copy `finalize.romfs` to the root of your SD card
 4. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
 5. Copy `x_finalize_helper.firm` to the `payloads` folder
@@ -107,7 +107,7 @@ In this section, you will use a series of scripts to automate homebrew installat
    - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
 10. Once the script says "Setup complete!", press (A) to power off the device
     - If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
-11. Insert your SD card into your computer
+11. Insérez votre carte SD dans votre ordinateur
 12. Copy the `/gm9/backups/` folder to a safe location on your computer
     - This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
     - The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue
