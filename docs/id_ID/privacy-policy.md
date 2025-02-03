@@ -1,27 +1,27 @@
-# Privacy Policy
+# Kebijakan Privasi
 
-## Cookies
+## Kuki
 
-This site utilizes cookies in order to facilitate routing users through the guide instructions. Cookies allow for the sidebar of the page to display current progress through the site to help users navigate the instructions more easily.
+Situs ini memanfaatkan kuki untuk membantu menuntun pengguna melalui instruksi panduan. Kuki mengizinkan bilah sisi laman menampilkan progres saat ini agar mudah menavigasi instruksi.
 
-## Embedded Content From Other Websites
+## Konten Tersemat Dari Situs Web Lain
 
-This site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves as if the user has visited the other website.
+Situs ini juga terdapat konten tersemat (misal: video, gambar, artikel, dll). Konten tersemat dari situs lain ini berperilaku seakan pengguna telah mengunjungi situs lain.
 
-These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.
+Situs-situs web ini mengumpulkan data terkait Anda, membuat kuki, menambah pelacak pihak ketiga, sekaligus memantau dan melacak interaksi Anda dengan konten tersemat jika punya akun dan sudah masuk log ke situs web tersebut.
 
-## Analytics
+## Analitik
 
-This site uses Google Analytics to monitor and analyze traffic. This site is hosted by Github Pages, which may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with this site. For more information about Github Pages as it relates to user privacy, see the [GitHub Privacy Statement](https://help.github.com/en/articles/github-privacy-statement).
+Pemantauan dan analisis lalu lintas situs ini menggunakan Google Analytics. Situs ini diinangi oleh Github Pages, yang mengumpulkan data Anda, membuat kuki, menambah pelacak pihak ketiga, dan memantau interaksi Anda di situs ini. Untuk info lebih lanjut tentang Github Pages terkait privasi pengguna, lihat [GitHub Privacy Statement](https://help.github.com/en/articles/github-privacy-statement).
 
-## Information Collected
+## Informasi Terkumpul
 
-This site does not collect personal information. This site may collect usage information in order to analyze interest in the content and to provide advertisers with information on an aggregate basis. No personally identifiable information is shared with third-party advertising companies.
+Situs ini tidak mengumpulkan informasi pribadi. Situs ini mengumpulkan info penggunaan untuk menganalisis minat terhadap konten dan memberi info kepada para pengiklan secara agregat. Tidak ada informasi pribadi teridentifikasi yang dibagikan ke periklanan pihak ketiga.
 
-## Third-Party Websites
+## Situs Web Pihak Ketiga
 
-This site may link to other sites for users to use or reference. This site is not responsible for the privacy policies of other sites. Users should be aware that the privacy policies of other websites may differ from this one.
+Situs ini juga bertaut ke situs lain untuk digunakan atau dirujuk pengguna. Situs ini tidak bertanggung jawab atas kebijakan privasi situs lain. Pengguna harus sadar bahwa kebijakan situs lain bisa berbeda dengan situs ini.
 
-## Changes to Privacy Policy
+## Perubahan Kebijakan Privasi
 
-The contents of this Privacy Policy may be altered at any time and for any reason.
+Kandungan Kebijakan Privasi ini bisa berubah sewaktu-waktu tergantung alasannya.
