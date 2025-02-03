@@ -65,7 +65,7 @@ Your NAND backup has been successfully created.
 3. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
 4. Reinserta la tarjeta SD en la consola
 5. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
-6. Press (Home) to bring up the action menu
+6. Presiona el botón (HOME) para abrir el menú de acciones
 7. Select "Scripts..."
 8. Select "GM9Megascript"
 9. Select "Restore Options"
@@ -74,8 +74,8 @@ Your NAND backup has been successfully created.
 12. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
     - This will **not** overwrite your boot9strap installation
     - This process will take some time
-13. Press (A) to continue
-14. Press (B) to return to the main menu
+13. Presiona (A) para continuar
+14. Presiona (B) para regresar al menú principal
 15. Select "Exit"
 16. Press (A) to relock write permissions if prompted
 
@@ -94,7 +94,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 :::
 
 1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
-2. Navigate to `[0:] SDCARD` -> `cias`
+2. Ve a `[0:] SDCARD` -> `cias`
 3. Press (A) on your `.cia` to select it
 4. Select "CIA image options..."
 5. Select "Mount image to drive"
@@ -102,7 +102,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 7. Select "NCCH image options"
 8. Select "Inject to H&S"
 9. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y luego introduce la combinación de botones mostrada
-10. Press (A) to continue
+10. Presiona (A) para continuar
 11. Press (A) to relock write permissions if prompted
 
 ::: tip
@@ -120,7 +120,7 @@ This will only work if the Health & Safety injection was performed by GodMode9 (
 :::
 
 1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
-2. Press (Home) to bring up the action menu
+2. Presiona el botón (HOME) para abrir el menú de acciones
 3. Select "More..."
 4. Select "Restore H&S"
 5. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y luego introduce la combinación de botones mostrada
@@ -161,15 +161,15 @@ This process will only log you out of your NNID. You will still not be able to u
 :::
 
 1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
-2. Press (Home) to bring up the action menu
+2. Presiona el botón (HOME) para abrir el menú de acciones
 3. Select "Scripts..."
 4. Select "GM9Megascript"
 5. Select "Scripts from Plailect's Guide"
 6. Select "Remove NNID"
-7. Press (A) to continue
+7. Presiona (A) para continuar
 8. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y luego introduce la combinación de botones mostrada
-9. Press (A) to continue
-10. Press (B) to return to the main menu
+9. Presiona (A) para continuar
+10. Presiona (B) para regresar al menú principal
 11. Select "Exit"
 12. Press (A) to relock write permissions if prompted
 13. Presiona (Start) para reiniciar tu consola
