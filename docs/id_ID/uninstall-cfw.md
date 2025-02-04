@@ -54,7 +54,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
+3. Salin semua isi berkas `.zip` Luma3DS ke akar kartu SD
 4. Salin `GodMode9.firm` dari `.zip` GodMode9 ke folder `/luma/payloads/` di kartu SD
 5. Salin folder `gm9` dari `.zip` GodMode9 ke akar kartu SD
 6. Copy `DSiWareUninstaller.3dsx` to the `/3ds/` folder on your SD card
