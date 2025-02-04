@@ -67,7 +67,7 @@ Di bagian ini akan mengunduh berkas yang perlu untuk oprek fisik lalu membuat _d
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
+3. Salin semua isi berkas `.zip` Luma3DS ke akar kartu SD
 4. Salin folder hardmod-b9s-installer dari `.zip` hardmod-b9s-installer ke komputer
 5. Salin `.firm` unduhan tadi ke folder hardmod-b9s-installer di komputer
 6. Ubah nama `.firm` unduhan tadi menjadi `current.firm`
