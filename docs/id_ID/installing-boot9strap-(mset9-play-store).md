@@ -36,7 +36,7 @@ Di bagian ini akan menyiapkan data ke kartu SD untuk mengaktifkan eksploit MSET9
 
 1. Sisipkan kartu SD ke ponsel/tablet/komputer
 
-2. Salin semuanya dari `.zip` Release_v2.0 ke akar kartu SD, timpa berkas yang ada:
+2. Salin semua isi berkas `.zip` Release_v2.0 ke akar kartu SD, timpa berkas yang ada:
 
    - Buka ZArchiver
    - Jika diminta, [izinkan ZArchiver mengakses ke kartu SD](/images/screenshots/mset9/zarchiver-allow.png)
