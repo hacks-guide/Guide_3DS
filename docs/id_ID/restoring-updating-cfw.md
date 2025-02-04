@@ -2,9 +2,9 @@
 
 ## Bacaan Penting
 
-This page prepares consoles with an existing modern boot9strap installation for reinstallation and/or updating of custom firmware applications. It can also be used in the event of a lost or corrupted SD card.
+Laman ini berisi cara memperbarui dan/atau memasang ulang aplikasi CFW untuk konsol yang sudah ada boot9strap modern. Bisa juga digunakan kalau-kalau kartu SD hilang atau rusak.
 
-Your SD card must be formatted as FAT32 to follow this guide, or else the 3DS will be unable to recognize it. If your SD card is not yet properly formatted, use one of these pages to format it, depending on your operating system: [Windows](formatting-sd-\(windows\)), [Mac](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
+Kartu SD harus sudah diformat ke FAT32 untuk mengikuti panduan ini, jika tidak nanti tidak terbaca 3DS. Jika kartu SD belum diformat dengan benar, gunakan salah satu panduan berikut, tergantung sistem operasi: [Windows](formatting-sd-\(windows\)), [Mac](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 ## Apa yang Perlu
 
@@ -13,20 +13,20 @@ Your SD card must be formatted as FAT32 to follow this guide, or else the 3DS wi
 ## Instruksi
 
 1. Sisipkan kartu SD ke komputer Anda
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
-   - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
+2. Salin semua isi berkas `.zip` Luma3DS ke akar kartu SD, timpa berkas yang ada
+   - Akar (_root_) kartu SD adalah direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
 3. Sisip kembali kartu SD ke konsol
 4. Nyalakan daya konsol
-   - If you see the Luma3DS configuration menu, press (Start) to save and reboot
+   - Jika muncul menu konfigurasi Luma3DS, tekan (Start) untuk simpan dan nyala ulang
 
 ::: info
 
-The latest version of Luma3DS has now been installed on your SD card and on internal memory.
+Luma3DS versi terkini sekarang sudah terpasang di kartu SD dan memori internal.
 
 :::
 
 ::: tip
 
-Lanjut ke [Penyiapan Akhir](finalizing-setup) untuk memasang/memperbarui _homebrew_ (misal: FBI, Homebrew Launcher).
+Lanjut ke [Penyiapan Akhir](finalizing-setup) untuk memasang/memperbarui aplikasi _homebrew_ (misal: FBI, Homebrew Launcher).
 
 :::
