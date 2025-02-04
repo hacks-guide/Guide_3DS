@@ -38,7 +38,7 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan super-skaterhax dan Homebre
 
 2. Sisipkan kartu SD ke komputer Anda
 
-3. Salin semuanya dari folder `.zip` Super-skaterhax ke akar kartu SD, timpa berkas yang ada
+3. Salin semua isi berkas `.zip` Super-skaterhax ke akar kartu SD, timpa berkas yang ada
 
    ::: info
 
