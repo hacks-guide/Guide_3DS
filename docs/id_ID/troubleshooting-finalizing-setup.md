@@ -51,7 +51,7 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
+3. Salin folder `Nintendo 3DS` dari akar kartu SD ke komputer Anda
 4. Delete the Nintendo 3DS folder from the SD card
 5. Sisip kembali kartu SD ke konsol
 6. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
@@ -65,8 +65,8 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 12. Sisipkan kartu SD ke komputer Anda
 13. Copy the files in `/gm9/backups/` on your SD to a safe location on your computer
 14. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card
-15. Copy the `Nintendo 3DS` folder from your computer to the root of your SD card
-16. Delete the `Nintendo 3DS` folder from your computer
+15. Salin folder `Nintendo 3DS` dari komputer Anda ke akar kartu SD
+16. Hapus folder `Nintendo 3DS` dari komputer Anda
 
 Now that you have your NAND backup in a safe place:
 
@@ -92,15 +92,15 @@ Make sure you have at least 1.3GB available in your SD card. If you don't have e
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
+3. Salin folder `Nintendo 3DS` dari akar kartu SD ke komputer Anda
 4. Delete the Nintendo 3DS folder from the SD card
 5. Sisip kembali kartu SD ke konsol
 6. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 7. Perform a [NAND Backup](godmode9-usage#creating-a-nand-backup)
 8. Copy the files in `gm9/out` on your SD to a safe location on your computer
 9. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card, keeping essential.exefs in `/gm9/out/`
-10. Copy the `Nintendo 3DS` folder from your computer to the root of your SD card
-11. Delete the `Nintendo 3DS` folder from your computer
+10. Salin folder `Nintendo 3DS` dari komputer Anda ke akar kartu SD
+11. Hapus folder `Nintendo 3DS` dari komputer Anda
 
 If you have enough space on your SD card, your SD might be corrupted or faulty. Check your SD card for any errors by following the guide according to your computer's operating system: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)).
 
@@ -118,7 +118,7 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 
 1. Press (B) to cancel making another NAND backup
 2. Tahan (R) dan tekan (Start) bersamaan untuk matikan daya konsol
-3. Copy the contents of `/gm9/backups/` to a safe location on your computer
+3. Salin isi folder `/gm9/backups/` ke letak yang aman di komputer Anda
 4. Delete `/gm9/backups/` from your SD card
 5. If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
    - If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it
