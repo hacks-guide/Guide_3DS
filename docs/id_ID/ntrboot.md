@@ -1,5 +1,11 @@
 # ntrboot
 
+::: danger
+
+The United States Postal Service (USPS) has [suspended incoming packages from China and Hong Kong](https://about.usps.com/newsroom/service-alerts/international/suspension-of-inbound-parcels-from-china-and-hong-kong.htm). All product links listed below may not ship to the United States. For further support (in English), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+
+:::
+
 ::: tip
 
 Jika _flashcart_ sudah ada ntrboot (atau sudah mem-_flash_ sendiri ntrboot ke _flashcart_), langsung saja ke [Memasang boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\)) untuk arahan penggunaannya.
