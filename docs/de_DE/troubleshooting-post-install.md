@@ -161,7 +161,7 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 :::details Clear HOME Menu extdata
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 4. Delete the corresponding folder for your 3DS region:
    - **EUR Region**: `00000098`
@@ -177,7 +177,7 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 :::details Clear HOME Menu theme data
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 4. Delete the corresponding folder for your 3DS region:
    - **EUR Region**: `000002ce`
