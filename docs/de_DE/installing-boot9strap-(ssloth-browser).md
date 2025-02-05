@@ -30,7 +30,7 @@ SSLoth allows users on version 11.13.0 and below to bypass the browser version c
 In this section, you will copy the files needed to trigger both browserhax and universal-otherapp.
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 3. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
    - If you do not see the `.bin` extension, do not add it to the end of the filename
