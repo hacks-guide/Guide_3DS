@@ -38,7 +38,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 
 1. Power off your console
 
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 
 3. Copy everything from Luma3DS `.zip` to the root of your SD card
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
