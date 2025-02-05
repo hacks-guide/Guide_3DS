@@ -42,8 +42,8 @@ Jika kamera TIDAK terbuka, metode ini tidak bisa diikuti. Jika seperti itu, ikut
 Di bagian ini akan menaruh berkas untuk mengaktifkan eksploit safecerthax.
 
 1. Sisipkan kartu SD ke komputer Anda
-2. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
-   - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
+2. Salin semua isi berkas `.zip` Luma3DS ke akar kartu SD
+   - Akar (_root_) kartu SD adalah direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
 3. Buat folder dengan nama `boot9strap` di akar kartu SD
 4. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
 5. Salin `SafeB9SInstaller.bin` dari `.zip` SafeB9SInstaller ke akar kartu SD
