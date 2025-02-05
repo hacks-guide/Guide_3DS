@@ -22,7 +22,7 @@ Du MUSST bereits eine installierte Version von Luma3DS und boot9strap haben um d
 ### Section I - Prep Work
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 3. Kopiere `GodMode9.firm`von der `GodMode9.zip`-Datei nach /luma/payloads/ auf deiner SD-Karte
 4. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
 5. Reinsert your SD card into your console
@@ -75,7 +75,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
    - Exit the GBA VC game
    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
    - Launch GodMode9 by pressing (A)
-   - Navigate to `[S:] SYSNAND VIRTUAL`
+   - Navigiere zu `[S:] SYSNAND VIRTUAL`
    - Press (A) on `agbsave.bin` to select it
    - Select "AGBSAVE options..."
    - Select "Dump GBA VC save"
@@ -139,7 +139,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
    - Navigiere zu `[0:] SDCARD` -> `gm9`
    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
    - Drücke (B), um zum Hauptmenü zurückzukehren
-   - Navigate to `[S:] SYSNAND VIRTUAL`
+   - Navigiere zu `[S:] SYSNAND VIRTUAL`
    - Press (A) on `agbsave.bin` to select it
    - Select "AGBSAVE options..."
    - Select "Inject GBA VC save"
@@ -163,7 +163,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 <!--@include: ./_include/format-sd-gm9.md -->
 
 1. Drücke (R) und (B) gleichzeitig um die SD-Karte auszuwerfen
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 3. Kopiere alle Dateien zurück auf deine SD-Karte
    - Ensure you replace the `boot.firm` file on your SD card with the one from your backup
 4. Reinsert your SD card into your console
