@@ -13,7 +13,7 @@ Diese Seite ist nur für Linux-Nutzer gedacht. If you are not on Linux, check ou
 1. Make sure your SD card is **not** inserted
 2. Launch the Linux Terminal
 3. Type `watch "lsblk"`
-4. Insert your SD card into your computer
+4. Stecke deine SD-Karte in deinen Computer
 5. Observe the output. It should match something like this:
    ```
    NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
