@@ -2,42 +2,42 @@
 
 ## Bacaan Penting
 
-This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.
+Ini akan sepenuhnya menghapus CFW dari konsol, termasuk boot9Strap dan Luma3DS, untuk mengembalikan konsol ke versi bawaan.
 
-Any unsigned (illegitimate) games will be rendered unusable and will be removed during this process. Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to back up any saves that you care about.
+Semua permainan tak bertanda (tidak sah) akan hilang fungsi dan dihapus selama proses ini. Gunakan [pengelola simpanan](https://github.com/FlagBrew/Checkpoint/releases/latest) untuk mencadang data simpanan.
 
 ::: danger
 
-If you're removing CFW because:
+Jika berniat mencopot CFW karena:
 
-- You want to re-install it
-- You want to change SD cards
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
-- Your console is unable to boot to HOME Menu
+- Ingin memasang ulang
+- Ingin mengganti kartu SD
+- Kartu SD-nya hilang atau rusak
+- Ada permainan yang kacau
+- Ada aplikasi sistem yang kacau
+- Konsol tidak bisa di-_boot_ ke HOME Menu
 
-<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+<u>JANGAN!!!!</u> Mencopot _custom firmware_ hanya menambah risiko tidak penting atau parahnya <u>**KONSOL BISA MATOT**</u> (_brick_). Sebaiknya minta bantuan di [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
 :::
 
 ::: danger
 
-If you have done ANY of the following:
+Jika sudah melakukan HAL-HAL berikut:
 
-- [Changed the region](region-changing) of the console
-- Installed a custom keyboard
-- Installed a custom HOME Menu (_not_ a custom theme)
-- Manually changed the encryption key (`movable.sed`) of the console
-- Unbanned the console
+- [Mengubah daerah](region-changing) sistem konsol
+- Memasang papan ketik kustom
+- Memasang HOME Menu kustom (_bukan_ tema kustom)
+- Mengubah kunci enkripsi (`movable.sed`) konsol secara manual
+- Melepas cekal konsol
 
-then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. If this applies to you, [restore a clean NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+berarti mencopot CFW <u>**AKAN MEMBUAT MATOT KONSOL**</u>. Jika memang perlu, [pulihkan dulu cadangan NAND bersih](godmode9-usage#restoring-a-nand-backup) sebelum lanjut.
 
 :::
 
 ::: warning
 
-These instructions will only work on consoles with a Luma3DS version of 8.0 or higher. If you have an older version of Luma, you must upgrade your setup before following these instructions. Follow [this page](checking-for-cfw) to find your upgrade instructions.
+Instruksi ini hanya akan berfungsi pada konsol dengan Luma3DS versi 8.0 ke atas. Jika masih di Luma versi lawas, perbarui dulu CFW sebelum mengikuti instruksi ini. Ikuti [laman ini](checking-for-cfw) untuk instruksi pembaruan sesuai versi.
 
 :::
 
@@ -45,7 +45,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 
 - Versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (yang `.zip` Luma3DS)
 - Versi terkini dari [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (yang `.zip` GodMode9)
-- The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
+- Versi terkini dari [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 
 ## Instruksi
@@ -57,82 +57,82 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 3. Salin semua isi berkas `.zip` Luma3DS ke akar kartu SD
 4. Salin `GodMode9.firm` dari `.zip` GodMode9 ke folder `/luma/payloads/` di kartu SD
 5. Salin folder `gm9` dari `.zip` GodMode9 ke akar kartu SD
-6. Copy `DSiWareUninstaller.3dsx` to the `/3ds/` folder on your SD card
-7. Copy `safety_test.gm9` to the `/gm9/scripts/` folder on your SD card
+6. Salin `DSiWareUninstaller.3dsx` ke folder `/3ds/` di kartu SD
+7. Salin `safety_test.gm9` ke folder `/gm9/scripts/` di kartu SD
 8. Sisip kembali kartu SD ke konsol
 
-### Section II - DS Mode Tests
+### Bagian II - Menguji Mode DS
 
-The purpose of this section is to check whether built-in DS mode applications will continue to work once CFW is uninstalled. If you skip this section, DS mode or its functions may be inaccessible until CFW is reinstalled.
+Tujuan dari bagian ini untuk memeriksa apakah aplikasi mode DS tertanam akan tetap berfungsi sesudah CFW dicopot. Jika bagian ini dilewati, fungsi mode DS tidak akan bisa diakses sampai CFW dipasang lagi.
 
-#### DS Connection Settings Test
+#### Uji DS Connection Settings
 
 1. Nyalakan daya konsol
 2. Buka System Settings di konsol
-3. Navigate to `Internet Settings` -> `Nintendo DS Connection Settings`, then click OK
-4. You should boot into the Nintendo DS Connection Setup menu
-   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+3. Navigasi ke `Internet Settings` -> `Nintendo DS Connection Settings`, lalu sentuh OK
+4. Seharusnya akan masuk ke menu Nintendo DS Connection Setup
+   - Jika konsol malah menampilkan Flipnote Studio versi Jepang, layar hitam, atau pesan galat; pengujiannya gagal
 5. Matikan daya konsol
 
-#### DS Download Play Test
+#### Uji DS Download Play
 
 1. Nyalakan daya konsol
-2. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
-3. Select "Nintendo DS"
-4. If your console loads into a "Download software via DS Download Play" menu, the test was successful
-   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+2. Luncurkan aplikasi Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
+3. Pilih "Nintendo DS"
+4. Jika konsol memuat ke menu "Download software via DS Download Play", pengujiannya berhasil
+   - Jika konsol malah menampilkan Flipnote Studio versi Jepang, layar hitam, atau pesan galat; pengujiannya gagal
 5. Matikan daya konsol
 
 ::: warning
 
-If either of these tests has failed, DS mode, DS Download Play, and/or DS Connection Settings may be inaccessible once CFW is uninstalled! You should [fix DS mode](troubleshooting-post-install) before continuing.
+Jika pengujiannya ada yang gagal; mode DS, DS Download Play, dan/atau DS Connection Settings tidak akan bisa diakses sesudah CFW dicopot! Maka [perbaiki dulu mode DS](troubleshooting-post-install) sebelum lanjut.
 
 :::
 
-### Section III - Safety Test
+### Bagian III - Uji Keamanan
 
-The purpose of this section is to verify that the console will boot and that critical system functions, like System Settings and the keyboard, will work once CFW is uninstalled. **If you skip this section, you may BRICK your console!**
+Tujuan dari bagian ini untuk memastikan konsol bisa nyala, lalu fungsi sistem kritis seperti System Settings dan papan ketik tetap berfungsi sesudah mencopot CFW. **Jika bagian ini dilewati, konsol akan MATOT! (_brick_)**
 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is complete
+2. Jika muncul pesan "Essential files backup not found", tekan (A) untuk mencadang, sesudah selesai, tekan (A) untuk lanjut
 3. Jika diminta membetulkan waktu & tanggal RTC, lakukan dengan menekan (A), lalu tekan (A) lagi untuk lanjut
-   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
+   - Perlu diingat jika harus membetulkan waktu dan tanggal RTC, betulkan juga di System Settings setelah mengikuti panduan ini
 4. Tekan (Home) untuk membuka menu tindakan
 5. Pilih "Scripts..."
-6. Select "safety_test"
-7. Read the text on-screen and press (A) to continue
-8. You should boot into the regular 3DS HOME Menu (any custom theme is irrelevant). If you do, continue these instructions
-   - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
+6. Pilih "safety_test"
+7. Baca tulisan di layar dan tekan (A) untuk lanjut
+8. Seharusnya akan masuk ke HOME Menu 3DS biasa (tidak apa-apa ada tema kustom). Jika sudah, lanjutkan instruksi ini
+   - Jika tidak ke HOME Menu 3DS biasa (muncul layar hitam, layar galat, dll.), mencopot CFW malah **AKAN MEMBUAT MATOT KONSOL**
 9. Buka System Settings di konsol
-   - If the console crashes at this point, the test has failed
+   - Jika konsolnya _crash_ (mogok), pengujiannya gagal
 10. Pilih "Other Settings"
-11. Select "Profile"
-12. Select "User Name"
-13. If you are able to enter a new user name, the test was successful
-    - If the keyboard does not appear, the screen freezes, or the console crashes, the test has failed
+11. Pilih "Profile"
+12. Pilih "User Name"
+13. Jika bisa mengetik nama pengguna baru, pengujiannya berhasil
+    - Jika papan ketik tidak muncul, layar macet, atau konsolnya mogok; pengujiannya gagal
 14. Matikan daya konsol
 
 ::: danger
 
-If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your keyboard is inaccessible, **DO NOT continue with these instructions**! Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you.
+Jika TIDAK masuk ke HOME Menu 3DS biasa, atau System Settings / papan ketik tidak bisa diakses, **DILARANG lanjutkan panduan ini**! Gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan minta bantuan di sana dalam bahasa Inggris.
 
 :::
 
-### Section IV - NAND Backup
+### Bagian IV - Mencadang NAND
 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
 3. Pilih "Scripts..."
 4. Pilih "GM9Megascript"
-5. Select "Backup Options"
-6. Select "SysNAND Backup"
+5. Pilih "Backup Options"
+6. Pilih "SysNAND Backup"
 7. Tekan (A) untuk konfirmasi
    - Proses ini akan lumayan lama
-   - If you get an error, ensure you have at least 1.3GB of free space on your SD card
+   - Jika muncul galat, mohon pastikan kartu SD setidaknya masih tersisa 1.3GB
 8. Tekan (B) untuk kembali ke menu utama
-9. Select “Exit”
+9. Pilih “Exit”
 10. Tekan (Home) untuk membuka menu tindakan
-11. Select "Poweroff system" to power off your console
+11. Pilih “Poweroff system” untuk matikan daya konsol
 
 ### Section V - Removing illegitimate content
 
@@ -152,7 +152,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
    - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
    - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
 7. Exit the System Settings application
-8. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+8. Luncurkan aplikasi Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
 9. Wait until you see the two buttons
 10. Tekan (L) + (Tombol Bawah) + (Select) bersamaan untuk membuka menu Rosalina
 11. Pilih "Miscellaneous options"
@@ -161,7 +161,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 14. Tekan (B) untuk kembali ke menu utama Rosalina
 15. Tekan (B) untuk keluar dari menu Rosalina
 16. Press (Home), then close Download Play
-17. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
+17. Luncurkan aplikasi Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
 18. Konsol seharusnya memuat Homebrew Launcher
 19. Launch DSiWare Uninstaller from the list of homebrew
 20. Follow the prompts and allow the program to uninstall
@@ -186,16 +186,16 @@ This is your final opportunity to verify that all safety steps above have been f
 
 ::: danger
 
-If you're removing CFW because:
+Jika berniat mencopot CFW karena:
 
-- You want to re-install it
-- You want to change SD cards
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
-- Your console is unable to boot to HOME Menu
+- Ingin memasang ulang
+- Ingin mengganti kartu SD
+- Kartu SD-nya hilang atau rusak
+- Ada permainan yang kacau
+- Ada aplikasi sistem yang kacau
+- Konsol tidak bisa di-_boot_ ke HOME Menu
 
-<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+<u>JANGAN!!!!</u> Mencopot _custom firmware_ hanya menambah risiko tidak penting atau parahnya <u>**KONSOL BISA MATOT**</u> (_brick_). Sebaiknya minta bantuan di [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
 :::
 
