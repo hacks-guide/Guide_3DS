@@ -36,7 +36,7 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 
 1. Power off your console
 
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 
 3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card, overwriting any existing files
 
