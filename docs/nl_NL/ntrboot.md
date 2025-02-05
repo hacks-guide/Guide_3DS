@@ -1,11 +1,5 @@
 # ntrboot
 
-::: danger
-
-The United States Postal Service (USPS) has [suspended incoming packages from China and Hong Kong](https://about.usps.com/newsroom/service-alerts/international/suspension-of-inbound-parcels-from-china-and-hong-kong.htm). All product links listed below may not ship to the United States. For further support (in English), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
-
-:::
-
 ::: tip
 
 Als je flashkaart al geflashed is met ntrboot bij aankoop (of je hebt je flashkaart al geflashed met ntrboot), kan je doorgaan naar [Boot9strap installeren (ntrboot)](installing-boot9strap-\(ntrboot\)) voor instructies over hoe het te gebruiken.
