@@ -1,11 +1,5 @@
 # ntrboot
 
-::: danger
-
-Jawatan Pos Amerika Serikat (USPS) telah [menangguhkan barang masuk dari Tiongkok dan Hong Kong](https://about.usps.com/newsroom/service-alerts/international/suspension-of-inbound-parcels-from-china-and-hong-kong.htm). Semua tautan produk di bawah tidak bisa dikirim ke Amerika Serikat. Untuk bantuan (berbahasa Inggris), gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp).
-
-:::
-
 ::: tip
 
 Jika _flashcart_ sudah ada ntrboot (atau sudah mem-_flash_ sendiri ntrboot ke _flashcart_), langsung saja ke [Memasang boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\)) untuk arahan penggunaannya.
@@ -57,7 +51,7 @@ Untuk menguji fungsi besi berani, tahan di atas atau sekitar tombol (A)(B)(X)(Y)
 
 :::
 
-Perlu diingat, _flashcart_ tidak akan bisa digunakan seperti biasa ketika sudah di-_flash_ eksploit ntrboot (kecuali di kasus Acekard 2i, yang masih berfungsi _hanya di konsol DS dan 3DS dengan CFW_). Jika begitu, hampir semua _flashcart_ tidak akan muncul di HOME Menu walaupun terbaca. Di ujung panduan mem-_flash_ ntrboot, ada instruksi memulihkan _flashcart_ setelah selesai dari ini.
+Perlu diingat, _flashcart_ tidak akan bisa digunakan seperti biasa ketika sudah di-_flash_ eksploit ntrboot (kecuali di kasus Acekard 2i yang masih berfungsi _hanya di konsol DS dan 3DS CFW_). Berarti untuk _flashcart_ lain biasanya tidak akan muncul di HOME Menu walau terbaca. Di ujung panduan mem-_flash_ ntrboot, ada instruksi memulihkan _flashcart_ seusai dari sini.
 
 ::: danger
 
