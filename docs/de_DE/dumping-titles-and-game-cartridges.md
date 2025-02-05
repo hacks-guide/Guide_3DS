@@ -25,7 +25,7 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 ### Instructions
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 3. Kopiere `GodMode9.firm`von der `GodMode9.zip`-Datei nach /luma/payloads/ auf deiner SD-Karte
 4. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
 5. Reinsert your SD card into your console
@@ -115,7 +115,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
    - Exit the GBA VC game
    - Power off your console
    - Press and hold (Start), and while holding (Start), power on your console. Dies wird GodMode9 starten
-   - Navigate to `[S:] SYSNAND VIRTUAL`
+   - Navigiere zu `[S:] SYSNAND VIRTUAL`
    - Press (A) on `agbsave.bin` to select it
    - Select "AGBSAVE options..."
    - Select "Dump GBA VC save"
@@ -138,7 +138,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
    - Navigiere zu `[0:] SDCARD` -> `gm9` -> `out`
    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
    - Drücke (B), um zum Hauptmenü zurückzukehren
-   - Navigate to `[S:] SYSNAND VIRTUAL`
+   - Navigiere zu `[S:] SYSNAND VIRTUAL`
    - Press (A) on `agbsave.bin` to select it
    - Select "AGBSAVE options..."
    - Select "Inject GBA VC save"
