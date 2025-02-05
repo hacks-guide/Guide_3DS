@@ -32,9 +32,9 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan browserhax dan universal-ot
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
 3. Salin `otherapp.bin` ke akar kartu SD dan ubah nama menjadi `arm11code.bin`
-   - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
+   - Akar (_root_) kartu SD adalah direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
    - Jika tidak terlihat ekstensi `.bin`, jangan tambahkan di ujung nama berkas
-4. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
+4. Salin semua isi berkas `.zip` Luma3DS ke akar kartu SD
 5. Buat folder dengan nama `boot9strap` di akar kartu SD
 6. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
 7. Salin `SafeB9SInstaller.bin` dari `.zip` SafeB9SInstaller ke akar kartu SD
