@@ -36,7 +36,7 @@ Soundhax (when combined with universal-otherapp) is compatible with versions 1.0
 In this section, you will copy the files needed to trigger both Soundhax and universal-otherapp.
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 3. Kopiere die Soundhax`.m4a` in das Stammverzeichnis der SD-Karte
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 4. Copy `otherapp.bin` to the root of your SD card
