@@ -12,7 +12,7 @@ Konsol harus sudah ada Luma3DS dan boot9strap untuk laman ini. Jika sudah mengik
 
 ::: warning
 
-Untuk proses bagian ini, pengaturan sistem akan dikembalikan ke bawaan. Ini mencakup nama pengguna, negara, dan bahasa. **Tidak memengaruhi permainan terpasang dan simpanannya.**
+Untuk proses bagian ini, pengaturan sistem akan dikembalikan ke bawaan. Ini termasuk nama pengguna, negara, dan bahasa. **Tidak memengaruhi permainan terpasang dan simpanannya.**
 
 :::
 

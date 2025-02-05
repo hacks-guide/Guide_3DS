@@ -40,8 +40,8 @@ Untuk semua langkah di bagian ini, timpa saja berkas terkait di kartu SD.
 
 2. Sisipkan kartu SD ke komputer Anda
 
-3. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
-   - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
+3. Salin semua isi berkas `.zip` Luma3DS ke akar kartu SD
+   - Akar (_root_) kartu SD adalah direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
 
 4. Salin `arm9loaderhax.bin` dari `.zip` Luma3DS v7.0.5 ke akar kartu SD
 

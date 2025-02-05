@@ -6,7 +6,7 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 :::details Python 3 is not installed
 
-Python is not installed on the computer you are using. Download it from the [Python website](https://www.python.org/downloads/), double-click the installer, and follow the prompts to install Python. Once Python is installed, try again.
+Python masih belum dipasang di komputer Anda. Download it from the [Python website](https://www.python.org/downloads/), double-click the installer, and follow the prompts to install Python. Once Python is installed, try again.
 
 :::
 
