@@ -1,8 +1,8 @@
 1. Tekan (Home) untuk membuka menu tindakan
 2. Pilih "Scripts..."
 3. Pilih "GM9Megascript"
-4. Select "Backup Options"
-5. Select "SysNAND Backup"
+4. Pilih "Backup Options"
+5. Pilih "SysNAND Backup"
 6. Tekan (A) untuk konfirmasi
    - Proses ini akan lumayan lama
    - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
