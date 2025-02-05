@@ -1,4 +1,4 @@
-# Uninstall CFW
+# Mencopot CFW
 
 ## Bacaan Penting
 
