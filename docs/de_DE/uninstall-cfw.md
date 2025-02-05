@@ -53,7 +53,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 ### Section I - Prep Work
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Kopiere `GodMode9.firm`von der `GodMode9.zip`-Datei nach /luma/payloads/ auf deiner SD-Karte
 5. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
