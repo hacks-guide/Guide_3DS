@@ -1,4 +1,4 @@
-This section will reset your system settings to its defaults. **Installed games and their save data will not be affected.** This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+This section will reset your system settings to its defaults. **Tidak memengaruhi permainan terpasang dan simpanannya.** Ini **diperlukan** untuk mencegah isu terkait _applet_ dan mode memori perluasan di beberapa konsol.
 
 1. Matikan daya konsol
 2. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
