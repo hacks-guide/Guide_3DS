@@ -22,7 +22,7 @@ Modul "pyfatfs" belum dipasang, ini diperlukan MSET9 installer untuk komputer ma
 
 :::details HOME Menu extdata: Missing!
 
-Mohon nyalakan daya konsol selagi ada kartu SD, lalu periksa lagi status MSET9.
+Mohon nyalakan daya konsol dengan kartu SD disisip, lalu periksa lagi status MSET9.
 
 If this does not work, your SD card needs to be formatted:
 
@@ -35,7 +35,7 @@ If this does not work, your SD card needs to be formatted:
 
 :::details Mii Maker extdata: Missing!
 
-Mii Maker data was not found on the SD card. Mohon nyalakan daya konsol selagi ada kartu SD, lalu buka Mii Maker, dan periksa lagi status MSET9.
+Mii Maker data was not found on the SD card. Mohon nyalakan daya konsol dengan kartu SD disisip, lalu buka Mii Maker, dan periksa lagi status MSET9.
 
 If this does not work, your SD card needs to be formatted:
 
@@ -50,7 +50,7 @@ If this does not work, your SD card needs to be formatted:
 
 Ensure that you have reset the title database.
 
-- Mohon nyalakan daya konsol selagi ada kartu SD
+- Mohon nyalakan daya konsol dengan kartu SD disisip
 - Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
   - Ini tidak akan menghapus data
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
