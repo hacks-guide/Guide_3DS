@@ -12,9 +12,9 @@ Python masih belum dipasang di komputer Anda. Download it from the [Python websi
 
 :::details ModuleNotFoundError: No module named 'pyfatfs'
 
-Modul "pyfatfs" yang diperlukan MSET9 installer untuk komputer macOS belum dipasang.
+Modul "pyfatfs" belum dipasang, ini diperlukan MSET9 installer untuk komputer macOS.
 
-1. Buka Terminal yang baru
+1. Buka jendela Terminal baru
 2. Ketik `python3 -m pip install pyfatfs`, lalu tekan Enter
 3. Mulai lagi dari [Bagian I Langkah 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
@@ -22,11 +22,11 @@ Modul "pyfatfs" yang diperlukan MSET9 installer untuk komputer macOS belum dipas
 
 :::details HOME Menu extdata: Missing!
 
-Please power on your console with your SD inserted, then check the MSET9 status again.
+Mohon nyalakan daya konsol selagi ada kartu SD, lalu periksa lagi status MSET9.
 
 If this does not work, your SD card needs to be formatted:
 
-1. Copy everything off the SD Card to your PC
+1. Salin semua isi kartu SD ke komputer
 2. Format the SD Card ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
 3. Copy everything back
 4. Start again from [Section I Step 7](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
@@ -35,11 +35,11 @@ If this does not work, your SD card needs to be formatted:
 
 :::details Mii Maker extdata: Missing!
 
-Mii Maker data was not found on the SD card. Please power on your console with your SD inserted, then launch Mii Maker, then check the MSET9 status again.
+Mii Maker data was not found on the SD card. Mohon nyalakan daya konsol selagi ada kartu SD, lalu buka Mii Maker, dan periksa lagi status MSET9.
 
 If this does not work, your SD card needs to be formatted:
 
-1. Copy everything off the SD Card to your PC
+1. Salin semua isi kartu SD ke komputer
 2. Format the SD Card ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
 3. Copy everything back
 4. Start again from [Section I Step 8](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
@@ -50,14 +50,14 @@ If this does not work, your SD card needs to be formatted:
 
 Ensure that you have reset the title database.
 
-- Please power on your console with your SD inserted
+- Mohon nyalakan daya konsol selagi ada kartu SD
 - Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
   - Ini tidak akan menghapus data
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
-1. Copy everything off the SD Card to your PC
+1. Salin semua isi kartu SD ke komputer
 2. Format the SD Card ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
 3. Copy everything back
 
@@ -85,7 +85,7 @@ Remember, your SD card should look like this:
 
 If your SD card layout is correct, then your SD card most likely isn't being read by your console and needs to be formatted:
 
-1. Copy everything off the SD Card to your PC
+1. Salin semua isi kartu SD ke komputer
 2. Format the SD Card ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
 3. Copy everything back
 4. Start again from the beginning of [Section I](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
@@ -168,7 +168,7 @@ Mungkin belum ditaruh `SafeB9S.bin` di akar kartu SD, atau berkasnya rusak. Sali
 
 Alternatively, your SD card may be improperly formatted or partitioned. After removing the trigger file, format it:
 
-1. Copy everything off the SD Card to your PC
+1. Salin semua isi kartu SD ke komputer
 2. Format the SD Card ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
 3. Copy everything back
 4. Start again from from [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
@@ -197,7 +197,7 @@ Follow these instructions to remove the trigger file and to retry Section II:
 
 If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
 
-1. Copy everything off the SD Card to your PC
+1. Salin semua isi kartu SD ke komputer
 2. Format the SD Card ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
 3. Copy everything back
 4. Start again from from [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
