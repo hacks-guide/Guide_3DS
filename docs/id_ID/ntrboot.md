@@ -51,7 +51,7 @@ Untuk menguji fungsi besi berani, tahan di atas atau sekitar tombol (A)(B)(X)(Y)
 
 :::
 
-Perlu diingat, _flashcart_ tidak akan bisa digunakan seperti biasa ketika sudah di-_flash_ eksploit ntrboot (kecuali di kasus Acekard 2i yang masih berfungsi _hanya di konsol DS dan 3DS CFW_). Berarti untuk _flashcart_ lain biasanya tidak akan muncul di HOME Menu walau terbaca. Di ujung panduan mem-_flash_ ntrboot, ada instruksi memulihkan _flashcart_ seusai dari sini.
+Perlu diingat, _flashcart_ tidak akan bisa digunakan seperti biasa ketika sudah di-_flash_ eksploit ntrboot (kecuali di kasus Acekard 2i yang masih berfungsi _hanya di konsol DS dan 3DS CFW_). Berarti untuk _flashcart_ lain biasanya tidak akan muncul di HOME Menu walau terbaca. Di ujung panduan mem-_flash_ ntrboot, ada instruksi memulihkan _flashcart_ setelah proses ini.
 
 ::: danger
 
