@@ -32,7 +32,7 @@ Jika muncul konfigurasi Luma3DS atau menu kustom lainnya (misal: GodMode9, Decry
 
 ### Bagian III - Pilih Metode
 
-Untuk mencari metode sesuai konsol, pilih model konsol dan versi sistem dari Bagian II tadi.
+Untuk mencari metode sesuai konsol, pilih model konsol dan versi sistem seperti Bagian II tadi.
 
 <!--@include: @/_internal/consoleVersionSelect.html -->
 
