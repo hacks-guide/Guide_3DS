@@ -121,7 +121,7 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 3. Salin isi folder `/gm9/backups/` ke letak yang aman di komputer Anda
 4. Delete `/gm9/backups/` from your SD card
 5. If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
-   - Jika tidak punya folder Nintendo 3DS, nyalakan konsol dengan kartu SD ke HOME Menu setidaknya sekali untuk membuatnya
+   - Jika tidak punya folder Nintendo 3DS, nyalakan konsol ke HOME Menu setidaknya sekali dengan kartu SD untuk membuatnya
 6. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 7. Tekan (Home) untuk membuka menu tindakan
 8. Pilih "Scripts..."
