@@ -2,7 +2,7 @@
 2. Wait until you see the `Nintendo 3DS` and `Nintendo DS` buttons
 3. Tekan (L) + (Tombol Bawah) + (Select) bersamaan untuk membuka menu Rosalina
 4. Pilih "Miscellaneous options"
-5. Select "Switch the hb. title to the current app."
+5. Pilih "Switch the hb. title to the current app."
 6. Tekan (B) untuk lanjut
 7. Tekan (B) untuk kembali ke menu utama Rosalina
 8. Tekan (B) untuk keluar dari menu Rosalina
