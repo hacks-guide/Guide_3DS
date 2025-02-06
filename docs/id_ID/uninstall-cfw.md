@@ -145,36 +145,36 @@ Bagian ini akan menghapus konten tidak sah (_homebrew_, hasil _dump_ kartrid, ds
 1. Nyalakan daya konsol
 2. Buka System Settings di konsol
 3. Navigasi ke `Data Management` > `Nintendo 3DS` > `Software`
-4. In this list of software, delete any non-Nintendo content you installed while using CFW
-   - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
-5. Navigate to `Data Management` -> `DSiWare`
-6. In this list of software, delete any non-Nintendo content you installed while using CFW
-   - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
-   - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
-7. Exit the System Settings application
+4. Di daftar peranti lunak ini, hapus semua konten bukan Nintendo yang dipasang lewat CFW
+   - Ini termasuk peranti lunak seperti FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, dan sejenisnya; begitu pun semua permainan yang _tidak_ dipasang dari eShop
+5. Navigasi ke `Data Management` -> `DSiWare`
+6. Di daftar peranti lunak ini, hapus semua konten bukan Nintendo yang dipasang lewat CFW
+   - Ini termasuk peranti lunak seperti TWiLightMenu++ serta semua permainan dan apli yang _tidak_ dipasang dari eShop
+   - Jika gagal menghapus **semua peranti lunak CFW** di bagian 3DS dan DSiWare sebelum mencopot CFW, akses ke Data Management akan rusak setelahnya; memasang ulang CFW juga akan susah ke depannya
+7. Keluar dari aplikasi System Settings
 8. Luncurkan aplikasi Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
-9. Wait until you see the two buttons
+9. Tunggu sampai terlihat dua tombol
 10. Tekan (L) + (Tombol Bawah) + (Select) bersamaan untuk membuka menu Rosalina
 11. Pilih "Miscellaneous options"
-12. Select "Switch the hb. title to the current app."
+12. Pilih "Switch the hb. title to the current app."
 13. Tekan (B) untuk lanjut
 14. Tekan (B) untuk kembali ke menu utama Rosalina
 15. Tekan (B) untuk keluar dari menu Rosalina
-16. Press (Home), then close Download Play
+16. Tekan (Home), lalu tutup Download Play
 17. Luncurkan aplikasi Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
 18. Konsol seharusnya memuat Homebrew Launcher
-19. Launch DSiWare Uninstaller from the list of homebrew
-20. Follow the prompts and allow the program to uninstall
-21. Once the process has succeeded, exit the Homebrew Launcher and power off your console
+19. Buka DSiWare Uninstaller dari daftar homebrew
+20. Ikuti yang diminta dan izinkan program untuk mencopot
+21. Sesudah proses berhasil, keluar dari Homebrew Launcher dan matikan daya konsol
 
-### Section VI - System Format
+### Bagian VI - Memformat Sistem
 
-This section will ensure that all illegitimate tickets are removed, allowing eShop to work normally. This will remove all content from the 3DS and log you out of your NNID. Keep in mind that your console's encryption key will be shuffled, meaning that any old data will be rendered inaccessible, even if you have a backup of your SD contents.
+Bagian ini akan memastikan semua ticket yang tidak sah itu dihapus, agar eShop berfungsi kembali. Ini akan menghapus semua konten 3DS dan keluar dari akun NNID. Perlu diingat bahwa kunci enkripsi konsol akan diubah acak, berarti semua data lama akan tidak bisa diakses, bahkan jika punya cadangan isi kartu SD.
 
 1. Nyalakan daya konsol
 2. Buka System Settings di konsol
-3. Navigate to Other Settings -> Next Page (until the final page) -> Format System Memory
-4. Follow the prompts to format your 3DS
+3. Navigasi ke `Other Settings` -> `Next Page` (sampai ujung halaman) -> `Format System Memory`
+4. Ikuti yang diminta untuk memformat 3DS
 
 ### Section VII - Running Uninstall Script
 
