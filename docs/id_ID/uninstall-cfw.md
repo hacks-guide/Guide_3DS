@@ -134,17 +134,17 @@ Jika TIDAK masuk ke HOME Menu 3DS biasa, atau System Settings / papan ketik tida
 10. Tekan (Home) untuk membuka menu tindakan
 11. Pilih “Poweroff system” untuk matikan daya konsol
 
-### Section V - Removing illegitimate content
+### Bagian V - Menghapus konten tidak sah
 
 ::: warning
 
-This section will remove illegitimate content, like homebrew and dumped cartridges. If you have save data that you care about, back it up with a save manager before continuing!
+Bagian ini akan menghapus konten tidak sah (_homebrew_, hasil _dump_ kartrid, dsb). Jika ada simpanan (_save_) penting, cadangkan dengan pengelola simpanan sebelum lanjut!
 
 :::
 
 1. Nyalakan daya konsol
 2. Buka System Settings di konsol
-3. Navigate to Data Management > Nintendo 3DS > Software
+3. Navigasi ke `Data Management` > `Nintendo 3DS` > `Software`
 4. In this list of software, delete any non-Nintendo content you installed while using CFW
    - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
 5. Navigate to `Data Management` -> `DSiWare`
