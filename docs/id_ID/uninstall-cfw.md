@@ -91,7 +91,7 @@ Jika pengujiannya ada yang gagal; mode DS, DS Download Play, dan/atau DS Connect
 
 ### Bagian III - Uji Keamanan
 
-Tujuan dari bagian ini untuk memastikan konsol bisa nyala, lalu fungsi sistem kritis seperti System Settings dan papan ketik tetap berfungsi sesudah mencopot CFW. **Jika bagian ini dilewati, konsol akan MATOT! (_brick_)**
+Tujuan dari bagian ini untuk memastikan konsol bisa menyala sesudah mencopot CFW dan fungsi sistem kritis seperti System Settings dan papan ketik tetap berfungsi. **Jika bagian ini dilewati, konsol akan MATOT! (_brick_)**
 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Jika muncul pesan "Essential files backup not found", tekan (A) untuk mencadang, sesudah selesai, tekan (A) untuk lanjut
@@ -169,18 +169,18 @@ Bagian ini akan menghapus konten tidak sah (_homebrew_, hasil _dump_ kartrid, ds
 
 ### Bagian VI - Memformat Sistem
 
-Bagian ini akan memastikan semua ticket yang tidak sah itu dihapus, agar eShop berfungsi kembali. Ini akan menghapus semua konten 3DS dan keluar dari akun NNID. Perlu diingat bahwa kunci enkripsi konsol akan diubah acak, berarti semua data lama akan tidak bisa diakses, bahkan jika punya cadangan isi kartu SD.
+Bagian ini akan memastikan semua ticket yang tidak sah itu dihapus agar eShop berfungsi lagi. Ini akan menghapus semua konten 3DS dan keluar dari akun NNID. Perlu diingat bahwa kunci enkripsi konsol akan diubah acak, berarti semua data lama akan tidak bisa diakses, bahkan jika punya cadangan isi kartu SD.
 
 1. Nyalakan daya konsol
 2. Buka System Settings di konsol
 3. Navigasi ke `Other Settings` -> `Next Page` (sampai ujung halaman) -> `Format System Memory`
 4. Ikuti yang diminta untuk memformat 3DS
 
-### Section VII - Running Uninstall Script
+### Bagian VII - Menjalankan Naskah Pencopotan
 
 ::: warning
 
-This is your final opportunity to verify that all safety steps above have been followed! Please ensure that you have followed all sections on this page, **especially** `Section III - Safety Test`, before continuing.
+Ini kesempatan terakhir memastikan semua langkah keamanan di atas sudah diikuti! **Mohon pastikan lagi** sudah mengikuti semua bagian di laman ini, **terlebih** `Bagian III - Uji Keamanan`, sebelum lanjut.
 
 :::
 
@@ -200,12 +200,12 @@ Jika berniat mencopot CFW karena:
 :::
 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-   - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
+   - Jika malah muncul Luma3DS chainloader, gunakan Tombol Arah dan (A) untuk memilih GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
 3. Pilih "Scripts..."
 4. Pilih "GM9Megascript"
-5. Select "Hax Options"
-6. Select "Un-install Hax"
+5. Pilih "Hax Options"
+6. Pilih "Un-install Hax"
 7. Saat diminta, tekan (A) untuk melanjutkan
 8. Tekan (A) untuk membuka izin tulis SysNAND (lvl3), lalu tekan kombo yang diberikan
 9. Tekan (A) untuk lanjut
@@ -218,12 +218,12 @@ ___
 
 ::: tip
 
-All custom firmware has been removed from your console.
+_Custom firmware_ kini sudah dihapus dari konsol.
 
 :::
 
 ::: info
 
-You can now remove any extra files and folders from the root of your SD card that are _not_ the `Nintendo 3DS`, `DCIM`, or `private` folders.
+Sekarang sudah bisa menghapus berkas dan folder tambahan di akar kartu SD **tapi selain folder `Nintendo 3DS`, `DCIM`, atau `private`**.
 
 :::
