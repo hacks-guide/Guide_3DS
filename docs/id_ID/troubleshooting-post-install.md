@@ -112,14 +112,14 @@ Please take a photo of the error and join [Nintendo Homebrew on Discord](https:/
 
 1. Download the latest release of [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (the `.3dsx` file)
 2. Matikan daya konsol
-3. Create a folder named `3ds` on the root of your SD card if it does not already exist
+3. Buat folder dengan nama `3ds` di akar kartu SD jika belum ada
 4. Copy `TWLFix-CFW.3dsx` to the `/3ds/` folder on your SD card
 5. Sisip kembali kartu SD ke konsol
 6. Open the Homebrew Launcher
 7. Launch TWLFix-CFW from the list of homebrew
 8. Press (A) to uninstall the broken TWL titles
 9. Press (Start) to reboot the console
-10. Update your console by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+10. Perbarui konsol dengan ke System Settings, ke "Other Settings", lalu ke kanan sampai pojok dan pilih "System Update"
     - The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them
 11. Once the update is complete, tap "OK" to reboot the console
 
