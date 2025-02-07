@@ -1,8 +1,8 @@
 1. Tekan (Home) untuk membuka menu tindakan
 2. Pilih "More..."
-3. Select "SD format menu"
-4. Select "No EmuNAND"
-5. Select "Auto"
-6. Press (A) to accept the label `GM9SD`
-   - Optionally, you may input a custom name for the SD card
-7. When prompted, input the key combo given to confirm
+3. Pilih "SD format menu"
+4. Pilih "No EmuNAND"
+5. Pilih "Auto"
+6. Tekan (A) untuk menerima label `GM9SD`
+   - Ini opsional, kartu SD boleh diberi nama kustom
+7. Saat diminta, tekan kombo yang diberikan untuk konfirmasi
