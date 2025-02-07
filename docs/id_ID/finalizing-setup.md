@@ -18,7 +18,7 @@ Naskahnya akan memasang aplikasi berikut:
 - **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(toko apli homebrew untuk mengunduh homebrew di 3DS lewat Wi-Fi)_
 - **[GodMode9](https://github.com/d0k3/GodMode9)** _(alat serbaguna untuk mengurus NAND dan kartrid)_
 
-Jika ada aplikasi yang tidak diinginkan, nanti bisa dihapus setelah selesai panduan ini di System Settings -> Data Management -> Nintendo 3DS -> Software. (GodMode9 tidak bisa dihapus dengan cara ini karena wajib untuk fungsi lain.)
+Jika ada aplikasi yang tidak diinginkan, nanti bisa dihapus setelah selesai panduan ini di `System Settings` -> `Data Management` -> `Nintendo 3DS` -> `Software`. (GodMode9 tidak bisa dihapus dengan cara ini karena perlu untuk fungsi lain.)
 
 :::
 
