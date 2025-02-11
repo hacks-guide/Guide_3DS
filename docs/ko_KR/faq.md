@@ -66,13 +66,23 @@ NNID는 닌텐도 네트워크 ID의 약칭이며, 본 가이드에서 NNID 걱�
 
 :::details 컴퓨터 없이도 작업을 할 수 있나요? (예를 들어 안드로이드 폰과 같이)
 
-네! SD 카드에 파일을 넣을 수 있는 기기만 있으면 됩니다.
+In most cases, yes! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+
+You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
 
 :::
 
 :::details 어떤 용량의 SD 카드를 사용하면 될까요?
 
 최소한 1.5GB의 용량이 있는 SD 카드를 사용해야 이 가이드를 따를 수 있습니다. 3DS는 공식적으로 32GB까지 호환되지만, FAT32로 포맷하시면 그 이상도 가능합니다. GBA 그래픽과 커스텀 테마 문제 때문에 128GB를 넘기는 SD 카드를 사용하는 것은 권장하지 않습니다.
+
+:::
+
+:::details Should I use a new SD card, or the one I already have?
+
+You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
+
+If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
 
 :::
 
@@ -102,7 +112,7 @@ Luma3DS를 사용하고 계신 경우, 커스텀 펌웨어 로더(boot9strap)는
 
 :::details SD 카드를 어떻게 업그레이드할 수 있나요?
 
-FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사하세요. 128GB 카드들의 경우에는 할당량 (allocation size)을 65536으로 설정하는걸 권장드립니다. GBA 그래픽과 커스텀 테마 문제 때문에 128GB를 넘기는 SD 카드를 사용하는 것은 권장하지 않습니다.
+FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사하세요. 128GB 카드들의 경우에는 할당량 (allocation size)을 65536으로 설정하는걸 권장드립니다. GBA 그래픽과 커스텀 테마 문제 때문에 128GB를 넘기는 SD 카드를 사용하는 것은 권장하지 않습니다. Specific formatting instructions are available here: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
@@ -114,7 +124,7 @@ FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사하�
 
 :::details 어떻게 하면 일본 3DS에서 시스템 언어를 다른 언어로 변경할 수 있나요?
 
-일본어 외의 다른 언어로 일본 3DS의 언어를 바꾸는 유일한 방법은 [지역 변경](region-changing) 뿐입니다. 지역 변경을 하면 닌텐도 e숍을 사용할 수 없게 될 수 있다는 점을 명심해 주세요. 게임을 업데이트할 수 없게 될 수도 있습니다.
+일본어 외의 다른 언어로 일본 3DS의 언어를 바꾸는 유일한 방법은 [지역 변경](region-changing) 뿐입니다. 지역 변경을 하면 닌텐도 e숍을 사용할 수 없게 될 수 있다는 점을 명심해 주세요. 게임을 업데이트할 수 없게 될 수도 있습니다. You will also be unable to access Pokémon Bank (if you have it installed), as it relies on eShop access.
 
 :::
 
