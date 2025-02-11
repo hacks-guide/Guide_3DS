@@ -66,13 +66,23 @@ Bans are no longer possible because Nintendo Network services have been shut dow
 
 :::details Can I do this without a computer (e.g. an Android phone)?
 
-Ja! All you need is the ability to put files on a compatible SD card.
+In most cases, yes! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+
+You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
 
 :::
 
 :::details What size SD card can I use?
 
 You will need at least 1.5GB of free SD card space to follow this guide in its entirety. Terwijl de 3DS officieel compatibel is met SD-kaarten tot 32GB, grotere SD-kaarten kunnen gebruikt worden als ze handmatig geformatteerd worden als FAT32. Het wordt niet aanbevolen om SD-kaarten groter dan 128GB te gebruiken als gevolg van bekende problemen met GBA afbeeldingen en custom themes.
+
+:::
+
+:::details Should I use a new SD card, or the one I already have?
+
+You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
+
+If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
 
 :::
 
@@ -102,7 +112,7 @@ If you are using Luma3DS, your custom firmware loader (boot9strap) will _never_ 
 
 :::details How do I upgrade my SD card?
 
-Copy and paste your SD card contents to a new SD card formatted as FAT32. Voor SD-kaarten die groter zijn dan 128GB, wordt een allocation size van 65536 aanbevolen. SD-kaarten groter dan 128 GB worden niet aanbevolen als gevolg van bekende problemen met GBA beelden en custom themes.
+Copy and paste your SD card contents to a new SD card formatted as FAT32. Voor SD-kaarten die groter zijn dan 128GB, wordt een allocation size van 65536 aanbevolen. SD-kaarten groter dan 128 GB worden niet aanbevolen als gevolg van bekende problemen met GBA beelden en custom themes. Specific formatting instructions are available here: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
@@ -114,7 +124,7 @@ Yes, system transfers can be performed through the official System Transfer func
 
 :::details How do I change the system language of a Japanese 3DS?
 
-The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your console, which means you will be unable to update your games whether they are in-region or out-of-region.
+The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your console, which means you will be unable to update your games whether they are in-region or out-of-region. You will also be unable to access Pokémon Bank (if you have it installed), as it relies on eShop access.
 
 :::
 
