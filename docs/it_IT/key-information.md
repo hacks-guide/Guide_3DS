@@ -32,7 +32,7 @@ Questa guida funziona su tutte le versioni retail della famiglia di console Nint
 
 :::
 
-Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa scaricare file tramite Internet e copiarli sulla tua scheda SD. A seconda del tuo computer/cellulare/dispositivo elettronico, potresti aver bisogno di acquistare un adattatore da scheda SD a USB, per far sì che il tuo computer possa leggere la scheda SD.
+Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa scaricare file tramite Internet e copiarli sulla tua scheda SD. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as Android phones. Depending on your electronic device, you may need to purchase a USB to SD card adapter to allow it to read your SD card.
 
 ::::
 
@@ -48,6 +48,12 @@ La posizione dello slot della scheda SD e il tipo di scheda SD da usare dipendon
 
 Il 3DS può leggere schede SD di qualunque capienza (anche più grandi di 32GB), tuttavia la scheda dev'essere formattata con filesystem FAT32 (**non** exFAT né NTFS). Puoi usare una delle seguenti applicazioni per formattare la tua scheda SD, a seconda del tuo sistema operativo: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD più grandi di **128GB** non sono consigliate a causa di problemi noti con i temi personalizzati e con la grafica GBA/DS.
 
+::: info
+
+It is highly recommended to **only use one SD card** with a console at any given time, as you cannot merge the contents of two SD cards later on. So, if your console already has an SD card, you should use that SD card to mod your console, or copy everything to a larger SD card before or after you mod it.
+
+:::
+
 ::: warning
 
 Per seguire questa guida, ti servirà una scheda SD di almeno **2GB**.
@@ -56,7 +62,7 @@ Per seguire questa guida, ti servirà una scheda SD di almeno **2GB**.
 
 ::: info
 
-È consigliabile verificare che la tua scheda SD sia priva di errori prima di seguire questa guida usando [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), o [F3XSwift (Mac)](f3xswift-\(mac\))
+If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 
