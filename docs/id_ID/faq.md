@@ -66,13 +66,23 @@ Pencekalan sudah tidak ada karena ditutupnya Nintendo Network (untuk semua orang
 
 :::details Apakah bisa selain di komputer (misal: ponsel Android)?
 
-Iya! Pokoknya harus bisa menaruh berkas di kartu SD kompatibel.
+In most cases, yes! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+
+You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
 
 :::
 
 :::details Sebaiknya kartu SD ukuran berapa?
 
 Setidaknya kartu SD masih tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS secara resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. Tidak dianjurkan menggunakan kartu SD di atas 128GB karena ada isu dengan grafik GBA dan tema kustom.
+
+:::
+
+:::details Should I use a new SD card, or the one I already have?
+
+You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
+
+If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
 
 :::
 
@@ -102,7 +112,7 @@ Jika menggunakan Luma3DS, pemuat _custom firmware_ (boot9strap) **tidak akan** d
 
 :::details Bagaimana memperbarui kartu SD?
 
-Salin dan tempel isi kartu SD Anda ke kartu SD baru berformat FAT32. Untuk kartu 128GB, ukuran alokasi yang dianjurkan 65536 (64KB). Kartu SD ukuran lebih dari 128GB tidak dianjurkan karena ada isu dengan grafik GBA dan tema kustom.
+Salin dan tempel isi kartu SD Anda ke kartu SD baru berformat FAT32. Untuk kartu 128GB, ukuran alokasi yang dianjurkan 65536 (64KB). Kartu SD ukuran lebih dari 128GB tidak dianjurkan karena ada isu dengan grafik GBA dan tema kustom. Specific formatting instructions are available here: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
@@ -114,7 +124,7 @@ Iya, transfer sistem bisa dilakukan melalui cara System Transfer resmi ke konsol
 
 :::details Bagaimana mengubah bahasa sistem di 3DS Jepang?
 
-Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan [mengganti daerah](region-changing). Perlu diingat ini sangat mungkin mengacau Nintendo eShop di konsol, sehingga tidak bisa memperbarui permainan dalam-daerah ataupun luar-daerah.
+Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan [mengganti daerah](region-changing). Perlu diingat ini sangat mungkin mengacau Nintendo eShop di konsol, sehingga tidak bisa memperbarui permainan dalam-daerah ataupun luar-daerah. You will also be unable to access Pokémon Bank (if you have it installed), as it relies on eShop access.
 
 :::
 
