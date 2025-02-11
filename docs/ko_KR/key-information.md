@@ -32,7 +32,7 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 :::
 
-대부분의 경우, 인터넷에서 파일을 다운로드 하고 SD 카드에 옮길 수 있어야만 이용 가능합니다. 본인의 컴퓨터/스마트폰/전자기기에 따라서 컴퓨터에서 SD 카드를 읽기 위해 USB->SD 카드 어댑터를 구매해야 할 수도 있습니다.
+대부분의 경우, 인터넷에서 파일을 다운로드 하고 SD 카드에 옮길 수 있어야만 이용 가능합니다. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as Android phones. Depending on your electronic device, you may need to purchase a USB to SD card adapter to allow it to read your SD card.
 
 ::::
 
@@ -48,6 +48,12 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 3DS는 어떤 용량의 SD 카드 (32GB보다 커도 가능)도 사용할 수 있지만, 그 카드는 무조건 FAT32로 포맷되어 있어야합니다. (exFAT이나 NTFS **는 불가능**). SD 카드를 포맷하기 위해 자신의 OS에 해당하는 프로그램을 사용할 수 있습니다: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). GBA/DS 그래픽과 커스텀 테마 문제 때문에 **128GB**를 넘기는 SD 카드를 사용하는 것은 권장하지 않습니다.
 
+::: info
+
+It is highly recommended to **only use one SD card** with a console at any given time, as you cannot merge the contents of two SD cards later on. So, if your console already has an SD card, you should use that SD card to mod your console, or copy everything to a larger SD card before or after you mod it.
+
+:::
+
 ::: warning
 
 이 가이드를 따르려면, 적어도 **2GB**용량의 SD 카드를 사용해야 합니다.
@@ -56,7 +62,7 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 ::: info
 
-원하신다면, 이 가이드를 따라가기 전에 [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), 또는 [F3XSwift (Mac)](f3xswift-\(mac\))을 사용해 SD 카드의 오류 여부를 확인하실 수 있습니다.
+If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 
