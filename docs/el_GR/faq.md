@@ -66,13 +66,23 @@
 
 :::details Μπορώ να κάνω αυτήν τη διαδικασία χωρίς υπολογιστή (π.χ. με ένα τηλέφωνο Android);
 
-Ναι! Το μόνο που χρειάζεστε είναι η δυνατότητα τοποθέτησης αρχείων σε μια συμβατή κάρτα SD.
+In most cases, yes! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+
+You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
 
 :::
 
 :::details Ποια μεγέθη καρτών SD μπορώ να χρησιμοποιήσω;
 
 Θα χρειαστείτε τουλάχιστον 1,5GB ελεύθερου χώρου στην κάρτα SD για να ακολουθήσετε αυτόν τον οδηγό στο σύνολό του. Ενώ το 3DS είναι επίσημα συμβατό με κάρτες SD έως και 32GB, μπορείτε να χρησιμοποιήσετε μεγαλύτερες κάρτες SD εάν τις διαμορφώσετε ξανά ως FAT32. Δεν προτείνεται η χρήση καρτών SD που είναι μεγαλύτερες από 128GB λόγω γνωστών ζητημάτων με τα γραφικά GBA και τα προσαρμοσμένα θέματα.
+
+:::
+
+:::details Should I use a new SD card, or the one I already have?
+
+You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
+
+If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
 
 :::
 
@@ -102,7 +112,7 @@
 
 :::details Πώς μπορώ να αναβαθμίσω την κάρτα SD μου;
 
-Αντιγράψτε και επικολλήστε τα περιεχόμενα της κάρτας SD σας σε μια νέα κάρτα SD, διαμορφωμένη ως FAT32. Για τις κάρτες των 128GB, συνιστάται η τιμή 65536 για το μέγεθος κατανομής. Δεν προτείνονται κάρτες SD χωρητικότητας άνω των 128GB λόγω γνωστών ζητημάτων με τα γραφικά GBA και τα προσαρμοσμένα θέματα.
+Αντιγράψτε και επικολλήστε τα περιεχόμενα της κάρτας SD σας σε μια νέα κάρτα SD, διαμορφωμένη ως FAT32. Για τις κάρτες των 128GB, συνιστάται η τιμή 65536 για το μέγεθος κατανομής. Δεν προτείνονται κάρτες SD χωρητικότητας άνω των 128GB λόγω γνωστών ζητημάτων με τα γραφικά GBA και τα προσαρμοσμένα θέματα. Specific formatting instructions are available here: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
@@ -114,7 +124,7 @@
 
 :::details Πώς μπορώ να αλλάξω τη γλώσσα συστήματος ενός ιαπωνικού 3DS;
 
-Ο μόνος τρόπος να αλλάξετε τη γλώσσα συστήματος ενός ιαπωνικού 3DS σε μια άλλη γλώσσα εκτός των ιαπωνικών, είναι να εκτελέσετε τη διαδικασία [αλλαγής περιοχής](region-changing). Σημειώστε ότι αυτό πιθανότατα θα χαλάσει το Nintendo eShop στην κονσόλα σας, οπότε δεν θα μπορείτε να ενημερώνετε τα παιχνίδια σας είτε ανήκουν στην περιοχή σας είτε όχι.
+Ο μόνος τρόπος να αλλάξετε τη γλώσσα συστήματος ενός ιαπωνικού 3DS σε μια άλλη γλώσσα εκτός των ιαπωνικών, είναι να εκτελέσετε τη διαδικασία [αλλαγής περιοχής](region-changing). Σημειώστε ότι αυτό πιθανότατα θα χαλάσει το Nintendo eShop στην κονσόλα σας, οπότε δεν θα μπορείτε να ενημερώνετε τα παιχνίδια σας είτε ανήκουν στην περιοχή σας είτε όχι. You will also be unable to access Pokémon Bank (if you have it installed), as it relies on eShop access.
 
 :::
 
