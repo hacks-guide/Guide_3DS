@@ -66,23 +66,23 @@ Pencekalan sudah tidak ada karena ditutupnya Nintendo Network (untuk semua orang
 
 :::details Apakah bisa selain di komputer (misal: ponsel Android)?
 
-In most cases, yes! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+Biasanya, bisa! Pada eksploit MSET9 (untuk _firmware_ terkini Old 3DS) perlu menjalankan naskah Python atau menggunakan aplikasi Android, sedangkan eksploit lain hanya perlu menaruh berkas di kartu SD.
 
-You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
+Mungkin perlu komputer bersistem Windows, macOS, atau Linux untuk memformat kartu SD 64GB ke atas.
 
 :::
 
-:::details Sebaiknya kartu SD ukuran berapa?
+:::details Boleh kartu SD ukuran berapa?
 
 Setidaknya kartu SD masih tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS secara resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. Tidak dianjurkan menggunakan kartu SD di atas 128GB karena ada isu dengan grafik GBA dan tema kustom.
 
 :::
 
-:::details Should I use a new SD card, or the one I already have?
+:::details Sebaiknya gunakan kartu SD baru, atau yang sudah ada?
 
-You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
+Gunakan satu kartu SD saja untuk satu konsol 3DS itu. Jangan gunakan kartu SD lain untuk memodif konsol, nanti konsol akan membuat 'profil' baru dan kartu SD sebelumnya tidak akan bisa membacanya. Namun, **konsol akan tetap termodif**, karena CFW itu dipasang di memori internal (bukan di kartu SD).
 
-If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
+Jika sudah membeli kartu SD baru untuk konsol, format dulu kartu SD baru tersebut ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), lalu salin tempel semua isi kartu SD yang lama ke yang baru. Ini bisa dilakukan sebelum atau setelah memodif konsol.
 
 :::
 
@@ -106,25 +106,25 @@ Dari sejarahnya, dulu 3DS punya akses _homebrew_ jenis _userland_ melalui eksplo
 
 :::details Apakah aman memperbarui 3DS dengan CFW ke versi terkini?
 
-Jika menggunakan Luma3DS, pemuat _custom firmware_ (boot9strap) **tidak akan** dihapus saat memperbarui sistem. Dulu sempat ada pembaruan yang membuat Luma3DS mogok (_crash_) di awal nyala, jadi lebih baik menunggu beberapa jam untuk memastikan pembaruan terbaru tidak membuat konsol sementara tidak bisa digunakan sampai Luma3DS diperbarui. Pembaruan sistem bisa dilakukan sama seperti di 3DS belum dimodif: melalui System Settings, Safe Mode, atau sembulan pembaruan jika pembaruan diunduh otomatis.
+Jika menggunakan Luma3DS, pemuat _custom firmware_ (boot9strap) **tidak akan** dihapus saat memperbarui sistem. Dulu sempat ada pembaruan yang membuat Luma3DS mogok (_crash_) di awal nyala, jadi lebih baik tunggu beberapa jam untuk memastikan pembaruan terkini tidak sementara membuat konsol tidak bisa digunakan sampai Luma3DS diperbarui. Pembaruan sistem bisa dilakukan sama seperti di 3DS belum dimodif: melalui System Settings, Safe Mode, atau sembulan pembaruan jika pembaruan diunduh otomatis.
 
 :::
 
 :::details Bagaimana memperbarui kartu SD?
 
-Salin dan tempel isi kartu SD Anda ke kartu SD baru berformat FAT32. Untuk kartu 128GB, ukuran alokasi yang dianjurkan 65536 (64KB). Kartu SD ukuran lebih dari 128GB tidak dianjurkan karena ada isu dengan grafik GBA dan tema kustom. Specific formatting instructions are available here: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
+Salin dan tempel isi kartu SD Anda ke kartu SD baru berformat FAT32. Untuk kartu 128GB, ukuran alokasi yang dianjurkan 65536 (64KB). Kartu SD ukuran lebih dari 128GB tidak dianjurkan karena ada isu dengan grafik GBA dan tema kustom. Instruksi format sesuai sistem ada di sini: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
-:::details Apakah konsol CFW bisa system transfer?
+:::details Apakah bisa System Transfer di CFW?
 
-Iya, transfer sistem bisa dilakukan melalui cara System Transfer resmi ke konsol lain yang ada CFW (mungkin akan ada ketakteraturan jika konsol sasaran belum dimodif). Ticket untuk aplikasi tidak sah (_homebrew_) tidak akan ditransfer, tapi bisa dimunculkan lagi dengan [faketik](https://github.com/ihaveamac/faketik/releases/latest). Pastikan tidak melakukan transfer nirkabel, ini akan menghapus aplikasi tidak sah. CFW akan tetap ada di kedua konsol.
+Iya, fungsi System Transfer resmi bisa dilakukan bahkan ke konsol lain yang ada CFW (mungkin akan ada ketakteraturan jika konsol sasaran belum dimodif). Ticket untuk aplikasi tidak sah (_homebrew_) tidak akan ditransfer, tapi bisa dimunculkan lagi dengan [faketik](https://github.com/ihaveamac/faketik/releases/latest). Pastikan tidak melakukan transfer nirkabel, ini akan menghapus aplikasi tidak sah. CFW akan tetap ada di kedua konsol.
 
 :::
 
 :::details Bagaimana mengubah bahasa sistem di 3DS Jepang?
 
-Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan [mengganti daerah](region-changing). Perlu diingat ini sangat mungkin mengacau Nintendo eShop di konsol, sehingga tidak bisa memperbarui permainan dalam-daerah ataupun luar-daerah. You will also be unable to access Pokémon Bank (if you have it installed), as it relies on eShop access.
+Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan [mengganti daerah](region-changing). Perlu diingat ini sangat mungkin mengacau Nintendo eShop di konsol, sehingga tidak bisa memperbarui permainan dalam-daerah ataupun luar-daerah. Akses ke Pokémon Bank juga tidak akan bisa (jika ada terpasang), karena perlu akses eShop.
 
 :::
 
