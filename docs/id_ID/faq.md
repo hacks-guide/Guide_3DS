@@ -66,7 +66,7 @@ Pencekalan sudah tidak ada karena ditutupnya Nintendo Network (untuk semua orang
 
 :::details Apakah bisa selain di komputer (misal: ponsel Android)?
 
-Biasanya, bisa! Pada eksploit MSET9 (untuk _firmware_ terkini Old 3DS) perlu menjalankan naskah Python atau menggunakan aplikasi Android, sedangkan eksploit lain hanya perlu menaruh berkas di kartu SD.
+Biasanya, bisa! Pada eksploit MSET9 (utamanya untuk _firmware_ terkini Old 3DS) perlu menggunakan aplikasi Android atau naskah Python, sedangkan eksploit lain hanya perlu menaruh berkas di kartu SD.
 
 Mungkin perlu komputer bersistem Windows, macOS, atau Linux untuk memformat kartu SD 64GB ke atas.
 
@@ -78,7 +78,7 @@ Setidaknya kartu SD masih tersisa 1.5GB untuk mengikuti keseluruhan panduan ini.
 
 :::
 
-:::details Sebaiknya gunakan kartu SD baru, atau yang sudah ada?
+:::details Sebaiknya menggunakan kartu SD baru, atau yang ada?
 
 Gunakan satu kartu SD saja untuk satu konsol 3DS itu. Jangan gunakan kartu SD lain untuk memodif konsol, nanti konsol akan membuat 'profil' baru dan kartu SD sebelumnya tidak akan bisa membacanya. Namun, **konsol akan tetap termodif**, karena CFW itu dipasang di memori internal (bukan di kartu SD).
 
@@ -124,7 +124,7 @@ Iya, fungsi System Transfer resmi bisa dilakukan bahkan ke konsol lain yang ada 
 
 :::details Bagaimana mengubah bahasa sistem di 3DS Jepang?
 
-Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan [mengganti daerah](region-changing). Perlu diingat ini sangat mungkin mengacau Nintendo eShop di konsol, sehingga tidak bisa memperbarui permainan dalam-daerah ataupun luar-daerah. Akses ke Pokémon Bank juga tidak akan bisa (jika ada terpasang), karena perlu akses eShop.
+Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan [mengganti daerah](region-changing). Perlu diingat ini sangat mungkin mengacau Nintendo eShop di konsol, sehingga tidak bisa memperbarui permainan dalam-daerah ataupun luar-daerah. Mengakses Pokémon Bank juga tidak akan bisa (jika terpasang), karena perlu akses ke eShop.
 
 :::
 
