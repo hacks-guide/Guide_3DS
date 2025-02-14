@@ -32,7 +32,7 @@ Panduan ini bisa untuk semua jenis konsol ecer Nintendo 3DS (termasuk 3DS, 3DS X
 
 :::
 
-Untuk mengikuti panduan di sini harus bisa mengunduh berkas dari Internet dan menyalinnya ke kartu SD. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as Android phones. Depending on your electronic device, you may need to purchase a USB to SD card adapter to allow it to read your SD card.
+Mengikuti panduan di sini harus bisa mengunduh berkas dari Internet dan menyalinnya ke kartu SD. Ini termasuk sebagian besar perangkat elektronik, seperti komputer bersistem Windows, macOS, Linux, dan chromeOS (Chromebook), serta ponsel Android. Tergantung perangkat elektronik, mungkin perlu juga adaptor USB ke kartu SD agar perangkat bisa membaca kartu SD.
 
 ::::
 
