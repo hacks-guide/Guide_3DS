@@ -50,7 +50,7 @@ Letak slot kartu SD dan jenis kartu SD yang didukung tergantung pada model 3DS. 
 
 ::: info
 
-It is highly recommended to **only use one SD card** with a console at any given time, as you cannot merge the contents of two SD cards later on. So, if your console already has an SD card, you should use that SD card to mod your console, or copy everything to a larger SD card before or after you mod it.
+Sangat disarankan untuk **menggunakan satu kartu SD saja** untuk satu konsol, karena isi kartu SD berbeda tidak bisa digabung untuk 3DS. Jadi, jika konsol sudah ada kartu SD, gunakan kartu SD tersebut untuk memodif konsol, atau salin semua isinya ke kartu SD lebih besar sebelum atau sesudah memodif.
 
 :::
 
@@ -62,7 +62,7 @@ Untuk mengikuti panduan ini perlu kartu SD setidaknya **2GB**.
 
 ::: info
 
-If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\)).
+Jika perlu, periksa dulu galat di kartu SD sebelum mengikuti panduan ini dengan [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), atau [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 
