@@ -66,9 +66,9 @@
 
 :::details Μπορώ να κάνω αυτήν τη διαδικασία χωρίς υπολογιστή (π.χ. με ένα τηλέφωνο Android);
 
-In most cases, yes! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+Στις περισσότερες περιπτώσεις, ναι! Το exploit «MSET9» (χρησιμοποιείται κυρίως για το πιο πρόσφατο firmware στα συστήματα Old 3DS) απαιτεί την εκτέλεση ενός σεναρίου Python ή τη χρήση μιας εφαρμογής για Android, ενώ όλα τα άλλα exploit απαιτούν μόνο την τοποθέτηση αρχείων στην κάρτα SD.
 
-You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
+Ενδέχεται να χρειαστείτε έναν υπολογιστή με Windows, macOS ή Linux για να διαμορφώσετε εκ νέου την κάρτα SD σας, εφόσον είναι 64GB ή μεγαλύτερη.
 
 :::
 
@@ -78,11 +78,11 @@ You may need a computer running Windows, macOS, or Linux to reformat your SD car
 
 :::
 
-:::details Should I use a new SD card, or the one I already have?
+:::details Πρέπει να χρησιμοποιήσω μια νέα κάρτα SD ή αυτή που έχω ήδη;
 
-You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
+Θα πρέπει να χρησιμοποιείτε μόνο μία κάρτα SD με ένα 3DS ανά πάσα στιγμή. Εάν χρησιμοποιήσετε κάποια άλλη κάρτα SD για να τροποποιήσετε την κονσόλα σας, θα δημιουργήσετε ουσιαστικά ένα άλλο «προφίλ» για το τροποποιημένο σας λογισμικό, το οποίο δεν θα είναι προσβάσιμο μέσω της αρχικής σας κάρτας SD. Ωστόσο, **η κονσόλα σας θα παραμείνει τροποποιημένη**, καθώς η τροποποίηση γίνεται στην εσωτερική μνήμη (όχι στην κάρτα SD).
 
-If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
+Εάν αγοράσατε μια νέα κάρτα SD για χρήση με την κονσόλα σας, θα πρέπει να διαμορφώσετε τη νέα κάρτα SD ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))) και έπειτα, να αντιγράψετε και να επικολλήσετε τα πάντα από την παλιά σας κάρτα SD στη νέα. Αυτό μπορείτε να το κάνετε είτε πριν είτε μετά την τροποποίηση της κονσόλας.
 
 :::
 
@@ -112,7 +112,7 @@ If you've purchased a new SD card for use with your console, you should format t
 
 :::details Πώς μπορώ να αναβαθμίσω την κάρτα SD μου;
 
-Αντιγράψτε και επικολλήστε τα περιεχόμενα της κάρτας SD σας σε μια νέα κάρτα SD, διαμορφωμένη ως FAT32. Για τις κάρτες των 128GB, συνιστάται η τιμή 65536 για το μέγεθος κατανομής. Δεν προτείνονται κάρτες SD χωρητικότητας άνω των 128GB λόγω γνωστών ζητημάτων με τα γραφικά GBA και τα προσαρμοσμένα θέματα. Specific formatting instructions are available here: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
+Αντιγράψτε και επικολλήστε τα περιεχόμενα της κάρτας SD σας σε μια νέα κάρτα SD, διαμορφωμένη ως FAT32. Για τις κάρτες των 128GB, συνιστάται η τιμή 65536 για το μέγεθος κατανομής. Δεν προτείνονται κάρτες SD χωρητικότητας άνω των 128GB λόγω γνωστών ζητημάτων με τα γραφικά GBA και τα προσαρμοσμένα θέματα. Συγκεκριμένες οδηγίες διαμόρφωσης θα βρείτε εδώ: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
@@ -124,7 +124,7 @@ If you've purchased a new SD card for use with your console, you should format t
 
 :::details Πώς μπορώ να αλλάξω τη γλώσσα συστήματος ενός ιαπωνικού 3DS;
 
-Ο μόνος τρόπος να αλλάξετε τη γλώσσα συστήματος ενός ιαπωνικού 3DS σε μια άλλη γλώσσα εκτός των ιαπωνικών, είναι να εκτελέσετε τη διαδικασία [αλλαγής περιοχής](region-changing). Σημειώστε ότι αυτό πιθανότατα θα χαλάσει το Nintendo eShop στην κονσόλα σας, οπότε δεν θα μπορείτε να ενημερώνετε τα παιχνίδια σας είτε ανήκουν στην περιοχή σας είτε όχι. You will also be unable to access Pokémon Bank (if you have it installed), as it relies on eShop access.
+Ο μόνος τρόπος να αλλάξετε τη γλώσσα συστήματος ενός ιαπωνικού 3DS σε μια άλλη γλώσσα εκτός των ιαπωνικών, είναι να εκτελέσετε τη διαδικασία [αλλαγής περιοχής](region-changing). Σημειώστε ότι αυτό πιθανότατα θα χαλάσει το Nintendo eShop στην κονσόλα σας, οπότε δεν θα μπορείτε να ενημερώνετε τα παιχνίδια σας είτε ανήκουν στην περιοχή σας είτε όχι. Επιπλέον, δεν θα έχετε τη δυνατότητα πρόσβασης στο Pokémon Bank (αν το έχετε εγκαταστήσει), καθώς η λειτουργία του βασίζεται στην πρόσβαση στο eShop.
 
 :::
 
