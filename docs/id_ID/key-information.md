@@ -50,7 +50,7 @@ Letak slot kartu SD dan jenis kartu SD yang didukung tergantung pada model 3DS. 
 
 ::: info
 
-Sangat disarankan untuk **menggunakan satu kartu SD saja** untuk satu konsol, karena isi kartu SD berbeda tidak bisa digabung untuk 3DS. Jadi, jika konsol sudah ada kartu SD, gunakan kartu SD tersebut untuk memodif konsol, atau salin semua isinya ke kartu SD lebih besar sebelum atau sesudah memodif.
+Sangat disarankan untuk **menggunakan satu kartu SD saja** dengan satu konsol, karena isi kartu SD berbeda tidak bisa digabung untuk 3DS. Jadi, jika konsol sudah ada kartu SD, gunakan kartu SD tersebut untuk memodif konsol, atau salin semua isinya ke kartu SD lebih besar sebelum atau sesudah memodif.
 
 :::
 
@@ -156,9 +156,9 @@ Jika menggunakan Windows, ekstensi berkas disembunyikan secara bawaan sehingga s
 
 ::::
 
-## Mencari bantuan
+## Mendapat bantuan
 
-Jika ada masalah saat mengikuti panduan ini, ada banyak cara untuk mencari bantuan!
+Jika ada masalah saat mengikuti panduan ini, ada banyak cara untuk mendapat bantuan!
 
 - Jika punya pertanyaan lain yang belum terjawab di laman ini, mungkin ada di [Perihal Sebelum Pasang](faq#pre-installation-faq).
 - Jika ada isu ketika mengikuti panduan ini, coba ke laman [Sidik Gangguan](troubleshooting) untuk mencari solusi.
