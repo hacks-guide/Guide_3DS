@@ -8,7 +8,7 @@ Harus tahu mana yang benar berisi data Anda. Cadangkan dulu semua folder ID1 unt
 
 :::
 
-Now, delete all but one of the folders from your SD card. Cari folder **berukuran kecil** untuk dihapus, folder yang lebih besar biasanya berisi data Anda. Untuk membandingkan folder mana yang lebih besar, pencet kanan dan pilih "Properties":
+Untuk tahu folder ID1 yang benar di kartu SD. Cari folder **berukuran kecil** untuk dihapus, folder yang lebih besar biasanya berisi data Anda. Untuk membandingkan folder mana yang lebih besar, pencet kanan dan pilih "Properties":
 
 ::: info
 
