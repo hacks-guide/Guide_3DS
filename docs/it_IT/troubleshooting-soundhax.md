@@ -26,7 +26,9 @@ Se la tua console non ha queste versioni di sistema, probabilmente hai già un c
 
 C'è un problema con il tuo file `otherapp.bin` (è mancante, mal posizionato o corrotto). Scarica l'ultima versione di [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) e inseriscila nella directory principale della tua scheda SD.
 
-Se quanto sopra non risolve il problema e stai usando un Old 3DS / Old 3DS XL / Old 2DS, potresti stare incontrando un problema riguardante l'aggiornamento via scheda di gioco. Ricontrolla la versione del software. Se l'ultimo numero è pari o inferiore a 4 (ad esempio 11.3.0-**4**U), sostituisci il file Soundhax nella directory principale della tua scheda SD con [questo](http://soundhax.686178.xyz/frankenfirm.html?crash).
+You may also have the wrong Soundhax file for your console, region and version. Verify that your console details are correct and redownload your Soundhax file from [here](http://soundhax.com), then place it on the root of your SD card, replacing the existing one.
+
+Se quanto sopra non risolve il problema e stai usando un Old 3DS / Old 3DS XL / Old 2DS, potresti stare incontrando un problema riguardante l'aggiornamento via scheda di gioco. Ricontrolla la versione del software. If the number before the letter is 4 or lower (e.g. 11.3.0-**4**U), replace the Soundhax file on the root of your SD card with the one from [here](http://soundhax.686178.xyz/frankenfirm.html?crash).
 
 Se non hai ancora risolto il problema, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza.
 
@@ -34,9 +36,9 @@ Se non hai ancora risolto il problema, entra nel [canale Discord di Nintendo Hom
 
 :::details "Impossibile riprodurre"
 
-Hai il file Soundhax sbagliato per la tua console, regione e versione. Verifica che tu abbia inserito correttamente tutte le informazioni nel [sito web di Soundhax](https://soundhax.com/), riscarica il tuo file Soundhax e sostituiscilo con quello nella directory principale della tua scheda SD.
+Hai il file Soundhax sbagliato per la tua console, regione e versione. Verify that your console details are correct and redownload your Soundhax file from [here](http://soundhax.com), then place it on the root of your SD card, replacing the existing one.
 
-Se quanto sopra non risolve il problema e stai usando un Old 3DS / Old 3DS XL / Old 2DS, potresti stare incontrando un problema riguardante l'aggiornamento via scheda di gioco. Ricontrolla la versione del software. Se l'ultimo numero è pari o inferiore a 3 (e.g. 11.3.0-**0**U), sostituisci il file Soundhax nella directory principale della tua scheda SD con [questo](http://soundhax.686178.xyz/frankenfirm.html?unplayable).
+Se quanto sopra non risolve il problema e stai usando un Old 3DS / Old 3DS XL / Old 2DS, potresti stare incontrando un problema riguardante l'aggiornamento via scheda di gioco. Ricontrolla la versione del software. If the number before the letter is 3 or lower (e.g. 11.3.0-**0**U), replace the Soundhax file on the root of your SD card with the one from [here](http://soundhax.686178.xyz/frankenfirm.html?unplayable).
 
 Se non hai ancora risolto il problema, entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per chiedere assistenza.
 
