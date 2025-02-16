@@ -2,7 +2,7 @@
 
 ## Απαραίτητη ανάγνωση
 
-On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) as our `boot.firm` to patch the console, allowing it to run homebrew software.
+Στην προηγούμενη σελίδα, εγκαταστήσατε το boot9strap, ένα λογισμικό φόρτωσης του custom firmware, το οποίο φορτώνει το αρχείο `boot.firm` από την κάρτα SD ή τη NAND (εσωτερική μνήμη). Σε αυτήν την περίπτωση, χρησιμοποιούμε το Luma3DS της [LumaTeam](https://github.com/LumaTeam/) ως το `boot.firm` μας για να τροποποιήσουμε την κονσόλα, επιτρέποντάς της να εκτελεί λογισμικό homebrew.
 
 Σε αυτήν τη σελίδα, θα δημιουργήσουμε σημαντικά αντίγραφα ασφαλείας των αρχείων του συστήματος και θα εγκαταστήσουμε μερικές εφαρμογές homebrew. Τα περισσότερα από αυτά τα βήματα θα γίνουν αυτόματα με ένα script που θα εκτελέσετε στην κονσόλα σας.
 
@@ -10,19 +10,19 @@ On the previous page, you installed boot9strap, a custom firmware loader that lo
 
 Το script θα εγκαταστήσει τις ακόλουθες εφαρμογές:
 
-- **FBI** by Steveice10 _(installs CIA formatted applications)_
-- **Homebrew Launcher Loader** by PabloMK7 _(runs Homebrew Launcher, for 3DSX format homebrew)_
-- **Anemone3DS** by astronautlevel2 _(installs custom themes, splashes, and badges)_
-- **Checkpoint** by BernardoGiordano/FlagBrew _(manages 3DS/DS game save data)_
-- **ftpd** by mtheall _(allows wireless 3DS SD card access over FTP)_
-- **Universal-Updater** by Universal-Team _(on-device app store for downloading homebrew over Wi-Fi)_
-- **GodMode9** by d0k3 _(multipurpose tool for extracting data from internal memory or cartridges)_
+- Το **FBI** του Steveice10 _(εγκαθιστά εφαρμογές της μορφής CIA)_
+- Το **Homebrew Launcher Loader** του PabloMK7 _(εκτελεί το Homebrew Launcher, για εφαρμογές homebrew της μορφής 3DSX)_
+- Το **Anemone3DS** του astronautlevel2 _(εγκαθιστά προσαρμοσμένα θέματα, οθόνες εκκίνησης και εμβλήματα)_
+- Το **Checkpoint** του BernardoGiordano/FlagBrew _(διαχειρίζεται αποθηκευμένα δεδομένα παιχνιδιών 3DS/DS)_
+- Το **ftpd** του mtheall _(επιτρέπει την ασύρματη πρόσβαση στην κάρτα SD του 3D μέσω FTP)_
+- Το **Universal-Updater** της Universal-Team _(κατάστημα εφαρμογών για τη λήψη homebrew μέσω Wi-Fi)_
+- Το **GodMode9** του d0k3 _(εργαλείο πολλαπλών χρήσεων για την εξαγωγή δεδομένων από την εσωτερική μνήμη ή τις κασέτες)_
 
 Εάν δεν θέλετε κάποια από αυτές τις εφαρμογές, μπορείτε να την αφαιρέσετε αφού ολοκληρώσετε τα βήματα αυτής της σελίδας, από την εφαρμογή «System Settings» -> «Data Management» -> «Nintendo 3DS» -> «Software». (Δεν είναι δυνατή η αφαίρεση του GodMode9 με αυτόν τον τρόπο, το οποίο απαιτείται γενικά για άλλες λειτουργίες.)
 
-::: details Source code links (optional)
+::: details Σύνδεσμοι πηγαίου κώδικα (προαιρετικό)
 
-All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
+Όλες οι εφαρμογές που σας βοηθά να εγκαταστήσετε ο παρών οδηγός είναι ανοικτού κώδικα. Εάν σας ενδιαφέρει να δείτε πώς λειτουργούν ή θέλετε να αφήσετε μια θετική αξιολόγηση για να δείξετε την εκτίμησή σας, θα βρείτε συνδέσμους για τον πηγαίο κώδικά τους στην παρακάτω λίστα:
 
 - [FBI](https://github.com/lifehackerhansol/FBI)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
@@ -116,7 +116,7 @@ All applications installed on this guide are open-source. If you are interested 
 7. Επιλέξτε «Scripts...»
 8. Επιλέξτε «finalize»
 9. Ακολουθήστε τις οδηγίες του script, απαντώντας σε όποιες ερωτήσεις σάς γίνουν
-   - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
+   - Εάν δείτε το «Information #05: No title database», πατήστε το (A) για να γίνει εισαγωγή και εισαγάγετε τα κουμπιά που αναγράφονται στην οθόνη για να συνεχίσετε
    - Εάν αντιμετωπίσετε κάποιο σφάλμα, ακολουθήστε τις οδηγίες στο μήνυμα σφάλματος ή συμβουλευτείτε τη σελίδα [Επίλυση προβλημάτων](troubleshooting-finalizing-setup)
 10. Μόλις το script δηλώσει «Setup complete!», πατήστε το (A) για να απενεργοποιήσετε την κονσόλα σας
     - Εάν ΔΕΝ βλέπετε το μήνυμα «Setup complete!», το script δεν ήταν επιτυχές και θα χρειαστεί να επαναλάβετε αυτήν την ενότητα από το Βήμα 3
