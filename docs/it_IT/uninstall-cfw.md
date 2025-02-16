@@ -157,7 +157,7 @@ Questa sezione rimuoverà contenuti illegittimi, come homebrew e backup di gioch
 10. Premi simultaneamente i pulsanti (L) + (Giù) + (Select) per aprire il menu di Rosalina
 11. Seleziona "Miscellaneous options"
 12. Seleziona "Switch the hb. title to the current app."
-13. Premi (B) per continuare
+13. Press (B) to continue
 14. Premi (B) per tornare al menu principale di Rosalina
 15. Premi (B) per uscire dal menu di Rosalina
 16. Premi il pulsante HOME, quindi chiudi l'applicazione "Modalità download"
