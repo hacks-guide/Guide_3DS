@@ -2,7 +2,7 @@
 
 ## Bacaan Penting
 
-Berkas `boot.firm` adalah apa yang dibaca boot9strap selesai memuat NAND. Untuk ini, kita gunakan Luma3DS oleh [LumaTeam](https://github.com/LumaTeam/) untuk menambal konsol agar bisa menjalankan _homebrew_.
+On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) as our `boot.firm` to patch the console, allowing it to run homebrew software.
 
 Di laman ini juga akan mencadang berkas sistem kritis dan memasang beberapa _homebrew_. Hampir semua langkah ini menggunakan naskah otomatis yang dijalankan di konsol.
 
@@ -10,15 +10,27 @@ Di laman ini juga akan mencadang berkas sistem kritis dan memasang beberapa _hom
 
 Naskahnya akan memasang aplikasi berikut:
 
-- **[FBI](https://github.com/lifehackerhansol/FBI)** _(memasang aplikasi berformat CIA)_
-- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(membuka Homebrew Launcher)_
-- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(memasang tema kustom)_
-- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(mencadang dan memulih simpanan permainan 3DS dan DS)_
-- **[ftpd](https://github.com/mtheall/ftpd)** _(akses nirkabel ke kartu SD 3DS)_
-- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(toko apli homebrew untuk mengunduh homebrew di 3DS lewat Wi-Fi)_
-- **[GodMode9](https://github.com/d0k3/GodMode9)** _(alat serbaguna untuk mengurus NAND dan kartrid)_
+- **FBI** by Steveice10 _(installs CIA formatted applications)_
+- **Homebrew Launcher Loader** by PabloMK7 _(runs Homebrew Launcher, for 3DSX format homebrew)_
+- **Anemone3DS** by astronautlevel2 _(installs custom themes, splashes, and badges)_
+- **Checkpoint** by BernardoGiordano/FlagBrew _(manages 3DS/DS game save data)_
+- **ftpd** by mtheall _(allows wireless 3DS SD card access over FTP)_
+- **Universal-Updater** by Universal-Team _(on-device app store for downloading homebrew over Wi-Fi)_
+- **GodMode9** by d0k3 _(multipurpose tool for extracting data from internal memory or cartridges)_
 
 Jika ada aplikasi yang tidak diinginkan, nanti bisa dihapus setelah selesai panduan ini di `System Settings` -> `Data Management` -> `Nintendo 3DS` -> `Software`. (GodMode9 tidak bisa dihapus dengan cara ini karena perlu untuk fungsi lain.)
+
+::: details Source code links (optional)
+
+All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
+
+- [FBI](https://github.com/lifehackerhansol/FBI)
+- [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
+- [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
+- [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)
+- [ftpd](https://github.com/mtheall/ftpd)
+- [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)
+- [GodMode9](https://github.com/d0k3/GodMode9)
 
 :::
 
@@ -104,6 +116,7 @@ Di bagian ini akan menggunakan naskah agar otomatis memasang _homebrew_, members
 7. Pilih "Scripts..."
 8. Pilih "finalize"
 9. Ikuti sembulan perintah yang diminta dari naskah
+   - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
    - Jika ada galat, ikuti instruksi di pesan galat atau rujuk ke laman [sidik gangguan](troubleshooting-finalizing-setup)
 10. Sesudah naskah bertulis "Setup complete!", tekan (A) untuk matikan daya konsol
     - Jika TIDAK muncul pesan "Setup complete!", naskahnya tidak berhasil dan harus ulangi bagian ini dari Langkah 3
