@@ -36,12 +36,6 @@ All applications installed on this guide are open-source. If you are interested 
 
 ## Kompatibilitási megjegyzések
 
-::: warning
-
-Ha az **új 3DS** konzolod a 2.1.0 verzión volt, a [NAND-ról készült bizonsági másolatot állítsd vissza](godmode9-usage#nand-ról-készült-bizonsági-másolat-visszaállítása) mielőtt tovább mennél. Ez valószínűleg nem vonatkozik rád, ha csak nem 2017-ben olvasod ezt az útmutatót.
-
-:::
-
 ::: info
 
 Ha az előző egyedi firmware rendszered EmuNAND alapú volt és szeretnéd az EmuNAND/RedNAND tartalmait a SysNAND-re másolni, kövest az [EmuNAND költöztetése](move-emunand) útmutatót ez az oldal előtt. Ha nem tudod mi az az EmuNAND, ez nem vonatkozik rád.
@@ -94,9 +88,9 @@ Ebben a fejezetben szinkronizálni fogod a 3DS belső óráját az aktuális id�
    - Ha valamelyik gombod törött, töltsd le a [config.ini](/assets/config.ini) fájlt és rakd a `luma` mappádba, felülírva az ott lévőt. Ez átállítja a Rosalina menu billentyű kombinációt (X) + (Y)
 2. Válaszd ki a "Miscellaneous options"-t
 3. Válaszd a "Dump DSP firmware" opciót
-4. Nyomd meg a (B) gombot a folytatáshoz
+4. Press (B) to continue
 5. Válaszd a "Nullify user time offset" opciót
-6. Nyomd meg a (B) gombot a folytatáshoz
+6. Press (B) to continue
 7. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
 8. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 
