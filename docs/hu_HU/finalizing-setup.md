@@ -2,7 +2,7 @@
 
 ## Kötelező olvasmány
 
-A `boot.firm` nevezetű fájl az, amit maga a boot9strap elindít, amint betöltődik a NAND-ból. Ebben az esetben a [LumaTeam](https://github.com/LumaTeam/) által készített Luma3DS-t használjuk a konzol patcheléséhez, hogy tudjon homebrew programokat futtatni.
+On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) as our `boot.firm` to patch the console, allowing it to run homebrew software.
 
 Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és néhány homebrew alkalmazást fogunk telepíteni. Ezen lépések nagy része automatizált egy szkripttel, ami a konzolodon fogsz futtatni.
 
@@ -10,15 +10,27 @@ Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és néhány home
 
 A szkript a következő alkalmazásokat fogja telepíteni:
 
-- **[FBI](https://github.com/lifehackerhansol/FBI)** _(CIA formátumú alkalmazások telepítésére)_
-- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(elindítja a Homebrew Launchert)_
-- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(egyedi témák telepítése)_
-- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(3DS és DS játékok mentéseiről lehet biztonsági mentést készíteni és visszaállítani)_
-- **[ftpd](https://github.com/mtheall/ftpd)** _(a 3DS-ed SD kártyájának vezeték nélküli elérése)_
-- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(egy homebrew app store homebrew letöltéséhez a 3DS-re WiFi-n keresztül)_
-- **[GodMode9](https://github.com/d0k3/GodMode9)** _(sokféle dologra használható eszköz, például NAND és kártya műveletekre)_
+- **FBI** by Steveice10 _(installs CIA formatted applications)_
+- **Homebrew Launcher Loader** by PabloMK7 _(runs Homebrew Launcher, for 3DSX format homebrew)_
+- **Anemone3DS** by astronautlevel2 _(installs custom themes, splashes, and badges)_
+- **Checkpoint** by BernardoGiordano/FlagBrew _(manages 3DS/DS game save data)_
+- **ftpd** by mtheall _(allows wireless 3DS SD card access over FTP)_
+- **Universal-Updater** by Universal-Team _(on-device app store for downloading homebrew over Wi-Fi)_
+- **GodMode9** by d0k3 _(multipurpose tool for extracting data from internal memory or cartridges)_
 
 Ha nem szeretnéd ezeket az alkalmazásokat, eltávolíthatod őket, miután befejezted ezt az oldalt a System Settings -> Data Management -> Nintendo 3DS -> szoftver-hez navigálva. (A GodMode9 nem távolítható el így, és általában szükséges más funkciókhoz.)
+
+::: details Source code links (optional)
+
+All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
+
+- [FBI](https://github.com/lifehackerhansol/FBI)
+- [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
+- [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
+- [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)
+- [ftpd](https://github.com/mtheall/ftpd)
+- [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)
+- [GodMode9](https://github.com/d0k3/GodMode9)
 
 :::
 
@@ -104,6 +116,7 @@ Ebben a fejezetben szkripteket fogsz használni arra, hogy automatizáld a homeb
 7. Válaszd a "Scripts..." opciót
 8. Válaszd az "finalize" opciót
 9. Kövesd a script utasításait és válaszolj meg minden kérdést
+   - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
    - Ha hibát kapsz, kövesd a hibaüzenet lépéseit vagy tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt
 10. Ha a szkript a "Setup complete!" üzenetet írja, nyomj (A) gombot az eszköz kikapcsolásához
     - Ha NEM láttad a "Setup complete!" üzenetet, akkor a szkript nem volt sikeres és újra kell csinálnod ezt a részt a 3. lépéstől
