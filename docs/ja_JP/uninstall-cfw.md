@@ -157,7 +157,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 10. (Lボタン) + (十字キー下) + (Select) を同時に押してRosalina menu を開きます
 11. "Miscellaneous options​"を選びます。
 12. Select "Switch the hb. title to the current app."
-13. (B) ボタンで続行します
+13. Press (B) to continue
 14. (B) を押してRosalinaメインメニューに戻ります
 15. (B) を押してRosalinaメインメニューを終了します。
 16. Homeボタンを押しダウンロードプレイを閉じます。
