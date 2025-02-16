@@ -36,12 +36,6 @@ All applications installed on this guide are open-source. If you are interested 
 
 ## 호환성 안내
 
-::: warning
-
-만약 이 가이드를 따르기 전의 **New 3DS** 가 펌웨어 버전 2.1.0이었다면, 진행하기 전에 [NAND 백업을 복원](godmode9-usage#restoring-a-nand-backup)해야 합니다. 2017년 전에 이 가이드를 따르지 않았다면 아마 상관이 없을 겁니다.
-
-:::
-
 ::: info
 
 만약 이전 CFW가 EmuNAND 기반이었고, 당신의 EmuNAND/RedNAND의 컨텐츠를 SysNAND로 옮기고 싶다면, 이 페이지를 수행하기 이전에 [EmuNAND 이동](move-emunand) 을 따라주시기 바랍니다. 만약 EmuNAND가 뭔지 모르신다면, 이것은 무시하셔도 됩니다.
@@ -94,9 +88,9 @@ All applications installed on this guide are open-source. If you are interested 
    - 만일 이들 중 하나의 버튼이 고장났을 경우, [config.ini](/assets/config.ini) 파일을 받아 `luma` 폴더에 덮어쓰기 해주세요. 이 파일은 Rosalina 키 조합을 (X) + (Y)로 바꿉니다
 2. "Miscellaneous options"을 선택해 주세요
 3. "Dump DSP firmware"를 선택해 주세요
-4. (B)를 눌러 진행해 주세요
+4. Press (B) to continue
 5. "Nullify user time offset"를 선택해 주세요
-6. (B)를 눌러 진행해 주세요
+6. Press (B) to continue
 7. (B)를 눌러 Rosalina 메뉴로 돌아가 주세요
 8. (B)를 눌러 Rosalina 메뉴를 나와 주세요
 
