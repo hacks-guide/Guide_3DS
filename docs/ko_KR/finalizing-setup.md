@@ -2,7 +2,7 @@
 
 ## 중요
 
-`boot.firm` 파일은 boot9strap이 NAND에서 로딩을 완료한 후 실행하는 것입니다. 이번 경우에서는, [LumaTeam](https://github.com/LumaTeam/)의 Luma3DS를 사용해서 콘솔을 패치하고, 홈브류 소프트웨어를 실행할 수 있도록 합니다.
+On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) as our `boot.firm` to patch the console, allowing it to run homebrew software.
 
 이 가이드에서는, 중요한 시스템 파일의 백업을 하고, 몆 가지의 홈브류 프로그램을 설치할 겁니다. 이러한 단계의 대부분은 콘솔에서 실행할 스크립트를 사용하여 자동화됩니다.
 
@@ -10,15 +10,27 @@
 
 본 스크립트는 다음과 같은 어플리케이션을 설치할 것입니다:
 
-- **[FBI](https://github.com/lifehackerhansol/FBI)** _(CIA 확장자 어플리케이션 설치용)_
-- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(홈브류 런처 실행용)_
-- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(커스텀 테마 설치용)_
-- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(3DS 및 DS 게임 세이브 파일 백업 및 복원)_
-- **[ftpd](https://github.com/mtheall/ftpd)** _(3DS SD 카드 접근 원격 접속)_
-- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(다른 홈브류 앱을 설치하기 위한 홈브류 마켓)_
-- **[GodMode9](https://github.com/d0k3/GodMode9)** _(NAND와 카트리지 접근을 위한 다용도 프로그램)_
+- **FBI** by Steveice10 _(installs CIA formatted applications)_
+- **Homebrew Launcher Loader** by PabloMK7 _(runs Homebrew Launcher, for 3DSX format homebrew)_
+- **Anemone3DS** by astronautlevel2 _(installs custom themes, splashes, and badges)_
+- **Checkpoint** by BernardoGiordano/FlagBrew _(manages 3DS/DS game save data)_
+- **ftpd** by mtheall _(allows wireless 3DS SD card access over FTP)_
+- **Universal-Updater** by Universal-Team _(on-device app store for downloading homebrew over Wi-Fi)_
+- **GodMode9** by d0k3 _(multipurpose tool for extracting data from internal memory or cartridges)_
 
 해당 프로그램이 필요하지 않은 경우 본 페이지에 적힌 모든 설정이 완료된 뒤에 본체 설정 -> 데이터 관리 -> Nintendo 3DS -> 소프트웨어 관리에서 지울 수 있습니다. (GodMode9은 이 방식으로 지울 수 없으며 또한 다른 기능들을 위해 필요합니다.)
+
+::: details Source code links (optional)
+
+All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
+
+- [FBI](https://github.com/lifehackerhansol/FBI)
+- [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
+- [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
+- [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)
+- [ftpd](https://github.com/mtheall/ftpd)
+- [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)
+- [GodMode9](https://github.com/d0k3/GodMode9)
 
 :::
 
@@ -104,6 +116,7 @@
 7. "Scripts..."를 선택해 주세요
 8. "finalize"를 선택해 주세요
 9. 스크립트 표시에 따라 필요한 행동을 취해주세요
+   - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
    - 만일 오류가 발생할 경우, 오류 메세지에 나온 안내를 따르거나 [문제 해경](troubleshooting-finalizing-setup) 페이지를 참고해 주세요
 10. "Setup Complete!" 가 떴을 경우, (A) 버튼을 눌러 전원을 꺼 주세요
     - 만일 "Setup Complete!"(설정 완료!) 가 뜨지 않은 경우, 스크립트가 정상 실행되지 않은 것이며 해당 섹션의 작업을 3단계부터 다시 해야 합니다
