@@ -36,12 +36,6 @@ All applications installed on this guide are open-source. If you are interested 
 
 ## Compatibility Notes
 
-::: warning
-
-如果你的 **New 3DS** 的系统在很早以前通过某些手段降级到了 2.1.0，则你应该在继续前先[还原你的 NAND 备份](godmode9-usage#restoring-a-nand-backup)。 This likely doesn't apply to you unless you were following this guide in 2017.
-
-:::
-
 ::: info
 
 如果你的主机先前破解过，且先前的破解是基于 EmuNAND 的，并且现在你希望将你的 EmuNAND/RedNAND 移植至 SysNAND，请在继续前进行[移植 EmuNAND](move-emunand)。 如果你不知道 EmuNAND 是啥的话，大概你也不需要做这个了。
@@ -94,9 +88,9 @@ The screenshot below indicates the minimum SD card layout that is required to fo
    - If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
 2. 选择 “Miscellaneous options”
 3. 选择“Dump DSP firmware”
-4. 按 “B” 键继续
+4. Press (B) to continue
 5. 选择“Nullify user time offset”
-6. 按 “B” 键继续
+6. Press (B) to continue
 7. 按 “B” 键返回 Rosalina 主菜单
 8. 按 “B” 键退出 Rosalina 菜单
 
