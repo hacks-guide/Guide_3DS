@@ -157,7 +157,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 10. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
 11. Wähle "Miscellaneous options"
 12. Select "Switch the hb. title to the current app."
-13. Drücke (B) um fortzufahren
+13. Press (B) to continue
 14. Drücke (B), um zum Rosalina-Hauptmenü zurückzukehren
 15. Drücke (B), um das Rosalina-Menü zu schließen
 16. Drücke (Home) und schließe die Download-Spiel Anwendung
