@@ -2,7 +2,7 @@
 
 ## Lettura necessaria
 
-Il file `boot.firm` è il file avviato da boot9strap stesso al termine del caricamento dalla NAND. In questo caso, stiamo usando Luma3DS di [LumaTeam](https://github.com/LumaTeam/) per modificare la console, consentendogli di eseguire software homebrew.
+On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) as our `boot.firm` to patch the console, allowing it to run homebrew software.
 
 In questa pagina realizzeremo backup di file di sistema critici e installeremo i alcuni programmi homebrew. La maggior parte di questi passaggi sarà automatizzata utilizzando uno script che verrà eseguito sulla tua console.
 
@@ -10,15 +10,27 @@ In questa pagina realizzeremo backup di file di sistema critici e installeremo i
 
 Lo script installerà le seguenti applicazioni:
 
-- **[FBI](https://github.com/lifehackerhansol/FBI)** _(installa applicazioni in formato CIA)_
-- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(avvia l'Homebrew Launcher)_
-- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(installa temi personalizzati)_
-- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(salva e ripristina file di salvataggio per giochi 3DS e DS)_
-- **[ftpd](https://github.com/mtheall/ftpd)** _(accede alla scheda SD del tuo 3DS via wireless)_
-- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(un app store di applicazioni homebrew per scaricare homebrew dal 3DS via Wi-Fi)_
-- **[GodMode9](https://github.com/d0k3/GodMode9)** _(strumento multiuso per gestire la NAND e le schede di gioco)_
+- **FBI** by Steveice10 _(installs CIA formatted applications)_
+- **Homebrew Launcher Loader** by PabloMK7 _(runs Homebrew Launcher, for 3DSX format homebrew)_
+- **Anemone3DS** by astronautlevel2 _(installs custom themes, splashes, and badges)_
+- **Checkpoint** by BernardoGiordano/FlagBrew _(manages 3DS/DS game save data)_
+- **ftpd** by mtheall _(allows wireless 3DS SD card access over FTP)_
+- **Universal-Updater** by Universal-Team _(on-device app store for downloading homebrew over Wi-Fi)_
+- **GodMode9** by d0k3 _(multipurpose tool for extracting data from internal memory or cartridges)_
 
 Se non desideri alcune di queste applicazioni, puoi rimuoverle al termine di questa pagina entrando in Impostazioni della console -> Gestione dati -> Nintendo 3DS -> Software. (GodMode9 non può essere rimosso in questa maniera, ed è generalmente richiesto per altre funzionalità.)
+
+::: details Source code links (optional)
+
+All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
+
+- [FBI](https://github.com/lifehackerhansol/FBI)
+- [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
+- [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
+- [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)
+- [ftpd](https://github.com/mtheall/ftpd)
+- [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)
+- [GodMode9](https://github.com/d0k3/GodMode9)
 
 :::
 
@@ -104,6 +116,7 @@ In questa sezione, userai una serie di script per automatizzare l'installazione 
 7. Seleziona "Scripts..."
 8. Seleziona "finalize"
 9. Segui le istruzioni dello script, rispondendo alle domande che ti vengono poste
+   - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
    - - Se riscontri un errore, segui le istruzioni riportate nel messaggio di errore o consulta la pagina [Risoluzione dei problemi](troubleshooting-finalizing-setup)
 10. Quando lo script mostrerà "Setup complete!", premi (A) per spegnere la console
     - Se NON vedi il messaggio "Setup complete!", lo script non ha avuto successo e dovrai ripetere questa sezione dal Punto 3
