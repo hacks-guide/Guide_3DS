@@ -36,12 +36,6 @@ All applications installed on this guide are open-source. If you are interested 
 
 ## Catatan Kompatibilitas
 
-::: warning
-
-Jika **New 3DS** ada di versi 2.1.0 sebelum mengikuti panduan ini, maka [pulihkan dulu cadangan NAND](godmode9-usage#restoring-a-nand-backup) sebelum lanjut. Ini abaikan saja jika tidak pernah mengikuti panduan ini di tahun 2017.
-
-:::
-
 ::: info
 
 Jika penyiapan CFW sebelumnya EmuNAND dan ingin memindahkan isi dari EmuNAND/RedNAND ke SysNAND, ikuti [Memindahkan EmuNAND](move-emunand) sebelum mengikuti laman ini. Jika tidak tahu apa itu EmuNAND, ini abaikan saja.
@@ -94,9 +88,9 @@ Di bagian ini akan menyelaraskan jam internal 3DS dengan jam sebenarnya, dan men
    - Jika tombol tersebut ada yang rusak, unduh [config.ini](/assets/config.ini) dan taruh di folder `luma`, timpa berkas yang ada. Ini akan mengubah kombo tombol menu Rosalina ke (X) + (Y)
 2. Pilih "Miscellaneous options"
 3. Pilih "Dump DSP firmware"
-4. Tekan (B) untuk lanjut
+4. Press (B) to continue
 5. Pilih "Nullify user time offset"
-6. Tekan (B) untuk lanjut
+6. Press (B) to continue
 7. Tekan (B) untuk kembali ke menu utama Rosalina
 8. Tekan (B) untuk keluar dari menu Rosalina
 
