@@ -157,7 +157,7 @@
 10. Πατήστε τα (L) + (Κάτω) + (Select) ταυτόχρονα ώστε να εκκινήσετε το μενού Rosalina
 11. Επιλέξτε «Miscellaneous options»
 12. Επιλέξτε «Switch the hb. title to the current app.»
-13. Press (B) to continue
+13. Πατήστε το (Β) για να συνεχίσετε
 14. Πατήστε το (B) για να επιστρέψετε στο κύριο μενού Rosalina
 15. Πατήστε το (B) για να κλείσετε το μενού Rosalina
 16. Πατήστε το (Home) και έπειτα, κλείστε το Download Play
