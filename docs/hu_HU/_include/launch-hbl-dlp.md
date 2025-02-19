@@ -3,7 +3,7 @@
 3. Nyomd le az (Bal Váll) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához
 4. Válaszd ki a "Miscellaneous options"-t
 5. Válaszd a "Switch the hb. title to the current app." opciót
-6. Press (B) to continue
+6. Nyomd meg a (B) gombot a folytatáshoz
 7. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
 8. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 9. Nyomd meg a (Home) gombot hogy felfüggeszd a Download Play-t
