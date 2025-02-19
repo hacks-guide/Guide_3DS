@@ -66,9 +66,9 @@ Bannolás már nem lehetséges, mert a Nintendo Network szolgáltatások le lett
 
 :::details Meg tudom ezt csinálni számítógép nélkül (pl. Android telefonnal)?
 
-In most cases, yes! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+A legtöbb esetben igen! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
 
-You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
+Szükséged lehet egy Windows, macOS, vagy Linux rendszert futtató számítógépre az SD kártyád újraformázásához, ha az 64GB vagy nagyobb méretű.
 
 :::
 
@@ -78,9 +78,9 @@ Legalább 1.5GB szabad hely kell az SD kártyán az útmutató teljes végrehajt
 
 :::
 
-:::details Should I use a new SD card, or the one I already have?
+:::details Új SD kártyát ajánlott használja, vagy azt az egyet, ami már megvan?
 
-You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
+Csak 1 db SD kártyát javasolt használnod a 3DS-hez bármikor. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
 
 If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
 
