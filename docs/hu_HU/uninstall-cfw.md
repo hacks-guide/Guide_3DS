@@ -157,7 +157,7 @@ Ez a rész az illegitim tartalom eltávolításáról szól, mint a homebrew vag
 10. Nyomd le az (Bal Váll) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához
 11. Válaszd ki a "Miscellaneous options"-t
 12. Válaszd a "Switch the hb. title to the current app." opciót
-13. Press (B) to continue
+13. Nyomd meg a (B) gombot a folytatáshoz
 14. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
 15. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 16. Nyomd meg a (Home) gombot és zárd be a Download Play-t
