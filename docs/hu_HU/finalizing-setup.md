@@ -2,7 +2,7 @@
 
 ## Kötelező olvasmány
 
-On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) as our `boot.firm` to patch the console, allowing it to run homebrew software.
+On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). Ebben az esetben a [LumaTeam](https://github.com/LumaTeam/) által készített Luma3DS-t használjuk `boot.firm`-ként a konzol patcheléséhez, hogy tudjon homebrew programokat futtatni.
 
 Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és néhány homebrew alkalmazást fogunk telepíteni. Ezen lépések nagy része automatizált egy szkripttel, ami a konzolodon fogsz futtatni.
 
@@ -20,7 +20,7 @@ A szkript a következő alkalmazásokat fogja telepíteni:
 
 Ha nem szeretnéd ezeket az alkalmazásokat, eltávolíthatod őket, miután befejezted ezt az oldalt a System Settings -> Data Management -> Nintendo 3DS -> szoftver-hez navigálva. (A GodMode9 nem távolítható el így, és általában szükséges más funkciókhoz.)
 
-::: details Source code links (optional)
+::: details Forráskód linkek (opcionális)
 
 All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
 
