@@ -10,13 +10,13 @@ Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és néhány home
 
 A szkript a következő alkalmazásokat fogja telepíteni:
 
-- **FBI** by Steveice10 _(installs CIA formatted applications)_
-- **Homebrew Launcher Loader** by PabloMK7 _(runs Homebrew Launcher, for 3DSX format homebrew)_
-- **Anemone3DS** by astronautlevel2 _(installs custom themes, splashes, and badges)_
-- **Checkpoint** by BernardoGiordano/FlagBrew _(manages 3DS/DS game save data)_
-- **ftpd** by mtheall _(allows wireless 3DS SD card access over FTP)_
-- **Universal-Updater** by Universal-Team _(on-device app store for downloading homebrew over Wi-Fi)_
-- **GodMode9** by d0k3 _(multipurpose tool for extracting data from internal memory or cartridges)_
+- **FBI** Steveice10-től _(CIA formátumú alkalmazások telepítésére)_
+- **Homebrew Launcher Loader** PabloMK7-től _(elindítja a Homebrew Launchert, ami 3DSX formátumú homebrew-hoz készült)_
+- **Anemone3DS** astronautlevel2-től _(egyedi témák telepítése)_
+- **Checkpoint** BernardoGiordano/FlagBrew-től _(a 3DS/DS játék mentések kezelésére)_
+- **ftpd** mtheall-től _(lehetővé teszi a vezeték nélküli 3DS SD kártya hozzáférést FTP-n keresztül)_
+- **Universal-Updater** az Universal-Team-től _(egy homebrew app store homebrew letöltéséhez a 3DS-re WiFi-n keresztül)_
+- **GodMode9** d0k3-tól _(sokféle dologra használható eszköz, például NAND és kártya műveletekre)_
 
 Ha nem szeretnéd ezeket az alkalmazásokat, eltávolíthatod őket, miután befejezted ezt az oldalt a System Settings -> Data Management -> Nintendo 3DS -> szoftver-hez navigálva. (A GodMode9 nem távolítható el így, és általában szükséges más funkciókhoz.)
 
@@ -88,9 +88,9 @@ Ebben a fejezetben szinkronizálni fogod a 3DS belső óráját az aktuális id�
    - Ha valamelyik gombod törött, töltsd le a [config.ini](/assets/config.ini) fájlt és rakd a `luma` mappádba, felülírva az ott lévőt. Ez átállítja a Rosalina menu billentyű kombinációt (X) + (Y)
 2. Válaszd ki a "Miscellaneous options"-t
 3. Válaszd a "Dump DSP firmware" opciót
-4. Press (B) to continue
+4. Nyomd meg a (B) gombot a folytatáshoz
 5. Válaszd a "Nullify user time offset" opciót
-6. Press (B) to continue
+6. Nyomd meg a (B) gombot a folytatáshoz
 7. Nyomd meg a (B) gombot, hogy visszakerülj a Rosalina főmenüjébe
 8. Nyomd meg a (B) gombot, hogy kilépj a Rosalina menüből
 
