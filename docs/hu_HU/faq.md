@@ -112,7 +112,7 @@ Ha Luma3DS-t használsz, az egyedi firmware loader (boot9strap) _soha_ nem kerü
 
 :::details Hogyan bővíthetem nagyobbra az SD kártyám?
 
-Másold át az SD kártyád tartalmát egy új FAT32-re formázott SD kártyára. A 128GB-os kártyák esetén a 65536 allokációs méret javasolt. 128GB-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt a GBA grafikával és az egyedi témákkal. Specific formatting instructions are available here: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
+Másold át az SD kártyád tartalmát egy új FAT32-re formázott SD kártyára. A 128GB-os kártyák esetén a 65536 allokációs méret javasolt. 128GB-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt a GBA grafikával és az egyedi témákkal. Specifikus formázási útmutatók itt: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
@@ -124,7 +124,7 @@ Igen, a rendszer átvitel végrehajtható a hivatalos System Transfer funkcióva
 
 :::details Hogyan módosíthatom a rendszer nyelvét egy japán 3DS-nek?
 
-Az egyetlen módja a rendszer nyelv módosításának egy japán 3DS esetében más nyelvre a [régió csere](region-changing). Fontos megjegyezni, hogy ez erősen valószínű, hogy elrontja a Nintendo eShop-ot a konzolodon, így nem fogsz tudni frissíteni játékokat, függetlenül attól, hogy régión belüli vagy kívüli. You will also be unable to access Pokémon Bank (if you have it installed), as it relies on eShop access.
+Az egyetlen módja a rendszer nyelv módosításának egy japán 3DS esetében más nyelvre a [régió csere](region-changing). Fontos megjegyezni, hogy ez erősen valószínű, hogy elrontja a Nintendo eShop-ot a konzolodon, így nem fogsz tudni frissíteni játékokat, függetlenül attól, hogy régión belüli vagy kívüli. Továbbá nem fogod elérni a Pokémon Bank-ot (ha telepítetted), mert az eShop hozzáférésen alapul.
 
 :::
 
