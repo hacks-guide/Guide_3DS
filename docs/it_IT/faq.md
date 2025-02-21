@@ -66,9 +66,9 @@ I ban non sono più possibili perché i servizi Nintendo Network sono terminati 
 
 :::details Posso farlo senza un computer (ad esempio con un telefono Android)?
 
-In most cases, yes! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+Nella maggior parte dei casi, sì! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
 
-You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
+Potresti aver bisogno di un computer con Windows, maxOS o Linux per formattare la tua scheda SD se è più grande di 64GB.
 
 :::
 
@@ -78,11 +78,11 @@ Avrai bisogno di almeno 1,5 GB di spazio libero nella scheda SD per seguire ques
 
 :::
 
-:::details Should I use a new SD card, or the one I already have?
+:::details Dovrei usare una nuova scheda SD, o quella che ho già?
 
-You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
+Dovresti usare una sola scheda SD con un 3DS in qualunque momento. Se utilizzi un'altra scheda SD per modificare la console, creerai un altro 'profilo' per il tuo software modificato, che sarà inaccessibile sulla tua scheda SD originale. Tuttavia, **la console rimarrà modificata**, poiché la modifica è installata nella memoria interna (e non nella scheda SD).
 
-If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
+If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. Puoi farlo prima o dopo aver modificato la console.
 
 :::
 
@@ -112,7 +112,7 @@ Se stai usando Luma3DS, il loader del tuo custom firmware (boot9strap) non verr�
 
 :::details Come faccio a sostituire la mia scheda SD?
 
-Copia e incolla il contenuto della tua scheda SD in una nuova scheda SD formattata come FAT32. Per le SD da 128 GB, si raccomanda una dimensione di allocazione di 65536. SD più grandi di 128GB non sono consigliate a causa di problemi noti con la grafica GBA e con i temi personalizzati. Specific formatting instructions are available here: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
+Copia e incolla il contenuto della tua scheda SD in una nuova scheda SD formattata come FAT32. Per le SD da 128 GB, si raccomanda una dimensione di allocazione di 65536. SD più grandi di 128GB non sono consigliate a causa di problemi noti con la grafica GBA e con i temi personalizzati. Specifiche istruzioni di formattazione sono disponibili qui: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
