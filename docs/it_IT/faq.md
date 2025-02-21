@@ -66,7 +66,7 @@ I ban non sono più possibili perché i servizi Nintendo Network sono terminati 
 
 :::details Posso farlo senza un computer (ad esempio con un telefono Android)?
 
-Nella maggior parte dei casi, sì! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+Nella maggior parte dei casi, sì! L'exploit MSET9 (utilizzato principalmente per il più recente firmware su Old 3DS) richiede l'esecuzione di uno script Python o l'utilizzo di un'applicazione Android, mentre tutti gli altri exploit richiedono solo il posizionamento di file sulla scheda SD.
 
 Potresti aver bisogno di un computer con Windows, maxOS o Linux per formattare la tua scheda SD se è più grande di 64GB.
 
@@ -82,7 +82,7 @@ Avrai bisogno di almeno 1,5 GB di spazio libero nella scheda SD per seguire ques
 
 Dovresti usare una sola scheda SD con un 3DS in qualunque momento. Se utilizzi un'altra scheda SD per modificare la console, creerai un altro 'profilo' per il tuo software modificato, che sarà inaccessibile sulla tua scheda SD originale. Tuttavia, **la console rimarrà modificata**, poiché la modifica è installata nella memoria interna (e non nella scheda SD).
 
-If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. Puoi farlo prima o dopo aver modificato la console.
+Se hai acquistato una nuova scheda SD da utilizzare con la tua console, dovresti formattarla ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), quindi copiare e incollare tutto il contenuto della tua vecchia scheda SD nella nuova scheda SD. Puoi farlo prima o dopo aver modificato la console.
 
 :::
 
@@ -124,7 +124,7 @@ Sì, i trasferimenti dati possono essere effettuati tramite la relativa funzione
 
 :::details Come faccio a cambiare la lingua di sistema di un 3DS giapponese?
 
-L'unico modo per cambiare la lingua di sistema di un 3DS giapponese in una lingua diversa dal giapponese è tramite un [cambio di regione](region-changing). Presta attenzione al fatto che molto probabilmente questo corromperà il Nintendo eShop della tua console, per cui non potrai aggiornare i tuoi giochi, sia che siano interni sia esterni alla tua regione. You will also be unable to access Pokémon Bank (if you have it installed), as it relies on eShop access.
+L'unico modo per cambiare la lingua di sistema di un 3DS giapponese in una lingua diversa dal giapponese è tramite un [cambio di regione](region-changing). Presta attenzione al fatto che molto probabilmente questo corromperà il Nintendo eShop della tua console, per cui non potrai aggiornare i tuoi giochi, sia che siano interni sia esterni alla tua regione. Potresti anche non essere in grado di accedere a Pokeémon Bank (se lo hai installato), in quanto si basa sull'eShop.
 
 :::
 
