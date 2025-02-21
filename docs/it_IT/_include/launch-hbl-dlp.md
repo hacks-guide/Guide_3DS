@@ -3,7 +3,7 @@
 3. Premi simultaneamente i pulsanti (L) + (Giù) + (Select) per aprire il menu di Rosalina
 4. Seleziona "Miscellaneous options"
 5. Seleziona "Switch the hb. title to the current app."
-6. Press (B) to continue
+6. Premi (B) per continuare
 7. Premi (B) per tornare al menu principale di Rosalina
 8. Premi (B) per uscire dal menu di Rosalina
 9. Premi il pulsante HOME per sospendere l'applicazione "Modalità download"
