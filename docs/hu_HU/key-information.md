@@ -50,7 +50,7 @@ A 3DS bármilyen kapacitású SD kártyát tud olvasni (még akkor is, ha nagyob
 
 ::: info
 
-It is highly recommended to **only use one SD card** with a console at any given time, as you cannot merge the contents of two SD cards later on. So, if your console already has an SD card, you should use that SD card to mod your console, or copy everything to a larger SD card before or after you mod it.
+Erősen ajánlot, hogy **csak egy SD kártyát használj** bármikor a konzolhoz, mert nem tudod később két SD kártya tartalmát egyesíteni. Tehát, ha a konzolodnak van már SD kártyája, azt érdemes használnod a konzolod moddolásához, vagy másolj át mindent egy nagyobb kártyára, mielőtt vagy miután moddoltad.
 
 :::
 
