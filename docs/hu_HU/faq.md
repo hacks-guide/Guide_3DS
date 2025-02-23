@@ -78,7 +78,7 @@ Legalább 1.5GB szabad hely kell az SD kártyán az útmutató teljes végrehajt
 
 :::
 
-:::details Új SD kártyát ajánlott használja, vagy azt az egyet, ami már megvan?
+:::details Új SD kártyát ajánlott használjak, vagy azt az egyet, ami már megvan?
 
 Csak 1 db SD kártyát javasolt használnod a 3DS-hez bármikor. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
 
