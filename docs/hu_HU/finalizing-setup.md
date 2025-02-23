@@ -2,7 +2,7 @@
 
 ## Kötelező olvasmány
 
-On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). Ebben az esetben a [LumaTeam](https://github.com/LumaTeam/) által készített Luma3DS-t használjuk `boot.firm`-ként a konzol patcheléséhez, hogy tudjon homebrew programokat futtatni.
+Az előző oldalon telepítetted a boot9strap-et, egy egyedi firmware loader-t ami betölti a `boot.firm`-et az SD kártyádról vagy a NAND-ról (belső memória). Ebben az esetben a [LumaTeam](https://github.com/LumaTeam/) által készített Luma3DS-t használjuk `boot.firm`-ként a konzol patcheléséhez, hogy tudjon homebrew programokat futtatni.
 
 Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és néhány homebrew alkalmazást fogunk telepíteni. Ezen lépések nagy része automatizált egy szkripttel, ami a konzolodon fogsz futtatni.
 
@@ -22,7 +22,7 @@ Ha nem szeretnéd ezeket az alkalmazásokat, eltávolíthatod őket, miután bef
 
 ::: details Forráskód linkek (opcionális)
 
-All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
+Minden az ebből az útmutatóból telepített alkalmazás nyílt forrású. Ha érdekel, hogy hogyan működnek, vagy szeretnél egy csillagot hagyni elismerésedül, a forráskód elérhető a linkekről innen:
 
 - [FBI](https://github.com/lifehackerhansol/FBI)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
@@ -110,7 +110,7 @@ Ebben a fejezetben szkripteket fogsz használni arra, hogy automatizáld a homeb
 7. Válaszd a "Scripts..." opciót
 8. Válaszd az "finalize" opciót
 9. Kövesd a script utasításait és válaszolj meg minden kérdést
-   - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
+   - Ha "Information #05: No title database" üzenetet látsz, nyomj (A) gombot az importáláshoz, majd nyomd meg a gombokat a képernyőn a folytatáshoz
    - Ha hibát kapsz, kövesd a hibaüzenet lépéseit vagy tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt
 10. Ha a szkript a "Setup complete!" üzenetet írja, nyomj (A) gombot az eszköz kikapcsolásához
     - Ha NEM láttad a "Setup complete!" üzenetet, akkor a szkript nem volt sikeres és újra kell csinálnod ezt a részt a 3. lépéstől
