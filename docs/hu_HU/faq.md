@@ -66,7 +66,7 @@ Bannolás már nem lehetséges, mert a Nintendo Network szolgáltatások le lett
 
 :::details Meg tudom ezt csinálni számítógép nélkül (pl. Android telefonnal)?
 
-A legtöbb esetben igen! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+A legtöbb esetben igen! Az MSET9 exploit (elsődlegesen használt a legutolsó firmware-hez Old 3DS-en) Python script futtatását vagy egy Android alkalmazás igényli, míg az összes többi exploit-nál csak fájlokat rakunk az SD kártyára.
 
 Szükséged lehet egy Windows, macOS, vagy Linux rendszert futtató számítógépre az SD kártyád újraformázásához, ha az 64GB vagy nagyobb méretű.
 
@@ -80,9 +80,9 @@ Legalább 1.5GB szabad hely kell az SD kártyán az útmutató teljes végrehajt
 
 :::details Új SD kártyát ajánlott használjak, vagy azt az egyet, ami már megvan?
 
-Csak 1 db SD kártyát javasolt használnod a 3DS-hez bármikor. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
+Csak 1 db SD kártyát javasolt használnod a 3DS-hez bármikor. Ha egy másik SD kártyát használsz a konzolod moddolására, létre fogsz hozni egy másik 'profilt' a moddolt szoftvernek, ami elérhetetlen lesz az eredeti SD kártyádról. Azonban **a konzolod moddolt marad**, mivel a mod a belső memóriába telepített (nem az SD kártyára).
 
-If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
+Ha új SD kártyát vásároltál a konzoloddal használathoz, formáznod kell az új SD kártyát ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), majd másolj át mindent a régi SD kártyáról az új SD kártyára. Ezt moddolás előtt és utána is megteheted.
 
 :::
 
