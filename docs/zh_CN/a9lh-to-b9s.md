@@ -40,7 +40,7 @@ This page is for existing arm9loaderhax users to update their consoles to boot9s
 
 2. 将你的 SD 卡插入到电脑
 
-3. Copy everything from Luma3DS `.zip` to the root of your SD card
+3. Copy everything from the latest Luma3DS `.zip` to the root of your SD card
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 
 4. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.zip` to the root of your SD card
