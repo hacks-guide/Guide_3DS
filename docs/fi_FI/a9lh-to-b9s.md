@@ -40,7 +40,7 @@ Korvaa mahdolliset olemassa olevat tiedostot SD-kortillasi kaikissa tämän vaih
 
 2. Aseta SD-korttisi tietokoneeseesi
 
-3. Copy everything from Luma3DS `.zip` to the root of your SD card
+3. Copy everything from the latest Luma3DS `.zip` to the root of your SD card
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 
 4. Copy `arm9loaderhax.bin` from the v7.0.5 Luma3DS `.zip` to the root of your SD card
