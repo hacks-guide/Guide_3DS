@@ -43,6 +43,12 @@ In this section, you will copy the files needed to trigger both browserhax and u
 
 ### Section II - SSLoth
 
+::: warning
+
+This section is MANDATORY! Failure to setup the proxy will result in issues with the exploit, which won't brick your console, but that can possibly force you to switch to a different exploit.
+
+:::
+
 In this section, you will change your Internet connection settings to use a proxy network designed to bypass the browser version check, allowing the browser to function without a system update. This will allow you to access the browser exploit webpage in the next section.
 
 <!--@include: ./_include/addproxy.md -->
@@ -57,6 +63,13 @@ In this section, you will visit the browser exploit webpage, which will use univ
 1. Tap the QR code button and scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
     + If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
     + If you get a security certificate warning, press (A) to allow the connection
+
+::: danger
+
+If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have inserted the proxy correctly.
+
+:::
+
 1. Tap the "PROCEED TO HAXX" button
 1. If the exploit was successful, you will have booted into SafeB9SInstaller
     + If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
