@@ -6,13 +6,13 @@ Ini adalah laman lebihan untuk memasang CTRTransfer 11.15.0 ke konsol.
 
 ::: info
 
-Konsol harus sudah ada Luma3DS dan boot9strap untuk laman ini. Jika sudah mengikuti panduan sampai "Penyiapan Akhir", berarti sudah ada Luma3DS dan boot9strap.
+Konsol harus sudah ada Luma3DS dan boot9strap untuk laman ini. Jika sudah mengikuti panduan sampai "Penyiapan Akhir", Luma3DS dan boot9strap sudah ada.
 
 :::
 
 ::: warning
 
-Untuk proses bagian ini, pengaturan sistem akan dikembalikan ke bawaan. Ini mencakup nama pengguna, negara, dan bahasa. **Tidak memengaruhi permainan terpasang dan simpanannya.**
+Untuk proses bagian ini, pengaturan sistem akan diatur ulang ke bawaan. Ini termasuk nama pengguna, negara, dan bahasa. **Tidak memengaruhi permainan terpasang dan simpanannya.**
 
 :::
 

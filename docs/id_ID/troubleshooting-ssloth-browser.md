@@ -55,13 +55,13 @@ The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the pag
 Follow these steps in order:
 
 1. Buka System Settings di konsol
-2. Navigate to `Internet Settings` -> `Connection Settings`
-3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+2. Navigasi ke `Internet Settings` -> `Connection Settings`
+3. Pilih slot sambungan jejaring yang ada dan navigasi ke `Change Settings` -> `Next Page (panah kanan)` -> `Proxy Settings`
 4. Set "Proxy Settings" to "No"
-5. Click OK, then click Save
-6. When prompted, click "Test" to perform the connection test
-   - The test should succeed
-7. Click "OK" to continue
+5. Pencet OK, lalu pencet Save
+6. Saat diminta, pencet "Test" untuk menguji sambungan
+   - Pengujiannya harus berhasil
+7. Pencet "OK" untuk lanjut
 8. Tekan "Back" dua kali, lalu "Close" untuk kembali ke HOME Menu
 9. Open the Internet Browser once
 10. If prompted about a system update, press OK

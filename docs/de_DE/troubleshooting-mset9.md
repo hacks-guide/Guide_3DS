@@ -108,7 +108,7 @@ You have multiple ID0 folders. To determine the correct folder, follow these ins
 4. Wait for the console to generate the SD card data
    - Your applications will have disappeared. Das ist normal und wird gleich behoben
 5. Power off your console
-6. Insert your SD card into your computer
+6. Stecke deine SD-Karte in deinen Computer
 7. Navigiere zum "Nintendo 3DS"-Ordner auf deiner SD-Karte
 8. Write down the first few characters of the folder you see
    - This is your true ID0, which we will keep in the real Nintendo 3DS folder
@@ -153,7 +153,7 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
 
 1. Force power off your console by holding the Power button for 20 seconds
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -182,7 +182,7 @@ You most likely did something different from the MSET9 instructions, selected th
 Follow these instructions to remove the trigger file and to retry Section II:
 
 1. Force power off your console by holding the Power button for 20 seconds
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 
 <!--@include: ./_include/mset9-chorus.md -->
 

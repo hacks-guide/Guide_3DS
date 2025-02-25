@@ -3,7 +3,7 @@
 3. (L 어깨) + (십자 Down) + (Select) 을 동시에 눌러서 Rosalina 메뉴를 실행해 주세요
 4. "Miscellaneous options"을 선택해 주세요
 5. "Switch the hb. title to the current app."를 선택해 주세요
-6. (B)를 눌러 진행해 주세요
+6. Press (B) to continue
 7. (B)를 눌러 Rosalina 메뉴로 돌아가 주세요
 8. (B)를 눌러 Rosalina 메뉴를 나와 주세요
 9. (Home) 키를 눌러 다운로드 플레이를 종료해 주세요

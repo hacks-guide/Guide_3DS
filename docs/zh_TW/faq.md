@@ -66,13 +66,23 @@ Bans are no longer possible because Nintendo Network services have been shut dow
 
 :::details Can I do this without a computer (e.g. an Android phone)?
 
-可以的! 您只要能在可相容的 SD 卡上存取檔案就可以了！
+In most cases, yes! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+
+You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
 
 :::
 
 :::details What size SD card can I use?
 
 您將需要至少 1.5GB 的可用 SD 卡空間才能完全遵循本手冊。 雖然任天堂官方只有列出 3DS 可用的 SD 卡最大容量為 32GB，但是實際上只要能格式化成 FAT32 的記憶卡都可以使用。 目前已知較大的 SD 卡可能會造成 GBA 和自定義主題的相關問題，因此不建議使用大於128GB的SD卡。
+
+:::
+
+:::details Should I use a new SD card, or the one I already have?
+
+You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
+
+If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
 
 :::
 
@@ -102,7 +112,7 @@ Historically, the 3DS used to have userland homebrew access through older exploi
 
 :::details How do I upgrade my SD card?
 
-Copy and paste your SD card contents to a new SD card formatted as FAT32. For 128GB cards, an allocation size of 65536 is recommended. 目前已知較大的 SD 卡可能會造成 GBA 和自定義主題的相關問題，因此不建議使用大於128GB的SD卡。
+Copy and paste your SD card contents to a new SD card formatted as FAT32. For 128GB cards, an allocation size of 65536 is recommended. 目前已知較大的 SD 卡可能會造成 GBA 和自定義主題的相關問題，因此不建議使用大於128GB的SD卡。 Specific formatting instructions are available here: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
@@ -114,7 +124,7 @@ Yes, system transfers can be performed through the official System Transfer func
 
 :::details How do I change the system language of a Japanese 3DS?
 
-The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your console, which means you will be unable to update your games whether they are in-region or out-of-region.
+The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your console, which means you will be unable to update your games whether they are in-region or out-of-region. You will also be unable to access Pokémon Bank (if you have it installed), as it relies on eShop access.
 
 :::
 

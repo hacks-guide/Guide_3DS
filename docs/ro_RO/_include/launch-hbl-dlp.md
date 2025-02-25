@@ -3,7 +3,7 @@
 3. Apăsați (L) + (Jos) + (Select) în același timp ca să deschideți meniul Rosalina
 4. Selectați "Miscellaneous options"
 5. Select "Switch the hb. title to the current app."
-6. Apăsați (B) pentru a continua
+6. Press (B) to continue
 7. Apăsați (B) ca să vă întoarceți la meniul principal Rosalina
 8. Apăsați (B) pentru a ieși din meniul Rosalina
 9. Press (Home) to suspend Download Play

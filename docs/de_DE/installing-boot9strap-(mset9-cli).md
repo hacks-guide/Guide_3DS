@@ -33,7 +33,7 @@ On this page, you will use the MSET9 script, which is used to trigger MSET9. Whi
 
 In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
-1. Insert your SD card into your computer
+1. Stecke deine SD-Karte in deinen Computer
 2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files
 
    ::: info
@@ -77,7 +77,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 9. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
    - This will not wipe any of your data
 10. Power off your console by pressing the power button then tapping Power Off on the lower screen
-11. Insert your SD card into your computer
+11. Stecke deine SD-Karte in deinen Computer
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -115,7 +115,7 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 4. **Do not press any buttons or touch the screen**
 5. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
    - The menu will refresh and say that no SD card is inserted
-6. Insert your SD card into your computer
+6. Stecke deine SD-Karte in deinen Computer
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -148,7 +148,7 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 :::
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 
 <!--@include: ./_include/mset9-chorus.md -->
 

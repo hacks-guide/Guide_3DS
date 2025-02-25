@@ -1,8 +1,8 @@
 1. Tekan (Home) untuk membuka menu tindakan
 2. Pilih "Scripts..."
 3. Pilih "GM9Megascript"
-4. Select "Backup Options"
-5. Select "SysNAND Backup"
+4. Pilih "Backup Options"
+5. Pilih "SysNAND Backup"
 6. Tekan (A) untuk konfirmasi
    - Proses ini akan lumayan lama
    - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
@@ -15,7 +15,7 @@
 13. Pilih "Copy to 0:/gm9/out"
     - If you see "Destination already exists", press (A) on "Overwrite file(s)"
 14. Tekan (A) untuk lanjut
-15. Hold (R) and press (Start) at the same time to power off your console
+15. Tahan (R) dan tekan (Start) bersamaan untuk matikan daya konsol
 16. Sisipkan kartu SD ke komputer Anda
 17. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
     - Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)

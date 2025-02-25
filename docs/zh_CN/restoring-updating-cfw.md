@@ -13,7 +13,7 @@
 ## Instructions
 
 1. 将你的 SD 卡插入到电脑
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
+2. Copy everything from the Luma3DS `.zip` (`boot.firm`, `boot.3dsx`, and `config`) to the root of your SD card, replacing any existing files
    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 3. Reinsert your SD card into your console
 4. Power on your console

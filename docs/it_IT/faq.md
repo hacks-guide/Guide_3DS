@@ -66,13 +66,23 @@ I ban non sono più possibili perché i servizi Nintendo Network sono terminati 
 
 :::details Posso farlo senza un computer (ad esempio con un telefono Android)?
 
-Sì! A patto che tu abbia modo di trasferire file su una scheda SD compatibile.
+Nella maggior parte dei casi, sì! L'exploit MSET9 (utilizzato principalmente per il più recente firmware su Old 3DS) richiede l'esecuzione di uno script Python o l'utilizzo di un'applicazione Android, mentre tutti gli altri exploit richiedono solo il posizionamento di file sulla scheda SD.
+
+Potresti aver bisogno di un computer con Windows, maxOS o Linux per formattare la tua scheda SD se è più grande di 64GB.
 
 :::
 
 :::details Quali dimensioni di scheda SD posso usare?
 
 Avrai bisogno di almeno 1,5 GB di spazio libero nella scheda SD per seguire questa guida nella sua interezza. Anche se il 3DS è ufficialmente compatibile con schede SD fino a 32GB, schede SD più grandi possono essere usate una volta ri-formattate manualmente come FAT32. Non è consigliabile utilizzare schede SD superiori a 128GB a causa di problemi noti con grafica GBA e con temi personalizzati.
+
+:::
+
+:::details Dovrei usare una nuova scheda SD, o quella che ho già?
+
+Dovresti usare una sola scheda SD con un 3DS in qualunque momento. Se utilizzi un'altra scheda SD per modificare la console, creerai un altro 'profilo' per il tuo software modificato, che sarà inaccessibile sulla tua scheda SD originale. Tuttavia, **la console rimarrà modificata**, poiché la modifica è installata nella memoria interna (e non nella scheda SD).
+
+Se hai acquistato una nuova scheda SD da utilizzare con la tua console, dovresti formattarla ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), quindi copiare e incollare tutto il contenuto della tua vecchia scheda SD nella nuova scheda SD. Puoi farlo prima o dopo aver modificato la console.
 
 :::
 
@@ -102,7 +112,7 @@ Se stai usando Luma3DS, il loader del tuo custom firmware (boot9strap) non verr�
 
 :::details Come faccio a sostituire la mia scheda SD?
 
-Copia e incolla il contenuto della tua scheda SD in una nuova scheda SD formattata come FAT32. Per le SD da 128 GB, si raccomanda una dimensione di allocazione di 65536. SD più grandi di 128GB non sono consigliate a causa di problemi noti con la grafica GBA e con i temi personalizzati.
+Copia e incolla il contenuto della tua scheda SD in una nuova scheda SD formattata come FAT32. Per le SD da 128 GB, si raccomanda una dimensione di allocazione di 65536. SD più grandi di 128GB non sono consigliate a causa di problemi noti con la grafica GBA e con i temi personalizzati. Specifiche istruzioni di formattazione sono disponibili qui: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
@@ -114,7 +124,7 @@ Sì, i trasferimenti dati possono essere effettuati tramite la relativa funzione
 
 :::details Come faccio a cambiare la lingua di sistema di un 3DS giapponese?
 
-L'unico modo per cambiare la lingua di sistema di un 3DS giapponese in una lingua diversa dal giapponese è tramite un [cambio di regione](region-changing). Presta attenzione al fatto che molto probabilmente questo corromperà il Nintendo eShop della tua console, per cui non potrai aggiornare i tuoi giochi, sia che siano interni sia esterni alla tua regione.
+L'unico modo per cambiare la lingua di sistema di un 3DS giapponese in una lingua diversa dal giapponese è tramite un [cambio di regione](region-changing). Presta attenzione al fatto che molto probabilmente questo corromperà il Nintendo eShop della tua console, per cui non potrai aggiornare i tuoi giochi, sia che siano interni sia esterni alla tua regione. Potresti anche non essere in grado di accedere a Pokeémon Bank (se lo hai installato), in quanto si basa sull'eShop.
 
 :::
 

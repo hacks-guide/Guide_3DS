@@ -32,7 +32,7 @@ Ce guide fonctionne avec toutes les consoles commerciales de la famille Nintendo
 
 :::
 
-Dans la plupart des cas, vous pouvez suivre ce guide tant que vous avez la possibilité de télécharger des fichiers depuis Internet et de les copier sur votre carte SD. Selon votre ordinateur/téléphone/appareil électronique, vous devrez peut-être acheter un adaptateur de carte SD vers USB pour permettre à votre ordinateur de lire votre carte SD.
+Dans la plupart des cas, vous pouvez suivre ce guide tant que vous avez la possibilité de télécharger des fichiers depuis Internet et de les copier sur votre carte SD. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as Android phones. Depending on your electronic device, you may need to purchase a USB to SD card adapter to allow it to read your SD card.
 
 ::::
 
@@ -48,6 +48,12 @@ L'emplacement du port carte SD et le type de carte SD accepté dépendent du mod
 
 La 3DS peut lire des cartes SD de n'importe quelle capacité (même celles supérieures à 32 Go), mais la carte doit être formatée en FAT32 (**pas** exFAT ou NTFS). Vous pouvez utiliser l'un des outils suivants pour formater votre carte SD, selon votre système d'exploitation : [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). Les cartes SD de plus de **128 Go** ne sont pas recommandées en raison de problèmes connus avec des thèmes personnalisés et des graphiques GBA/DS.
 
+::: info
+
+It is highly recommended to **only use one SD card** with a console at any given time, as you cannot merge the contents of two SD cards later on. So, if your console already has an SD card, you should use that SD card to mod your console, or copy everything to a larger SD card before or after you mod it.
+
+:::
+
 ::: warning
 
 Pour suivre ce guide, vous aurez besoin d'une carte SD d'une capacité d'au moins **2 Go**.
@@ -56,7 +62,7 @@ Pour suivre ce guide, vous aurez besoin d'une carte SD d'une capacité d'au moin
 
 ::: info
 
-Si vous le souhaitez, vous pouvez vérifier si votre carte SD contient des erreurs avant de suivre ce guide en utilisant [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), ou [F3XSwift (Mac)](f3xswift-\(mac\))
+If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 

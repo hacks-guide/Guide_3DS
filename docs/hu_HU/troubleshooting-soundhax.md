@@ -26,7 +26,9 @@ Ha nem ezeken a firmware verziókon van a konzolod, akkor ez valószínűleg azt
 
 Probléma van a `otherapp.bin` fájloddal (nem jó, hiányzik, rossz helyen van vagy sérült). Töltsd le a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az SD kártyád gyökerébe.
 
-Ha az üzenetben leírtak nem segítenek és Old 3DS / Old 3DS XL / Old 2DS konzolt használsz, lehet hogy egy cartridge frissítési problémába ütköztél. Keresd meg a rendszered verzióját. Ha az utolsó szám 4 vagy kisebb (pl. 11.3.0-**4**E), akkor cseréld le a Soundhax fájlt az SD kártyád gyökerében [ezzel](http://soundhax.686178.xyz/frankenfirm.html?crash).
+Lehetséges, hogy a Soundhax fájl rossz változatát használod a konzolodhoz, annak régiójához vagy verziójához. Ellenőrizd, hogy a konzolod részletei helyesek és töltsd le újra a Soundhax fájlok [innen](http://soundhax.com), majd rakd az SD kártytád gyökerébe, lecserélve az ott lévő fájlt.
+
+Ha az üzenetben leírtak nem segítenek és Old 3DS / Old 3DS XL / Old 2DS konzolt használsz, lehet hogy egy cartridge frissítési problémába ütköztél. Keresd meg a rendszered verzióját. Ha a szám a betű előtt 4 vagy kisebb (pl. 11.3.0-**4**E), akkor cseréld le a Soundhax fájlt az SD kártyád gyökerében [ezzel](http://soundhax.686178.xyz/frankenfirm.html?crash).
 
 Ha ezek nem segítettek, csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért angol nyelven.
 
@@ -34,9 +36,9 @@ Ha ezek nem segítettek, csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https
 
 :::details "Could not play"
 
-A Soundhax fájl rossz változatát használod a konzolodhoz, annak régiójához vagy verziójához. Ellenőrizd le, hogy a [Soundhax oldalon](https://soundhax.com/) helyesen írtad be az összes adatot, töltsd le újra a Soundhax fájlt, és cseréld le az SD kártyád gyökerén lévőt erre az újra.
+A Soundhax fájl rossz változatát használod a konzolodhoz, annak régiójához vagy verziójához. Ellenőrizd, hogy a konzolod részletei helyesek és töltsd le újra a Soundhax fájlok [innen](http://soundhax.com), majd rakd az SD kártytád gyökerébe, lecserélve az ott lévő fájlt.
 
-Ha az üzenetben leírtak nem segítenek és Old 3DS / Old 3DS XL / Old 2DS konzolt használsz, lehet hogy egy cartridge frissítési problémába ütköztél. Keresd meg a rendszered verzióját. Ha az utolsó szám 3 vagy kisebb (pl. 11.3.0-**0**E), akkor cseréld le a Soundhax fájlt az SD kártyád gyökerében [ezzel](http://soundhax.686178.xyz/frankenfirm.html?unplayable).
+Ha az üzenetben leírtak nem segítenek és Old 3DS / Old 3DS XL / Old 2DS konzolt használsz, lehet hogy egy cartridge frissítési problémába ütköztél. Keresd meg a rendszered verzióját. Ha a szám a betű előtt 3 vagy kisebb (pl. 11.3.0-**0**E), akkor cseréld le a Soundhax fájlt az SD kártyád gyökerében [ezzel](http://soundhax.686178.xyz/frankenfirm.html?unplayable).
 
 Ha ezek nem segítettek, csatlakozz a [Nintendo Homebrew-hoz a Discord-on](https://discord.gg/MWxPgEp) segítségért angol nyelven.
 

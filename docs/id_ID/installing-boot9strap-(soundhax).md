@@ -38,9 +38,9 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan Soundhax dan universal-othe
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
 3. Salin `.m4a` Soundhax ke akar dari kartu SD
-   - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
+   - Akar (_root_) kartu SD adalah direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
 4. Salin `otherapp.bin` ke akar kartu SD
-5. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
+5. Salin semua isi berkas `.zip` Luma3DS ke akar kartu SD
 6. Buat folder dengan nama `boot9strap` di akar kartu SD
 7. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
 8. Salin `SafeB9SInstaller.bin` dari `.zip` SafeB9SInstaller ke akar kartu SD

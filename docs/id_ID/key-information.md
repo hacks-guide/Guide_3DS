@@ -32,7 +32,7 @@ Panduan ini bisa untuk semua jenis konsol ecer Nintendo 3DS (termasuk 3DS, 3DS X
 
 :::
 
-Untuk mengikuti panduan di sini harus bisa mengunduh berkas dari Internet dan menyalinnya ke kartu SD. Tergantung komputer/ponsel/perangkat elektronik, mungkin perlu juga adaptor USB ke kartu SD agar perangkat bisa membaca kartu SD.
+Mengikuti panduan di sini harus bisa mengunduh berkas dari Internet dan menyalinnya ke kartu SD. Ini termasuk sebagian besar perangkat elektronik, seperti komputer bersistem Windows, macOS, Linux, dan chromeOS (Chromebook), serta ponsel Android. Tergantung perangkat elektronik, mungkin perlu juga adaptor USB ke kartu SD agar perangkat bisa membaca kartu SD.
 
 ::::
 
@@ -48,6 +48,12 @@ Letak slot kartu SD dan jenis kartu SD yang didukung tergantung pada model 3DS. 
 
 3DS bisa membaca kartu SD ukuran berapa pun (bahkan lebih dari 32GB), tapi kartunya harus diformat ke FAT32 (**bukan** exFAT atau NTFS). Gunakan salah satu alat berikut untuk memformat kartu SD, tergantung sistem operasi: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). Kartu SD ukuran lebih dari **128GB** tidak dianjurkan karena ada isu dengan grafik GBA/DS dan tema kustom.
 
+::: info
+
+Sangat disarankan untuk **menggunakan satu kartu SD saja** dengan satu konsol, karena isi kartu SD berbeda tidak bisa digabung untuk 3DS. Jadi, jika konsol sudah ada kartu SD, gunakan kartu SD tersebut untuk memodif konsol, atau salin semua isinya ke kartu SD lebih besar sebelum atau sesudah memodif.
+
+:::
+
 ::: warning
 
 Untuk mengikuti panduan ini perlu kartu SD setidaknya **2GB**.
@@ -56,7 +62,7 @@ Untuk mengikuti panduan ini perlu kartu SD setidaknya **2GB**.
 
 ::: info
 
-Jika perlu, periksa dulu galat di kartu SD sebelum mengikuti panduan ini dengan [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), atau [F3XSwift (Mac)](f3xswift-\(mac\))
+Jika perlu, periksa dulu galat di kartu SD sebelum mengikuti panduan ini dengan [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), atau [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 
@@ -150,9 +156,9 @@ Jika menggunakan Windows, ekstensi berkas disembunyikan secara bawaan sehingga s
 
 ::::
 
-## Mencari bantuan
+## Mendapat bantuan
 
-Jika ada masalah saat mengikuti panduan ini, ada banyak cara untuk mencari bantuan!
+Jika ada masalah saat mengikuti panduan ini, ada banyak cara untuk mendapat bantuan!
 
 - Jika punya pertanyaan lain yang belum terjawab di laman ini, mungkin ada di [Perihal Sebelum Pasang](faq#pre-installation-faq).
 - Jika ada isu ketika mengikuti panduan ini, coba ke laman [Sidik Gangguan](troubleshooting) untuk mencari solusi.

@@ -66,7 +66,7 @@ Dies funktioniert auf mit New 3DS, New 2DS, Old 3DS und Old 2DS auf _allen_ Vers
 In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Kopiere den hardmod-b9s-installer-Ordner von der hardmod-b9s-installer `.zip` auf deinen Computer
 5. Kopiere deine heruntergeladene `.firm` in den hardmod-b9s-installer-Ordner auf deinem PC

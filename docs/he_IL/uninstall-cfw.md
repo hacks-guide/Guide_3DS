@@ -157,7 +157,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 10. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
 11. תבחרו ב "Miscellaneous options"
 12. Select "Switch the hb. title to the current app."
-13. תלחצו (B) כדי להמשיך
+13. Press (B) to continue
 14. תלחצו (B) כדי לחזור לתפריט הראשי של Rosalina
 15. תלחצו (B) כדי לצאת מהתפריט של Rosalina
 16. תלחצו על (Home), ואז תסגרו את Download Play

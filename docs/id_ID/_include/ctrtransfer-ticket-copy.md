@@ -1,22 +1,22 @@
 ::: info
 
-If the script found no user tickets, continue to the next section.
+Jika naskah tidak ketemu ticket pengguna, lanjut ke bagian berikutnya.
 
 :::
 
-1. Launch FBI from the list of homebrew
-2. Select "SD"
-3. Select "gm9"
-4. Select "out"
-5. Select "ctrtransfer_tickets"
-6. Do the following process for either the `eshop` folder, `unknown` folder, or both
-   - Navigate to the folder
-   - Select "\<current directory>"
-   - Select "Install and delete all tickets"
-   - Wait. The system may appear to freeze, just give it time.
+1. Buka FBI dari Homebrew Launcher
+2. Pilih "SD"
+3. Pilih "gm9"
+4. Pilih "out"
+5. Pilih "ctrtransfer_tickets"
+6. Lakukan proses berikut di folder `eshop`, `unknown`, atau keduanya
+   - Navigasi ke folder
+   - Pilih "\<current directory>"
+   - Pilih "Install and delete all tickets"
+   - Tunggu. Sistem akan seperti macet, ditunggu saja.
    - Tekan (A) untuk konfirmasi
-   - Press (B) to decline installing tickets from CDN.
-7. Press (Home) to exit FBI
-8. Re-open the Homebrew Launcher, either through the Homebrew Launcher icon on the HOME Menu or by re-following Section IV of this page
-9. Launch faketik from the list of homebrew
-10. Once faketik has finished processing, press (Start) to exit faketik
+   - Tekan (B) untuk tolak memasang ticket dari CDN.
+7. Tekan (Home) untuk keluar dari FBI
+8. Buka lagi Homebrew Launcher, bisa dari HOME Menu atau dengan mengikuti ulang Bagian IV laman ini
+9. Buka faketik dari Homebrew Launcher
+10. Setelah proses faketik usai, tekan (Start) untuk keluar dari faketik

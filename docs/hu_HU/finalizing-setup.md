@@ -2,7 +2,7 @@
 
 ## Kötelező olvasmány
 
-A `boot.firm` nevezetű fájl az, amit maga a boot9strap elindít, amint betöltődik a NAND-ból. Ebben az esetben a [LumaTeam](https://github.com/LumaTeam/) által készített Luma3DS-t használjuk a konzol patcheléséhez, hogy tudjon homebrew programokat futtatni.
+Az előző oldalon telepítetted a boot9strap-et, egy egyedi firmware loader-t ami betölti a `boot.firm`-et az SD kártyádról vagy a NAND-ról (belső memória). Ebben az esetben a [LumaTeam](https://github.com/LumaTeam/) által készített Luma3DS-t használjuk `boot.firm`-ként a konzol patcheléséhez, hogy tudjon homebrew programokat futtatni.
 
 Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és néhány homebrew alkalmazást fogunk telepíteni. Ezen lépések nagy része automatizált egy szkripttel, ami a konzolodon fogsz futtatni.
 
@@ -10,25 +10,31 @@ Ezen az oldalon kritikus rendszer mentéseket fogunk csinálni és néhány home
 
 A szkript a következő alkalmazásokat fogja telepíteni:
 
-- **[FBI](https://github.com/lifehackerhansol/FBI)** _(CIA formátumú alkalmazások telepítésére)_
-- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(elindítja a Homebrew Launchert)_
-- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(egyedi témák telepítése)_
-- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(3DS és DS játékok mentéseiről lehet biztonsági mentést készíteni és visszaállítani)_
-- **[ftpd](https://github.com/mtheall/ftpd)** _(a 3DS-ed SD kártyájának vezeték nélküli elérése)_
-- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(egy homebrew app store homebrew letöltéséhez a 3DS-re WiFi-n keresztül)_
-- **[GodMode9](https://github.com/d0k3/GodMode9)** _(sokféle dologra használható eszköz, például NAND és kártya műveletekre)_
+- **FBI** Steveice10-től _(CIA formátumú alkalmazások telepítésére)_
+- **Homebrew Launcher Loader** PabloMK7-től _(elindítja a Homebrew Launchert, ami 3DSX formátumú homebrew-hoz készült)_
+- **Anemone3DS** astronautlevel2-től _(egyedi témák telepítése)_
+- **Checkpoint** BernardoGiordano/FlagBrew-től _(a 3DS/DS játék mentések kezelésére)_
+- **ftpd** mtheall-től _(lehetővé teszi a vezeték nélküli 3DS SD kártya hozzáférést FTP-n keresztül)_
+- **Universal-Updater** az Universal-Team-től _(egy homebrew app store homebrew letöltéséhez a 3DS-re WiFi-n keresztül)_
+- **GodMode9** d0k3-tól _(sokféle dologra használható eszköz, például NAND és kártya műveletekre)_
 
 Ha nem szeretnéd ezeket az alkalmazásokat, eltávolíthatod őket, miután befejezted ezt az oldalt a System Settings -> Data Management -> Nintendo 3DS -> szoftver-hez navigálva. (A GodMode9 nem távolítható el így, és általában szükséges más funkciókhoz.)
+
+::: details Forráskód linkek (opcionális)
+
+Minden az ebből az útmutatóból telepített alkalmazás nyílt forrású. Ha érdekel, hogy hogyan működnek, vagy szeretnél egy csillagot hagyni elismerésedül, a forráskód elérhető a linkekről innen:
+
+- [FBI](https://github.com/lifehackerhansol/FBI)
+- [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
+- [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
+- [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)
+- [ftpd](https://github.com/mtheall/ftpd)
+- [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)
+- [GodMode9](https://github.com/d0k3/GodMode9)
 
 :::
 
 ## Kompatibilitási megjegyzések
-
-::: warning
-
-Ha az **új 3DS** konzolod a 2.1.0 verzión volt, a [NAND-ról készült bizonsági másolatot állítsd vissza](godmode9-usage#nand-ról-készült-bizonsági-másolat-visszaállítása) mielőtt tovább mennél. Ez valószínűleg nem vonatkozik rád, ha csak nem 2017-ben olvasod ezt az útmutatót.
-
-:::
 
 ::: info
 
@@ -104,6 +110,7 @@ Ebben a fejezetben szkripteket fogsz használni arra, hogy automatizáld a homeb
 7. Válaszd a "Scripts..." opciót
 8. Válaszd az "finalize" opciót
 9. Kövesd a script utasításait és válaszolj meg minden kérdést
+   - Ha "Information #05: No title database" üzenetet látsz, nyomj (A) gombot az importáláshoz, majd nyomd meg a gombokat a képernyőn a folytatáshoz
    - Ha hibát kapsz, kövesd a hibaüzenet lépéseit vagy tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt
 10. Ha a szkript a "Setup complete!" üzenetet írja, nyomj (A) gombot az eszköz kikapcsolásához
     - Ha NEM láttad a "Setup complete!" üzenetet, akkor a szkript nem volt sikeres és újra kell csinálnod ezt a részt a 3. lépéstől

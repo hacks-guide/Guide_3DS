@@ -17,7 +17,7 @@ Diese Seite ist nur für Windowsnutzer gedacht. If you are not on Windows, check
 
 ### Section I - SD Card Formatter
 
-1. Insert your SD card into your computer
+1. Stecke deine SD-Karte in deinen Computer
 
 2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 

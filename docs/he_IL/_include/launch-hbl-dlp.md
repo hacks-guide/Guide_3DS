@@ -3,7 +3,7 @@
 3. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
 4. תבחרו ב "Miscellaneous options"
 5. Select "Switch the hb. title to the current app."
-6. תלחצו (B) כדי להמשיך
+6. Press (B) to continue
 7. תלחצו (B) כדי לחזור לתפריט הראשי של Rosalina
 8. תלחצו (B) כדי לצאת מהתפריט של Rosalina
 9. Press (Home) to suspend Download Play

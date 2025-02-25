@@ -157,7 +157,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 10. 同時按下『L』+『下』+『Select』鍵以啟動 Rosalina 選單
 11. 選擇『Miscellaneous options』
 12. Select "Switch the hb. title to the current app."
-13. 按『B』繼續
+13. Press (B) to continue
 14. 按『B』回到 Rosalina 主選單
 15. 按『B』退出 Rosalina 選單
 16. 按『Home』鍵，並關閉『下載通信 (Download Play)』程式

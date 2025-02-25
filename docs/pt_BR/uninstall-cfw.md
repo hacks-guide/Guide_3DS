@@ -157,7 +157,7 @@ Esta seção removerá conteúdo ilegítimo, como homebrew e cartuchos dumped. S
 10. Aperte (Gatilho Esquerdo) + (D-pad pra baixo) + (Select) ao mesmo tempo para abrir o menu Rosalina
 11. Selecione "Miscellaneous options"
 12. Selecione "Switch the hb. title to the current app."
-13. Aperte (B) para continuar
+13. Press (B) to continue
 14. Aperte (B) para retornar para o menu principal do Rosalina
 15. Aperte (B) para sair do menu do Rosalina
 16. Aperte (Home), depois feche o Download Play

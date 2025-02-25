@@ -66,13 +66,23 @@ Bannolás már nem lehetséges, mert a Nintendo Network szolgáltatások le lett
 
 :::details Meg tudom ezt csinálni számítógép nélkül (pl. Android telefonnal)?
 
-Igen! Egyedül arra van szükséged, hogy fájlokat tudj másolni egy kompatibilis SD kártyára.
+A legtöbb esetben igen! Az MSET9 exploit (elsődlegesen használt a legutolsó firmware-hez Old 3DS-en) Python script futtatását vagy egy Android alkalmazás igényli, míg az összes többi exploit-nál csak fájlokat rakunk az SD kártyára.
+
+Szükséged lehet egy Windows, macOS, vagy Linux rendszert futtató számítógépre az SD kártyád újraformázásához, ha az 64GB vagy nagyobb méretű.
 
 :::
 
 :::details Milyen méretű SD kártyát használhatok?
 
 Legalább 1.5GB szabad hely kell az SD kártyán az útmutató teljes végrehajtásához. Habár a 3DS hivatalosan 32GB SD kártya méretig kompatibilis, nagyobb SD kártyák is használhatók, miután kézzel újra formázásra kerültek FAT32 fájlrendszerre. Nem javasoltak 128GB-nál nagyobb SD kártyák, az ismert problémák miatt a GBA grafikával és az egyedi témákkal.
+
+:::
+
+:::details Új SD kártyát ajánlott használjak, vagy azt az egyet, ami már megvan?
+
+Csak 1 db SD kártyát javasolt használnod a 3DS-hez bármikor. Ha egy másik SD kártyát használsz a konzolod moddolására, létre fogsz hozni egy másik 'profilt' a moddolt szoftvernek, ami elérhetetlen lesz az eredeti SD kártyádról. Azonban **a konzolod moddolt marad**, mivel a mod a belső memóriába telepített (nem az SD kártyára).
+
+Ha új SD kártyát vásároltál a konzoloddal használathoz, formáznod kell az új SD kártyát ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), majd másolj át mindent a régi SD kártyáról az új SD kártyára. Ezt moddolás előtt és utána is megteheted.
 
 :::
 
@@ -102,7 +112,7 @@ Ha Luma3DS-t használsz, az egyedi firmware loader (boot9strap) _soha_ nem kerü
 
 :::details Hogyan bővíthetem nagyobbra az SD kártyám?
 
-Másold át az SD kártyád tartalmát egy új FAT32-re formázott SD kártyára. A 128GB-os kártyák esetén a 65536 allokációs méret javasolt. 128GB-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt a GBA grafikával és az egyedi témákkal.
+Másold át az SD kártyád tartalmát egy új FAT32-re formázott SD kártyára. A 128GB-os kártyák esetén a 65536 allokációs méret javasolt. 128GB-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt a GBA grafikával és az egyedi témákkal. Specifikus formázási útmutatók itt: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
@@ -114,7 +124,7 @@ Igen, a rendszer átvitel végrehajtható a hivatalos System Transfer funkcióva
 
 :::details Hogyan módosíthatom a rendszer nyelvét egy japán 3DS-nek?
 
-Az egyetlen módja a rendszer nyelv módosításának egy japán 3DS esetében más nyelvre a [régió csere](region-changing). Fontos megjegyezni, hogy ez erősen valószínű, hogy elrontja a Nintendo eShop-ot a konzolodon, így nem fogsz tudni frissíteni játékokat, függetlenül attól, hogy régión belüli vagy kívüli.
+Az egyetlen módja a rendszer nyelv módosításának egy japán 3DS esetében más nyelvre a [régió csere](region-changing). Fontos megjegyezni, hogy ez erősen valószínű, hogy elrontja a Nintendo eShop-ot a konzolodon, így nem fogsz tudni frissíteni játékokat, függetlenül attól, hogy régión belüli vagy kívüli. Továbbá nem fogod elérni a Pokémon Bank-ot (ha telepítetted), mert az eShop hozzáférésen alapul.
 
 :::
 

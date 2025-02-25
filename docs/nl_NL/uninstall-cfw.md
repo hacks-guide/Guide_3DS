@@ -157,7 +157,7 @@ Dit deel zal onwettige inhoud verwijderen, zoals homebrew en gedumpte cartridges
 10. Druk tegelijkertijd op (L) + (Down) + (Select) om het Rosalina menu te openen
 11. Selecteer "Miscellaneous options"
 12. Select "Switch the hb. title to the current app."
-13. Druk op (B) om door te gaan
+13. Press (B) to continue
 14. Druk op (B) om terug te gaan naar het Rosalina hoofdmenu
 15. Druk op (B) om het Rosalina menu af te sluiten
 16. Druk op (Home), en sluit dan Download Play af

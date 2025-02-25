@@ -32,7 +32,7 @@ Questa guida funziona su tutte le versioni retail della famiglia di console Nint
 
 :::
 
-Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa scaricare file tramite Internet e copiarli sulla tua scheda SD. A seconda del tuo computer/cellulare/dispositivo elettronico, potresti aver bisogno di acquistare un adattatore da scheda SD a USB, per far sì che il tuo computer possa leggere la scheda SD.
+Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa scaricare file tramite Internet e copiarli sulla tua scheda SD. Questo include la maggior parte dei dispositivi elettronici di consumo, come i computer che eseguono Windows, macOS, Linux e chromeOS (Chromebook), come anche i telefoni Android. A seconda del tuo dispositivo elettronico, potresti aver bisogno di acquistare un adattatore da scheda SD a USB, per permettergli di leggere la scheda SD.
 
 ::::
 
@@ -48,6 +48,12 @@ La posizione dello slot della scheda SD e il tipo di scheda SD da usare dipendon
 
 Il 3DS può leggere schede SD di qualunque capienza (anche più grandi di 32GB), tuttavia la scheda dev'essere formattata con filesystem FAT32 (**non** exFAT né NTFS). Puoi usare una delle seguenti applicazioni per formattare la tua scheda SD, a seconda del tuo sistema operativo: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD più grandi di **128GB** non sono consigliate a causa di problemi noti con i temi personalizzati e con la grafica GBA/DS.
 
+::: info
+
+Si consiglia vivamente di **utilizzare solo una scheda SD** con una console in qualsiasi momento, poiché non è possibile unire successivamente il contenuto di due schede SD. Quindi, se la console ha già una scheda SD, è necessario utilizzare quella scheda SD per modificare la console, o dovrai copiare tutto su una scheda SD più grande prima o dopo la modifica.
+
+:::
+
 ::: warning
 
 Per seguire questa guida, ti servirà una scheda SD di almeno **2GB**.
@@ -56,7 +62,7 @@ Per seguire questa guida, ti servirà una scheda SD di almeno **2GB**.
 
 ::: info
 
-È consigliabile verificare che la tua scheda SD sia priva di errori prima di seguire questa guida usando [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), o [F3XSwift (Mac)](f3xswift-\(mac\))
+Se vuoi, puoi verificare che la tua scheda SD sia priva di errori prima di seguire questa guida usando [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), o [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 

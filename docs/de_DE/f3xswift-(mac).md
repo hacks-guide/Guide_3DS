@@ -20,7 +20,7 @@ F3XSwift is only compatible with macOS 10.13 (High Sierra) and above. If you hav
 
 ## Instructions
 
-1. Insert your SD card into your computer
+1. Stecke deine SD-Karte in deinen Computer
 2. Run the F3XSwift app
 3. Select your SD card from the list of volumes
 4. Click "Test"

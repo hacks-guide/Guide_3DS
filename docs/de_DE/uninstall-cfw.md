@@ -53,7 +53,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 ### Section I - Prep Work
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Kopiere `GodMode9.firm`von der `GodMode9.zip`-Datei nach /luma/payloads/ auf deiner SD-Karte
 5. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
@@ -157,7 +157,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 10. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
 11. Wähle "Miscellaneous options"
 12. Select "Switch the hb. title to the current app."
-13. Drücke (B) um fortzufahren
+13. Press (B) to continue
 14. Drücke (B), um zum Rosalina-Hauptmenü zurückzukehren
 15. Drücke (B), um das Rosalina-Menü zu schließen
 16. Drücke (Home) und schließe die Download-Spiel Anwendung

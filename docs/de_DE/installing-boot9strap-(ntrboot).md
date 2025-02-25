@@ -128,7 +128,7 @@ Folge diesen Schritten erst, wenn du den Rest der Anweisungen auf dieser Seite a
 #### Instructions
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
    - This is the SD card from your 3DS, _not_ the SD card from your flashcart
 3. Erstelle einen Ordner mit dem Namen `ntrboot` im Stammverzeichnis deiner SD-Karte
 4. Kopiere die `.bin`-Datei von deiner Flashrom-Backup `.zip` in den Ordner `/ntrboot/` auf dem Stammverzeichnis der SD-Karte

@@ -32,7 +32,7 @@ Ez az útmutató minden kereskedelmi konzollal működik a Nintendo 3DS konzol c
 
 :::
 
-A legtöbb esetben követheted ezt az útmutatót egészen addig, amíg képes vagy letölteni fájlokat az internetről és SD kártyára másolni. A számitógépedtől/telefonodtól/elektronikus eszközödtől függően szükséged lehet egy USB-SD kárya adapterre, ami lehetővé teszi a számítógéped számára, hogy olvassa az SD kártyádat.
+A legtöbb esetben követheted ezt az útmutatót egészen addig, amíg képes vagy letölteni fájlokat az internetről és SD kártyára másolni. Ez magába foglalja a legtöbb elektronikus eszközt, mint például a Windows, macOS, Linux vagy chromeOS (Chromebooks) operációs rendszert futtató számítógépeket, továbbá az Android telefonokat. Az elektronikus eszközödtől függően szükséged lehet egy USB-SD kárya adapterre, ami lehetővé teszi, hogy olvassa az SD kártyádat.
 
 ::::
 
@@ -48,6 +48,12 @@ Az SD kártya slot helye és az SD kártya típusa amit elfogad a 3DS modelledt�
 
 A 3DS bármilyen kapacitású SD kártyát tud olvasni (még akkor is, ha nagyobb, mint 32GB), de a kártyának FAT32-re kell formatálva lennie (**nem** exFAT vagy NTFS). A következő eszközöket használhatod az SD kártyád formázására, az operációs rendszeredtől függően: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). **128GB**-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt az egyedi témákkal és a GBA grafikával.
 
+::: info
+
+Erősen ajánlot, hogy **csak egy SD kártyát használj** bármikor a konzolhoz, mert nem tudod később két SD kártya tartalmát egyesíteni. Tehát, ha a konzolodnak van már SD kártyája, azt érdemes használnod a konzolod moddolásához, vagy másolj át mindent egy nagyobb kártyára, mielőtt vagy miután moddoltad.
+
+:::
+
 ::: warning
 
 Ahhoz, hogy követhesd ezt az útmutatót szükséged van egy legalább **2GB** kapacitású SD kártyára.
@@ -56,7 +62,7 @@ Ahhoz, hogy követhesd ezt az útmutatót szükséged van egy legalább **2GB** 
 
 ::: info
 
-Ha szeretnéd, leellenőrizheted az SD kártyádat valamelyik programmal az alábbiak közül: [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), vagy [F3XSwift (Mac)](f3xswift-\(mac\))
+Ha szeretnéd, leellenőrizheted az SD kártyádat valamelyik programmal az alábbiak közül: [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), vagy [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 

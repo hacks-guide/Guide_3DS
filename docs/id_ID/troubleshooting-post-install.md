@@ -33,7 +33,7 @@ If you hear a "popping sound", potentially accompanied with the backlight turnin
 The steps below can be attempted in any order, but are listed from least to most time-consuming.
 
 1. Power off your console, remove the SD card, re-insert it, then power on your console.
-2. Power off your console, eject the game cartridge if inserted, power on your console, then wait up to ten minutes. If your console boots within ten minutes, the issue has been fixed and is unlikely to reoccur
+2. Matikan daya konsol, keluarkan kartrid jika ada, nyalakan daya konsol, lalu tunggu sepuluh menit. If your console boots within ten minutes, the issue has been fixed and is unlikely to reoccur
 3. Rename the `Nintendo 3DS` folder on your SD card to `Nintendo 3DS_BACKUP`, then attempt to boot. If your console successfully boots, there is some issue within your `Nintendo 3DS` folder. Try clearing HOME Menu extdata:
    - Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
    - Delete the corresponding folder for your 3DS region:
@@ -112,14 +112,14 @@ Please take a photo of the error and join [Nintendo Homebrew on Discord](https:/
 
 1. Download the latest release of [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (the `.3dsx` file)
 2. Matikan daya konsol
-3. Create a folder named `3ds` on the root of your SD card if it does not already exist
+3. Buat folder dengan nama `3ds` di akar kartu SD jika belum ada
 4. Copy `TWLFix-CFW.3dsx` to the `/3ds/` folder on your SD card
 5. Sisip kembali kartu SD ke konsol
 6. Open the Homebrew Launcher
 7. Launch TWLFix-CFW from the list of homebrew
 8. Press (A) to uninstall the broken TWL titles
 9. Press (Start) to reboot the console
-10. Update your console by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
+10. Perbarui konsol dengan ke System Settings, ke "Other Settings", lalu ke kanan sampai pojok dan pilih "System Update"
     - The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them
 11. Once the update is complete, tap "OK" to reboot the console
 
@@ -131,7 +131,7 @@ Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You shou
 
 :::
 
-:::details Extended memory mode games (Pokemon Sun/Moon, Smash, etc.) don't work
+:::details Permainan mode memori perluasan (Pokemon Sun/Moon, Smash, dll.) don't work
 
 This can occur after a CTRTransfer or region change on Old 3DS / 2DS. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
 

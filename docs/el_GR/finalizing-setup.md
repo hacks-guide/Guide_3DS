@@ -2,7 +2,7 @@
 
 ## Απαραίτητη ανάγνωση
 
-Το αρχείο `boot.firm` είναι αυτό που εκκινείται από το ίδιο το boot9strap, αφού ολοκληρωθεί η φόρτωσή του από τη NAND. Σε αυτήν την περίπτωση, χρησιμοποιούμε το Luma3DS της [LumaTeam](https://github.com/LumaTeam/) για να τροποποιήσουμε την κονσόλα, επιτρέποντάς της να εκτελεί λογισμικό homebrew.
+Στην προηγούμενη σελίδα, εγκαταστήσατε το boot9strap, ένα λογισμικό φόρτωσης του custom firmware, το οποίο φορτώνει το αρχείο `boot.firm` από την κάρτα SD ή τη NAND (εσωτερική μνήμη). Σε αυτήν την περίπτωση, χρησιμοποιούμε το Luma3DS της [LumaTeam](https://github.com/LumaTeam/) ως το `boot.firm` μας για να τροποποιήσουμε την κονσόλα, επιτρέποντάς της να εκτελεί λογισμικό homebrew.
 
 Σε αυτήν τη σελίδα, θα δημιουργήσουμε σημαντικά αντίγραφα ασφαλείας των αρχείων του συστήματος και θα εγκαταστήσουμε μερικές εφαρμογές homebrew. Τα περισσότερα από αυτά τα βήματα θα γίνουν αυτόματα με ένα script που θα εκτελέσετε στην κονσόλα σας.
 
@@ -10,25 +10,31 @@
 
 Το script θα εγκαταστήσει τις ακόλουθες εφαρμογές:
 
-- **[FBI](https://github.com/lifehackerhansol/FBI)** _(εγκαθιστά εφαρμογές της μορφής CIA)_
-- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(εκκινεί το Homebrew Launcher)_
-- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(εγκαθιστά προσαρμοσμένα θέματα)_
-- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(δημιουργεί αντίγραφα ασφαλείας και επαναφέρει αρχεία αποθηκευμένων δεδομένων για παιχνίδια 3DS και DS)_
-- **[ftpd](https://github.com/mtheall/ftpd)** _(αποκτήστε ασύρματη πρόσβαση στην κάρτα SD του 3DS σας)_
-- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(ένα κατάστημα εφαρμογών homebrew για τη λήψη λογισμικού homebrew από το 3DS μέσω Wi-Fi)_
-- **[GodMode9](https://github.com/d0k3/GodMode9)** _(εργαλείο πολλαπλών χρήσεων με λειτουργίες για τη NAND και τις κασέτες παιχνιδιών)_
+- Το **FBI** του Steveice10 _(εγκαθιστά εφαρμογές της μορφής CIA)_
+- Το **Homebrew Launcher Loader** του PabloMK7 _(εκτελεί το Homebrew Launcher, για εφαρμογές homebrew της μορφής 3DSX)_
+- Το **Anemone3DS** του astronautlevel2 _(εγκαθιστά προσαρμοσμένα θέματα, οθόνες εκκίνησης και εμβλήματα)_
+- Το **Checkpoint** του BernardoGiordano/FlagBrew _(διαχειρίζεται αποθηκευμένα δεδομένα παιχνιδιών 3DS/DS)_
+- Το **ftpd** του mtheall _(επιτρέπει την ασύρματη πρόσβαση στην κάρτα SD του 3D μέσω FTP)_
+- Το **Universal-Updater** της Universal-Team _(κατάστημα εφαρμογών για τη λήψη homebrew μέσω Wi-Fi)_
+- Το **GodMode9** του d0k3 _(εργαλείο πολλαπλών χρήσεων για την εξαγωγή δεδομένων από την εσωτερική μνήμη ή τις κασέτες)_
 
 Εάν δεν θέλετε κάποια από αυτές τις εφαρμογές, μπορείτε να την αφαιρέσετε αφού ολοκληρώσετε τα βήματα αυτής της σελίδας, από την εφαρμογή «System Settings» -> «Data Management» -> «Nintendo 3DS» -> «Software». (Δεν είναι δυνατή η αφαίρεση του GodMode9 με αυτόν τον τρόπο, το οποίο απαιτείται γενικά για άλλες λειτουργίες.)
+
+::: details Σύνδεσμοι πηγαίου κώδικα (προαιρετικό)
+
+Όλες οι εφαρμογές που σας βοηθά να εγκαταστήσετε ο παρών οδηγός είναι ανοικτού κώδικα. Εάν σας ενδιαφέρει να δείτε πώς λειτουργούν ή θέλετε να αφήσετε μια θετική αξιολόγηση για να δείξετε την εκτίμησή σας, θα βρείτε συνδέσμους για τον πηγαίο κώδικά τους στην παρακάτω λίστα:
+
+- [FBI](https://github.com/lifehackerhansol/FBI)
+- [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
+- [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
+- [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)
+- [ftpd](https://github.com/mtheall/ftpd)
+- [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)
+- [GodMode9](https://github.com/d0k3/GodMode9)
 
 :::
 
 ## Σημειώσεις συμβατότητας
-
-::: warning
-
-Αν το **New 3DS** σας διέθετε την έκδοση 2.1.0 πριν ακολουθήσετε αυτόν τον οδηγό, θα πρέπει να [επαναφέρετε το αντίγραφο ασφαλείας της NAND](godmode9-usage#restoring-a-nand-backup) πριν συνεχίσετε. Αυτό πιθανότατα δεν ισχύει για εσάς, εκτός κι αν ακολουθείτε αυτόν τον οδηγό το 2017.
-
-:::
 
 ::: info
 
@@ -104,6 +110,7 @@
 7. Επιλέξτε «Scripts...»
 8. Επιλέξτε «finalize»
 9. Ακολουθήστε τις οδηγίες του script, απαντώντας σε όποιες ερωτήσεις σάς γίνουν
+   - Εάν δείτε το «Information #05: No title database», πατήστε το (A) για να γίνει εισαγωγή και εισαγάγετε τα κουμπιά που αναγράφονται στην οθόνη για να συνεχίσετε
    - Εάν αντιμετωπίσετε κάποιο σφάλμα, ακολουθήστε τις οδηγίες στο μήνυμα σφάλματος ή συμβουλευτείτε τη σελίδα [Επίλυση προβλημάτων](troubleshooting-finalizing-setup)
 10. Μόλις το script δηλώσει «Setup complete!», πατήστε το (A) για να απενεργοποιήσετε την κονσόλα σας
     - Εάν ΔΕΝ βλέπετε το μήνυμα «Setup complete!», το script δεν ήταν επιτυχές και θα χρειαστεί να επαναλάβετε αυτήν την ενότητα από το Βήμα 3

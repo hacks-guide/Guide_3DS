@@ -2,7 +2,7 @@
 
 ## Lettura necessaria
 
-Il file `boot.firm` è il file avviato da boot9strap stesso al termine del caricamento dalla NAND. In questo caso, stiamo usando Luma3DS di [LumaTeam](https://github.com/LumaTeam/) per modificare la console, consentendogli di eseguire software homebrew.
+Nella pagina precedente hai installato boot9strap, un custom firmware loader che carica il file `boot.firm` dalla scheda SD o dalla NAND (la memoria interna). In questo caso stiamo usando Luma3DS di [LumaTeam](https://github.com/LumaTeam/) come 'boot.firm' per modificare la console, consentendogli di eseguire software homebrew.
 
 In questa pagina realizzeremo backup di file di sistema critici e installeremo i alcuni programmi homebrew. La maggior parte di questi passaggi sarà automatizzata utilizzando uno script che verrà eseguito sulla tua console.
 
@@ -10,25 +10,31 @@ In questa pagina realizzeremo backup di file di sistema critici e installeremo i
 
 Lo script installerà le seguenti applicazioni:
 
-- **[FBI](https://github.com/lifehackerhansol/FBI)** _(installa applicazioni in formato CIA)_
-- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(avvia l'Homebrew Launcher)_
-- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(installa temi personalizzati)_
-- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(salva e ripristina file di salvataggio per giochi 3DS e DS)_
-- **[ftpd](https://github.com/mtheall/ftpd)** _(accede alla scheda SD del tuo 3DS via wireless)_
-- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(un app store di applicazioni homebrew per scaricare homebrew dal 3DS via Wi-Fi)_
-- **[GodMode9](https://github.com/d0k3/GodMode9)** _(strumento multiuso per gestire la NAND e le schede di gioco)_
+- **FBI** by Steveice10 _(installa applicazioni in formato CIA)_
+- **Homebrew Launcher Loader** di PabloMK7 _(esegue Homebrew Launcher, per homebrew in formato 3DSX)_
+- **Anemone3DS** di astronautlevel2 _(installa temi personalizzati, schermate di caricamento e distintivi)_
+- **Checkpoint** di BernardoGiordano/FlagBrew _(gestisce i dati di salvataggio dei giochi 3DS/DS)_
+- **ftpd** di mtheall _(consente l'accesso wireless alla scheda SD nel 3DS tramite FTP)_
+- **Universal-Updater** di Universal-Team _(negozio di applicazioni direttamente su console per scaricare homebrew via Wi-Fi)_
+- **GodMode9** di d0k3 _(strumento multiuso per estrarre dati dalla memoria interna o dalle cartucce)_
 
 Se non desideri alcune di queste applicazioni, puoi rimuoverle al termine di questa pagina entrando in Impostazioni della console -> Gestione dati -> Nintendo 3DS -> Software. (GodMode9 non può essere rimosso in questa maniera, ed è generalmente richiesto per altre funzionalità.)
+
+::: details Link al codice sorgente (opzionale)
+
+Tutte le applicazioni installate con questa guida sono open-source. Se sei interessato a vederne il funzionamento, o vuoi lasciare una stella per dimostrare il tuo apprezzamento, il loro codice sorgente si trova qui:
+
+- [FBI](https://github.com/lifehackerhansol/FBI)
+- [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
+- [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
+- [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)
+- [ftpd](https://github.com/mtheall/ftpd)
+- [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)
+- [GodMode9](https://github.com/d0k3/GodMode9)
 
 :::
 
 ## Note di compatibilità
-
-::: warning
-
-Se il tuo **New 3DS** era alla versione del software 2.1.0 prima di seguire questa guida, dovresti [ripristinare il tuo backup NAND](godmode9-usage#restoring-a-nand-backup) prima di continuare. Questo probabilmente non ti riguarda a meno che non hai già seguito questa guida nel 2017.
-
-:::
 
 ::: info
 
@@ -104,6 +110,7 @@ In questa sezione, userai una serie di script per automatizzare l'installazione 
 7. Seleziona "Scripts..."
 8. Seleziona "finalize"
 9. Segui le istruzioni dello script, rispondendo alle domande che ti vengono poste
+   - Se vedi "Information #05: No title database", premi (A) per importarlo inserendo i pulsanti a schermo per procedere
    - - Se riscontri un errore, segui le istruzioni riportate nel messaggio di errore o consulta la pagina [Risoluzione dei problemi](troubleshooting-finalizing-setup)
 10. Quando lo script mostrerà "Setup complete!", premi (A) per spegnere la console
     - Se NON vedi il messaggio "Setup complete!", lo script non ha avuto successo e dovrai ripetere questa sezione dal Punto 3

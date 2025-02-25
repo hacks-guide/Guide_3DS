@@ -1,4 +1,4 @@
-# Updating B9S
+# Memperbarui B9S
 
 ## Bacaan Penting
 
@@ -35,21 +35,21 @@ Untuk semua langkah di bagian ini, timpa saja berkas terkait di kartu SD.
 ### Bagian II - Memasang boot9strap
 
 1. Nyalakan daya konsol
-   - This should automatically launch SafeB9SInstaller
+   - Ini seharusnya otomatis membuka SafeB9SInstaller
 2. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-updating-b9s)
+   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-updating-b9s)
 3. Sesudah selesai, matikan paksa daya konsol dengan menekan lama tombol Power
    - Konsol hanya akan menyala ke SafeB9SInstaller jika langkah setelah ini belum dilakukan
 
-### Section III - Update Luma3DS
+### Bagian III - Memperbarui Luma3DS
 
 1. Sisipkan kartu SD ke komputer Anda
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
+2. Salin semua isi berkas `.zip` Luma3DS ke akar kartu SD, timpa berkas yang ada
 3. Sisip kembali kartu SD ke konsol
 4. Nyalakan daya konsol
-5. If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot
-   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-   - For the purpose of this guide, these settings will be left on default settings
+5. Jika menyala ke menu konfigurasi Luma3DS, tekan (Start) untuk simpan dan nyala ulang
+   - Menu konfigurasi Luma3DS adalah pengaturan untuk _custom firmware_ Luma3DS. Opsi yang tersedia berguna untuk kustomisasi dan pengawakutuan
+   - Sesuai tujuan panduan ini, pengaturannya akan dibiarkan di opsi bawaan
 
 ___
 

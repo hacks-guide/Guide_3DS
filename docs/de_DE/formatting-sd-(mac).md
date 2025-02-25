@@ -12,7 +12,7 @@ Diese Seite ist nur für macOS-Nutzer. If you are not on Mac, check out the [For
 
 ### OS X El Capitan (10.11) and later
 
-1. Insert your SD card into your computer
+1. Stecke deine SD-Karte in deinen Computer
 
 2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
@@ -47,7 +47,7 @@ Diese Seite ist nur für macOS-Nutzer. If you are not on Mac, check out the [For
 
 ### OS X Yosemite (10.10) and earlier
 
-1. Insert your SD card into your computer
+1. Stecke deine SD-Karte in deinen Computer
 
 2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
