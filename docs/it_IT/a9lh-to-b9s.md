@@ -40,7 +40,7 @@ Se durante questa sezione ti verrà chiesto di sovrascrivere dei file sulla tua 
 
 2. Inserisci la scheda SD nel tuo computer
 
-3. Copia tutto dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
+3. Copy everything from the latest Luma3DS `.zip` to the root of your SD card
    - La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
 
 4. Copia il file `arm9loaderhax.bin` dall'archivio`.zip` della versione 7.0.5 di Luma3DS nella directory principale della tua scheda SD
