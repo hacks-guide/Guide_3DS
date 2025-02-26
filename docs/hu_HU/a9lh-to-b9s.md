@@ -40,7 +40,7 @@ A most következő lépésekben mindig írd felül az SD kártyán található f
 
 2. Helyezd az SD kártyád a számítógépbe
 
-3. Copy everything from the latest Luma3DS `.zip` to the root of your SD card
+3. Másolj mindent a legutolsó Luma3DS `.zip`-ből az SD kártya gyökerébe
    - Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
 
 4. Másold át az `arm9loaderhax.bin` fájlt a v7.0.5-ös Luma3DS `.zip`-ből az SD kártya gyökerébe
