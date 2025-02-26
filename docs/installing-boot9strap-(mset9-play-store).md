@@ -26,7 +26,7 @@ On Android phones/tablets, the minimum Android version required is 6.0 (Marshmal
     * [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     * [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     * If you wish, you can sideload these applications instead
-* The latest release of [MSET9](https://github.com/zoogie/MSET9/releases/latest) (the Release `.zip` file)
+* The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the Release `.zip` file)
 
 ## Instructions
 
