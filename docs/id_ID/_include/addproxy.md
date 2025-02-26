@@ -1,6 +1,6 @@
 ::: info
 
-If you haven't already, make sure you have a working Internet connection set up on your console.
+Jika sekiranya belum, pastikan konsol sudah tersambung ke internet.
 
 :::
 
@@ -10,7 +10,7 @@ A visual guide is available for this section [here](/images/screenshots/set-prox
 
 :::
 
-1. Launch the System Settings application
+1. Buka aplikasi System Settings
 2. Navigate to `Internet Settings` -> `Connection Settings`
 3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
 4. Set "Proxy Settings" to "Yes", then click `Detailed Setup`

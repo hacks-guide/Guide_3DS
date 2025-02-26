@@ -1,10 +1,10 @@
 # Installing boot9strap (ntrboot)
 
-## Required Reading
+## Lecture Requise
 
 To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
-## What You Need
+## Ce dont vous avez besoin
 
 - A magnet that triggers the sleep mode of your console (if using a folding style console)
 - Your ntrboot flashed flashcart
@@ -91,7 +91,7 @@ Do not follow this section until you have completed the rest of the instructions
 
 ### Section V - Removing ntrboot
 
-#### What You Need
+#### Ce dont vous avez besoin
 
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 - The flashrom backup corresponding to your flashcart
@@ -128,7 +128,7 @@ Do not follow this section until you have completed the rest of the instructions
 #### Instructions
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Insérez votre carte SD dans votre ordinateur
    - This is the SD card from your 3DS, _not_ the SD card from your flashcart
 3. Create a folder named `ntrboot` on the root of your SD card
 4. Copy the `.bin` file from your flashrom backup `.zip` to the `/ntrboot/` folder on the root of your SD card

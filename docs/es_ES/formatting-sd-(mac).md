@@ -1,18 +1,18 @@
 # Formatting SD (Mac)
 
-## Required Reading
+## Lectura requerida
 
 This is an add-on section for formatting an SD card to work with the 3DS.
 
 If the 3DS already recognizes the SD card, this guide is not required.
 
-This page is for Mac users only. If you are not on Mac, check out the [Formatting SD (Windows)](formatting-sd-\(windows\)) or [Formatting SD (Linux)](formatting-sd-\(linux\)) pages.
+Esta página es sólo para usuarios de Mac. If you are not on Mac, check out the [Formatting SD (Windows)](formatting-sd-\(windows\)) or [Formatting SD (Linux)](formatting-sd-\(linux\)) pages.
 
-## Instructions
+## Instrucciones
 
 ### OS X El Capitan (10.11) and later
 
-1. Insert your SD card into your computer
+1. Inserta la tarjeta SD en tu computadora
 
 2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
@@ -47,7 +47,7 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 
 ### OS X Yosemite (10.10) and earlier
 
-1. Insert your SD card into your computer
+1. Inserta la tarjeta SD en tu computadora
 
 2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 

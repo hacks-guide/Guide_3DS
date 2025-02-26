@@ -1,50 +1,50 @@
-# Flashing ntrboot (DSi)
+# Mem-flash ntrboot (DSi)
 
-## Required Reading
+## Bacaan Penting
 
-Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
+Sebelum melanjutkan, pastikan sudah baca semua informasi di [ntrboot](ntrboot)
 
-This method requires temporary access to a Nintendo DSi that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your DSi. This means that your flashcart must support launching `.nds` files on your DSi's version. See the flashcart table on [ntrboot](ntrboot) for more information.
+Metode ini perlu akses sementara ke konsol Nintendo DSi yang bisa membaca _flashcart_ Anda. Metode ini juga perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di DSi. Berarti _flashcart_ harus bisa menjalankan `.nds` di _firmware_ DSi. Lihat tabel _flashcart_ di [ntrboot](ntrboot) untuk informasi lanjut.
 
 ::: danger
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless, only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
+Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_brick_)** saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, sebaiknya beli dari situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
-- Your ntrboot compatible flashcart
-- Two consoles
-  - **The source DSi**: the Nintendo DSi which is compatible with your flashcart
-  - **The target 3DS**: the 3DS family console on stock firmware
-- The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
+- _Flashcart_ yang kompatibel ntrboot
+- Dua konsol
+  - **DSi sumber**: Nintendo DSi yang bisa membaca _flashcart_ Anda
+  - **3DS sasaran**: Konsol 3DS yang masih _firmware_ bawaan
+- Versi terkini dari [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
-1. Power off **the source DSi**
-2. Insert your flashcart's SD card into your computer
-3. Copy `ds_ntrboot_flasher_dsi.nds` to your flashcart's SD card
-4. Reinsert your flashcart's SD card back into your flashcart
-5. Insert your ntrboot compatible DS / DSi flashcart into **the source DSi**
+1. Matikan daya **DSi sumber**
+2. Sisipkan kartu SD _flashcart_ ke komputer Anda
+3. Salin `ds_ntrboot_flasher_dsi.nds` ke kartu SD _flashcart_
+4. Sisip kembali kartu SD ke _flashcart_
+5. Sisipkan _flashcart_ DS / DSi yang kompatibel ntrboot ke **DSi sumber**
 
-### Section II - Flashing ntrboot
+### Bagian II - Mem-flash ntrboot
 
-1. Launch `ds_ntrboot_flasher_dsi.nds` on **the source DSi** using your flashcart
-2. Press (A) to continue
-3. Use (Up) and (Down) to select your flashcart
-4. Press (A) to continue
-5. Press (A) to "inject ntrboothax"
-6. Press (A) to select "RETAIL"
-7. Press (A) to continue
-8. Select "EXIT"
+1. Buka `ds_ntrboot_flasher_dsi.nds` di **DSi sumber** menggunakan _flashcart_
+2. Tekan (A) untuk lanjut
+3. Cari _flashcart_ Anda dengan tombol (Atas) (Bawah)
+4. Tekan (A) untuk lanjut
+5. Tekan (A) untuk "inject ntrboothax"
+6. Tekan (A) untuk memilih "RETAIL"
+7. Tekan (A) untuk lanjut
+8. Lalu pilih "EXIT"
 
 ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Lanjut ke [Memasang boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::

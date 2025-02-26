@@ -12,17 +12,17 @@ Using a hardmod, we can dump the NAND image, install custom firmware to the NAND
 
 ## Compatibility Notes
 
-To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
+Para utilizar los enlaces [magnéticos](https://es.wikipedia.org/wiki/Magnet) de esta página, tienes que utilizar un cliente torrent como [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
 This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on _all_ versions that you have a corresponding `.firm` for.
 
-## What You Need
+## Lo que necesitas
 
 - Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
+- La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (descarga directa)
 - The latest version of [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
   - Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- La última versión de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (el archivo `.zip` de Luma3DS)
 - The `.firm` corresponding to your console and version:
 
 | Version(s)                                                     | Kernel                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Old 3DS or Old 2DS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               New 3DS or New 2DS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -59,24 +59,24 @@ This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on _all_ versions that 
 | 11.14.0 - 11.15.0 | 2.57-0                          | [2.57-0_11.14_OLD.firm](magnet:?xt=urn:btih:bb03c194c6b3fe0753dfec0c52ef7e25936d669b\&xt=urn:btmh:1220b1258c6fd0244e2af5c46933dcd59c1ff1213b0a2dc36ac1b14a5d649df1b54e\&dn=2.57-0_11.14_OLD.firm\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce\&tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce\&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce\&tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce\&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce\&tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce\&tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce\&tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce) | [2.57-0_11.14_NEW.firm](magnet:?xt=urn:btih:90d4bf26fd878bae127e006db90a6cb8a3a91176\&xt=urn:btmh:1220b10acb4ff6e4748f5e1abad27e1fbd99bf52bd7fea99e40b4a014cbae69351a4\&dn=2.57-0_11.14_NEW.firm\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.dler.org%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.bitsearch.to%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker-udp.gbitt.info%3a80%2fannounce\&tr=udp%3a%2f%2fretracker.netbynet.ru%3a2710%2fannounce\&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce\&tr=udp%3a%2f%2fopentor.org%3a2710%2fannounce\&tr=udp%3a%2f%2fopen.stealth.si%3a80%2fannounce\&tr=udp%3a%2f%2fmts.tvbit.co%3a6969%2fannounce\&tr=udp%3a%2f%2fexplodie.org%3a6969%2fannounce\&tr=udp%3a%2f%2fbt2.archive.org%3a6969%2fannounce) |
 | 11.16.0 - 11.17.0 | 2.58-0                          |                                                                                                                                              [2.58-0_11.16_OLD.firm](magnet:?xt=urn:btih:1e3227ea262dd978c4aa61fc1530a055a4a06098\&dn=2.58-0_11.16_OLD.firm\&tr=udp://open.tracker.cl:1337/announce\&tr=udp://tracker.opentrackr.org:1337/announce\&tr=udp://9.rarbg.com:2810/announce\&tr=udp://exodus.desync.com:6969/announce\&tr=udp://www.torrent.eu.org:451/announce\&tr=udp://tracker.torrent.eu.org:451/announce\&tr=udp://tracker.tiny-vps.com:6969/announce\&tr=udp://tracker.pomf.se:80/announce\&tr=udp://tracker.openbittorrent.com:6969/announce\&tr=udp://tracker.moeking.me:6969/announce\&tr=udp://tracker.dler.org:6969/announce\&tr=udp://tracker.bitsearch.to:1337/announce\&tr=udp://tracker-udp.gbitt.info:80/announce\&tr=udp://retracker.netbynet.ru:2710/announce\&tr=udp://retracker.lanta-net.ru:2710/announce\&tr=udp://opentor.org:2710/announce\&tr=udp://open.stealth.si:80/announce\&tr=udp://mts.tvbit.co:6969/announce\&tr=udp://explodie.org:6969/announce\&tr=udp://bt2.archive.org:6969/announce)                                                                                                                                              |                                                                                                                                              [2.58-0_11.16_NEW.firm](magnet:?xt=urn:btih:173dc3ea3ccdf8f34e7d4a9aa612d6171230e52a\&dn=2.58-0_11.16_NEW.firm\&tr=udp://open.tracker.cl:1337/announce\&tr=udp://tracker.opentrackr.org:1337/announce\&tr=udp://9.rarbg.com:2810/announce\&tr=udp://exodus.desync.com:6969/announce\&tr=udp://www.torrent.eu.org:451/announce\&tr=udp://tracker.torrent.eu.org:451/announce\&tr=udp://tracker.tiny-vps.com:6969/announce\&tr=udp://tracker.pomf.se:80/announce\&tr=udp://tracker.openbittorrent.com:6969/announce\&tr=udp://tracker.moeking.me:6969/announce\&tr=udp://tracker.dler.org:6969/announce\&tr=udp://tracker.bitsearch.to:1337/announce\&tr=udp://tracker-udp.gbitt.info:80/announce\&tr=udp://retracker.netbynet.ru:2710/announce\&tr=udp://retracker.lanta-net.ru:2710/announce\&tr=udp://opentor.org:2710/announce\&tr=udp://open.stealth.si:80/announce\&tr=udp://mts.tvbit.co:6969/announce\&tr=udp://explodie.org:6969/announce\&tr=udp://bt2.archive.org:6969/announce)                                                                                                                                              |
 
-## Instructions
+## Instrucciones
 
-### Section I - Prep Work
+### Sección I - Preparativos
 
 In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Apaga la consola
+2. Inserta la tarjeta SD en tu computadora
 3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer
 5. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
 6. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`
 7. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
-8. Reinsert your SD card into your console
+8. Reinserta la tarjeta SD en la consola
 9. Use your hardmod to create a NAND backup
 10. Move your NAND backup to the hardmod-b9s-installer folder on your computer and rename it to `NAND.bin`
 
-### Section II - Installing boot9strap
+### Sección II - Instalar boot9strap
 
 In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the console to install custom firmware on it.
 
@@ -84,7 +84,7 @@ In this section, you will install custom firmware to the dumped NAND image, and 
    - Windows Users: Run `install-b9s.exe`
    - Mac and Linux Users: Run `install-b9s.py`
 2. Flash your outputted `NAND-patched.bin` to your console with your hardmod
-3. Power off your console
+3. Apaga la consola
 4. Disconnect your hardmod
 5. Press and hold (Select), and while holding (Select), power on your console
 
@@ -96,6 +96,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continúa a [Finalizar instalación](finalizing-setup)
 
 :::

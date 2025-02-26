@@ -44,9 +44,9 @@ The steps below can be attempted in any order, but are listed from least to most
      - **KOR Region**: `000000A9`
      - **TWN Region**: `000000B1`
 4. Try booting into recovery mode and updating your system:
-   - Power off your console
+   - Matikan daya konsol
    - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
-   - Power on your console
+   - Nyalakan daya konsol
    - If you were successful, the console will boot to an "update your system" screen
 5. Follow the [CTRTransfer](ctrtransfer) guide
 6. For further support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
@@ -71,7 +71,7 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 ARM11 exception handlers are disabled, or custom firmware is not installed. Try enabling ARM11 exception handlers:
 
-- Power off your console
+- Matikan daya konsol
 - Hold (Select)
 - Power on your console, while still holding (Select)
 - If the "Disable ARM11 exception handlers" box is checked, uncheck it
@@ -111,10 +111,10 @@ Please take a photo of the error and join [Nintendo Homebrew on Discord](https:/
 :::details DSi / DS functionality is broken or has been replaced with Flipnote Studio
 
 1. Download the latest release of [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (the `.3dsx` file)
-2. Power off your console
+2. Matikan daya konsol
 3. Create a folder named `3ds` on the root of your SD card if it does not already exist
 4. Copy `TWLFix-CFW.3dsx` to the `/3ds/` folder on your SD card
-5. Reinsert your SD card into your console
+5. Sisip kembali kartu SD ke konsol
 6. Open the Homebrew Launcher
 7. Launch TWLFix-CFW from the list of homebrew
 8. Press (A) to uninstall the broken TWL titles
@@ -160,8 +160,8 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 
 :::details Clear HOME Menu extdata
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Matikan daya konsol
+2. Sisipkan kartu SD ke komputer Anda
 3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 4. Delete the corresponding folder for your 3DS region:
    - **EUR Region**: `00000098`
@@ -170,21 +170,21 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
    - **CHN Region**: `000000A1`
    - **KOR Region**: `000000A9`
    - **TWN Region**: `000000B1`
-5. Reinsert your SD card into your console
+5. Sisip kembali kartu SD ke konsol
 
 :::
 
 :::details Clear HOME Menu theme data
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Matikan daya konsol
+2. Sisipkan kartu SD ke komputer Anda
 3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 4. Delete the corresponding folder for your 3DS region:
    - **EUR Region**: `000002ce`
    - **JPN Region**: `000002cc`
    - **USA Region**: `000002cd`
    - **KOR Region**: `000002cf`
-5. Reinsert your SD card into your console
+5. Sisip kembali kartu SD ke konsol
 
 :::
 

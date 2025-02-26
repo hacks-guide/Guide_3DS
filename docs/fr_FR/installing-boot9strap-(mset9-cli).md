@@ -14,10 +14,11 @@ This page requires a computer running Windows, Linux, or macOS. If you have an A
 
 :::
 
-## What You Need
+## Ce dont vous avez besoin
 
 - The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 - Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
+  - If you are on Windows, Python from the Microsoft Store cannot be used. Please install a version from python.org.
   - If you are on Linux or macOS, you may already have Python 3. Check by opening a Terminal window and entering `python3 -V`. If this returns a version number, it will work for this guide.
 
 ## Instructions
@@ -32,7 +33,7 @@ On this page, you will use the MSET9 script, which is used to trigger MSET9. Whi
 
 In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
-1. Insert your SD card into your computer
+1. Insérez votre carte SD dans votre ordinateur
 2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files
 
    ::: info
@@ -76,7 +77,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 9. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
    - This will not wipe any of your data
 10. Power off your console by pressing the power button then tapping Power Off on the lower screen
-11. Insert your SD card into your computer
+11. Insérez votre carte SD dans votre ordinateur
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -114,7 +115,7 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 4. **Do not press any buttons or touch the screen**
 5. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
    - The menu will refresh and say that no SD card is inserted
-6. Insert your SD card into your computer
+6. Insérez votre carte SD dans votre ordinateur
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -147,7 +148,7 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 :::
 
 1. Power off your console
-2. Insert your SD card into your computer
+2. Insérez votre carte SD dans votre ordinateur
 
 <!--@include: ./_include/mset9-chorus.md -->
 

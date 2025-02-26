@@ -1,36 +1,36 @@
 # Troubleshooting (super-skaterhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (super-skaterhax)" page. Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
+Esta página oferece recursos de solução de problemas para problemas com a página "Instalando boot9strap (super-skaterhax)". Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (super-skaterhax)" page. If you are using **anything other than** a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser) instead.
+Essas instruções são válidas somente para a página "Instalando boot9strap (superskaterhax)". Se você estiver usando **qualquer coisa diferente de** um **New 3DS** na versão **11.15.0 a 11.17.0**, você deve seguir as [instruções de troubleshooting para Instalando boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser).
 
 :::
 
-## Issues with super-skaterhax
+## Problemas com o super-skaterhax
 
-:::details "An error has occurred. Please save your data in any software currently in use, then restart the system."
+:::details "Ocorreu um erro. Por favor salve seus dados em qualquer software em uso, e reinicie o sistema."
 
-If no colors flash after pressing "GO GO!":
+Se nenhuma cor piscar após pressionar "GO GO!":
 
-- Ensure that you have set your system date and [region](/images/screenshots/skaterhax/skater-lang.png) correctly
-- Ensure that no other browser tabs are open, then restart the browser and try the exploit again
+- Certifique-se que você definiu corretamente a data e [região](/images/screenshots/skater/skater-lang.png) de seu sistema
+- Certifique-se que nenhuma outra aba do navegador esteja aberta, então reinicie o navegador e tente o exploit novamente
 
-If the screen flashes colors then freezes/crashes:
+Se a tela piscar com cores e então congelar/ter um crash:
 
-- Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
-- Try resetting your browser data:
-  1. Launch the browser, then launch the browser settings
-  2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-  3. Try the exploit again
-- Try changing the system language to something other than the current language
+- Certifique-se que você tenha as cópias corretas de `arm11code.bin` e `browserhax_hblauncher_ropbin_payload.bin` para a versão e região de seu console
+- Tente redefinir os dados do seu navegador:
+  1. Inicie o navegador, então abra as configurações do navegador
+  2. Role até o final e selecione "Reinicializar Dados Salvos" (também pode ser chamado de "Inicializar Dados Salvos" ou "Limpar Todos os Dados Salvos")
+  3. Tente o exploit novamente
+- Tente alterar o idioma do sistema para um idioma diferente do atual
 
 :::
 
-:::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+:::: details "Ocorreu um erro. Segure o botão POWER para desligar o sistema..." (tela preta com texto)
 
-The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://skater.nintendohomebrew.com/) for your region and version to the root of your SD card (not inside of a folder).
+O arquivo `arm11code.bin` está faltando ou fora do lugar apropriado. Certifique-se de copiar os arquivos da [versão atual do super-skaterhax](https://skater.nintendohomebrew.com) para sua região e versão para a raiz do seu cartão SD (não dentro de uma pasta).
 
 ::: info
 
@@ -40,13 +40,13 @@ The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of
 
 ::::
 
-:::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
+:::details An exception occured ou "DLL_HEAP_INFORMATION" ao apertar GO! GO!
 
 Isso provavelmente indica que você já possui custom firmware. Você deve [checar por CFW](checking-for-cfw).
 
 :::
 
-## Issues with SafeB9SInstaller
+## Problemas com o SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
@@ -58,7 +58,7 @@ Isso provavelmente indica que você já possui custom firmware. Você deve [chec
 
 ::: tip
 
-Go back to [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+Voltar para [Instalando boot9strap (superskaterhax)](installing-boot9strap-\(super-skaterhax\))
 
 :::
 

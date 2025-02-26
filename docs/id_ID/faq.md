@@ -1,4 +1,4 @@
-# FAQ
+# Pertanyaan Umum
 
 ::: danger
 
@@ -8,162 +8,162 @@
 
 ::: info
 
-**Yes**, you can still install custom firmware on your 3DS, even after the closure of eShop.
+**Iya**, _custom firmware_ masih bisa dipasang di 3DS, bahkan setelah eShop ditutup.
 
 :::
 
-## Pre-Installation FAQ
+## Perihal Sebelum Pasang
 
-:::details I am on the latest system version. Is my console hackable without any external hardware/prerequisites?
+:::details Konsol saya sudah di versi terkini. Apakah konsol bisa diretas tanpa perkakas/prasyarat?
 
-**Yes!** New 3DS / New 3DS XL / New 2DS XL can use [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), while 3DS / 3DS XL / 2DS can use [MSET9](installing-boot9strap-\(mset9\)).
-
-:::
-
-:::details What consoles is this guide compatible with?
-
-This guide is compatible with all retail 3DS-family devices (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). If your system version string is displayed as "0.0.0-0", then you may have a developer unit.
+**Iya!** New 3DS / New 3DS XL / New 2DS XL bisa dengan [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), sedangkan 3DS / 3DS XL / 2DS dengan [MSET9](installing-boot9strap-\(mset9\)).
 
 :::
 
-:::details How risky is hacking my console?
+:::details Panduan ini kompatibel dengan konsol apa?
 
-Bricks are now effectively impossible unless you are purposely trying to brick your console.
-
-:::
-
-:::details Can I run awesome homebrew and emulators with this?
-
-Yes! This guide will install a few useful homebrew applications, including [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), which acts as a homebrew app store.
+Panduan ini kompatibel dengan semua jenis ecer konsol 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Jika versi pada sistem bertuliskan "0.0.0-0", bisa jadi konsol Anda unit pengembang.
 
 :::
 
-:::details Can I use this to play games from other regions?
+:::details Seberisiko apa meretas konsol?
 
-Yes; Luma3DS will automatically ignore the region check for cartridges and installed titles. Some games may need to make use of Luma's [locale emulation feature](https://wiki.hacks.guide/wiki/3DS:Setting_game_locales) in order to work properly on out-of-region consoles.
-
-:::
-
-:::details Will I lose any features if I install CFW?
-
-No. Consoles with custom firmware can download game updates and run physical cartridges as any other 3DS can.
+Risiko kena matot sekarang hampir mustahil, kecuali jika _sengaja_ dibuat matot.
 
 :::
 
-:::details Can I keep my NNID, saves, digital games (etc.)?
+:::details Apakah bisa menjalankan homebrew dan emulator keren?
 
-Your NNID (if you have one) will not be affected by this guide. Consoles with a region of KOR, CHN, or TWN do not have NNID functionality to begin with and are thus unaffected.
-
-Following this guide alone should not result in data loss (saves, digital games, etc), but SD card corruption is always a possibility. You should make a backup of your SD card contents if you have important data.
+Iya! Panduan ini akan memasang beberapa aplikasi _homebrew_ berguna, termasuk [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), sebagai toko apli _homebrew_.
 
 :::
 
-:::details Will my 3DS be banned for having CFW?
+:::details Apakah bisa memainkan permainan luar-daerah?
 
-Bans are no longer possible because Nintendo Network services have been shut down (for everyone).
-
-:::
-
-:::details Can I do this without a computer (e.g. an Android phone)?
-
-Yes! All you need is the ability to put files on a compatible SD card.
+Iya; karena Luma3DS mengabaikan periksa daerah pada kartrid dan aplikasi terpasang. Beberapa permainan mungkin perlu fitur [Locale Emulation](https://wiki.hacks.guide/wiki/3DS:Setting_game_locales) dari Luma agar lancar di konsol luar-daerah.
 
 :::
 
-:::details What size SD card can I use?
+:::details Apakah fungsi tertentu hilang jika ada CFW?
 
-You will need at least 1.5GB of free SD card space to follow this guide in its entirety. While the 3DS is officially compatible with SD cards up to 32GB, larger SD cards can be used if they are manually re-formatted as FAT32. It is not recommended to use SD cards greater than 128GB due to known issues with GBA graphics and custom themes.
-
-:::
-
-:::details I heard about this thing I have to pay for (Gateway, Sky3DS, ntrboot, R4, etc). Is that something I need?
-
-No. While a DS flashcart can be used to mod a 3DS using [ntrboot](ntrboot), there is now a free software method available for most consoles.
-
-3DS-mode flashcarts like Gateway and Sky3DS are not recommended because they are obsolete and may carry brick risk.
+Tidak. Konsol dengan _custom firmware_ masih bisa bermain daring dan memainkan kartrid fisik layaknya 3DS biasa.
 
 :::
 
-:::details What's the difference between custom firmware and homebrew?
+:::details Apakah NNID, simpanan, permainan (dll.) akan hilang?
 
-Definitionally speaking, custom firmware refers to a modification of the 3DS system software to do things that it normally isn't able to. Homebrew generally refers to software created outside of official sources (i.e. not distributed by eShop or cartridges).
+Panduan ini tidak akan memengaruhi NNID Anda (jika ada). Untuk konsol berdaerah KOR, CHN, atau TWN malah tidak punya NNID sehingga tidak terpengaruh.
 
-Historically, the 3DS used to have userland homebrew access through older exploits like ninjhax, which people sometimes called just "homebrew". The level of system access granted with userland allowed you to run basic homebrew and emulators but did not allow you to (easily) modify games or dump cartridges. It was also a lot less stable, with homebrew often ungracefully crashing and requiring a full reboot. Custom firmware grants a far greater level of system access while also being more stable than homebrew-only entrypoints.
-
-:::
-
-## Post-Installation FAQ
-
-:::details Is it safe to update my 3DS to the latest version with CFW?
-
-If you are using Luma3DS, your custom firmware loader (boot9strap) will _never_ be removed when performing a system update. There have been updates in the past that have resulted in Luma3DS crashing on boot, so it is a good idea to wait a couple of hours to ensure that the latest update will not temporarily render the console unusable until Luma3DS is updated. System updates can be performed the same way as they are on an unmodified 3DS: through System Settings, Safe Mode, or the update prompt when the update is automatically downloaded.
+Mengikuti panduan ini saja seharusnya tidak kehilangan data (simpanan, permainan, dll), tapi kartu SD rusak mungkin terjadi. Jangan lupa cadangkan isi kartu SD jika terdapat data penting.
 
 :::
 
-:::details How do I upgrade my SD card?
+:::details Apakah 3DS saya akan dicekal jika ada CFW?
 
-Copy and paste your SD card contents to a new SD card formatted as FAT32. For 128GB cards, an allocation size of 65536 is recommended. SD cards larger than 128GB are not recommended due to known issues with GBA graphics and custom themes.
-
-:::
-
-:::details Can I system transfer with CFW?
-
-Yes, system transfers can be performed through the official System Transfer function to other consoles with CFW (inconsistencies may occur if the target console is unmodified). Tickets for illegitimate titles (homebrew) will not transfer, but the titles can be made to reappear with [faketik](https://github.com/ihaveamac/faketik/releases/latest). Make sure that you do not perform a wireless transfer, as this will delete illegitimate titles. CFW will remain on both consoles.
+Pencekalan sudah tidak ada karena ditutupnya Nintendo Network (untuk semua orang).
 
 :::
 
-:::details How do I change the system language of a Japanese 3DS?
+:::details Apakah bisa selain di komputer (misal: ponsel Android)?
 
-The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your console, which means you will be unable to update your games whether they are in-region or out-of-region.
-
-:::
-
-:::details How do I update homebrew applications?
-
-It depends on the format of the homebrew application. Generally speaking:
-
-- Homebrew in **CIA format** can be updated by installing the new CIA, which will usually overwrite the old one. If the old CIA is not overwritten, you can delete the old one from Data Management as you would any other 3DS title.
-- Homebrew in **3DSX format** can be updated by replacing the 3DSX file in `/3ds/` with a fresh copy. If the homebrew application includes additional assets, you may need to place that folder somewhere else. Refer to the documentation of the homebrew application.
-- For updating Luma3DS, see [this page](restoring-updating-cfw). For updating GodMode9, see [this page](godmode9-usage#updating-godmode9).
+Iya! Pokoknya harus bisa menaruh berkas di kartu SD kompatibel.
 
 :::
 
-:::details How do I update my games?
+:::details Sebaiknya kartu SD ukuran berapa?
 
-You can continue to download game updates from the Nintendo eShop, even though it has now shut down.
-
-If the game is not from the same region as the console, you will need to [dump the updates](dumping-titles-and-game-cartridges) from a 3DS that has the updates installed. The Nintendo eShop only contains updates for the console's region (for example, a Japanese 3DS will only have updates for Japanese games).
+Setidaknya kartu SD masih tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS secara resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. Tidak dianjurkan menggunakan kartu SD di atas 128GB karena ada isu dengan grafik GBA dan tema kustom.
 
 :::
 
-:::details Help! Something bad happened and my 3DS won't boot to HOME Menu...
+:::details Dengar-dengar ada cara yang perlu beli (Gateway, Sky3DS, ntrboot, R4, dll). Kira-kira itu perlu, tidak?
 
-Please look at the [troubleshooting guide](troubleshooting-post-install). **Uninstalling CFW when your console is in an unbootable state is not recommended, as it is very likely to lead to a brick**.
+Tidak. Walau _flashcart_ DS memang bisa untuk memodif 3DS dengan [ntrboot](ntrboot), sekarang hampir semua konsol punya cara cuma-cuma.
 
-:::
-
-## menuhax / A9LH / Gateway FAQ
-
-:::details I modded my console (x) years ago, so it already has some sort of homebrew. What should I do?
-
-It is recommended that you upgrade your setup to a modern, boot9strap-based one. Follow the [Checking for CFW](checking-for-cfw) guide to see how to upgrade your setup.
+_Flashcart_ mode 3DS seperti Gateway dan Sky3DS sudah tidak dianjurkan karena usang dan berisiko kena matot (_brick_).
 
 :::
 
-:::details My setup works for me. Why should I upgrade it?
+:::details Apa perbedaan custom firmware dan homebrew?
 
-The vast majority of modern homebrew (such as Checkpoint and BootNTR Selector) have only been tested on modern, boot9strap-based setups and may not work entirely (or at all) on older setups based on menuhax, A9LH, or Gateway. In addition, depending on your setup, you may be unable to safely update to the latest firmware. Modern, boot9strap-based setups allow for a greater level of system access than previous hacks, including the ability to dump your console's bootrom.
+Secara takrif, _custom firmware_ merujuk pada oprekan peranti lunak sistem 3DS agar bisa melakukan hal di luar bawaan. _Homebrew_ umumnya merujuk pada peranti lunak bersumber tidak resmi (yaitu: tidak diagihkan lewat eShop atau kartrid).
 
-:::
-
-:::details Will I lose anything if I upgrade my setup?
-
-Your old setup (including your EmuNAND, if you have one) can usually be directly migrated to boot9strap with no data loss. If you have data that is particularly important to you, it would be a good idea to make a decrypted backup of your save data before upgrading your setup with a tool like [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+Dari sejarahnya, dulu 3DS punya akses _homebrew_ jenis _userland_ melalui eksploit seperti ninjhax, terkadang hanya disebut "homebrew". Tingkat akses sistem dari _userland_ mengizinkan membaca _homebrew_ dan emulator dasar tapi belum bisa (dengan mudah) memodif permainan atau men-_dump_ kartrid. Itu pun lebih tidak stabil, _homebrew_ sering mogok tidak jelas dan perlu dinyalakan ulang penuh. _Custom firmware_ mengizinkan tingkat akses sistem lebih luas dan stabil daripada titik masuk hanya-_homebrew_.
 
 :::
 
-:::details How do I move saves from an existing Gateway setup to a more modern setup?
+## Perihal Setelah Pasang
 
-See [this thread](https://gbatemp.net/threads/425743/).
+:::details Apakah aman memperbarui 3DS dengan CFW ke versi terkini?
+
+Jika menggunakan Luma3DS, pemuat _custom firmware_ (boot9strap) **tidak akan** dihapus saat memperbarui sistem. Dulu sempat ada pembaruan yang membuat Luma3DS mogok (_crash_) di awal nyala, jadi lebih baik menunggu beberapa jam untuk memastikan pembaruan terbaru tidak membuat konsol sementara tidak bisa digunakan sampai Luma3DS diperbarui. Pembaruan sistem bisa dilakukan sama seperti di 3DS belum dimodif: melalui System Settings, Safe Mode, atau sembulan pembaruan jika pembaruan diunduh otomatis.
+
+:::
+
+:::details Bagaimana memperbarui kartu SD?
+
+Salin dan tempel isi kartu SD Anda ke kartu SD baru berformat FAT32. Untuk kartu 128GB, ukuran alokasi yang dianjurkan 65536 (64KB). Kartu SD ukuran lebih dari 128GB tidak dianjurkan karena ada isu dengan grafik GBA dan tema kustom.
+
+:::
+
+:::details Apakah konsol CFW bisa system transfer?
+
+Iya, transfer sistem bisa dilakukan melalui cara System Transfer resmi ke konsol lain yang ada CFW (mungkin akan ada ketakteraturan jika konsol sasaran belum dimodif). Ticket untuk aplikasi tidak sah (_homebrew_) tidak akan ditransfer, tapi bisa dimunculkan lagi dengan [faketik](https://github.com/ihaveamac/faketik/releases/latest). Pastikan tidak melakukan transfer nirkabel, ini akan menghapus aplikasi tidak sah. CFW akan tetap ada di kedua konsol.
+
+:::
+
+:::details Bagaimana mengubah bahasa sistem di 3DS Jepang?
+
+Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan [mengganti daerah](region-changing). Perlu diingat ini sangat mungkin mengacau Nintendo eShop di konsol, sehingga tidak bisa memperbarui permainan dalam-daerah ataupun luar-daerah.
+
+:::
+
+:::details Bagaimana memperbarui homebrew?
+
+Ini tergantung jenis format aplikasi _homebrew_. Secara umum:
+
+- _Homebrew_ **format CIA** bisa diperbarui dengan memasang CIA baru, ini akan menimpa versi lama. Jika CIA lama tidak tertimpa, hapus dulu di Data Management seperti apli 3DS biasa.
+- _Homebrew_ **format 3DSX** bisa diperbarui dengan mengganti baru berkas 3DSX di `/3ds/`. Jika _homebrew_ terdapat aset tambahan, mungkin harus taruh aset tersebut di folder lain. Coba lihat dokumentasi untuk _homebrew_ tersebut.
+- Untuk memperbarui Luma3DS, lihat [laman ini](restoring-updating-cfw). Untuk memperbarui GodMode9, lihat [laman ini](godmode9-usage#updating-godmode9).
+
+:::
+
+:::details Bagaimana memperbarui permainan?
+
+Pembaruan permainan masih bisa diunduh dari Nintendo eShop, walaupun kini sudah ditutup.
+
+Jika daerah permainan tidak sama dengan konsol, maka perlu [men-_dump_ pembaruan](dumping-titles-and-game-cartridges) dari 3DS yang punya pembaruan tersebut. Nintendo eShop hanya sedia pembaruan sesuai daerah konsol (contoh: 3DS Jepang hanya ada pembaruan permainan Jepang).
+
+:::
+
+:::details Tolong! Ada yang salah dan 3DS saya tidak mau ke HOME Menu...
+
+Mohon rujuk ke [panduan sidik gangguan](troubleshooting-post-install). **Mencopot CFW saat konsol tidak bisa dinyalakan sangat TIDAK dianjurkan, karena akan matot (_brick_)**.
+
+:::
+
+## Perihal menuhax / A9LH / Gateway
+
+:::details Konsol saya sudah dimodif (x) tahun lalu, jadi sudah ada homebrew. Bagaimana ini?
+
+Dianjurkan memperbarui penyiapan konsol ke CFW modern berdasar-boot9strap. Ikuti [Memeriksa CFW](checking-for-cfw) untuk cara memperbarui penyiapan CFW.
+
+:::
+
+:::details Penyiapan CFW saya lancar saja. Untuk apa diperbarui?
+
+Sebagian besar _homebrew_ modern (seperti Checkpoint dan BootNTR Selector) hanya diuji di CFW terkini berdasar-boot9strap, dan takutnya tidak berfungsi (sama sekali) di penyiapan lawas berdasar menuhax, A9LH, atau Gateway. Ditambah lagi, tergantung penyiapan CFW, bisa bahaya jika diperbarui ke _firmware_ terbaru. Penyiapan modern berdasar-boot9strap mengizinkan tingkat akses sistem lebih luas daripada retasan sebelumnya, termasuk men-_dump bootrom_ konsol.
+
+:::
+
+:::details Apakah ada yang hilang jika memperbarui CFW?
+
+Penyiapan lama Anda (termasuk EmuNAND, jika ada) bisa langsung diungsikan ke boot9strap tanpa kehilangan data. Jika terdapat data yang menurut Anda penting, sebelum memperbarui penyiapan CFW lebih baik membuat cadangan terdekripsi untuk data simpanan dengan alat seperti [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+
+:::
+
+:::details Bagaimana memindahkan simpanan (save) dari CFW Gateway ke CFW modern?
+
+Lihat [utas ini](https://gbatemp.net/threads/425743/).
 
 :::

@@ -14,9 +14,9 @@ Before starting this guide, we will see if custom firmware is already installed 
 
 ### Section I - CFW Check
 
-1. Power off your console
-2. Hold the (Select) button
-3. Power on your console while still holding the (Select) button
+1. Apaga la consola
+2. Mantén presionado el Botón (Select)
+3. Enciende la consola mientras mantienes presionado el botón (Select)
 4. If you do not see a custom menu (your console just boots to the HOME Menu), you may proceed to the next section
 
 ::: warning

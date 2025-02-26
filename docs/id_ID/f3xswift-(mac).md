@@ -1,48 +1,48 @@
 # F3XSwift (Mac)
 
-## Required Reading
+## Bacaan Penting
 
-This is an add-on section for checking your SD card for errors using F3XSwift.
+Ini adalah laman lebihan untuk memeriksa galat di kartu SD dengan F3XSwift.
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+Tergantung ukuran kartu SD dan kecepatan komputer, proses ini bisa lama beberapa jam!
 
-This page is for Mac users only. If you are not on Mac, check out the [H2testw (Windows)](h2testw-\(windows\)) or [F3 (Linux)](f3-\(linux\)) pages.
+Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [H2testw (Windows)](h2testw-\(windows\)) atau [F3 (Linux)](f3-\(linux\)).
 
 ::: info
 
-F3XSwift is only compatible with macOS 10.13 (High Sierra) and above. If you have an older version of macOS, follow [F3X (Mac)](f3x-\(mac\)) instead.
+F3XSwift hanya kompatibel dengan macOS 10.13 (High Sierra) ke atas. Jika punya macOS versi lawas, ikuti saja [F3X (Mac)](f3x-\(mac\)).
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
-- The latest release of [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
+- Versi terkini dari [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
 
-## Instructions
+## Instruksi
 
-1. Insert your SD card into your computer
-2. Run the F3XSwift app
-3. Select your SD card from the list of volumes
-4. Click "Test"
-5. Click "Open" to confirm writing to your SD card
-6. Wait until the process is complete
+1. Sisipkan kartu SD ke komputer Anda
+2. Jalankan aplikasi F3XSwift
+3. Pilih kartu SD dari daftar volume cakram
+4. Pencet "Test"
+5. Pencet "Open" untuk konfirmasi menulis ke kartu SD
+6. Tunggu sampai proses selesai
 
 ___
 
 ::: tip
 
-If the test shows the result `Success! Your card is ok!`, your SD card is good and you can delete all `.h2w` files on your SD card.
+Jika hasil ujinya `Success! Your card is ok!`, berarti kartu SD masih bagus dan `.h2w` boleh dihapus semua di kartu SD.
 
 :::
 
 ::: danger
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+Jika hasil ujinya lain lagi, berarti kartu SD mungkin rusak atau bermasalah dan harus diganti!
 
 :::
 
 ::: tip
 
-Return to [Get Started](get-started)
+Kembali ke [Memulai](get-started)
 
 :::

@@ -1,166 +1,166 @@
-# Dumping Titles and Game Cartridges
+# Volcado de Software Digital y Cartuchos de Juegos
 
 ::: info
 
-For support (in English) with GodMode9, as well as help with scripting and to get updates and info, join [GodMode9 on Discord](https://discord.gg/BRcbvtFxX4).
+Para ayuda (en inglés) con GodMode9, así como ayuda con la creación de scripts y obtener actualizaciones e información, únete al [Discord de GodMode9](https://discord.gg/BRcbvtFxX4).
 
 :::
 
-## Required Reading
+## Lectura requerida
 
-Aside from creating and restoring NAND backups, GodMode9 has the functionality to dump installed titles to an installable `.cia` file, to dump game cartridge data to a `.3ds` ROM file, and to directly install a game cartridge to the system.
+Aparte de crear y restaurar copias de seguridad de la NAND, GodMode9 tiene la funcionalidad de volcar el software instalado en la consola a un archivo de instalación `.cia`, volcar el juego de un cartucho a un archivo `.3ds`, y también directamente instalar el juego de un cartucho en la consola.
 
-## Updating GodMode9
+## Actualizar GodMode9
 
 ::: info
 
-These instructions are written for use with GodMode9 v2.0.0 or later. If you have an older version of GodMode9, follow these instructions to update it.
+Estas instrucciones están escritas para ser usadas con GodMode9 v2.0.0 o superior. Si tienes una versión anterior de GodMode9, sigue estas instrucciones para actualizarlo.
 
 :::
 
-### What You Need
+### Lo que necesitas
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- - La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (el archivo GodMode `.zip`)
 
-### Instructions
+### Instrucciones
 
-1. Power off your console
-2. Insert your SD card into your computer
-3. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-4. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-5. Reinsert your SD card into your console
+1. Apaga la consola
+2. Inserta la tarjeta SD en tu computadora
+3. Copia `Godmode9.firm` desde Godmode9 `.zip` a la carpeta `/luma/payloads/` en la tarjeta SD
+4. Copia la carpeta `gm9` de GodMode9 `.zip` a la raíz de la tarjeta SD
+5. Reinserta la tarjeta SD en la consola
 
-## Dumping a Game Cartridge
+## Volcar un Cartucho de Juego
 
 ::: info
 
-Insert the game cartridge you intend to dump into your console
+Inserta en la consola el cartucho de juego que deseas volcar
 
-- 3DS game cartridges will be dumped to a `.3ds` format
-- NDS game cartridges will be dumped to a `.nds` format
+- Los cartuchos de 3DS se volcarán en formato `.3ds`
+- Los cartuchos de Nintendo DS se volcarán en formato `.nds`
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
-2. Navigate to `[C:] GAMECART`
-3. Follow the steps applicable to your game cartridge:
-   - **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it
-   - **NDS Game Cartridge:** Press (A) on `[TitleID].nds` to select it
-     - Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues
-4. Select "Copy to 0:/gm9/out"
-5. Your non-installable `.3ds` or `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
+2. Ve a `[C:] GAMECART`
+3. Sigue los pasos correspondientes a tu tipo de cartucho:
+   - **Cartucho de 3DS:** Presiona (A) sobre `[TitleID].trim.3ds` para seleccionarlo
+   - **Cartucho de DS:** Presiona (A) sobre `[TitleID].nds` para seleccionarlo
+     - Las copias recortadas ("trimmed" en inglés) no son recomendadas para los juegos de DS ya que pueden causar problemas al usarlas
+4. Seleciona "Copy to 0:/gm9/out"
+5. Tu archivo `.3ds` o `.nds` _no instalable_ será guardado en la carpeta `/gm9/out/` de la tarjeta SD
 
-## Installing a Game Cartridge Directly to the System
+## Instalar un Cartucho a la Consola Directamente
 
 ::: info
 
-This will only work for 3DS games; it is not possible to install an NDS game cartridge to the system as a title.
+Esto sólo funciona para juegos de 3DS; no es posible instalar un cartucho de DS como software de 3DS.
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
-2. Navigate to `[C:] GAMECART`
-3. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Install game image"
-4. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-5. Once the process is complete, your game will show up in the HOME Menu as an installed title.
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
+2. Ve a `[C:] GAMECART`
+3. Presiona el botón (A) sobre `[TitleID].trim.3ds` para seleccionarlo, luego selecciona "NCSD image options..." y luego "Install game image"
+4. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y luego introduce la combinación de botones mostrada
+5. Una vez que el proceso haya sido completado, el juego aparecerá en el Menú HOME como un ícono.
 
-## Dumping a 3DS Game Cartridge to .CIA
+## Volcar un Cartucho de 3DS a .CIA
 
 ::: info
 
-This should only be used if [Installing a Game Cartridge Directly to the System](#installing-a-game-cartridge-directly-to-the-system) does not work.
+Esto sólo debiera seguirse si [Instalar un Cartucho a la Consola Directamente](#installing-a-game-cartridge-directly-to-the-system) no funciona.
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
-2. Navigate to `[C:] GAMECART`
-3. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
-4. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
+2. Ve a `[C:] GAMECART`
+3. Presiona el botón (A) sobre `[TitleID].trim.3ds` para seleccionarlo, luego selecciona "NCSD image options..." y luego "Build CIA from file"
+4. Tu archivo instalable en formato `.cia` será guardado en la carpeta `/gm9/out/` de la tarjeta SD
 
-## Dumping an Installed Title
+## Volcar un Software Instalado
 
 ::: info
 
-This allows dumping of both System- and User-installed digital titles, such as ones downloaded from the eShop.
+Esto permite volcar tanto software del sistema como juegos/software digitales instalados desde la eShop.
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
-2. Press (Home) to bring up the action menu
-3. Select "Title manager"
-4. Select one of the following depending on the type of title you wish to dump
-   - **User Installed Title**: `[A:] SD CARD`
-   - **System Title / DSiWare**: `[1:] NAND / TWL`
-5. Select the title you wish to dump
-6. Select "Manage Title..."
-7. Select "Build CIA (standard)"
-8. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
+2. Presiona el botón (HOME) para abrir el menú de acciones
+3. Selecciona "Title manager"
+4. Selecciona una de las siguientes opciones, dependiendo del tipo de software que desees volcar
+   - **Título instalado por el usuario**: `[A:] SD CARD`
+   - **Software del Sistema / DSiWare**: `[1:] NAND / TWL`
+5. Selecciona el título que quieras volcar
+6. Selecciona "Manage Title..."
+7. Selecciona "Build CIA (standard)"
+8. Tu archivo instalable en formato `.cia` será guardado en la carpeta `/gm9/out/` de la tarjeta SD
 
-## Backup GBA VC Saves
+## Respaldar datos de guardado de la Consola Virtual de GBA
 
 ::: info
 
-The game will be outputted to the `/gm9/out/` folder on your SD card with the name `<TitleID>.gbavc.sav`.
+El juego será almacenado en la carpeta `/gm9/out/` de la tarjeta SD con el nombre `<TitleID>.gbavc.sav`.
 
 :::
 
 ::: info
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
+Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes revisar una lista de todos los juegos en la consola y sus IDs correspondientes presionando (HOME) para mostrar el menú de acciones, seleccionando `Title manager` y luego `[A:] SD CARD`.
 
 :::
 
-1. Do the following process for each GBA VC game that you want to back up the save for:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Power off your console
-   - Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Dump GBA VC save"
-   - Press (A) to continue
+1. Haz lo siguiente por cada juego de Consola Virtual de GBA del cual quieras respaldar sus datos de guardado:
+   - Inicia el juego de Consola Virtual de GBA
+   - Sal del juego de Consola Virtual de GBA
+   - Apaga la consola
+   - Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
+   - Ve a `[S:] SYSNAND VIRTUAL`
+   - Presiona (A) sobre `agbsave.bin` para seleccionarlo
+   - Selecciona "AGBSAVE options..."
+   - Selecciona "Dump GBA VC save"
+   - Presiona (A) para continuar
    - Presiona (Start) para reiniciar tu consola
 
-## Restore GBA VC Saves
+## Restaurar datos de guardado de la Consola Virtual de GBA
 
 ::: info
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
+Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes revisar una lista de todos los juegos en la consola y sus IDs correspondientes presionando (HOME) para mostrar el menú de acciones, seleccionando `Title manager` y luego `[A:] SD CARD`.
 
 :::
 
-1. Do the following process for each GBA VC game that you want to restore the save for:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Power off your console
-   - Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
+1. Haz lo siguiente por cada juego de Consola Virtual de GBA del cual quieras restaurar sus datos de guardado:
+   - Inicia el juego de Consola Virtual de GBA
+   - Sal del juego de Consola Virtual de GBA
+   - Apaga la consola
+   - Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
    - Ve a `[0:] SDCARD` -> `gm9` -> `out`
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-   - Press (B) to return to the main menu
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Inject GBA VC save"
-   - Press (A) to continue
+   - Presiona (Y) sobre el archivo `<TitleID>.gbavc.sav` que deseas restaurar para copiarlo
+   - Presiona (B) para regresar al menú principal
+   - Ve a `[S:] SYSNAND VIRTUAL`
+   - Presiona (A) sobre `agbsave.bin` para seleccionarlo
+   - Selecciona "AGBSAVE options..."
+   - Selecciona "Inject GBA VC save"
+   - Presiona (A) para continuar
    - Presiona (Start) para reiniciar tu consola
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+   - Inicia el juego de Consola Virtual de GBA
+   - Sal del juego de Consola Virtual de GBA
 
-## Encrypting / Decrypting a .CIA file
+## Encriptar/desencriptar un archivo .CIA
 
 ::: info
 
-For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt to the `/cias/` folder on your SD card
+Para mantener orden, copia cada archivo `.cia` que quieras encriptar/desencriptar a la carpeta `/cias/` en la tarjeta SD
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Esto abrirá GodMode9
-2. Navigate to `[0:] SDCARD` -> `cias`
-3. Press (A) on the `.cia` file to select it, then select "CIA image options..."
-4. Select the option to perform the desired function:
-   - **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Encrypt inplace:** Replace the selected `.cia` file with an encrypted version
-   - **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
-5. Your encrypted / decrypted `.cia` will be outputted to the desired location
+1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
+2. Ve a `[0:] SDCARD` -> `cias`
+3. Presiona (A) sobre el archivo `.cia` para seleccionarlo, luego selecciona "CIA image options..."
+4. Selecciona la opción para realizar la función deseada:
+   - **Encrypt to 0:/gm9/out:** Crea una copia encriptada del archivo `.cia` seleccionado en la carpeta `/gm9/out/` de la tarjeta SD
+   - **Decrypt to 0:/gm9/out:** Crea una copia desencriptada del archivo `.cia` seleccionado en la carpeta `/gm9/out/` de la tarjeta SD
+   - **Encrypt inplace:** Reemplaza el archivo `.cia` seleccionado con uno encriptado
+   - **Decrypt inplace:** Reemplaza el archivo `.cia` seleccionado con uno desencriptado
+5. Tu `.cia` encriptado/desencriptado será guardado en la ubicación seleccionada

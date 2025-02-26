@@ -10,6 +10,16 @@ Python is not installed on the computer you are using. Download it from the [Pyt
 
 :::
 
+:::details ModuleNotFoundError: No module named 'pyfatfs'
+
+Modul "pyfatfs" yang diperlukan MSET9 installer untuk komputer macOS belum dipasang.
+
+1. Buka Terminal yang baru
+2. Ketik `python3 -m pip install pyfatfs`, lalu tekan Enter
+3. Mulai lagi dari [Bagian I Langkah 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+
+:::
+
 :::details HOME Menu extdata: Missing!
 
 Please power on your console with your SD inserted, then check the MSET9 status again.
@@ -41,8 +51,8 @@ If this does not work, your SD card needs to be formatted:
 Ensure that you have reset the title database.
 
 - Please power on your console with your SD inserted
-- Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-  - This will not wipe any of your data
+- Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
+  - Ini tidak akan menghapus data
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
@@ -53,7 +63,7 @@ If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
 2. Type `2` then press enter to check the MSET9 status
    - This will create the dummy databases again
 3. Close the MSET9 script window
@@ -93,12 +103,12 @@ Write-protection is enabled on this SD card. If you are using a full-size SD car
 You have multiple ID0 folders. To determine the correct folder, follow these instructions:
 
 1. Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-2. Reinsert your SD card into your console
-3. Power on your console
+2. Sisip kembali kartu SD ke konsol
+3. Nyalakan daya konsol
 4. Wait for the console to generate the SD card data
    - Your applications will have disappeared. This is normal and will be resolved shortly
-5. Power off your console
-6. Insert your SD card into your computer
+5. Matikan daya konsol
+6. Sisipkan kartu SD ke komputer Anda
 7. Navigate to the `Nintendo 3DS` folder on your SD card
 8. Write down the first few characters of the folder you see
    - This is your true ID0, which we will keep in the real Nintendo 3DS folder
@@ -136,24 +146,24 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 
 :::
 
-## MSET9 (exploit)
+## MSET9 (eksploit)
 
-:::details Red screen after reinserting SD card (Section II Step 11)
+:::details Layar merah setelah menyisip kartu SD (Bagian II Langkah 11)
 
-You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
+Mungkin belum ditaruh `SafeB9S.bin` di akar kartu SD, atau berkasnya rusak. Salin `SafeB9S.bin` dari `.zip` MSET9, timpa berkas yang ada lalu ikuti instruksi ini untuk menghapus _trigger file_ (berkas pemicu):
 
-1. Force power off your console by holding the Power button for 20 seconds
-2. Insert your SD card into your computer
+1. Matikan paksa daya konsol dengan menahan tombol Power selama 20 detik
+2. Sisipkan kartu SD ke komputer Anda
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
+   - Keadaan saat ini seharusnya [Injected](/images/screenshots/mset9/mset9-injected.png)
    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
-5. Power on your console
+5. Nyalakan daya konsol
 6. Return to [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
 Alternatively, your SD card may be improperly formatted or partitioned. After removing the trigger file, format it:
@@ -171,18 +181,18 @@ You most likely did something different from the MSET9 instructions, selected th
 
 Follow these instructions to remove the trigger file and to retry Section II:
 
-1. Force power off your console by holding the Power button for 20 seconds
-2. Insert your SD card into your computer
+1. Matikan paksa daya konsol dengan menahan tombol Power selama 20 detik
+2. Sisipkan kartu SD ke komputer Anda
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
+   - Keadaan saat ini seharusnya [Injected](/images/screenshots/mset9/mset9-injected.png)
    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
-5. Power on your console
+5. Nyalakan daya konsol
 6. Return to [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
 If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:

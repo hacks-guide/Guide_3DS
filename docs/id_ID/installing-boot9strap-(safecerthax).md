@@ -1,90 +1,90 @@
-# Installing boot9strap (safecerthax)
+# Memasang boot9strap (safecerthax)
 
-:::details Technical Details (optional)
+:::details Perincian Teknis (opsional)
 
 :::
 
-## Compatibility Notes
+## Catatan Kompatibilitas
 
-safecerthax is compatible with all Old 3DS and Old 2DS consoles in all regions on system versions 1.0.0 through 11.14.0.
+safecerthax ini kompatibel dengan semua konsol Old 3DS (2DS) di semua daerah dari _firmware_ 1.0.0 hingga 11.14.0.
 
 ::: info
 
-This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ensure that the console you are modding is an Old 3DS, Old 3DS XL, or Old 2DS before continuing.
+Eksploit ini tidak berfungsi di New 3DS, New 3DS XL, atau New 2DS XL. Pastikan konsol yang akan dimodif itu Old 3DS, Old 3DS XL, atau Old 2DS sebelum lanjut.
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Versi terkini dari [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (unduhan langsung)
+- Versi terkini dari [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (unduhan langsung)
+- Versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (yang `.zip` Luma3DS)
 
-## Instructions
+## Instruksi
 
-### Section I - Hardware Button Check
+### Bagian I - Memeriksa Tombol Fisik
 
-In this section, you will see whether your shoulder buttons are working on your console. This will determine whether your console is compatible with this method.
+Di bagian ini akan memeriksa apakah tombol L dan R konsol berfungsi. Ini akan menentukan apakah konsol bisa dengan metode ini.
 
-1. Power on your console
-2. Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
-   - The camera applet should appear
-3. Power off your console
+1. Nyalakan daya konsol
+2. Sesudah masuk HOME Menu, tekan tombol (L) dan (R) secara bersamaan
+   - Seharusnya _applet_ kamera terbuka
+3. Matikan daya konsol
 
 ::: warning
 
-If the camera did NOT appear, you cannot follow this method. If this is the case, use [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\)) instead.
+Jika kamera TIDAK terbuka, metode ini tidak bisa diikuti. Jika seperti itu, ikuti saja [Memasang boot9strap (MSET9)](installing-boot9strap-\(mset9\)).
 
 :::
 
-### Section II - Prep Work
+### Bagian II - Persiapan
 
-In this section, you will copy the files needed to trigger the safecerthax exploit.
+Di bagian ini akan menaruh berkas untuk mengaktifkan eksploit safecerthax.
 
-1. Insert your SD card into your computer
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
-3. Create a folder named `boot9strap` on the root of your SD card
-4. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
-5. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
-6. Reinsert your SD card into your console
-7. Power on your console
+1. Sisipkan kartu SD ke komputer Anda
+2. Salin semua berkas dari `.zip` Luma3DS ke akar kartu SD
+   - Akar (_root_) kartu SD merujuk ke direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
+3. Buat folder dengan nama `boot9strap` di akar kartu SD
+4. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
+5. Salin `SafeB9SInstaller.bin` dari `.zip` SafeB9SInstaller ke akar kartu SD
+6. Sisip kembali kartu SD ke konsol
+7. Nyalakan daya konsol
 
-### Section III - safecerthax proxy
+### Bagian III - Proxy safecerthax
 
-In this section, you will change your Internet connection settings to use a proxy network designed to exploit the System Update feature of your console.
+Di bagian ini akan mengubah pengaturan sambungan Internet ke jejaring _proxy_ untuk mengeksploit fitur System Update konsol.
 
 <!--@include: ./_include/addproxy.md -->
 
-1. Power off your console
+1. Matikan daya konsol
 
-### Section IV - safecerthax
+### Bagian IV - safecerthax
 
-In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) where safecerthax will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+Di bagian ini akan memasuki Safe Mode (fitur yang tersedia di semua jenis konsol 3DS) di mana safecerthax diaktifkan, ini akan membuka pemasang boot9strap (_custom firmware_).
 
-1. With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
-   - Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
-2. Press "OK" to accept the update
-   - There is no update. This is part of the exploit
-3. Press "I accept" to accept the terms and conditions
-4. The update will eventually fail, with the error code `003-1099`. This is intended behaviour
-5. Press "OK" to close the error message
-6. If the exploit was successful, you will have booted into SafeB9SInstaller
-   - If the console freezes or crashes, force power off the console, then retry this section
+1. Dalam keadaan konsol belum nyala, tahan tombol berikut: (L) + (R) + (Tombol Atas) + (A), dan selagi ditahan, nyalakan daya konsol
+   - Tahan tombolnya sampai konsol menyala ke Safe Mode (semacam menu "pembaruan sistem")
+2. Tekan "OK" untuk memperbarui
+   - Tidak ada pembaruan. Memang eksploit seperti ini
+3. Tekan "I accept" untuk menerima syarat dan ketentuan
+4. Pembaruan ini akan gagal dengan kode galat `003-1099`. Memang harus seperti ini
+5. Tekan "OK" untuk menutup pesan galat
+6. Jika eksploit berhasil akan muncul SafeB9SInstaller
+   - Jika konsolnya macet atau mogok, matikan paksa daya konsol, lalu coba lagi bagian ini
 
-### Section V - Installing boot9strap
+### Bagian V - Memasang boot9strap
 
-In this section, you will install custom firmware onto your console.
+Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
-1. When prompted, input the key combo given on the top screen to install boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-safecerthax)
-2. Once it is complete, press (A) to reboot your console
+1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
+   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-safecerthax)
+2. Saat selesai, tekan (A) untuk nyalakan ulang konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 
-### Section VI - Restoring default proxy
+### Bagian VI - Memulihkan Proxy bawaan
 
 <!--@include: ./_include/rmproxy.md -->
 
@@ -92,6 +92,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Lanjut ke [Penyiapan Akhir](finalizing-setup)
 
 :::

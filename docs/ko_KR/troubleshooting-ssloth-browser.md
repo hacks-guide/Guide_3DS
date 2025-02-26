@@ -90,7 +90,7 @@ SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹
 
 :::
 
-## Issues with SafeB9SInstaller
+## SafeB9SInstaller와의 문제
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 

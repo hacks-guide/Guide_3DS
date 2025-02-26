@@ -1,12 +1,22 @@
 # Troubleshooting (MSET9)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (MSET9)", "Installing boot9strap (MSET9 CLI)" and "Installing boot9strap (MSET9 Play Store)" pages. Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
+Esta página oferece conselhos de solução de problemas para problemas com as páginas "Instalando boot9strap (MSET9)", "Instalando boot9strap (MSET9 CLI)" e "Instalando boot9strap (MSET9 Play Store)". Se você não consegue resolver seu problema com o conselho nesta página, por favor entre no [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva o seu problema, incluindo o que você já tentou.
 
-## MSET9 (application / script)
+## MSET9 (aplicativo / script)
 
 :::details Python 3 não está instalado
 
 O Python não está instalado no computador que você está usando. Baixe-o do [site do Python](https://www.python.org/downloads/), clique duas vezes no instalador e siga as instruções para instalar o Python. Quando o Python estiver instalado, tente novamente.
+
+:::
+
+:::details ModuleNotFoundError: No module named 'pyfatfs'
+
+The pyfatfs module, which is needed to use the MSET9 installer on macOS, isn't installed on your computer.
+
+1. Open a separate Terminal window
+2. Type `python3 -m pip install pyfatfs`, then press Enter
+3. Start again from [Section I Step 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 :::
 
@@ -200,7 +210,7 @@ Isso provavelmente indica que você já possui custom firmware. Você deve [chec
 
 :::
 
-## Issues with SafeB9SInstaller
+## Problemas com o SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
@@ -212,13 +222,13 @@ Isso provavelmente indica que você já possui custom firmware. Você deve [chec
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
+Voltar para [Instalando boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
 
 :::
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
+Voltar para [Instalando boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
 
 :::
 

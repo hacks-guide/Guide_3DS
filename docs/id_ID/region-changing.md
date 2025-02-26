@@ -1,6 +1,6 @@
 # Region Changing
 
-## Required Reading
+## Bacaan Penting
 
 This is an add-on section for region changing your console. This is done by installing the 11.15.0 CTRTransfer image for the region you want to switch to. After installing the image, you can update your console normally to the latest firmware (11.17.0).
 
@@ -8,13 +8,13 @@ Note that region changing is almost completely unnecessary since Luma3DS support
 
 ::: info
 
-This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.
+Konsol harus sudah ada Luma3DS dan boot9strap untuk laman ini. Jika sudah mengikuti panduan sampai "Penyiapan Akhir", berarti sudah ada Luma3DS dan boot9strap.
 
 :::
 
 ::: warning
 
-As a part of this process, your system settings will be reset to its defaults. This includes things such as your username, country, and language. **Installed games and their save data will not be affected.**
+Untuk proses bagian ini, pengaturan sistem akan dikembalikan ke bawaan. Ini mencakup nama pengguna, negara, dan bahasa. **Tidak memengaruhi permainan terpasang dan simpanannya.**
 
 :::
 
@@ -32,43 +32,43 @@ If you change the region of your console:
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
-- The latest release of [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (direct download)
-- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
-- The latest release of [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (right click, save link as)
-- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-  - If you already have a torrent client, you do not need to download a new one
+- Versi terkini dari [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (yang `.zip` GodMode9)
+- Versi terkini dari [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (unduhan langsung)
+- Versi terkini dari [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(yang berkas `.3dsx`)_
+- Versi terkini dari [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (pencet kanan lalu _save link as_; simpan tautan)
+- Klien torrent seperti [qBittorrent](https://www.qbittorrent.org/download.php) atau [Deluge](http://dev.deluge-torrent.org/wiki/Download)
+  - Jika sudah punya klien torrent, tidak perlu unduh klien baru lagi
 - The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
-### Section II - NAND Backup
+### Bagian II - Mencadang NAND
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
-### Section III - CTRTransfer
+### Bagian III - CTRTransfer
 
 <!--@include: ./_include/ctrtransfer-main.md -->
 
-### Section IV - Launching FBI
+### Bagian IV - Membuka FBI
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
-### Section V - Reinstalling Tickets
+### Bagian V - Memasang ulang Ticket
 
 <!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-### Section VI - Fixing locale-related issues
+### Bagian VI - Memperbaiki isu daerah konsol
 
 <!--@include: ./_include/ctrnand-datayeet.md -->
 
@@ -76,6 +76,6 @@ ___
 
 ::: tip
 
-Your 3DS has successfully been region changed!
+Daerah konsol 3DS sekarang sudah diubah!
 
 :::

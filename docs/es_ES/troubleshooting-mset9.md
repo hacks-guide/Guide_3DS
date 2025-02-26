@@ -10,6 +10,16 @@ Python is not installed on the computer you are using. Download it from the [Pyt
 
 :::
 
+:::details ModuleNotFoundError: No module named 'pyfatfs'
+
+The pyfatfs module, which is needed to use the MSET9 installer on macOS, isn't installed on your computer.
+
+1. Open a separate Terminal window
+2. Type `python3 -m pip install pyfatfs`, then press Enter
+3. Start again from [Section I Step 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+
+:::
+
 :::details HOME Menu extdata: Missing!
 
 Please power on your console with your SD inserted, then check the MSET9 status again.
@@ -93,12 +103,12 @@ Write-protection is enabled on this SD card. If you are using a full-size SD car
 You have multiple ID0 folders. To determine the correct folder, follow these instructions:
 
 1. Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
-2. Reinsert your SD card into your console
+2. Reinserta la tarjeta SD en la consola
 3. Power on your console
 4. Wait for the console to generate the SD card data
    - Your applications will have disappeared. This is normal and will be resolved shortly
-5. Power off your console
-6. Insert your SD card into your computer
+5. Apaga la consola
+6. Inserta la tarjeta SD en tu computadora
 7. Navigate to the `Nintendo 3DS` folder on your SD card
 8. Write down the first few characters of the folder you see
    - This is your true ID0, which we will keep in the real Nintendo 3DS folder
@@ -143,7 +153,7 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
 
 1. Force power off your console by holding the Power button for 20 seconds
-2. Insert your SD card into your computer
+2. Inserta la tarjeta SD en tu computadora
 
 <!--@include: ./_include/mset9-chorus.md -->
 
@@ -172,7 +182,7 @@ You most likely did something different from the MSET9 instructions, selected th
 Follow these instructions to remove the trigger file and to retry Section II:
 
 1. Force power off your console by holding the Power button for 20 seconds
-2. Insert your SD card into your computer
+2. Inserta la tarjeta SD en tu computadora
 
 <!--@include: ./_include/mset9-chorus.md -->
 

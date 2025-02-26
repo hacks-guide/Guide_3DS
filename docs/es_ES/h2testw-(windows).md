@@ -1,21 +1,21 @@
 # H2testw (Windows)
 
-## Required Reading
+## Lectura requerida
 
 This is an add-on section for checking your SD card for errors using h2testw.
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+Dependiendo del tamaño de la tarjeta SD y la velocidad de tu computadora, ¡este proceso podría tardar varias horas!
 
 This page is for Windows users only. If you are not on windows, check out the [F3 (Linux)](f3-\(linux\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
 
-## What You Need
+## Lo que necesitas
 
 - The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
-## Instructions
+## Instrucciones
 
 1. Copy `h2testw.exe` from the h2testw `.zip` to your desktop
-2. Insert your SD card into your computer
+2. Inserta la tarjeta SD en tu computadora
 3. Run `h2testw.exe`
 4. Select "English"
 5. Click "Select target"
@@ -32,12 +32,12 @@ If the test shows the result `Test finished without errors`, your SD card is goo
 
 ::: danger
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+Si se muestra otro resultado, ¡tu tarjeta SD puede estar corrupta o dañada y puede que debas reemplazarla!
 
 :::
 
 ::: tip
 
-Return to [Get Started](get-started)
+Regresa a [Comencemos](get-started)
 
 :::

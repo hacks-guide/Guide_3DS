@@ -10,6 +10,16 @@
 
 :::
 
+:::details ModuleNotFoundError: No module named 'pyfatfs'
+
+Δεν έχει εγκατασταθεί στον υπολογιστή σας η μονάδα λειτουργίας «pyfatfs», η οποία απαιτείται για τη χρήση του προγράμματος εγκατάστασης του MSET9 στο macOS.
+
+1. Ανοίξτε ένα ξεχωριστό παράθυρο τερματικού
+2. Πληκτρολογήστε `python3 -m pip install pyfatfs` και πατήστε Enter
+3. Ξεκινήστε ξανά από το [Βήμα 3 της Ενότητας I](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+
+:::
+
 :::details HOME Menu extdata: Missing!
 
 Ενεργοποιήστε την κονσόλα σας, έχοντας εισαγάγει την κάρτα SD σας. Έπειτα, ελέγξτε ξανά την κατάσταση του MSET9.

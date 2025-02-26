@@ -16,29 +16,29 @@ For technical details on the exploits that you will be using on this page, see [
 
 SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing the use of new-browserhax or old-browserhax (compatible with versions 11.4.0 through 11.13.0 in all regions), which can then be used in conjunction with universal-otherapp.
 
-## What You Need
+## Lo que necesitas
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- La última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (descarga directa)
+- La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (descarga directa)
+- La última versión de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (el archivo `.zip` de Luma3DS)
 - The latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
-## Instructions
+## Instrucciones
 
-### Section I - Prep Work
+### Sección I - Preparativos
 
 In this section, you will copy the files needed to trigger both browserhax and universal-otherapp.
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Apaga la consola
+2. Inserta la tarjeta SD en tu computadora
 3. Copy `otherapp.bin` to the root of your SD card and rename it to `arm11code.bin`
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - La raíz de la tarjeta SD se refiere al primer directorio de la tarjeta, donde puedes ver la carpeta Nintendo 3DS pero no estás dentro de ella
    - If you do not see the `.bin` extension, do not add it to the end of the filename
 4. Copy everything from the Luma3DS `.zip` to the root of your SD card
-5. Create a folder named `boot9strap` on the root of your SD card
-6. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+5. Crea una carpeta llamada `boot9strap` en la raíz de la tarjeta SD
+6. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en la tarjeta SD
 7. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
-8. Reinsert your SD card into your console
+8. Reinserta la tarjeta SD en la consola
 9. Power on your console
 
 ### Section II - SSLoth
@@ -82,6 +82,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continúa a [Finalizar instalación](finalizing-setup)
 
 :::

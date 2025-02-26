@@ -1,60 +1,60 @@
-# Flashing ntrboot (3DS Multi System)
+# Mem-flash ntrboot (Beberapa Sistem 3DS)
 
-## Required Reading
+## Bacaan Penting
 
-Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot).
+Sebelum melanjutkan, pastikan sudah baca semua informasi di [ntrboot](ntrboot).
 
-This method requires temporary access to a second 3DS family console that is already running boot9strap. This does not require your flashcart to support either 3DS's version.
+Metode ini perlu akses sementara ke jenis konsol 3DS lain yang sudah ada boot9strap. _Flashcart_ tidak harus untuk 3DS, yang penting bisa di-_flash_ ntrboot.
 
 ::: danger
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless, only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
+Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_brick_)** saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, sebaiknya beli dari situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
-- Your ntrboot compatible flashcart
-- Two 3DS family consoles
-  - **The source 3DS**: the 3DS family console that is already running boot9strap
-  - **The target 3DS**: the 3DS family console on stock firmware
-- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
-- The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
+- _Flashcart_ yang kompatibel ntrboot
+- Dua konsol jenis 3DS
+  - **3DS sumber**: Konsol jenis 3DS yang sudah ada boot9strap
+  - **3DS sasaran**: Konsol 3DS yang masih _firmware_ bawaan
+- Versi v1.3 dari [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (unduhan langsung)
+- Versi terkini dari [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
-1. Power off **the source 3DS**
-2. Insert **the source 3DS**'s SD card into your computer
-3. Create a folder named `ntrboot` on the root of your SD card
-4. Copy `boot9strap_ntr.firm` and `boot9strap_ntr.firm.sha` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your SD card
-5. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on **the source 3DS**'s SD card
-6. Reinsert **the source 3DS**'s SD card back into **the source 3DS**
-7. Insert your ntrboot compatible DS / DSi flashcart into **the source 3DS**
+1. Matikan daya **3DS sumber**
+2. Sisipkan kartu SD **3DS sumber** ke komputer Anda
+3. Buat folder dengan nama `ntrboot` di akar kartu SD
+4. Salin `boot9strap_ntr.firm` dan `boot9strap_ntr.firm.sha` dari `.zip` boot9strap ntr ke folder `/ntrboot/` di kartu SD
+5. Salin `ntrboot_flasher.firm` ke folder `/luma/payloads/` di kartu SD **3DS sumber**
+6. Sisip kembali kartu SD **3DS sumber** ke **3DS sumber** lagi
+7. Sisipkan _flashcart_ DS / DSi yang kompatibel ntrboot ke **3DS sumber**
 
-### Section II - Flashing ntrboot
+### Bagian II - Mem-flash ntrboot
 
-1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
-2. Select "ntrboot_flasher"
-3. Read the red screen warning
-4. Press (A) to continue
-5. Select your flashcart
-   - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
-6. Select "Dump Flash"
-7. Wait until the process is completed
-8. Press (A) to continue
-9. Press (A) to return to the main menu
-10. Select "Inject Ntrboot"
-11. Press (A) for retail unit ntrboot
-12. Wait until the process is completed
-13. Press (A) to return to the main menu
-14. Press (B) to power off **the source 3DS**
+1. Masuk ke Luma3DS chainloader dengan menahan (Start) saat awal nyala di **3DS sumber**
+2. Pilih "ntrboot_flasher"
+3. Baca peringatan layar merah
+4. Tekan (A) untuk lanjut
+5. Pilih _flashcart_ Anda
+   - Jika tidak ada _flashcart_ Anda pada daftar di layar atas, baca keterangan di layar bawah pada tiap opsi
+6. Pilih "Dump Flash"
+7. Tunggu sampai proses ini selesai
+8. Tekan (A) untuk lanjut
+9. Tekan (A) untuk kembali ke menu utama
+10. Pilih "Inject Ntrboot"
+11. Tekan (A) untuk "retail unit ntrboot"
+12. Tunggu sampai proses ini selesai
+13. Tekan (A) untuk kembali ke menu utama
+14. Tekan (B) untuk matikan daya **3DS sumber**
 
 ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Lanjut ke [Memasang boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::

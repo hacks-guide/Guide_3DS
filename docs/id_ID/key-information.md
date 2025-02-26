@@ -1,18 +1,18 @@
-# Key Information
+# Informasi Penting
 
 ::: info
 
-If this is your first time modding a 3DS (or you're unfamiliar with technology), keep reading! Otherwise, if you have prior experience and know what you're doing, continue to [Get Started](get-started).
+Jika ini pertama kalinya memodif 3DS (atau tidak biasa dengan teknologi), lanjut baca! Atau tidak, jika sebelumnya sudah pernah lakukan dan tahu harus apa, lanjut ke [Memulai](get-started).
 
 :::
 
-This page covers some of the base computer terminology and 3DS-specific information that you should know before following this guide.
+Laman ini menjabar beberapa istilah dasar komputer dan info spesifik-3DS yang harus diketahui sebelum mengikuti panduan ini.
 
-Each section is collapsed by default. Click or tap on the name of the section to open it.
+Daftar tiap bagian masih diciutkan. Jadi sentuh dulu nama bagiannya untuk membuka.
 
-## Compatibility
+## Kompatibilitas
 
-:::: details What consoles is this guide compatible with?
+:::: details Panduan ini kompatibel dengan konsol apa?
 
 ::: info
 
@@ -20,11 +20,11 @@ Each section is collapsed by default. Click or tap on the name of the section to
 
 :::
 
-This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware. It is NOT compatible with the DSi family of consoles (DSi, DSi XL/LL). For DSi-family consoles, consult [this guide](https://dsi.cfw.guide) instead.
+Panduan ini bisa untuk semua jenis konsol ecer Nintendo 3DS (termasuk 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, dan New 2DS XL/LL), terlepas dari daerah atau _firmware_. Ini TIDAK kompatibel untuk jenis konsol DSi (DSi, DSi XL/LL). Untuk jenis konsol DSi, rujuk ke [panduan ini](https://dsi.cfw.guide).
 
 ::::
 
-:::: details What kind of computer / hardware do I need to follow this guide?
+:::: details Untuk panduan ini, perlu komputer/peranti keras seperti apa?
 
 ::: info
 
@@ -32,11 +32,11 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 :::
 
-In most cases, you can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. Depending on your computer/phone/electronic device, you may need to purchase a USB to SD card adapter to allow your computer to read your SD card.
+Untuk mengikuti panduan di sini harus bisa mengunduh berkas dari Internet dan menyalinnya ke kartu SD. Tergantung komputer/ponsel/perangkat elektronik, mungkin perlu juga adaptor USB ke kartu SD agar perangkat bisa membaca kartu SD.
 
 ::::
 
-:::: details What kind of SD card does my console use/need?
+:::: details Untuk konsol saya, perlu kartu SD seperti apa?
 
 ::: info
 
@@ -44,19 +44,19 @@ In most cases, you can follow this guide as long as you are able to download fil
 
 :::
 
-The location of the SD card slot and the type of SD card that is accepted depends on the model of your 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
+Letak slot kartu SD dan jenis kartu SD yang didukung tergantung pada model 3DS. Informasi lebih lanjut bisa dilihat di [laman dukungan resmi Nintendo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
-The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD cards larger than **128GB** are not recommended due to known issues with custom themes and GBA/DS graphics.
+3DS bisa membaca kartu SD ukuran berapa pun (bahkan lebih dari 32GB), tapi kartunya harus diformat ke FAT32 (**bukan** exFAT atau NTFS). Gunakan salah satu alat berikut untuk memformat kartu SD, tergantung sistem operasi: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). Kartu SD ukuran lebih dari **128GB** tidak dianjurkan karena ada isu dengan grafik GBA/DS dan tema kustom.
 
 ::: warning
 
-To follow this guide, you'll need an SD card with a capacity of at least **2GB**.
+Untuk mengikuti panduan ini perlu kartu SD setidaknya **2GB**.
 
 :::
 
 ::: info
 
-If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\))
+Jika perlu, periksa dulu galat di kartu SD sebelum mengikuti panduan ini dengan [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), atau [F3XSwift (Mac)](f3xswift-\(mac\))
 
 :::
 
@@ -64,25 +64,25 @@ If you want, you can check your SD card for errors before following this guide u
 
 :::: warning
 
-:::details Potential risks (Disclaimer)
+:::details Potensi risiko (Sangkalan)
 
-By modding your console, you subject it to the remote (but non-zero) possibility of the console being bricked (rendered non-functional). _**Incorrect file placement will NOT brick your console**_, but purposely skipping instructions might.
+Dengan memodif konsol, ada kemungkinan kecil (tapi terjadi) konsol bisa _brick_ (matot). _**Salah menaruh berkas TIDAK akan membuat matot konsol**_, tapi bisa terjadi jika melewati instruksi.
 
-In short: Modding your console is safe, but it's _**your responsibility**_ if something goes wrong.
+Singkatnya: Memodif konsol itu aman, tapi _**tanggung jawab sendiri**_ jika ada salah.
 
 :::
 
 ::::
 
-## Important terminology
+## Istilah penting
 
 ::: warning
 
-Following this guide alone should not result in data loss, but SD card corruption is always a possibility. You should make a backup of your SD card contents (especially the `Nintendo 3DS` folder) if you have important data.
+Mengikuti panduan ini saja seharusnya tidak kehilangan data, tapi kartu SD rusak mungkin bisa terjadi. Jangan lupa cadangkan isi kartu SD (terlebih folder `Nintendo 3DS`) jika ada data penting.
 
 :::
 
-:::: details What does "root of SD" or "/luma/" mean?
+:::: details Apa maksudnya "akar kartu SD" atau "/luma/"?
 
 ::: info
 
@@ -90,9 +90,9 @@ Following this guide alone should not result in data loss, but SD card corruptio
 
 :::
 
-When copying files to the SD card, it is important to copy them to the right location - otherwise, the console will not detect the file and the exploit or software you are trying to use will not work. A term you will see frequently on this guide is **root of the SD card**, which means you are not inside any folder on your SD card. The directory that appears when you first open your SD card on your computer is called the 'root'.
+Saat menyalin berkas ke kartu SD, harus bisa menyalin ke letak yang benar - jika tidak, konsol tidak akan membaca berkas dan eksploit; atau aplikasi yang digunakan tidak berfungsi. Istilah yang akan sering dilihat di panduan ini yaitu **akar kartu SD**, yang berarti tidak di dalam folder apa pun di kartu SD. Direktori yang muncul saat pertama kali membuka kartu SD di komputer disebut 'akar' (_root_).
 
-You may also see folder names indicated like this: `/folder/`. The slashes are used to indicate directories and are not part of the name of the folder. For example, `/folder1/folder2/` would refer to `folder2` inside of `folder1`:
+Ada juga jalur folder yang ditulis seperti ini: `/folder/`. Garis miring ini adalah pemisah direktori dan bukan bagian dari nama folder. Contoh, `/folder1/folder2/` merujuk ke `folder2` di dalam `folder1`:
 
 ::: info
 
@@ -100,7 +100,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 :::
 
-**Angle brackets** (\< and \>) are also occasionally used to refer to system-specific identifiers. For example, if the guide says `<ID0>`, it is referring to the system-specific identifier inside of the `Nintendo 3DS` folder, rather than a folder literally named "ID0":
+Tanda **kurung sudut** (\< dan \>) biasanya untuk merujuk pengenal spesifik-sistem. Contoh, jika panduan bertulis `<ID0>`, ini merujuk ke pengenal spesifik-sistem yang ada di folder `Nintendo 3DS`, bukan berarti folder bernama "ID0":
 
 ::: info
 
@@ -110,7 +110,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 ::::
 
-:::: details How do I download files from GitHub?
+:::: details Bagaimana cara unduh dari GitHub?
 
 ::: info
 
@@ -118,11 +118,11 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 :::
 
-In this guide, you will copy files that are downloaded on your computer/phone to your console's SD card. Many of these files come from GitHub, which is a website used by developers to publish their open-source releases. When downloading files from GitHub, you should download the file that _isn't_ source code.
+Di panduan ini kita akan menyalin berkas unduhan dari komputer/ponsel ke kartu SD konsol. Sebagian besar berkas di sini dari GitHub, yaitu situs tempat para pengembang menerbitkan _release_ sumber terbuka. Saat mengunduh berkas dari GitHub, unduh _yang bukan_ kode sumber.
 
 ::::
 
-:::: details How do I extract/open a ZIP file?
+:::: details Bagaimana cara ekstrak/buka ZIP?
 
 ::: info
 
@@ -130,15 +130,15 @@ In this guide, you will copy files that are downloaded on your computer/phone to
 
 :::
 
-Some of the files that you will be asked to download come in the `.zip` file format, which is used to package multiple files into one file.
+Berkas yang akan diminta unduh biasanya `.zip`, ini format untuk mengemas banyak berkas menjadi satu.
 
-When you are told to "copy (file) from (file).zip", that means that you need to open (or "extract") the ZIP file. Inside the ZIP file will be the file you're looking for, after which you can copy it to the specified location on your SD card.
+Jika disuruh "menyalin (berkas) dari (berkas).zip", berarti harus membuka (atau "ekstrak") berkas ZIP dulu. Sesudah menemukan berkas di dalam berkas ZIP, salin ke letak yang ditentukan di kartu SD.
 
-On most operating systems, you can extract files by double-clicking the file. If this doesn't work, you can install a reputable third-party extraction tool like [7-zip](https://7-zip.org/) instead.
+Di hampir semua sistem operasi, berkas bisa diekstrak dengan pencet dua kali. Jika itu tidak bisa, boleh saja pasang alat ekstraksi pihak ketiga ternama seperti [7-zip](https://7-zip.org/).
 
 ::::
 
-:::: details What are file extensions?
+:::: details Apa itu ekstensi berkas?
 
 ::: info
 
@@ -146,20 +146,20 @@ On most operating systems, you can extract files by double-clicking the file. If
 
 :::
 
-If your computer is running Windows, file extensions may be hidden by default, which may make it harder to find the files you're looking for. To enable file extensions, follow [these instructions](file-extensions-\(windows\)).
+Jika menggunakan Windows, ekstensi berkas disembunyikan secara bawaan sehingga susah mencari berkas yang dicari. Untuk mengaktifkan ekstensi, ikuti [instruksi ini](file-extensions-\(windows\)).
 
 ::::
 
-## Getting help
+## Mencari bantuan
 
-If you experience an issue while following this guide, there are many ways that you can get help!
+Jika ada masalah saat mengikuti panduan ini, ada banyak cara untuk mencari bantuan!
 
-- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- Jika punya pertanyaan lain yang belum terjawab di laman ini, mungkin ada di [Perihal Sebelum Pasang](faq#pre-installation-faq).
+- Jika ada isu ketika mengikuti panduan ini, coba ke laman [Sidik Gangguan](troubleshooting) untuk mencari solusi.
+- Jika sumber daya kami di sini kurang membantu, bisa minta bantuan bertemu langsung di [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
 ::: tip
 
-Continue to [Get Started](get-started)
+Lanjut ke [Memulai](get-started)
 
 :::

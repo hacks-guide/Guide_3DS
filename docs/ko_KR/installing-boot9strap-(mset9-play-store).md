@@ -34,19 +34,9 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 이 섹션에서, MSET9 취약점 발동을 위해 SD 카드에 필요한 데이터를 작성할 것입니다.
 
-1. **SD 카드를 넣은 채로** 전원을 켜주세요.
+1. SD 카드를 휴대폰/태블릿/컴퓨터에 삽입해 주세요
 
-2. Open Mii Maker
-
-3. Wait for your console to reach the "Welcome to Mii Maker" screen, then exit Mii Maker
-   - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
-   - If you just reach the normal Mii Maker screen, exit Mii Maker and continue to the next step
-
-4. 콘솔의 전원을 꺼 주세요
-
-5. SD 카드를 휴대폰/태블릿/컴퓨터에 삽입해 주세요
-
-6. Copy everything from the Release `.zip` to the root of your SD card, overwriting any existing files:
+2. Copy everything from the Release `.zip` to the root of your SD card, overwriting any existing files:
 
    - Open ZArchiver
    - If prompted, [allow ZArchiver to access files on your SD card](/images/screenshots/mset9/zarchiver-allow.png)
@@ -60,18 +50,50 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
    :::
 
-7. [MSET9 Installer 앱](/images/screenshots/mset9/mset9-setup-android.png) 을 실행해 주세요
+3. [MSET9 Installer 앱](/images/screenshots/mset9/mset9-setup-android.png) 을 실행해 주세요
 
-8. `Select "Nintendo 3DS" Folder`(Nintendo 3DS 폴더 선택)을 터치한 다음, SD 카드 내의 `Nintendo 3DS` 폴더로 들어가 주세요 ([예시](/images/screenshots/mset9/select-mset9-folder-1.png))
+4. `Select "Nintendo 3DS" Folder`(Nintendo 3DS 폴더 선택)을 터치한 다음, SD 카드 내의 `Nintendo 3DS` 폴더로 들어가 주세요 ([예시](/images/screenshots/mset9/select-mset9-folder-1.png))
 
-9. `Nintendo 3DS` 폴더에 들어간 후, "Use this folder" (이 폴더 사용)을 터치한 다음, "Allow" 를 눌러 접근을 허용해줍니다 ([예시](/images/screenshots/mset9/select-mset9-folder-2.png))
+5. `Nintendo 3DS` 폴더에 들어간 후, "Use this folder" (이 폴더 사용)을 터치한 다음, "Allow" 를 눌러 접근을 허용해줍니다 ([예시](/images/screenshots/mset9/select-mset9-folder-2.png))
 
-10. If "Setup MSET9" is [highlighted](/images/screenshots/mset9/setup-mset9-highlighted.png), proceed to the next step. **Do not setup MSET9 yet.** Close the MSET9 Installer for now
-    - If "Check Again" is highlighted, there is a problem that you need to resolve before you can use MSET9. Refer to the [troubleshooting](troubleshooting-mset9)
+6. If `Setup MSET9` is [highlighted](/images/screenshots/mset9/setup-mset9-highlighted.png), proceed to the next step
+   - If you get an error, you need to resolve before you can use MSET9. Refer to the [troubleshooting](troubleshooting-mset9)
+
+7. Tap on `Setup MSET9` to begin the process of setting up MSET9
+
+8. After reviewing the disclaimer, tap on `Confirm` to accept it
+
+9. Tap on the photo corresponding to your console model, then at the bottom, pick your current firmware version
+
+10. If you see the prompt of `Hax ID1 Created`, tap OK to continue
+    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+    - Your 3DS will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step
 
 11. SD 카드를 콘솔에 다시 삽입해 주세요
 
 12. 콘솔의 전원을 켜 주세요
+
+13. Open Mii Maker
+
+14. Wait for your console to reach the "Welcome to Mii Maker" screen, then exit Mii Maker
+    - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
+    - If you just reach the normal Mii Maker screen, exit Mii Maker and return to the HOME Menu
+
+15. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
+    - This will not wipe any of your data
+
+16. Power off your console by pressing the power button then tapping Power Off on the lower screen
+
+17. SD 카드를 휴대폰/태블릿/컴퓨터에 삽입해 주세요
+
+18. The MSET9 Installer application should automatically check if you have done previous steps properly
+    - It may take a few seconds for the app to detect the SD card and react
+    - If it doesn't check automatically, tap `Check MSET9 status` to check manually
+    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+
+19. If the check passed, you'll see `Inject trigger file` become [highlighted](/images/screenshots/mset9/inject-trigger-highlighted.png) and you can continue to the next step. **Do not inject trigger yet.** Put your phone/tablet/computer aside for now
+
+20. SD 카드를 콘솔에 다시 삽입해 주세요
 
 ### Section II - MSET9
 
@@ -83,20 +105,19 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 :::
 
-1. 십자 패드를 통해 본체 설정 아이콘에 **[커서를 사진과 같이 맞춰주세요](/images/screenshots/mset9/hover-settings.png)**
-2. 전원을 끈 다음 전원을 켜주세요
-3. (A)를 눌러 본체 설정을 실행해 주세요
-4. Navigate to `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
-5. **Do not press any buttons or touch the screen**
-6. **어떠한 버튼도 하단 화면도 건드리지 않은 상태에서, 기기의 전원이 여전히 켜진 상태에서** SD 카드를 기기에서 제거해 주세요
+1. Power on your console, ensuring System Settings is selected
+   - If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
+2. (A)를 눌러 본체 설정을 실행해 주세요
+3. Navigate to `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
+4. **Do not press any buttons or touch the screen**
+5. **어떠한 버튼도 하단 화면도 건드리지 않은 상태에서, 기기의 전원이 여전히 켜진 상태에서** SD 카드를 기기에서 제거해 주세요
    - The menu will refresh and say that no SD card is inserted, which is expected
-7. SD 카드를 휴대폰/태블릿/컴퓨터에 삽입해 주세요
-8. MSET9 Installer를 실행해 주세요
-9. "Setup MSET9" (MSET9 설치)를 터치해 주세요
-10. Tap on the photo corresponding to your console model, then on the button corresponding to your current firmware version
-    - If the injection was successful, all buttons should become grayed out except for "Remove MSET9"
-11. **어떠한 버튼도 하단 화면도 건드리지 않은 상태에서** SD 카드를 콘솔에 삽입해 주세요
-12. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
+6. SD 카드를 휴대폰/태블릿/컴퓨터에 삽입해 주세요
+7. MSET9 Installer를 실행해 주세요
+8. Tap `Inject trigger file`
+   - The button should become greyed out and `Remove trigger file` become [highlighted](/images/screenshots/mset9/remove-trigger-highlighted.png)
+9. **어떠한 버튼도 하단 화면도 건드리지 않은 상태에서** SD 카드를 콘솔에 삽입해 주세요
+10. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
     - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
 
 ### 섹션 III - boot9strap 설치하기
@@ -122,7 +143,7 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 휴대폰/태블릿/컴퓨터에 삽입해 주세요
 3. MSET9 Installer를 실행해 주세요
-4. "Remove MSET9" (MSET9 제거) 를 터치해 주세요
+4. Tap `Remove MSET9`
 5. MSET9 Installer를 종료해 주세요
 
 <!--@include: ./_include/luma3ds-installed-note.md -->

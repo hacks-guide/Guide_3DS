@@ -1,48 +1,48 @@
 # F3X (Mac)
 
-## Required Reading
+## Bacaan Penting
 
-This is an add-on section for checking your SD card for errors using F3X.
+Ini adalah laman lebihan untuk memeriksa galat di kartu SD dengan F3X.
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+Tergantung ukuran kartu SD dan kecepatan komputer, proses ini bisa lama beberapa jam!
 
-This page is for Mac users only. If you are not on Mac, check out the [H2testw (Windows)](h2testw-\(windows\)) or [F3 (Linux)](f3-\(linux\)) pages.
+Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [H2testw (Windows)](h2testw-\(windows\)) atau [F3 (Linux)](f3-\(linux\)).
 
 ::: info
 
-If you're using a Mac on macOS 10.13 (High Sierra) and above, follow [F3XSwift (Mac)](f3xswift-\(mac\)) instead.
+Jika menggunakan Mac di macOS 10.13 (High Sierra) ke atas, ikuti saja panduan [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
-- The latest release of [F3X](https://github.com/insidegui/F3X/releases/latest)
+- Versi terkini dari [F3X](https://github.com/insidegui/F3X/releases/latest)
 
-## Instructions
+## Instruksi
 
-1. Unzip the F3X `.zip` file
-2. Insert your SD card into your computer
-3. Run the F3X app
-4. Select your SD card
-5. Press "Start Test"
-6. Wait until the process is complete.
+1. Ekstrak berkas `.zip` F3X
+2. Sisipkan kartu SD ke komputer Anda
+3. Jalankan aplikasi F3X
+4. Pilih kartu SD Anda
+5. Pilih "Start Test"
+6. Tunggu sampai proses selesai.
 
 ___
 
 ::: tip
 
-If the test shows the result `Success! Your card is ok!`, your SD card is good and you can delete all `.h2w` files on your SD card.
+Jika hasil ujinya `Success! Your card is ok!`, berarti kartu SD masih bagus dan `.h2w` boleh dihapus semua di kartu SD.
 
 :::
 
 ::: danger
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+Jika hasil ujinya lain lagi, berarti kartu SD mungkin rusak atau bermasalah dan harus diganti!
 
 :::
 
 ::: tip
 
-Return to [Get Started](get-started)
+Kembali ke [Memulai](get-started)
 
 :::

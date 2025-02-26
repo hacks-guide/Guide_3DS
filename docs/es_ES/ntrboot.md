@@ -6,7 +6,7 @@ If your flashcart comes pre-flashed with ntrboot (or you have already flashed nt
 
 :::
 
-## Required Reading
+## Lectura requerida
 
 Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to. Note that some of these flashcarts are sold pre-flashed with ntrboot.
 

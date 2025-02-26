@@ -1,4 +1,4 @@
-# FAQ
+# Preguntas frecuentes (FAQ)
 
 ::: danger
 
@@ -8,25 +8,25 @@
 
 ::: info
 
-**Yes**, you can still install custom firmware on your 3DS, even after the closure of eShop.
+**Sí**, todavía puedes instalar firmware personalizado (CFW) en la 3DS, incluso después del cierre de la eShop.
 
 :::
 
-## Pre-Installation FAQ
+## Preguntas frecuentes sobre la pre-instalación
 
-:::details I am on the latest system version. Is my console hackable without any external hardware/prerequisites?
+:::details Estoy en la última versión del sistema. ¿Puedo modificar mi consola sin ningún hardware externo o requisitos previos?
 
-**Yes!** New 3DS / New 3DS XL / New 2DS XL can use [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), while 3DS / 3DS XL / 2DS can use [MSET9](installing-boot9strap-\(mset9\)).
-
-:::
-
-:::details What consoles is this guide compatible with?
-
-This guide is compatible with all retail 3DS-family devices (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). If your system version string is displayed as "0.0.0-0", then you may have a developer unit.
+**¡Sí!** En los modelos New 3DS / New 3DS XL / New 2DS XL se puede con [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), mientras que en modelos 3DS común / 3DS XL / 2DS se puede con [MSET9](installing-boot9strap-\(mset9\)).
 
 :::
 
-:::details How risky is hacking my console?
+:::details ¿Con cuáles consolas es compatible esta guía?
+
+Esta guía es compatible con todas las consolas de la familia Nintendo 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Si la versión del sistema se muestra como "0.0.0-0", entonces podrías tener una unidad de desarrollador.
+
+:::
+
+:::details ¿Qué tan arriesgado es modificar mi consola?
 
 Bricks are now effectively impossible unless you are purposely trying to brick your console.
 

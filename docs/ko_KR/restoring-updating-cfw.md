@@ -27,6 +27,6 @@
 
 ::: tip
 
-만약 다른 홈브류 (예: FBI, Homebrew 런쳐)를 재설치 또는 업데이트 하고 싶다면, [마무리 단계](finalizing-setup)로 계속합니다
+[마무리 단계](finalizing-setup)로 이동해 설치를 계속하거나 홈브류 앱들을 업데이트하세요 (예. FBI, Homebrew Launcher).
 
 :::

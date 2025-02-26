@@ -1,60 +1,60 @@
-# Finalizing Setup
+# Penyiapan Akhir
 
-## Required Reading
+## Bacaan Penting
 
-The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
+Berkas `boot.firm` adalah apa yang dibaca boot9strap selesai memuat NAND. Untuk ini, kita gunakan Luma3DS oleh [LumaTeam](https://github.com/LumaTeam/) untuk menambal konsol agar bisa menjalankan _homebrew_.
 
-On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.
+Di laman ini juga akan mencadang berkas sistem kritis dan memasang beberapa _homebrew_. Hampir semua langkah ini menggunakan naskah otomatis yang dijalankan di konsol.
 
 ::: info
 
-The script will install the following applications:
+Naskahnya akan memasang aplikasi berikut:
 
-- **[FBI](https://github.com/lifehackerhansol/FBI)** _(installs CIA formatted applications)_
-- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(launches the Homebrew Launcher)_
-- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(installs custom themes)_
-- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(backs up and restores save files for 3DS and DS games)_
-- **[ftpd](https://github.com/mtheall/ftpd)** _(access your 3DS SD card wirelessly)_
-- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(a homebrew app store for downloading homebrew from the 3DS over Wi-Fi)_
-- **[GodMode9](https://github.com/d0k3/GodMode9)** _(multipurpose tool which can do NAND and cartridge functions)_
+- **[FBI](https://github.com/lifehackerhansol/FBI)** _(memasang aplikasi berformat CIA)_
+- **[Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)** _(membuka Homebrew Launcher)_
+- **[Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)** _(memasang tema kustom)_
+- **[Checkpoint](https://github.com/FlagBrew/Checkpoint)** _(mencadang dan memulih simpanan permainan 3DS dan DS)_
+- **[ftpd](https://github.com/mtheall/ftpd)** _(akses nirkabel ke kartu SD 3DS)_
+- **[Universal-Updater](https://github.com/Universal-Team/Universal-Updater/)** _(toko apli homebrew untuk mengunduh homebrew di 3DS lewat Wi-Fi)_
+- **[GodMode9](https://github.com/d0k3/GodMode9)** _(alat serbaguna untuk mengurus NAND dan kartrid)_
 
-If you don't want one of these applications, you can remove them after you have finished this page by navigating to System Settings -> Data Management -> Nintendo 3DS -> Software. (GodMode9 cannot be removed in this way and is generally required for other functions.)
+Jika ada aplikasi yang tidak diinginkan, nanti bisa dihapus setelah selesai panduan ini di System Settings -> Data Management -> Nintendo 3DS -> Software. (GodMode9 tidak bisa dihapus dengan cara ini karena wajib untuk fungsi lain.)
 
 :::
 
-## Compatibility Notes
+## Catatan Kompatibilitas
 
 ::: warning
 
-If your **New 3DS** was on version 2.1.0 before following this guide, you should [restore your NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing. This likely doesn't apply to you unless you were following this guide in 2017.
+Jika **New 3DS** ada di versi 2.1.0 sebelum mengikuti panduan ini, maka [pulihkan dulu cadangan NAND](godmode9-usage#restoring-a-nand-backup) sebelum lanjut. Ini abaikan saja jika tidak pernah mengikuti panduan ini di tahun 2017.
 
 :::
 
 ::: info
 
-If your previous CFW setup was EmuNAND-based and you wish to move the contents of your EmuNAND/RedNAND to SysNAND, follow [Move EmuNAND](move-emunand) before following this page. If you don't know what an EmuNAND is, this doesn't apply to you.
+Jika penyiapan CFW sebelumnya EmuNAND dan ingin memindahkan isi dari EmuNAND/RedNAND ke SysNAND, ikuti [Memindahkan EmuNAND](move-emunand) sebelum mengikuti laman ini. Jika tidak tahu apa itu EmuNAND, ini abaikan saja.
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
-- [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
-- [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
+- [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (unduhan langsung)
+- [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (unduhan langsung)
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
-In this section, you will copy the files necessary to follow the rest of the instructions on this page.
+Di bagian ini akan menyalin berkas yang perlu untuk mengikuti instruksi berikutnya di laman ini.
 
-1. Power off your console
-2. Insert your SD card into your computer
-3. Copy `finalize.romfs` to the root of your SD card
-4. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
-5. Copy `x_finalize_helper.firm` to the `payloads` folder
-6. Reinsert your SD card into your console
+1. Matikan daya konsol
+2. Sisipkan kartu SD ke komputer Anda
+3. Salin `finalize.romfs` ke akar kartu SD
+4. Buka folder `luma` di kartu SD dan di dalamnya buat folder bernama `payloads`, jika belum ada
+5. Salin `x_finalize_helper.firm` ke folder `payloads`
+6. Sisip kembali kartu SD ke konsol
 
-The screenshot below indicates the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+Tangkapan layar di bawah ini menunjukkan isi minimal kartu SD untuk mengikuti laman ini. Mungkin akan ada berkas atau folder lebih di kartu SD, tergantung sebelumnya pernah ikut metode apa.
 
 ::: info
 
@@ -68,82 +68,82 @@ The screenshot below indicates the minimum SD card layout that is required to fo
 
 :::
 
-### Section II - Updating the System
+### Bagian II - Memperbarui Sistem
 
-In this section, you will update your system to the latest version, which is safe to do with custom firmware.
+Di bagian ini akan memperbarui sistem ke versi terbaru, ini aman dilakukan dengan _custom firmware_.
 
 <!--@include: ./_include/sysupdate.md -->
 
-### Section III - RTC and DSP setup
+### Bagian III - Penyiapan RTC dan DSP
 
-In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
+Di bagian ini akan menyelaraskan jam internal 3DS dengan jam sebenarnya, dan men-_dump firmware_ suara (beberapa _homebrew_ perlu ini untuk menghasilkan suara dengan benar).
 
-1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
-   - If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
-2. Select "Miscellaneous options"
-3. Select "Dump DSP firmware"
-4. Press (B) to continue
-5. Select "Nullify user time offset"
-6. Press (B) to continue
-7. Press (B) to return to the Rosalina main menu
-8. Press (B) to exit the Rosalina menu
+1. Tekan (L) + (Tombol Bawah) + (Select) bersamaan untuk membuka menu Rosalina
+   - Jika tombol tersebut ada yang rusak, unduh [config.ini](/assets/config.ini) dan taruh di folder `luma`, timpa berkas yang ada. Ini akan mengubah kombo tombol menu Rosalina ke (X) + (Y)
+2. Pilih "Miscellaneous options"
+3. Pilih "Dump DSP firmware"
+4. Tekan (B) untuk lanjut
+5. Pilih "Nullify user time offset"
+6. Tekan (B) untuk lanjut
+7. Tekan (B) untuk kembali ke menu utama Rosalina
+8. Tekan (B) untuk keluar dari menu Rosalina
 
-### Section IV - Setup Script
+### Bagian IV - Naskah Penyiapan
 
-In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
+Di bagian ini akan menggunakan naskah agar otomatis memasang _homebrew_, membersihkan kartu SD, dan mencadang sistem.
 
-1. Power off your console
-2. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
-   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
-   - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
-3. If the Helper was successful, your console will boot into GodMode9
-   - From this point forward, you can access GodMode9 by holding START while powering on your console
-4. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-5. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-6. Press (Home) to bring up the action menu
-7. Select "Scripts..."
-8. Select "finalize"
-9. Follow the prompts in the script, answering any questions that you are asked
-   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
-10. Once the script says "Setup complete!", press (A) to power off the device
-    - If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
-11. Insert your SD card into your computer
-12. Copy the `/gm9/backups/` folder to a safe location on your computer
-    - This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
-    - The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue
-    - The `essential.exefs` file contains your console's system-unique files and can be used to recover your data in the event of a hardware failure
-13. If you still have them, delete the two `SysNAND` files from the `/gm9/backups/` folder from your SD card
-    - The `essential.exefs` file is small and may be kept on your SD card for ease of access
+1. Matikan daya konsol
+2. Tahan tombol (X) selagi menyalakan konsol. Ini akan masuk ke Finalizing Setup Helper
+   - Jika menyala ke HOME Menu, folder `payloads` mungkin salah letak atau dieja kurang benar
+   - Jika ada galat, rujuk ke laman [sidik gangguan](troubleshooting-finalizing-setup)
+3. Jika Helper sudah berhasil, konsol akan menyala ke GodMode9
+   - Mulai dari sini, GodMode9 sudah bisa diakses dengan menahan START ketika menyalakan konsol
+4. Jika diminta membuat cadangan berkas esensial, tekan (A) untuk lakukan, lalu tekan (A) lagi sesudah selesai untuk lanjut
+5. Jika diminta membetulkan waktu & tanggal RTC, lakukan dengan menekan (A), lalu tekan (A) lagi untuk lanjut
+6. Tekan (Home) untuk membuka menu tindakan
+7. Pilih "Scripts..."
+8. Pilih "finalize"
+9. Ikuti sembulan perintah yang diminta dari naskah
+   - Jika ada galat, ikuti instruksi di pesan galat atau rujuk ke laman [sidik gangguan](troubleshooting-finalizing-setup)
+10. Sesudah naskah bertulis "Setup complete!", tekan (A) untuk matikan daya konsol
+    - Jika TIDAK muncul pesan "Setup complete!", naskahnya tidak berhasil dan harus ulangi bagian ini dari Langkah 3
+11. Sisipkan kartu SD ke komputer Anda
+12. Salin folder `/gm9/backups/` ke letak yang aman di komputer
+    - Folder ini berisi cadangan berkas kritis dan _harus_ disalin ke berbagai tempat (yaitu: penyimpanan awan) jika bisa
+    - Kedua berkas SysNAND ini cadangan NAND Anda dan **penting** untuk pemulihan konsol jika matot (_brick_) karena isu peranti lunak
+    - Berkas `essential.exefs` berisi berkas unik sistem konsol dan bisa untuk memulihkan data jika terjadi kerusakan fisik
+13. Jika sudah disalin, boleh hapus dua berkas `SysNAND` dari folder `/gm9/backups/` di kartu SD
+    - Ukuran `essential.exefs` itu kecil, jadi boleh dibiarkan di kartu SD agar mudah diakses
 
 ___
 
 ::: tip
 
-You're done! Custom firmware is now fully configured on your console.
+Selesai dah! _Custom firmware_ konsol kini sudah disetel.
 
 :::
 
 ::: info
 
-Trying to figure out what to do with your newly modded device? Visit [our wiki](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
+Bingung harus apa dengan konsol baru dimodif? Kunjungi [wiki kami](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
 
 :::
 
-### Information and Notes
+### Informasi dan Catatan
 
 ::: info
 
-Here are some key combos that you should know:
+Berikut kombo-kombo tombol yang harus diketahui:
 
-- Holding (Select) on boot will launch the Luma3DS configuration menu.
-- Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
-- By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. This can be changed from the Rosalina menu.
-- Holding (Start) + (Select) + (X) on boot will make the notification LED show a color for debug purposes. See the [changelog](https://github.com/SciresM/boot9strap/releases/tag/1.4) for a list.
+- Menahan (Select) saat awal nyala akan ke menu konfigurasi Luma3DS.
+- Menahan (Start) saat awal nyala akan ke GodMode9; atau jika ada banyak _payload_ di `/luma/payloads/`, ke Luma3DS chainloader.
+- Secara bawaan, menekan (L) + (Tombol Bawah) + (Select) di mode 3DS akan membuka menu Rosalina untuk memeriksa informasi sistem, menangkap layar, aktifkan _cheat_, dan lainnya. Semua itu bisa diubah dari menu Rosalina.
+- Menahan (Start) + (Select) + (X) saat awal nyala akan muncul warna di LED pemberitahuan untuk awakutu. Lihat daftarnya di [_changelog_](https://github.com/SciresM/boot9strap/releases/tag/1.4).
 
 :::
 
 ::: info
 
-For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) and [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges) pages.
+Untuk informasi cara menggunakan fitur-fitur GodMode9, lihat laman [Penggunaan GodMode9](godmode9-usage) dan [Membuat Dump Permainan dan Kartrid](dumping-titles-and-game-cartridges).
 
 :::

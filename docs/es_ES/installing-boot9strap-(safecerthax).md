@@ -14,13 +14,13 @@ This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ens
 
 :::
 
-## What You Need
+## Lo que necesitas
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- La última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (descarga directa)
+- La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (descarga directa)
+- La última versión de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (el archivo `.zip` de Luma3DS)
 
-## Instructions
+## Instrucciones
 
 ### Section I - Hardware Button Check
 
@@ -29,7 +29,7 @@ In this section, you will see whether your shoulder buttons are working on your 
 1. Power on your console
 2. Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
    - The camera applet should appear
-3. Power off your console
+3. Apaga la consola
 
 ::: warning
 
@@ -41,13 +41,13 @@ If the camera did NOT appear, you cannot follow this method. If this is the case
 
 In this section, you will copy the files needed to trigger the safecerthax exploit.
 
-1. Insert your SD card into your computer
+1. Inserta la tarjeta SD en tu computadora
 2. Copy everything from the Luma3DS `.zip` to the root of your SD card
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
-3. Create a folder named `boot9strap` on the root of your SD card
-4. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+   - La raíz de la tarjeta SD se refiere al primer directorio de la tarjeta, donde puedes ver la carpeta Nintendo 3DS pero no estás dentro de ella
+3. Crea una carpeta llamada `boot9strap` en la raíz de la tarjeta SD
+4. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en la tarjeta SD
 5. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
-6. Reinsert your SD card into your console
+6. Reinserta la tarjeta SD en la consola
 7. Power on your console
 
 ### Section III - safecerthax proxy
@@ -56,7 +56,7 @@ In this section, you will change your Internet connection settings to use a prox
 
 <!--@include: ./_include/addproxy.md -->
 
-1. Power off your console
+1. Apaga la consola
 
 ### Section IV - safecerthax
 
@@ -92,6 +92,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continúa a [Finalizar instalación](finalizing-setup)
 
 :::

@@ -4,11 +4,11 @@
    - Note que, se você teve que consertar a data e hora do RTC, você também terá que corrigir a hora na Configuração do Console após acabar o guia
 4. Aperte (Home) para abrir o menu de ações
 5. Selecione "Scripts..."
-6. Select "ctrtransfer"
-7. Select your downloaded CTRTransfer image
-   - The script will calculate the hash of your image to make sure it's valid
-8. Once the checks are completed, press (A) to continue
-9. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
+6. Selecione "ctrtransfer"
+7. Selecione a imagem do CTRTransfer baixada
+   - O script calculará o hash da sua imagem para garantir que é válida
+8. Quando as verificações forem concluídas, pressione (A) para continuar
+9. Pressione (A) para desbloquear "SysNAND (lvl2) writing", então aperte a sequência de botões indicada
 10. Quando a transferência for completa, aperte (A) para continuar
 11. Se solicitado, aperte (A) para bloquear as permissões de escrita
 12. Aperte (Start) para reiniciar seu console

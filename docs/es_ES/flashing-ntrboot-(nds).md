@@ -1,6 +1,6 @@
 # Flashing ntrboot (NDS)
 
-## Required Reading
+## Lectura requerida
 
 Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
 
@@ -12,7 +12,7 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 
 :::
 
-## What You Need
+## Lo que necesitas
 
 - Your ntrboot compatible flashcart
 - Two consoles
@@ -21,9 +21,9 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-## Instructions
+## Instrucciones
 
-### Section I - Prep Work
+### Sección I - Preparativos
 
 1. Power off **the source NDS / NDSL**
 2. Insert your flashcart's SD card into your computer
@@ -36,17 +36,17 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 ### Section II - Flashing ntrboot
 
 1. Launch `ntrboot_flasher_nds.nds` on **the source NDS / NDSL** using your flashcart
-2. Press (A) to continue
+2. Presiona (A) para continuar
 3. Use (Up) and (Down) to select your flashcart
-4. Press (A) to continue
+4. Presiona (A) para continuar
 5. Select "Dump flash" to make a backup of your flashcart's memory
 6. Input the key combo given to confirm
-7. Press (A) to continue
+7. Presiona (A) para continuar
 8. Use (Up) and (Down) to select your flashcart
-9. Press (A) to continue
+9. Presiona (A) para continuar
 10. Select "Inject FIRM" to install boot9strap to your flashcart
 11. Input the key combo given to confirm
-12. Press (A) to continue
+12. Presiona (A) para continuar
 13. Power off **the source NDS / NDSL**
 14. Eject your flashcart from **the source NDS / NDSL**
 

@@ -1,92 +1,92 @@
-# Formatting SD (Mac)
+# Memformat kartu SD (Mac)
 
-## Required Reading
+## Bacaan Penting
 
-This is an add-on section for formatting an SD card to work with the 3DS.
+Ini adalah laman lebihan untuk memformat kartu SD agar terbaca di 3DS.
 
-If the 3DS already recognizes the SD card, this guide is not required.
+Jika 3DS sudah bisa membaca kartu SD, panduan ini tidak perlu.
 
-This page is for Mac users only. If you are not on Mac, check out the [Formatting SD (Windows)](formatting-sd-\(windows\)) or [Formatting SD (Linux)](formatting-sd-\(linux\)) pages.
+Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [Memformat kartu SD (Windows)](formatting-sd-\(windows\)) atau [Memformat kartu SD (Linux)](formatting-sd-\(linux\)).
 
-## Instructions
+## Instruksi
 
-### OS X El Capitan (10.11) and later
+### OS X El Capitan (versi 10.11) ke atas
 
-1. Insert your SD card into your computer
+1. Sisipkan kartu SD ke komputer Anda
 
-2. If the SD card has any files and folders on it, copy everything to a folder on your computer
+2. Jika kartu SD ada berkas dan folder, salin dulu semuanya ke folder di komputer
 
-3. Run the Disk Utility app
+3. Jalankan apli Disk Utility
 
-4. In the top-left "View" menu, choose "Show All Devices"
+4. Di kiri-atas menu "View", pilih "Show All Devices"
 
-5. Select your SD card in the left panel
-
-   ::: danger
-
-   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
-
-   :::
-
-6. Click "Erase" at the top
-
-7. Enter anything for "Name"
-
-8. Ensure that "Format" is set to "MS-DOS (FAT)"
-
-9. Ensure that "Scheme" is set to "Master Boot Record"
-   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
-
-10. Click "Erase"
-
-11. Wait for the format to finish
-
-12. Click "Close"
-
-13. If the SD card had any files and folders on it before the format, copy everything back from your computer
-
-### OS X Yosemite (10.10) and earlier
-
-1. Insert your SD card into your computer
-
-2. If the SD card has any files and folders on it, copy everything to a folder on your computer
-
-3. Run the Disk Utility app
-
-4. Select your SD card in the left panel
+5. Pilih kartu SD Anda di panel kiri
 
    ::: danger
 
-   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
+   Pastikan pilih perangkat yang benar, **jangan memformat _drive_ yang salah**!
 
    :::
 
-5. Click "Partition" at the top
-   - If "Partition" does not appear, make sure to choose the device instead of a volume
+6. Pencet "Erase" (Hapus) di atas
 
-6. Ensure that "Partition Layout" is set to "1 Partition"
+7. Ketik apa saja di "Name"
 
-7. Enter anything for "Name"
+8. Pastikan kolom "Format" diatur ke "MS-DOS (FAT)"
 
-8. Ensure that "Format" is set to "MS-DOS (FAT)"
+9. Pastikan kolom "Scheme" diatur ke "Master Boot Record"
+   - Jika "Scheme" tidak muncul, pencet "Cancel" (Batal) dan pilih yang perangkat dan bukan volume
 
-9. Click "Options" below the partition table
+10. Pencet "Erase" (Hapus)
 
-10. Choose "Master Boot Record"
+11. Tunggu selesai memformat
 
-11. Click "OK"
+12. Pencet "Close" (Tutup)
 
-12. Click "Apply"
+13. Jika tadi kartu SD ada berkas dan folder sebelum memformat, **salin balik semuanya dari komputer**
 
-13. Click "Partition"
+### OS X Yosemite (versi 10.10) ke bawah
 
-14. Wait for the format to finish
+1. Sisipkan kartu SD ke komputer Anda
 
-15. Close Disk Utility
+2. Jika kartu SD ada berkas dan folder, salin dulu semuanya ke folder di komputer
 
-16. If the SD card had any files and folders on it before the format, copy everything back from your computer
+3. Jalankan apli Disk Utility
 
-## Troubleshooting
+4. Pilih kartu SD Anda di panel kiri
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
+   ::: danger
+
+   Pastikan pilih perangkat yang benar, **jangan memformat _drive_ yang salah**!
+
+   :::
+
+5. Pencet "Partition" di atas
+   - Jika "Partition" tidak muncul, pastikan pilih yang perangkat dan bukan _volume_
+
+6. Pastikan "Partition Layout" diatur ke "1 Partition"
+
+7. Ketik apa saja di "Name"
+
+8. Pastikan kolom "Format" diatur ke "MS-DOS (FAT)"
+
+9. Pencet "Options" di bawah partisi tabel
+
+10. Pilih "Master Boot Record"
+
+11. Pencet "OK"
+
+12. Pencet "Apply" (Terapkan)
+
+13. Pencet "Partition"
+
+14. Tunggu selesai memformat
+
+15. Tutup Disk Utility
+
+16. Jika tadi kartu SD ada berkas dan folder sebelum memformat, **salin balik semuanya dari komputer**
+
+## Sidik Gangguan
+
+- Kartu SD tetap tidak terbaca konsol atau daya tampungnya salah setelah diformat
+  - Kartu SD mungkin dipartisi atau ada ruang tak dialokasikan. Ikuti [instruksi ini](https://wiki.hacks.guide/wiki/SD_Clean/Mac) untuk memformat ulang kartu SD.

@@ -12,7 +12,7 @@ head:
 
 :::details Τεχνικές λεπτομέρειες (προαιρετικό)
 
-Για τεχνικές λεπτομέρειες σχετικά με τα exploit που θα εκμεταλλευτείτε σε αυτήν τη σελίδα, δείτε [εδώ](https://github.com/nedwill/soundhax) (Soundhax) και [εδώ](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
+Για τεχνικές λεπτομέρειες σχετικά με τα exploit που θα αξιοποιήσετε σε αυτήν τη σελίδα, δείτε [εδώ](https://github.com/nedwill/soundhax) (Soundhax) και [εδώ](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
 
 :::
 

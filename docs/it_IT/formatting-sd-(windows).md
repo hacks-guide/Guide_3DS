@@ -10,12 +10,12 @@ Questa pagina è solo per utenti Windows. Se non stai utilizzando Windows, puoi 
 
 ## Cosa serve
 
-- the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- La versione più recente di [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **Solo per schede SD da 64GB o più grandi:** l'ultima versione di [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
 ## Istruzioni
 
-### Section I - SD Card Formatter
+### Sezione I - Formattazione della scheda SD
 
 1. Inserisci la scheda SD nel tuo computer
 
@@ -47,19 +47,19 @@ Questa pagina è solo per utenti Windows. Se non stai utilizzando Windows, puoi 
 
 12. Chiudi SD Card Formatter
 
-13. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
+13. Se la scheda SD è di 32GB o meno e aveva precedentemente file o cartelle al suo interno, ricopia il contenuto dal tuo computer
 
 ::: info
 
-You're done formatting your SD card if it's **32GB or smaller.**
+Hai finito di formattare la tua scheda SD solo se è **32GB o meno.**
 
 :::
 
-### Section II - guiformat (ONLY for 64GB or larger)
+### Sezione II - guiformat (SOLO per 64GB o superiori)
 
-1. Run `guiformat.exe`
+1. Esegui `guiformat.exe`
 
-2. Select your SD card's drive letter for "Drive"
+2. Seleziona su "Drive" la lettera del drive della tua scheda SD
 
    ::: danger
 
@@ -67,15 +67,15 @@ You're done formatting your SD card if it's **32GB or smaller.**
 
    :::
 
-3. Select a size for "Allocation unit size"
-   - If the SD card is 64GB, choose 32768
-   - If the SD card is larger than 64GB, choose 65536
+3. Seleziona la dimensione corretta su "Allocation unit size"
+   - Se la scheda SD è da 64GB, scegli 32768
+   - Se la scheda SD è più grande di 64GB, scegli 65536
 
 4. Inserisci qualunque cosa su "Volume label"
 
 5. Assicurati che "Quick Format" sia selezionato
 
-6. Click "Start"
+6. Seleziona "Start"
 
 7. Clicca "OK"
 
@@ -87,12 +87,12 @@ You're done formatting your SD card if it's **32GB or smaller.**
 
 ## Risoluzione dei problemi
 
-- guiformat shows the error "Failed to open device: GetLastError()=32"
-  - Close everything that may be using the SD card, such as any File Explorer windows.
-  - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
+- guiformat mostra l'errore "Failed to open device: GetLastError()=32"
+  - Chiudi tutto ciò che potrebbe stare utilizzando la scheda SD, come ad esempio qualunque schermata Esplora Risorse.
+  - Se questo problema persiste, prova a riformattare la scheda in formato NTFS tramite Esplora Risorse, chiudi la finestra al termine e ritenta l'utilizzo di guiformat.
 
-- guiformat shows the error "GetLastError()=1117"
-  - Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
+- guiformat mostra l'errore "GetLastError()=1117"
+  - La protezione da scrittura della scheda SD potrebbe essere [abilitata](/images/sdlock.png). Lo slider deve essere spostato verso l'alto per consentire la scrittura sulla scheda SD (anche per la sola formattazione).
 
 - La scheda SD continua a non venire rilevata dalla console o continua a mostrare una capacità errata dopo la formattazione
-  - La tua scheda SD potrebbe essere partizionata o avere spazio non allocato. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.
+  - La tua scheda SD potrebbe essere partizionata o avere spazio non allocato. Segui le istruzioni [qui](https://wiki.hacks.guide/wiki/SD_Clean/Windows) per riformattare la tua scheda SD.

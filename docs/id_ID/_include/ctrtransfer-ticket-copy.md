@@ -14,7 +14,7 @@ If the script found no user tickets, continue to the next section.
    - Select "\<current directory>"
    - Select "Install and delete all tickets"
    - Wait. The system may appear to freeze, just give it time.
-   - Press (A) to confirm
+   - Tekan (A) untuk konfirmasi
    - Press (B) to decline installing tickets from CDN.
 7. Press (Home) to exit FBI
 8. Re-open the Homebrew Launcher, either through the Homebrew Launcher icon on the HOME Menu or by re-following Section IV of this page

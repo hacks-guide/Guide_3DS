@@ -1,26 +1,26 @@
 # F3 (Linux)
 
-## Required Reading
+## Bacaan Penting
 
-This is an add-on section for checking your SD card for errors using F3.
+Ini adalah laman lebihan untuk memeriksa galat di kartu SD dengan F3.
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+Tergantung ukuran kartu SD dan kecepatan komputer, proses ini bisa lama beberapa jam!
 
-This page is for Linux users only. If you are not on Linux, check out the [H2testw (Windows)](h2testw-\(windows\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
+Laman ini hanya untuk pengguna Linux. Jika tidak menggunakan Linux, lihat laman [H2testw (Windows)](h2testw-\(windows\)) atau [F3XSwift (Mac)](f3xswift-\(mac\)).
 
-## What You Need
+## Apa yang Perlu
 
-- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- Versi terkini dari [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
 
-## Instructions
+## Instruksi
 
-1. Unzip the f3 `.zip` file
-2. `cd` into the f3 directory
-3. Run `make` to compile F3
-4. Insert your SD card into your computer
-5. Mount your SD card
-6. Run `./f3write <your sd card mount point>`
-7. Wait until the process is complete. See below for an example output.
+1. Ekstrak berkas `.zip` F3
+2. Tulis perintah `cd` ke direktori F3
+3. Jalankan `make` untuk mengkompil F3
+4. Sisipkan kartu SD ke komputer Anda
+5. _Mount_-kan kartu SD
+6. Jalankan `./f3write <titik mount kartu sd>`
+7. Tunggu sampai proses selesai. Di bawah ini contoh keluarannya.
 
 ```bash
 $ ./f3write /media/michel/6135-3363/
@@ -32,8 +32,8 @@ Free space: 0.00 Byte
 Average Writing speed: 4.90 MB/s
 ```
 
-1. Run `./f3read <your sd card mount point>`
-2. Wait until the process is complete. See below for an example output.
+1. Jalankan `./f3read <titik mount kartu sd>`
+2. Tunggu sampai proses selesai. Di bawah ini contoh keluarannya.
 
 ```bash
 $ ./f3read /media/michel/6135-3363/
@@ -54,18 +54,18 @@ ___
 
 ::: tip
 
-If the test shows the result `Data LOST: 0.00 Byte (0 sectors)`, your SD card is good and you can delete all `.h2w` files on your SD card.
+Jika hasil ujinya `Data LOST: 0.00 Byte (0 sectors)`, berarti kartu SD masih bagus dan '.h2w' boleh dihapus semua di kartu SD.
 
 :::
 
 ::: danger
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+Jika hasil ujinya lain lagi, berarti kartu SD mungkin rusak atau bermasalah dan harus diganti!
 
 :::
 
 ::: tip
 
-Return to [Get Started](get-started)
+Kembali ke [Memulai](get-started)
 
 :::

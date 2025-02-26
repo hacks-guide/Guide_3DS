@@ -1,12 +1,12 @@
 # File Extensions (Windows)
 
-## Required Reading
+## Lectura requerida
 
 This is an add-on section for disabling Windows's default behavior of hiding file extensions.
 
 This will make it easier for you to find the referenced files in the rest of this guide.
 
-## Instructions
+## Instrucciones
 
 ### Windows 11
 

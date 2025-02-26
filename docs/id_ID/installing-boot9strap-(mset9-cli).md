@@ -1,39 +1,40 @@
-# Installing boot9strap (MSET9 CLI)
+# Memasang boot9strap (MSET9 CLI)
 
-:::details Technical Details (optional)
+:::details Perincian Teknis (opsional)
 
-[MSET9](https://github.com/zoogie/MSET9) is an exploit for the System Settings application developed by [zoogie](https://github.com/zoogie). It exploits a flaw where the ID1 (the second 32-character folder name inside of the Nintendo 3DS folder, inside of the ID0) can be _any_ name as long as it is 32 characters. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the 3DS.
+[MSET9](https://github.com/zoogie/MSET9) adalah eksploit untuk System Settings yang dikembangkan oleh [zoogie](https://github.com/zoogie). Eksploit ini menyasar kelemahan ID1 (32 huruf dari nama folder kedua, di folder Nintendo 3DS setelah ID0) yang bisa nama _apa saja_ asalkan 32 huruf. Gunanya untuk melakukan tindakan tertentu yang membuat konsol menjalankan instruksi sesuai kode dalam nama folder ID1, sehingga mendapat kendali penuh atas konsol 3DS.
 
 :::
 
-## Compatibility Notes
+## Catatan Kompatibilitas
 
 ::: warning
 
-This page requires a computer running Windows, Linux, or macOS. If you have an Android phone/tablet or a Chromebook, follow [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)) instead. If you do not have access to any of these devices, you will need to use an [alternate exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
+Laman ini perlu komputer bersistem Windows, Linux, atau macOS. Atau jika punya ponsel/tablet Android atau Chromebook, ikuti saja [Memasang boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)). Jika tidak punya perangkat tersebut, berarti perlu [eksploit yang lain](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) (gunakan penerjemah).
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
-- Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
-  - If you are on Linux or macOS, you may already have Python 3. Check by opening a Terminal window and entering `python3 -V`. If this returns a version number, it will work for this guide.
+- Versi terkini dari [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
+- Versi 3.x berapa pun dari [Python](https://www.python.org/downloads/) **terpasang di komputer**
+  - Jika menggunakan Windows, Python dari Microsoft Store tidak bisa. Sebaiknya pasang versi dari python.org.
+  - Jika menggunakan Linux atau macOS, mungkin sudah ada Python 3. Periksa dengan membuka Terminal dan ketik `python3 -V`. Jika muncul nomor versi, berarti bisa untuk panduan ini.
 
-## Instructions
+## Instruksi
 
 ::: info
 
-On this page, you will use the MSET9 script, which is used to trigger MSET9. While the script is in progress, user data will temporarily disappear but will return upon the completion of this page. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting-mset9) page.
+Di laman ini akan menggunakan naskah MSET9 untuk mengaktifkan MSET9. Saat naskah berjalan, data pengguna akan hilang sementara tapi akan kembali sesudah dari laman ini. Jika muncul galat saat menjalankan naskah, solusi untuk galat tersebut mungkin ada di laman [sidik gangguan](troubleshooting-mset9).
 
 :::
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
-In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
+Di bagian ini akan menyiapkan eksploit MSET9 dengan membuat profil HOME Menu baru **sementara** tanpa data, lalu sedikit mengatur data profil itu untuk mengaktifkan MSET9. Data pengguna yang ada akan hilang, tapi akan kembali setelah selesai dengan laman ini.
 
-1. Insert your SD card into your computer
-2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files
+1. Sisipkan kartu SD ke komputer Anda
+2. Salin semuanya dari berkas `.zip` MSET9 ke akar kartu SD, timpa berkas yang ada
 
    ::: info
 
@@ -51,9 +52,9 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 :::
 ```
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
 
-   - The window should change to this:
+   - Jendela perintah akan seperti ini:
 
    ::: info
 
@@ -61,28 +62,28 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
    :::
 
-   - Ensure that the correct console model and version is displayed
-2. Type `1`, then press Enter to begin the process of creating the MSET9 ID1
-3. After reviewing the disclaimer, type `1` again and press Enter to accept it
-   - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
-4. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
-   - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
-5. Reinsert your SD card into your console
-6. Power on your console
-7. Open Mii Maker
-8. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the HOME Menu
-   - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
-   - If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Exit Mii Maker and return to the HOME Menu
-9. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-   - This will not wipe any of your data
-10. Power off your console by pressing the power button then tapping Power Off on the lower screen
-11. Insert your SD card into your computer
+   - Pastikan versi dan model yang tampil itu sesuai konsol
+2. Ketik `1`, lalu tekan Enter untuk memulai proses membuat ID1 MSET9
+3. Setelah membaca sangkalan yang ada, ketik `1` dan tekan Enter untuk iya
+   - Jika muncul galat, lihat laman [sidik gangguan](troubleshooting-mset9), lalu coba lagi
+4. Jika muncul pesan "Created hacked ID1.", tekan Enter untuk menutup naskah MSET9
+   - Konsol 3DS akan seperti tidak ada aplikasi terpasang / data di HOME Menu. **Memang seperti ini.** Data akan kembali di langkah berikutnya
+5. Sisip kembali kartu SD ke konsol
+6. Nyalakan daya konsol
+7. Buka Mii Maker
+8. Tunggu konsol sampai layar [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png), lalu keluar dari Mii Maker dan balik ke HOME Menu
+   - Mungkin muncul [layar ini](/images/screenshots/mset9/mii-extdata.png), ini menandakan data yang perlu sudah dibuat
+   - Jika hanya sampai layar Mii Maker [biasa](/images/screenshots/mset9/mii-existing.png), berarti sudah ada data. Keluar dari Mii Maker dan balik ke HOME Menu
+9. Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
+   - Ini tidak akan menghapus data
+10. Matikan daya konsol dengan menekan tombol daya lalu sentuh Power Off di layar bawah
+11. Sisipkan kartu SD ke komputer Anda
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
 
-   - The window should change to this and display `Ready`:
+   - Jendela perintah akan seperti ini dan muncul `Ready`:
 
    ::: info
 
@@ -90,75 +91,75 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
    :::
 
-   - If the window says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
-     - Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
-     - Once you have resolved the issue, return to Section I Step 14
-     - For more information, check the [troubleshooting](troubleshooting-mset9) page
-2. Type `0`, then press Enter to close the script
-3. Reinsert your SD card into your console
+   - Jika muncul [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
+     - Ketik `2`, lalu tekan Enter untuk periksa status MSET9 dan ikuti arahan yang ditentukan
+     - Sesudah isunya selesai, kembali ke Bagian I Langkah 14
+     - Untuk informasi lanjut, lihat laman [sidik gangguan](troubleshooting-mset9)
+2. Ketik `0`, lalu tekan Enter untuk menutup naskah
+3. Sisip kembali kartu SD ke konsol
 
-### Section II - MSET9
+### Bagian II - MSET9
 
-In this section, you will trigger MSET9 to launch SafeB9SInstaller (the custom firmware installer).
+Di bagian ini akan mengaktifkan MSET9 untuk membuka SafeB9SInstaller (pemasang CFW).
 
 ::: danger
 
-These instructions must be followed **EXACTLY**, so double-check EVERYTHING you are doing to avoid errors!
+Instruksi ini harus diikuti **PERSIS**, periksa lagi SEMUA yang tadi sudah agar tidak keliru!
 
 :::
 
-1. Power on your console, ensuring System Settings is selected
-   - If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
-2. Press (A) to launch System Settings
-3. Navigate to `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
-4. **Do not press any buttons or touch the screen**
-5. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
-   - The menu will refresh and say that no SD card is inserted
-6. Insert your SD card into your computer
+1. Nyalakan daya konsol, pastikan sudah sorot System Settings
+   - Jika belum sorot System Settings, **[arahkan](/images/screenshots/mset9/hover-settings.png)** ke ikon System Settings dengan tombol arah, matikan daya konsol, dan nyalakan lagi
+2. Tekan (A) untuk membuka System Settings
+3. Navigasi ke `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([gambar](/images/screenshots/mset9/settings-extdata.png))
+4. **Jangan tekan tombol apa pun atau sentuh layar**
+5. **Selagi konsol MASIH NYALA, dan tidak menyentuh layar atau menekan tombol apa pun**, lepas kartu SD dari konsol
+   - Menu akan menyegar dan muncul pesan tidak ada kartu SD
+6. Sisipkan kartu SD ke komputer Anda
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
-2. In the MSET9 window, type `3`, then press Enter to inject MSET9
-   - You should see "MSET9 successfully injected!"
-3. Press Enter to close the MSET9 script
-4. Reinsert your SD card into your console **without pressing any buttons or touching the screen**
-5. If the exploit was successful, you will have booted into SafeB9SInstaller
-   - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
+1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
+2. Di jendela MSET9, ketik `3`, lalu tekan Enter untuk menyuntik MSET9
+   - Seharusnya muncul "MSET9 successfully injected!"
+3. Tekan Enter untuk menutup naskah MSET9
+4. Sisip kembali kartu SD ke konsol **tanpa menekan tombol atau menyentuh layar**
+5. Jika eksploit berhasil akan muncul SafeB9SInstaller
+   - Jika muncul layar merah atau konsol tersangkut di layar memuat, ikuti [panduan sidik gangguan](troubleshooting-mset9)
 
-### Section III - Installing boot9strap
+### Bagian III - Memasang boot9strap
 
-In this section, you will install custom firmware onto your console.
+Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
-1. When prompted, input the key combo given on the top screen to install boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
-2. Once it is complete, press (A) to reboot your console
+1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
+   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-mset9)
+2. Saat selesai, tekan (A) untuk nyalakan ulang konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### Bagian IV - Menghapus MSET9
 
-In this section, you will remove MSET9 to prevent further issues and to restore your user data (games, themes, etc). (This will not remove the custom firmware that you have just installed.)
+Di bagian ini akan menghapus MSET9 untuk mencegah isu dan memulihkan data (permainan, tema, dll.). (Ini tidak akan menghapus _custom firmware_ yang tadi dipasang).
 
 ::: danger
 
-Do NOT skip this section! If you skip it, applications may crash unexpectedly and you will encounter errors on the next page!
+JANGAN lewati bagian ini! Jika dilewati, aplikasi bisa tiba-tiba mogok dan akan ada galat di laman berikutnya!
 
 :::
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Matikan daya konsol
+2. Sisipkan kartu SD ke komputer Anda
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
-2. Type `4`, then press Enter to remove the trigger file
-   - You should see "Removed trigger file."
-3. Type `5`, then press Enter to remove MSET9
-   - You should see "Successfully removed MSET9!"
-4. Press Enter to close the MSET9 script
+1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
+   - Keadaan saat ini seharusnya [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Jika _trigger file_ sudah dihapus (atau memang belum disuntikkan) dan keadaan bertulis [Ready](/images/screenshots/mset9/mset9-ready.png), langsung saja ke Bagian 6
+2. Ketik `4`, lalu tekan Enter untuk menghapus _trigger file_
+   - Seharusnya muncul "Removed trigger file."
+3. Ketik `5`, lalu tekan Enter untuk menghapus MSET9
+   - Seharusnya muncul "Successfully removed MSET9!"
+4. Tekan Enter untuk menutup naskah MSET9
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 
@@ -166,12 +167,12 @@ ___
 
 ::: danger
 
-Did you follow Section IV (Removing MSET9)? That section is MANDATORY!
+Sudah belum ikuti Bagian IV (Menghapus MSET9)? Bagian itu **WAJIB**!
 
 :::
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Lanjut ke [Penyiapan Akhir](finalizing-setup)
 
 :::

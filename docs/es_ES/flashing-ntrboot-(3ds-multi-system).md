@@ -1,6 +1,6 @@
 # Flashing ntrboot (3DS Multi System)
 
-## Required Reading
+## Lectura requerida
 
 Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot).
 
@@ -12,7 +12,7 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 
 :::
 
-## What You Need
+## Lo que necesitas
 
 - Your ntrboot compatible flashcart
 - Two 3DS family consoles
@@ -21,9 +21,9 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
-## Instructions
+## Instrucciones
 
-### Section I - Prep Work
+### Sección I - Preparativos
 
 1. Power off **the source 3DS**
 2. Insert **the source 3DS**'s SD card into your computer
@@ -38,12 +38,12 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
 2. Select "ntrboot_flasher"
 3. Read the red screen warning
-4. Press (A) to continue
+4. Presiona (A) para continuar
 5. Select your flashcart
    - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
 6. Select "Dump Flash"
 7. Wait until the process is completed
-8. Press (A) to continue
+8. Presiona (A) para continuar
 9. Press (A) to return to the main menu
 10. Select "Inject Ntrboot"
 11. Press (A) for retail unit ntrboot

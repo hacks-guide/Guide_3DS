@@ -1,181 +1,181 @@
-# GodMode9 Usage
+# Penggunaan GodMode9
 
 ::: info
 
-For information on dumping cartridge or SD card content, see [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges).
+Untuk informasi men-_dump_ data kartrid atau kartu SD, lihat [Membuat Dump Permainan dan Kartrid](dumping-titles-and-game-cartridges).
 
 :::
 
 ::: info
 
-For support (in English) with GodMode9, as well as help with scripting and to get updates and info, join [GodMode9 on Discord](https://discord.gg/BRcbvtFxX4).
+Untuk bantuan berbahasa Inggris terkait GodMode9 dan tentang membuat naskah, pembaruan, dan info; gabung ke [Discord GodMode9](https://discord.gg/BRcbvtFxX4).
 
 :::
 
-## Required Reading
+## Bacaan Penting
 
-GodMode9 is a full access file browser for the Nintendo 3DS console, giving you access to your SD card, the FAT partitions inside your SysNAND and EmuNAND, and basically anything else. Among other functionality, you can copy, delete, rename files, and create folders.
+GodMode9 adalah penelusur berkas berakses penuh untuk Nintendo 3DS, mampu mengakses kartu SD, partisi FAT di dalam SysNAND dan EmuNAND, dan segala lainnya. Selain itu bisa juga menyalin, menghapus, ubah nama berkas, dan membuat folder.
 
-Note that if you have any payload files other than `GodMode9.firm` in the `/luma/payloads/` folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions.
+Perlu diingat jika ada _payload_ selain `GodMode9.firm` dalam folder `/luma/payloads/` di kartu SD, menahan (Start) saat awal nyala akan ke "chainloader menu" dan hanya bisa Tombol Arah dan (A) untuk memilih "GodMode9" pada instruksi ini.
 
-GodMode9 is powerful software that has the capability to modify essentially anything on your console. Though many of these modifications are locked behind a permissions system, and it is impossible to accidentally perform dangerous actions without deliberately unlocking permissions, you should still follow instructions carefully and keep backups just in case.
+GodMode9 adalah peranti lunak penuh daya yang mampu memodif apa pun pada konsol. Tapi, banyak dari modifikasi ini terkunci di balik sistem izin sehingga mustahil tidak sengaja berbuat berbahaya, kecuali jika sebelumnya _sengaja_ membuka izin sistem. Jadi tetaplah teliti mengikuti instruksi dan **sering-sering membuat cadangan**.
 
-## Updating GodMode9
+## Memperbarui GodMode9
 
 ::: info
 
-Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+Beberapa instruksi di bawah ini hanya berlaku pada GodMode9 versi terkini, maka bagian memperbarui ini harus diikuti sebelum ke instruksi lain. Timpa juga berkas yang ada.
 
 :::
 
-### What You Need
+### Apa yang Perlu
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- Versi terkini dari [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (yang `.zip` GodMode9)
 
-### Instructions
+### Instruksi
 
-1. Power off your console
-2. Insert your SD card into your computer
-3. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-4. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-5. Reinsert your SD card into your console
+1. Matikan daya konsol
+2. Sisipkan kartu SD ke komputer Anda
+3. Salin `GodMode9.firm` dari `.zip` GodMode9 ke folder `/luma/payloads/` di kartu SD
+4. Salin folder `gm9` dari `.zip` GodMode9 ke akar kartu SD
+5. Sisip kembali kartu SD ke konsol
 
 ::: tip
 
-GodMode9 is now up to date.
+GodMode9 sekarang mutakhir.
 
 :::
 
-## Creating a NAND Backup
+## Membuat Cadangan NAND
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
 ::: tip
 
-Your NAND backup has been successfully created.
+Cadangan NAND sudah berhasil dibuat.
 
 :::
 
-## Restoring a NAND Backup
+## Memulihkan Cadangan NAND
 
-1. Power off your console
-2. Insert your SD card into your computer
-3. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
-4. Reinsert your SD card into your console
-5. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-6. Press (Home) to bring up the action menu
-7. Select "Scripts..."
-8. Select "GM9Megascript"
-9. Select "Restore Options"
-10. Select "SysNAND Restore (safe)"
-11. Select your NAND backup
-12. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
-    - This will **not** overwrite your boot9strap installation
-    - This process will take some time
-13. Press (A) to continue
-14. Press (B) to return to the main menu
-15. Select "Exit"
-16. Press (A) to relock write permissions if prompted
+1. Matikan daya konsol
+2. Sisipkan kartu SD ke komputer Anda
+3. Salin `<date>_<serialnumber>_sysnand_##.bin` dari komputer Anda ke folder `/gm9/out/` di kartu SD
+4. Sisip kembali kartu SD ke konsol
+5. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
+6. Tekan (Home) untuk membuka menu tindakan
+7. Pilih "Scripts..."
+8. Pilih "GM9Megascript"
+9. Pilih "Restore Options"
+10. Pilih "SysNAND Restore (safe)"
+11. Pilih cadangan NAND
+12. Tekan (A) untuk membuka izin tulis SysNAND (lvl3), lalu tekan kombo yang diberikan
+    - Ini **tidak akan** menghapus boot9strap di konsol
+    - Proses ini akan lumayan lama
+13. Tekan (A) untuk lanjut
+14. Tekan (B) untuk kembali ke menu utama
+15. Pilih "Exit"
+16. Tekan (A) untuk menutup ulang izin tulis jika diminta
 
 ::: tip
 
-Your NAND backup has been successfully restored. You can now delete `<date>_<serialnumber>_sysnand_###.bin` from your SD card.
+Cadangan NAND sudah berhasil dipulihkan. Berkas `<date>_<serialnumber>_sysnand_###.bin` boleh dihapus dari kartu SD.
 
 :::
 
-## Injecting any .CIA app into Health & Safety
+## Menyuntik .CIA apa pun ke Health & Safety
 
 ::: info
 
-Note that it is not possible to inject files into Health & Safety that are larger than it (including games and other large applications)
+Perlu diingat, berkas yang disuntikkan tidak bisa lebih dari ukuran Health & Safety (baik itu permainan atau aplikasi)
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-2. Navigate to `[0:] SDCARD` -> `cias`
-3. Press (A) on your `.cia` to select it
-4. Select "CIA image options..."
-5. Select "Mount image to drive"
-6. Press (A) on the `.app` file
-7. Select "NCCH image options"
-8. Select "Inject to H&S"
-9. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-10. Press (A) to continue
-11. Press (A) to relock write permissions if prompted
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
+2. Navigasi ke `[0:] SDCARD` -> `cias`
+3. Tekan (A) pada `.cia` pilihan untuk memilih
+4. Pilih "CIA image options..."
+5. Pilih "Mount image to drive"
+6. Tekan (A) pada berkas `.app`
+7. Pilih "NCCH image options"
+8. Pilih "Inject to H&S"
+9. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
+10. Tekan (A) untuk lanjut
+11. Tekan (A) untuk menutup ulang izin tulis jika diminta
 
 ::: tip
 
-Your desired application has now been injected into Health & Safety.
+Aplikasi pilihan Anda sekarang sudah disuntik ke Health & Safety.
 
 :::
 
-## Restoring Health & Safety after injecting a .CIA app
+## Memulihkan Health & Safety setelah disuntikkan .CIA
 
 ::: info
 
-This will only work if the Health & Safety injection was performed by GodMode9 (not Decrypt9 or Hourglass9).
+Ini hanya akan berfungsi jika Health & Safety disuntik dengan GodMode9 (bukan Decrypt9 atau Hourglass9).
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-2. Press (Home) to bring up the action menu
-3. Select "More..."
-4. Select "Restore H&S"
-5. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-6. Press (A) to relock write permissions if prompted
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
+2. Tekan (Home) untuk membuka menu tindakan
+3. Pilih "More..."
+4. Pilih "Restore H&S"
+5. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
+6. Tekan (A) untuk menutup ulang izin tulis jika diminta
 
 ::: tip
 
-Health & Safety has been reverted to normal.
+Health & Safety sudah kembali ke biasa lagi.
 
 :::
 
-## Format an SD card
+## Memformat kartu SD
 
 ::: danger
 
-**Note that this will erase the contents of your SD card!**
+**Perhatian! ini akan menghapus semua isi kartu SD Anda!!**
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-2. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
-   - If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
+2. Tekan (R) + (B) untuk lepas _mount_ kartu SD dan sisipkan kartu SD yang ingin diformat
+   - Jika GodMode9 muncul galat inisialisasi saat menyisip kartu SD yang akan diformat, ini aman diabaikan
 
 <!--@include: ./_include/format-sd-gm9.md -->
 
 ::: tip
 
-Your SD card has successfully been formatted for use with the console.
+Kartu SD sudah berhasil diformat untuk digunakan di konsol.
 
 :::
 
-## Removing an NNID without formatting your console
+## Menghapus NNID tanpa perlu memformat konsol
 
 ::: info
 
-This process will only log you out of your NNID. You will still not be able to use the NNID on another console, as the NNID remains linked to the console.
+Proses ini hanya akan mengeluarkan akun NNID. NNID Anda tidak bisa digunakan di konsol lain, karena NNID tetap tertaut ke konsol tersebut.
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-2. Press (Home) to bring up the action menu
-3. Select "Scripts..."
-4. Select "GM9Megascript"
-5. Select "Scripts from Plailect's Guide"
-6. Select "Remove NNID"
-7. Press (A) to continue
-8. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
-9. Press (A) to continue
-10. Press (B) to return to the main menu
-11. Select "Exit"
-12. Press (A) to relock write permissions if prompted
-13. Press (Start) to reboot your console
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
+2. Tekan (Home) untuk membuka menu tindakan
+3. Pilih "Scripts..."
+4. Pilih "GM9Megascript"
+5. Pilih "Scripts from Plailect's Guide"
+6. Pilih "Remove NNID"
+7. Tekan (A) untuk lanjut
+8. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
+9. Tekan (A) untuk lanjut
+10. Tekan (B) untuk kembali ke menu utama
+11. Pilih "Exit"
+12. Tekan (A) untuk menutup ulang izin tulis jika diminta
+13. Tekan (Start) untuk nyalakan ulang konsol
 
 ::: tip
 
-You have now been logged out of your NNID.
+NNID sekarang sudah dikeluarkan.
 
 :::

@@ -1,6 +1,6 @@
 # Finalizing Setup
 
-## Required Reading
+## Lectura requerida
 
 The file `boot.firm` is what is launched by boot9strap itself after it finishes loading off of NAND. In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) to patch the console, allowing it to run homebrew software.
 
@@ -36,23 +36,23 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 
 :::
 
-## What You Need
+## Lo que necesitas
 
 - [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
 - [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
 
-## Instructions
+## Instrucciones
 
-### Section I - Prep Work
+### Sección I - Preparativos
 
 In this section, you will copy the files necessary to follow the rest of the instructions on this page.
 
-1. Power off your console
-2. Insert your SD card into your computer
+1. Apaga la consola
+2. Inserta la tarjeta SD en tu computadora
 3. Copy `finalize.romfs` to the root of your SD card
 4. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
 5. Copy `x_finalize_helper.firm` to the `payloads` folder
-6. Reinsert your SD card into your console
+6. Reinserta la tarjeta SD en la consola
 
 The screenshot below indicates the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
 
@@ -92,7 +92,7 @@ In this section, you will sync your 3DS internal clock with the actual time and 
 
 In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
-1. Power off your console
+1. Apaga la consola
 2. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
    - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
    - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
@@ -100,14 +100,14 @@ In this section, you will use a series of scripts to automate homebrew installat
    - From this point forward, you can access GodMode9 by holding START while powering on your console
 4. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
 5. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-6. Press (Home) to bring up the action menu
+6. Presiona el botón (HOME) para abrir el menú de acciones
 7. Select "Scripts..."
 8. Select "finalize"
 9. Follow the prompts in the script, answering any questions that you are asked
    - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
 10. Once the script says "Setup complete!", press (A) to power off the device
     - If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
-11. Insert your SD card into your computer
+11. Inserta la tarjeta SD en tu computadora
 12. Copy the `/gm9/backups/` folder to a safe location on your computer
     - This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
     - The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue

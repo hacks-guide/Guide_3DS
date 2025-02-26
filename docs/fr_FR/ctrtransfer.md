@@ -1,6 +1,6 @@
 # CTRTransfer
 
-## Required Reading
+## Lecture Requise
 
 This is an add-on section for installing an 11.15.0 CTRTransfer image to your console.
 
@@ -16,7 +16,7 @@ As a part of this process, your system settings will be reset to its defaults. T
 
 :::
 
-## What You Need
+## Ce dont vous avez besoin
 
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 - The latest release of [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (direct download)

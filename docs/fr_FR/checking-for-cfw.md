@@ -1,6 +1,6 @@
 # Checking for CFW
 
-## Required Reading
+## Lecture Requise
 
 This is an add-on section to check if your console already has a modern custom firmware.
 
@@ -16,7 +16,7 @@ If your console has a menuhax-based CFW setup, you should [clear HOME Menu's ext
 
 1. Power off your console
 2. Hold the (Select) button
-3. Power on your console while still holding the (Select) button
+3. Allumez votre console tout en maintenant le bouton (Select) enfoncé
 4. You should now see a configuration menu of some sort
 
 ## What to do next

@@ -6,13 +6,13 @@ If your flashcart comes pre-flashed with ntrboot (or you have already flashed nt
 
 :::
 
-## Required Reading
+## Bacaan Penting
 
 Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to. Note that some of these flashcarts are sold pre-flashed with ntrboot.
 
 While the ntrboot exploit works independently of the system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and consoles supported by your flashcart, only certain methods may be available to you.
 
-Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
+Perlu diingat untuk kartrid dengan "Time Bomb" tidak akan bisa menjalankan `.nds` jika jam sistem sudah lewat tanggal yang ditentukan _firmware flashcart_. One method to bypass this is to set the system clock to an earlier date.
 
 | Flashcart Name                                                                                                              |          Current Price |                       "Time Bomb"?                       |                                 3DS Versions?                                 |                           DSi Versions?                           | Other Notes                                                                                                                                                                                                                                                                                                |
 | --------------------------------------------------------------------------------------------------------------------------- | ---------------------: | :------------------------------------------------------: | :---------------------------------------------------------------------------: | :---------------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,15 +39,15 @@ Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files
 
 :::
 
-Ensure your flashcart is able to launch `.nds` files on your console before beginning. Some flashcarts may require firmware or "kernel" files to be copied to the flashcart SD card. Consult your specific flashcart's instructions for more information.
+Sebelum mulai, pastikan _flashcart_ bisa menjalankan berkas `.nds` di konsol. Some flashcarts may require firmware or "kernel" files to be copied to the flashcart SD card. Consult your specific flashcart's instructions for more information.
 
 Note that specific methods may have additional compatibility information.
 
-The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target console is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your console to enter sleep mode while still having access to the buttons.
+Untuk eksploit ini, dengan metode _flashing_ apa pun, akan perlu besi berani kecil jika konsol sasaran Anda model lipat (jenis sistem 3DS yang bukan model lipat hanya old 2DS karena ada cetekan tidur). This is because the exploit requires your console to enter sleep mode while still having access to the buttons.
 
 ::: info
 
-To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the console is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
+Untuk menguji fungsi besi berani, tahan di atas atau sekitar tombol (A)(B)(X)(Y) ketika konsol menyala apakah mode tidur bisa aktif. If it does, both displays will go black as long as the magnet is held in that spot.
 
 :::
 
@@ -55,7 +55,7 @@ Note that the flashcart will not be able to be used for its standard functions w
 
 ::: danger
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless, only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
+Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_brick_)** saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, sebaiknya beli dari situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
 
 :::
 
@@ -65,9 +65,9 @@ ___
 
 ___
 
-### Flashing ntrboot (3DS Single System)
+### Mem-flash ntrboot (Satu Sistem 3DS)
 
-This method requires nothing more than your stock unhacked 3DS and a compatible flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your 3DS. This means that your flashcart must support launching `.nds` files on your 3DS's version. See the flashcart table above for more information.
+Metode ini hanya perlu konsol 3DS belum diretas dan _flashcart_ yang kompatibel. Metode ini menggunakan _flashcart_ untuk menjalankan `.nds` ntrboot flasher di 3DS. Ini berarti _flashcart_ harus bisa menjalankan `.nds` di _firmware_ 3DS. See the flashcart table above for more information.
 
 ::: tip
 
@@ -77,9 +77,9 @@ Continue to [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single
 
 ___
 
-### Flashing ntrboot (3DS Multi System)
+### Mem-flash ntrboot (Beberapa Sistem 3DS)
 
-This method requires temporary access to a second 3DS family console that is already running boot9strap. This does not require your flashcart to support either 3DS's version.
+Metode ini perlu akses sementara ke jenis konsol 3DS lain yang sudah ada boot9strap. _Flashcart_ tidak harus untuk 3DS, yang penting bisa di-_flash_ ntrboot.
 
 ::: tip
 
@@ -89,9 +89,9 @@ Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-s
 
 ___
 
-### Flashing ntrboot (NDS)
+### Mem-flash ntrboot (NDS)
 
-This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS.
+Metode ini perlu akses sementara ke Nintendo DS atau Nintendo DS Lite yang bisa membaca _flashcart_ Anda. Metode ini perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di NDS.
 
 ::: tip
 
@@ -101,9 +101,9 @@ Continue to [Flashing ntrboot (NDS)](flashing-ntrboot-\(nds\))
 
 ___
 
-### Flashing ntrboot (DSi)
+### Mem-flash ntrboot (DSi)
 
-This method requires temporary access to a Nintendo DSi that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your DSi. This means that your flashcart must support launching `.nds` files on your DSi's version. See the flashcart table above for more information.
+Metode ini perlu akses sementara ke konsol Nintendo DSi yang bisa membaca _flashcart_ Anda. Metode ini juga perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di DSi. Berarti _flashcart_ harus bisa menjalankan `.nds` di _firmware_ DSi. See the flashcart table above for more information.
 
 ::: tip
 
