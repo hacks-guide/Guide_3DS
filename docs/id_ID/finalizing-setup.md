@@ -2,7 +2,7 @@
 
 ## Bacaan Penting
 
-On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) as our `boot.firm` to patch the console, allowing it to run homebrew software.
+Setelah memasang boot9strap, yaitu _custom firmware_ pemuat berkas `boot.firm` dari kartu SD atau NAND (memori internal). Selanjutnya kita gunakan Luma3DS oleh [LumaTeam](https://github.com/LumaTeam/) sebagai `boot.firm` untuk menambal konsol agar bisa membuka _homebrew_.
 
 Di laman ini juga akan mencadang berkas sistem kritis dan memasang beberapa _homebrew_. Hampir semua langkah ini menggunakan naskah otomatis yang dijalankan di konsol.
 
