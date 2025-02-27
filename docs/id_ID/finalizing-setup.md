@@ -10,17 +10,17 @@ Di laman ini juga akan mencadang berkas sistem kritis dan memasang beberapa _hom
 
 Naskahnya akan memasang aplikasi berikut:
 
-- **FBI** by Steveice10 _(installs CIA formatted applications)_
-- **Homebrew Launcher Loader** by PabloMK7 _(runs Homebrew Launcher, for 3DSX format homebrew)_
-- **Anemone3DS** by astronautlevel2 _(installs custom themes, splashes, and badges)_
-- **Checkpoint** by BernardoGiordano/FlagBrew _(manages 3DS/DS game save data)_
-- **ftpd** by mtheall _(allows wireless 3DS SD card access over FTP)_
-- **Universal-Updater** by Universal-Team _(on-device app store for downloading homebrew over Wi-Fi)_
-- **GodMode9** by d0k3 _(multipurpose tool for extracting data from internal memory or cartridges)_
+- **FBI** oleh Steveice10 _(memasang aplikasi berformat CIA)_
+- **Homebrew Launcher Loader** oleh PabloMK7 _(ke Homebrew Launcher, untuk homebrew .3DSX)_
+- **Anemone3DS** oleh astronautlevel2 _(memasang tema, splash, dan lencana kustom)_
+- **Checkpoint** oleh BernardoGiordano/FlagBrew _(mengelola simpanan 3DS/DS)_
+- **ftpd** oleh mtheall _(mengakses kartu SD 3DS tanpa kabel lewat FTP)_
+- **Universal-Updater** oleh Universal-Team _(aplikasi konsol untuk mengunduh homebrew lewat Wi-Fi)_
+- **GodMode9** oleh d0k3 _(alat serbaguna untuk mengekstrak data kartrid atau memori internal)_
 
 Jika ada aplikasi yang tidak diinginkan, nanti bisa dihapus setelah selesai panduan ini di `System Settings` -> `Data Management` -> `Nintendo 3DS` -> `Software`. (GodMode9 tidak bisa dihapus dengan cara ini karena perlu untuk fungsi lain.)
 
-::: details Source code links (optional)
+::: details Tautan kode sumber (opsional)
 
 All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
 
