@@ -157,7 +157,7 @@ Bagian ini akan menghapus konten tidak sah (_homebrew_, hasil _dump_ kartrid, ds
 10. Tekan (L) + (Tombol Bawah) + (Select) bersamaan untuk membuka menu Rosalina
 11. Pilih "Miscellaneous options"
 12. Pilih "Switch the hb. title to the current app."
-13. Press (B) to continue
+13. Tekan (B) untuk lanjut
 14. Tekan (B) untuk kembali ke menu utama Rosalina
 15. Tekan (B) untuk keluar dari menu Rosalina
 16. Tekan (Home), lalu tutup Download Play
