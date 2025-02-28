@@ -2,7 +2,7 @@
 
 ## Bacaan Penting
 
-Setelah memasang boot9strap, yaitu _custom firmware_ pemuat berkas `boot.firm` dari kartu SD atau NAND (memori internal). Selanjutnya kita gunakan Luma3DS oleh [LumaTeam](https://github.com/LumaTeam/) sebagai `boot.firm` untuk menambal konsol agar bisa membuka _homebrew_.
+Setelah memasang boot9strap, yaitu _custom firmware_ yang memuat `boot.firm` dari kartu SD atau NAND (memori internal). Selanjutnya kita gunakan Luma3DS oleh [LumaTeam](https://github.com/LumaTeam/) sebagai `boot.firm` untuk menambal konsol agar bisa membuka _homebrew_.
 
 Di laman ini juga akan mencadang berkas sistem kritis dan memasang beberapa _homebrew_. Hampir semua langkah ini menggunakan naskah otomatis yang dijalankan di konsol.
 
