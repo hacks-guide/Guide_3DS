@@ -18,13 +18,13 @@ This likely indicates that you already have custom firmware. You should [check f
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
 
-The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
+The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
 
 :::
 
 :::details "An error has occurred, forcing the software to close..." (white message box)
 
-There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
+There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
 
 You can also try resetting your browser save data:
 
@@ -72,7 +72,7 @@ Follow these steps in order:
 
 :::details Frozen on "Doing agbhax..."
 
-There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
+There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
 
 :::
 
