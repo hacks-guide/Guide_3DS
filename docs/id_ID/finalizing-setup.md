@@ -22,7 +22,7 @@ Jika ada aplikasi yang tidak diinginkan, nanti bisa dihapus setelah selesai pand
 
 ::: details Tautan kode sumber (opsional)
 
-All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
+Semua aplikasi di panduan ini bersumber terbuka. Jika ingin melihat cara kerja kodenya, atau ingin ditandai bintang sebagai terima kasih, kode sumbernya ditaut di sini:
 
 - [FBI](https://github.com/lifehackerhansol/FBI)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
@@ -88,9 +88,9 @@ Di bagian ini akan menyelaraskan jam internal 3DS dengan jam sebenarnya, dan men
    - Jika tombol tersebut ada yang rusak, unduh [config.ini](/assets/config.ini) dan taruh di folder `luma`, timpa berkas yang ada. Ini akan mengubah kombo tombol menu Rosalina ke (X) + (Y)
 2. Pilih "Miscellaneous options"
 3. Pilih "Dump DSP firmware"
-4. Press (B) to continue
+4. Tekan (B) untuk lanjut
 5. Pilih "Nullify user time offset"
-6. Press (B) to continue
+6. Tekan (B) untuk lanjut
 7. Tekan (B) untuk kembali ke menu utama Rosalina
 8. Tekan (B) untuk keluar dari menu Rosalina
 
@@ -110,7 +110,7 @@ Di bagian ini akan menggunakan naskah agar otomatis memasang _homebrew_, members
 7. Pilih "Scripts..."
 8. Pilih "finalize"
 9. Ikuti sembulan perintah yang diminta dari naskah
-   - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
+   - Jika muncul "Information #05: No title database", tekan (A) untuk impor dan tekan tombol sesuai layar untuk lanjut
    - Jika ada galat, ikuti instruksi di pesan galat atau rujuk ke laman [sidik gangguan](troubleshooting-finalizing-setup)
 10. Sesudah naskah bertulis "Setup complete!", tekan (A) untuk matikan daya konsol
     - Jika TIDAK muncul pesan "Setup complete!", naskahnya tidak berhasil dan harus ulangi bagian ini dari Langkah 3
