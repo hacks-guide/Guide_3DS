@@ -57,10 +57,10 @@ Follow these steps in order:
 1. Buka System Settings di konsol
 2. Navigasi ke `Internet Settings` -> `Connection Settings`
 3. Pilih slot sambungan jejaring yang ada dan navigasi ke `Change Settings` -> `Next Page (panah kanan)` -> `Proxy Settings`
-4. Set "Proxy Settings" to "No"
+4. Atur "Proxy Settings" ke "No"
 5. Pencet OK, lalu pencet Save
 6. Saat diminta, pencet "Test" untuk menguji sambungan
-   - Pengujiannya harus berhasil
+    - Pengujiannya harus berhasil
 7. Pencet "OK" untuk lanjut
 8. Tekan "Back" dua kali, lalu "Close" untuk kembali ke HOME Menu
 9. Open the Internet Browser once
