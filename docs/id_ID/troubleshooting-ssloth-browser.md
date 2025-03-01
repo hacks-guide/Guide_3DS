@@ -1,36 +1,36 @@
-# Troubleshooting (SSLoth-Browser)
+# Sidik Gangguan (SSLoth-Browser)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (SSLoth-Browser)" page, which is used on system versions between 11.4.0 and 11.13.0. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (SSLoth-Browser)" untuk konsol di versi sistem 11.4.0 sampai 11.13.0. Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (SSLoth-Browser)" page. If you are using a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (super-skaterhax)](troubleshooting-super-skaterhax) instead.
+Instruksi ini hanya berlaku jika mengikuti laman "Memasang boot9strap (SSLoth-Browser)". Jika punya konsol **New 3DS** di versi **11.15.0 sampai 11.17.0**, maka ikuti saja [instruksi sidik gangguan Memasang boot9strap (super-skaterhax)](troubleshooting-super-skaterhax).
 
 :::
 
 ## SSLoth-Browser
 
-:::details Red/purple/pink and white screen after running Browserhax
+:::details Layar merah/ungu/merah muda putih setelah membuka Browserhax
 
-This likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
+Ini mungkin menandakan sudah ada _custom firmware_. Coba [periksa CFW](checking-for-cfw).
 
 :::
 
-:::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+:::details "An error has occurred. Hold down the POWER button to turn off the power..." (layar hitam dengan teks)
 
-The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
+Berkas `arm11code.bin` belum ada atau salah taruh. Unduh versi terkini dari [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), lalu taruh `otherapp.bin` di akar kartu SD dan ubah nama menjadi `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
 
 :::
 
 :::details "An error has occurred, forcing the software to close..." (white message box)
 
-There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
+Ada masalah dengan berkas `otherapp.bin` Anda. Unduh versi terkini dari [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), lalu taruh `otherapp.bin` di akar kartu SD dan ubah nama menjadi `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
 
-You can also try resetting your browser save data:
+Bisa juga coba atur ulang data simpanan Browser:
 
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+1. Buka Browser, lalu buka pengaturan Browser
+2. Gulir ke bawah dan pilih "Reset Save Data" (bisa jadi disebut "Initialize Save Data" atau "Clear All Save Data")
+3. Coba ulang eksploit
 
 :::
 
@@ -38,9 +38,9 @@ You can also try resetting your browser save data:
 
 Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+1. Buka Browser, lalu buka pengaturan Browser
+2. Gulir ke bawah dan pilih "Reset Save Data" (bisa jadi disebut "Initialize Save Data" atau "Clear All Save Data")
+3. Coba ulang eksploit
 
 :::
 
@@ -72,7 +72,7 @@ Follow these steps in order:
 
 :::details Frozen on "Doing agbhax..."
 
-There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
+Ada masalah dengan berkas `otherapp.bin` Anda. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
 
 :::
 
@@ -90,7 +90,7 @@ If this is unsuccessful, try using another SD card.
 
 :::
 
-## Issues with SafeB9SInstaller
+## Isu dengan SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
