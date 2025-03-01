@@ -1,8 +1,8 @@
-# Troubleshooting (A9LH to B9S)
+# Sidik Gangguan (Dari A9LH ke B9S)
 
-This page offers troubleshooting advice for commonly encountered issues with the "A9LH to B9S" page. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Dari A9LH ke B9S". Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
-## Issues with SafeB9SInstaller
+## Isu dengan SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
@@ -14,7 +14,7 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 ::: tip
 
-Go back to [A9LH to B9S](a9lh-to-b9s)
+Kembali ke [Dari A9LH ke B9S](a9lh-to-b9s)
 
 :::
 
