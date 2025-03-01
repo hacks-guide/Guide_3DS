@@ -85,7 +85,7 @@ All applications installed on this guide are open-source. If you are interested 
 이 섹션에서는 3DS 내부 시계를 실제 시각과 맞추고, 홈브류 소프트웨어에서 음성을 적절하게 이용하기 위해 사운드 펌웨어를 백업합니다.
 
 1. (L 어깨) + (십자 Down) + (Select) 을 동시에 눌러서 Rosalina 메뉴를 실행해 주세요
-   - 만일 이들 중 하나의 버튼이 고장났을 경우, [config.ini](/assets/config.ini) 파일을 받아 `luma` 폴더에 덮어쓰기 해주세요. 이 파일은 Rosalina 키 조합을 (X) + (Y)로 바꿉니다
+    - 만일 이들 중 하나의 버튼이 고장났을 경우, [config.ini](/assets/config.ini) 파일을 받아 `luma` 폴더에 덮어쓰기 해주세요. 이 파일은 Rosalina 키 조합을 (X) + (Y)로 바꿉니다
 2. "Miscellaneous options"을 선택해 주세요
 3. "Dump DSP firmware"를 선택해 주세요
 4. Press (B) to continue
@@ -100,18 +100,18 @@ All applications installed on this guide are open-source. If you are interested 
 
 1. 콘솔의 전원을 꺼 주세요
 2. (X) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. 최종 설치 도우미가 실행됩니다
-   - HOME 메뉴가 실행된 경우, `payloads` 폴더의 이름이나 위치가 잘못되었을 수 있습니다
-   - 오류가 발생했을 경우, [문제 해결](troubleshooting-finalizing-setup) 페이지를 참고해 주세요
+    - HOME 메뉴가 실행된 경우, `payloads` 폴더의 이름이나 위치가 잘못되었을 수 있습니다
+    - 오류가 발생했을 경우, [문제 해결](troubleshooting-finalizing-setup) 페이지를 참고해 주세요
 3. 도우미가 정상적으로 작동했을 경우, GodMode9으로 부팅될 것입니다.
-   - 이 지점 이후부터는 START 버튼을 누르면서 콘솔을 켜는 것으로 GodMode9에 접근할 수 있습니다.
+    - 이 지점 이후부터는 START 버튼을 누르면서 콘솔을 켜는 것으로 GodMode9에 접근할 수 있습니다.
 4. 만약 "Essential files backup not found" 메세지가 표시되면, (A) 룰 눌러서 하세요. 백업이 끝나면 (A) 를 눌러서 진행해 주세요
 5. 만약 "RTC date&time seems to be wrong" 메세지가 표시되면 (A) 버튼을 눌러 하고, 날짜와 시간을 고친 다음 (A) 버튼을 눌러 계속해 주세요
 6. (Home)을 눌러 작업 메뉴를 열어 주세요
 7. "Scripts..."를 선택해 주세요
 8. "finalize"를 선택해 주세요
 9. 스크립트 표시에 따라 필요한 행동을 취해주세요
-   - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
-   - 만일 오류가 발생할 경우, 오류 메세지에 나온 안내를 따르거나 [문제 해경](troubleshooting-finalizing-setup) 페이지를 참고해 주세요
+    - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
+    - 만일 오류가 발생할 경우, 오류 메세지에 나온 안내를 따르거나 [문제 해경](troubleshooting-finalizing-setup) 페이지를 참고해 주세요
 10. "Setup Complete!" 가 떴을 경우, (A) 버튼을 눌러 전원을 꺼 주세요
     - 만일 "Setup Complete!"(설정 완료!) 가 뜨지 않은 경우, 스크립트가 정상 실행되지 않은 것이며 해당 섹션의 작업을 3단계부터 다시 해야 합니다
 11. SD 카드를 컴퓨터에 삽입해 주세요
