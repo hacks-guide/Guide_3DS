@@ -4,22 +4,22 @@
 4. Pilih "Backup Options"
 5. Pilih "SysNAND Backup"
 6. Tekan (A) untuk konfirmasi
-   - Proses ini akan lumayan lama
-   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
+    - Proses ini akan lumayan lama
+    - Jika muncul galat, cari penanganannya di [panduan sidik gangguan](troubleshooting-finalizing-setup.html)
 7. Tekan (A) untuk lanjut
 8. Tekan (B) untuk kembali ke menu utama
 9. Pilih "Exit"
 10. Tekan (A) untuk menutup ulang izin tulis jika diminta
 11. Navigasi ke `[S:] SYSNAND VIRTUAL`
-12. Press (A) on `essential.exefs` to select it
+12. Tekan (A) pada `essential.exefs` untuk pilih
 13. Pilih "Copy to 0:/gm9/out"
-    - If you see "Destination already exists", press (A) on "Overwrite file(s)"
+    - Jika muncul "Destination already exists", tekan (A) pada "Overwrite file(s)"
 14. Tekan (A) untuk lanjut
 15. Tahan (R) dan tekan (Start) bersamaan untuk matikan daya konsol
 16. Sisipkan kartu SD ke komputer Anda
-17. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
-    - Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)
-    - These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
-18. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
-    - The other backup files are negligible in size and may be kept on your SD card for ease of access
+17. Salin `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, dan `essential.exefs` dari folder `/gm9/out/` di kartu SD ke letak yang aman di komputer
+    - Salin cadangan ini ke banyak tempat (seperti di penyimpanan daring, _hard disk_ luar, dll.)
+    - Cadangan ini untuk menghindari _brick_ (matot) dan/atau memulihkan berkas dari citra NAND jika nanti terjadi kesalahan
+18. Setelah disalin, hapus `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` dari folder `/gm9/out/` di kartu SD
+    - Berkas cadangan lain berukuran kecil, jadi boleh dibiarkan di kartu SD agar mudah diakses
 19. Sisip kembali kartu SD ke konsol
