@@ -38,10 +38,10 @@ Jika tidak ingin mencadang permainan atau simpanan DSiWare, lewati bagian ini.
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Jika diminta membuat cadangan berkas esensial, tekan (A) untuk lakukan, lalu tekan (A) lagi sesudah selesai untuk lanjut
 3. Jika diminta membetulkan waktu & tanggal RTC, lakukan dengan menekan (A), lalu tekan (A) lagi untuk lanjut
-   - Perlu diingat jika harus membetulkan waktu dan tanggal RTC, betulkan juga di System Settings setelah panduan ini
+    - Perlu diingat jika harus membetulkan waktu dan tanggal RTC, betulkan juga di System Settings setelah panduan ini
 4. Navigasi ke `[2:] SYSNAND TWLN` -> `title`
 5. Tahan (R) dan tekan (A) bersamaan di `00030004` untuk memilih folder, lalu pilih "Copy to 0:/gm9/out"
-   - Proses ini agak lama jika terdapat banyak permainan DSiWare
+    - Proses ini agak lama jika terdapat banyak permainan DSiWare
 6. Tekan (B) dua kali untuk kembali ke menu utama
 
 ### Bagian III - Mencadang Simpanan GBA VC
@@ -71,16 +71,16 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
 :::
 
 1. Lakukan cara berikut untuk mencadang simpanan tiap permainan GBA VC yang diinginkan:
-   - Buka permainan GBA VC
-   - Keluar dari GBA VC
-   - Nyalakan konsol selagi menahan (Start) untuk ke menu Luma3DS chainloader
-   - Masuk ke GodMode9 dengan menekan (A)
-   - Navigasi ke `[S:] SYSNAND VIRTUAL`
-   - Tekan (A) pada `agbsave.bin` untuk pilih
-   - Pilih "AGBSAVE options..."
-   - Pilih "Dump GBA VC save"
-   - Tekan (A) untuk lanjut
-   - Tekan (Start) untuk nyalakan ulang konsol
+    - Buka permainan GBA VC
+    - Keluar dari GBA VC
+    - Nyalakan konsol selagi menahan (Start) untuk ke menu Luma3DS chainloader
+    - Masuk ke GodMode9 dengan menekan (A)
+    - Navigasi ke `[S:] SYSNAND VIRTUAL`
+    - Tekan (A) pada `agbsave.bin` untuk pilih
+    - Pilih "AGBSAVE options..."
+    - Pilih "Dump GBA VC save"
+    - Tekan (A) untuk lanjut
+    - Tekan (Start) untuk nyalakan ulang konsol
 
 ### Bagian IV - Menyalin EmuNAND ke SysNAND
 
@@ -88,9 +88,9 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
 2. Navigasi ke `[E:] EMUNAND VIRTUAL`
 3. Tekan (A) pada `nand.bin` untuk memilih, lalu pilih "NAND image options...", dan pilih "Restore SysNAND (safe)"
 4. Tekan (A) untuk membuka izin penimpaan SysNAND, lalu tekan kombo yang diberikan
-   - Ini tidak akan menghapus boot9strap di konsol
+    - Ini tidak akan menghapus boot9strap di konsol
 5. Tekan kombo yang diberikan untuk membuka izin tulis SysNAND (lvl1)
-   - Proses ini akan lumayan lama
+    - Proses ini akan lumayan lama
 6. Sesudah selesai, tekan (A) untuk lanjut
 7. Tekan (B) untuk **tidak** menutup ulang izin tulis jika diminta
 8. Tekan (B) untuk kembali ke menu utama
@@ -111,7 +111,7 @@ Jika tadi tidak mencadang simpanan (_save_) DSiWare, lewati bagian ini.
 6. Pilih "Copy path(s)"
 7. Tekan (A) untuk membuka izin tulis SysNAND (lvl1), lalu tekan kombo yang diberikan
 8. Pilih "Overwrite file(s)"
-   - Proses ini agak lama jika terdapat banyak permainan DSiWare
+    - Proses ini agak lama jika terdapat banyak permainan DSiWare
 9. Tekan (B) untuk **tidak** menutup ulang izin tulis jika diminta
 10. Tekan (B) dua kali untuk kembali ke menu utama
 
@@ -132,21 +132,21 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
 1. Tahan (R) dan tekan (Start) bersamaan untuk matikan daya konsol
 2. Nyalakan daya konsol ke SysNAND
 3. Lakukan cara berikut untuk memulihkan simpanan tiap permainan GBA VC yang diinginkan:
-   - Buka permainan GBA VC
-   - Keluar dari GBA VC
-   - Nyalakan konsol selagi menahan (Start) untuk ke menu Luma3DS chainloader
-   - Masuk ke GodMode9 dengan menekan (A)
-   - Navigasi ke `[0:] SDCARD` -> `gm9`
-   - Tekan (Y) pada `<TitleID>.gbavc.sav` yang ingin dipulihkan untuk disalin
-   - Tekan (B) untuk kembali ke menu utama
-   - Navigasi ke `[S:] SYSNAND VIRTUAL`
-   - Tekan (A) pada `agbsave.bin` untuk pilih
-   - Pilih "AGBSAVE options..."
-   - Pilih "Inject GBA VC save"
-   - Tekan (A) untuk lanjut
-   - Tekan (Start) untuk nyalakan ulang konsol
-   - Buka permainan GBA VC
-   - Keluar dari GBA VC
+    - Buka permainan GBA VC
+    - Keluar dari GBA VC
+    - Nyalakan konsol selagi menahan (Start) untuk ke menu Luma3DS chainloader
+    - Masuk ke GodMode9 dengan menekan (A)
+    - Navigasi ke `[0:] SDCARD` -> `gm9`
+    - Tekan (Y) pada `<TitleID>.gbavc.sav` yang ingin dipulihkan untuk disalin
+    - Tekan (B) untuk kembali ke menu utama
+    - Navigasi ke `[S:] SYSNAND VIRTUAL`
+    - Tekan (A) pada `agbsave.bin` untuk pilih
+    - Pilih "AGBSAVE options..."
+    - Pilih "Inject GBA VC save"
+    - Tekan (A) untuk lanjut
+    - Tekan (Start) untuk nyalakan ulang konsol
+    - Buka permainan GBA VC
+    - Keluar dari GBA VC
 
 ### Bagian VII - Mencadang SysNAND
 
@@ -165,7 +165,7 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
 1. Tahan (R) dan tekan (B) bersamaan untuk mengeluarkan kartu SD
 2. Sisipkan kartu SD ke komputer Anda
 3. Salin balik semua berkas ke kartu SD
-   - Pastikan sudah menimpa `boot.firm` di kartu SD dengan berkas dari cadangan tadi
+    - Pastikan sudah menimpa `boot.firm` di kartu SD dengan berkas dari cadangan tadi
 4. Sisip kembali kartu SD ke konsol
 5. Tekan (A) untuk me-_mount_ ulang kartu SD
 6. Tekan (Start) untuk nyalakan ulang
