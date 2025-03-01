@@ -1,6 +1,6 @@
 # Troubleshooting (MSET9)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (MSET9)", "Installing boot9strap (MSET9 CLI)" and "Installing boot9strap (MSET9 Play Store)" pages. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (MSET9)", "Memasang boot9strap (MSET9 CLI)", dan "Memasang boot9strap (MSET9 Play Store)". Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ## MSET9 (application / script)
 
@@ -52,7 +52,7 @@ Ensure that you have reset the title database.
 
 - Mohon nyalakan daya konsol dengan kartu SD disisip
 - Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
-  - Ini tidak akan menghapus data
+    - Ini tidak akan menghapus data
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
@@ -65,7 +65,7 @@ If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
 2. Type `2` then press enter to check the MSET9 status
-   - This will create the dummy databases again
+    - This will create the dummy databases again
 3. Close the MSET9 script window
 4. Start again from [Section I Step 12](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
 
@@ -73,7 +73,7 @@ If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 :::: details Error 01: Couldn't find Nintendo 3DS folder
 
-You are not running MSET9 from the root of the SD card, or the SD card is missing the Nintendo 3DS folder.
+MSET9 tidak dijalankan dari _root_ (akar) kartu SD, atau tidak ada folder Nintendo 3DS di kartu SD.
 
 Remember, your SD card should look like this:
 
@@ -106,12 +106,12 @@ You have multiple ID0 folders. To determine the correct folder, follow these ins
 2. Sisip kembali kartu SD ke konsol
 3. Nyalakan daya konsol
 4. Wait for the console to generate the SD card data
-   - Your applications will have disappeared. This is normal and will be resolved shortly
+    - Your applications will have disappeared. This is normal and will be resolved shortly
 5. Matikan daya konsol
 6. Sisipkan kartu SD ke komputer Anda
 7. Navigate to the `Nintendo 3DS` folder on your SD card
 8. Write down the first few characters of the folder you see
-   - This is your true ID0, which we will keep in the real Nintendo 3DS folder
+    - This is your true ID0, which we will keep in the real Nintendo 3DS folder
 9. Delete the ID0 from the current `Nintendo 3DS` folder
 10. Move the true ID0 folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
 11. If it exists, move the `Private` folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
@@ -136,7 +136,7 @@ At the end of this guide, you will need at least 1.3GB to make a NAND backup, so
 
 :::details Error 07: One or more files are missing or malformed!
 
-One or more files that MSET9 needs to run is missing or corrupted. Re-download the [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest) and extract it to the root of your SD card, replacing all existing files, then try again.
+Satu atau lebih berkas yang MSET9 perlu jalankan hilang atau rusak. Re-download the [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest) and extract it to the root of your SD card, replacing all existing files, then try again.
 
 :::
 
@@ -150,7 +150,7 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 
 :::details Layar merah setelah menyisip kartu SD (Bagian II Langkah 11)
 
-Mungkin belum ditaruh `SafeB9S.bin` di akar kartu SD, atau berkasnya rusak. Salin `SafeB9S.bin` dari `.zip` MSET9, timpa berkas yang ada lalu ikuti instruksi ini untuk menghapus _trigger file_ (berkas pemicu):
+Mungkin belum ada `SafeB9S.bin` di akar kartu SD, atau berkasnya rusak. Salin `SafeB9S.bin` dari `.zip` MSET9, timpa berkas yang ada lalu ikuti instruksi ini untuk menghapus _trigger file_ (berkas pemicu):
 
 1. Matikan paksa daya konsol dengan menahan tombol Power selama 20 detik
 2. Sisipkan kartu SD ke komputer Anda
@@ -158,8 +158,8 @@ Mungkin belum ditaruh `SafeB9S.bin` di akar kartu SD, atau berkasnya rusak. Sali
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
-   - Keadaan saat ini seharusnya [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+    - Keadaan saat ini seharusnya [Injected](/images/screenshots/mset9/mset9-injected.png)
+    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
@@ -187,8 +187,8 @@ Follow these instructions to remove the trigger file and to retry Section II:
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
-   - Keadaan saat ini seharusnya [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
+    - Keadaan saat ini seharusnya [Injected](/images/screenshots/mset9/mset9-injected.png)
+    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
@@ -204,13 +204,13 @@ If you continue to have this issue and are sure that you did everything correctl
 
 :::
 
-:::details An exception occurred after triggering MSET9
+:::details "An exception occurred" setelah MSET9 aktif
 
-This likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
+Ini mungkin menandakan sudah ada _custom firmware_. Coba [periksa CFW](checking-for-cfw).
 
 :::
 
-## Issues with SafeB9SInstaller
+## Isu dengan SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
@@ -222,14 +222,16 @@ This likely indicates that you already have custom firmware. You should [check f
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
+Kembali ke [Memasang boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
 
 :::
 
 ::: tip
 
-Go back to [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
+Kembali ke [Memasang boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
 
 :::
 
 <!--@include: ./_include/troubleshooting-return.md -->
+
+
