@@ -1,36 +1,36 @@
-# Troubleshooting (super-skaterhax)
+# Sidik Gangguan (super-skaterhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (super-skaterhax)" page. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (super-skaterhax)". Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (super-skaterhax)" page. If you are using **anything other than** a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser) instead.
+Instruksi ini hanya berlaku jika mengikuti laman "Memasang boot9strap (super-skaterhax)". Jika punya konsol **yang bukan New 3DS** di versi **11.15.0 sampai 11.17.0**, maka ikuti saja [instruksi sidik gangguan Memasang boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser).
 
 :::
 
-## Issues with super-skaterhax
+## Isu dengan super-skaterhax
 
 :::details "An error has occurred. Please save your data in any software currently in use, then restart the system."
 
-If no colors flash after pressing "GO GO!":
+Jika tidak berkelip warna setelah menekan "GO GO!":
 
-- Ensure that you have set your system date and [region](/images/screenshots/skaterhax/skater-lang.png) correctly
-- Ensure that no other browser tabs are open, then restart the browser and try the exploit again
+- Pastikan tidak salah mengatur tanggal dan [daerah konsol](/images/screenshots/skaterhax/skater-lang.png)
+- Pastikan di Browser tidak terbuka tab lain, lalu buka ulang Browser dan coba lagi eksploit
 
-If the screen flashes colors then freezes/crashes:
+Jika layar berkelip warna lalu macet/mogok:
 
-- Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
-- Try resetting your browser data:
-  1. Launch the browser, then launch the browser settings
-  2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-  3. Try the exploit again
-- Try changing the system language to something other than the current language
+- Pastikan berkas `arm11code.bin` dan `browserhax_hblauncher_ropbin_payload.bin` sudah benar sesuai versi dan daerah konsol
+- Coba atur ulang data Browser:
+    1. Buka Browser, lalu buka pengaturan Browser
+    2. Gulir ke bawah dan pilih "Reset Save Data" (bisa jadi disebut "Initialize Save Data" atau "Clear All Save Data")
+    3. Coba ulang eksploit
+- Coba ubah bahasa sistem ke yang lain selain bahasa yang sekarang
 
 :::
 
-:::: details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+:::: details "An error has occurred. Hold down the POWER button to turn off the power..." (layar hitam dengan teks)
 
-The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of the [latest version of super-skaterhax](https://skater.nintendohomebrew.com/) for your region and version to the root of your SD card (not inside of a folder).
+Berkas `arm11code.bin` belum ada atau salah taruh. Pastikan yang disalin itu [versi terkini super-skaterhax](https://skater.nintendohomebrew.com/) sesuai daerah dan versi konsol ke akar kartu SD (bukan di dalam folder).
 
 ::: info
 
@@ -40,13 +40,13 @@ The file `arm11code.bin` is missing or misplaced. Make sure to copy the files of
 
 ::::
 
-:::details An exception occured or "DLL_HEAP_INFORMATION" when pressing GO! GO!
+:::details "An exception occured" atau "DLL_HEAP_INFORMATION" saat menekan GO! GO!
 
-This likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
+Ini mungkin menandakan sudah ada _custom firmware_. Coba [periksa CFW](checking-for-cfw).
 
 :::
 
-## Issues with SafeB9SInstaller
+## Isu dengan SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
@@ -58,7 +58,7 @@ This likely indicates that you already have custom firmware. You should [check f
 
 ::: tip
 
-Go back to [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+Kembali ke [Memasang boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
 
 :::
 
