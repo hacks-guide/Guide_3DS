@@ -1,6 +1,6 @@
 # Troubleshooting (Finalizing Setup)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Finalizing Setup" page. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Penyiapan Akhir". Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ## Issues with Finalizing Setup
 
@@ -76,7 +76,7 @@ Now that you have your NAND backup in a safe place:
 4. Pilih "Scripts..."
 5. Pilih "finalize"
 6. Continue the script as normal
-   - The NAND backup will be automatically skipped
+    - The NAND backup will be automatically skipped
 
 :::
 
@@ -114,14 +114,14 @@ Ensure that your SD card is not [locked](/images/sdlock.png). If the SD card is 
 
 :::details Information #17: Duplicate NAND backup
 
-The script has detected that the Nintendo 3DS folder is missing AND that you have already made a NAND backup before. If you intend to install homebrew applications, you should do the following:
+Naskahnya mendeteksi folder Nintendo 3DS tidak ada _DAN_ ternyata sudah pernah mencadang NAND. If you intend to install homebrew applications, you should do the following:
 
 1. Press (B) to cancel making another NAND backup
 2. Tahan (R) dan tekan (Start) bersamaan untuk matikan daya konsol
 3. Salin isi folder `/gm9/backups/` ke letak yang aman di komputer Anda
 4. Delete `/gm9/backups/` from your SD card
 5. If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
-   - Jika tidak punya folder Nintendo 3DS, nyalakan konsol ke HOME Menu setidaknya sekali dengan kartu SD untuk membuatnya
+    - Jika tidak punya folder Nintendo 3DS, nyalakan konsol ke HOME Menu setidaknya sekali dengan kartu SD untuk membuatnya
 6. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 7. Tekan (Home) untuk membuka menu tindakan
 8. Pilih "Scripts..."
