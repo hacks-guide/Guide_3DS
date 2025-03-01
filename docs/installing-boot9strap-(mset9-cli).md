@@ -34,7 +34,7 @@ On this page, you will use the MSET9 script, which is used to trigger MSET9. Whi
 In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
 1. Insert your SD card into your computer
-1. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files
+1. Copy everything from the MSET9 `.zip` to the root of your SD card, alongside your existing `Nintendo 3DS` directory (necessary for the MSET9 exploit to work) and the other existing  directories, overwriting existing files if asked by your file manager while copying (probably meaning you already had an older version of them), the result shoud look something like this:  
 
     ::: info
 
