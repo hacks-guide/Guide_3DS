@@ -51,20 +51,20 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Salin folder `Nintendo 3DS` dari akar kartu SD ke komputer Anda
-4. Delete the Nintendo 3DS folder from the SD card
+3. **Salin folder `Nintendo 3DS` dari akar kartu SD ke komputer Anda**
+4. Hapus folder `Nintendo 3DS` dari kartu SD
 5. Sisip kembali kartu SD ke konsol
 6. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-7. Press the (Home) button
+7. Tekan tombol (Home)
 8. Pilih "Scripts..."
 9. Pilih "finalize"
-10. Press (A) to create a NAND backup
-    - This may take around fifteen minutes
-11. Press (A) again
-    - The console should automatically power off
+10. Tekan (A) untuk mencadang NAND
+    - Ini akan lama sekitar lima belas menit
+11. Tekan (A) lagi
+    - Konsol seharusnya otomatis mati daya
 12. Sisipkan kartu SD ke komputer Anda
-13. Copy the files in `/gm9/backups/` on your SD to a safe location on your computer
-14. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card
+13. **Salin isi folder `/gm9/backups/` di kartu SD ke letak yang aman di komputer**
+14. Hapus berkas `<date>_<serialnumber>_sysnand_##.bin` dan `<date>_<serialnumber>_sysnand_##.bin.sha` dari kartu SD
 15. Salin folder `Nintendo 3DS` dari komputer Anda ke akar kartu SD
 16. Hapus folder `Nintendo 3DS` dari komputer Anda
 
@@ -72,7 +72,7 @@ Now that you have your NAND backup in a safe place:
 
 1. Sisip kembali kartu SD ke konsol
 2. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-3. Press the (Home) button
+3. Tekan tombol (Home)
 4. Pilih "Scripts..."
 5. Pilih "finalize"
 6. Continue the script as normal
@@ -92,8 +92,8 @@ Make sure you have at least 1.3GB available in your SD card. If you don't have e
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Salin folder `Nintendo 3DS` dari akar kartu SD ke komputer Anda
-4. Delete the Nintendo 3DS folder from the SD card
+3. **Salin folder `Nintendo 3DS` dari akar kartu SD ke komputer Anda**
+4. Hapus folder `Nintendo 3DS` dari kartu SD
 5. Sisip kembali kartu SD ke konsol
 6. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 7. Perform a [NAND Backup](godmode9-usage#creating-a-nand-backup)
