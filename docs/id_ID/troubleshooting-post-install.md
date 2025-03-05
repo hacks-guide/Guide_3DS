@@ -1,6 +1,6 @@
-# Troubleshooting (Post-Install)
+# Sidik Gangguan (Setelah Pasang)
 
-This page offers troubleshooting advice for commonly encountered issues after custom firmware is installed. Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui setelah _custom firmware_ dipasang. Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ## Boot issues
 
