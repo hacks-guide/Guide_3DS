@@ -140,7 +140,7 @@ Berkas yang akan diminta unduh biasanya `.zip`, ini format untuk mengemas banyak
 
 Jika disuruh "menyalin (berkas) dari (berkas).zip", berarti harus membuka (atau "ekstrak") berkas ZIP dulu. Sesudah menemukan berkas di dalam berkas ZIP, salin ke letak yang ditentukan di kartu SD.
 
-Di hampir semua sistem operasi, berkas bisa diekstrak dengan pencet dua kali. Jika itu tidak bisa, boleh saja pasang alat ekstraksi pihak ketiga ternama seperti [7-zip](https://7-zip.org/).
+Di hampir semua sistem operasi, berkas bisa diekstrak dengan pencet dua kali. Jika itu tidak bisa, gunakan saja alat ekstraksi pihak ketiga ternama seperti [7-zip](https://7-zip.org/).
 
 ::::
 
