@@ -40,11 +40,11 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan super-skaterhax dan Homebre
 
 3. Salin semua isi berkas `.zip` Super-skaterhax ke akar kartu SD, timpa berkas yang ada
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/skaterhax/skater-root-layout.png)
+    ![](/images/screenshots/skaterhax/skater-root-layout.png)
 
-   :::
+    :::
 
 4. Sisip kembali kartu SD ke konsol
 
@@ -55,15 +55,15 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan super-skaterhax dan Homebre
 7. Pilih "Other Settings"
 
 8. Navigasi ke "Profile" -> "Region Settings"
-   - Pengaturan ini akan kita ubah sementara untuk meningkatkan keberhasilan eksploit
-   - Pengaturan daerah bisa dikembalikan ke biasa lagi setelah selesai dari laman ini
-   - Jika muncul [peringatan](/images/screenshots/skaterhax/country-change-notice.png) akan kehilangan akses fitur Nintendo Network ID, ini aman menekan OK untuk lanjut
+    - Pengaturan ini akan kita ubah sementara untuk meningkatkan keberhasilan eksploit
+    - Pengaturan daerah bisa dikembalikan ke biasa lagi setelah selesai dari laman ini
+    - Jika muncul [peringatan](/images/screenshots/skaterhax/country-change-notice.png) akan kehilangan akses fitur Nintendo Network ID, ini aman menekan OK untuk lanjut
 
 9. Pilih opsi berikut disesuaikan dengan daerah konsol ([gambar](/images/screenshots/skaterhax/skater-lang.png))
-   - USA: United States, Do Not Set
-   - EUR: United Kingdom, Do Not Set
-   - JPN: 日本, 設定しない
-   - KOR: 대한민국, 설정하지 않음
+    - USA: United States, Do Not Set
+    - EUR: United Kingdom, Do Not Set
+    - JPN: 日本, 設定しない
+    - KOR: 대한민국, 설정하지 않음
 
 10. Keluar dari System Settings
 
@@ -78,21 +78,21 @@ Jika sekiranya belum, pastikan konsol sudah tersambung ke internet.
 :::
 
 1. Saat di HOME Menu, tekan tombol L dan R bersamaan untuk membuka kamera
-   - Jika tidak bisa membuka kamera, buka Internet Browser dan coba ketik sendiri URL `https://zoogie.github.io/web/super/` untuk EUR/USA/JPN; atau `https://zoogie.github.io/web/korea` untuk KOR
+    - Jika tidak bisa membuka kamera, buka Internet Browser dan coba ketik sendiri URL `https://zoogie.github.io/web/super/` untuk EUR/USA/JPN; atau `https://zoogie.github.io/web/korea` untuk KOR
 2. Sentuh tombol kode QR dan pindai salah satu kode QR berikut sesuai daerah konsol di [sini](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
-   - Jika ada peringatan sertifikat keamanan, pastikan tanggal sistem itu hari ini
+    - Jika ada peringatan sertifikat keamanan, pastikan tanggal sistem itu hari ini
 3. Tekan (Select) untuk membuka tab markah
-   - Jika tombol (Select) tidak tanggap, sentuh ikon bintang di pojok kiri-bawah layar
+    - Jika tombol (Select) tidak tanggap, sentuh ikon bintang di pojok kiri-bawah layar
 4. Sentuh "Bookmark this page"
 5. Tekan (B) sekali untuk kembali ke Browser
 6. Tekan (ZR) untuk membuka daftar tab
-   - Jika tombol (ZR) tidak tanggap, sentuh gambar dua kotak bertumpuk di pojok kanan-bawah layar
+    - Jika tombol (ZR) tidak tanggap, sentuh gambar dua kotak bertumpuk di pojok kanan-bawah layar
 7. Pastikan tab yang terbuka hanya situs super-skaterhax
-   - Tab ini harus bersorot warna biru di daftar tab
-   - Tutup tab yang lain jika ada
+    - Tab ini harus bersorot warna biru di daftar tab
+    - Tutup tab yang lain jika ada
 8. Tekan (B) sekali untuk kembali ke Browser
 9. Tekan (Start) untuk membuka menu konteks
-   - Jika tombol (Start) tidak tanggap, sentuh menu 3-garis di pojok kanan-bawah layar
+    - Jika tombol (Start) tidak tanggap, sentuh menu 3-garis di pojok kanan-bawah layar
 10. Sentuh "Settings"
 11. Sentuh "Delete Cookies"
 12. Tekan (A) untuk lanjut
@@ -104,7 +104,7 @@ Jika sekiranya belum, pastikan konsol sudah tersambung ke internet.
     - Jika [ada tulisan "Text" di pojok kiri-atas layar bawah](/images/screenshots/skaterhax/skater-old3ds.png), berarti konsol Anda Old 3DS dan eksploit ini **tidak berfungsi di konsol tersebut**. Jika begitu, maka ikuti saja [MSET9](installing-boot9strap-\(mset9\))
     - Jika muncul galat lain, coba lagi hingga 5 kali, dan jika masih galat, [ikuti panduan sidik gangguan ini](troubleshooting-super-skaterhax)
 16. Konsol akan menyala ke Homebrew Launcher
-17. Buka nimdsphax dari daftar _homebrew_
+17. Buka nimdsphax dari Homebrew Launcher
 18. Jika eksploit berhasil akan muncul SafeB9SInstaller
     - Jika konsolnya macet di layar merah atau hijau, tahan tombol POWER sampai daya mati, lalu coba lagi bagian ini
     - Ini mungkin perlu dicoba lima kali
@@ -114,7 +114,7 @@ Jika sekiranya belum, pastikan konsol sudah tersambung ke internet.
 Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
-   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-super-skaterhax)
+    - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-super-skaterhax)
 2. Saat selesai, tekan (A) untuk nyalakan ulang konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->
