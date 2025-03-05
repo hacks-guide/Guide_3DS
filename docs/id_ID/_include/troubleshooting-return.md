@@ -1,5 +1,5 @@
 ::: tip
 
-Go back to [Troubleshooting](troubleshooting)
+Kembali ke [Sidik Gangguan](troubleshooting)
 
 :::

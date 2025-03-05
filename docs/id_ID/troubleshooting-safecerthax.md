@@ -1,4 +1,4 @@
-# Troubleshooting (safecerthax)
+# Sidik Gangguan (safecerthax)
 
 Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (safecerthax)". Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
@@ -14,7 +14,7 @@ Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti
 
 ::: tip
 
-Go back to [Installing boot9strap (safecerthax)](installing-boot9strap-\(safecerthax\))
+Kembali ke [Memasang boot9strap (safecerthax)](installing-boot9strap-\(safecerthax\))
 
 :::
 
