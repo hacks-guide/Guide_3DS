@@ -2,99 +2,99 @@
 
 Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui setelah _custom firmware_ dipasang. Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
-## Boot issues
+## Isu awal nyala
 
 ::: info
 
-The steps detailed here generally assume that your console has a modern custom firmware setup (boot9strap + Luma3DS 8.0 or greater). If your console is running an older homebrew setup (for example, something based on arm9loaderhax or menuhax), you should update your setup before trying these instructions.
+Konsol harus sudah ada penyiapan CFW modern (boot9strap + Luma3DS 8.0 ke atas) untuk langkah di sini. Jika konsol ada di CFW lawas (contoh, yang berdasar arm9loaderhax atau menuhax), maka perbarui dulu penyiapan CFW konsol sebelum mencoba instruksi ini.
 
 :::
 
-### Power/notification light indicators
+### Lampu LED daya/pemberitahuan
 
-:::details My console powers off when I try to turn it on, and/or the notification LED shows a color on boot
+:::details Konsol selalu mati daya saat dinyalakan, dan/atau muncul LED pemberitahuan saat menyala
 
-There is an issue with your `boot.firm` file. If you're running [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), your 3DS notification LED may flash a certain color. This color is used to diagnose issues involving your `boot.firm` file on SD card or internal memory. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the console.
+Ada yang salah dengan berkas `boot.firm`. Jika masih di [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), LED pemberitahuan 3DS mungkin berkelip warna tertentu. Warna ini untuk memberi tahu masalah terkait `boot.firm` di kartu SD atau memori internal. Pada versi lama dari boot9strap, lampu biru akan mati hampir seketika saat mencoba menyalakan konsol.
 
-If the notification LED flashes:
+Jika LED pemberitahuan berkelip:
 
-- **White**: Your 3DS was not able to find `boot.firm` on your SD card or on internal memory.
-- **Magenta**: Your 3DS was not able to find `boot.firm` on your SD card. It was able to find `boot.firm` on internal memory, but the file is corrupted.
-- **Red**: Your 3DS was able to find `boot.firm` on both your SD card and on internal memory, but both files are corrupted.
+- **Putih**: 3DS tidak ketemu `boot.firm` di kartu SD atau memori internal.
+- **Magenta**: 3DS tidak ketemu `boot.firm` di kartu SD. Lalu ketemu `boot.firm` di memori internal, tapi berkasnya rusak.
+- **Merah**: 3DS ketemu `boot.firm` di kartu SD dan memori internal, tapi kedua berkasnya rusak.<br>**Jingga**: 3DS ketemu `boot.firm` rusak di kartu SD, tapi `boot.firm` masih aman di memori internal.<br>**Kuning**: 3DS tidak ketemu `boot.firm` di kartu SD, tapi `boot.firm` masih aman di memori internal.<br>**Hijau**: 3DS ketemu `boot.firm` di kartu SD dan memori internal, dan kedua berkasnya aman.
 
-You can get a new `boot.firm` file by downloading the [latest release of Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extracting it, and placing `boot.firm` on the root of your SD card. If your `boot.firm` file is consistently being detected as corrupted, you may want to check your SD card for errors ([Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), or [macOS](f3xswift-\(mac\))). Also, note that the 3DS tends to have issues with files extracted using WinRAR.
+Berkas `boot.firm` yang baru bisa didapat dengan [mengunduh versi terkini dari Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), diekstrak, dan taruh `boot.firm` di akar kartu SD. Jika berkas `boot.firm` selalu terdeteksi rusak, coba periksa galat di kartu SD ([Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), atau [macOS](f3xswift-\(mac\))). Perlu diingat, 3DS sering ada isu dengan berkas yang diekstrak WinRAR.
 
-If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your console (such as a disconnected backlight cable). You may be able to get your console to boot by holding it at certain angles.
+Jika terdengar "bunyi letup", dan mungkin juga cahaya belakang layar menyala per sekian detik, berarti ada isu dengan fisik konsol (seperti kabel _backlight_ longgar). Mungkin konsol bisa dinyalakan jika dimiringkan di sudut tertentu.
 
 :::
 
-:::details My console gets stuck on a black screen with blue power light staying on
+:::details Konsol tersangkut di layar hitam tapi lampu LED biru menyala terus
 
-The steps below can be attempted in any order, but are listed from least to most time-consuming.
+Langkah di bawah ini bisa dicoba dari urutan mana saja, diurutkan dari instruksi tercepat ke terlama.
 
-1. Power off your console, remove the SD card, re-insert it, then power on your console.
-2. Matikan daya konsol, keluarkan kartrid jika ada, nyalakan daya konsol, lalu tunggu sepuluh menit. If your console boots within ten minutes, the issue has been fixed and is unlikely to reoccur
-3. Rename the `Nintendo 3DS` folder on your SD card to `Nintendo 3DS_BACKUP`, then attempt to boot. If your console successfully boots, there is some issue within your `Nintendo 3DS` folder. Try clearing HOME Menu extdata:
-    - Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-    - Delete the corresponding folder for your 3DS region:
-        - **EUR Region**: `00000098`
-        - **JPN Region**: `00000082`
-        - **USA Region**: `0000008f`
-        - **CHN Region**: `000000A1`
-        - **KOR Region**: `000000A9`
-        - **TWN Region**: `000000B1`
-4. Try booting into recovery mode and updating your system:
+1. Matikan daya konsol, lepas kartu SD, sisip kembali, lalu nyalakan ulang konsol.
+2. Matikan daya konsol, keluarkan kartrid jika ada, nyalakan daya konsol, lalu tunggu sepuluh menit. Jika konsol menyala dalam kurun 10 menit, berarti isu sudah diperbaiki dan tidak akan terulang
+3. Ubah nama folder `Nintendo 3DS` di kartu SD menjadi `Nintendo 3DS_BACKUP`, lalu coba nyalakan. Jika konsol berhasil menyala biasa, berarti ada yang salah dengan folder `Nintendo 3DS`. Coba hapus extdata HOME Menu:
+    - Navigasi ke `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+    - Hapus satu folder sesuai daerah konsol 3DS:
+        - **Daerah EUR**: `00000098`
+        - **Daerah JPN**: `00000082`
+        - **Daerah USA**: `0000008f`
+        - **Daerah CHN**: `000000A1`
+        - **Daerah KOR**: `000000A9`
+        - **Daerah TWN**: `000000B1`
+4. Coba masuk ke Recovery Mode dan perbarui konsol:
     - Matikan daya konsol
-    - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
+    - Tahan (L) + (R) + (Tombol Atas) + (A)
     - Nyalakan daya konsol
-    - If you were successful, the console will boot to an "update your system" screen
-5. Follow the [CTRTransfer](ctrtransfer) guide
-6. For further support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+    - Jika berhasil, konsol akan menyala ke layar "update your system"
+5. Ikuti panduan [CTRTransfer](ctrtransfer)
+6. Untuk bantuan lebih lanjut, minta di [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp)
 
 :::
 
-### Error message on boot
+### Pesan galat di awal nyala
 
-:::details "An error has occurred: Failed to apply 1 FIRM patch(es)" or "An exception has occurred -- Current process: pm"
+:::details "An error has occurred: Failed to apply 1 FIRM patch(es)" atau "An exception has occurred -- Current process: pm"
 
-Your Luma3DS version is outdated. Download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) and place `boot.firm` on the root of your SD card, replacing any existing file. Make sure you are extracting the ZIP file with any tool other than WinRAR, as it is known to cause issues with 3DS-related files.
+Versi Luma3DS sudah usang. Unduh versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) dan taruh `boot.firm` di akar kartu SD, timpa berkas yang ada. Pastikan mengekstrak ZIP dengan alat apa pun _selain_ WinRAR, karena bermasalah dengan berkas untuk 3DS.
 
 :::
 
 :::details "Unable to mount CTRNAND or load the CTRNAND FIRM. Please use an external one."
 
-There are a number of reasons as to why this could be happening. In any case, this error can usually be fixed by following the [CTRTransfer](ctrtransfer) guide.
+Ada beberapa alasan kenapa ini bisa terjadi. Apa pun itu, galat ini biasanya bisa diperbaiki dengan panduan [CTRTransfer](ctrtransfer).
 
 :::
 
 :::details "An error has occurred. Hold down the POWER button to turn off the power..."
 
-ARM11 exception handlers are disabled, or custom firmware is not installed. Try enabling ARM11 exception handlers:
+Penangan pengecualian ARM11 dinonaktifkan, atau belum ada _custom firmware_. Coba aktifkan penangan pengecualian ARM11:
 
 - Matikan daya konsol
-- Hold (Select)
-- Power on your console, while still holding (Select)
-- If the "Disable ARM11 exception handlers" box is checked, uncheck it
+- Tahan (SELECT)
+- Nyalakan daya konsol selagi menahan (SELECT)
+- Jika "Disable ARM11 exception handlers" dicentang, lepas centangnya
 
 :::
 
 :::details Aplikasi terpasang menghilang di HOME Menu
 
-This could be caused by various reasons, but most likely because your SD card is not being read by the system.
-You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your console is booting from the internal memory and not from the SD card.
-If this is the case, attempt the steps below, which are listed from easiest to hardest:
+Ini bisa disebabkan dari banyak hal, tapi ini bisa jadi karena kartu SD tidak terbaca konsol.
+Kartu SD bisa diperiksa apakah terbaca dengan menahan SELECT di awal nyala dan lihat teks kuning di layar bawah; jika bertulis "Booted from CTRNAND via B9S", berarti konsol di-_boot_ dari memori internal dan bukan kartu SD.
+Jika seperti itu, coba langkah di bawah ini; diurut dari yang termudah ke tersusah:
 
-1. Power off your console, remove the SD card, re-insert it, then power on your console
-2. Power off your console, remove the SD card, insert it on your computer, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
-3. Power off your console, remove the SD card, insert it on your computer and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)) _(this will wipe your SD card data)_
-4. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)). If your SD card is marked as faulty, then you will have to replace your SD card
-5. Your SD card slot may be broken. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance
+1. Matikan daya konsol, lepas kartu SD, sisip kembali, lalu nyalakan ulang konsol
+2. Matikan daya konsol, lepas kartu SD, sisipkan ke komputer Anda, unduh versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), lalu ekstrak `boot.firm` dari `Luma3DS.zip` dan taruh di akar kartu SD (timpa berkas yang ada)
+3. Matikan daya konsol, lepas kartu SD, sisipkan ke komputer Anda dan format ulang kartu SD sesuai OS komputer: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)) _(ini akan mengosongkan data kartu SD)_
+4. Uji kegalatan di kartu SD dengan mengikuti panduan sesuai OS komputer: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)). Jika kartu SD disebut "faulty", berarti harus mengganti kartu SD
+5. Slot kartu SD mungkin rusak. Gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) untuk bantuan lanjut
 
 :::
 
-:::details Blue "BOOTROM ERROR" screen
+:::details Layar biru "BOOTROM ERROR"
 
-Your console is likely hard-bricked. You will need to buy an ntrboot flashcart to reinstall boot9strap in order to attempt to fix your console. This may also indicate a hardware issue that cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Konsol kemungkinan matot fisik (_hard-brick_). Berarti harus beli _flashcart_ ntrboot untuk memasang ulang boot9strap dan memperbaiki konsol. This may also indicate a hardware issue that cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
 
 - It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your console powered on, waiting on the blue screen, for five minutes.
 
@@ -156,41 +156,41 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 
 :::
 
-## Other troubleshooting
+## Sidik gangguan yang lain
 
-:::details Clear HOME Menu extdata
+:::details Menghapus extdata HOME Menu
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
-4. Delete the corresponding folder for your 3DS region:
-    - **EUR Region**: `00000098`
-    - **JPN Region**: `00000082`
-    - **USA Region**: `0000008f`
-    - **CHN Region**: `000000A1`
-    - **KOR Region**: `000000A9`
-    - **TWN Region**: `000000B1`
+3. Navigasi ke folder `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` di kartu SD
+4. Hapus satu folder sesuai daerah konsol 3DS:
+    - **Daerah EUR**: `00000098`
+    - **Daerah JPN**: `00000082`
+    - **Daerah USA**: `0000008f`
+    - **Daerah CHN**: `000000A1`
+    - **Daerah KOR**: `000000A9`
+    - **Daerah TWN**: `000000B1`
 5. Sisip kembali kartu SD ke konsol
 
 :::
 
-:::details Clear HOME Menu theme data
+:::details Menghapus data tema HOME Menu
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
-4. Delete the corresponding folder for your 3DS region:
-    - **EUR Region**: `000002ce`
-    - **JPN Region**: `000002cc`
-    - **USA Region**: `000002cd`
-    - **KOR Region**: `000002cf`
+3. Navigasi ke folder `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` di kartu SD
+4. Hapus satu folder sesuai daerah konsol 3DS:
+    - **Daerah EUR**: `000002ce`
+    - **Daerah JPN**: `000002cc`
+    - **Daerah USA**: `000002cd`
+    - **Daerah KOR**: `000002cf`
 5. Sisip kembali kartu SD ke konsol
 
 :::
 
-:::details Manually entering Homebrew Launcher
+:::details Urus sendiri masuk ke Homebrew Launcher
 
-Jika Homebrew Launcher menghilang dari HOME Menu, ikuti instruksi ini untuk urus sendiri masuk ke Homebrew Launcher. (You will need [boot.3dsx and boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) on the root of your SD card.)
+Jika Homebrew Launcher menghilang dari HOME Menu, ikuti instruksi ini untuk urus sendiri masuk ke Homebrew Launcher. (Perlu berkas [boot.3dsx dan boot.firm](https://github.com/LumaTeam/Luma3DS/releases/latest) di akar kartu SD.)
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
