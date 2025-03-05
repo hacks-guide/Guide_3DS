@@ -1,12 +1,12 @@
 # Sidik Gangguan (Setelah Pasang)
 
-Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui setelah _custom firmware_ dipasang. Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui setelah _custom firmware_ dipasang. Jika saran dari laman ini tidak menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ## Isu awal nyala
 
 ::: info
 
-Konsol harus sudah ada penyiapan CFW modern (boot9strap + Luma3DS 8.0 ke atas) untuk langkah di sini. Jika konsol ada di CFW lawas (contoh, yang berdasar arm9loaderhax atau menuhax), maka perbarui dulu penyiapan CFW konsol sebelum mencoba instruksi ini.
+Konsol harus sudah terpasang CFW modern (boot9strap + Luma3DS 8.0 ke atas) untuk langkah di sini. Jika konsol terpasang CFW lawas (contoh, yang berdasar arm9loaderhax atau menuhax), maka perbarui dulu penyiapan CFW konsol sebelum mencoba instruksi ini.
 
 :::
 
@@ -19,7 +19,7 @@ Ada yang salah dengan berkas `boot.firm`. Jika masih di [boot9strap 1.4](https:/
 Jika LED pemberitahuan berkelip:
 
 - **Putih**: 3DS tidak ketemu `boot.firm` di kartu SD atau memori internal.
-- **Magenta**: 3DS tidak ketemu `boot.firm` di kartu SD. Lalu ketemu `boot.firm` di memori internal, tapi berkasnya rusak.
+- **Magenta**: 3DS tidak ketemu `boot.firm` di kartu SD. Masih ketemu `boot.firm` di memori internal, tapi berkasnya rusak.
 - **Merah**: 3DS ketemu `boot.firm` di kartu SD dan memori internal, tapi kedua berkasnya rusak.<br>**Jingga**: 3DS ketemu `boot.firm` rusak di kartu SD, tapi `boot.firm` masih aman di memori internal.<br>**Kuning**: 3DS tidak ketemu `boot.firm` di kartu SD, tapi `boot.firm` masih aman di memori internal.<br>**Hijau**: 3DS ketemu `boot.firm` di kartu SD dan memori internal, dan kedua berkasnya aman.
 
 Berkas `boot.firm` yang baru bisa didapat dengan [mengunduh versi terkini dari Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), diekstrak, dan taruh `boot.firm` di akar kartu SD. Jika berkas `boot.firm` selalu terdeteksi rusak, coba periksa galat di kartu SD ([Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), atau [macOS](f3xswift-\(mac\))). Perlu diingat, 3DS sering ada isu dengan berkas yang diekstrak WinRAR.
@@ -94,65 +94,65 @@ Jika seperti itu, coba langkah di bawah ini; diurut dari yang termudah ke tersus
 
 :::details Layar biru "BOOTROM ERROR"
 
-Konsol kemungkinan matot fisik (_hard-brick_). Berarti harus beli _flashcart_ ntrboot untuk memasang ulang boot9strap dan memperbaiki konsol. This may also indicate a hardware issue that cannot be fixed. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Konsol kemungkinan matot fisik (_hard-brick_). Berarti harus beli _flashcart_ ntrboot untuk memasang ulang boot9strap dan memperbaiki konsol. Mungkin ini bisa juga rusak fisik tak bisa diperbaiki. Apa pun itu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) untuk bantuan.
 
-- It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your console powered on, waiting on the blue screen, for five minutes.
-
-:::
-
-:::details Some other error
-
-Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+- Ini bisa jadi hanya layar _splash_ awal nyala yang sengaja diatur seperti kena matot (_brick_). Coba biarkan konsol menyala lima menit, tunggu _splash_ layar biru selesai.
 
 :::
 
-## Software issues on consoles with custom firmware
+:::details Untuk galat lain
 
-:::details DSi / DS functionality is broken or has been replaced with Flipnote Studio
+Coba fotokan galatnya dan gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) untuk bantuan.
 
-1. Download the latest release of [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (the `.3dsx` file)
+:::
+
+## Isu peranti lunak pada konsol dengan CFW
+
+:::details Konsol DSi / DS tidak berfungsi atau malah muncul Flipnote Studio
+
+1. Unduh versi terkini dari [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (yang berkas `.3dsx`)
 2. Matikan daya konsol
 3. Buat folder dengan nama `3ds` di akar kartu SD jika belum ada
-4. Copy `TWLFix-CFW.3dsx` to the `/3ds/` folder on your SD card
+4. Salin `TWLFix-CFW.3dsx` ke folder `/3ds/` di kartu SD
 5. Sisip kembali kartu SD ke konsol
-6. Open the Homebrew Launcher
-7. Launch TWLFix-CFW from the list of homebrew
-8. Press (A) to uninstall the broken TWL titles
-9. Press (Start) to reboot the console
+6. Buka Homebrew Launcher
+7. Buka TWLFix-CFW dari Homebrew Launcher
+8. Tekan (A) untuk mencopot apli TWL yang rusak
+9. Tekan (Start) untuk nyalakan ulang konsol
 10. Perbarui konsol dengan ke System Settings, ke "Other Settings", lalu ke kanan sampai pojok dan pilih "System Update"
-    - The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them
-11. Once the update is complete, tap "OK" to reboot the console
+    - Pembaruan ini akan mencari TWL esensial yang copot, lalu mengunduh dan memasangnya ulang
+11. Selesai memperbarui, sentuh "OK" untuk nyalakan ulang konsol
 
 :::
 
-:::details GBA Virtual Console and/or Safe Mode functionality is broken
+:::details GBA Virtual Console dan/atau Safe Mode tidak berfungsi
 
-Your console is running Luma3DS 6.6 or older, likely via arm9loaderhax. You should follow [A9LH to B9S](a9lh-to-b9s) to update your console to a modern custom firmware environment.
-
-:::
-
-:::details Permainan mode memori perluasan (Pokemon Sun/Moon, Smash, dll.) don't work
-
-This can occur after a CTRTransfer or region change on Old 3DS / 2DS. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+Konsol ada di Luma3DS 6.6 ke bawah, mungkin dengan arm9loaderhax. Ikuti laman [Dari A9LH ke B9S](a9lh-to-b9s) untuk memperbarui konsol ke penyiapan CFW modern.
 
 :::
 
-:::details Exception screen when booting/loading an application
+:::details Permainan mode memori perluasan (Pokemon Sun/Moon, Smash, dll.) tidak berfungsi
 
-Look for your exception screen in [this page](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
-If you weren't able to find your error or the instructions didn't work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
-
-:::
-
-:::details Opening the HOME Menu settings crashes the console or loads the Homebrew Launcher
-
-Your console likely still has menuhax67 installed. To uninstall menuhax67, download the latest release of [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) (the menuhax `.zip`), then follow the ["Uninstall menuhax67" section](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67) here.
+Ini bisa terjadi setelah CTRTransfer atau mengubah daerah Old 3DS / 2DS. Ikuti [instruksi ini](region-changing#section-vi---fixing-locale-related-issues) untuk memperbaiki isu ini (lewati saja langkah 3, 4, 5, dan 6).
 
 :::
 
-:::details Something else
+:::details Ada galat pengecualian saat memuat/buka aplikasi
 
-Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, and describe the issue that you see.
+Cari maksud layar pengecualian di [laman ini](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
+Jika tidak ketemu maksud galat atau instruksi tidak berhasil, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) untuk bantuan lanjut.
+
+:::
+
+:::details Konsolnya mogok saat membuka pengaturan HOME Menu atau ke Homebrew Launcher
+
+Konsol kemungkinan masih terpasang menuhax67. Untuk mencopot menuhax67, unduh versi terkini dari [menuhax67](https://github.com/zoogie/menuhax67/releases/latest) (yang `.zip` menuhax), lalu ikuti [bagian "Uninstall menuhax67" ini](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits/menuhax67#Uninstall_menuhax67).
+
+:::
+
+:::details Untuk hal lain
+
+Gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) untuk bantuan, dan jelaskan isu yang muncul.
 
 :::
 
@@ -196,18 +196,18 @@ Jika Homebrew Launcher menghilang dari HOME Menu, ikuti instruksi ini untuk urus
 
 :::
 
-:::details Turning off Parental Controls
+:::details Menonaktifkan Parental Controls
 
-You can disable the Parental Controls feature by going to System Settings -> Parental Controls and inserting the PIN, then pressing "Clear Settings", then "Delete" to remove it.
-However, if you do not know the PIN and therefore cannot access the console's settings, you will need to disable it. In order to do this, you need to obtain your console's master key (mkey):
+Fitur Parental Controls bisa dinonaktifkan dengan ke `System Settings` -> `Parental Controls` lalu ketik PIN, dan tekan "Clear Settings", lalu "Delete" untuk hapus.
+Namun, jika tidak tahu kode PIN sehingga tidak bisa ke pengaturan konsol, berarti harus dinonaktifkan. Untuk melakukan ini, perlu kunci induk (mkey) dari konsol:
 
-1. Go to [this website](https://mkey.eiphax.tech/)
-2. Fill the following boxes with the information:
-    - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
-    - System Date: The day and month your console's clock is set to
-    - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
-3. After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key
-4. Press "Clear Settings", then "Delete" to remove all Parental Controls data
+1. Buka [situs ini](https://mkey.eiphax.tech/)
+2. Isi kotak kolom seperti berikut:
+    - Device Type: Pilih "3DS" (untuk konsol 3DS (XL/LL), 2DS, New 3DS (XL/LL), atau New 2DS XL/LL)
+    - System Date: Bulan dan hari yang diatur di konsol
+    - Inquiry Number: Bisa didapat dengan menekan "Forgot PIN" lalu "I Forgot" di layar Parental Controls
+3. Setelah mendapatkan mkey, tekan OK di layar Inquiry Number, lalu masukkan _master key_ (mkey) di 3DS
+4. Tekan "Clear Settings", lalu "Delete" untuk menghapus semua data Parental Controls
 
 :::
 
