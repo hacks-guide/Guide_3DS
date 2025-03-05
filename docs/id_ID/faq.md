@@ -133,7 +133,7 @@ Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan 
 Ini tergantung jenis format aplikasi _homebrew_. Secara umum:
 
 - _Homebrew_ **format CIA** bisa diperbarui dengan memasang CIA baru, ini akan menimpa versi lama. Jika CIA lama tidak tertimpa, hapus dulu di Data Management seperti apli 3DS biasa.
-- _Homebrew_ **format 3DSX** bisa diperbarui dengan mengganti baru berkas 3DSX di `/3ds/`. Jika _homebrew_ terdapat aset tambahan, mungkin harus taruh aset tersebut di folder lain. Coba lihat dokumentasi untuk _homebrew_ tersebut.
+- _Homebrew_ **format 3DSX** bisa diperbarui dengan mengganti baru berkas 3DSX di `/3ds/`. Jika _homebrew_ terdapat aset tambahan, mungkin asetnya harus ditaruh di folder lain. Coba lihat dokumentasi untuk _homebrew_ tersebut.
 - Untuk memperbarui Luma3DS, lihat [laman ini](restoring-updating-cfw). Untuk memperbarui GodMode9, lihat [laman ini](godmode9-usage#updating-godmode9).
 
 :::
