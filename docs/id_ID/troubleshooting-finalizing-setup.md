@@ -1,6 +1,6 @@
 # Sidik Gangguan (Penyiapan Akhir)
 
-Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Penyiapan Akhir". Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Penyiapan Akhir". Jika saran dari laman ini tidak menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ## Isu dengan Penyiapan Akhir
 
