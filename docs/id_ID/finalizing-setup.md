@@ -85,7 +85,7 @@ Di bagian ini akan memperbarui sistem ke versi terbaru, ini aman dilakukan denga
 Di bagian ini akan menyelaraskan jam internal 3DS dengan jam sebenarnya, dan men-_dump firmware_ suara (beberapa _homebrew_ perlu ini untuk menghasilkan suara dengan benar).
 
 1. Tekan (L) + (Tombol Bawah) + (Select) bersamaan untuk membuka menu Rosalina
-   - Jika tombol tersebut ada yang rusak, unduh [config.ini](/assets/config.ini) dan taruh di folder `luma`, timpa berkas yang ada. Ini akan mengubah kombo tombol menu Rosalina ke (X) + (Y)
+    - Jika tombol tersebut ada yang rusak, unduh [config.ini](/assets/config.ini) dan taruh di folder `luma`, timpa berkas yang ada. Ini akan mengubah kombo tombol menu Rosalina ke (X) + (Y)
 2. Pilih "Miscellaneous options"
 3. Pilih "Dump DSP firmware"
 4. Tekan (B) untuk lanjut
@@ -100,18 +100,18 @@ Di bagian ini akan menggunakan naskah agar otomatis memasang _homebrew_, members
 
 1. Matikan daya konsol
 2. Tahan tombol (X) selagi menyalakan konsol. Ini akan masuk ke Finalizing Setup Helper
-   - Jika menyala ke HOME Menu, folder `payloads` mungkin salah letak atau dieja kurang benar
-   - Jika ada galat, rujuk ke laman [sidik gangguan](troubleshooting-finalizing-setup)
+    - Jika menyala ke HOME Menu, folder `payloads` mungkin salah letak atau dieja kurang benar
+    - Jika ada galat, rujuk ke laman [sidik gangguan](troubleshooting-finalizing-setup)
 3. Jika Helper sudah berhasil, konsol akan menyala ke GodMode9
-   - Mulai dari sini, GodMode9 sudah bisa diakses dengan menahan START ketika menyalakan konsol
+    - Mulai dari sini, GodMode9 sudah bisa diakses dengan menahan START ketika menyalakan konsol
 4. Jika diminta membuat cadangan berkas esensial, tekan (A) untuk lakukan, lalu tekan (A) lagi sesudah selesai untuk lanjut
 5. Jika diminta membetulkan waktu & tanggal RTC, lakukan dengan menekan (A), lalu tekan (A) lagi untuk lanjut
 6. Tekan (Home) untuk membuka menu tindakan
 7. Pilih "Scripts..."
 8. Pilih "finalize"
 9. Ikuti sembulan perintah yang diminta dari naskah
-   - Jika muncul "Information #05: No title database", tekan (A) untuk impor dan tekan tombol sesuai layar untuk lanjut
-   - Jika ada galat, ikuti instruksi di pesan galat atau rujuk ke laman [sidik gangguan](troubleshooting-finalizing-setup)
+    - Jika muncul "Information #05: No title database", tekan (A) untuk impor dan tekan tombol sesuai layar untuk lanjut
+    - Jika ada galat, ikuti instruksi di pesan galat atau rujuk ke laman [sidik gangguan](troubleshooting-finalizing-setup)
 10. Sesudah naskah bertulis "Setup complete!", tekan (A) untuk matikan daya konsol
     - Jika TIDAK muncul pesan "Setup complete!", naskahnya tidak berhasil dan harus ulangi bagian ini dari Langkah 3
 11. Sisipkan kartu SD ke komputer Anda
