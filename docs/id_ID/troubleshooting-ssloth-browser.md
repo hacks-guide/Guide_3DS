@@ -84,7 +84,7 @@ Gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) untuk bantuan.
 
 :::details Failed to mount the SD card!
 
-**Cadangkan dulu data**, lalu format ulang kartu SD ke FAT32 dengan alat anjuran yang sesuai sistem operasi ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). MiniTool Partition Wizard dan pemformat merek HP (HPUSBDisk) diketahui ada isu dengan kartu SD 3DS.
+**Cadangkan dulu data**, lalu format ulang kartu SD ke FAT32 dengan alat anjuran yang sesuai sistem operasi ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). MiniTool Partition Wizard dan alat format merek HP (HPUSBDisk) diketahui ada isu dengan kartu SD 3DS.
 
 Jika ini tidak berhasil, coba kartu SD lain.
 
