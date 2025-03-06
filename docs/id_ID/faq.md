@@ -66,7 +66,7 @@ Konsol tidak akan dicekal karena Nintendo Network sudah tutup (untuk semua orang
 
 :::details Apakah bisa tanpa di komputer (misal: ponsel Android)?
 
-Biasanya, bisa! Eksploit MSET9 (biasanya untuk di Old 3DS _firmware_ terkini) akan perlu naskah Python atau aplikasi Android, sedangkan eksploit lain hanya perlu menaruh berkas di kartu SD.
+Biasanya, bisa! Eksploit MSET9 (biasa digunakan di _firmware_ terkini Old 3DS) akan perlu naskah Python atau aplikasi Android, sedangkan eksploit lain hanya perlu menaruh berkas di kartu SD.
 
 Mungkin perlu komputer bersistem Windows, macOS, atau Linux untuk memformat kartu SD 64GB ke atas.
 
@@ -98,7 +98,7 @@ _Flashcart_ mode 3DS seperti Gateway dan Sky3DS sudah tidak dianjurkan karena us
 
 Secara takrif, _custom firmware_ merujuk pada oprekan peranti lunak sistem 3DS agar bisa melakukan hal di luar bawaan. _Homebrew_ umumnya merujuk pada peranti lunak bersumber tidak resmi (yaitu: tidak diagihkan lewat eShop atau kartrid).
 
-Dari sejarahnya, dulu 3DS punya akses _homebrew_ jenis _userland_ melalui eksploit seperti ninjhax, terkadang hanya disebut "homebrew". Tingkat akses sistem dari _userland_ mengizinkan membaca _homebrew_ dan emulator dasar tapi belum bisa (dengan mudah) memodif permainan atau men-_dump_ kartrid. Itu pun lebih tidak stabil, _homebrew_ sering mogok tidak jelas dan perlu dinyalakan ulang penuh. _Custom firmware_ mengizinkan tingkat akses sistem lebih luas dan stabil daripada titik masuk hanya-_homebrew_.
+Dari sejarahnya, dulu 3DS punya akses _homebrew_ jenis _userland_ melalui eksploit seperti ninjhax, terkadang hanya disebut "homebrew". Tingkat akses sistem _userland_ bisa membaca _homebrew_ dan emulator dasar tapi tidak sampai bisa (dengan mudah) memodif permainan atau men-_dump_ kartrid. Ini juga lebih tidak stabil, _homebrew_ sering mogok tidak jelas dan perlu dinyalakan ulang penuh. _Custom firmware_ mengizinkan tingkat akses sistem lebih luas dan stabil daripada titik masuk hanya-_homebrew_.
 
 :::
 
@@ -162,7 +162,7 @@ Dianjurkan memperbarui penyiapan konsol ke CFW modern berdasar-boot9strap. Ikuti
 
 :::details Penyiapan CFW saya lancar saja. Untuk apa diperbarui?
 
-Sebagian besar _homebrew_ modern (seperti Checkpoint dan BootNTR Selector) hanya diuji di CFW terkini berdasar-boot9strap, dan takutnya tidak berfungsi (sama sekali) di penyiapan lawas berdasar menuhax, A9LH, atau Gateway. Ditambah lagi, tergantung penyiapan CFW, bisa bahaya jika diperbarui ke _firmware_ terbaru. Penyiapan modern berdasar-boot9strap mengizinkan tingkat akses sistem lebih luas daripada retasan sebelumnya, termasuk men-_dump bootrom_ konsol.
+Sebagian besar _homebrew_ modern (seperti Checkpoint dan BootNTR Selector) hanya diuji di CFW terkini berdasar-boot9strap, dan takutnya tidak berfungsi (sama sekali) di penyiapan lawas berdasar menuhax, A9LH, atau Gateway. Ditambah lagi, tergantung jenis CFW, bisa bahaya jika diperbarui ke _firmware_ terbaru. Penyiapan modern berdasar-boot9strap mengizinkan tingkat akses sistem lebih luas daripada retasan sebelumnya, termasuk men-_dump bootrom_ konsol.
 
 :::
 
