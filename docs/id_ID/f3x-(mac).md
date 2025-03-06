@@ -6,7 +6,7 @@ Ini adalah laman lebihan untuk memeriksa galat di kartu SD dengan F3X.
 
 Tergantung ukuran kartu SD dan kecepatan komputer, proses ini bisa lama beberapa jam!
 
-Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [H2testw (Windows)](h2testw-\(windows\)) atau [F3 (Linux)](f3-\(linux\)).
+Laman ini khusus pengguna Mac. Jika tidak menggunakan Mac, lihat laman [H2testw (Windows)](h2testw-\(windows\)) atau [F3 (Linux)](f3-\(linux\)).
 
 ::: info
 
