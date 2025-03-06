@@ -16,13 +16,13 @@
 
 :::details Konsol saya sudah di versi terkini. Apakah konsol bisa diretas tanpa perkakas/prasyarat?
 
-**Iya!** New 3DS / New 3DS XL / New 2DS XL bisa dengan [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), sedangkan 3DS / 3DS XL / 2DS dengan [MSET9](installing-boot9strap-\(mset9\)).
+**Hooh!** New 3DS / New 3DS XL / New 2DS XL bisa dengan [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), sedangkan 3DS / 3DS XL / 2DS dengan [MSET9](installing-boot9strap-\(mset9\)).
 
 :::
 
 :::details Panduan ini kompatibel dengan konsol apa?
 
-Panduan ini kompatibel dengan semua jenis ecer konsol 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Jika versi pada sistem bertuliskan "0.0.0-0", bisa jadi konsol Anda unit pengembang.
+Panduan ini kompatibel dengan semua konsol ecer 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Jika versi pada sistem bertuliskan "0.0.0-0", bisa jadi konsol Anda unit pengembang.
 
 :::
 
