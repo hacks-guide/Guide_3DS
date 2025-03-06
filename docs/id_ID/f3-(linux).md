@@ -6,7 +6,7 @@ Ini adalah laman lebihan untuk memeriksa galat di kartu SD dengan F3.
 
 Tergantung ukuran kartu SD dan kecepatan komputer, proses ini bisa lama beberapa jam!
 
-Laman ini hanya untuk pengguna Linux. Jika tidak menggunakan Linux, lihat laman [H2testw (Windows)](h2testw-\(windows\)) atau [F3XSwift (Mac)](f3xswift-\(mac\)).
+Laman ini khusus pengguna Linux. Jika tidak menggunakan Linux, lihat laman [H2testw (Windows)](h2testw-\(windows\)) atau [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 ## Apa yang Perlu
 
