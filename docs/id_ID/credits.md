@@ -13,7 +13,7 @@ Jika ada yang lupa kami taruh di daftar nama ini, [beri tahu kami](https://githu
 - **Plailect**, sebagai pembuat awal dan pengurus panduan ini
 - [Penerjemah panduan](https://crowdin.com/project/3ds-guide), yang membuat panduan ini mudah diakses banyak orang
 - Siapa pun yang pernah mengirim _issue_, _pull request_, atau memberi tahu kami masalah di panduan
-- Penyumbangsih terdahulu panduan ini, yang tanpanya panduan ini tidak akan ada saat ini
+- Penyumbangsih terdahulu, yang tanpanya panduan ini tidak akan ada saat ini
 
 :::
 
