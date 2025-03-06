@@ -16,13 +16,13 @@
 
 :::details Konsol saya sudah di versi terkini. Apakah konsol bisa diretas tanpa perkakas/prasyarat?
 
-**Hooh!** New 3DS / New 3DS XL / New 2DS XL bisa dengan [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), sedangkan 3DS / 3DS XL / 2DS dengan [MSET9](installing-boot9strap-\(mset9\)).
+**Iya!** New 3DS / New 3DS XL / New 2DS XL bisa dengan [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), sedangkan 3DS / 3DS XL / 2DS dengan [MSET9](installing-boot9strap-\(mset9\)).
 
 :::
 
 :::details Panduan ini kompatibel dengan konsol apa?
 
-Panduan ini kompatibel dengan semua konsol ecer 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Jika versi pada sistem bertuliskan "0.0.0-0", bisa jadi konsol Anda unit pengembang.
+Panduan ini kompatibel dengan semua konsol ecer 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Jika versi sistem bertuliskan "0.0.0-0", bisa jadi konsol Anda unit pengembang.
 
 :::
 
@@ -34,7 +34,7 @@ Risiko kena matot sekarang hampir mustahil, kecuali jika _sengaja_ dibuat matot.
 
 :::details Apakah bisa menjalankan homebrew dan emulator keren?
 
-Iya! Panduan ini akan memasang beberapa aplikasi _homebrew_ berguna, termasuk [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), sebagai toko apli _homebrew_.
+Hooh! Panduan ini akan memasang beberapa aplikasi _homebrew_ berguna, termasuk [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), sebagai toko apli _homebrew_.
 
 :::
 
@@ -60,13 +60,13 @@ Mengikuti panduan ini saja seharusnya tidak kehilangan data (simpanan, permainan
 
 :::details Apakah 3DS saya akan dicekal jika ada CFW?
 
-Pencekalan sudah tidak ada karena ditutupnya Nintendo Network (untuk semua orang).
+Konsol tidak akan dicekal karena Nintendo Network sudah tutup (untuk semua orang).
 
 :::
 
-:::details Apakah bisa selain di komputer (misal: ponsel Android)?
+:::details Apakah bisa tanpa di komputer (misal: ponsel Android)?
 
-Biasanya, bisa! Pada eksploit MSET9 (utamanya untuk _firmware_ terkini Old 3DS) perlu menggunakan aplikasi Android atau naskah Python, sedangkan eksploit lain hanya perlu menaruh berkas di kartu SD.
+Biasanya, bisa! Eksploit MSET9 (biasanya untuk di Old 3DS _firmware_ terkini) akan perlu naskah Python atau aplikasi Android, sedangkan eksploit lain hanya perlu menaruh berkas di kartu SD.
 
 Mungkin perlu komputer bersistem Windows, macOS, atau Linux untuk memformat kartu SD 64GB ke atas.
 
