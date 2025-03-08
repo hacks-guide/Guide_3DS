@@ -44,9 +44,9 @@ Insert the game cartridge you intend to dump into your console
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 2. Navigate to `[C:] GAMECART`
 3. Follow the steps applicable to your game cartridge:
-   - **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it
-   - **NDS Game Cartridge:** Press (A) on `[TitleID].nds` to select it
-     - Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues
+    - **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it
+    - **NDS Game Cartridge:** Press (A) on `[TitleID].nds` to select it
+        - Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues
 4. Select "Copy to 0:/gm9/out"
 5. Your non-installable `.3ds` or `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
@@ -89,8 +89,8 @@ This allows dumping of both System- and User-installed digital titles, such as o
 2. Paina (HOME)-painiketta näyttääksesi toimintovalikon
 3. Select "Title manager"
 4. Select one of the following depending on the type of title you wish to dump
-   - **User Installed Title**: `[A:] SD CARD`
-   - **System Title / DSiWare**: `[1:] NAND / TWL`
+    - **User Installed Title**: `[A:] SD CARD`
+    - **System Title / DSiWare**: `[1:] NAND / TWL`
 5. Select the title you wish to dump
 6. Select "Manage Title..."
 7. Select "Build CIA (standard)"
@@ -111,16 +111,16 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 :::
 
 1. Do the following process for each GBA VC game that you want to back up the save for:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Power off your console
-   - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Dump GBA VC save"
-   - Paina (A):ta jatkaaksesi
-   - Press (Start) to reboot your console
+    - Launch the GBA VC game
+    - Exit the GBA VC game
+    - Power off your console
+    - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+    - Navigate to `[S:] SYSNAND VIRTUAL`
+    - Press (A) on `agbsave.bin` to select it
+    - Select "AGBSAVE options..."
+    - Select "Dump GBA VC save"
+    - Paina (A):ta jatkaaksesi
+    - Press (Start) to reboot your console
 
 ## Restore GBA VC Saves
 
@@ -131,21 +131,21 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 :::
 
 1. Tee seuraavat toimet jokaista GBA VC -peliä kohden, jonka tallennuksen haluat palauttaa:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Power off your console
-   - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-   - Mene hakemistoon `[0:] SDCARD` → `gm9` → `out`
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-   - Paina (B):tä palataksesi päävalikkoon
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Inject GBA VC save"
-   - Paina (A):ta jatkaaksesi
-   - Press (Start) to reboot your console
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+    - Launch the GBA VC game
+    - Exit the GBA VC game
+    - Power off your console
+    - Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+    - Mene hakemistoon `[0:] SDCARD` → `gm9` → `out`
+    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+    - Paina (B):tä palataksesi päävalikkoon
+    - Navigate to `[S:] SYSNAND VIRTUAL`
+    - Press (A) on `agbsave.bin` to select it
+    - Select "AGBSAVE options..."
+    - Select "Inject GBA VC save"
+    - Paina (A):ta jatkaaksesi
+    - Press (Start) to reboot your console
+    - Launch the GBA VC game
+    - Exit the GBA VC game
 
 ## Encrypting / Decrypting a .CIA file
 
@@ -159,8 +159,8 @@ For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt
 2. Mene hakemistoon `[0:] SDCARD` → `cias`
 3. Press (A) on the `.cia` file to select it, then select "CIA image options..."
 4. Select the option to perform the desired function:
-   - **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Encrypt inplace:** Replace the selected `.cia` file with an encrypted version
-   - **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
+    - **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
+    - **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
+    - **Encrypt inplace:** Replace the selected `.cia` file with an encrypted version
+    - **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
 5. Your encrypted / decrypted `.cia` will be outputted to the desired location
