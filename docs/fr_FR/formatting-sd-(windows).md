@@ -10,7 +10,7 @@ Cette section est dédiée aux utilisateurs de Windows uniquement. Si vous n'êt
 
 ## Ce dont vous avez besoin
 
-- La dernière version de [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/).
+- **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 - **Pour les cartes SD de 64 Go ou plus :** la dernière version de [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
 ## Instructions
@@ -27,11 +27,11 @@ Cette section est dédiée aux utilisateurs de Windows uniquement. Si vous n'êt
 
 5. Sélectionnez la lettre de lecteur correspondant à votre carte SD dans le champ "Select card"
 
-   ::: danger
+    ::: danger
 
-   Assurez-vous de choisir la bonne lettre de lecteur, sinon vous risqueriez d'effacer accidentellement le mauvais lecteur !
+    Assurez-vous de choisir la bonne lettre de lecteur, sinon vous risqueriez d'effacer accidentellement le mauvais lecteur !
 
-   :::
+    :::
 
 6. Mettez ce que vous voulez dans "Volume label"
 
@@ -61,15 +61,15 @@ Vous avez fini de formater votre carte SD si elle est de **32 Go ou moins.**
 
 2. Sélectionnez la lettre de lecteur correspondant à votre carte SD dans le champ "Drive"
 
-   ::: danger
+    ::: danger
 
-   Assurez-vous de choisir la bonne lettre de lecteur, sinon vous risqueriez d'effacer accidentellement le mauvais lecteur !
+    Assurez-vous de choisir la bonne lettre de lecteur, sinon vous risqueriez d'effacer accidentellement le mauvais lecteur !
 
-   :::
+    :::
 
 3. Sélectionnez une taille pour la taille d'unité d'allocation ("Allocation unit size")
-   - Si votre carte SD est de 64 Go, choisissez 32768
-   - Si votre carte SD est d'une taille supérieure à 64 Go, choisissez 65536
+    - Si votre carte SD est de 64 Go, choisissez 32768
+    - Si votre carte SD est d'une taille supérieure à 64 Go, choisissez 65536
 
 4. Mettez ce que vous voulez dans "Volume label"
 
@@ -88,11 +88,11 @@ Vous avez fini de formater votre carte SD si elle est de **32 Go ou moins.**
 ## Dépannage
 
 - guiformat affiche l'erreur "Failed to open device: GetLastError()=32"
-  - Fermez tout ce qui peut être utilisé par la carte SD, par exemple, n'importe quelle fenêtre ouverte de l'Explorateur de fichiers.
-  - Si le problème persiste, essayez de formater la carte SD en NTFS dans l'Explorateur de fichiers, fermez cette fenêtre une fois l'opération effectuée puis réessayez le formatage avec guiformat.
+    - Fermez tout ce qui peut être utilisé par la carte SD, par exemple, n'importe quelle fenêtre ouverte de l'Explorateur de fichiers.
+    - Si le problème persiste, essayez de formater la carte SD en NTFS dans l'Explorateur de fichiers, fermez cette fenêtre une fois l'opération effectuée puis réessayez le formatage avec guiformat.
 
 - guiformat affiche l'erreur "GetLastError()=1117"
-  - L'interrupteur de protection contre l'écriture de votre carte SD est peut-être [activé](/images/sdlock.png). L'interrupteur doit être mis en position haute pour autoriser l'écriture sur la carte SD (dont le formatage).
+    - L'interrupteur de protection contre l'écriture de votre carte SD est peut-être [activé](/images/sdlock.png). L'interrupteur doit être mis en position haute pour autoriser l'écriture sur la carte SD (dont le formatage).
 
 - La carte SD reste non détectée par la console ou affiche toujours la mauvaise capacité après le formatage
-  - Votre carte SD est peut-être partitionnée ou possède de l'espace non alloué. Suivez les instructions [ici](https://wiki.hacks.guide/wiki/SD_Clean/Windows) pour reformater votre carte SD.
+    - Votre carte SD est peut-être partitionnée ou possède de l'espace non alloué. Suivez les instructions [ici](https://wiki.hacks.guide/wiki/SD_Clean/Windows) pour reformater votre carte SD.
