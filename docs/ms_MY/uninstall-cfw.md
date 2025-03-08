@@ -47,6 +47,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 - The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
+- [uninstall_cfw.gm9](/gm9_scripts/uninstall_cfw.gm9)
 
 ## Instructions
 
@@ -58,7 +59,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 4. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 5. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 6. Copy `DSiWareUninstaller.3dsx` to the `/3ds/` folder on your SD card
-7. Copy `safety_test.gm9` to the `/gm9/scripts/` folder on your SD card
+7. Copy `safety_test.gm9` and `uninstall_cfw.gm9` to the `/gm9/scripts/` folder on your SD card
 8. Reinsert your SD card into your console
 
 ### Section II - DS Mode Tests
@@ -203,16 +204,13 @@ If you're removing CFW because:
     - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 2. Press (Home) to bring up the action menu
 3. Select "Scripts..."
-4. Select "GM9Megascript"
-5. Select "Hax Options"
-6. Select "Un-install Hax"
-7. When prompted, press (A) to proceed
-8. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
-9. Tekan (A) untuk meneruskan
-10. Press (B) to return to the main menu
-11. Select "Exit"
-12. Press (A) to relock write permissions if prompted
-13. Press (Start) to reboot your console
+4. Select "uninstall_cfw"
+5. When prompted, press (A) to proceed
+6. Press (A) again to proceed
+7. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
+8. Tekan (A) untuk meneruskan
+9. Press (A) to relock write permissions if prompted
+10. Press (Start) to reboot your console
 
 ___
 
