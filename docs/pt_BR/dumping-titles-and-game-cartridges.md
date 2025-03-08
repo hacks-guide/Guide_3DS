@@ -44,9 +44,9 @@ Insira o cartucho do jogo que você pretende fazer dump no seu console
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 2. Navegue para `[C:] GAMECART`
 3. Siga os passos aplicáveis ao seu jogo de cartucho:
-   - **Cartucho de Jogo de 3DS:** Aperte (A) em `[TitleID].trim.3ds` para selecioná-lo
-   - **Cartucho de jogo de NDS:** Aperte (A) em `[TitleID].nds` para selecioná-lo
-     - Trimmed dumps não são recomendados para jogos de NDS em geral, pois podem causar vários erros de reprodução
+    - **Cartucho de Jogo de 3DS:** Aperte (A) em `[TitleID].trim.3ds` para selecioná-lo
+    - **Cartucho de jogo de NDS:** Aperte (A) em `[TitleID].nds` para selecioná-lo
+        - Trimmed dumps não são recomendados para jogos de NDS em geral, pois podem causar vários erros de reprodução
 4. Selecione "Copy to 0:/gm9/out''
 5. Seu arquivo formatado `.3ds` não-instalável ou `.nds` será gravado na pasta `/gm9/out/` no seu cartão SD
 
@@ -89,8 +89,8 @@ Isso permite o dump de aplicativos digitais instalados tanto do Sistema como apl
 2. Aperte (Home) para abrir o menu de ações
 3. Selecione "Title manager"
 4. Selecione um dos seguintes dependendo do tipo de aplicativo que você deseja descarregar
-   - **Aplicativo Instalado pelo Usuário**: `[A:] SD CARD`
-   - **Aplicativo do Sistema / DSiWare**: `[1:] NAND / TWL`
+    - **Aplicativo Instalado pelo Usuário**: `[A:] SD CARD`
+    - **Aplicativo do Sistema / DSiWare**: `[1:] NAND / TWL`
 5. Selecione o título que você deseja fazer um dump
 6. Selecione "Manage Title..."
 7. Selecione "Build CIA (standard)"
@@ -111,16 +111,16 @@ Para identificar o TitleID de um arquivo `<TitleID>.gbavc.sav`, você pode obter
 :::
 
 1. Faça o seguinte processo para cada jogo de VC de GBA que você quer fazer um backup do save:
-   - Inicie o jogo de VC de GBA
-   - Saia do jogo de VC de GBA
-   - Desligue seu console
-   - Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
-   - Navegue para `[S:] SYSNAND VIRTUAL`
-   - Pressione (A) no arquivo `agbsave.bin` para selecioná-lo
-   - Selecione "AGBSAVE options..."
-   - Selecione "Dump GBA VC save"
-   - Aperte (A) para continuar
-   - Aperte (Start) para reiniciar seu console
+    - Inicie o jogo de VC de GBA
+    - Saia do jogo de VC de GBA
+    - Desligue seu console
+    - Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
+    - Navegue para `[S:] SYSNAND VIRTUAL`
+    - Pressione (A) no arquivo `agbsave.bin` para selecioná-lo
+    - Selecione "AGBSAVE options..."
+    - Selecione "Dump GBA VC save"
+    - Aperte (A) para continuar
+    - Aperte (Start) para reiniciar seu console
 
 ## Restaurando Saves de VC de GBA
 
@@ -131,21 +131,21 @@ Para identificar o TitleID de um arquivo `<TitleID>.gbavc.sav`, você pode obter
 :::
 
 1. Faça o seguinte processo para cada jogo de VC de GBA que você deseja restaurar o save:
-   - Inicie o jogo de VC de GBA
-   - Saia do jogo de VC de GBA
-   - Desligue seu console
-   - Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
-   - Navegue para `[0:] SDCARD` -> `gm9` -> `out`
-   - Aperte (Y) no arquivo `<TitleID>.gbavc.sav` que você deseja restaurar para copiá-lo
-   - Aperte (B) para retornar para o menu principal
-   - Navegue para `[S:] SYSNAND VIRTUAL`
-   - Pressione (A) no arquivo `agbsave.bin` para selecioná-lo
-   - Selecione "AGBSAVE options..."
-   - Selecione "Inject GBA VC save"
-   - Aperte (A) para continuar
-   - Aperte (Start) para reiniciar seu console
-   - Inicie o jogo de VC de GBA
-   - Saia do jogo de VC de GBA
+    - Inicie o jogo de VC de GBA
+    - Saia do jogo de VC de GBA
+    - Desligue seu console
+    - Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
+    - Navegue para `[0:] SDCARD` -> `gm9` -> `out`
+    - Aperte (Y) no arquivo `<TitleID>.gbavc.sav` que você deseja restaurar para copiá-lo
+    - Aperte (B) para retornar para o menu principal
+    - Navegue para `[S:] SYSNAND VIRTUAL`
+    - Pressione (A) no arquivo `agbsave.bin` para selecioná-lo
+    - Selecione "AGBSAVE options..."
+    - Selecione "Inject GBA VC save"
+    - Aperte (A) para continuar
+    - Aperte (Start) para reiniciar seu console
+    - Inicie o jogo de VC de GBA
+    - Saia do jogo de VC de GBA
 
 ## Criptografando / Descriptografando um arquivo .CIA
 
@@ -159,8 +159,8 @@ Para fins organizacionais, copie cada arquivo `.cia` que você deseja criptograf
 2. Navegue para `[0:] SDCARD` -> `cias`
 3. Aperte (A) no arquivo `.cia` para selecioná-lo, depois selecione "CIA image options..."
 4. Selecione a opção para executar a função desejada:
-   - **Encrypt to 0:/gm9/out:** Cria uma cópia criptografada do arquivo `.cia` selecionado na pasta `/gm9/out` do seu cartão SD
-   - **Decrypt to 0:/gm9/out:** Cria uma cópia descriptografada do arquivo `.cia` selecionado na pasta `/gm9/out/` do seu cartão SD
-   - **Encrypt inplace:** Substitui o arquivo `.cia` selecionado por uma versão criptografada
-   - **Decrypt inplace:** Substitui o arquivo `.cia` selecionado por uma versão descriptografada
+    - **Encrypt to 0:/gm9/out:** Cria uma cópia criptografada do arquivo `.cia` selecionado na pasta `/gm9/out` do seu cartão SD
+    - **Decrypt to 0:/gm9/out:** Cria uma cópia descriptografada do arquivo `.cia` selecionado na pasta `/gm9/out/` do seu cartão SD
+    - **Encrypt inplace:** Substitui o arquivo `.cia` selecionado por uma versão criptografada
+    - **Decrypt inplace:** Substitui o arquivo `.cia` selecionado por uma versão descriptografada
 5. Seu `.cia` criptografado / descriptografado será colocado no local desejado
