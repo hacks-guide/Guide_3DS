@@ -1,6 +1,6 @@
 # Sidik Gangguan (SSLoth-Browser)
 
-Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (SSLoth-Browser)" untuk konsol di versi sistem 11.4.0 sampai 11.13.0. Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (SSLoth-Browser)" untuk konsol di versi sistem 11.4.0 sampai 11.13.0. Jika saran dari laman ini tidak menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ::: warning
 
@@ -36,7 +36,7 @@ Bisa juga coba atur ulang data simpanan Browser:
 
 :::details Mogok saat membuka kode QR browserhax atau URL
 
-Eksploit berdasar-Browser (seperti yang ini) suka tidak stabil dan sering mogok, tapi terkadang bisa diperbaiki dengan langkah-langkah berikut.
+Eksploit berjenis-Browser (seperti yang ini) suka tidak stabil dan mogok, tapi terkadang bisa diperbaiki dengan langkah-langkah berikut.
 
 1. Buka Browser, lalu buka pengaturan Browser
 2. Gulir ke bawah dan pilih "Reset Save Data" (bisa jadi disebut "Initialize Save Data" atau "Clear All Save Data")
