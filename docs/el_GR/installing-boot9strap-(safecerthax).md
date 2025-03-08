@@ -54,7 +54,7 @@
 
 ::: warning
 
-This section is MANDATORY! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
+Αυτή η ενότητα είναι ΥΠΟΧΡΕΩΤΙΚΗ! Τυχόν αποτυχία ρύθμισης του διακομιστή μεσολάβησης ενδέχεται να σας οδηγήσει στην ενημέρωση της κονσόλας σας σε νεότερο firmware κατά λάθος.
 
 :::
 
