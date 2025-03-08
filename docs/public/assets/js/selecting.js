@@ -152,6 +152,7 @@ function can_mset9(major, minor, native, region, model) {
         - All models
 */
 function redirect() {
+    const prefix = document.getElementById("prefix").value;
     const major = document.getElementById("major").value;
     const minor = document.getElementById("minor").value;
     const nver = document.getElementById("nver").value;
@@ -170,13 +171,18 @@ function redirect() {
     if(isO3DS) model = DEVICE_O3DS
     else if(isN3DS) model = DEVICE_N3DS;
 
-    if (!validate_version(major, minor, nver, region, model)) {
+    if (prefix == '' || !validate_version(major, minor, nver, region, model)) {
         document.getElementById("result_invalidVersion").style.display = "block";
         return;
     }
 
     // Store selected version for some later pages
     sessionStorage.setItem("selected_version", JSON.stringify({major, minor, nver, region, model}));
+
+    if(prefix != "Ver.") {
+        window.location.href = "checking-for-cfw";
+        return true;
+    }
 
     const redirected = [
       can_soundhax,
