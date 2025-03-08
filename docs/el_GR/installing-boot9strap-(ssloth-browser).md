@@ -61,7 +61,7 @@
 
 ::: danger
 
-If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
+Εάν λάβετε ένα μήνυμα που σας προτρέπει να ενημερώσετε την κονσόλα σας, ΣΤΑΜΑΤΗΣΤΕ! Επαναλάβετε τα βήματα της Ενότητας II από την αρχή και βεβαιωθείτε ότι έχετε ρυθμίσει σωστά τον διακομιστή μεσολάβησης.
 
 :::
 
