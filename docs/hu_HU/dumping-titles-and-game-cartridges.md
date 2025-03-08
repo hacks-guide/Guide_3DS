@@ -44,9 +44,9 @@ Helyezd be a konzolodba a menteni kívánt játékkártyát
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 2. Navigálj ide: `[C:] GAMECART`
 3. Kövesd az alábbi lépések közül az játékkártyádnak megfelelőt:
-   - **3DS játékkártya:** Nyomd meg az (A)-t a `[TitleID].trim.3ds` fájlon, hogy kijelöld
-   - **NDS játékkártya:** Nyomd meg az (A)-t a `[TitleID].nds` fájlon, hogy kijelöld
-     - Trimmelt dumpok nem ajánlottak NDS játékokhoz általánosan, mert különböző visszajátszási problémákat okozhatnak
+    - **3DS játékkártya:** Nyomd meg az (A)-t a `[TitleID].trim.3ds` fájlon, hogy kijelöld
+    - **NDS játékkártya:** Nyomd meg az (A)-t a `[TitleID].nds` fájlon, hogy kijelöld
+        - Trimmelt dumpok nem ajánlottak NDS játékokhoz általánosan, mert különböző visszajátszási problémákat okozhatnak
 4. Válaszd ki ezt: "Copy to 0:/gm9/out"
 5. A nem-telepíthető `.3ds` vagy `.nds` formátumú fájlodat az SD kártyád `/gm9/out/` mappájában találod ezután
 
@@ -89,8 +89,8 @@ Lehetővé teszi a Rendszer- és Felhasználó által telepített digitális cí
 2. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 3. Választ a "Title manager"-t
 4. Válaszd a következők egyikét attól függően, hogy milyen típusú címeket kíván dumpolni
-   - **Felhasználó által telepített alkalmazás**: `[A:] SD CARD`
-   - **Rendszeralkalmazás / DSiWare**: Menj ide: `[1:] NAND / TWL`
+    - **Felhasználó által telepített alkalmazás**: `[A:] SD CARD`
+    - **Rendszeralkalmazás / DSiWare**: Menj ide: `[1:] NAND / TWL`
 5. Válaszd ki a címet, amit dumpolni szeretnél
 6. Válaszd a "Manage Title..." opciót
 7. Válaszd a "Build CIA (standard)" menüpontot
@@ -111,16 +111,16 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 :::
 
 1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését vissza akarod állítani:
-   - Indítsd el a GBA VC játékot
-   - Lépj ki a GBA VC játékból
-   - Kapcsold ki a konzolod
-   - Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
-   - Menj ide: `[S:] SYSNAND VIRTUAL`
-   - Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
-   - Válaszd az "AGBSAVE options..." opciót
-   - Válaszd a "Dump GBA VC save" opciót
-   - Nyomd meg az (A) gombot a folytatáshoz
-   - Nyomd meg a (Start) gombot a konzolod újraindításához
+    - Indítsd el a GBA VC játékot
+    - Lépj ki a GBA VC játékból
+    - Kapcsold ki a konzolod
+    - Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
+    - Menj ide: `[S:] SYSNAND VIRTUAL`
+    - Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
+    - Válaszd az "AGBSAVE options..." opciót
+    - Válaszd a "Dump GBA VC save" opciót
+    - Nyomd meg az (A) gombot a folytatáshoz
+    - Nyomd meg a (Start) gombot a konzolod újraindításához
 
 ## GBA VC mentések visszaállítása
 
@@ -131,21 +131,21 @@ Egy `<TitleID>.gbavc.sav` fájl Title ID-jének azonosításához használhatod 
 :::
 
 1. Csináld végig az alábbi lépéseket minden egyes GBA VC játékhoz, aminek a mentését vissza akarod állítani:
-   - Indítsd el a GBA VC játékot
-   - Lépj ki a GBA VC játékból
-   - Kapcsold ki a konzolod
-   - Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
-   - Menj ide: `[0:] SDCARD` -> `gm9` -> `out`
-   - Nyomd meg az (Y) gombot a visszaállítani kívánt `<TitleID>.gbavc.sav` fájlon, hogy kimásold
-   - Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
-   - Menj ide: `[S:] SYSNAND VIRTUAL`
-   - Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
-   - Válaszd az "AGBSAVE options..." opciót
-   - Válaszd az "Inject GBA VC save" opciót
-   - Nyomd meg az (A) gombot a folytatáshoz
-   - Nyomd meg a (Start) gombot a konzolod újraindításához
-   - Indítsd el a GBA VC játékot
-   - Lépj ki a GBA VC játékból
+    - Indítsd el a GBA VC játékot
+    - Lépj ki a GBA VC játékból
+    - Kapcsold ki a konzolod
+    - Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
+    - Menj ide: `[0:] SDCARD` -> `gm9` -> `out`
+    - Nyomd meg az (Y) gombot a visszaállítani kívánt `<TitleID>.gbavc.sav` fájlon, hogy kimásold
+    - Nyomd meg a (B) gombot, hogy visszamenj a főmenübe
+    - Menj ide: `[S:] SYSNAND VIRTUAL`
+    - Nyomd meg az (A) gombot a `agbsave.bin` fájlon, hogy kijelöld
+    - Válaszd az "AGBSAVE options..." opciót
+    - Válaszd az "Inject GBA VC save" opciót
+    - Nyomd meg az (A) gombot a folytatáshoz
+    - Nyomd meg a (Start) gombot a konzolod újraindításához
+    - Indítsd el a GBA VC játékot
+    - Lépj ki a GBA VC játékból
 
 ## CIA fájl titkosítása / visszafejtése
 
@@ -159,8 +159,8 @@ A rend kedvéért, másold a titkosítani vagy visszafejteni kívánt `.cia` fá
 2. Menj ide: `[0:] SDCARD` -> `cias`
 3. Nyomd meg az (A)-t a `.cia` fájlon, hogy kijelöld, majd válaszd a "CIA image options..." opciót
 4. Válaszd ki a megfelelő opciót attól függően, hogy mit szeretnél csinálni:
-   - **Encrypt to 0:/gm9/out:** Létrehoz egy titkosított másolatot a kiválasztott `.cia` fájlból az SD kártyád `/gm9/out/` mappájában
-   - **Decrypt to 0:/gm9/out:** Létrehoz egy titkosítatlan másolatot a kiválasztott `.cia` fájlból az SD kártyád `/gm9/out/` mappájában
-   - **Encrypt inplace:** Cseréli a kijelölt `.cia` fájlt a titkosított változatára
-   - **Decrypt inplace:** Cseréli a kijelölt `.cia` fájlt a titkosítatlan változatára
+    - **Encrypt to 0:/gm9/out:** Létrehoz egy titkosított másolatot a kiválasztott `.cia` fájlból az SD kártyád `/gm9/out/` mappájában
+    - **Decrypt to 0:/gm9/out:** Létrehoz egy titkosítatlan másolatot a kiválasztott `.cia` fájlból az SD kártyád `/gm9/out/` mappájában
+    - **Encrypt inplace:** Cseréli a kijelölt `.cia` fájlt a titkosított változatára
+    - **Decrypt inplace:** Cseréli a kijelölt `.cia` fájlt a titkosítatlan változatára
 5. A titkosított / visszafejtett `.cia` fájlodat ezután megtalálod a kívánt helyen
