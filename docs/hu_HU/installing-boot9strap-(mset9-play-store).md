@@ -26,7 +26,7 @@ Android telefonokon/tableteken a szükséges minimum Android verzió: 6.0 (Marsh
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     - Ha szeretnéd, telepítheted őket Play Store-on kívülről is helyette
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the Release `.zip` file)
+- Az [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) legújabb kiadása (a Release `.zip` fájl)
 
 ## Lépések
 
