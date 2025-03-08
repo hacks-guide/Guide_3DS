@@ -52,6 +52,12 @@ In this section, you will copy the files needed to trigger the safecerthax explo
 
 ### Section III - safecerthax proxy
 
+::: warning
+
+This section is MANDATORY! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
+
+:::
+
 In this section, you will change your Internet connection settings to use a proxy network designed to exploit the System Update feature of your console.
 
 <!--@include: ./_include/addproxy.md -->
