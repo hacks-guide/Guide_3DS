@@ -43,12 +43,6 @@ In this section, you will copy the files needed to trigger both browserhax and u
 
 ### Section II - SSLoth
 
-::: warning
-
-This section is MANDATORY! Failure to setup the proxy will result in issues with the exploit, which won't brick your console, but that can possibly force you to switch to a different exploit.
-
-:::
-
 In this section, you will change your Internet connection settings to use a proxy network designed to bypass the browser version check, allowing the browser to function without a system update. This will allow you to access the browser exploit webpage in the next section.
 
 <!--@include: ./_include/addproxy.md -->
@@ -66,7 +60,7 @@ In this section, you will visit the browser exploit webpage, which will use univ
 
 ::: danger
 
-If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have inserted the proxy correctly.
+If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
 
 :::
 

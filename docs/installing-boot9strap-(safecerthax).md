@@ -55,7 +55,7 @@ In this section, you will copy the files needed to trigger the safecerthax explo
 
 ::: warning
 
-This section is MANDATORY! Failure to setup the proxy will result in issues with the exploit, which won't brick your console, but that can possibly force you to switch to a different exploit.
+This section is MANDATORY! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
 
 :::
 
