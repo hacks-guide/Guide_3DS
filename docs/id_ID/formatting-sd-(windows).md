@@ -10,7 +10,7 @@ Laman ini khusus pengguna Windows. Jika tidak menggunakan Windows, lihat laman [
 
 ## Apa yang Perlu
 
-- **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **Untuk semua ukuran kartu SD:** Versi terkini dari [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 - **Khusus kartu SD ukuran 64GB ke atas:** Versi terkini dari [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
 ## Instruksi
