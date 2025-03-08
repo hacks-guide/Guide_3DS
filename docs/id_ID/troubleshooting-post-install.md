@@ -6,7 +6,7 @@ Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui setelah _custo
 
 ::: info
 
-Konsol harus sudah terpasang CFW modern (boot9strap + Luma3DS 8.0 ke atas) untuk langkah di sini. Jika konsol terpasang CFW lawas (contoh, yang berdasar arm9loaderhax atau menuhax), maka perbarui dulu penyiapan CFW konsol sebelum mencoba instruksi ini.
+Konsol harus sudah terpasang CFW modern (boot9strap + Luma3DS 8.0 ke atas) untuk langkah di sini. Jika konsol terpasang CFW lawas (contoh, yang berjenis arm9loaderhax atau menuhax), maka perbarui dulu penyiapan CFW konsol sebelum mencoba instruksi ini.
 
 :::
 
