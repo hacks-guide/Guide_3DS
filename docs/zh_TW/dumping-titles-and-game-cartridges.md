@@ -44,9 +44,9 @@ Insert the game cartridge you intend to dump into your console
 1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
 2. 移動至 `[C:] GAMECART`
 3. 遵循以下適合您遊戲卡帶的步驟：
-   - **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it
-   - **NDS Game Cartridge:** Press (A) on `[TitleID].nds` to select it
-     - Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues
+    - **3DS Game Cartridge:** Press (A) on `[TitleID].trim.3ds` to select it
+    - **NDS Game Cartridge:** Press (A) on `[TitleID].nds` to select it
+        - Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues
 4. 選擇『Copy to 0:/gm9/out』
 5. 您不可安裝的 `.3ds` 或 `.nds` 檔案將被複製到您 SD 卡的 `/gm9/out/` 資料夾中
 
@@ -89,8 +89,8 @@ Insert the game cartridge you intend to dump into your console
 2. 按『Home』鍵以叫出主選單
 3. 選擇『Title manager』
 4. 選擇您所想要轉存的程式類型
-   - **User Installed Title**: `[A:] SD CARD`
-   - **System Title / DSiWare**: `[1:] NAND / TWL`
+    - **User Installed Title**: `[A:] SD CARD`
+    - **System Title / DSiWare**: `[1:] NAND / TWL`
 5. 選擇您所想要轉存的程式
 6. 選擇『Manage Title...』
 7. 選擇『Build CIA (standard)』
@@ -111,16 +111,16 @@ Insert the game cartridge you intend to dump into your console
 :::
 
 1. 為各個想備份的 GBA 虛擬主機遊戲重複下列步驟：
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Power off your console
-   - Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Dump GBA VC save"
-   - 按『A』 繼續
-   - Press (Start) to reboot your console
+    - Launch the GBA VC game
+    - Exit the GBA VC game
+    - Power off your console
+    - Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
+    - Navigate to `[S:] SYSNAND VIRTUAL`
+    - Press (A) on `agbsave.bin` to select it
+    - Select "AGBSAVE options..."
+    - Select "Dump GBA VC save"
+    - 按『A』 繼續
+    - Press (Start) to reboot your console
 
 ## Restore GBA VC Saves
 
@@ -131,21 +131,21 @@ Insert the game cartridge you intend to dump into your console
 :::
 
 1. 為各個想還原的 GBA 虛擬主機 遊戲重複下列步驟：
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Power off your console
-   - Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
-   - 移動至 `[0:] SDCARD` -> `gm9` -> `out`
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-   - 按『B』回到主選單
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Inject GBA VC save"
-   - 按『A』 繼續
-   - Press (Start) to reboot your console
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+    - Launch the GBA VC game
+    - Exit the GBA VC game
+    - Power off your console
+    - Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
+    - 移動至 `[0:] SDCARD` -> `gm9` -> `out`
+    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+    - 按『B』回到主選單
+    - Navigate to `[S:] SYSNAND VIRTUAL`
+    - Press (A) on `agbsave.bin` to select it
+    - Select "AGBSAVE options..."
+    - Select "Inject GBA VC save"
+    - 按『A』 繼續
+    - Press (Start) to reboot your console
+    - Launch the GBA VC game
+    - Exit the GBA VC game
 
 ## Encrypting / Decrypting a .CIA file
 
@@ -159,8 +159,8 @@ Insert the game cartridge you intend to dump into your console
 2. 移動至 `[0:] SDCARD` -> `cias`
 3. 按『A』鍵選擇 `.cia`，再選『CIA image options...』
 4. 選擇您所想要執行的選項：
-   - **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
-   - **Encrypt inplace:** Replace the selected `.cia` file with an encrypted version
-   - **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
+    - **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
+    - **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
+    - **Encrypt inplace:** Replace the selected `.cia` file with an encrypted version
+    - **Decrypt inplace:** Replace the selected `.cia` file with a decrypted version
 5. 加密／解密後的 `.cia` 檔案將被存於指定區域
