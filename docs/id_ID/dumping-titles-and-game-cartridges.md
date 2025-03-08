@@ -44,9 +44,9 @@ Sisipkan kartrid yang ingin di-_dump_ ke konsol
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Navigasi ke `[C:] GAMECART`
 3. Ikuti langkah berikut sesuai jenis kartrid:
-   - **Kartrid 3DS:** Tekan (A) pada `[TitleID].trim.3ds` untuk pilih
-   - **Kartrid NDS:** Tekan (A) pada `[TitleID].nds` untuk pilih
-     - _Dump_ terpangkas umumnya tidak dianjurkan untuk permainan NDS, karena banyak isu saat dijalankan
+    - **Kartrid 3DS:** Tekan (A) pada `[TitleID].trim.3ds` untuk pilih
+    - **Kartrid NDS:** Tekan (A) pada `[TitleID].nds` untuk pilih
+        - _Dump_ terpangkas umumnya tidak dianjurkan untuk permainan NDS, karena banyak isu saat dijalankan
 4. Pilih "Copy to 0:/gm9/out"
 5. Keluaran berformat `.3ds` atau `.nds` yang tak bisa dipasang akan ada di folder `/gm9/out/` di kartu SD
 
@@ -89,8 +89,8 @@ Berikut cara men-_dump_ aplikasi yang dipasang sistem atau pengguna, contohnya u
 2. Tekan (Home) untuk membuka menu tindakan
 3. Pilih "Title manager"
 4. Pilih salah satu berikut ini tergantung jenis aplikasi yang ingin di-_dump_
-   - **Apli Dipasang Pengguna**: `[A:] SD CARD`
-   - **Apli Sistem / DSiWare**: `[1:] NAND / TWL`
+    - **Apli Dipasang Pengguna**: `[A:] SD CARD`
+    - **Apli Sistem / DSiWare**: `[1:] NAND / TWL`
 5. Pilih aplikasi yang ingin di-_dump_
 6. Pilih "Manage Title..."
 7. Pilih "Build CIA (standard)"
@@ -111,16 +111,16 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
 :::
 
 1. Lakukan cara berikut untuk mencadang simpanan tiap permainan GBA VC yang diinginkan:
-   - Buka permainan GBA VC
-   - Keluar dari GBA VC
-   - Matikan daya konsol
-   - Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-   - Navigasi ke `[S:] SYSNAND VIRTUAL`
-   - Tekan (A) pada `agbsave.bin` untuk pilih
-   - Pilih "AGBSAVE options..."
-   - Pilih "Dump GBA VC save"
-   - Tekan (A) untuk lanjut
-   - Tekan (Start) untuk nyalakan ulang konsol
+    - Buka permainan GBA VC
+    - Keluar dari GBA VC
+    - Matikan daya konsol
+    - Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
+    - Navigasi ke `[S:] SYSNAND VIRTUAL`
+    - Tekan (A) pada `agbsave.bin` untuk pilih
+    - Pilih "AGBSAVE options..."
+    - Pilih "Dump GBA VC save"
+    - Tekan (A) untuk lanjut
+    - Tekan (Start) untuk nyalakan ulang konsol
 
 ## Memulihkan Simpanan GBA VC
 
@@ -131,21 +131,21 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
 :::
 
 1. Lakukan cara berikut untuk memulihkan simpanan tiap permainan GBA VC yang diinginkan:
-   - Buka permainan GBA VC
-   - Keluar dari GBA VC
-   - Matikan daya konsol
-   - Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-   - Navigasi ke `[0:] SDCARD` -> `gm9` -> `out`
-   - Tekan (Y) pada `<TitleID>.gbavc.sav` yang ingin dipulihkan untuk disalin
-   - Tekan (B) untuk kembali ke menu utama
-   - Navigasi ke `[S:] SYSNAND VIRTUAL`
-   - Tekan (A) pada `agbsave.bin` untuk pilih
-   - Pilih "AGBSAVE options..."
-   - Pilih "Inject GBA VC save"
-   - Tekan (A) untuk lanjut
-   - Tekan (Start) untuk nyalakan ulang konsol
-   - Buka permainan GBA VC
-   - Keluar dari GBA VC
+    - Buka permainan GBA VC
+    - Keluar dari GBA VC
+    - Matikan daya konsol
+    - Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
+    - Navigasi ke `[0:] SDCARD` -> `gm9` -> `out`
+    - Tekan (Y) pada `<TitleID>.gbavc.sav` yang ingin dipulihkan untuk disalin
+    - Tekan (B) untuk kembali ke menu utama
+    - Navigasi ke `[S:] SYSNAND VIRTUAL`
+    - Tekan (A) pada `agbsave.bin` untuk pilih
+    - Pilih "AGBSAVE options..."
+    - Pilih "Inject GBA VC save"
+    - Tekan (A) untuk lanjut
+    - Tekan (Start) untuk nyalakan ulang konsol
+    - Buka permainan GBA VC
+    - Keluar dari GBA VC
 
 ## Mengenkripsi / Dekripsi berkas .CIA
 
@@ -159,8 +159,8 @@ Agar lebih rapih, salin tiap berkas '.3ds' yang ingin dienkripsi / dekripsi **ke
 2. Navigasi ke `[0:] SDCARD` -> `cias`
 3. Tekan (A) pada berkas `.cia` untuk pilih, lalu pilih "CIA image options..."
 4. Pilih opsi dengan fungsi yang ingin dilakukan:
-   - **Encrypt to 0:/gm9/out:** Menyalin dan mengenkripsi `.cia` terpilih ke folder `/gm9/out/` di kartu SD
-   - **Decrypt to 0:/gm9/out:** Menyalin dan mendekripsi `.cia` terpilih ke folder `/gm9/out/` di kartu SD
-   - **Encrypt inplace:** Menimpa berkas `.cia` terpilih dengan versi enkripsi
-   - **Decrypt inplace:** Menimpa berkas `.cia` terpilih dengan versi dekripsi
+    - **Encrypt to 0:/gm9/out:** Menyalin dan mengenkripsi `.cia` terpilih ke folder `/gm9/out/` di kartu SD
+    - **Decrypt to 0:/gm9/out:** Menyalin dan mendekripsi `.cia` terpilih ke folder `/gm9/out/` di kartu SD
+    - **Encrypt inplace:** Menimpa berkas `.cia` terpilih dengan versi enkripsi
+    - **Decrypt inplace:** Menimpa berkas `.cia` terpilih dengan versi dekripsi
 5. Keluaran `.cia` terenkripsi / dekripsi akan ada di letak yang diinginkan
