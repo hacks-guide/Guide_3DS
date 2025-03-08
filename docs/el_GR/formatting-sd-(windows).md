@@ -10,7 +10,7 @@
 
 ## Τι χρειάζεστε
 
-- **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **Για κάρτες SD όλων των μεγεθών:** Την πιο πρόσφατη έκδοση του [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 - **Μόνο για κάρτες SD των 64GB ή περισσότερων:** Την πιο πρόσφατη έκδοση του [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
 ## Οδηγίες
