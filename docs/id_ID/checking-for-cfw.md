@@ -4,11 +4,11 @@
 
 Ini adalah laman lebihan untuk memeriksa apakah CFW konsol sudah modern.
 
-Jika konsol sudah CFW berdasar arm9loaderhax atau boot9strap, maka ikuti instruksi yang ditunjukkan untuk memperbarui penyiapan CFW ke yang modern.
+Jika konsol sudah CFW berjenis arm9loaderhax atau boot9strap, ikuti instruksi yang ditunjukkan untuk memperbarui CFW ke yang modern.
 
 ::: info
 
-Jika konsol Anda CFW berdasar-menuhax, [kosongkan dulu extdata HOME Menu](troubleshooting-post-install), lalu ikuti semua instruksi di SysNAND konsol. Konsol Anda mungkin CFW menuhax jika versi sistem tertulis 9.2.0-20 saat dinyalakan tanpa kartu SD.
+Jika konsolnya CFW berjenis-menuhax, [kosongkan dulu extdata HOME Menu](troubleshooting-post-install), lalu ikuti semua instruksi di SysNAND konsol. Konsol Anda mungkin CFW menuhax jika versi sistem tertulis 9.2.0-20 saat dinyalakan tanpa kartu SD.
 
 :::
 
