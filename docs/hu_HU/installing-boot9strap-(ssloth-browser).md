@@ -61,7 +61,7 @@ Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami az univ
 
 ::: danger
 
-If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
+Ha egy üzenetet kapsz ami azt mondja, hogy frissítsd a konzolod (update your console), ÁLLJ MEG! Csináld újra a II. részt az elejétől, és figyelj arra, hogy jól állítsd be a proxy-t.
 
 :::
 
