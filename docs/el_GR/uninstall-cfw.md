@@ -47,7 +47,7 @@
 - Την πιο πρόσφατη έκδοση του [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (το αρχείο `.zip` του GodMode9)
 - Την πιο πρόσφατη έκδοση του [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - Το [safety_test.gm9](/gm9_scripts/safety_test.gm9)
-- [uninstall_cfw.gm9](/gm9_scripts/uninstall_cfw.gm9)
+- Το [uninstall_cfw.gm9](/gm9_scripts/uninstall_cfw.gm9)
 
 ## Οδηγίες
 
@@ -59,7 +59,7 @@
 4. Αντιγράψτε το `GodMode9.firm` από το αρχείο `.zip` του GodMode9 στον φάκελο `/luma/payloads/` της κάρτας SD σας
 5. Αντιγράψτε τον φάκελο `gm9` από το αρχείο `.zip` του GodMode9 στη ρίζα της κάρτας SD σας
 6. Αντιγράψτε το `DSiWareUninstaller.3dsx` στον φάκελο `/3ds/` της κάρτας SD σας
-7. Copy `safety_test.gm9` and `uninstall_cfw.gm9` to the `/gm9/scripts/` folder on your SD card
+7. Αντιγράψτε το `safety_test.gm9` και το `uninstall_cfw.gm9` στον φάκελο `/gm9/scripts/` της κάρτας SD σας
 8. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
 ### Ενότητα II - Δοκιμές λειτουργίας DS
@@ -204,9 +204,9 @@
     - Εάν αντιθέτως βλέπετε το chainloader του Luma3DS, χρησιμοποιήστε το D-Pad και το (A) για να επιλέξετε το GodMode9
 2. Πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
 3. Επιλέξτε «Scripts...»
-4. Select "uninstall_cfw"
+4. Επιλέξτε «uninstall_cfw»
 5. Πατήστε το (A) για να συνεχίσετε όταν σας ζητηθεί
-6. Press (A) again to proceed
+6. Πατήστε το (A) ξανά για να συνεχίσετε
 7. Πατήστε το (A) για να ξεκλειδώσετε την εγγραφή στη SysNAND (lvl3) και έπειτα, εισαγάγετε τον συνδυασμό πλήκτρων που θα σας δοθεί
 8. Πατήστε το (A) για να συνεχίσετε
 9. Πατήστε το (Α) για να κλειδώσετε ξανά τα δικαιώματα εγγραφής εάν σας ζητηθεί
