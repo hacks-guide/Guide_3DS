@@ -10,7 +10,7 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 
 ## Amire szükséged lesz
 
-- **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **Minden SD kártya méret esetén:** Az [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/) legfrissebb verziója
 - **csak 64GB vagy nagyobb SD kártya esetén:** A [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm) legfrissebb verziója
 
 ## Lépések
