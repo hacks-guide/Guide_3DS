@@ -59,7 +59,7 @@ Instruksi ini hanya akan berfungsi pada konsol dengan Luma3DS versi 8.0 ke atas.
 4. Salin `GodMode9.firm` dari `.zip` GodMode9 ke folder `/luma/payloads/` di kartu SD
 5. Salin folder `gm9` dari `.zip` GodMode9 ke akar kartu SD
 6. Salin `DSiWareUninstaller.3dsx` ke folder `/3ds/` di kartu SD
-7. Copy `safety_test.gm9` and `uninstall_cfw.gm9` to the `/gm9/scripts/` folder on your SD card
+7. Salin `safety_test.gm9` dan `uninstall_cfw.gm9` ke folder `/gm9/scripts/` di kartu SD
 8. Sisip kembali kartu SD ke konsol
 
 ### Bagian II - Menguji Mode DS
@@ -204,9 +204,9 @@ Jika berniat mencopot CFW karena:
     - Jika malah muncul Luma3DS chainloader, gunakan Tombol Arah dan (A) untuk memilih GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
 3. Pilih "Scripts..."
-4. Select "uninstall_cfw"
+4. Pilih "uninstall_cfw"
 5. Saat diminta, tekan (A) untuk melanjutkan
-6. Press (A) again to proceed
+6. Tekan (A) untuk melanjutkan
 7. Tekan (A) untuk membuka izin tulis SysNAND (lvl3), lalu tekan kombo yang diberikan
 8. Tekan (A) untuk lanjut
 9. Tekan (A) untuk menutup ulang izin tulis jika diminta
