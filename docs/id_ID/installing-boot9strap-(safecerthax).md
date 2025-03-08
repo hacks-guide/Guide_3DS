@@ -24,7 +24,7 @@ Eksploit ini tidak berfungsi di New 3DS, New 3DS XL, atau New 2DS XL. Pastikan k
 
 ### Bagian I - Memeriksa Tombol Fisik
 
-Di bagian ini akan memeriksa apakah tombol L dan R konsol berfungsi. Ini akan menentukan apakah konsol bisa dengan metode ini.
+Di bagian ini akan memeriksa apakah tombol L dan R konsol berfungsi. Ini untuk menentukan apakah konsol bisa dengan metode ini.
 
 1. Nyalakan daya konsol
 2. Sesudah masuk HOME Menu, tekan tombol (L) dan (R) secara bersamaan
@@ -54,7 +54,7 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan eksploit safecerthax.
 
 ::: warning
 
-Bagian ini **WAJIB**! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
+Bagian ini **WAJIB**! Gagal mengatur Proxy malah akan tidak sengaja memperbarui konsol ke _firmware_ terbaru.
 
 :::
 
