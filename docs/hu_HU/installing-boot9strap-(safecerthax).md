@@ -54,7 +54,7 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a safecerthax exploit ki
 
 ::: warning
 
-This section is MANDATORY! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
+Ez a rész KÖTELEZŐ! A proxy hibás beállítása azt eredményezheti, hogy a konzolod frissebb verziójú firmwarre frissíted véletlenül.
 
 :::
 
