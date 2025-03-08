@@ -54,7 +54,7 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan eksploit safecerthax.
 
 ::: warning
 
-This section is MANDATORY! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
+Bagian ini **WAJIB**! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
 
 :::
 
