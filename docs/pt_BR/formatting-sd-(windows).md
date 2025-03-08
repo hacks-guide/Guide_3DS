@@ -10,7 +10,7 @@ Esta página é destinada apenas a usuários do Windows. Caso você não esteja 
 
 ## O que é necessário
 
-- a versão mais recente do [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 - **Apenas para cartões SD de 64GB ou maior:** A última versão do [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
 ## Instruções
@@ -27,11 +27,11 @@ Esta página é destinada apenas a usuários do Windows. Caso você não esteja 
 
 5. Selecione a letra de unidade do seu cartão SD em "Select card"
 
-   ::: danger
+    ::: danger
 
-   Certifique-se de escolher a letra da unidade correta, caso contrário você pode apagar a unidade errada acidentalmente!
+    Certifique-se de escolher a letra da unidade correta, caso contrário você pode apagar a unidade errada acidentalmente!
 
-   :::
+    :::
 
 6. Digite qualquer coisa para "Volume label"
 
@@ -61,15 +61,15 @@ Você acabou de formatar seu cartão SD se ele for **de 32GB ou menor.**
 
 2. Selecione a letra da unidade do seu cartão SD em "Drive"
 
-   ::: danger
+    ::: danger
 
-   Certifique-se de escolher a letra da unidade correta, caso contrário você pode apagar a unidade errada acidentalmente!
+    Certifique-se de escolher a letra da unidade correta, caso contrário você pode apagar a unidade errada acidentalmente!
 
-   :::
+    :::
 
 3. Selecione um tamanho para "Allocation unit size"
-   - Se o cartão SD for de 64GB, escolha 32768
-   - Se o cartão SD for maior que 64GB, escolha 65536
+    - Se o cartão SD for de 64GB, escolha 32768
+    - Se o cartão SD for maior que 64GB, escolha 65536
 
 4. Digite qualquer coisa para "Volume label"
 
@@ -88,11 +88,11 @@ Você acabou de formatar seu cartão SD se ele for **de 32GB ou menor.**
 ## Troubleshooting
 
 - guiformat mostra o erro "Failed to open device: GetLastError()=32"
-  - Feche tudo o que estiver usando o cartão SD, como qualquer janela do Explorador de Arquivos.
-  - Se este problema persistir, tente reformatar o cartão para NTFS no Gerenciador de Arquivos, feche essa janela quando terminar, e tente novamente o processo do guiformat.
+    - Feche tudo o que estiver usando o cartão SD, como qualquer janela do Explorador de Arquivos.
+    - Se este problema persistir, tente reformatar o cartão para NTFS no Gerenciador de Arquivos, feche essa janela quando terminar, e tente novamente o processo do guiformat.
 
 - guiformat mostra o erro "GetLastError()=1117"
-  - A chave contra proteção de escrita no cartão SD pode estar [habilitada](/images/sdlock.png). A chave deve ser virada para cima para permitir a escrita de arquivos no cartão SD (incluindo formatação).
+    - A chave contra proteção de escrita no cartão SD pode estar [habilitada](/images/sdlock.png). A chave deve ser virada para cima para permitir a escrita de arquivos no cartão SD (incluindo formatação).
 
 - O cartão SD permanece não sendo detectado pelo console, ou continua mostrando a capacidade errada após a formatação
-  - Seu cartão SD pode estar particionado ou ter espaço não alocado. Siga as instruções [aqui](https://wiki.hacks.guide/wiki/SD_Clean/Windows) para reformatar o seu cartão SD.
+    - Seu cartão SD pode estar particionado ou ter espaço não alocado. Siga as instruções [aqui](https://wiki.hacks.guide/wiki/SD_Clean/Windows) para reformatar o seu cartão SD.
