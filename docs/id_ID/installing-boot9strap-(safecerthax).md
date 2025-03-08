@@ -54,11 +54,11 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan eksploit safecerthax.
 
 ::: warning
 
-Bagian ini **WAJIB**! Gagal mengatur Proxy malah akan tidak sengaja memperbarui konsol ke _firmware_ terbaru.
+Bagian ini **WAJIB**! Jika gagal mengatur Proxy, konsol malah akan diperbarui ke _firmware_ terbaru.
 
 :::
 
-Di bagian ini akan mengubah pengaturan sambungan Internet ke jejaring _proxy_ untuk mengeksploit fitur System Update konsol.
+Di bagian ini akan mengubah pengaturan sambungan Internet ke jejaring Proxy untuk mengeksploit fitur System Update konsol.
 
 <!--@include: ./_include/addproxy.md -->
 
