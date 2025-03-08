@@ -142,7 +142,7 @@ Informazioni per la salute e la sicurezza è stato ripristinata alla normalità.
 
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 2. Premi (R) + (B) per poter rimuovere la scheda SD e inserire quella che si desidera formattare
-   - Se GodMode9 mostra un errore di inizializzazione all'inserimento della scheda SD da formattare, si può ignorare tranquillamente
+    - Se GodMode9 mostra un errore di inizializzazione all'inserimento della scheda SD da formattare, si può ignorare tranquillamente
 
 <!--@include: ./_include/format-sd-gm9.md -->
 
