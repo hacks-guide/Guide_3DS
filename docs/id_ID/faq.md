@@ -156,13 +156,13 @@ Mohon rujuk ke [panduan sidik gangguan](troubleshooting-post-install). **Mencopo
 
 :::details Konsol saya sudah dimodif (x) tahun lalu, jadi sudah ada homebrew. Bagaimana ini?
 
-Dianjurkan memperbarui penyiapan konsol ke CFW modern berdasar-boot9strap. Ikuti [Memeriksa CFW](checking-for-cfw) untuk cara memperbarui penyiapan CFW.
+Dianjurkan memperbarui penyiapan konsol ke CFW modern berjenis-boot9strap. Ikuti [Memeriksa CFW](checking-for-cfw) untuk cara memperbarui penyiapan CFW.
 
 :::
 
 :::details Penyiapan CFW saya lancar saja. Untuk apa diperbarui?
 
-Sebagian besar _homebrew_ modern (seperti Checkpoint dan BootNTR Selector) hanya diuji di CFW terkini berdasar-boot9strap, dan takutnya tidak berfungsi (sama sekali) di penyiapan lawas berdasar menuhax, A9LH, atau Gateway. Ditambah lagi, tergantung jenis CFW, bisa bahaya jika diperbarui ke _firmware_ terbaru. Penyiapan modern berdasar-boot9strap mengizinkan tingkat akses sistem lebih luas daripada retasan sebelumnya, termasuk men-_dump bootrom_ konsol.
+Sebagian besar _homebrew_ modern (seperti Checkpoint dan BootNTR Selector) hanya diuji di CFW terkini berjenis-boot9strap, dan takutnya tidak berfungsi (sama sekali) di penyiapan lawas berdasar menuhax, A9LH, atau Gateway. Ditambah lagi, tergantung jenis CFW, bisa bahaya jika diperbarui ke _firmware_ terbaru. CFW modern berjenis-boot9strap mengizinkan tingkat akses sistem lebih luas daripada retasan sebelumnya, termasuk men-_dump bootrom_ konsol.
 
 :::
 
