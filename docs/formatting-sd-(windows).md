@@ -10,7 +10,7 @@ This page is for Windows users only. If you are not on Windows, check out the [F
 
 ## What You Need
 
-* **For all size of SD cards**: the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+* **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 * **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
 ## Instructions
