@@ -61,7 +61,7 @@ Di bagian ini akan membuka laman web eksploit Browser dengan universal-otherapp 
 
 ::: danger
 
-Jika diminta untuk memperbarui sistem konsol, BERHENTI! Ulangi lagi Bagian II dari awal dan pastikan penyiapan Proxy sudah benar.
+Jika diminta untuk memperbarui sistem konsol, BERHENTI! Ulangi lagi Bagian II dari awal dan pastikan pengaturan Proxy sudah benar.
 
 :::
 
