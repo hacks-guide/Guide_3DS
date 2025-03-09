@@ -54,7 +54,7 @@ In questa sezione copierai i file necessari per attivare l'exploit safecerthax.
 
 ::: warning
 
-This section is MANDATORY! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
+Questa sezione è OBBLIGATORIA! La mancata configurazione del proxy potrebbe causare l'aggiornamento della console a un firmware più recente.
 
 :::
 
