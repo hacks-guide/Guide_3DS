@@ -37,7 +37,7 @@ berarti mencopot CFW <u>**AKAN MEMBUAT MATOT KONSOL**</u>. Jika memang perlu, [p
 
 ::: warning
 
-Instruksi ini hanya akan berfungsi pada konsol dengan Luma3DS versi 8.0 ke atas. Jika masih di Luma versi lawas, perbarui dulu CFW sebelum mengikuti instruksi ini. Ikuti [laman ini](checking-for-cfw) untuk instruksi pembaruan sesuai versi.
+Instruksi ini hanya akan berfungsi pada konsol dengan Luma3DS versi 8.0 ke atas. Jika masih di Luma versi lama, perbarui dulu CFW sebelum mengikuti instruksi ini. Ikuti [laman ini](checking-for-cfw) untuk instruksi pembaruan sesuai versi.
 
 :::
 
@@ -206,7 +206,7 @@ Jika berniat mencopot CFW karena:
 3. Pilih "Scripts..."
 4. Pilih "uninstall_cfw"
 5. Saat diminta, tekan (A) untuk melanjutkan
-6. Tekan (A) untuk melanjutkan
+6. Tekan (A) lagi untuk melanjutkan
 7. Tekan (A) untuk membuka izin tulis SysNAND (lvl3), lalu tekan kombo yang diberikan
 8. Tekan (A) untuk lanjut
 9. Tekan (A) untuk menutup ulang izin tulis jika diminta
