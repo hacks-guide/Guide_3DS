@@ -61,7 +61,7 @@ In questa sezione visiterai la pagina web dell'exploit del browser, che userà u
 
 ::: danger
 
-If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
+Se ricevi una schermata che ti dice di aggiornare la console, FERMATI! Ripeti la sezione II dall'inizio e assicurati di aver impostato correttamente il proxy.
 
 :::
 
