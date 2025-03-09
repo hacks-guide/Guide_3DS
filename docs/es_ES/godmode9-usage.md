@@ -142,7 +142,7 @@ Health & Safety has been reverted to normal.
 
 1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Press (Right Shoulder) + (B) to unmount the current SD card and insert the one you want to format
-   - If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
+    - If GodMode9 shows an initialization error when inserting the SD Card to be formatted, it can safely be dismissed
 
 <!--@include: ./_include/format-sd-gm9.md -->
 

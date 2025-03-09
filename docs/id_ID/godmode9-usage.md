@@ -142,7 +142,7 @@ Health & Safety sudah kembali ke biasa lagi.
 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Tekan (R) + (B) untuk lepas _mount_ kartu SD dan sisipkan kartu SD yang ingin diformat
-   - Jika GodMode9 muncul galat inisialisasi saat menyisip kartu SD yang akan diformat, ini aman diabaikan
+    - Jika GodMode9 muncul galat inisialisasi saat menyisip kartu SD yang akan diformat, ini aman diabaikan
 
 <!--@include: ./_include/format-sd-gm9.md -->
 

@@ -1,6 +1,6 @@
 # Sidik Gangguan (SSLoth-Browser)
 
-Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (SSLoth-Browser)" untuk konsol di versi sistem 11.4.0 sampai 11.13.0. Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (SSLoth-Browser)" untuk konsol di versi sistem 11.4.0 sampai 11.13.0. Jika saran dari laman ini tidak menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ::: warning
 
@@ -22,9 +22,9 @@ Berkas `arm11code.bin` belum ada atau salah taruh. Unduh versi terkini dari [uni
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details "An error has occurred, forcing the software to close..." (kotak pesan putih)
 
-Ada masalah dengan berkas `otherapp.bin` Anda. Unduh versi terkini dari [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), lalu taruh `otherapp.bin` di akar kartu SD dan ubah nama menjadi `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
+Berkas `otherapp.bin` mungkin bermasalah. Unduh versi terkini dari [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), lalu taruh `otherapp.bin` di akar kartu SD dan ubah nama menjadi `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
 
 Bisa juga coba atur ulang data simpanan Browser:
 
@@ -34,9 +34,9 @@ Bisa juga coba atur ulang data simpanan Browser:
 
 :::
 
-:::details Opening the browserhax QR code or URL crashes
+:::details Mogok saat membuka kode QR browserhax atau URL
 
-Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
+Eksploit berjenis-Browser (seperti yang ini) suka tidak stabil dan mogok, tapi terkadang bisa diperbaiki dengan langkah-langkah berikut.
 
 1. Buka Browser, lalu buka pengaturan Browser
 2. Gulir ke bawah dan pilih "Reset Save Data" (bisa jadi disebut "Initialize Save Data" atau "Clear All Save Data")
@@ -44,15 +44,15 @@ Browser based exploits (such as this one) are often unstable and crash frequentl
 
 :::
 
-:::details System Update prompt when opening browser
+:::details Muncul System Update saat membuka Browser
 
-The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+Pewali atau Proxy SSLoth disetel kurang benar. Coba lagi instruksi bagian SSLoth.
 
 :::
 
-:::details Error 032-0420 when opening browser
+:::details Error 032-0420 saat membuka Browser
 
-Follow these steps in order:
+Ikuti langkah ini berurutan:
 
 1. Buka System Settings di konsol
 2. Navigasi ke `Internet Settings` -> `Connection Settings`
@@ -63,30 +63,30 @@ Follow these steps in order:
     - Pengujiannya harus berhasil
 7. Pencet "OK" untuk lanjut
 8. Tekan "Back" dua kali, lalu "Close" untuk kembali ke HOME Menu
-9. Open the Internet Browser once
-10. If prompted about a system update, press OK
-    - This won't actually update the system
-11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+9. Buka Internet Browser satu kali
+10. Jika diminta memperbarui sistem, tekan OK
+    - Ini sebenarnya tidak memperbarui sistem
+11. Mulai lagi dari [Bagian II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
 
 :::
 
-:::details Frozen on "Doing agbhax..."
+:::details Macet saat "Doing agbhax..."
 
-Ada masalah dengan berkas `otherapp.bin` Anda. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
+Berkas `otherapp.bin` mungkin bermasalah. Unduh ulang versi terkini dari [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), taruh di akar kartu SD lalu ubah nama menjadi `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
 
 :::
 
 :::details "PrepareArm9ForTwl returned error c8804631!"
 
-Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) untuk bantuan.
 
 :::
 
 :::details Failed to mount the SD card!
 
-Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
+**Cadangkan dulu data**, lalu format ulang kartu SD ke FAT32 dengan alat anjuran yang sesuai sistem operasi ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). MiniTool Partition Wizard dan alat format merek HP (HPUSBDisk) diketahui ada isu dengan kartu SD 3DS.
 
-If this is unsuccessful, try using another SD card.
+Jika ini tidak berhasil, coba kartu SD lain.
 
 :::
 
@@ -102,7 +102,7 @@ If this is unsuccessful, try using another SD card.
 
 ::: tip
 
-Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+Kembali ke [Memasang boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
 
 :::
 

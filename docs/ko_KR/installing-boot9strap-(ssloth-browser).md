@@ -32,8 +32,8 @@ SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브�
 1. 콘솔의 전원을 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
 3. `otherapp.bin`을 SD 카드의 루트에 복사하고 이름을 `arm11code.bin`으로 바꿔 주세요
-   - SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
-   - `.bin` 확장명이 안 보인다면 파일 끝에 추가하지 마세요
+    - SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
+    - `.bin` 확장명이 안 보인다면 파일 끝에 추가하지 마세요
 4. Luma3DS `.zip`안에 있는 모든 파일들을 SD 카드의 루트에 복사해 주세요
 5. SD 카드이 루트에 `boot9strap` 라는 이름으로 새 폴더를 생성해 주세요
 6. SD 카드에 있는 `/boot9strap/` 폴더에 boot9strap `.zip` 파일 안에 압축되있는 `boot9strap.firm`과 `boot9strap.firm.sha`을 복사해 주세요
@@ -54,20 +54,27 @@ SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브�
 이 섹션에서는, boot9strap (커스텀 펌웨어) 설치 도구를 실행하기 위해 브라우저 익스플로잇 웹페이지에서 universal-otherapp을 실행합니다.
 
 1. HOME 메뉴에서 L, R 버튼을 동시에 눌러 카메라를 열어 주세요
-   - 카메가 사용이 불가는하다면, 인터넷 브라우저를 열어 URL을 직접 입력하세요: (`https://zoogie.github.io/web/nbhax/`)
-2. QR 코드 버튼을 눌러 [이 QR 코드](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L) 를 스캔해 주세요
-   - 오류가 발생하면 이 [문제 해결 가이드](troubleshooting-ssloth-browser) 를 참고해 주세요
-   - 보안 인증서 경고가 표시되면, (A)를 눌러 연결을 허용하세요
-3. "PROCEED TO HAXX" 버튼을 눌러주세요
-4. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
-   - 오류가 발생하면 이 [문제 해결 가이드](troubleshooting-ssloth-browser) 를 참고해 주세요
+    - 카메가 사용이 불가는하다면, 인터넷 브라우저를 열어 URL을 직접 입력하세요: (`https://zoogie.github.io/web/nbhax/`)
+2. QR 코드 버튼을 눌러 이 QR 코드 를 스캔해 주세요
+    - 오류가 발생하면 이 [문제 해결 가이드](troubleshooting-ssloth-browser) 를 참고해 주세요
+    - 보안 인증서 경고가 표시되면, (A)를 눌러 연결을 허용하세요
+
+::: danger
+
+If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
+
+:::
+
+1. "PROCEED TO HAXX" 버튼을 눌러주세요
+2. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
+    - 오류가 발생하면 이 [문제 해결 가이드](troubleshooting-ssloth-browser) 를 참고해 주세요
 
 ### 섹션 IV - boot9strap 설치
 
 이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.
 
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-   - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting-ssloth-browser)를 참고해 주세요
+    - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting-ssloth-browser)를 참고해 주세요
 2. 작업이 완료되면, (A) 를 눌려 콘솔을 재부팅해 주세요
 
 <!--@include: ./_include/configure-luma3ds.md -->

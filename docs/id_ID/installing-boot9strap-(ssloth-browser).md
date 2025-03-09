@@ -32,8 +32,8 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan browserhax dan universal-ot
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
 3. Salin `otherapp.bin` ke akar kartu SD dan ubah nama menjadi `arm11code.bin`
-   - Akar (_root_) kartu SD adalah direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
-   - Jika tidak terlihat ekstensi `.bin`, jangan tambahkan di ujung nama berkas
+    - Akar (_root_) kartu SD adalah direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
+    - Jika tidak terlihat ekstensi `.bin`, jangan tambahkan di ujung nama berkas
 4. Salin semua isi berkas `.zip` Luma3DS ke akar kartu SD
 5. Buat folder dengan nama `boot9strap` di akar kartu SD
 6. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari berkas `.zip` boot9strap ke folder `/boot9strap/` di kartu SD
@@ -54,20 +54,27 @@ Di bagian ini akan mengubah pengaturan sambungan Internet ke jejaring Proxy untu
 Di bagian ini akan membuka laman web eksploit Browser dengan universal-otherapp untuk menjalankan pemasang boot9strap (_custom firmware_).
 
 1. Saat di HOME Menu, tekan tombol L dan R bersamaan untuk membuka kamera
-   - Jika tidak bisa membuka kamera, buka Internet Browser dan coba ketik sendiri URL `https://zoogie.github.io/web/nbhax/`
-2. Sentuh tombol kode QR dan pindai [kode QR ini](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
-   - Jika mogok atau muncul kode galat, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
-   - Jika muncul peringatan sertifikat keamanan, tekan (A) untuk boleh menyambung
-3. Sentuh tombol "PROCEED TO HAXX"
-4. Jika eksploit berhasil akan muncul SafeB9SInstaller
-   - Jika muncul galat, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
+    - Jika tidak bisa membuka kamera, buka Internet Browser dan coba ketik sendiri URL `https://zoogie.github.io/web/nbhax/`
+2. Sentuh tombol kode QR dan pindai [kode QR ini](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
+    - Jika mogok atau muncul kode galat, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
+    - Jika muncul peringatan sertifikat keamanan, tekan (A) untuk boleh menyambung
+
+::: danger
+
+Jika diminta untuk memperbarui sistem konsol, BERHENTI! Ulangi lagi Bagian II dari awal dan pastikan pengaturan Proxy sudah benar.
+
+:::
+
+1. Sentuh tombol "PROCEED TO HAXX"
+2. Jika eksploit berhasil akan muncul SafeB9SInstaller
+    - Jika muncul galat, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
 
 ### Bagian IV - Memasang boot9strap
 
 Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
-   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
+    - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
 2. Saat selesai, tekan (A) untuk nyalakan ulang konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->

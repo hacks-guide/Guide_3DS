@@ -23,10 +23,10 @@ Em telefones/tablets Android, a versão mínima do Android é 6.0 (Marshmallow).
 ## O que é necessário
 
 - Os aplicativos a seguir serão instalados pela Google Play Store:
-  - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
-  - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
-  - Se você desejar, você pode fazer sideloading destes aplicativos em vez disso
-- A versão mais recente do [MSET9](https://github.com/zoogie/MSET9/releases/latest) (o arquivo Release `.zip`)
+    - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
+    - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
+    - Se você desejar, você pode fazer sideloading destes aplicativos em vez disso
+- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the Release `.zip` file)
 
 ## Instruções
 
@@ -38,17 +38,17 @@ Nesta seção, você irá preparar os dados no seu cartão SD necessários para 
 
 2. Copie tudo do Release `.zip` para a raíz do seu cartão SD, substituindo quaisquer arquivos existentes:
 
-   - Abra o ZArchiver
-   - Se solicitado, [permita ao ZArchiver acessar os arquivos do seu cartão SD](/images/screenshots/mset9/zarchiver-allow.png)
-   - Navegue para onde o Release `.zip` do MSET9 está localizado ([provavelmente na pasta de Downloads](/images/screenshots/mset9/zarchiver-zip-location.png))
-   - Selecione o Release `.zip`, então selecione "Extract..." ([imagem](/images/screenshots/mset9/zarchiver-extract-1.png))
-   - Navegue para o seu cartão SD, então toque o ícone azul de 'seta para baixo' para extrair os arquivos para a raiz do seu cartão SD ([imagem](/images/screenshots/mset9/zarchiver-extract-2.png))
+    - Abra o ZArchiver
+    - Se solicitado, [permita ao ZArchiver acessar os arquivos do seu cartão SD](/images/screenshots/mset9/zarchiver-allow.png)
+    - Navegue para onde o Release `.zip` do MSET9 está localizado ([provavelmente na pasta de Downloads](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Selecione o Release `.zip`, então selecione "Extract..." ([imagem](/images/screenshots/mset9/zarchiver-extract-1.png))
+    - Navegue para o seu cartão SD, então toque o ícone azul de 'seta para baixo' para extrair os arquivos para a raiz do seu cartão SD ([imagem](/images/screenshots/mset9/zarchiver-extract-2.png))
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/mset9/mset9-root-layout-android.png)
+    ![](/images/screenshots/mset9/mset9-root-layout-android.png)
 
-   :::
+    :::
 
 3. Execute o [aplicativo MSET9 Installer](/images/screenshots/mset9/mset9-setup-android.png)
 
@@ -57,7 +57,7 @@ Nesta seção, você irá preparar os dados no seu cartão SD necessários para 
 5. Uma vez dentro da pasta `Nintendo 3DS`, toque em "Use this folder", depois "Allow" se perguntado ([imagem](/images/screenshots/mset9/select-mset9-folder-2.png))
 
 6. Se `Setup MSET9` estiver [destacado](/images/screenshots/mset9/setup-mset9-highlighted.png), prossiga para a próxima etapa
-   - Se você receber um erro, você precisa resolvê-lo antes de usar o MSET9. Consulte o [guia de troubleshooting](troubleshooting-mset9)
+    - Se você receber um erro, você precisa resolvê-lo antes de usar o MSET9. Consulte o [guia de troubleshooting](troubleshooting-mset9)
 
 7. Toque em `Setup MSET9` para começar o processo de configuração do MSET9
 
@@ -106,16 +106,16 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
 :::
 
 1. Ligue seu console, garantindo que as Configurações do Sistema estejam selecionadas
-   - Se a Configuração do Console não está selecionada, **[posicione o cursor](/images/screenshots/mset9/hover-settings.png)** sob o ícone da Configuração do Console usando o D-Pad, desligue seu console e ligue-o novamente
+    - Se a Configuração do Console não está selecionada, **[posicione o cursor](/images/screenshots/mset9/hover-settings.png)** sob o ícone da Configuração do Console usando o D-Pad, desligue seu console e ligue-o novamente
 2. Pressione (A) para iniciar as Configurações do Sistema
 3. Navegue para `Gerenciamento de Dados` -> `Nintendo 3DS` -> `Extra Data` ([imagem](/images/screenshots/mset9/settings-extdata.png))
 4. **Não pressione nenhum botão ou toque na tela**
 5. **Com o console AINDA LIGADO, e sem pressionar nenhum dos botões ou a tela de toque**, remova seu cartão SD do seu console
-   - O menu atualizará e dirá que nenhum cartão SD foi inserido, o que é esperado
+    - O menu atualizará e dirá que nenhum cartão SD foi inserido, o que é esperado
 6. Insira o cartão SD no seu telefone/tablet/computador
 7. Abrir o aplicativo MSET9 Installer
 8. Toque em `Inject trigger file`
-   - O botão deve tornar-se cinza e `Remove trigger file` irá se tornar [destacado](/images/screenshots/mset9/remove-trigger-highlighted.png)
+    - O botão deve tornar-se cinza e `Remove trigger file` irá se tornar [destacado](/images/screenshots/mset9/remove-trigger-highlighted.png)
 9. Reinsira o cartão SD no seu console **sem pressionar nenhum botão ou tocar na tela**
 10. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
     - Se você ver uma tela vermelha ou o console ficar preso em uma tela de carregamento, siga o [guia de troubleshooting](troubleshooting-mset9)
@@ -125,7 +125,7 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
 Nesta seção, você instalará custom firmware no seu console.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - Se um passo na tela inferior possuir texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o [guia de troubleshooting](troubleshooting-mset9)
+    - Se um passo na tela inferior possuir texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o [guia de troubleshooting](troubleshooting-mset9)
 2. Quando concluído, aperte (A) para reiniciar o seu console
 
 <!--@include: ./_include/configure-luma3ds.md -->

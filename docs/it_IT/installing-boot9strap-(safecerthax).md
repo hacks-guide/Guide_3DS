@@ -28,7 +28,7 @@ In questa sezione verificherai se i pulsanti dorsali della tua console funzionan
 
 1. Accendi la tua console
 2. Nel menu HOME premi contemporaneamente i pulsanti L e R
-   - Dovrebbe apparire l'applicazione fotocamera
+    - Dovrebbe apparire l'applicazione fotocamera
 3. Spegni la tua console
 
 ::: warning
@@ -43,7 +43,7 @@ In questa sezione copierai i file necessari per attivare l'exploit safecerthax.
 
 1. Inserisci la scheda SD nel tuo computer
 2. Copia tutto dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
-   - La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
+    - La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
 3. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
 4. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
 5. Copia il file `SafeB9SInstaller.bin` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD
@@ -51,6 +51,12 @@ In questa sezione copierai i file necessari per attivare l'exploit safecerthax.
 7. Accendi la tua console
 
 ### Sezione III - safecerthax proxy
+
+::: warning
+
+Questa sezione è OBBLIGATORIA! La mancata configurazione del proxy potrebbe causare l'aggiornamento della console a un firmware più recente.
+
+:::
 
 In questa sezione modificherai le impostazioni di connessione a Internet per utilizzare una rete proxy progettata per sfruttare le falle nella funzione di Aggiornamento della tua console.
 
@@ -63,21 +69,21 @@ In questa sezione modificherai le impostazioni di connessione a Internet per uti
 In questa sezione entrerai nella Modalità Provvisoria (disponibile su tutte le console della famiglia 3DS) per attivare safecerthax e avviare l'installer di boot9strap (il custom firmware).
 
 1. Con la console ancora spenta, tieni premuto i pulsanti (L) + (R) + (Su) + (A), dopodiché, tenendo premuti i pulsanti, accendi la console
-   - Mantieni premuti i pulsanti finché la console si avvierà in Modalità Provvisoria (una specie di menu per aggiornare il sistema)
+    - Mantieni premuti i pulsanti finché la console si avvierà in Modalità Provvisoria (una specie di menu per aggiornare il sistema)
 2. Premi "OK" per accettare l'aggiornamento
-   - Non c'è nessun aggiornamento. Fa parte del procedimento
+    - Non c'è nessun aggiornamento. Fa parte del procedimento
 3. Premi "Accetto" per accettare i termini e le condizioni
 4. L'aggiornamento fallirà, con codice di errore `003-1099`. Questo risultato è corretto
 5. Premi "OK" per chiudere il messaggio di errore
 6. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
-   - Se la console si blocca o crasha, forza lo spegnimento della console, quindi ritenta questa sezione
+    - Se la console si blocca o crasha, forza lo spegnimento della console, quindi ritenta questa sezione
 
 ### Sezione V - Installazione di boot9strap
 
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-safecerthax)
+    - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-safecerthax)
 2. Una volta completato tutto, premi (A) per riavviare la console
 
 <!--@include: ./_include/configure-luma3ds.md -->

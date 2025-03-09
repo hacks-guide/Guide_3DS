@@ -32,8 +32,8 @@ In questa sezione copierai i file necessari per attivare sia browserhax che univ
 1. Spegni la tua console
 2. Inserisci la scheda SD nel tuo computer
 3. Copia il file `otherapp.bin` nella directory principale della tua scheda SD e rinominalo in `arm11code.bin`
-   - La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
-   - Se non vedi l'estensione `.bin`, non aggiungerla alla fine del nome del file
+    - La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
+    - Se non vedi l'estensione `.bin`, non aggiungerla alla fine del nome del file
 4. Copia tutto dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD
 5. Crea una cartella chiamata `boot9strap` nella directory principale della tua scheda SD
 6. Copia i file `boot9strap.firm` e `boot9strap.firm.sha` dall'archivio `.zip` di boot9strap nella cartella `/boot9strap/` della tua scheda SD
@@ -54,20 +54,27 @@ In questa sezione cambierai le impostazioni di collegamento ad Internet per util
 In questa sezione visiterai la pagina web dell'exploit del browser, che userà universal-otherapp per avviare il programma di installazione di boot9strap (custom firmware).
 
 1. Nel menu HOME, premi contemporaneamente i pulsanti dorsali L e R per avviare la fotocamera
-   - Se non riesci ad avviare la fotocamera, avvia il Browser Internet e raggiungi manualmente l'URL (`https://zoogie.github.io/web/nbhax/`)
-2. Tocca il pulsante Codice QR e scansiona [questo codice QR](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
-   - Se crasha o se ottieni un codice di errore, [segui questa guida per risolvere il problema](troubleshooting-ssloth-browser)
-   - Se visualizzi un avviso riguardo un certificato di sicurezza, premi (A) per consentire la connessione
-3. Tocca il pulsante "PROCEED TO HAXX"
-4. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
-   - Se ottieni un errore, [segui questa guida per risolvere il problema](troubleshooting-ssloth-browser)
+    - Se non riesci ad avviare la fotocamera, avvia il Browser Internet e raggiungi manualmente l'URL (`https://zoogie.github.io/web/nbhax/`)
+2. Tocca il pulsante Codice QR e scansiona [questo codice QR](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
+    - Se crasha o se ottieni un codice di errore, [segui questa guida per risolvere il problema](troubleshooting-ssloth-browser)
+    - Se visualizzi un avviso riguardo un certificato di sicurezza, premi (A) per consentire la connessione
+
+::: danger
+
+Se ricevi una schermata che ti dice di aggiornare la console, FERMATI! Ripeti la sezione II dall'inizio e assicurati di aver impostato correttamente il proxy.
+
+:::
+
+1. Tocca il pulsante "PROCEED TO HAXX"
+2. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
+    - Se ottieni un errore, [segui questa guida per risolvere il problema](troubleshooting-ssloth-browser)
 
 ### Sezione IV - Installazione di boot9strap
 
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-ssloth-browser)
+    - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-ssloth-browser)
 2. Una volta completato tutto, premi (A) per riavviare la console
 
 <!--@include: ./_include/configure-luma3ds.md -->

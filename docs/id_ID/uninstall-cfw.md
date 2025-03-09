@@ -37,7 +37,7 @@ berarti mencopot CFW <u>**AKAN MEMBUAT MATOT KONSOL**</u>. Jika memang perlu, [p
 
 ::: warning
 
-Instruksi ini hanya akan berfungsi pada konsol dengan Luma3DS versi 8.0 ke atas. Jika masih di Luma versi lawas, perbarui dulu CFW sebelum mengikuti instruksi ini. Ikuti [laman ini](checking-for-cfw) untuk instruksi pembaruan sesuai versi.
+Instruksi ini hanya akan berfungsi pada konsol dengan Luma3DS versi 8.0 ke atas. Jika masih di Luma versi lama, perbarui dulu CFW sebelum mengikuti instruksi ini. Ikuti [laman ini](checking-for-cfw) untuk instruksi pembaruan sesuai versi.
 
 :::
 
@@ -47,6 +47,7 @@ Instruksi ini hanya akan berfungsi pada konsol dengan Luma3DS versi 8.0 ke atas.
 - Versi terkini dari [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (yang `.zip` GodMode9)
 - Versi terkini dari [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
+- [uninstall_cfw.gm9](/gm9_scripts/uninstall_cfw.gm9)
 
 ## Instruksi
 
@@ -58,7 +59,7 @@ Instruksi ini hanya akan berfungsi pada konsol dengan Luma3DS versi 8.0 ke atas.
 4. Salin `GodMode9.firm` dari `.zip` GodMode9 ke folder `/luma/payloads/` di kartu SD
 5. Salin folder `gm9` dari `.zip` GodMode9 ke akar kartu SD
 6. Salin `DSiWareUninstaller.3dsx` ke folder `/3ds/` di kartu SD
-7. Salin `safety_test.gm9` ke folder `/gm9/scripts/` di kartu SD
+7. Salin `safety_test.gm9` dan `uninstall_cfw.gm9` ke folder `/gm9/scripts/` di kartu SD
 8. Sisip kembali kartu SD ke konsol
 
 ### Bagian II - Menguji Mode DS
@@ -71,7 +72,7 @@ Tujuan dari bagian ini untuk memeriksa apakah aplikasi mode DS tertanam akan tet
 2. Buka System Settings di konsol
 3. Navigasi ke `Internet Settings` -> `Nintendo DS Connection Settings`, lalu sentuh OK
 4. Seharusnya akan masuk ke menu Nintendo DS Connection Setup
-   - Jika konsol malah menampilkan Flipnote Studio versi Jepang, layar hitam, atau pesan galat; pengujiannya gagal
+    - Jika konsol malah menampilkan Flipnote Studio versi Jepang, layar hitam, atau pesan galat; pengujiannya gagal
 5. Matikan daya konsol
 
 #### Uji DS Download Play
@@ -80,7 +81,7 @@ Tujuan dari bagian ini untuk memeriksa apakah aplikasi mode DS tertanam akan tet
 2. Luncurkan aplikasi Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
 3. Pilih "Nintendo DS"
 4. Jika konsol memuat ke menu "Download software via DS Download Play", pengujiannya berhasil
-   - Jika konsol malah menampilkan Flipnote Studio versi Jepang, layar hitam, atau pesan galat; pengujiannya gagal
+    - Jika konsol malah menampilkan Flipnote Studio versi Jepang, layar hitam, atau pesan galat; pengujiannya gagal
 5. Matikan daya konsol
 
 ::: warning
@@ -96,15 +97,15 @@ Tujuan dari bagian ini untuk memastikan konsol bisa menyala sesudah mencopot CFW
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 2. Jika muncul pesan "Essential files backup not found", tekan (A) untuk mencadang, sesudah selesai, tekan (A) untuk lanjut
 3. Jika diminta membetulkan waktu & tanggal RTC, lakukan dengan menekan (A), lalu tekan (A) lagi untuk lanjut
-   - Perlu diingat jika harus membetulkan waktu dan tanggal RTC, betulkan juga di System Settings setelah mengikuti panduan ini
+    - Perlu diingat jika harus membetulkan waktu dan tanggal RTC, betulkan juga di System Settings setelah mengikuti panduan ini
 4. Tekan (Home) untuk membuka menu tindakan
 5. Pilih "Scripts..."
 6. Pilih "safety_test"
 7. Baca tulisan di layar dan tekan (A) untuk lanjut
 8. Seharusnya akan masuk ke HOME Menu 3DS biasa (tidak apa-apa ada tema kustom). Jika sudah, lanjutkan instruksi ini
-   - Jika tidak ke HOME Menu 3DS biasa (muncul layar hitam, layar galat, dll.), mencopot CFW malah **AKAN MEMBUAT MATOT KONSOL**
+    - Jika tidak ke HOME Menu 3DS biasa (muncul layar hitam, layar galat, dll.), mencopot CFW malah **AKAN MEMBUAT MATOT KONSOL**
 9. Buka System Settings di konsol
-   - Jika konsolnya _crash_ (mogok), pengujiannya gagal
+    - Jika konsolnya _crash_ (mogok), pengujiannya gagal
 10. Pilih "Other Settings"
 11. Pilih "Profile"
 12. Pilih "User Name"
@@ -127,8 +128,8 @@ Jika TIDAK masuk ke HOME Menu 3DS biasa, atau System Settings / papan ketik tida
 5. Pilih "Backup Options"
 6. Pilih "SysNAND Backup"
 7. Tekan (A) untuk konfirmasi
-   - Proses ini akan lumayan lama
-   - Jika muncul galat, mohon pastikan kartu SD setidaknya masih tersisa 1.3GB
+    - Proses ini akan lumayan lama
+    - Jika muncul galat, mohon pastikan kartu SD setidaknya masih tersisa 1.3GB
 8. Tekan (B) untuk kembali ke menu utama
 9. Pilih “Exit”
 10. Tekan (Home) untuk membuka menu tindakan
@@ -146,11 +147,11 @@ Bagian ini akan menghapus konten tidak sah (_homebrew_, hasil _dump_ kartrid, ds
 2. Buka System Settings di konsol
 3. Navigasi ke `Data Management` > `Nintendo 3DS` > `Software`
 4. Di daftar peranti lunak ini, hapus semua konten bukan Nintendo yang dipasang lewat CFW
-   - Ini termasuk peranti lunak seperti FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, dan sejenisnya; begitu pun semua permainan yang _tidak_ dipasang dari eShop
+    - Ini termasuk peranti lunak seperti FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, dan sejenisnya; begitu pun semua permainan yang _tidak_ dipasang dari eShop
 5. Navigasi ke `Data Management` -> `DSiWare`
 6. Di daftar peranti lunak ini, hapus semua konten bukan Nintendo yang dipasang lewat CFW
-   - Ini termasuk peranti lunak seperti TWiLightMenu++ serta semua permainan dan apli yang _tidak_ dipasang dari eShop
-   - Jika gagal menghapus **semua peranti lunak CFW** di bagian 3DS dan DSiWare sebelum mencopot CFW, akses ke Data Management akan rusak setelahnya; memasang ulang CFW juga akan susah ke depannya
+    - Ini termasuk peranti lunak seperti TWiLightMenu++ serta semua permainan dan apli yang _tidak_ dipasang dari eShop
+    - Jika gagal menghapus **semua peranti lunak CFW** di bagian 3DS dan DSiWare sebelum mencopot CFW, akses ke Data Management akan rusak setelahnya; memasang ulang CFW juga akan susah ke depannya
 7. Keluar dari aplikasi System Settings
 8. Luncurkan aplikasi Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
 9. Tunggu sampai terlihat dua tombol
@@ -163,7 +164,7 @@ Bagian ini akan menghapus konten tidak sah (_homebrew_, hasil _dump_ kartrid, ds
 16. Tekan (Home), lalu tutup Download Play
 17. Luncurkan aplikasi Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
 18. Konsol seharusnya memuat Homebrew Launcher
-19. Buka DSiWare Uninstaller dari daftar homebrew
+19. Buka DSiWare Uninstaller dari Homebrew Launcher
 20. Ikuti yang diminta dan izinkan program untuk mencopot
 21. Sesudah proses berhasil, keluar dari Homebrew Launcher dan matikan daya konsol
 
@@ -200,19 +201,16 @@ Jika berniat mencopot CFW karena:
 :::
 
 1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-   - Jika malah muncul Luma3DS chainloader, gunakan Tombol Arah dan (A) untuk memilih GodMode9
+    - Jika malah muncul Luma3DS chainloader, gunakan Tombol Arah dan (A) untuk memilih GodMode9
 2. Tekan (Home) untuk membuka menu tindakan
 3. Pilih "Scripts..."
-4. Pilih "GM9Megascript"
-5. Pilih "Hax Options"
-6. Pilih "Un-install Hax"
-7. Saat diminta, tekan (A) untuk melanjutkan
-8. Tekan (A) untuk membuka izin tulis SysNAND (lvl3), lalu tekan kombo yang diberikan
-9. Tekan (A) untuk lanjut
-10. Tekan (B) untuk kembali ke menu utama
-11. Pilih "Exit"
-12. Tekan (A) untuk menutup ulang izin tulis jika diminta
-13. Tekan (Start) untuk nyalakan ulang konsol
+4. Pilih "uninstall_cfw"
+5. Saat diminta, tekan (A) untuk melanjutkan
+6. Tekan (A) lagi untuk melanjutkan
+7. Tekan (A) untuk membuka izin tulis SysNAND (lvl3), lalu tekan kombo yang diberikan
+8. Tekan (A) untuk lanjut
+9. Tekan (A) untuk menutup ulang izin tulis jika diminta
+10. Tekan (Start) untuk nyalakan ulang konsol
 
 ___
 

@@ -142,7 +142,7 @@ Saúde e Segurança foi revertido para o normal.
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 2. Aperte (Gatilho Direito) + (B) para desmontar o cartão SD atual e inserir o que você deseja formatar
-   - Se o GodMode9 mostrar um erro de inicialização ao inserir o cartão SD a ser formatado, o erro pode ser dispensado
+    - Se o GodMode9 mostrar um erro de inicialização ao inserir o cartão SD a ser formatado, o erro pode ser dispensado
 
 <!--@include: ./_include/format-sd-gm9.md -->
 

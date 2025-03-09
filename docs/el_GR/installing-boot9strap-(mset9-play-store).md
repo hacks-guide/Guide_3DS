@@ -23,10 +23,10 @@
 ## Τι χρειάζεστε
 
 - Τις ακόλουθες εφαρμογές από το Google Play Store:
-  - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
-  - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
-  - Εάν θέλετε, μπορείτε να εγκαταστήσετε αυτές τις εφαρμογές μέσω sideload
-- Την πιο πρόσφατη έκδοση του [MSET9](https://github.com/zoogie/MSET9/releases/latest) (το αρχείο `.zip` του Release)
+    - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
+    - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
+    - Εάν θέλετε, μπορείτε να εγκαταστήσετε αυτές τις εφαρμογές μέσω sideload
+- Την πιο πρόσφατη έκδοση του [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (το αρχείο `.zip` του Release)
 
 ## Οδηγίες
 
@@ -38,17 +38,17 @@
 
 2. Αντιγράψτε τα πάντα από το αρχείο `.zip` του Release στη ρίζα της κάρτας SD σας, αντικαθιστώντας τυχόν υπάρχοντα αρχεία:
 
-   - Ανοίξτε το ZArchiver
-   - Εάν σας ζητηθεί, [επιτρέψτε στο ZArchiver να έχει πρόσβαση στα αρχεία της κάρτας SD σας](/images/screenshots/mset9/zarchiver-allow.png)
-   - Μεταβείτε στην τοποθεσία του ληφθέντος αρχείου `.zip` του MSET9 Release ([πιθανότατα στον φάκελο λήψεων](/images/screenshots/mset9/zarchiver-zip-location.png))
-   - Επιλέξτε το αρχείο `.zip` του Release και έπειτα, «Extract...» ([εικόνα](/images/screenshots/mset9/zarchiver-extract-1.png))
-   - Μεταβείτε στην κάρτα SD σας και πατήστε το εικονίδιο «μπλε κάτω βέλος» για να αποσυμπιέσετε τα αρχεία στη ρίζα της κάρτας SD σας ([εικόνα](/images/screenshots/mset9/zarchiver-extract-2.png))
+    - Ανοίξτε το ZArchiver
+    - Εάν σας ζητηθεί, [επιτρέψτε στο ZArchiver να έχει πρόσβαση στα αρχεία της κάρτας SD σας](/images/screenshots/mset9/zarchiver-allow.png)
+    - Μεταβείτε στην τοποθεσία του ληφθέντος αρχείου `.zip` του MSET9 Release ([πιθανότατα στον φάκελο λήψεων](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Επιλέξτε το αρχείο `.zip` του Release και έπειτα, «Extract...» ([εικόνα](/images/screenshots/mset9/zarchiver-extract-1.png))
+    - Μεταβείτε στην κάρτα SD σας και πατήστε το εικονίδιο «μπλε κάτω βέλος» για να αποσυμπιέσετε τα αρχεία στη ρίζα της κάρτας SD σας ([εικόνα](/images/screenshots/mset9/zarchiver-extract-2.png))
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/mset9/mset9-root-layout-android.png)
+    ![](/images/screenshots/mset9/mset9-root-layout-android.png)
 
-   :::
+    :::
 
 3. Εκτελέστε την [εφαρμογή «MSET9 Installer»](/images/screenshots/mset9/mset9-setup-android.png)
 
@@ -57,7 +57,7 @@
 5. Μόλις βρεθείτε εντός του φακέλου `Nintendo 3DS`, πατήστε το «Use this folder» και έπειτα, το «Allow» αν σας ζητηθεί ([εικόνα](/images/screenshots/mset9/select-mset9-folder-2.png))
 
 6. Εάν είναι [επισημασμένη](/images/screenshots/mset9/setup-mset9-highlighted.png) η επιλογή `Setup MSET9`, συνεχίστε στο επόμενο βήμα
-   - Εάν λάβετε κάποιο σφάλμα, θα πρέπει να το επιλύσετε πριν μπορέσετε να χρησιμοποιήσετε το MSET9. Ανατρέξτε στη σελίδα [Επίλυση προβλημάτων](troubleshooting-mset9)
+    - Εάν λάβετε κάποιο σφάλμα, θα πρέπει να το επιλύσετε πριν μπορέσετε να χρησιμοποιήσετε το MSET9. Ανατρέξτε στη σελίδα [Επίλυση προβλημάτων](troubleshooting-mset9)
 
 7. Πατήστε `Setup MSET9` για να ξεκινήσετε τη διαδικασία εγκατάστασης του MSET9
 
@@ -106,16 +106,16 @@
 :::
 
 1. Ενεργοποιήστε την κονσόλα σας, εξασφαλίζοντας ότι έχει επιλεχθεί η εφαρμογή «System Settings»
-   - Εάν δεν έχει επιλεχθεί η εφαρμογή «System Settings», **[επισημάνετε](/images/screenshots/mset9/hover-settings.png)** το εικονίδιο «System Settings» με το D-Pad, απενεργοποιήστε την κονσόλα σας και έπειτα, ενεργοποιήστε την ξανά
+    - Εάν δεν έχει επιλεχθεί η εφαρμογή «System Settings», **[επισημάνετε](/images/screenshots/mset9/hover-settings.png)** το εικονίδιο «System Settings» με το D-Pad, απενεργοποιήστε την κονσόλα σας και έπειτα, ενεργοποιήστε την ξανά
 2. Πατήστε το (A) για να εκκινήσετε την εφαρμογή «System Settings»
 3. Μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([εικόνα](/images/screenshots/mset9/settings-extdata.png))
 4. **Μην πατήσετε κανένα κουμπί και μην αγγίξτε την οθόνη**
 5. **Ενώ η κονσόλα είναι ΑΚΟΜΑ ΕΝΕΡΓΗ και χωρίς να πατήσετε κανένα κουμπί ή να αγγίξετε την οθόνη**, αφαιρέστε την κάρτα SD από την κονσόλα σας
-   - Το μενού θα ανανεωθεί και θα δείτε ένα μήνυμα περί απουσίας της κάρτας SD, το οποίο είναι αναμενόμενο
+    - Το μενού θα ανανεωθεί και θα δείτε ένα μήνυμα περί απουσίας της κάρτας SD, το οποίο είναι αναμενόμενο
 6. Εισαγάγετε την κάρτα SD στο τηλέφωνο, το tablet ή τον υπολογιστή σας
 7. Ανοίξτε την εφαρμογή «MSET9 Installer»
 8. Πατήστε `Inject trigger file`
-   - Το κουμπί θα απενεργοποιηθεί και θα [επισημανθεί](/images/screenshots/mset9/remove-trigger-highlighted.png) η επιλογή `Remove trigger file`
+    - Το κουμπί θα απενεργοποιηθεί και θα [επισημανθεί](/images/screenshots/mset9/remove-trigger-highlighted.png) η επιλογή `Remove trigger file`
 9. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας **χωρίς να πατήσετε οποιοδήποτε πλήκτρο ή να αγγίξετε την οθόνη**
 10. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
     - Εάν λάβετε μια κόκκινη οθόνη ή αν «κολλήσει» η κονσόλα σε κάποια οθόνη φόρτωσης, ακολουθήστε τον [οδηγό επίλυσης προβλημάτων](troubleshooting-mset9)
@@ -125,7 +125,7 @@
 Σε αυτήν την ενότητα, θα εγκαταστήσετε custom firmware στην κονσόλα σας.
 
 1. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-   - Εάν το κείμενο κάποιου βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting-mset9)
+    - Εάν το κείμενο κάποιου βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting-mset9)
 2. Μόλις ολοκληρωθεί, πατήστε το (Α) για να επανεκκινήσετε την κονσόλα σας
 
 <!--@include: ./_include/configure-luma3ds.md -->

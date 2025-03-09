@@ -6,11 +6,11 @@ Ini adalah laman lebihan untuk memformat kartu SD agar terbaca di 3DS.
 
 Jika 3DS sudah bisa membaca kartu SD, panduan ini tidak perlu.
 
-Laman ini hanya untuk pengguna Windows. Jika tidak menggunakan Windows, lihat laman [Memformat kartu SD (Linux)](formatting-sd-\(linux\)) atau [Memformat kartu SD (Mac)](formatting-sd-\(mac\)).
+Laman ini khusus pengguna Windows. Jika tidak menggunakan Windows, lihat laman [Memformat kartu SD (Linux)](formatting-sd-\(linux\)) atau [Memformat kartu SD (Mac)](formatting-sd-\(mac\)).
 
 ## Apa yang Perlu
 
-- Versi terkini dari [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **Untuk semua ukuran kartu SD:** Versi terkini dari [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 - **Khusus kartu SD ukuran 64GB ke atas:** Versi terkini dari [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
 ## Instruksi
@@ -27,11 +27,11 @@ Laman ini hanya untuk pengguna Windows. Jika tidak menggunakan Windows, lihat la
 
 5. Pilih huruf kandar kartu SD Anda di kolom "Select card"
 
-   ::: danger
+    ::: danger
 
-   Pastikan pilih huruf kandar (_drive_) yang benar, **jangan memformat _drive_ yang salah**!
+    Pastikan pilih huruf kandar (_drive_) yang benar, **jangan memformat _drive_ yang salah**!
 
-   :::
+    :::
 
 6. Ketik apa saja di "Volume label"
 
@@ -61,15 +61,15 @@ Pemformatan selesai untuk kartu SD ukuran **32GB ke bawah.**
 
 2. Pilih huruf kandar kartu SD Anda di kolom "Drive"
 
-   ::: danger
+    ::: danger
 
-   Pastikan pilih huruf kandar (_drive_) yang benar, **jangan memformat _drive_ yang salah**!
+    Pastikan pilih huruf kandar (_drive_) yang benar, **jangan memformat _drive_ yang salah**!
 
-   :::
+    :::
 
 3. Pilih ukuran di "Allocation unit size"
-   - Jika ukuran kartu SD 64GB, pilih 32768
-   - Jika ukuran kartu SD lebih dari 64GB, pilih 65536
+    - Jika ukuran kartu SD 64GB, pilih 32768
+    - Jika ukuran kartu SD lebih dari 64GB, pilih 65536
 
 4. Ketik apa saja di "Volume label"
 
@@ -88,11 +88,11 @@ Pemformatan selesai untuk kartu SD ukuran **32GB ke bawah.**
 ## Sidik Gangguan
 
 - guiformat muncul galat "Failed to open device: GetLastError()=32"
-  - Tutup semua aplikasi yang membaca kartu SD, seperti jendela File Explorer.
-  - Jika masih ada isu, coba format ulang kartunya ke NTFS di File Explorer, tutup jendelanya saat selesai, dan coba lagi dengan guiformat.
+    - Tutup semua aplikasi yang membaca kartu SD, seperti jendela File Explorer.
+    - Jika masih ada isu, coba format ulang kartunya ke NTFS di File Explorer, tutup jendelanya saat selesai, dan coba lagi dengan guiformat.
 
 - guiformat muncul galat "GetLastError()=1117"
-  - Perlindungan-tulis pada kartu SD mungkin [aktif](/images/sdlock.png). Pengunci harus di posisi atas agar bisa menulis ke kartu SD (termasuk memformat).
+    - Perlindungan-tulis pada kartu SD mungkin [aktif](/images/sdlock.png). Pengunci harus di posisi atas agar bisa menulis ke kartu SD (termasuk memformat).
 
 - Kartu SD tetap tidak terbaca konsol atau daya tampungnya salah setelah diformat
-  - Kartu SD mungkin dipartisi atau ada ruang tak dialokasikan. Ikuti [instruksi ini](https://wiki.hacks.guide/wiki/SD_Clean/Windows) untuk memformat ulang kartu SD.
+    - Kartu SD mungkin dipartisi atau ada ruang tak dialokasikan. Ikuti [instruksi ini](https://wiki.hacks.guide/wiki/SD_Clean/Windows) untuk memformat ulang kartu SD.

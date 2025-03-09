@@ -23,10 +23,10 @@ Su telefoni/tablet Android, la versione minima di Android richiesta è 6.0 (Mars
 ## Cosa serve
 
 - Le seguenti applicazioni installate da Google Play Store:
-  - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
-  - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
-  - Se lo desideri, puoi anche caricare queste applicazioni via sideload
-- L'ultima versione di [MSET9](https://github.com/zoogie/MSET9/releases/latest) (il file Release `.zip`)
+    - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
+    - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
+    - Se lo desideri, puoi anche caricare queste applicazioni via sideload
+- L'ultima versione di [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (il file Release `.zip`)
 
 ## Istruzioni
 
@@ -38,17 +38,17 @@ In questa sezione preparerai i dati della scheda SD necessari per attivare l'exp
 
 2. Copia tutto il contenuto dell'archivio Release `.zip` nella directory principale della tua scheda SD, sovrascrivendo tutti i file esistenti:
 
-   - Avvia ZArchiver
-   - Se richiesto, [consenti a ZArchiver di accedere ai file sulla tua scheda SD](/images/screenshots/mset9/zarchiver-allow.png)
-   - Naviga dove si trova il file `.zip` di MSET9 Release ([probabilmente nella cartella Download](/images/screenshots/mset9/zarchiver-zip-location.png))
-   - Selezionare il file Release `.zip`, quindi seleziona "Extract..." ([immagine](/images/screenshots/mset9/zarchiver-extract-1.png))
-   - Vai nella tua scheda SD, quindi tocca l'icona blu della freccia verso il basso per estrarre i file nella directory principale della tua scheda SD ([immagine](/images/screenshots/mset9/zarchiver-extract-2.png))
+    - Avvia ZArchiver
+    - Se richiesto, [consenti a ZArchiver di accedere ai file sulla tua scheda SD](/images/screenshots/mset9/zarchiver-allow.png)
+    - Naviga dove si trova il file `.zip` di MSET9 Release ([probabilmente nella cartella Download](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Selezionare il file Release `.zip`, quindi seleziona "Extract..." ([immagine](/images/screenshots/mset9/zarchiver-extract-1.png))
+    - Vai nella tua scheda SD, quindi tocca l'icona blu della freccia verso il basso per estrarre i file nella directory principale della tua scheda SD ([immagine](/images/screenshots/mset9/zarchiver-extract-2.png))
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/mset9/mset9-root-layout-android.png)
+    ![](/images/screenshots/mset9/mset9-root-layout-android.png)
 
-   :::
+    :::
 
 3. Eseguire l'applicazione [MSET9 Installer](/images/screenshots/mset9/mset9-setup-android.png)
 
@@ -57,7 +57,7 @@ In questa sezione preparerai i dati della scheda SD necessari per attivare l'exp
 5. Una volta all'interno della cartella `Nintendo 3DS`, tocca "Use this folder", quindi "Allow" se richiesto ([immagine](/images/screenshots/mset9/select-mset9-folder-2.png))
 
 6. Se "Setup MSET9" è [evidenziato](/images/screenshots/mset9/setup-mset9-highlighted.png), procedi al passaggio successivo
-   - Se ottieni un errore, è necessario risolverlo prima di poter utilizzare MSET9. Fai riferimento alla pagina [Risoluzione dei problemi](troubleshooting-mset9)
+    - Se ottieni un errore, è necessario risolverlo prima di poter utilizzare MSET9. Fai riferimento alla pagina [Risoluzione dei problemi](troubleshooting-mset9)
 
 7. Seleziona `Setup MSET9` per avviare la configurazione di MSET9
 
@@ -106,16 +106,16 @@ Queste istruzioni vanno eseguite **ALLA LETTERA**, quindi ricontrolla TUTTO quel
 :::
 
 1. Accendi la tua console, assicurandoti che le Impostazioni della console siano selezionate
-   - Se le Impostazioni della console non sono selezionate, **[seleziona](/images/screenshots/mset9/hover-settings.png)** l'icona Impostazioni della console usando il D-Pad, spegni la tua console, quindi riaccendila
+    - Se le Impostazioni della console non sono selezionate, **[seleziona](/images/screenshots/mset9/hover-settings.png)** l'icona Impostazioni della console usando il D-Pad, spegni la tua console, quindi riaccendila
 2. Premi (A) per avviare le Impostazioni della console
 3. Entra in `Gestione dati` -> `Nintendo 3DS` -> `Dati aggiuntivi` ([immagine](/images/screenshots/bb3/settings-extdata.png))
 4. **Non premere alcun pulsante e non toccare lo schermo**
 5. **Con la console ANCORA ACCESA e senza premere alcun pulsante o toccare lo schermo**, rimuovi la tua scheda SD dalla console
-   - Il menu si aggiornerà e dirà che non è presente alcuna scheda SD, il che è normale
+    - Il menu si aggiornerà e dirà che non è presente alcuna scheda SD, il che è normale
 6. Inserisci la tua scheda SD nel tuo telefono/tablet/computer
 7. Apri l'applicazione MSET9 Installer
 8. Tocca `Inject trigger file`
-   - Il pulsante dovrebbe ingrigirsi e `Remove trigger file` dovrebbe diventare [selezionato](/images/screenshots/mset9/remove-trigger-highlighted.png)
+    - Il pulsante dovrebbe ingrigirsi e `Remove trigger file` dovrebbe diventare [selezionato](/images/screenshots/mset9/remove-trigger-highlighted.png)
 9. Reinserisci la scheda SD nella console **senza premere alcun pulsante o toccare lo schermo**
 10. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
     - Se vedi una schermata rossa o se la console si blocca ad una schermata di caricamento, [segui questa guida per risolvere il problema](troubleshooting-mset9)
@@ -125,7 +125,7 @@ Queste istruzioni vanno eseguite **ALLA LETTERA**, quindi ricontrolla TUTTO quel
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-mset9)
+    - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-mset9)
 2. Una volta completato tutto, premi (A) per riavviare la console
 
 <!--@include: ./_include/configure-luma3ds.md -->

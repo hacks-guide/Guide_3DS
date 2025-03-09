@@ -47,6 +47,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 - The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
+- [uninstall_cfw.gm9](/gm9_scripts/uninstall_cfw.gm9)
 
 ## Instructions
 
@@ -58,7 +59,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 4. Kopieer `GodMode9.firm` van de GodMode9 `.zip` naar de `/luma/payloads/` map op je SD-kaart
 5. Kopieer de `gm9` map uit de GodMode9 `.zip` naar de hoofdmap van de SD-kaart
 6. Kopieer `DSiWareUninstaller.3dsx` naar de `/3ds/` map op je SD-kaart
-7. Kopieer `safety_test.gm9` naar de `/gm9/scripts/` map op je SD-kaart
+7. Copy `safety_test.gm9` and `uninstall_cfw.gm9` to the `/gm9/scripts/` folder on your SD card
 8. Stop je SD-kaart terug in je console
 
 ### Section II - DS Mode Tests
@@ -71,7 +72,7 @@ Het doel van dit deel is om te controleren of ingebouwde DS mode applicaties zul
 2. Launch System Settings on your console
 3. Navigeer naar `Internet Settings` -> `Nintendo DS Connection Settings`, selecteer dan "OK
 4. Je zou moeten opstarten in het Nintendo DS Connection Setup menu
-   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
 5. Zet je console uit
 
 #### DS Download Play Test
@@ -80,7 +81,7 @@ Het doel van dit deel is om te controleren of ingebouwde DS mode applicaties zul
 2. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 3. Selecteer "Nintendo DS"
 4. If your console loads into a "Download software via DS Download Play" menu, the test was successful
-   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
 5. Zet je console uit
 
 ::: warning
@@ -96,15 +97,15 @@ Het doel van dit deel is om te controleren of de console opstart en dat kritieke
 1. Houd (Start) ingedrukt en terwijl je (Start) ingedrukt houdt, zet je je console aan. Dit zal GodMode9 starten
 2. Als je gevraagd wordt om essentiële bestanden te back-uppen, druk dan op (A) om dit te doen, druk dan op (A) om verder te gaan zodra het voltooid is
 3. Als er wordt gevraagd om de RTC datum en tijd goed te zetten, duk op (A) om dat te doen, stel dan de datum en tijd in en druk op (A) om door te gaan
-   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
+    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
 4. Druk op de (Home) knop om het actiemenu te openen
 5. Selecteer "Scripts..."
 6. Selecteer "safety_test"
 7. Lees de tekst op het scherm en druk op (A) om verder te gaan
 8. Je zou naar het normale 3DS HOME-menu moeten opstarten (elk aangepast thema is niet relevant). Als dat zo is, ga dan verder met deze instructies
-   - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
+    - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
 9. Launch System Settings on your console
-   - If the console crashes at this point, the test has failed
+    - If the console crashes at this point, the test has failed
 10. Selecteer "Other Settings"
 11. Selecteer "Profile"
 12. Selecteer "User Name"
@@ -127,8 +128,8 @@ Als je NIET opstart in het normale 3DS HOME-menu, of System Setting / je toetsen
 5. Selecteer "Back-up Options"
 6. Selecteer "SysNAND Backup"
 7. Druk op (A) om het te bevestigen
-   - This process will take some time
-   - If you get an error, ensure you have at least 1.3GB of free space on your SD card
+    - This process will take some time
+    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
 8. Druk op (B) om terug te gaan naar het hoofdmenu
 9. Selecteer "Exit"
 10. Druk op de (Home) knop om het actiemenu te openen
@@ -146,11 +147,11 @@ Dit deel zal onwettige inhoud verwijderen, zoals homebrew en gedumpte cartridges
 2. Launch System Settings on your console
 3. Navigeer naar Data Management > Nintendo 3DS > Software
 4. Verwijder in deze lijst van software elke niet-Nintendo content die je hebt geïnstalleerd tijdens het gebruik van CFW
-   - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
+    - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
 5. Navigeer naar `Data Management` -> `DSiWare`
 6. Verwijder in deze lijst van software elke niet-Nintendo content die je hebt geïnstalleerd tijdens het gebruik van CFW
-   - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
-   - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
+    - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
+    - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
 7. Sluit de System Settings app
 8. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 9. Wacht tot je de twee knoppen ziet
@@ -200,19 +201,16 @@ If you're removing CFW because:
 :::
 
 1. Houd (Start) ingedrukt en terwijl je (Start) ingedrukt houdt, zet je je console aan. Dit zal GodMode9 starten
-   - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
+    - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 2. Druk op de (Home) knop om het actiemenu te openen
 3. Selecteer "Scripts..."
-4. Selecteer "GM9Megascript"
-5. Selecteer "Hax Options"
-6. Selecteer "Un-install Hax"
-7. Wanneer dit gevraagd wordt, druk op (A) om verder te gaan
-8. Druk op (A) om SysNAND (lvl3) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
-9. Druk op (A) om door te gaan
-10. Druk op (B) om terug te gaan naar het hoofdmenu
-11. Selecteer "Exit"
-12. Druk op (A) om schrijfrechten te vergrendelen als dit gevraagd wordt
-13. Press (Start) to reboot your console
+4. Select "uninstall_cfw"
+5. Wanneer dit gevraagd wordt, druk op (A) om verder te gaan
+6. Press (A) again to proceed
+7. Druk op (A) om SysNAND (lvl3) writing te ontgrendelen en voer daarna de toetsencombinatie in die wordt gegeven
+8. Druk op (A) om door te gaan
+9. Druk op (A) om schrijfrechten te vergrendelen als dit gevraagd wordt
+10. Press (Start) to reboot your console
 
 ___
 

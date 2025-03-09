@@ -23,10 +23,10 @@ Android telefonokon/tableteken a szükséges minimum Android verzió: 6.0 (Marsh
 ## Amire szükséged lesz
 
 - Az alábbi alkalmazásokra a Google Play Store-ból telepítve:
-  - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
-  - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
-  - Ha szeretnéd, telepítheted őket Play Store-on kívülről is helyette
-- Az [MSET9](https://github.com/zoogie/MSET9/releases/latest) legújabb kiadása (a Release `.zip` fájl)
+    - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
+    - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
+    - Ha szeretnéd, telepítheted őket Play Store-on kívülről is helyette
+- Az [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) legújabb kiadása (a Release `.zip` fájl)
 
 ## Lépések
 
@@ -38,17 +38,17 @@ Ebben a részben előkészítjük az SD kártyád a szükséges adatokkal amik k
 
 2. Másolj át a mindent a Release `.zip`-ből az SD kártyád gyökerébe, felülírva minden már ott lévő fájlt:
 
-   - Nyisd meg a ZArchiver-t
-   - Ha kérdezi, [engedd a ZArchiver-t, hogy hozzá férjen z SD kártya fájljaihoz](/images/screenshots/mset9/zarchiver-allow.png)
-   - Navigálj oda, aholva letöltötted az MSET9 Release `.zip`-et ([valószínűleg a Letöltések (Downloads) mappa](/images/screenshots/mset9/zarchiver-zip-location.png))
-   - Válaszd a Release `.zip`-et majd az "Extract..." opciót ([kép](/images/screenshots/mset9/zarchiver-extract-1.png))
-   - Navigálj az SD kártyádra, majd nyomd meg a kék "lefelé nyilat", hogy kicsomagold a fájlokat az SD kártyád gyökerébe ([kép](/images/screenshots/mset9/zarchiver-extract-2.png))
+    - Nyisd meg a ZArchiver-t
+    - Ha kérdezi, [engedd a ZArchiver-t, hogy hozzá férjen z SD kártya fájljaihoz](/images/screenshots/mset9/zarchiver-allow.png)
+    - Navigálj oda, aholva letöltötted az MSET9 Release `.zip`-et ([valószínűleg a Letöltések (Downloads) mappa](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Válaszd a Release `.zip`-et majd az "Extract..." opciót ([kép](/images/screenshots/mset9/zarchiver-extract-1.png))
+    - Navigálj az SD kártyádra, majd nyomd meg a kék "lefelé nyilat", hogy kicsomagold a fájlokat az SD kártyád gyökerébe ([kép](/images/screenshots/mset9/zarchiver-extract-2.png))
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/mset9/mset9-root-layout-android.png)
+    ![](/images/screenshots/mset9/mset9-root-layout-android.png)
 
-   :::
+    :::
 
 3. Futtasd az [MSET9 Installer alkalmazást](/images/screenshots/mset9/mset9-setup-android.png)
 
@@ -57,7 +57,7 @@ Ebben a részben előkészítjük az SD kártyád a szükséges adatokkal amik k
 5. Ha a `Nintendo 3DS` mappában vagy, érintsd meg a "Use this folder" opciót, majd az "Allow"-ot, ha kérdezi ([kép](/images/screenshots/mset9/select-mset9-folder-2.png))
 
 6. Ha a `Setup MSET9` opció [kiemelt](/images/screenshots/mset9/setup-mset9-highlighted.png), akkor haladj tovább a következő lépésre
-   - Ha hibába ütköztél, azt fel kellene oldani, mielőtt használhatod az MSET9-et. Használd a [hibaelhárítást](troubleshooting-mset9)
+    - Ha hibába ütköztél, azt fel kellene oldani, mielőtt használhatod az MSET9-et. Használd a [hibaelhárítást](troubleshooting-mset9)
 
 7. Érintsd meg a `Setup MSET9` az MSET9 telepítésének elindításához
 
@@ -106,16 +106,16 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
 :::
 
 1. - Kapcsold be a konzolod, biztosítva azt, hogy a System Settings kiválasztott
-   - Ha a System Settings nem kiválaszott, akkor _[állj rá](/images/screenshots/mset9/hover-settings.png)_\* a System Settings ikonra a D-Pad használatával, majd kapcsold ki konzolod és vissza
+    - Ha a System Settings nem kiválaszott, akkor _[állj rá](/images/screenshots/mset9/hover-settings.png)_\* a System Settings ikonra a D-Pad használatával, majd kapcsold ki konzolod és vissza
 2. Nyomj (A) gombot a System Settings indításához
 3. Navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
 4. **Ne nyomj meg semmi gombot vagy éríntsd meg a képernyőt**
 5. \*\* A konzolod BEKAPCSOLT állapotában, bármilyen gomb vagy a képernyő érintése nélkül\*\* vedd ki az SD kártyádat a konzolból
-   - A menü frissülni fog, és ki fogja írni, hogy nincs SD kártya behelyezve, ami elvárt működés
+    - A menü frissülni fog, és ki fogja írni, hogy nincs SD kártya behelyezve, ami elvárt működés
 6. Helyezd az SD kártyád a telefonodba/tabletedbe/számítógépedbe
 7. Nyisd meg az MSET9 Installer alkalmazást
 8. Érintsd meg az `Inject trigger file` opciót
-   - A gombnak be kell szürkülödnie és a `Remove trigger file` pedig [kiemelődik](/images/screenshots/mset9/remove-trigger-highlighted.png)
+    - A gombnak be kell szürkülödnie és a `Remove trigger file` pedig [kiemelődik](/images/screenshots/mset9/remove-trigger-highlighted.png)
 9. Helyezd vissza az SD kártyád a konzolodba, **bármilyen gomb vagy a képernyő érintése nélkül**
 10. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
     - Ha piros képernyőt kapsz vagy a konzol beragad a betöltő képernyőn, kövesd a [hibaelhárítási útmutatót](troubleshooting-mset9)
@@ -125,7 +125,7 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-mset9)
+    - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-mset9)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->

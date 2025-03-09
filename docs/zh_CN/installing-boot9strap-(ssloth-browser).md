@@ -32,8 +32,8 @@ SSLoth 允许目前系统版本在 11.13.0 及其以下的主机绕过浏览器�
 1. 将主机关机
 2. 将你的 SD 卡插入到电脑
 3. 复制 `otherapp.bin` 到你 SD 卡的根目录下，然后重命名为 `arm11code.bin`
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
-   - If you do not see the `.bin` extension, do not add it to the end of the filename
+    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+    - If you do not see the `.bin` extension, do not add it to the end of the filename
 4. Copy everything from the Luma3DS `.zip` to the root of your SD card
 5. 在 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
 6. 从boot9strap `.zip` 文件中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你SD卡的 `/boot9strap/` 文件夹中
@@ -54,20 +54,27 @@ SSLoth 允许目前系统版本在 11.13.0 及其以下的主机绕过浏览器�
 本节中，你将启动浏览器破解漏洞，它将使用 universal-otherapp 启动 boot9strap（自制固件）安装程序。
 
 1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
-   - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
-2. 扫描[这个二维码（点击这里查看）](http://api.qrserver.com/v1/create-qr-code/?color=000000\&bgcolor=FFFFFF\&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax\&qzone=1\&margin=0\&size=400x400\&ecc=L)
-   - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
-   - If you get a security certificate warning, press (A) to allow the connection
-3. 点击“PROCEED TO HAXX”
-4. 如果一切成功的话，你将自动进入 SafeB9SInstaller
-   - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+    - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
+2. 扫描[这个二维码（点击这里查看）](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
+    - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+    - If you get a security certificate warning, press (A) to allow the connection
+
+::: danger
+
+If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
+
+:::
+
+1. 点击“PROCEED TO HAXX”
+2. 如果一切成功的话，你将自动进入 SafeB9SInstaller
+    - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
 ### Section IV - Installing boot9strap
 
 In this section, you will install custom firmware onto your console.
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 2. Once it is complete, press (A) to reboot your console
 
 <!--@include: ./_include/configure-luma3ds.md -->

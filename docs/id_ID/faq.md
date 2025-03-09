@@ -22,7 +22,7 @@
 
 :::details Panduan ini kompatibel dengan konsol apa?
 
-Panduan ini kompatibel dengan semua jenis ecer konsol 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Jika versi pada sistem bertuliskan "0.0.0-0", bisa jadi konsol Anda unit pengembang.
+Panduan ini kompatibel dengan semua konsol ecer 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Jika versi sistem bertuliskan "0.0.0-0", bisa jadi konsol Anda unit pengembang.
 
 :::
 
@@ -34,7 +34,7 @@ Risiko kena matot sekarang hampir mustahil, kecuali jika _sengaja_ dibuat matot.
 
 :::details Apakah bisa menjalankan homebrew dan emulator keren?
 
-Iya! Panduan ini akan memasang beberapa aplikasi _homebrew_ berguna, termasuk [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), sebagai toko apli _homebrew_.
+Hooh! Panduan ini akan memasang beberapa aplikasi _homebrew_ berguna, termasuk [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), sebagai toko apli _homebrew_.
 
 :::
 
@@ -60,13 +60,13 @@ Mengikuti panduan ini saja seharusnya tidak kehilangan data (simpanan, permainan
 
 :::details Apakah 3DS saya akan dicekal jika ada CFW?
 
-Pencekalan sudah tidak ada karena ditutupnya Nintendo Network (untuk semua orang).
+Konsol tidak akan dicekal karena Nintendo Network sudah tutup (untuk semua orang).
 
 :::
 
-:::details Apakah bisa selain di komputer (misal: ponsel Android)?
+:::details Apakah bisa tanpa di komputer (misal: ponsel Android)?
 
-Biasanya, bisa! Pada eksploit MSET9 (utamanya untuk _firmware_ terkini Old 3DS) perlu menggunakan aplikasi Android atau naskah Python, sedangkan eksploit lain hanya perlu menaruh berkas di kartu SD.
+Biasanya, bisa! Eksploit MSET9 (biasa digunakan di _firmware_ terkini Old 3DS) akan perlu naskah Python atau aplikasi Android, sedangkan eksploit lain hanya perlu menaruh berkas di kartu SD.
 
 Mungkin perlu komputer bersistem Windows, macOS, atau Linux untuk memformat kartu SD 64GB ke atas.
 
@@ -74,13 +74,13 @@ Mungkin perlu komputer bersistem Windows, macOS, atau Linux untuk memformat kart
 
 :::details Boleh kartu SD ukuran berapa?
 
-Setidaknya kartu SD masih tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS secara resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. Tidak dianjurkan menggunakan kartu SD di atas 128GB karena ada isu dengan grafik GBA dan tema kustom.
+Berapa saja asalkan kartu SD tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS secara resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. Tidak dianjurkan menggunakan kartu SD di atas 128GB karena ada isu dengan grafik GBA dan tema kustom.
 
 :::
 
 :::details Sebaiknya menggunakan kartu SD baru, atau yang ada?
 
-Gunakan satu kartu SD saja dengan satu konsol 3DS. Jangan gunakan kartu SD lain untuk memodif konsol, nanti konsol akan membuat 'profil' baru dan kartu SD sebelumnya tidak akan bisa membacanya. Namun, **konsol akan tetap termodif**, karena CFW itu dipasang di memori internal (bukan di kartu SD).
+Gunakan satu kartu SD itu saja pada satu konsol 3DS. Jangan gunakan kartu SD lain untuk memodif konsol, nanti konsol akan membuat 'profil' baru dan kartu SD yang tadi tidak akan bisa membacanya. Namun, **konsol akan tetap termodif**, karena CFW itu dipasang di memori internal (bukan di kartu SD).
 
 Jika sudah membeli kartu SD baru untuk konsol, format dulu kartu SD baru tersebut ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), lalu salin tempel semua isi kartu SD yang lama ke yang baru. Ini bisa dilakukan sebelum atau setelah memodif konsol.
 
@@ -90,7 +90,7 @@ Jika sudah membeli kartu SD baru untuk konsol, format dulu kartu SD baru tersebu
 
 Tidak. Walau _flashcart_ DS memang bisa untuk memodif 3DS dengan [ntrboot](ntrboot), sekarang hampir semua konsol punya cara cuma-cuma.
 
-_Flashcart_ mode 3DS seperti Gateway dan Sky3DS sudah tidak dianjurkan karena usang dan berisiko kena matot (_brick_).
+_Flashcart_ 3DS seperti Gateway dan Sky3DS sudah tidak dianjurkan karena usang dan berisiko kena matot (_brick_).
 
 :::
 
@@ -98,7 +98,7 @@ _Flashcart_ mode 3DS seperti Gateway dan Sky3DS sudah tidak dianjurkan karena us
 
 Secara takrif, _custom firmware_ merujuk pada oprekan peranti lunak sistem 3DS agar bisa melakukan hal di luar bawaan. _Homebrew_ umumnya merujuk pada peranti lunak bersumber tidak resmi (yaitu: tidak diagihkan lewat eShop atau kartrid).
 
-Dari sejarahnya, dulu 3DS punya akses _homebrew_ jenis _userland_ melalui eksploit seperti ninjhax, terkadang hanya disebut "homebrew". Tingkat akses sistem dari _userland_ mengizinkan membaca _homebrew_ dan emulator dasar tapi belum bisa (dengan mudah) memodif permainan atau men-_dump_ kartrid. Itu pun lebih tidak stabil, _homebrew_ sering mogok tidak jelas dan perlu dinyalakan ulang penuh. _Custom firmware_ mengizinkan tingkat akses sistem lebih luas dan stabil daripada titik masuk hanya-_homebrew_.
+Dari sejarahnya, dulu 3DS punya akses _homebrew_ jenis _userland_ melalui eksploit seperti ninjhax, terkadang ikut disebut "homebrew". Tingkat akses sistem _userland_ bisa membaca _homebrew_ dan emulator dasar tapi tidak sampai bisa (dengan mudah) memodif permainan atau men-_dump_ kartrid. Ini juga lebih tidak stabil, _homebrew_ sering mogok tidak jelas dan perlu dinyalakan ulang penuh. _Custom firmware_ mengizinkan tingkat akses sistem lebih luas dan stabil daripada titik masuk hanya-_homebrew_.
 
 :::
 
@@ -133,7 +133,7 @@ Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan 
 Ini tergantung jenis format aplikasi _homebrew_. Secara umum:
 
 - _Homebrew_ **format CIA** bisa diperbarui dengan memasang CIA baru, ini akan menimpa versi lama. Jika CIA lama tidak tertimpa, hapus dulu di Data Management seperti apli 3DS biasa.
-- _Homebrew_ **format 3DSX** bisa diperbarui dengan mengganti baru berkas 3DSX di `/3ds/`. Jika _homebrew_ terdapat aset tambahan, mungkin harus taruh aset tersebut di folder lain. Coba lihat dokumentasi untuk _homebrew_ tersebut.
+- _Homebrew_ **format 3DSX** bisa diperbarui dengan mengganti baru berkas 3DSX di `/3ds/`. Jika _homebrew_ terdapat aset tambahan, mungkin asetnya harus ditaruh di folder lain. Coba lihat dokumentasi untuk _homebrew_ tersebut.
 - Untuk memperbarui Luma3DS, lihat [laman ini](restoring-updating-cfw). Untuk memperbarui GodMode9, lihat [laman ini](godmode9-usage#updating-godmode9).
 
 :::
@@ -146,7 +146,7 @@ Jika daerah permainan tidak sama dengan konsol, maka perlu [men-_dump_ pembaruan
 
 :::
 
-:::details Tolong! Ada yang salah dan 3DS saya tidak mau ke HOME Menu...
+:::details Tolong! 3DS saya ada yang salah dan tidak mau ke HOME Menu...
 
 Mohon rujuk ke [panduan sidik gangguan](troubleshooting-post-install). **Mencopot CFW saat konsol tidak bisa dinyalakan sangat TIDAK dianjurkan, karena akan matot (_brick_)**.
 
@@ -156,19 +156,19 @@ Mohon rujuk ke [panduan sidik gangguan](troubleshooting-post-install). **Mencopo
 
 :::details Konsol saya sudah dimodif (x) tahun lalu, jadi sudah ada homebrew. Bagaimana ini?
 
-Dianjurkan memperbarui penyiapan konsol ke CFW modern berdasar-boot9strap. Ikuti [Memeriksa CFW](checking-for-cfw) untuk cara memperbarui penyiapan CFW.
+Sebaiknya perbarui CFW ke yang modern berjenis-boot9strap. Ikuti [Memeriksa CFW](checking-for-cfw) untuk cara memperbarui penyiapan CFW.
 
 :::
 
 :::details Penyiapan CFW saya lancar saja. Untuk apa diperbarui?
 
-Sebagian besar _homebrew_ modern (seperti Checkpoint dan BootNTR Selector) hanya diuji di CFW terkini berdasar-boot9strap, dan takutnya tidak berfungsi (sama sekali) di penyiapan lawas berdasar menuhax, A9LH, atau Gateway. Ditambah lagi, tergantung penyiapan CFW, bisa bahaya jika diperbarui ke _firmware_ terbaru. Penyiapan modern berdasar-boot9strap mengizinkan tingkat akses sistem lebih luas daripada retasan sebelumnya, termasuk men-_dump bootrom_ konsol.
+Sebagian besar _homebrew_ modern (seperti Checkpoint dan BootNTR Selector) hanya diuji di CFW modern berjenis-boot9strap, dan takutnya tidak berfungsi (sama sekali) di CFW lama berjenis menuhax, A9LH, atau Gateway. Ditambah lagi, tergantung penyiapan CFW, bisa bahaya jika diperbarui ke _firmware_ terbaru. CFW modern berjenis-boot9strap mengizinkan tingkat akses sistem lebih luas daripada retasan sebelumnya, termasuk men-_dump bootrom_ konsol.
 
 :::
 
 :::details Apakah ada yang hilang jika memperbarui CFW?
 
-Penyiapan lama Anda (termasuk EmuNAND, jika ada) bisa langsung diungsikan ke boot9strap tanpa kehilangan data. Jika terdapat data yang menurut Anda penting, sebelum memperbarui penyiapan CFW lebih baik membuat cadangan terdekripsi untuk data simpanan dengan alat seperti [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+CFW lama Anda (termasuk EmuNAND, jika ada) bisa langsung diungsikan ke boot9strap tanpa kehilangan data. Jika terdapat data yang sekiranya penting, sebelum memperbarui CFW lebih baik cadangkan dulu data simpanan terdekripsi dengan alat seperti [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
 
 :::
 

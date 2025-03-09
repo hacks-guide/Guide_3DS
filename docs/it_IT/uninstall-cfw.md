@@ -47,6 +47,7 @@ Queste istruzioni funzioneranno solo su console con una versione di Luma3DS ugua
 - L'ultima versione di [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (il file `.zip` di GodMode9)
 - L'ultima versione di [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
+- [uninstall_cfw.gm9](/gm9_scripts/uninstall_cfw.gm9)
 
 ## Istruzioni
 
@@ -58,7 +59,7 @@ Queste istruzioni funzioneranno solo su console con una versione di Luma3DS ugua
 4. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
 5. Copia la cartella `gm9` presente nell'archivio `.zip` di GodMode9 nella directory principale della tua scheda SD
 6. Copia il file `DSiWareUninstaller.3dsx` nella cartella `/3ds/` della tua scheda SD
-7. Copia il file `safety_test.gm9` nella cartella `/gm9/scripts/` della tua scheda SD
+7. Copia i file `safety_test.gm9` e `uninstall_cfw.gm9` nella cartella `/gm9/scripts/` della tua scheda SD
 8. Reinserisci la scheda SD nella tua console
 
 ### Sezione II - Test Modalità DS
@@ -71,7 +72,7 @@ Lo scopo di questa sezione è verificare se le applicazioni integrate in modalit
 2. Avvia le Impostazioni di sistema sulla tua console
 3. Vai su `Impostazioni Internet` -> `Connessioni Nintendo DS`, quindi seleziona OK
 4. Dovrebbe avviarsi il menu Configurazione Nintendo Wi-Fi Connection
-   - Se la console visualizza la versione giapponese di Flipnote Studio, uno schermo nero o un messaggio di errore, il test è fallito
+    - Se la console visualizza la versione giapponese di Flipnote Studio, uno schermo nero o un messaggio di errore, il test è fallito
 5. Spegni la tua console
 
 #### Test Modalità download DS
@@ -80,7 +81,7 @@ Lo scopo di questa sezione è verificare se le applicazioni integrate in modalit
 2. Avvia l'applicazione "Modalità download" (![](/images/download-play-icon.png){height="24px" width="24px"})
 3. Seleziona "Nintendo DS"
 4. Se la console ora mostra la scritta "Scarica software tramite il download DS.", il test ha avuto successo
-   - Se la console visualizza la versione giapponese di Flipnote Studio, uno schermo nero o un messaggio di errore, il test è fallito
+    - Se la console visualizza la versione giapponese di Flipnote Studio, uno schermo nero o un messaggio di errore, il test è fallito
 5. Spegni la tua console
 
 ::: warning
@@ -96,15 +97,15 @@ Lo scopo di questa sezione è quello di verificare che la console si avvii e che
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 2. Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
 3. Se ti viene chiesto di reimpostare la data e l'ora dell'RTC, premi (A) per farlo, poi imposta la data e l'ora, infine premi (A) per continuare
-   - Tieni presente che in tal caso dovrai anche reimpostare data ed ora anche nelle Impostazioni della Console al termine della guida
+    - Tieni presente che in tal caso dovrai anche reimpostare data ed ora anche nelle Impostazioni della Console al termine della guida
 4. Premi il pulsante HOME per far apparire il menu delle azioni
 5. Seleziona "Scripts..."
 6. Seleziona "safety_test"
 7. Leggi il testo a schermo e premi (A) per continuare
 8. Dovrebbe avviarsi il normale menu HOME del 3DS (i temi custom non sono rilevanti in questo momento). In tal caso, prosegui con le istruzioni
-   - Se non si avvia il normale menu HOME del 3DS (schermata nera, schermata di errore, ecc.), disinstallare il CFW **BRICKERÀ LA TUA CONSOLE!**
+    - Se non si avvia il normale menu HOME del 3DS (schermata nera, schermata di errore, ecc.), disinstallare il CFW **BRICKERÀ LA TUA CONSOLE!**
 9. Avvia le Impostazioni di sistema sulla tua console
-   - Se la console si blocca, il test è fallito
+    - Se la console si blocca, il test è fallito
 10. Seleziona "Impostazioni generali"
 11. Seleziona "Profilo"
 12. Seleziona "Nickname"
@@ -127,8 +128,8 @@ Se NON si avvia il normale menu HOME 3DS, le Impostazioni della console e/o la t
 5. Seleziona "Backup Options"
 6. Seleziona "SysNAND Backup"
 7. Premi (A) per confermare
-   - Questo passaggio richiederà un po' di tempo
-   - Se si verifica un errore, assicurati di avere nella scheda SD almeno 1.3GB liberi
+    - Questo passaggio richiederà un po' di tempo
+    - Se si verifica un errore, assicurati di avere nella scheda SD almeno 1.3GB liberi
 8. Premi (B) per ritornare al menu principale
 9. Seleziona “Exit”
 10. Premi il pulsante HOME per far apparire il menu delle azioni
@@ -146,11 +147,11 @@ Questa sezione rimuoverà contenuti illegittimi, come homebrew e backup di gioch
 2. Avvia le Impostazioni di sistema sulla tua console
 3. Apri Gestione dati -> Nintendo 3DS -> Software
 4. In questa lista di software, elimina qualunque contenuto non Nintendo che hai installato usando un CFW
-   - Sono compresi programmi comuni come FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, e altri software, compresi giochi e titoli che _non_ hai installato tramite eShop
+    - Sono compresi programmi comuni come FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, e altri software, compresi giochi e titoli che _non_ hai installato tramite eShop
 5. Entra in `Gestione dati` -> `DSiWare`
 6. In questa lista di software, elimina qualunque contenuto non Nintendo che hai installato usando un CFW
-   - Sono compresi software come TWiLightMenu++, e tutti i giochi e i titoli che _non_ hai installato tramite eShop
-   - La mancata rimozione di tutti i software relativi al CFW dalle sezioni 3DS e DSiWare prima della disinstallazione del CFW potrebbe dare problemi all'accesso del menu Gestione dati dopo la sua disinstallazione, il che rendererà difficile reinstallare il CFW in futuro
+    - Sono compresi software come TWiLightMenu++, e tutti i giochi e i titoli che _non_ hai installato tramite eShop
+    - La mancata rimozione di tutti i software relativi al CFW dalle sezioni 3DS e DSiWare prima della disinstallazione del CFW potrebbe dare problemi all'accesso del menu Gestione dati dopo la sua disinstallazione, il che rendererà difficile reinstallare il CFW in futuro
 7. Esci da Impostazioni della console
 8. Avvia l'applicazione "Modalità download" (![](/images/download-play-icon.png){height="24px" width="24px"})
 9. Attendi finché non vedrai i due pulsanti
@@ -200,19 +201,16 @@ Se stai rimuovendo il CFW perché:
 :::
 
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
-   - Se invece vedi il chainloader di Luma3DS, usa il D-Pad e il pulsante (A) per selezionare GodMode9
+    - Se invece vedi il chainloader di Luma3DS, usa il D-Pad e il pulsante (A) per selezionare GodMode9
 2. Premi il pulsante HOME per far apparire il menu delle azioni
 3. Seleziona "Scripts..."
-4. Seleziona "GM9Megascript"
-5. Seleziona "Hax Options"
-6. Seleziona "Un-install Hax"
-7. Quando richiesto, premi (A) per procedere
-8. Premi il pulsante (A) per sbloccare i permessi di scrittura di terzo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
-9. Premi il pulsante (A) per continuare
-10. Premi (B) per ritornare al menu principale
-11. Seleziona "Exit"
-12. Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura
-13. Premi (Start) per riavviare la tua console
+4. Seleziona "uninstall_cfw"
+5. Quando richiesto, premi (A) per procedere
+6. Premi di nuovo (A) per procedere
+7. Premi il pulsante (A) per sbloccare i permessi di scrittura di terzo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
+8. Premi il pulsante (A) per continuare
+9. Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura
+10. Premi (Start) per riavviare la tua console
 
 ___
 

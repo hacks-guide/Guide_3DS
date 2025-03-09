@@ -142,7 +142,7 @@ A Health & Safety visszaállításra került normálra.
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 2. Nyomd meg a (Jobb váll) + (B) gombokat az aktuális SD kártya lecsatolásához és csatlakoztasd a másikat, amit formázni szeretnél
-   - Ha GodMode9 inicializációs hibákat mutat a formázandó SD kártya csatlakoztatásakor, akkor az nyugodtan figyelmen kívül hagyhatod
+    - Ha GodMode9 inicializációs hibákat mutat a formázandó SD kártya csatlakoztatásakor, akkor az nyugodtan figyelmen kívül hagyhatod
 
 <!--@include: ./_include/format-sd-gm9.md -->
 

@@ -1,126 +1,126 @@
-# Troubleshooting (Finalizing Setup)
+# Sidik Gangguan (Penyiapan Akhir)
 
-Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Penyiapan Akhir". Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Penyiapan Akhir". Jika saran dari laman ini tidak menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
-## Issues with Finalizing Setup
+## Isu dengan Penyiapan Akhir
 
-:::details Unable to update console
+:::details Tidak bisa memperbarui konsol
 
-The steps below can be attempted in any order, but are listed from easiest to hardest to perform.
+Langkah di bawah ini bisa dicoba dari urutan mana saja, ini diurutkan dari termudah ke tersusah.
 
-1. If you are using Pretendo, switch back to Nintendo with Nimbus and try again
-2. Set your DNS settings to "Auto"
-3. Move closer to your WiFi router
-4. Update from Safe Mode by turning off the console, holding (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A) on boot, and following the on-screen prompts
-5. Delete your WiFi connection, then reconnect to your WiFi again
-6. Reboot your WiFi router
-7. Connect to a different WiFi connection, like a mobile hotspot
-8. Nintendo servers may be down; Try again later
-9. If you still get an error, [follow CTRTransfer](ctrtransfer), then try again
-10. For further support (in English), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+1. Jika menggunakan Pretendo, balik dulu ke akun Nintendo di Nimbus dan coba lagi
+2. Atur pengaturan DNS ke "Auto"
+3. Mendekat ke perute WiFi
+4. Perbarui dari Safe Mode: Matikan daya konsol, tahan (L) + (R) + (Tombol Atas) + (A) saat awal nyala, dan ikuti yang diminta di layar
+5. Hapus slot sambungan WiFi, lalu sambung ulang ke WiFi
+6. Nyalakan ulang perute WiFi
+7. Sambungkan ke WiFi lain, seperti hotspot seluler
+8. Server Nintendo mungkin sedang padam; Coba lagi nanti
+9. Jika masih muncul galat, [ikuti CTRTransfer](ctrtransfer), lalu coba lagi
+10. Untuk bantuan (berbahasa Inggris), gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp)
 
 :::
 
 :::details Error #22: finalize.romfs is invalid
 
-The file `finalize.romfs` is corrupt or unreadable. [Re-download it](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) and copy it to the root of the SD card, replacing any existing copy, then try again.
+Berkas `finalize.romfs` tidak terbaca atau rusak. [Unduh ulang berkasnya](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) dan salin ke akar kartu SD, timpa berkas yang ada, lalu coba lagi.
 
 :::
 
 :::details Information #23: finalize.romfs in wrong location
 
-The file `finalize.romfs` was placed in the wrong location instead of root of SD. The script will attempt to resolve this, but requires your permission to do so. Press (A) on the next few prompts to continue.
+Berkas `finalize.romfs` letaknya salah dan bukan di akar kartu SD. Naskah akan mencoba mengatasi ini, tapi perlu izin Anda dulu. Tekan (A) pada beberapa sembulan untuk lanjut.
 
 :::
 
 :::details Error #24: SD is write-protected
 
-Ensure that your SD card is not [locked](/images/sdlock.png). If the SD card is not locked and you continue to get this error, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Pastikan pengunci kartu SD tidak [dikunci](/images/sdlock.png). Jika kartu SD tidak dikunci tapi masih galat, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) untuk bantuan.
 
 :::
 
 :::details Error #02: Missing essential.exefs
 
-You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power off your console, power it on while holding (Start) to re-enter GodMode9, say 'Yes' to the prompt, then try again.
+Tadi memilih 'No' saat diminta "Make essential files backup?" di GodMode9. Matikan daya konsol, lalu nyalakan selagi menahan (Start) untuk ke GodMode9, pilih 'Yes' saat diminta, lalu coba lagi.
 
 :::
 
 :::details Error #04: No space
 
-You need at least 1.3GB of free space to perform the NAND backup, which is a part of the script. If you don't have enough space, follow these steps:
+Setidaknya perlu sisa ruang 1.3GB untuk mencadang NAND, ini sudah bagian dari naskah. Jika sisa ruang tidak cukup, ikuti langkah ini:
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Salin folder `Nintendo 3DS` dari akar kartu SD ke komputer Anda
-4. Delete the Nintendo 3DS folder from the SD card
+3. **Salin folder `Nintendo 3DS` dari akar kartu SD ke komputer Anda**
+4. Hapus folder `Nintendo 3DS` dari kartu SD
 5. Sisip kembali kartu SD ke konsol
 6. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-7. Press the (Home) button
+7. Tekan tombol (Home)
 8. Pilih "Scripts..."
 9. Pilih "finalize"
-10. Press (A) to create a NAND backup
-    - This may take around fifteen minutes
-11. Press (A) again
-    - The console should automatically power off
+10. Tekan (A) untuk mencadang NAND
+    - Ini akan lama sekitar lima belas menit
+11. Tekan (A) lagi
+    - Konsol seharusnya otomatis mati daya
 12. Sisipkan kartu SD ke komputer Anda
-13. Copy the files in `/gm9/backups/` on your SD to a safe location on your computer
-14. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card
+13. **Salin isi folder `/gm9/backups/` di kartu SD ke letak yang aman di komputer**
+14. Hapus berkas `<date>_<serialnumber>_sysnand_##.bin` dan `<date>_<serialnumber>_sysnand_##.bin.sha` dari kartu SD
 15. Salin folder `Nintendo 3DS` dari komputer Anda ke akar kartu SD
 16. Hapus folder `Nintendo 3DS` dari komputer Anda
 
-Now that you have your NAND backup in a safe place:
+Sesudah menaruh cadangan NAND di tempat aman:
 
 1. Sisip kembali kartu SD ke konsol
 2. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-3. Press the (Home) button
+3. Tekan tombol (Home)
 4. Pilih "Scripts..."
 5. Pilih "finalize"
-6. Continue the script as normal
-    - The NAND backup will be automatically skipped
+6. Lanjutkan naskah seperti biasa
+    - Pencadangan NAND akan otomatis dilewati
 
 :::
 
 :::details Information #05: No title database
 
-Press (A) to import a title database, unlock SysNAND writing by entering the buttons on-screen, then continue the script as normal.
+Tekan (A) untuk mengimpor _title database_, buka izin tulis SysNAND sesuai kombo tombol di layar, lalu lanjutkan naskah seperti biasa.
 
 :::
 
-:::details Error #06 or "Error: Could not open directory" when attempting a NAND backup
+:::details Error #06 atau "Error: Could not open directory" saat mencadang NAND
 
-Make sure you have at least 1.3GB available in your SD card. If you don't have enough space, follow these steps:
+Pastikan setidaknya masih tersisa 1.3GB di kartu SD. Jika sisa ruang tidak cukup, ikuti langkah ini:
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-3. Salin folder `Nintendo 3DS` dari akar kartu SD ke komputer Anda
-4. Delete the Nintendo 3DS folder from the SD card
+3. **Salin folder `Nintendo 3DS` dari akar kartu SD ke komputer Anda**
+4. Hapus folder `Nintendo 3DS` dari kartu SD
 5. Sisip kembali kartu SD ke konsol
 6. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
-7. Perform a [NAND Backup](godmode9-usage#creating-a-nand-backup)
-8. Copy the files in `gm9/out` on your SD to a safe location on your computer
-9. Delete the `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` files from the SD card, keeping essential.exefs in `/gm9/out/`
+7. Lakukan [Pencadangan NAND](godmode9-usage#creating-a-nand-backup)
+8. Salin isi folder `gm9/out` di kartu SD ke letak yang aman di komputer
+9. Hapus berkas `<date>_<serialnumber>_sysnand_##.bin` dan `<date>_<serialnumber>_sysnand_##.bin.sha` dari kartu SD, biarkan essential.exefs di `/gm9/out/`
 10. Salin folder `Nintendo 3DS` dari komputer Anda ke akar kartu SD
 11. Hapus folder `Nintendo 3DS` dari komputer Anda
 
-If you have enough space on your SD card, your SD might be corrupted or faulty. Check your SD card for any errors by following the guide according to your computer's operating system: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)).
+Jika ternyata kartu SD masih tersisa cukup ruang, mungkin kartu SD rusak. Periksa yang galat di kartu SD dengan mengikuti panduan sesuai sistem operasi komputer: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)).
 
 :::
 
 :::details Error #12: Copy (file).db fail
 
-Ensure that your SD card is not [locked](/images/sdlock.png). If the SD card is not locked and you continue to get this error, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Pastikan pengunci kartu SD tidak [dikunci](/images/sdlock.png). Jika kartu SD tidak dikunci tapi masih galat, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) untuk bantuan.
 
 :::
 
 :::details Information #17: Duplicate NAND backup
 
-Naskahnya mendeteksi folder Nintendo 3DS tidak ada _DAN_ ternyata sudah pernah mencadang NAND. If you intend to install homebrew applications, you should do the following:
+Naskahnya mendeteksi folder Nintendo 3DS tidak ada _DAN_ ternyata sudah ada cadangan NAND. Jika berniat memasang aplikasi _homebrew_, lakukan berikut ini:
 
-1. Press (B) to cancel making another NAND backup
+1. Tekan (B) untuk batal mencadang NAND baru lagi
 2. Tahan (R) dan tekan (Start) bersamaan untuk matikan daya konsol
-3. Salin isi folder `/gm9/backups/` ke letak yang aman di komputer Anda
-4. Delete `/gm9/backups/` from your SD card
-5. If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
+3. **Salin isi folder `/gm9/backups/` ke letak yang aman di komputer Anda**
+4. Hapus `/gm9/backups/` dari kartu SD
+5. Jika tadi folder Nintendo 3DS sudah disalin dan ada di luar kartu SD, salin balik ke kartu SD
     - Jika tidak punya folder Nintendo 3DS, nyalakan konsol ke HOME Menu setidaknya sekali dengan kartu SD untuk membuatnya
 6. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 7. Tekan (Home) untuk membuka menu tindakan
@@ -132,7 +132,7 @@ Naskahnya mendeteksi folder Nintendo 3DS tidak ada _DAN_ ternyata sudah pernah m
 
 :::details Error #18a/18b: MSET9 detected
 
-You didn't remove MSET9 on the previous page. The script will attempt to remove MSET9 for you; follow the instructions given by the script.
+MSET9 belum dihapus di laman sebelumnya. Naskah akan mencoba menghapus MSET9; ikuti instruksi dari naskah.
 
 :::
 
@@ -142,7 +142,7 @@ You didn't remove MSET9 on the previous page. The script will attempt to remove 
 
 ::: tip
 
-Go back to [Finalizing Setup](finalizing-setup)
+Kembali ke [Penyiapan Akhir](finalizing-setup)
 
 :::
 
