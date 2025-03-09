@@ -26,7 +26,7 @@ Su telefoni/tablet Android, la versione minima di Android richiesta è 6.0 (Mars
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     - Se lo desideri, puoi anche caricare queste applicazioni via sideload
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the Release `.zip` file)
+- L'ultima versione di [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (il file Release `.zip`)
 
 ## Istruzioni
 
