@@ -59,7 +59,7 @@ Queste istruzioni funzioneranno solo su console con una versione di Luma3DS ugua
 4. Copia il file `GodMode9.firm` dall'archivio `.zip` di GodMode9 dentro la cartella `/luma/payloads/` della tua scheda SD
 5. Copia la cartella `gm9` presente nell'archivio `.zip` di GodMode9 nella directory principale della tua scheda SD
 6. Copia il file `DSiWareUninstaller.3dsx` nella cartella `/3ds/` della tua scheda SD
-7. Copy `safety_test.gm9` and `uninstall_cfw.gm9` to the `/gm9/scripts/` folder on your SD card
+7. Copia i file `safety_test.gm9` e `uninstall_cfw.gm9` nella cartella `/gm9/scripts/` della tua scheda SD
 8. Reinserisci la scheda SD nella tua console
 
 ### Sezione II - Test Modalità DS
@@ -204,9 +204,9 @@ Se stai rimuovendo il CFW perché:
     - Se invece vedi il chainloader di Luma3DS, usa il D-Pad e il pulsante (A) per selezionare GodMode9
 2. Premi il pulsante HOME per far apparire il menu delle azioni
 3. Seleziona "Scripts..."
-4. Select "uninstall_cfw"
+4. Seleziona "uninstall_cfw"
 5. Quando richiesto, premi (A) per procedere
-6. Press (A) again to proceed
+6. Premi di nuovo (A) per procedere
 7. Premi il pulsante (A) per sbloccare i permessi di scrittura di terzo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
 8. Premi il pulsante (A) per continuare
 9. Se richiesto, premi (A) per ritirare le autorizzazioni di scrittura
