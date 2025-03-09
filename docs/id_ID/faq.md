@@ -146,7 +146,7 @@ Jika daerah permainan tidak sama dengan konsol, maka perlu [men-_dump_ pembaruan
 
 :::
 
-:::details Tolong! Ada yang salah dan 3DS saya tidak mau ke HOME Menu...
+:::details Tolong! 3DS saya ada yang salah dan tidak mau ke HOME Menu...
 
 Mohon rujuk ke [panduan sidik gangguan](troubleshooting-post-install). **Mencopot CFW saat konsol tidak bisa dinyalakan sangat TIDAK dianjurkan, karena akan matot (_brick_)**.
 
@@ -168,7 +168,7 @@ Sebagian besar _homebrew_ modern (seperti Checkpoint dan BootNTR Selector) hanya
 
 :::details Apakah ada yang hilang jika memperbarui CFW?
 
-CFW lama Anda (termasuk EmuNAND, jika ada) bisa langsung diungsikan ke boot9strap tanpa kehilangan data. Jika terdapat data yang sekiranya penting, sebelum memperbarui CFW lebih baik membuat cadangan terdekripsi untuk data simpanan dengan alat seperti [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+CFW lama Anda (termasuk EmuNAND, jika ada) bisa langsung diungsikan ke boot9strap tanpa kehilangan data. Jika terdapat data yang sekiranya penting, sebelum memperbarui CFW lebih baik cadangkan dulu data simpanan terdekripsi dengan alat seperti [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
 
 :::
 
