@@ -74,13 +74,13 @@ Mungkin perlu komputer bersistem Windows, macOS, atau Linux untuk memformat kart
 
 :::details Boleh kartu SD ukuran berapa?
 
-Setidaknya kartu SD masih tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS secara resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. Tidak dianjurkan menggunakan kartu SD di atas 128GB karena ada isu dengan grafik GBA dan tema kustom.
+Berapa saja asalkan kartu SD tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS secara resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. Tidak dianjurkan menggunakan kartu SD di atas 128GB karena ada isu dengan grafik GBA dan tema kustom.
 
 :::
 
 :::details Sebaiknya menggunakan kartu SD baru, atau yang ada?
 
-Gunakan satu kartu SD saja dengan satu konsol 3DS. Jangan gunakan kartu SD lain untuk memodif konsol, nanti konsol akan membuat 'profil' baru dan kartu SD sebelumnya tidak akan bisa membacanya. Namun, **konsol akan tetap termodif**, karena CFW itu dipasang di memori internal (bukan di kartu SD).
+Gunakan satu kartu SD itu saja pada satu konsol 3DS. Jangan gunakan kartu SD lain untuk memodif konsol, nanti konsol akan membuat 'profil' baru dan kartu SD yang tadi tidak akan bisa membacanya. Namun, **konsol akan tetap termodif**, karena CFW itu dipasang di memori internal (bukan di kartu SD).
 
 Jika sudah membeli kartu SD baru untuk konsol, format dulu kartu SD baru tersebut ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), lalu salin tempel semua isi kartu SD yang lama ke yang baru. Ini bisa dilakukan sebelum atau setelah memodif konsol.
 
