@@ -90,7 +90,7 @@ Jika sudah membeli kartu SD baru untuk konsol, format dulu kartu SD baru tersebu
 
 Tidak. Walau _flashcart_ DS memang bisa untuk memodif 3DS dengan [ntrboot](ntrboot), sekarang hampir semua konsol punya cara cuma-cuma.
 
-_Flashcart_ mode 3DS seperti Gateway dan Sky3DS sudah tidak dianjurkan karena usang dan berisiko kena matot (_brick_).
+_Flashcart_ 3DS seperti Gateway dan Sky3DS sudah tidak dianjurkan karena usang dan berisiko kena matot (_brick_).
 
 :::
 
@@ -162,13 +162,13 @@ Sebaiknya perbarui CFW ke yang modern berjenis-boot9strap. Ikuti [Memeriksa CFW]
 
 :::details Penyiapan CFW saya lancar saja. Untuk apa diperbarui?
 
-Sebagian besar _homebrew_ modern (seperti Checkpoint dan BootNTR Selector) hanya diuji di CFW modern berjenis-boot9strap, dan takutnya tidak berfungsi (sama sekali) di CFW lawas berdasar menuhax, A9LH, atau Gateway. Ditambah lagi, tergantung penyiapan CFW, bisa bahaya jika diperbarui ke _firmware_ terbaru. CFW modern berjenis-boot9strap mengizinkan tingkat akses sistem lebih luas daripada retasan sebelumnya, termasuk men-_dump bootrom_ konsol.
+Sebagian besar _homebrew_ modern (seperti Checkpoint dan BootNTR Selector) hanya diuji di CFW modern berjenis-boot9strap, dan takutnya tidak berfungsi (sama sekali) di CFW lama berjenis menuhax, A9LH, atau Gateway. Ditambah lagi, tergantung penyiapan CFW, bisa bahaya jika diperbarui ke _firmware_ terbaru. CFW modern berjenis-boot9strap mengizinkan tingkat akses sistem lebih luas daripada retasan sebelumnya, termasuk men-_dump bootrom_ konsol.
 
 :::
 
 :::details Apakah ada yang hilang jika memperbarui CFW?
 
-Penyiapan lama Anda (termasuk EmuNAND, jika ada) bisa langsung diungsikan ke boot9strap tanpa kehilangan data. Jika terdapat data yang menurut Anda penting, sebelum memperbarui penyiapan CFW lebih baik membuat cadangan terdekripsi untuk data simpanan dengan alat seperti [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+CFW lama Anda (termasuk EmuNAND, jika ada) bisa langsung diungsikan ke boot9strap tanpa kehilangan data. Jika terdapat data yang sekiranya penting, sebelum memperbarui CFW lebih baik membuat cadangan terdekripsi untuk data simpanan dengan alat seperti [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
 
 :::
 
