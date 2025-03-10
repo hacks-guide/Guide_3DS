@@ -10,6 +10,12 @@ head:
 
 # Installing boot9strap (super-skaterhax)
 
+::: danger
+
+This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\)) instead.
+
+:::
+
 :::details Technical Details (optional)
 
 For technical details on the exploits that you will be using on this page, see [here](https://github.com/zoogie/super-skaterhax).
