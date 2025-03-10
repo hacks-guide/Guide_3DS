@@ -10,6 +10,12 @@ head:
 
 # Memasang boot9strap (super-skaterhax)
 
+::: danger
+
+This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\)) instead.
+
+:::
+
 :::details Perincian Teknis (opsional)
 
 Untuk perincian teknis perihal eksploit pada laman ini, lihat di [sini](https://github.com/zoogie/super-skaterhax).
