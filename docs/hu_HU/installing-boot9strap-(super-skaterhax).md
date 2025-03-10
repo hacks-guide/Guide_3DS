@@ -10,6 +10,12 @@ head:
 
 # Boot9strap telepítése (super-skaterhax)
 
+::: danger
+
+This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\)) instead.
+
+:::
+
 :::details Technikai részletek (opcionális)
 
 A technikai részletei az ezen az oldalon használt exploit-oknak [itt](https://github.com/zoogie/super-skaterhax) találhatók.
@@ -40,11 +46,11 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a super-skaterhax és a 
 
 3. Másolj át a mindent a uper-skaterhax `.zip`-ből az SD kártyád gyökerébe, felülírva minden már ott lévő fájlt
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/skaterhax/skater-root-layout.png)
+    ![](/images/screenshots/skaterhax/skater-root-layout.png)
 
-   :::
+    :::
 
 4. Tedd vissza az SD kártyád a konzoldba
 
@@ -55,15 +61,15 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a super-skaterhax és a 
 7. Válaszd az "Other Settings"-t
 
 8. Navigálj a "Profile" -> "Region Settings" opcióhoz
-   - Ezek a beállítások átmenetileg megváltoznak, hogy növeljék az exploit sikerarányát
-   - Visszaállíthatod a régiós beállításaidat a normálisra, amint befejezted ezt az oldalt
-   - Ha egy [warning](/images/screenshots/skaterhax/country-change-notice.png)-ot kapsz, amit azt mondja, hogy el fogod veszíteni a a hozzáférést a Nintendo Network ID funkciókhoz, akkor biztonságosan kiválaszthatod az OK-t a folytatáshoz
+    - Ezek a beállítások átmenetileg megváltoznak, hogy növeljék az exploit sikerarányát
+    - Visszaállíthatod a régiós beállításaidat a normálisra, amint befejezted ezt az oldalt
+    - Ha egy [warning](/images/screenshots/skaterhax/country-change-notice.png)-ot kapsz, amit azt mondja, hogy el fogod veszíteni a a hozzáférést a Nintendo Network ID funkciókhoz, akkor biztonságosan kiválaszthatod az OK-t a folytatáshoz
 
 9. Válaszd ki a következő opciókat a konzolod régiójának megfelelően ([kép](/images/screenshots/skaterhax/skater-lang.png))
-   - USA: United States, Do Not Set
-   - EUR: United Kingdom, Do Not Set
-   - JPN: 日本, 設定しない
-   - KOR: 대한민국, 설정하지 않음
+    - USA: United States, Do Not Set
+    - EUR: United Kingdom, Do Not Set
+    - JPN: 日本, 設定しない
+    - KOR: 대한민국, 설정하지 않음
 
 10. Lépj ki a System Settings-ből
 
@@ -78,21 +84,21 @@ Ha még nem történt meg, biztosítsd, hogy legyen működő Internet kapcsolat
 :::
 
 1. A HOME menüben nyomd meg a bal és jobb váll gombokat egyszerre, hogy megnyisd a kamerát
-   - Ha nem tudod megnyitni a kamerát, nyisd meg az Internet Browser-t kézzel, és írd be az URL-t e helyett. (`https://zoogie.github.io/web/super/` az EUR/USA/JPN régiókhoz, `https://zoogie.github.io/web/korea` a KOR régióhoz)
+    - Ha nem tudod megnyitni a kamerát, nyisd meg az Internet Browser-t kézzel, és írd be az URL-t e helyett. (`https://zoogie.github.io/web/super/` az EUR/USA/JPN régiókhoz, `https://zoogie.github.io/web/korea` a KOR régióhoz)
 2. Nyomd meg a QR kód gombot és olvasd be a következő QR kódok egyikét, ami megfelel a konzol régiódnak, [itt](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
-   - Ha tanúsítvány figyelmeztetést kapsz, ellenőrizd, hogy a rendszer dátum mai-e
+    - Ha tanúsítvány figyelmeztetést kapsz, ellenőrizd, hogy a rendszer dátum mai-e
 3. Nyomj (Select) gombot a könyvjelző fül megnyitásához
-   - Ha a (Select) gombod nem reagál, akkor érintsd meg a csillag ikont a bal alsó sarkában a képernyőnek
+    - Ha a (Select) gombod nem reagál, akkor érintsd meg a csillag ikont a bal alsó sarkában a képernyőnek
 4. Éríntsd meg a "Bookmark this page" feliratot
 5. Nyomd meg a (B) gombot egyszer, hogy visszatérj a böngészőhöz
 6. Nyomj (ZR) gombot a fülek listájának megnyitásához
-   - Ha a (ZR) gombod nem reagál, akkor érintsd meg a két átlapolt négyzetet a jobb alsó sarka környékén a képernyőnek
+    - Ha a (ZR) gombod nem reagál, akkor érintsd meg a két átlapolt négyzetet a jobb alsó sarka környékén a képernyőnek
 7. Legyél biztos abban, hogy az egyetlen nyitott fül az a super-skaterhax weboldala
-   - Ennek a fülnek kékkel kell kiemelve lennie a fülek listáján
-   - Ha más fülek is nyitva vannak, zárd be azokat
+    - Ennek a fülnek kékkel kell kiemelve lennie a fülek listáján
+    - Ha más fülek is nyitva vannak, zárd be azokat
 8. Nyomd meg a (B) gombot egyszer, hogy visszatérj a böngészőhöz
 9. Nyomd meg a (START) gombot, hogy megnyisd a helyérzékeny menüt
-   - Ha a (Start) gombod nem reagál, akkor érintsd meg 3-vonal menüt a jobb alsó sarkában a képernyőnek
+    - Ha a (Start) gombod nem reagál, akkor érintsd meg 3-vonal menüt a jobb alsó sarkában a képernyőnek
 10. Érintsd meg a "Settings"-et
 11. Érintsd meg a "Delete Cookies"-t
 12. Nyomd meg az (A) gombot a folytatáshoz
@@ -114,7 +120,7 @@ Ha még nem történt meg, biztosítsd, hogy legyen működő Internet kapcsolat
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-super-skaterhax)
+    - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-super-skaterhax)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->
