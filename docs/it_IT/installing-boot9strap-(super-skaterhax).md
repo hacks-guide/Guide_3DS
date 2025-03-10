@@ -10,6 +10,12 @@ head:
 
 # Installazione di boot9strap (super-skaterhax)
 
+::: danger
+
+This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\)) instead.
+
+:::
+
 :::details Dettagli tecnici (opzionale)
 
 Per i dettagli tecnici sugli exploit che utilizzerai in questa pagina, vedi [qui](https://github.com/zoogie/super-skaterhax).
@@ -40,11 +46,11 @@ In questa sezione copierai i file necessari per attivare sia super-skaterhax che
 
 3. Copia tutto il contenuto dell'archivio `.zip` di Super-skaterhax nella directory principale della tua scheda SD, sovrascrivendo eventuali file esistenti
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/skaterhax/skater-root-layout.png)
+    ![](/images/screenshots/skaterhax/skater-root-layout.png)
 
-   :::
+    :::
 
 4. Reinserisci la scheda SD nella tua console
 
@@ -55,15 +61,15 @@ In questa sezione copierai i file necessari per attivare sia super-skaterhax che
 7. Seleziona "Impostazioni generali"
 
 8. Vai su "Profilo" -> "Area di residenza"
-   - Queste impostazioni verranno temporaneamente modificate per aumentare la probabilità di successo dell'exploit
-   - È possibile ripristinare le impostazioni della regione al termine della pagina
-   - Se ottieni un [avviso](/images/screenshots/skaterhax/country-change-notice.png) che dice che perderai l'accesso alle funzionalità di Nintendo Network ID, puoi tranquillamente selezionare OK per continuare
+    - Queste impostazioni verranno temporaneamente modificate per aumentare la probabilità di successo dell'exploit
+    - È possibile ripristinare le impostazioni della regione al termine della pagina
+    - Se ottieni un [avviso](/images/screenshots/skaterhax/country-change-notice.png) che dice che perderai l'accesso alle funzionalità di Nintendo Network ID, puoi tranquillamente selezionare OK per continuare
 
 9. Seleziona le seguenti opzioni in base alla regione della tua console ([immagine](/images/screenshots/skaterhax/skater-lang.png))
-   - USA: United States, Do Not Set
-   - EUR: United Kingdom, Do Not Set
-   - JPN: 日本, 設定しない
-   - KOR: 대한민국, 설정하지 않음
+    - USA: United States, Do Not Set
+    - EUR: United Kingdom, Do Not Set
+    - JPN: 日本, 設定しない
+    - KOR: 대한민국, 설정하지 않음
 
 10. Esci dalle Impostazioni della console
 
@@ -78,21 +84,21 @@ Se non l'hai già fatto, assicurati di avere una connessione Internet funzionant
 :::
 
 1. Nel menu HOME, premi contemporaneamente i pulsanti dorsali L e R per avviare la fotocamera
-   - Se non riesci ad aprire la fotocamera, apri il Browser Internet e digita manualmente l'URL (`https://zoogie.github.io/web/super/` per EUR/USA/JPN, `https://zoogie.github.io/web/korea` per KOR)
+    - Se non riesci ad aprire la fotocamera, apri il Browser Internet e digita manualmente l'URL (`https://zoogie.github.io/web/super/` per EUR/USA/JPN, `https://zoogie.github.io/web/korea` per KOR)
 2. Tocca il pulsante "codice QR" e scansiona uno dei seguenti codici QR per la regione della tua console [qui](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
-   - Se ricevi un avviso sul certificato di sicurezza, assicurati che la data del sistema sia corretta
+    - Se ricevi un avviso sul certificato di sicurezza, assicurati che la data del sistema sia corretta
 3. Premi il pulsante (Select) per aprire la pagina dei preferiti
-   - Se il pulsante (Select) non funziona, tocca l'icona della stella nell'angolo in basso a sinistra dello schermo
+    - Se il pulsante (Select) non funziona, tocca l'icona della stella nell'angolo in basso a sinistra dello schermo
 4. Tocca "Aggiungi ai preferiti"
 5. Premi (B) una volta per ritornare al browser
 6. Premi (ZR) per aprire l'elenco delle schede
-   - Se il pulsante (ZR) non funziona, tocca il pulsante con 2 quadrati sovrapposti nell'angolo in basso a destra dello schermo
+    - Se il pulsante (ZR) non funziona, tocca il pulsante con 2 quadrati sovrapposti nell'angolo in basso a destra dello schermo
 7. Assicurati che l'unica scheda aperta sia il sito di super-skaterhax
-   - Questa scheda deve essere evidenziata in blu nella lista delle schede
-   - Se ci sono altre schede aperte, chiudile
+    - Questa scheda deve essere evidenziata in blu nella lista delle schede
+    - Se ci sono altre schede aperte, chiudile
 8. Premi (B) una volta per ritornare al browser
 9. Premi (Start) per aprire il menu contestuale
-   - Se il pulsante (Start) non funziona, tocca il pulsante con 3 linee nell'angolo in basso a destra dello schermo
+    - Se il pulsante (Start) non funziona, tocca il pulsante con 3 linee nell'angolo in basso a destra dello schermo
 10. Tocca su "Impostazioni"
 11. Tocca su "Elimina cookie"
 12. Premi il pulsante (A) per continuare
@@ -114,7 +120,7 @@ Se non l'hai già fatto, assicurati di avere una connessione Internet funzionant
 In questa sezione installerai il custom firmware sulla tua console.
 
 1. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-super-skaterhax)
+    - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-super-skaterhax)
 2. Una volta completato tutto, premi (A) per riavviare la console
 
 <!--@include: ./_include/configure-luma3ds.md -->
