@@ -10,6 +10,12 @@ head:
 
 # boot9strap 설치 (super-skaterhax)
 
+::: danger
+
+This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\)) instead.
+
+:::
+
 :::details 기술적 상세 정보 (선택 사항)
 
 이 페이지에 사용되는 익스플로잇에 자세한 설명은 [여기](https://github.com/zoogie/super-skaterhax)를 참고해 주세요.
@@ -40,11 +46,11 @@ head:
 
 3. Super-skaterhax `.zip` 안의 파일들을 모두 복사하여 SD 카드의 루트에 붙여넣어 주세요. 존재하는 파일이 있을 경우 덮어쓰기 해주세요.
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/skaterhax/skater-root-layout.png)
+    ![](/images/screenshots/skaterhax/skater-root-layout.png)
 
-   :::
+    :::
 
 4. SD 카드를 콘솔에 다시 삽입해 주세요
 
@@ -55,15 +61,15 @@ head:
 7. "기타 설정"을 선택해 주세요
 
 8. Navigate to "Profile" -> "Region Settings"
-   - These settings will be temporarily changed to increase the success rate of the exploit
-   - You can restore your region settings back to normal once you have finished this page
-   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
+    - These settings will be temporarily changed to increase the success rate of the exploit
+    - You can restore your region settings back to normal once you have finished this page
+    - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
 
 9. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
-   - USA: United States, Do Not Set
-   - EUR: United Kingdom, Do Not Set
-   - JPN: 日本, 設定しない
-   - KOR: 대한민국, 설정하지 않음
+    - USA: United States, Do Not Set
+    - EUR: United Kingdom, Do Not Set
+    - JPN: 日本, 設定しない
+    - KOR: 대한민국, 설정하지 않음
 
 10. 본체 설정을 종료해 주세요
 
@@ -78,21 +84,21 @@ head:
 :::
 
 1. HOME 메뉴에서 L, R 버튼을 동시에 눌러 카메라를 열어 주세요
-   - 카메라를 열 수 없다면, 인터넷 브라우저를 열어 URL을 직접 입력해주세요 (EUR/USA/JPN의 경우 `https://zoogie.github.io/web/super/`, KOR의 경우 `https://zoogie.github.io/web/korea`).
+    - 카메라를 열 수 없다면, 인터넷 브라우저를 열어 URL을 직접 입력해주세요 (EUR/USA/JPN의 경우 `https://zoogie.github.io/web/super/`, KOR의 경우 `https://zoogie.github.io/web/korea`).
 2. QR 코드 버튼을 터치해, [여기](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)에서 콘솔의 지역에 맞는 QR 코드를 스캔해주세요
-   - If you get a security certificate warning, please ensure that the system date is today's
+    - If you get a security certificate warning, please ensure that the system date is today's
 3. (Select) 버튼을 눌러 북마크 탭을 열어주세요
-   - (Select) 버튼이 동작하지 않는다면, 화면 왼쪽 아래에 있는 별 아이콘을 눌러주세요
+    - (Select) 버튼이 동작하지 않는다면, 화면 왼쪽 아래에 있는 별 아이콘을 눌러주세요
 4. "즐겨찾기에 추가" 를 선택해 주세요
 5. (B)를 눌러 브라우저로 돌아가 주세요
 6. Press (ZR) to open the tab list
-   - If your (ZR) button does not respond, tap the two overlapped squares near the bottom-right corner of the screen
+    - If your (ZR) button does not respond, tap the two overlapped squares near the bottom-right corner of the screen
 7. Make sure that the only tab open is the super-skaterhax website
-   - This tab should be highlighted in blue on the tab list
-   - If other tabs are open, close them
+    - This tab should be highlighted in blue on the tab list
+    - If other tabs are open, close them
 8. (B)를 눌러 브라우저로 돌아가 주세요
 9. (Start) 를 눌러 브라우저 메뉴를 열어 주세요
-   - (Start) 버튼이 동작하지 않을 경우, 하단 화면 오른쪽의 3줄 메뉴 버튼을 눌러 주세요
+    - (Start) 버튼이 동작하지 않을 경우, 하단 화면 오른쪽의 3줄 메뉴 버튼을 눌러 주세요
 10. "설정"을 선택해 주세요
 11. "쿠키 삭제"를 선택해 주세요
 12. (A)를 눌러 진행해 주세요
@@ -114,7 +120,7 @@ head:
 이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.
 
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-   - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting-super-skaterhax)를 참고해 주세요
+    - 아래 화면의 단계가 붉은 텍스트로 표시되고 키 콤보 입력을 요구하지 않는다면, [이 문제 해결 가이드](troubleshooting-super-skaterhax)를 참고해 주세요
 2. 작업이 완료되면, (A) 를 눌려 콘솔을 재부팅해 주세요
 
 <!--@include: ./_include/configure-luma3ds.md -->
