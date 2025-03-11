@@ -6,5 +6,5 @@ Dans cette section, vous restaurerez les paramètres Internet à la normale.
 4. Set "Proxy Settings" to "No"
 5. Click OK, then click Save
 6. When prompted, click "Test" to perform the connection test
-   - The test should succeed
+    - The test should succeed
 7. Power off your console
