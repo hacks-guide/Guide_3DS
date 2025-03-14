@@ -61,7 +61,7 @@ In this section, you will visit the browser exploit webpage, which will use univ
 
 ::: danger
 
-If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
+Si aparece un mensaje pidiéndote que actualices la consola, ¡DETENTE! Haz de nuevo la Sección II desde el principio y asegúrate de haber configurado el proxy correctamente.
 
 :::
 
