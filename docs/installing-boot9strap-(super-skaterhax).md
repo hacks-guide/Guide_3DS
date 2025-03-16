@@ -14,7 +14,7 @@ This method is currently **not working** due to server-side SSL certificate chan
 
 If you have been redirected here form a video guide or a link, do not continue.
 
-If you ignore this warning, you will get an  error when pressing the "GO GO!" button.
+If you ignore this warning, you will get an  error after pressing the "GO GO!" button.
 
 :::
 
