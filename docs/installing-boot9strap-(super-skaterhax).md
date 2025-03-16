@@ -12,6 +12,10 @@ head: [
 
 This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-(mset9)) instead.
 
+If you have been redirected here form a video guide or a link, do not continue.
+
+If you ignore this warning, you will get an  error when pressing the "GO GO!" button.
+
 :::
 
 ::: details Technical Details (optional)
@@ -94,6 +98,16 @@ If you haven't already, make sure you have a working Internet connection set up 
 1. Press (A) to continue
 1. Press (Home) to return to the HOME Menu, then immediately press (A) to launch the browser again
 1. Select the "GO GO!" button on the top of the bottom screen
+
+::: danger
+
+If you get the error "An error has occurred. Please save your data in any software currently in use, then restart the system." after pressing GO GO! :
+
+This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-(mset9)) instead.
+
+:::
+
+
 1. Press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
     + If your console freezes on a yellow screen, hold the POWER button until it turns off, then retry this section
     + If your console freezes on a red screen, hold the POWER button until it turns off, redo step 3 of Section II, then retry this section
