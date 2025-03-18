@@ -12,7 +12,7 @@ For technical details on the exploits that you will be using on this page, see [
 
 :::
 
-## Compatibility Notes
+## Notas de compatibilidad
 
 SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing the use of new-browserhax or old-browserhax (compatible with versions 11.4.0 through 11.13.0 in all regions), which can then be used in conjunction with universal-otherapp.
 
