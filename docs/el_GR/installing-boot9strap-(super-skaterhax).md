@@ -12,9 +12,9 @@ head:
 
 ::: danger
 
-# This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\)) instead.
+# Αυτήν τη στιγμή, η συγκεκριμένη μέθοδος **δεν λειτουργεί** λόγω αλλαγών στο πιστοποιητικό SSL από την πλευρά του διακομιστή. Δεν έχει γίνει γνωστό το χρονοδιάγραμμα για τη διόρθωση του προβλήματος. Εν τω μεταξύ, μπορείτε να ακολουθήσετε τις οδηγίες της ενότητας [Εγκατάσταση του boot9strap (MSET9)](installing-boot9strap-\(mset9\)).
 
-[![distraction so that people don't look at the rest of the page](/images/distraction.gif)](installing-boot9strap-\(mset9\))
+[![μια εικόνα που αποσπά την προσοχή των επισκεπτών, ώστε να μην κοιτάξουν την υπόλοιπη σελίδα](/images/distraction.gif)](installing-boot9strap-\(mset9\))
 
 :::
 
