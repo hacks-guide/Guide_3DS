@@ -22,9 +22,9 @@ Jika LED pemberitahuan berkelip:
 - **Magenta**: 3DS tidak ketemu `boot.firm` di kartu SD. Masih ketemu `boot.firm` di memori internal, tapi berkasnya rusak.
 - **Merah**: 3DS ketemu `boot.firm` di kartu SD dan memori internal, tapi kedua berkasnya rusak.<br>**Jingga**: 3DS ketemu `boot.firm` rusak di kartu SD, tapi `boot.firm` masih aman di memori internal.<br>**Kuning**: 3DS tidak ketemu `boot.firm` di kartu SD, tapi `boot.firm` masih aman di memori internal.<br>**Hijau**: 3DS ketemu `boot.firm` di kartu SD dan memori internal, dan kedua berkasnya aman.
 
-Berkas `boot.firm` yang baru bisa didapat dengan [mengunduh versi terkini dari Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), diekstrak, dan taruh `boot.firm` di akar kartu SD. Jika berkas `boot.firm` selalu terdeteksi rusak, coba periksa galat di kartu SD ([Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), atau [macOS](f3xswift-\(mac\))). Perlu diingat, 3DS sering ada isu dengan berkas yang diekstrak WinRAR.
+Untuk mengganti baru berkas `boot.firm`; [unduh versi terkini dari Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), diekstrak, lalu taruh `boot.firm` di akar kartu SD. Jika berkas `boot.firm` selalu terdeteksi rusak, coba periksa galat di kartu SD ([Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), atau [macOS](f3xswift-\(mac\))). Perlu diingat, 3DS sering ada isu dengan berkas yang diekstrak WinRAR.
 
-Jika terdengar "bunyi letup", dan mungkin juga cahaya belakang layar menyala per sekian detik, berarti ada isu dengan fisik konsol (seperti kabel _backlight_ longgar). Mungkin konsol bisa dinyalakan jika dimiringkan di sudut tertentu.
+Jika terdengar "bunyi letup", dan mungkin juga cahaya belakang layar menyala per sekian detik, berarti ada isu dengan fisik konsol (seperti kabel _backlight_ longgar). Coba nyalakan konsol tapi dipegang di kemiringan tertentu.
 
 :::
 
