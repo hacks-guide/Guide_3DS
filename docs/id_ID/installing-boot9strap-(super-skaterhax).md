@@ -12,7 +12,7 @@ head:
 
 ::: danger
 
-# Metode ini sedang **tidak berfungsi** karena sertifikat di server SSL berubah. Perbaikan masih belum mulai. Untuk sementara, ikuti [Memasang boot9strap (MSET9)](installing-boot9strap-\(mset9\)).
+# Metode ini sedang **tidak berfungsi** karena sertifikat di server SSL berubah. Belum ada rencana perbaikan. Untuk sementara, ikuti [Memasang boot9strap (MSET9)](installing-boot9strap-\(mset9\)).
 
 [![kecohan agar orang tidak melihat lanjutan laman ini](/images/distraction.gif)](installing-boot9strap-\(mset9\))
 
