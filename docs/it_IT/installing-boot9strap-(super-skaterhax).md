@@ -12,7 +12,9 @@ head:
 
 ::: danger
 
-Questo metodo attualmente **non funziona** a causa di modifiche lato server del certificato SSL. Non si sa quando il problema verrà risolto. Nel frattempo, utilizza [Installazione di boot9strap (MSET9)](installing-boot9strap-\(mset9\)).
+# This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\)) instead.
+
+[![distraction so that people don't look at the rest of the page](/images/distraction.gif)](installing-boot9strap-\(mset9\))
 
 :::
 
