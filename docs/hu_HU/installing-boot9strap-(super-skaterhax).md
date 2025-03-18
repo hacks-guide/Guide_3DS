@@ -12,9 +12,9 @@ head:
 
 ::: danger
 
-# This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\)) instead.
+# Ez a metódus jelenleg **nem működik** a szerver oldali SSL tanúsítvány változások miatt. A javítás várható ideje ismeretlen. Addig kövesd a [Boot9strap telepítése (MSET9)](installing-boot9strap-\(mset9\))-et helyette.
 
-[![distraction so that people don't look at the rest of the page](/images/distraction.gif)](installing-boot9strap-\(mset9\))
+[![zavarás, hogy ne olvassák el az oldal további részét](/images/distraction.gif)](installing-boot9strap-\(mset9\))
 
 :::
 
