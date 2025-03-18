@@ -4,7 +4,7 @@
 
 :::
 
-## Compatibility Notes
+## Notas de compatibilidad
 
 safecerthax is compatible with all Old 3DS and Old 2DS consoles in all regions on system versions 1.0.0 through 11.14.0.
 
