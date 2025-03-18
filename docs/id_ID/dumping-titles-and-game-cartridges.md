@@ -151,7 +151,7 @@ Untuk mencari tahu Title ID berkas `<TitleID>.gbavc.sav`, lihat daftar Title ID 
 
 ::: info
 
-Agar lebih rapih, salin tiap berkas '.3ds' yang ingin dienkripsi / dekripsi **ke** folder '/ cias /' di kartu SD
+Agar rapih, salin tiap berkas `.3ds` yang ingin dienkripsi / dekripsi **ke** folder `/ cias /` di kartu SD
 
 :::
 
