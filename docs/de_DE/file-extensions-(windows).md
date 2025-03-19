@@ -15,11 +15,11 @@ Dies wird es einfach machen die benötigten Dateien in diesem Guide zu finden.
 3. Go to "Show"
 4. Click "File name extensions" to enable it
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@ Dies wird es einfach machen die benötigten Dateien in diesem Guide zu finden.
 2. Klicken Sie auf das Ribbon-Menü die Option "Ansicht"
 3. Checken sie das Kontrollkästchen mit der Bezeichnung "Datei Dateinamenerweiterungen"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@ Dies wird es einfach machen die benötigten Dateien in diesem Guide zu finden.
 
 2. Suchen Sie nach "Ordneroptionen" und wählen Sie das entsprechende Ergebnis aus
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. Klicken Sie oben im Menü "Ordner-Optionen" die Option "Ansicht"
 
 4. Deaktivieren Sie das Kontrollkästchen "Erweiterungen bei bekannten Dateitypen ausblenden"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 
