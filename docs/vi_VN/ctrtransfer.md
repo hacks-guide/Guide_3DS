@@ -23,7 +23,7 @@ As a part of this process, your system settings will be reset to its defaults. T
 - The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
 - The latest release of [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (right click, save link as)
 - A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-  - If you already have a torrent client, you do not need to download a new one
+    - If you already have a torrent client, you do not need to download a new one
 - The 11.15.0 CTRTransfer image for your console and region:
 
 <!--@include: ./_include/ctrtransfer-images.md -->
