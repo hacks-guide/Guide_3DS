@@ -4,8 +4,8 @@
 4. Wähle "Backup Options" aus
 5. Wähle "SysNAND Backup" aus
 6. Drücke (A), um zu bestätigen
-   - Dieser Vorgang nimmt einige Zeit in Anspruch
-   - Wenn ein Fehler auftritt, schaue für Hilfe im [Leitfaden zur Fehlerbehebung](troubleshooting-finalizing-setup.html) nach
+    - Dieser Vorgang nimmt einige Zeit in Anspruch
+    - Wenn ein Fehler auftritt, schaue für Hilfe im [Leitfaden zur Fehlerbehebung](troubleshooting-finalizing-setup.html) nach
 7. Drücke (A), um fortzufahren
 8. Drücke (B), um zum Hauptmenü zurückzukehren
 9. Wähle "Exit" aus
