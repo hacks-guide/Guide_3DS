@@ -38,10 +38,10 @@
 - Την πιο πρόσφατη έκδοση του [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (απευθείας λήψη)
 - Την πιο πρόσφατη έκδοση του [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(το αρχείο `.3dsx`)_
 - Την πιο πρόσφατη έκδοση του [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (κάντε δεξί κλικ και επιλέξτε «Αποθήκευση συνδέσμου ως»)
-- The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
+- Το είδωλο CTRTransfer 11.15.0 για την περιοχή που θέλετε να έχει ο τύπος της κονσόλας σας (π.χ. κάντε λήψη του «New 3DS ή 2DS - USA» αν διαθέτετε ένα New 3DS και θέλετε να αλλάξετε την περιοχή του στις ΗΠΑ)
     ::: warning
 
-You need to use a torrent client to download the CTRTransfer images, such as [qBitTorrent](https://www.qbittorrent.org/download) or [Deluge](https://deluge-torrent.org/download/).
+Θα πρέπει να χρησιμοποιήσετε ένα πρόγραμμα torrent client για να κάνετε λήψη των ειδώλων CTRTransfer, όπως το [qBitTorrent](https://www.qbittorrent.org/download) ή το [Deluge](https://deluge-torrent.org/download/).
 
 :::
 
