@@ -25,7 +25,7 @@ Untuk proses bagian ini, pengaturan sistem akan diatur ulang ke bawaan. Ini term
 - Berkas CTRTransfer 11.15.0 sesuai jenis dan daerah konsol
   ::: warning
 
-You need to use a torrent client to download the CTRTransfer images, such as [qBitTorrent](https://www.qbittorrent.org/download) or [Deluge](https://deluge-torrent.org/download/).
+Perlu klien torrent untuk mengunduh berkas CTRTransfer, seperti [qBitTorrent](https://www.qbittorrent.org/download) atau [Deluge](https://deluge-torrent.org/download/).
 
 :::
 
