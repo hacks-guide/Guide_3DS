@@ -52,7 +52,7 @@ Ensure that you have reset the title database.
 
 - Please power on your console with your SD inserted
 - Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-  - This will not wipe any of your data
+    - This will not wipe any of your data
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
@@ -65,7 +65,7 @@ If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 1. 콘솔의 모델과 버전을 입력한 다음 엔터키를 눌러주세요
 2. Type `2` then press enter to check the MSET9 status
-   - This will create the dummy databases again
+    - This will create the dummy databases again
 3. Close the MSET9 script window
 4. Start again from [Section I Step 12](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
 
@@ -106,12 +106,12 @@ You have multiple ID0 folders. To determine the correct folder, follow these ins
 2. SD 카드를 콘솔에 다시 삽입해 주세요
 3. 콘솔의 전원을 켜 주세요
 4. 콘솔이 SD 카드 데이터를 생성할 때까지 기다려 주세요
-   - Your applications will have disappeared. 이는 정상이며, 잠시 후에 고쳐질 것입니다.
+    - Your applications will have disappeared. 이는 정상이며, 잠시 후에 고쳐질 것입니다.
 5. 콘솔의 전원을 꺼 주세요
 6. SD 카드를 컴퓨터에 삽입해 주세요
 7. SD 카드의 `Nintendo 3DS` 폴더를 열어 주세요
 8. Write down the first few characters of the folder you see
-   - This is your true ID0, which we will keep in the real Nintendo 3DS folder
+    - This is your true ID0, which we will keep in the real Nintendo 3DS folder
 9. Delete the ID0 from the current `Nintendo 3DS` folder
 10. Move the true ID0 folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
 11. If it exists, move the `Private` folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
@@ -158,8 +158,8 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. 콘솔의 모델과 버전을 입력한 다음 엔터키를 눌러주세요
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
@@ -187,8 +187,8 @@ Follow these instructions to remove the trigger file and to retry Section II:
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. 콘솔의 모델과 버전을 입력한 다음 엔터키를 눌러주세요
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
+    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
@@ -233,3 +233,5 @@ If you continue to have this issue and are sure that you did everything correctl
 :::
 
 <!--@include: ./_include/troubleshooting-return.md -->
+
+
