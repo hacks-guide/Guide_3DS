@@ -4,7 +4,7 @@ Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti
 
 ::: warning
 
-Instruksi ini hanya berlaku jika mengikuti laman "Memasang boot9strap (SSLoth-Browser)". Jika punya konsol **New 3DS** di versi **11.15.0 sampai 11.17.0**, maka ikuti saja [instruksi sidik gangguan Memasang boot9strap (super-skaterhax)](troubleshooting-super-skaterhax).
+Instruksi ini hanya berlaku jika mengikuti laman "Memasang boot9strap (SSLoth-Browser)". Jika punya konsol **New 3DS** di versi **11.15.0 hingga 11.17.0**, maka ikuti saja [instruksi sidik gangguan Memasang boot9strap (super-skaterhax)](troubleshooting-super-skaterhax).
 
 :::
 
