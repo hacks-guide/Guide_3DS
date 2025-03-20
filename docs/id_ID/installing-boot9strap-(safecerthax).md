@@ -6,7 +6,7 @@
 
 ## Catatan Kompatibilitas
 
-safecerthax ini kompatibel dengan semua konsol Old 3DS (2DS) di semua daerah dari _firmware_ 1.0.0 hingga 11.14.0.
+safecerthax itu kompatibel dengan semua konsol Old 3DS (2DS) pada _firmware_ 1.0.0 hingga 11.14.0 di semua daerah.
 
 ::: info
 
