@@ -58,10 +58,10 @@ Follow these steps in order:
 2. Navega hasta `Configuración de Internet` -> `Conexión a Internet`
 3. Haz clic en tu conexión de red y navega hasta `Modificar ajustes` -> `Página siguiente (Flecha hacia la derecha)` -> `Servidor proxy`
 4. Set "Proxy Settings" to "No"
-5. Haz clic en Aceptar y después haz clic en Guardar
+5. Haz clic en Aceptar, después haz clic en Guardar
 6. Cuando se muestre, haz click en "Sí" para realizar la prueba de conexión
     - La prueba debería ser exitosa
-7. Click "OK" to continue
+7. Haz clic en "Aceptar" para continuar
 8. Press "Back" twice, then "Close" to go back to the HOME Menu
 9. Open the Internet Browser once
 10. If prompted about a system update, press OK
