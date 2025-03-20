@@ -74,7 +74,7 @@ Mungkin perlu komputer bersistem Windows, macOS, atau Linux untuk memformat kart
 
 :::details Boleh kartu SD ukuran berapa?
 
-Berapa saja asalkan kartu SD tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS secara resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. Tidak dianjurkan menggunakan kartu SD di atas 128GB karena ada isu dengan grafik GBA dan tema kustom.
+Berapa saja asalkan kartu SD tersisa 1.5GB untuk mengikuti keseluruhan panduan ini. Walaupun 3DS hanya resmi membaca kartu SD hingga 32GB, tapi ukuran yang lebih besar juga bisa digunakan jika diformat ke FAT32. Tidak dianjurkan menggunakan kartu SD di atas 128GB karena ada isu dengan grafik GBA dan tema kustom.
 
 :::
 
@@ -124,7 +124,7 @@ Iya, fungsi System Transfer resmi bisa dilakukan bahkan ke konsol lain yang ada 
 
 :::details Bagaimana mengubah bahasa sistem di 3DS Jepang?
 
-Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan [mengganti daerah](region-changing). Perlu diingat ini sangat mungkin mengacau Nintendo eShop di konsol, sehingga tidak bisa memperbarui permainan dalam-daerah ataupun luar-daerah. Mengakses Pokémon Bank juga tidak akan bisa (jika terpasang), karena perlu akses ke eShop.
+Satu-satunya cara mengubah bahasa sistem 3DS Jepang ke bahasa lain yaitu dengan [mengubah daerah](region-changing). Perlu diingat ini sangat mungkin mengacau Nintendo eShop di konsol, sehingga tidak bisa memperbarui permainan dalam-daerah ataupun luar-daerah. Mengakses Pokémon Bank juga tidak akan bisa (jika terpasang), karena perlu akses ke eShop.
 
 :::
 
