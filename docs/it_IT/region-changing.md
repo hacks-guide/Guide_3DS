@@ -24,10 +24,10 @@ Se cambi la regione della tua console:
 
 - Non potrai utilizzare il tuo NNID (se ne hai uno). I NNID sono assegnati alla regione in cui sono stati creati.
 - Potresti non essere in grado di accedere all'eShop, anche se [elimini il tuo account eShop](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account). Questo accade perché alcuni titoli rimangono collegati al 3DS, anche dopo la cancellazione dell'account (specialmente su New 3DS).
-  - È ancora rilevante perché, nonostante non si possano più fare acquisti nell'eShop, vengono ancora ancora forniti gli aggiornamenti dei giochi. Gli aggiornamenti possono fornire contenuti aggiuntivi o correggere i bug.
-  - Questa logica si estende ai Trasferimenti dati, il che vuol dire che non puoi eseguire un Trasferimento dati da un 3DS USA ad un 3DS JPN la cui regionalità è stata cambiata in USA.
-  - Anche Pokémon Bank richiede accesso all'eShop.
-  - Detto questo, i Trasferimenti dati e gli aggiornamenti dei giochi sono comunque limitati dalla regionalità (es. l'eShop giapponese ha solo aggiornamenti per giochi giapponesi).
+    - È ancora rilevante perché, nonostante non si possano più fare acquisti nell'eShop, vengono ancora ancora forniti gli aggiornamenti dei giochi. Gli aggiornamenti possono fornire contenuti aggiuntivi o correggere i bug.
+    - Questa logica si estende ai Trasferimenti dati, il che vuol dire che non puoi eseguire un Trasferimento dati da un 3DS USA ad un 3DS JPN la cui regionalità è stata cambiata in USA.
+    - Anche Pokémon Bank richiede accesso all'eShop.
+    - Detto questo, i Trasferimenti dati e gli aggiornamenti dei giochi sono comunque limitati dalla regionalità (es. l'eShop giapponese ha solo aggiornamenti per giochi giapponesi).
 - **Non sarai in grado di disinstallare un custom firmware senza brickare la console!** Se hai intenzione di disinstallare il custom firmware in futuro, **DEVI** ripristinare il backup della NAND creato prima del cambiamento di regione.
 
 :::
@@ -38,9 +38,12 @@ Se cambi la regione della tua console:
 - L'ultima versione di [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (download diretto)
 - L'ultima versione di [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(il file `.3dsx`)_
 - L'ultima versione di [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (clicca con il tasto destro del mouse, salva il link come)
-- Un client torrent come [qBittorrent](https://www.qbittorrent.org/download.php) o [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-  - Se hai già un client torrent, non occorre scaricarne uno nuovo
-- L'immagine CTRTransfer 11.15.0 per il tipo di console della regione a cui si desidera cambiare (ad esempio scarica "New 3DS or 2DS - USA" se hai un New 3DS e vuoi cambiare la tua regione in USA)
+- The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
+    ::: warning
+
+You need to use a torrent client to download the CTRTransfer images, such as [qBitTorrent](https://www.qbittorrent.org/download) or [Deluge](https://deluge-torrent.org/download/).
+
+:::
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
