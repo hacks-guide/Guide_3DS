@@ -1,10 +1,10 @@
 # Sidik Gangguan (super-skaterhax)
 
-Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (super-skaterhax)". Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (super-skaterhax)". Jika saran dari laman ini tidak menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ::: warning
 
-Instruksi ini hanya berlaku jika mengikuti laman "Memasang boot9strap (super-skaterhax)". Jika punya konsol **yang bukan New 3DS** di versi **11.15.0 sampai 11.17.0**, maka ikuti saja [instruksi sidik gangguan Memasang boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser).
+Instruksi ini hanya berlaku jika mengikuti laman "Memasang boot9strap (super-skaterhax)". Jika punya konsol **yang bukan New 3DS** di versi **11.15.0 hingga 11.17.0**, maka ikuti saja [instruksi sidik gangguan Memasang boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser).
 
 :::
 
