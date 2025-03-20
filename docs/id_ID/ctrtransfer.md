@@ -22,7 +22,7 @@ Untuk proses bagian ini, pengaturan sistem akan diatur ulang ke bawaan. Ini term
 - Versi terkini dari [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (unduhan langsung)
 - Versi terkini dari [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(yang berkas `.3dsx`)_
 - Versi terkini dari [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (pencet kanan lalu _save link as_; simpan tautan)
-- The 11.15.0 CTRTransfer image for your console and region
+- Berkas CTRTransfer 11.15.0 sesuai jenis dan daerah konsol
   ::: warning
 
 You need to use a torrent client to download the CTRTransfer images, such as [qBitTorrent](https://www.qbittorrent.org/download) or [Deluge](https://deluge-torrent.org/download/).
