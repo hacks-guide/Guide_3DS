@@ -55,12 +55,12 @@ The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the pag
 Follow these steps in order:
 
 1. Launch System Settings on your console
-2. Navigate to `Internet Settings` -> `Connection Settings`
-3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+2. Navega hasta `Configuración de Internet` -> `Conexión a Internet`
+3. Haz clic en tu conexión de red y navega hasta `Modificar ajustes` -> `Página siguiente (Flecha hacia la derecha)` -> `Servidor proxy`
 4. Set "Proxy Settings" to "No"
-5. Click OK, then click Save
-6. When prompted, click "Test" to perform the connection test
-   - The test should succeed
+5. Haz clic en Aceptar y después haz clic en Guardar
+6. Cuando se muestre, haz click en "Sí" para realizar la prueba de conexión
+    - La prueba debería ser exitosa
 7. Click "OK" to continue
 8. Press "Back" twice, then "Close" to go back to the HOME Menu
 9. Open the Internet Browser once
