@@ -22,9 +22,12 @@ A folyamat részeként a rendszer beállításaid visszaállításra kerülnek a
 - Az [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) legfrissebb kiadása (közvetlen letöltés)
 - A [faketik](https://github.com/ihaveamac/faketik/releases/latest) legújabb kiadása _(a`.3dsx` fájl)_
 - Az [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) legfrissebb kiadása (jobb kattintás, Link mentése másként...)
-- Egy torrent kliens, mint például a [qBittorrent](https://www.qbittorrent.org/download.php) vagy a [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-  - Ha már van torrent kliensed, nem szükséges letöltened egy újat
-- A konzolodhoz és régiódhoz tartozó 11.15.0-s CTRTransfer képfájl:
+- The 11.15.0 CTRTransfer image for your console and region
+  ::: warning
+
+You need to use a torrent client to download the CTRTransfer images, such as [qBitTorrent](https://www.qbittorrent.org/download) or [Deluge](https://deluge-torrent.org/download/).
+
+:::
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
