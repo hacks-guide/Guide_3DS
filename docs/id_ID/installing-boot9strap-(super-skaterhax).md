@@ -26,7 +26,7 @@ Untuk perincian teknis perihal eksploit pada laman ini, lihat di [sini](https://
 
 ### Catatan Kompatibilitas
 
-Super-skaterhax (jika untuk membuka Homebrew Launcher) bisa untuk 3DS "New" dari _firmware_ 11.15.0 ke atas di semua daerah kecuali CHN/TWN.
+Super-skaterhax itu (jika untuk Homebrew Launcher) kompatibel pada 3DS "New" _firmware_ 11.15.0 ke atas di semua daerah kecuali CHN/TWN.
 
 ::: warning
 
