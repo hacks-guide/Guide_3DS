@@ -7,7 +7,7 @@ Esta seção redefinirá a configuração do console para os valores padrão. \*
 5. Aperte (A) para confirmar
 6. Aperte (B) algumas vezes para voltar ao menu principal
 7. Navegue para `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-   - O `<ID0>` é uma pasta com um nome de 32 caracteres
+    - O `<ID0>` é uma pasta com um nome de 32 caracteres
 8. Use os botões direcionais para destacar `00010017`
 9. Aperte (Gatilho Direito) + (A) para abrir as opções de pasta
 10. Selecione "Copy to 0:/gm9/out''
