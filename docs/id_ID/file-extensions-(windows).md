@@ -15,11 +15,11 @@ Ini akan mempermudah mencari berkas yang dirujuk pada seluruh panduan ini.
 3. Lalu ke "Show" (Perlihatkan)
 4. Pencet "File name extensions" (Ekstensi nama berkas) untuk mengaktifkan
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@ Ini akan mempermudah mencari berkas yang dirujuk pada seluruh panduan ini.
 2. Pencet opsi "View" di menu pita (_ribbon_)
 3. Centang kotak "File name extensions"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@ Ini akan mempermudah mencari berkas yang dirujuk pada seluruh panduan ini.
 
 2. Lalu ketik "Folder Options" pada Menu Mulai dan pilih hasil terkait
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. Pencet opsi "View" di bagian atas menu Folder Options
 
 4. Lepas centang kotak "Hide extensions for known file types"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 
