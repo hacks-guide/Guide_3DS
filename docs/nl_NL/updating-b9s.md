@@ -26,20 +26,20 @@ Voor alle stappen in dit gedeelte, moet je bestaande bestanden op je SD-kaart ov
 4. Kopieer `SafeB9SInstaller.firm` van de SafeB9SInstaller `.zip` naar de hoofdmap van je SD-kaart en hernoem het naar `boot.firm`
 5. Stop je SD-kaart terug in je console
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/updateb9s-root-layout.png)
+    ![](/images/screenshots/updateb9s-root-layout.png)
 
-   :::
+    :::
 
 ### Section II - Installing boot9strap
 
 1. Zet je console aan
-   - This should automatically launch SafeB9SInstaller
+    - This should automatically launch SafeB9SInstaller
 2. When prompted, input the key combo given on the top screen to install boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-updating-b9s)
+    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-updating-b9s)
 3. Once it is completed, force your console to power off by holding down the power button
-   - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
+    - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
 
 ### Section III - Update Luma3DS
 
@@ -48,8 +48,8 @@ Voor alle stappen in dit gedeelte, moet je bestaande bestanden op je SD-kaart ov
 3. Stop je SD-kaart terug in je console
 4. Zet je console aan
 5. If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot
-   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Veel van deze instellingen kunnen nuttig zijn voor aanpassing of debugging
-   - For the purpose of this guide, these settings will be left on default settings
+    - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Veel van deze instellingen kunnen nuttig zijn voor aanpassing of debugging
+    - For the purpose of this guide, these settings will be left on default settings
 
 ___
 
