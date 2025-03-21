@@ -16,8 +16,8 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
 
 - Seu flashcart compatível com ntrboot
 - Dois consoles
-  - **DSi de origem**: o Nintendo DSi que é compatível com o seu flashcart
-  - **3DS de destino**: o console da família 3DS com firmware padrão
+    - **DSi de origem**: o Nintendo DSi que é compatível com o seu flashcart
+    - **3DS de destino**: o console da família 3DS com firmware padrão
 - A versão mais recente do [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
 ## Instruções
