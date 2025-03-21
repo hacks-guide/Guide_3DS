@@ -21,9 +21,9 @@ Ha a képernyő színeket villogtat, akkor lefagy/összeomlik:
 
 - Biztosítsd, hogy a konzolod verziójának és régiójának megfelelő másolata van meg neked az `arm11code.bin` és `browserhax_hblauncher_ropbin_payload.bin` fájlokból
 - Próbáld meg törölni a böngésző adatot:
-  1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
-  2. Görgess a legaljára, majd válaszd a "Reset Save Data" opciót (ami lehet, hogy "Initialize Savedata" vagy "Clear All Save Data" néven fut")
-  3. Próbáld meg újra végrehajtani az exploitot
+    1. Indítsd el a böngészőt, majd lépj be a beállításokba (browser settings)
+    2. Görgess a legaljára, majd válaszd a "Reset Save Data" opciót (ami lehet, hogy "Initialize Savedata" vagy "Clear All Save Data" néven fut")
+    3. Próbáld meg újra végrehajtani az exploitot
 - Próbáld meg módosítani a rendszer nyelvét valami másra mint az aktuális nyelv
 
 :::
