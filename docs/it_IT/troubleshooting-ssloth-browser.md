@@ -60,7 +60,7 @@ Segui in ordine questi passaggi:
 4. Imposta "Impostazioni proxy" su "No"
 5. Fai clic su OK, quindi su Salva
 6. Quando richiesto, clicca su "Test" per eseguire il test di connessione
-   - Il test dovrebbe andare a buon fine
+    - Il test dovrebbe andare a buon fine
 7. Clicca "OK" per continuare
 8. Premi "Indietro" due volte, poi "Chiudi" per tornare al menu HOME
 9. Apri il Browser Internet una volta sola
