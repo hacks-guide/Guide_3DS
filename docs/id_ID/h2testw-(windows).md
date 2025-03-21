@@ -6,7 +6,7 @@ Ini adalah laman lebihan untuk memeriksa galat di kartu SD dengan h2testw.
 
 Tergantung ukuran kartu SD dan kecepatan komputer, proses ini bisa lama beberapa jam!
 
-Laman ini hanya untuk pengguna Windows. Jika tidak menggunakan Windows, lihat laman [F3 (Linux)](f3-\(linux\)) atau [F3XSwift (Mac)](f3xswift-\(mac\)).
+Laman ini khusus pengguna Windows. Jika tidak menggunakan Windows, lihat laman [F3 (Linux)](f3-\(linux\)) atau [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 ## Apa yang Perlu
 
