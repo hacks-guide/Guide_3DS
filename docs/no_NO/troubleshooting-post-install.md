@@ -35,19 +35,19 @@ The steps below can be attempted in any order, but are listed from least to most
 1. Power off your console, remove the SD card, re-insert it, then power on your console.
 2. Power off your console, eject the game cartridge if inserted, power on your console, then wait up to ten minutes. If your console boots within ten minutes, the issue has been fixed and is unlikely to reoccur
 3. Rename the `Nintendo 3DS` folder on your SD card to `Nintendo 3DS_BACKUP`, then attempt to boot. If your console successfully boots, there is some issue within your `Nintendo 3DS` folder. Try clearing HOME Menu extdata:
-   - Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-   - Delete the corresponding folder for your 3DS region:
-     - **EUR Region**: `00000098`
-     - **JPN Region**: `00000082`
-     - **USA Region**: `0000008f`
-     - **CHN Region**: `000000A1`
-     - **KOR Region**: `000000A9`
-     - **TWN Region**: `000000B1`
+    - Navigate to `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+    - Delete the corresponding folder for your 3DS region:
+        - **EUR Region**: `00000098`
+        - **JPN Region**: `00000082`
+        - **USA Region**: `0000008f`
+        - **CHN Region**: `000000A1`
+        - **KOR Region**: `000000A9`
+        - **TWN Region**: `000000B1`
 4. Try booting into recovery mode and updating your system:
-   - Power off your console
-   - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
-   - Power on your console
-   - If you were successful, the console will boot to an "update your system" screen
+    - Power off your console
+    - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
+    - Power on your console
+    - If you were successful, the console will boot to an "update your system" screen
 5. Follow the [CTRTransfer](ctrtransfer) guide
 6. For further support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
@@ -164,12 +164,12 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 2. Sett inn SD-kortet i datamaskinen din
 3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 4. Delete the corresponding folder for your 3DS region:
-   - **EUR Region**: `00000098`
-   - **JPN Region**: `00000082`
-   - **USA Region**: `0000008f`
-   - **CHN Region**: `000000A1`
-   - **KOR Region**: `000000A9`
-   - **TWN Region**: `000000B1`
+    - **EUR Region**: `00000098`
+    - **JPN Region**: `00000082`
+    - **USA Region**: `0000008f`
+    - **CHN Region**: `000000A1`
+    - **KOR Region**: `000000A9`
+    - **TWN Region**: `000000B1`
 5. Reinsert your SD card into your console
 
 :::
@@ -180,10 +180,10 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 2. Sett inn SD-kortet i datamaskinen din
 3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 4. Delete the corresponding folder for your 3DS region:
-   - **EUR Region**: `000002ce`
-   - **JPN Region**: `000002cc`
-   - **USA Region**: `000002cd`
-   - **KOR Region**: `000002cf`
+    - **EUR Region**: `000002ce`
+    - **JPN Region**: `000002cc`
+    - **USA Region**: `000002cd`
+    - **KOR Region**: `000002cf`
 5. Reinsert your SD card into your console
 
 :::
@@ -203,9 +203,9 @@ However, if you do not know the PIN and therefore cannot access the console's se
 
 1. Go to [this website](https://mkey.eiphax.tech/)
 2. Fill the following boxes with the information:
-   - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
-   - System Date: The day and month your console's clock is set to
-   - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
+    - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
+    - System Date: The day and month your console's clock is set to
+    - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
 3. After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key
 4. Press "Clear Settings", then "Delete" to remove all Parental Controls data
 
@@ -214,3 +214,4 @@ However, if you do not know the PIN and therefore cannot access the console's se
 ---
 
 <!--@include: ./_include/troubleshooting-return.md -->
+
