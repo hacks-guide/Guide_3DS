@@ -22,11 +22,11 @@ Questa pagina è solo per utenti Mac. Se non stai utilizzando un Mac, puoi segui
 
 5. Seleziona la tua scheda SD nel pannello di sinistra
 
-   ::: danger
+    ::: danger
 
-   Assicurati di scegliere il dispositivo corretto, altrimenti potresti cancellare accidentalmente l'unità sbagliata!
+    Assicurati di scegliere il dispositivo corretto, altrimenti potresti cancellare accidentalmente l'unità sbagliata!
 
-   :::
+    :::
 
 6. Clicca su "Cancella" in cima
 
@@ -35,7 +35,7 @@ Questa pagina è solo per utenti Mac. Se non stai utilizzando un Mac, puoi segui
 8. Assicurati che "Formato" sia impostato su "MS-DOS (FAT)"
 
 9. Assicurati che "Schema" sia impostato su "Master Boot Record"
-   - Se "Schema" non appare, clicca su "Annulla" e assicurati di scegliere il dispositivo invece di un volume
+    - Se "Schema" non appare, clicca su "Annulla" e assicurati di scegliere il dispositivo invece di un volume
 
 10. Clicca su "Cancella"
 
@@ -55,14 +55,14 @@ Questa pagina è solo per utenti Mac. Se non stai utilizzando un Mac, puoi segui
 
 4. Seleziona la tua scheda SD nel pannello di sinistra
 
-   ::: danger
+    ::: danger
 
-   Assicurati di scegliere il dispositivo corretto, altrimenti potresti cancellare accidentalmente l'unità sbagliata!
+    Assicurati di scegliere il dispositivo corretto, altrimenti potresti cancellare accidentalmente l'unità sbagliata!
 
-   :::
+    :::
 
 5. Clicca su "Partizione" in cima
-   - Se "Partitione" non appare, assicurati di scegliere il dispositivo invece di un volume
+    - Se "Partitione" non appare, assicurati di scegliere il dispositivo invece di un volume
 
 6. Assicurati che "Layout Partizione" sia impostato su "1 Partizione"
 
@@ -89,4 +89,4 @@ Questa pagina è solo per utenti Mac. Se non stai utilizzando un Mac, puoi segui
 ## Risoluzione dei problemi
 
 - La scheda SD continua a non venire rilevata dalla console o continua a mostrare una capacità errata dopo la formattazione
-  - La tua scheda SD potrebbe essere partizionata o avere spazio non allocato. Segui le istruzioni [qui](https://wiki.hacks.guide/wiki/SD_Clean/Mac) per riformattare la tua scheda SD.
+    - La tua scheda SD potrebbe essere partizionata o avere spazio non allocato. Segui le istruzioni [qui](https://wiki.hacks.guide/wiki/SD_Clean/Mac) per riformattare la tua scheda SD.
