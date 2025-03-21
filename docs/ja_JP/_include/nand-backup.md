@@ -4,8 +4,8 @@
 4. "Backup Options"を選択します
 5. "SysNAND Backup"を選択します
 6. (A) を押して確認します
-   - This process will take some time
-   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
+    - This process will take some time
+    - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
 7. (A) で続行します
 8. Bキーを押してメインメニューに戻ります
 9. "Exit"を選択します。
