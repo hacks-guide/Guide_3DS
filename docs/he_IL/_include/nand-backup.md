@@ -4,8 +4,8 @@
 4. Select "Backup Options"
 5. Select "SysNAND Backup"
 6. תלחצו (A) כדי לאשר
-   - This process will take some time
-   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
+    - This process will take some time
+    - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
 7. תלחצו (A) כדי להמשיך
 8. תלחצו (B) כדי לחזור לתפריט הראשי
 9. Select "Exit"
