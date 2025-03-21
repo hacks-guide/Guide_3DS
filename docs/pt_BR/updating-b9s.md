@@ -26,20 +26,20 @@ Para todas as etapas nesta seção, substitua quaisquer arquivos existentes no s
 4. Copie `SafeB9SInstaller.firm` do `.zip` do SafeB9SInstaller para a raiz do seu cartão SD e renomeie-o para `boot.firm`
 5. Reinsira o cartão SD no seu console
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/updateb9s-root-layout.png)
+    ![](/images/screenshots/updateb9s-root-layout.png)
 
-   :::
+    :::
 
 ### Seção II - Instalando boot9strap
 
 1. Ligue o seu console
-   - Isso deverá iniciar automaticamente o SafeB9SInstaller
+    - Isso deverá iniciar automaticamente o SafeB9SInstaller
 2. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - Se um passo na tela inferior possuir texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o guia de [troubleshooting](troubleshooting-updating-b9s)
+    - Se um passo na tela inferior possuir texto em cor vermelha, e você não for solicitado a introduzir um combo de botões, siga o guia de [troubleshooting](troubleshooting-updating-b9s)
 3. Assim que for completo, force o seu console a desligar segurando o botão POWER
-   - Seu console sempre iniciará na tela do SafeB9SInstaller até que a próxima seção seja concluída
+    - Seu console sempre iniciará na tela do SafeB9SInstaller até que a próxima seção seja concluída
 
 ### Seção III - Atualizando Luma3DS
 
@@ -48,8 +48,8 @@ Para todas as etapas nesta seção, substitua quaisquer arquivos existentes no s
 3. Reinsira o cartão SD no seu console
 4. Ligue o seu console
 5. Se o seu console foi inicializado no menu de configuração do Luma3DS, pressione (Start) para salvar e reiniciar
-   - O menu de configuração do Luma3DS possui configurações para o custom firmware do Luma3DS. Muitas dessas configurações podem ser úteis para personalização ou depuração
-   - Para a finalidade deste guia, mantenha essas opções nas configurações padrão
+    - O menu de configuração do Luma3DS possui configurações para o custom firmware do Luma3DS. Muitas dessas configurações podem ser úteis para personalização ou depuração
+    - Para a finalidade deste guia, mantenha essas opções nas configurações padrão
 
 ___
 
