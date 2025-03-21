@@ -1,17 +1,17 @@
-1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
-2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
-3. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
-4. Presiona el botón (HOME) para abrir el menú de acciones
-5. Select "Scripts..."
-6. Select "ctrtransfer"
-7. Select your downloaded CTRTransfer image
-    - The script will calculate the hash of your image to make sure it's valid
-8. Once the checks are completed, press (A) to continue
-9. Press (A) to unlock SysNAND (lvl2) writing, then input the key combo given
-10. Una vez que termine la transferencia, pulsa (A) para continuar
-11. Press (A) to relock write permissions if prompted
+1. Pulsa y mantén (Start), y mientras mantienes (Start), enciende tu consola. Esto abrirá GodMode9
+2. Si se te pide que crees una copia de seguridad de archivos esenciales, presiona (A) para hacerlo, luego presiona (A) para continuar una vez que se haya completado
+3. Si se te pide restablecer la fecha y hora RTC, presiona (A) para hacerlo, luego define la fecha y la hora, y después presiona (A) para continuar
+    - Ten en cuenta que si tuviste que restablecer la fecha y hora RTC, también tendrás que restablecerla en la configuración de la consola después de hacer esta guía
+4. Presiona (Home) para abrir el menú de acciones
+5. Selecciona "Scripts..."
+6. Selecciona "ctrtransfer"
+7. Selecciona tu imagen CTRTransfer descargada
+    - El script calculará el hash de tu imagen para asegurarse de que es válido
+8. Una vez que las comprobaciones hayan terminado, presiona (A) para continuar
+9. Presiona (A) para desbloquear la escritura de la SysNAND (lvl2), y después introduce la combinación de botones mostrada
+10. Una vez que termine la transferencia, presiona (A) para continuar
+11. Presiona (A) para volver a bloquear los permisos de escritura si se solicita
 12. Presiona (Start) para reiniciar tu consola
-13. Update your console by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
-    - Updates while using B9S + Luma (what you have) are safe
-    - If this gives you an error, set your DNS settings to "auto"
+13. Actualiza tu consola dirigiéndote a la configuración de la consola, después a "Otras opciones", luego ve al último menú de la derecha y toca "Actualización"
+    - Actualizar la consola teniendo B9S y Luma (lo que acabas de instalar) es seguro
+    - Si esto te da un error, ajusta tu configuración de DNS a "Obtención automática"
