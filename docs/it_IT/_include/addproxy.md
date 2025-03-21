@@ -17,5 +17,5 @@ Se non l'hai già fatto, assicurati di avere una connessione Internet funzionant
 5. Imposta il server proxy su `ssloth.nintendohomebrew.com`, e la porta su `8080`
 6. Fai clic su OK, quindi su Salva
 7. Quando richiesto, clicca su "Test" per eseguire il test di connessione
-   - Il test dovrebbe andare a buon fine
+    - Il test dovrebbe andare a buon fine
 8. Clicca "OK" per continuare
