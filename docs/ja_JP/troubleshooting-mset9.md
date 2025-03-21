@@ -52,7 +52,7 @@ Ensure that you have reset the title database.
 
 - Please power on your console with your SD inserted
 - Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-  - This will not wipe any of your data
+    - This will not wipe any of your data
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
@@ -65,7 +65,7 @@ If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 1. Type the number corresponding to your console model and version, then press Enter
 2. Type `2` then press enter to check the MSET9 status
-   - This will create the dummy databases again
+    - This will create the dummy databases again
 3. Close the MSET9 script window
 4. Start again from [Section I Step 12](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
 
@@ -106,12 +106,12 @@ You have multiple ID0 folders. To determine the correct folder, follow these ins
 2. Reinsert your SD card into your console
 3. Power on your console
 4. Wait for the console to generate the SD card data
-   - Your applications will have disappeared. This is normal and will be resolved shortly
+    - Your applications will have disappeared. This is normal and will be resolved shortly
 5. Power off your console
 6. パソコンにSDカードを入れます
 7. SDカードにある、`Nintendo 3DS` フォルダを開きます。
 8. Write down the first few characters of the folder you see
-   - This is your true ID0, which we will keep in the real Nintendo 3DS folder
+    - This is your true ID0, which we will keep in the real Nintendo 3DS folder
 9. Delete the ID0 from the current `Nintendo 3DS` folder
 10. Move the true ID0 folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
 11. If it exists, move the `Private` folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
@@ -140,11 +140,11 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 
 :::
 
-:::details Error 18: Windows Locale Settings are broken!
+:::: details Error 18: Windows Locale Settings are broken!
 
 <!--@include: ./_include/winerror234.md -->
 
-:::
+::::
 
 ## MSET9 (exploit)
 
@@ -158,8 +158,8 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Type the number corresponding to your console model and version, then press Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
@@ -187,8 +187,8 @@ Follow these instructions to remove the trigger file and to retry Section II:
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Type the number corresponding to your console model and version, then press Enter
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
+    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
@@ -233,3 +233,5 @@ Go back to [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(ms
 :::
 
 <!--@include: ./_include/troubleshooting-return.md -->
+
+
