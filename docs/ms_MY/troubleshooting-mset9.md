@@ -140,11 +140,11 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 
 :::
 
-:::details Error 18: Windows Locale Settings are broken!
+:::: details Error 18: Windows Locale Settings are broken!
 
 <!--@include: ./_include/winerror234.md -->
 
-:::
+::::
 
 ## MSET9 (exploit)
 
