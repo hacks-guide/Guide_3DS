@@ -52,7 +52,7 @@ Biztosítsd, hogy a cím adatbázisod resetelve legyen.
 
 - Kérjük kapcsold be a konzolod, miközben az SD kártya be van helyezve
 - Indítsd el a System Settings-et és navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-  - Ez nem fogja törölni az adataidat
+    - Ez nem fogja törölni az adataidat
 - Ha reset prompt-ot kapsz reset után, kapcsold ki a konzolod, majd kezd újra az [I. rész 14. lépésétől](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Ha nem kapsz reset promptot, az SD kártyádat formázni kell:
@@ -65,7 +65,7 @@ Ha nem kapsz reset promptot, az SD kártyádat formázni kell:
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
 2. Írj `2`-öt és nyomj Enter-t az MSET9 állapotának ellenőrzéséhez
-   - Ez létre fogja hozni a dummy adatbázisokat újra
+    - Ez létre fogja hozni a dummy adatbázisokat újra
 3. Zárd be az MSET9 szkript ablakát
 4. Kezd újra az [I. rész 12. lépésével](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
 
@@ -106,12 +106,12 @@ Több ID0 mappád van. Ahhoz, hogy meghatározd melyik a helyes mappa, a követk
 2. Tedd vissza az SD kártyád a konzoldba
 3. Kapcsold be a konzolod
 4. Várd meg, amíg a konzolod legenerálja az SD kártyára az adatokat
-   - Az alkalmazásaidnak el kell tűnniük. Ez normális, hamarosan megoldjuk
+    - Az alkalmazásaidnak el kell tűnniük. Ez normális, hamarosan megoldjuk
 5. Kapcsold ki a konzolod
 6. Helyezd az SD kártyád a számítógépbe
 7. Lépj be az SD kártyád `Nintendo 3DS` könyvtárába
 8. Írd le az első pár karakterét a mappának amit látsz
-   - Ez a te valódi ID0-d, amit a valódi Nintendo 3DS mappában fogunk tartani
+    - Ez a te valódi ID0-d, amit a valódi Nintendo 3DS mappában fogunk tartani
 9. Töröld az ID0-t az aktuális `Nintendo 3DS` mappából
 10. Mozgasd a valódi ID0 mappát a `BACKUP_Nintendo 3DS` mappából a `Nintendo 3DS` mappába
 11. Ha létezik, mozgasd a `Private` mappát a `BACKUP_Nintendo 3DS` mappából a `Nintendo 3DS` mappába
@@ -140,11 +140,11 @@ Egy vagy több fájl, amire az MSET9-nek szüksége van a futáshoz, hiányzik v
 
 :::
 
-:::details Error 18: Windows Locale Settings are broken!
+:::: details Error 18: Windows Locale Settings are broken!
 
 <!--@include: ./_include/winerror234.md -->
 
-:::
+::::
 
 ## MSET9 (exploit)
 
@@ -158,8 +158,8 @@ Valószínüleg hiányzik a `SafeB9S.bin` az SD kártyád gyökeréből vagy sé
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
-   - Az aktuális állapot [Injected](/images/screenshots/mset9/mset9-injected.png)-et kell mutasson
-   - Ha már eltávolítottad a trigger fájlt (vagy soha nem injektáltad), az aktuális állapot [Ready](/images/screenshots/mset9/mset9-ready.png)-t fog mutatni és megpróbálhatod [újracsinálni a II. részt](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+    - Az aktuális állapot [Injected](/images/screenshots/mset9/mset9-injected.png)-et kell mutasson
+    - Ha már eltávolítottad a trigger fájlt (vagy soha nem injektáltad), az aktuális állapot [Ready](/images/screenshots/mset9/mset9-ready.png)-t fog mutatni és megpróbálhatod [újracsinálni a II. részt](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Írj `4`-et és nyomj Enter-t
 3. Amikor az ablak azt mondja, hogy Removed trigger file", írj `0`-t majd nyomj Entert
 4. Tedd vissza az SD kártyát a konzoldba
@@ -187,8 +187,8 @@ Kövesd a következő lépéseket a trigger fájl ettávolításához, majd pró
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
-   - Az aktuális állapot [Injected](/images/screenshots/mset9/mset9-injected.png)-et kell mutasson
-   - Ha már eltávolítottad a trigger fájlt (vagy soha nem injektáltad), az aktuális állapot [Ready](/images/screenshots/mset9/mset9-ready.png)-t fog mutatni és megpróbálhatod újracsinálni a II. részt
+    - Az aktuális állapot [Injected](/images/screenshots/mset9/mset9-injected.png)-et kell mutasson
+    - Ha már eltávolítottad a trigger fájlt (vagy soha nem injektáltad), az aktuális állapot [Ready](/images/screenshots/mset9/mset9-ready.png)-t fog mutatni és megpróbálhatod újracsinálni a II. részt
 2. Írj `4`-et és nyomj Enter-t
 3. Amikor az ablak azt mondja, hogy Removed trigger file", írj `0`-t majd nyomj Entert
 4. Tedd vissza az SD kártyát a konzoldba
@@ -233,3 +233,5 @@ Vissza a [Boot9strap telepítése (MSET9 Play Store)](installing-boot9strap-\(ms
 :::
 
 <!--@include: ./_include/troubleshooting-return.md -->
+
+
