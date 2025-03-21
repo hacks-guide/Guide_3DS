@@ -76,7 +76,7 @@ Most, hogy már a NAND mentésed biztos helyen van:
 4. Válaszd a "Scripts..." opciót
 5. Válaszd az "finalize" opciót
 6. Folytasd a szkriptet normálisan
-   - A NAND mentés automatikusan átugrásra kerül
+    - A NAND mentés automatikusan átugrásra kerül
 
 :::
 
@@ -121,7 +121,7 @@ A szkript úgy érzékelte, hogy a Nintendo 3DS mappa hiányzik ÉS már csinál
 3. Másold a `/gm9/backups` mappa tartalmát egy biztonságos helyre a számítógépeden
 4. Töröld a `/gm9/backups/` mappát az SD kártyádról
 5. Ha lemozgattad a Nintendo 3DS mappád az SD kártyádról, hogy eljuss ide, akkor másold vissza az SD kártyádra
-   - Ha nincs Nintendo 3DS mappád, akkor bootolj be a HOME menübe legalább egyszer behelyezett SD kártyával, hogy automatikusan létre jöjjön
+    - Ha nincs Nintendo 3DS mappád, akkor bootolj be a HOME menübe legalább egyszer behelyezett SD kártyával, hogy automatikusan létre jöjjön
 6. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 7. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 8. Válaszd a "Scripts..." opciót
