@@ -16,8 +16,8 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 
 - _Flashcart_ yang kompatibel ntrboot
 - Dua konsol
-  - **NDS / NDSL sumber**: Nintendo DS atau Nintendo DS Lite yang bisa membaca _flashcart_ Anda
-  - **3DS sasaran**: Konsol 3DS yang masih _firmware_ bawaan
+    - **NDS / NDSL sumber**: Nintendo DS atau Nintendo DS Lite yang bisa membaca _flashcart_ Anda
+    - **3DS sasaran**: Konsol 3DS yang masih _firmware_ bawaan
 - Versi v1.3 dari [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (unduhan langsung)
 - Versi terkini dari [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
