@@ -16,8 +16,8 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 
 - _Flashcart_ yang kompatibel ntrboot
 - Dua konsol
-  - **DSi sumber**: Nintendo DSi yang bisa membaca _flashcart_ Anda
-  - **3DS sasaran**: Konsol 3DS yang masih _firmware_ bawaan
+    - **DSi sumber**: Nintendo DSi yang bisa membaca _flashcart_ Anda
+    - **3DS sasaran**: Konsol 3DS yang masih _firmware_ bawaan
 - Versi terkini dari [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
 ## Instruksi
