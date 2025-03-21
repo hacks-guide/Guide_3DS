@@ -6,5 +6,5 @@ Ebben a fejezetben vissza fogod állítani az internet beállításokat a normá
 4. Állítsd a "Proxy Settings"-t "No"-ra
 5. Kattints az OK-ra, majd kattints a Save-re
 6. Amikor kérdezi, kattints a "Test"-re a kapcsolat ellenőrzéséhez
-   - A tesztnek sikeresnek kell lennie
+    - A tesztnek sikeresnek kell lennie
 7. Kapcsold ki a konzolod
