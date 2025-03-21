@@ -7,7 +7,7 @@ Ez a rész a rendszer beállítások alaphelyzetbe állítását szolgálja. **A
 5. Nyomd meg az (A) gombot a megerősítéshez
 6. Nyomd meg a (B) gombot néhányszor, hogy visszamenj a főmenübe
 7. Navigálj ide: `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-   - Az `<ID0>` egy 32 karakter hosszú nevű mappa
+    - Az `<ID0>` egy 32 karakter hosszú nevű mappa
 8. Használd a D-Pad-et a `00010017` kijelöléséhez
 9. Nyomd meg a (jobb váll) + (A) gombokat a mappa opciók előhozásához
 10. Válaszd ki ezt: "Copy to 0:/gm9/out"
