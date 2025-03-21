@@ -15,11 +15,11 @@ Ez megkönnyíti majd számodra, hogy megtaláld az útmutatóban említett fáj
 3. Menj a "Megjelenítés/elrejtés"-hez
 4. Kattints a "Fájlnévkiterjesztések"-re az engedélyezéséhez
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@ Ez megkönnyíti majd számodra, hogy megtaláld az útmutatóban említett fáj
 2. A menüszalagon válaszd a "Nézet" opciót
 3. Pipáld be a "Fájlnévkiterjesztések" dobozt
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@ Ez megkönnyíti majd számodra, hogy megtaláld az útmutatóban említett fáj
 
 2. Keress a "Mappabeállítások" kulcsszóra, majd válaszd ki a megfelelő találatot
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. Válaszd a "Nézet" fület a Mappabeállítások ablak felső részén
 
 4. Vedd ki a pipát az "Ismert fájltípusok kiterjesztésének elrejtése" dobozból
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 
