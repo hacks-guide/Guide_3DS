@@ -35,19 +35,19 @@ Az alábbi lépések tetszőleges sorrendben hajthatók végre, azonban a lista 
 1. Kapcsold ki a konzolod, vedd ki majd tedd vissz az SD kártyát, majd kapcsold be újra a konzolod.
 2. Kapcsold ki a konzolod, vedd ki a játék cartridge-t ha van benne, majd kapcsold be a konzolod és várj tíz percet. Ha a konzolod bebootol tíz percen belül, a probléma elhárult és nem fog valószínűleg újra előfordulni
 3. Nevezd át a `Nintendo 3DS` mappát az SD kártyádon `Nintendo 3DS_BACKUP` névre és próbálj meg bootolni. Ha a konzolod sikeresen bootol, problémák vannak a `Nintendo 3DS` könyvtáraddal. Próbáld meg kitakarítani a HOME menu extdata-t:
-   - Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` mappába
-   - Töröld a 3DS régiódhoz tartozó mappát:
-     - **EUR régió**: `00000098`
-     - **JPN régió**: `00000082`
-     - **USA régió**: `0000008f`
-     - **CHN régió**: `000000A1`
-     - **KOR régió**: `000000A9`
-     - **TWN régió**: `000000B1`
+    - Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` mappába
+    - Töröld a 3DS régiódhoz tartozó mappát:
+        - **EUR régió**: `00000098`
+        - **JPN régió**: `00000082`
+        - **USA régió**: `0000008f`
+        - **CHN régió**: `000000A1`
+        - **KOR régió**: `000000A9`
+        - **TWN régió**: `000000B1`
 4. Próbálj meg recovery mode-ba bootolni, majd onnét frissíteni a rendszeredet:
-   - Kapcsold ki a konzolod
-   - Tartsd nyomva a (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A) gombokat
-   - Kapcsold be a konzolod
-   - Ha sikeres voltál, a konzolod egy "update your system" képernyőre bootol
+    - Kapcsold ki a konzolod
+    - Tartsd nyomva a (Bal Váll) + (Jobb Váll) + (D-Pad Fel) + (A) gombokat
+    - Kapcsold be a konzolod
+    - Ha sikeres voltál, a konzolod egy "update your system" képernyőre bootol
 5. Kövesd a [CTRTransfer](ctrtransfer) útmutatót
 6. További támogatásért kérj segítséget a [Nintendo Homebrew-tól a Discord-on](https://discord.gg/MWxPgEp)
 
@@ -165,12 +165,12 @@ Csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatorn�
 2. Helyezd az SD kártyád a számítógépbe
 3. Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` könyvtárba az SD kártyádon
 4. Töröld a 3DS régiódhoz tartozó mappát:
-   - **EUR régió**: `00000098`
-   - **JPN régió**: `00000082`
-   - **USA régió**: `0000008f`
-   - **CHN régió**: `000000A1`
-   - **KOR régió**: `000000A9`
-   - **TWN régió**: `000000B1`
+    - **EUR régió**: `00000098`
+    - **JPN régió**: `00000082`
+    - **USA régió**: `0000008f`
+    - **CHN régió**: `000000A1`
+    - **KOR régió**: `000000A9`
+    - **TWN régió**: `000000B1`
 5. Tedd vissza az SD kártyád a konzoldba
 
 :::
@@ -181,10 +181,10 @@ Csatlakozz a [Nintendo Homebrew Discord-on](https://discord.gg/MWxPgEp) csatorn�
 2. Helyezd az SD kártyád a számítógépbe
 3. Navigálj a `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` könyvtárba az SD kártyádon
 4. Töröld a 3DS régiódhoz tartozó mappát:
-   - **EUR régió**: `000002ce`
-   - **JPN régió**: `000002cc`
-   - **USA régió**: `000002cd`
-   - **KOR régió**: `000002cf`
+    - **EUR régió**: `000002ce`
+    - **JPN régió**: `000002cc`
+    - **USA régió**: `000002cd`
+    - **KOR régió**: `000002cf`
 5. Tedd vissza az SD kártyád a konzoldba
 
 :::
@@ -204,9 +204,9 @@ Azonban, ha nem tudod a PIN-t így nem tudsz hozzáférni az konzol beállítás
 
 1. Menj [erre a weboldalra](https://mkey.eiphax.tech/)
 2. Töltsd ki a következő dobozokat az információval:
-   - Device Type: Válaszd a "3DS"-t (ugyanez vonatkozik, ha 2DS, New 3DS (XL/LL) vagy New 2DS (XL/LL) típusod van)
-   - System Date: A nap és a hónap a konzolod óráján beállított
-   - Inquiry Number: Beszerezhető a "Forgot PIN" majd az "I Forgot" gombbal a Parental Controls képernyőn
+    - Device Type: Válaszd a "3DS"-t (ugyanez vonatkozik, ha 2DS, New 3DS (XL/LL) vagy New 2DS (XL/LL) típusod van)
+    - System Date: A nap és a hónap a konzolod óráján beállított
+    - Inquiry Number: Beszerezhető a "Forgot PIN" majd az "I Forgot" gombbal a Parental Controls képernyőn
 3. Ha megszerezted az mkey-edet, nyomj OK gombot azon a képernyőn, ahol megkaptad az Inquiry Number számod, és add meg a mester kulcsot
 4. Nyomj "Clear Settings"-et, majd "Delete"-et a minden Parental Controls adat eltávolításához
 
@@ -215,3 +215,4 @@ Azonban, ha nem tudod a PIN-t így nem tudsz hozzáférni az konzol beállítás
 ---
 
 <!--@include: ./_include/troubleshooting-return.md -->
+
