@@ -60,7 +60,7 @@ Follow these steps in order:
 4. Set "Proxy Settings" to "No"
 5. Click OK, then click Save
 6. When prompted, click "Test" to perform the connection test
-   - The test should succeed
+    - The test should succeed
 7. Click "OK" to continue
 8. 点两次 “返回”，然后点“关闭”来返回主菜单。
 9. Open the Internet Browser once
