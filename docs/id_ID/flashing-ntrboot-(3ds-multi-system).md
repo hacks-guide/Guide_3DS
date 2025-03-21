@@ -16,8 +16,8 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 
 - _Flashcart_ yang kompatibel ntrboot
 - Dua konsol jenis 3DS
-  - **3DS sumber**: Konsol jenis 3DS yang sudah ada boot9strap
-  - **3DS sasaran**: Konsol 3DS yang masih _firmware_ bawaan
+    - **3DS sumber**: Konsol jenis 3DS yang sudah ada boot9strap
+    - **3DS sasaran**: Konsol 3DS yang masih _firmware_ bawaan
 - Versi v1.3 dari [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (unduhan langsung)
 - Versi terkini dari [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
@@ -40,7 +40,7 @@ Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_bri
 3. Baca peringatan layar merah
 4. Tekan (A) untuk lanjut
 5. Pilih _flashcart_ Anda
-   - Jika tidak ada _flashcart_ Anda pada daftar di layar atas, baca keterangan di layar bawah pada tiap opsi
+    - Jika tidak ada _flashcart_ Anda pada daftar di layar atas, baca keterangan di layar bawah pada tiap opsi
 6. Pilih "Dump Flash"
 7. Tunggu sampai proses ini selesai
 8. Tekan (A) untuk lanjut
