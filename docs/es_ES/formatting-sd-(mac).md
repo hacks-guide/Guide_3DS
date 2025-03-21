@@ -22,11 +22,11 @@ Esta página es sólo para usuarios de Mac. If you are not on Mac, check out the
 
 5. Select your SD card in the left panel
 
-   ::: danger
+    ::: danger
 
-   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
+    Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
-   :::
+    :::
 
 6. Click "Erase" at the top
 
@@ -35,7 +35,7 @@ Esta página es sólo para usuarios de Mac. If you are not on Mac, check out the
 8. Ensure that "Format" is set to "MS-DOS (FAT)"
 
 9. Ensure that "Scheme" is set to "Master Boot Record"
-   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
+    - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
 
 10. Click "Erase"
 
@@ -55,14 +55,14 @@ Esta página es sólo para usuarios de Mac. If you are not on Mac, check out the
 
 4. Select your SD card in the left panel
 
-   ::: danger
+    ::: danger
 
-   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
+    Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
-   :::
+    :::
 
 5. Click "Partition" at the top
-   - If "Partition" does not appear, make sure to choose the device instead of a volume
+    - If "Partition" does not appear, make sure to choose the device instead of a volume
 
 6. Ensure that "Partition Layout" is set to "1 Partition"
 
@@ -89,4 +89,4 @@ Esta página es sólo para usuarios de Mac. If you are not on Mac, check out the
 ## Resolución de Problemas
 
 - SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
+    - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
