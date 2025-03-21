@@ -35,19 +35,19 @@ I passaggi qui sotto possono essere seguiti in qualsiasi ordine, ma sono elencat
 1. Spegni la tua console, rimuovi la scheda SD, reinseriscila, quindi accendi la tua console.
 2. Spegni la tua console, estrai la cartuccia di gioco se inserita, accendi la tua console, quindi attendi fino a dieci minuti. Se la tua console si avvia entro dieci minuti, il problema è stato risolto e probabilmente non avverrà più
 3. Rinomina la cartella `Nintendo 3DS` sulla tua scheda SD in `Nintendo 3DS_BACKUP`, poi tenta l'avvio. Se la tua console si avvia correttamente, c'è qualche problema con la tua cartella `Nintendo 3DS`. Prova a cancellare gli extdata del menu HOME:
-   - Entra nella cartella `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-   - Elimina la cartella corrispondente per la tua regione 3DS:
-     - **Regione EUR**: `00000098`
-     - **Regione JPN**: `00000082`
-     - **Regione USA**: `0000008f`
-     - **Regione CHN**: `000000A1`
-     - **Regione KOR**: `000000A9`
-     - **Regione TWN**: `000000B1`
+    - Entra nella cartella `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+    - Elimina la cartella corrispondente per la tua regione 3DS:
+        - **Regione EUR**: `00000098`
+        - **Regione JPN**: `00000082`
+        - **Regione USA**: `0000008f`
+        - **Regione CHN**: `000000A1`
+        - **Regione KOR**: `000000A9`
+        - **Regione TWN**: `000000B1`
 4. Prova ad avviare la modalità di ripristino e ad aggiornare la console:
-   - Spegni la tua console
-   - Tieni premuti i pulsanti (L) + (R) + (Su) + (A)
-   - Accendi la tua console
-   - Se hai avuto successo, la console si avvierà mostrando la schermata "Aggiornamento"
+    - Spegni la tua console
+    - Tieni premuti i pulsanti (L) + (R) + (Su) + (A)
+    - Accendi la tua console
+    - Se hai avuto successo, la console si avvierà mostrando la schermata "Aggiornamento"
 5. Segui la guida [CTRTransfer](ctrtransfer)
 6. Se hai bisogno di aiuto, chiedi pure nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp)
 
@@ -164,12 +164,12 @@ Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per 
 2. Inserisci la scheda SD nel tuo computer
 3. Entra nella cartella `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` presente all'interno della tua scheda SD
 4. Elimina la cartella corrispondente per la tua regione 3DS:
-   - **Regione EUR**: `00000098`
-   - **Regione JPN**: `00000082`
-   - **Regione USA**: `0000008f`
-   - **Regione CHN**: `000000A1`
-   - **Regione KOR**: `000000A9`
-   - **Regione TWN**: `000000B1`
+    - **Regione EUR**: `00000098`
+    - **Regione JPN**: `00000082`
+    - **Regione USA**: `0000008f`
+    - **Regione CHN**: `000000A1`
+    - **Regione KOR**: `000000A9`
+    - **Regione TWN**: `000000B1`
 5. Reinserisci la scheda SD nella tua console
 
 :::
@@ -180,10 +180,10 @@ Entra nel [canale Discord di Nintendo Homebrew](https://discord.gg/MWxPgEp) per 
 2. Inserisci la scheda SD nel tuo computer
 3. Entra nella cartella `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` presente all'interno della tua scheda SD
 4. Elimina la cartella corrispondente per la tua regione 3DS:
-   - **Regione EUR**: `000002ce`
-   - **Regione JPN**: `000002cc`
-   - **Regione USA**: `000002cd`
-   - **Regione KOR**: `000002cf`
+    - **Regione EUR**: `000002ce`
+    - **Regione JPN**: `000002cc`
+    - **Regione USA**: `000002cd`
+    - **Regione KOR**: `000002cf`
 5. Reinserisci la scheda SD nella tua console
 
 :::
@@ -203,9 +203,9 @@ Tuttavia, se non conosci il PIN e quindi non puoi accedere alle impostazioni del
 
 1. Vai su [questo sito](https://mkey.eiphax.tech/)
 2. Riempi le caselle con le seguenti informazioni:
-   - Device Type: Seleziona "3DS" (vale anche se stai usando un 2DS, New 3DS (XL/LL) o New 2DS (XL/LL))
-   - System Date: Il giorno e il mese impostati nella tua console
-   - Inquiry Number: Si può ottenere premendo "Ho dimenticato il PIN" e poi "L'ho dimenticato" nella schermata Filtro famiglia
+    - Device Type: Seleziona "3DS" (vale anche se stai usando un 2DS, New 3DS (XL/LL) o New 2DS (XL/LL))
+    - System Date: Il giorno e il mese impostati nella tua console
+    - Inquiry Number: Si può ottenere premendo "Ho dimenticato il PIN" e poi "L'ho dimenticato" nella schermata Filtro famiglia
 3. Dopo aver ottenuto il tuo mkey, premi OK sulla schermata in cui hai ottenuto il tuo Inquiry Number, quindi inserisci la master key
 4. Premi "Cancella le impostazioni", quindi "Cancella" per rimuovere tutti i dati del Filtro famiglia
 
@@ -214,3 +214,4 @@ Tuttavia, se non conosci il PIN e quindi non puoi accedere alle impostazioni del
 ---
 
 <!--@include: ./_include/troubleshooting-return.md -->
+
