@@ -22,10 +22,9 @@ Come parte di questo processo, la configurazione di sistema verrà ripristinata 
 - L'ultima versione di [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (download diretto)
 - L'ultima versione di [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(il file `.3dsx`)_
 - L'ultima versione di [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (clicca con il tasto destro del mouse, salva il link come)
-- The 11.15.0 CTRTransfer image for your console and region
-  ::: warning
+- L'immagine CTRTransfer 11.15.0 relativa alla tua console e alla sua regione
 
-You need to use a torrent client to download the CTRTransfer images, such as [qBitTorrent](https://www.qbittorrent.org/download) or [Deluge](https://deluge-torrent.org/download/).
+Per scaricare le immagini CTRTransfer è necessario utilizzare un client torrent come [qBitTorrent](https://www.qbittorrent.org/download) o [Deluge](https://deluge-torrent.org/download/).
 
 :::
 
