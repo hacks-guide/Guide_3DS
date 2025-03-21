@@ -22,11 +22,11 @@
 
 5. 左側のパネルでSDカードを選択してください
 
-   ::: danger
+    ::: danger
 
-   誤って間違ったドライブを消去する可能性があります。正しいデバイスを選択してください。
+    誤って間違ったドライブを消去する可能性があります。正しいデバイスを選択してください。
 
-   :::
+    :::
 
 6. 上部の「消去」をクリックします
 
@@ -35,7 +35,7 @@
 8. 「フォーマット」が「MS-DOS (FAT)」に設定されていることを確認してください
 
 9. Ensure that "Scheme" is set to "Master Boot Record"
-   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
+    - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
 
 10. 「消去」をクリックします
 
@@ -55,14 +55,14 @@
 
 4. 左側のパネルでSDカードを選択してください
 
-   ::: danger
+    ::: danger
 
-   誤って間違ったドライブを消去する可能性があります。正しいデバイスを選択してください。
+    誤って間違ったドライブを消去する可能性があります。正しいデバイスを選択してください。
 
-   :::
+    :::
 
 5. 上部の「パーティション」をクリックします
-   - If "Partition" does not appear, make sure to choose the device instead of a volume
+    - If "Partition" does not appear, make sure to choose the device instead of a volume
 
 6. 「パーティションレイアウト」が「1 パーティション」に設定されていることを確認します。
 
@@ -89,4 +89,4 @@
 ## トラブルシューティング
 
 - SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
+    - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
