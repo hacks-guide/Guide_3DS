@@ -7,7 +7,7 @@ Bagian ini akan mengembalikan pengaturan sistem ke bawaan. **Tidak memengaruhi p
 5. Tekan (A) untuk konfirmasi
 6. Tekan (B) beberapa kali untuk ke menu utama
 7. Navigasi ke `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-   - `<ID0>` di sini folder dengan nama berjumlah 32 huruf
+    - `<ID0>` di sini folder dengan nama berjumlah 32 huruf
 8. Sorot ke `00010017` dengan Tombol Arah
 9. Tekan (R) + (A) untuk memunculkan opsi folder
 10. Pilih "Copy to 0:/gm9/out"
