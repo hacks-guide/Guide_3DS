@@ -76,7 +76,7 @@ Agora que você tem seu backup da NAND em um lugar seguro:
 4. Selecione "Scripts..."
 5. Selecione "finalize"
 6. Continue o script normalmente
-   - O backup da NAND será ignorado automaticamente
+    - O backup da NAND será ignorado automaticamente
 
 :::
 
@@ -121,7 +121,7 @@ O script detectou que a pasta Nintendo 3DS está faltando e que você já fez um
 3. Copie os arquivos em `/gm9/backups/` do seu SD para um local seguro no seu computador
 4. Apague `/gm9/backups/` do seu cartão SD
 5. Se você moveu sua pasta Nintendo 3DS para fora do seu cartão SD para chegar a este ponto, copie-a de volta para o seu cartão SD
-   - Se você não possuir uma pasta Nintendo 3DS, abra o Menu HOME pelo menos uma vez com o cartão SD inserido para criá-la automaticamente
+    - Se você não possuir uma pasta Nintendo 3DS, abra o Menu HOME pelo menos uma vez com o cartão SD inserido para criá-la automaticamente
 6. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 7. Aperte (Home) para abrir o menu de ações
 8. Selecione "Scripts..."
