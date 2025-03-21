@@ -5,40 +5,40 @@
 Αυτό οφείλεται στην υποστήριξη beta για UTF-8 των Windows. Πρέπει να την απενεργοποιήσετε για την εκτέλεση του MSET9:
 
 1. Πατήστε το **πλήκτρο Windows + R** για να ανοίξει το παράθυρο διαλόγου «Εκτέλεση», πληκτρολογήστε `intl.cpl` και κάντε κλικ στο «OK»
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/troubleshooting/234run.png)
+    ![](/images/screenshots/troubleshooting/234run.png)
 
-   :::
+    :::
 
 2. Κάντε κλικ στο `Διαχείριση`, έπειτα στο `Αλλαγή τοπικών ρυθμίσεων συστήματος`
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/troubleshooting/234region.png)
+    ![](/images/screenshots/troubleshooting/234region.png)
 
-   :::
+    :::
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/troubleshooting/234administrative.png)
+    ![](/images/screenshots/troubleshooting/234administrative.png)
 
-   :::
+    :::
 
 3. Καταργήστε την επιλογή `Beta: Χρήση Unicode UTF-8 για διεθνή υποστήριξη γλώσσας` και κάντε κλικ στο «OK»
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/troubleshooting/234locale.png)
+    ![](/images/screenshots/troubleshooting/234locale.png)
 
-   :::
+    :::
 
 4. Κάντε κλικ στο «Επανεκκίνηση τώρα»
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/troubleshooting/234restart.png)
+    ![](/images/screenshots/troubleshooting/234restart.png)
 
-   :::
+    :::
 
 Αφού επανεκκινηθεί ο υπολογιστής σας, δοκιμάστε ξανά να δημιουργήσετε το ID1 του MSET9.
