@@ -16,8 +16,8 @@ This method requires temporary access to a second 3DS family console that is alr
 
 - Your ntrboot compatible flashcart
 - Two 3DS family consoles
-  - **The source 3DS**: the 3DS family console that is already running boot9strap
-  - **The target 3DS**: the 3DS family console on stock firmware
+    - **The source 3DS**: the 3DS family console that is already running boot9strap
+    - **The target 3DS**: the 3DS family console on stock firmware
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
@@ -40,7 +40,7 @@ This method requires temporary access to a second 3DS family console that is alr
 3. 请仔细阅读警告信息
 4. 按 “A” 键继续
 5. 选择对应你的烧录卡
-   - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
+    - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
 6. 选择 “Dump Flash”
 7. 等待测试完成
 8. 按 “A” 键继续
