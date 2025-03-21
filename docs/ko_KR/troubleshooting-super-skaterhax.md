@@ -21,9 +21,9 @@ If the screen flashes colors then freezes/crashes:
 
 - Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
 - 브라우저 데이터 삭제를 시도해 보세요:
-  1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
-  2. 아래쪽으로 스크롤하여 "세이브 데이터 리셋"을 선택합니다("데이터 초기화" 또는 "모든 저장 데이터 지우기" 라고도 함).
-  3. 익스플로잇을 다시 시도해 주세요
+    1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
+    2. 아래쪽으로 스크롤하여 "세이브 데이터 리셋"을 선택합니다("데이터 초기화" 또는 "모든 저장 데이터 지우기" 라고도 함).
+    3. 익스플로잇을 다시 시도해 주세요
 - 시스템 언어를 현재 언어가 아닌 다른 언어로 변경해 보세요
 
 :::
