@@ -15,11 +15,11 @@
 3. Go to "Show"
 4. Click "File name extensions" to enable it
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@
 2. תלחצו על הכפתור "View" בתפריט העליון, או הכפתור המקביל בעברית
 3. תבחרו באפשרות שקרוייה "File name extensions" או המקבילה בעברית
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@
 
 2. תחפשו "אפשרויות תיקייה" או "Folder Options" ותבחרו את התוצאה המתאימה
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. תלחצו על הכפתור "View" בתפריט העליון, או הכפתור המקביל בעברית
 
 4. תבטלו את הסימון "Hide extensions for known file types" או "הסתר סיומת קבצים מוכרים"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 
