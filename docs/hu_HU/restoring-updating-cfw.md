@@ -14,10 +14,10 @@ Az SD kártyád FAT32-re kell legyen formázva, hogy követhesd ezt az útmutat�
 
 1. Helyezd az SD kártyád a számítógépbe
 2. Másolj mindent a Luma3DS `.zip`-ből (`boot.firm`, `boot.3dsx`, és `config`) az SD kártyád gyökerébe, és cseréld le a már meglévő fájlt
-   - Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
+    - Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
 3. Tedd vissza az SD kártyád a konzoldba
 4. Kapcsold be a konzolod
-   - Ha a Luma3DS konfigurációs menüt látod, nyomj (Start) gombot a mentéshez és az újraindításhoz
+    - Ha a Luma3DS konfigurációs menüt látod, nyomj (Start) gombot a mentéshez és az újraindításhoz
 
 ::: info
 
