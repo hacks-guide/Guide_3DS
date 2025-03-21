@@ -7,7 +7,7 @@ Questa sezione ripristinerà la configurazione di sistema ai valori predefiniti.
 5. Premi (A) per confermare
 6. Premi (B) alcune volte per tornare al menu principale
 7. Entra nella cartella `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-   - `<ID0>` sarà una cartella con un nome di 32 caratteri
+    - `<ID0>` sarà una cartella con un nome di 32 caratteri
 8. Naviga su `00010017` con il D-Pad
 9. Premi (R) + (A) per visualizzare le opzioni della cartella
 10. Seleziona "Copy to 0:/gm9/out"
