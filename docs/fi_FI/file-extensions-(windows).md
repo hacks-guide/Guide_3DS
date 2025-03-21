@@ -15,11 +15,11 @@ Tämä auttaa sinua löytämään helpommin tiedostot, joihin tässä oppaassa v
 3. Go to "Show"
 4. Click "File name extensions" to enable it
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@ Tämä auttaa sinua löytämään helpommin tiedostot, joihin tässä oppaassa v
 2. Napsauta "Näytä"-kohtaa valintanauhalta
 3. Aseta "Tiedostotunnisteet"-kohdan valintaruutu valituksi
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@ Tämä auttaa sinua löytämään helpommin tiedostot, joihin tässä oppaassa v
 
 2. Hae "Kansion asetukset" ja valitse se hakutuloksista
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. Valitse "Näytä"-välilehti yläreunasta
 
 4. Ota valinta pois "Piilota tunnettujen tiedostotyyppien tunnisteet" -kohdan valintaruudusta
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 
