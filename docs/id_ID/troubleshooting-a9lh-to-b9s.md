@@ -1,6 +1,6 @@
 # Sidik Gangguan (Dari A9LH ke B9S)
 
-Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Dari A9LH ke B9S". Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Dari A9LH ke B9S". Jika saran dari laman ini tidak menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ## Isu dengan SafeB9SInstaller
 
