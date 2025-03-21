@@ -6,5 +6,5 @@ In questa sezione ripristinerai le impostazioni di Internet alla normalità.
 4. Imposta "Impostazioni proxy" su "No"
 5. Fai clic su OK, quindi su Salva
 6. Quando richiesto, clicca su "Test" per eseguire il test di connessione
-   - Il test dovrebbe andare a buon fine
+    - Il test dovrebbe andare a buon fine
 7. Spegni la tua console
