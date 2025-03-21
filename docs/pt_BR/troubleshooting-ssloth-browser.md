@@ -60,7 +60,7 @@ Siga estas etapas em ordem:
 4. Defina "Servidor proxy" para "Não"
 5. Clique OK, depois clique em Salvar
 6. Quando solicitado, clique em "Testar" para realizar o teste de conexão
-   - O teste deve ser bem-sucedido
+    - O teste deve ser bem-sucedido
 7. Clique "OK" para continuar
 8. Pressione "Voltar" duas vezes e, em seguida, "Fechar" para voltar ao Menu HOME
 9. Abra o navegador de internet uma vez
