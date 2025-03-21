@@ -7,7 +7,7 @@ Esta sección restablecerá los ajustes del sistema a los predeterminados. **Los
 5. Press (A) to confirm
 6. Pulsa (B) varias veces para volver al menú principal
 7. Ve a `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-   - The `<ID0>` will be a folder with a 32-character long name
+    - The `<ID0>` will be a folder with a 32-character long name
 8. Utiliza el D-Pad para seleccionar `00010017`
 9. Pulsa (R) y (A) juntos para mostrar las opciones de carpeta
 10. Seleciona "Copy to 0:/gm9/out"
