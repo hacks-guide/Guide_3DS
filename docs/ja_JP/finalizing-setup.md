@@ -85,7 +85,7 @@ In this section, you will update your system to the latest version, which is saf
 In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
 
 1. (Lボタン) + (十字キー下) + (Select) を同時に押してRosalina menu を開きます
-   - If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
+    - If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
 2. "Miscellaneous options​"を選びます。
 3. Select "Dump DSP firmware"
 4. Press (B) to continue
@@ -100,18 +100,18 @@ In this section, you will use a series of scripts to automate homebrew installat
 
 1. Power off your console
 2. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
-   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
-   - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
+    - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
+    - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
 3. If the Helper was successful, your console will boot into GodMode9
-   - From this point forward, you can access GodMode9 by holding START while powering on your console
+    - From this point forward, you can access GodMode9 by holding START while powering on your console
 4. 重要なファイルのバックアップを作成するように求められたら、(A) ボタンを押して実行し、(A) ボタン を押して完了させてください。
 5. RTC日付/時刻を修正するには、(A) ボタンを押し、日付や時刻を設定してください。終わったら、(A) を押して続けてください。
 6. (Home) ボタンを押してアクションメニューを呼び出します
 7. "Scripts..."を選択します
 8. Select "finalize"
 9. Follow the prompts in the script, answering any questions that you are asked
-   - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
-   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
+    - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
+    - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
 10. Once the script says "Setup complete!", press (A) to power off the device
     - If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
 11. パソコンにSDカードを入れます
