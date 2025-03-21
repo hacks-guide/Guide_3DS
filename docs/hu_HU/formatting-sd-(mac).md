@@ -22,11 +22,11 @@ Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac rendszeren vagy, kövesd
 
 5. Válaszd ki az SD kártyád a bal oldali panelen
 
-   ::: danger
+    ::: danger
 
-   Legyél biztos abban, hogy a jó meghajtót választod, egyébként rossz merevlemezt törölhetsz!
+    Legyél biztos abban, hogy a jó meghajtót választod, egyébként rossz merevlemezt törölhetsz!
 
-   :::
+    :::
 
 6. Kattints az "Erase"-re felül
 
@@ -35,7 +35,7 @@ Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac rendszeren vagy, kövesd
 8. Ellenőrizd, hogy a "Format" beállítása "MS-DOS (FAT)"
 
 9. Ellenőrizd, hogy a "Scheme" beállítása "Master Boot Record"
-   - Ha a "Scheme" nem jelenik meg, nyomj "Cancel"-t és ellenőrizd, hogy az eszközt válaszottad-e ki egy kötet helyett
+    - Ha a "Scheme" nem jelenik meg, nyomj "Cancel"-t és ellenőrizd, hogy az eszközt válaszottad-e ki egy kötet helyett
 
 10. Kattints az "Erase"-re
 
@@ -55,14 +55,14 @@ Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac rendszeren vagy, kövesd
 
 4. Válaszd ki az SD kártyád a bal oldali panelen
 
-   ::: danger
+    ::: danger
 
-   Legyél biztos abban, hogy a jó meghajtót választod, egyébként rossz merevlemezt törölhetsz!
+    Legyél biztos abban, hogy a jó meghajtót választod, egyébként rossz merevlemezt törölhetsz!
 
-   :::
+    :::
 
 5. Kattints az "Partition"-re felül
-   - Ha a "Partition" nem jelenik meg, és ellenőrizd, hogy az eszközt válaszottad-e ki egy kötet helyett
+    - Ha a "Partition" nem jelenik meg, és ellenőrizd, hogy az eszközt válaszottad-e ki egy kötet helyett
 
 6. Ellenőrizd, hogy a "Partition Layout" beállított "1 Partition"-re
 
@@ -89,4 +89,4 @@ Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac rendszeren vagy, kövesd
 ## Hibaelhárítás
 
 - SD kártya továbbra sem detektálható a konzol által, vagy a formázás után továbbra is a rossz kapacitást mutatja
-  - Az SD kártyád lehet, hogy partícionált vagy van nem lefoglalt területe. Kövesd a lépéseket [itt](https://wiki.hacks.guide/wiki/SD_Clean/Mac) az SD kártyád újraformázásához.
+    - Az SD kártyád lehet, hogy partícionált vagy van nem lefoglalt területe. Kövesd a lépéseket [itt](https://wiki.hacks.guide/wiki/SD_Clean/Mac) az SD kártyád újraformázásához.
