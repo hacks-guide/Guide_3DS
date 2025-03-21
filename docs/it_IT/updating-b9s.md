@@ -26,20 +26,20 @@ Se durante questa sezione ti verrà chiesto di sovrascrivere dei file sulla tua 
 4. Copia il file `SafeB9SInstaller.firm` dall'archivio `.zip` di SafeB9SInstaller nella directory principale della tua scheda SD e rinominalo in `boot.firm`
 5. Reinserisci la scheda SD nella tua console
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/updateb9s-root-layout.png)
+    ![](/images/screenshots/updateb9s-root-layout.png)
 
-   :::
+    :::
 
 ### Sezione II - Installazione di boot9strap
 
 1. Accendi la tua console
-   - SafeB9SInstaller dovrebbe avviarsi automaticamente
+    - SafeB9SInstaller dovrebbe avviarsi automaticamente
 2. Quando richiesto, inserisci la combinazione di tasti richiesta sullo schermo superiore per installare boot9strap
-   - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-updating-b9s)
+    - Se una sezione nella schermata inferiore ha un testo di colore rosso, e non ti viene richiesto di inserire una combinazione di tasti, [segui questa guida per risolvere i problemi](troubleshooting-updating-b9s)
 3. Una volta completato, forza lo spegnimento della console tenendo premuto il tasto POWER
-   - Finché non verrà completata la successiva sezione, la console visualizzerà soltanto la schermata di SafeB9SInstaller all'accensione
+    - Finché non verrà completata la successiva sezione, la console visualizzerà soltanto la schermata di SafeB9SInstaller all'accensione
 
 ### Sezione III - Aggiornare Luma3DS
 
@@ -48,8 +48,8 @@ Se durante questa sezione ti verrà chiesto di sovrascrivere dei file sulla tua 
 3. Reinserisci la scheda SD nella tua console
 4. Accendi la tua console
 5. Se la tua console si è avviata nel menu di configurazione di Luma3DS, premi (Start) per salvare e riavviare
-   - Il menu di configurazione di Luma3DS contiene le impostazioni per il custom firmware Luma3DS. Molte di queste impostazioni possono essere utili per la personalizzazione o per debug
-   - Ai fini di questa guida, queste impostazioni rimarranno sui valori predefiniti
+    - Il menu di configurazione di Luma3DS contiene le impostazioni per il custom firmware Luma3DS. Molte di queste impostazioni possono essere utili per la personalizzazione o per debug
+    - Ai fini di questa guida, queste impostazioni rimarranno sui valori predefiniti
 
 ___
 
