@@ -10,7 +10,7 @@ head:
 
 # Sidik Gangguan (Soundhax)
 
-Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (Soundhax)" untuk konsol di versi sistem 1.0.0 sampai 11.3.0. Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (Soundhax)" untuk konsol di versi sistem 1.0.0 sampai 11.3.0. Jika saran dari laman ini tidak menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ## Isu dengan Soundhax
 
