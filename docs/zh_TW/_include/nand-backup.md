@@ -4,8 +4,8 @@
 4. 選擇『Backup Options』
 5. 選擇『SysNAND Backup』
 6. 按 『A』 確認
-   - This process will take some time
-   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
+    - This process will take some time
+    - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
 7. 按『A』 繼續
 8. 按『B』回到主選單
 9. 選擇『Exit』
