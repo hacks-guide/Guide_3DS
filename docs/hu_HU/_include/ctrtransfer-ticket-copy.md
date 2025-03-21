@@ -10,12 +10,12 @@ Ha a szkript nem talál felhasználói ticket-et, folytasd a következő részn�
 4. Majd válaszd ezt: "out"
 5. Ott pedig válaszd ezt: "ctrtransfer_tickets"
 6. Végezd el a következő folyamatot vagy az `eshop` mappára, vagy az `unknown` mappára, vagy mindkettőre
-   - Menj a mappába
-   - Válaszd ezt: "\<current directory>"
-   - Válaszd az "Install and delete all tickets" opciót
-   - Várj. Itt úgy tűnhet, hogy a rendszer lefagyott, de csak időre van szüksége.
-   - Nyomd meg az (A) gombot a megerősítéshez
-   - Nyomd meg a (B) gombot, hogy elutasítsd a ticketek CDN-ről történő telepítését.
+    - Menj a mappába
+    - Válaszd ezt: "\<current directory>"
+    - Válaszd az "Install and delete all tickets" opciót
+    - Várj. Itt úgy tűnhet, hogy a rendszer lefagyott, de csak időre van szüksége.
+    - Nyomd meg az (A) gombot a megerősítéshez
+    - Nyomd meg a (B) gombot, hogy elutasítsd a ticketek CDN-ről történő telepítését.
 7. Nyomd meg a (Home) gombot az FBI-ból való kilépéshez
 8. Nyisd meg újra a Homebrew Launcher-t vagy a Homebrew Launcher ikonnal a HOME Menüben vagy újra követve a IV. részt ezen az oldalon
 9. Indítsd el a faketike-et a homebrew listából
