@@ -76,7 +76,7 @@ Ora che hai il backup della NAND in un luogo sicuro:
 4. Seleziona "Scripts..."
 5. Seleziona "finalize"
 6. Continua lo script normalmente
-   - Il backup della NAND verrà automaticamente saltato
+    - Il backup della NAND verrà automaticamente saltato
 
 :::
 
@@ -121,7 +121,7 @@ Lo script ha rilevato che manca la cartella Nintendo 3DS E che hai precedentemen
 3. Copia il contenuto della cartella `/gm9/backups/` in una posizione sicura sul tuo computer
 4. Elimina la cartella `/gm9/backups/` dalla tua scheda SD
 5. Se hai spostato la cartella Nintendo 3DS al di fuori dalla scheda SD, copiala nuovamente sulla scheda SD
-   - Se non hai la cartella Nintendo 3DS, avvia il menu HOME con la scheda SD inserita per generarla automaticamente
+    - Se non hai la cartella Nintendo 3DS, avvia il menu HOME con la scheda SD inserita per generarla automaticamente
 6. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 7. Premi il pulsante HOME per far apparire il menu delle azioni
 8. Seleziona "Scripts..."
