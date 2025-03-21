@@ -23,7 +23,7 @@ A Soundhax (amikor universal-otherapp-pal használjuk) kompatibilis az 1.0.0-s v
 ## Amire szükséged lesz
 
 - A [Soundhax](http://soundhax.com) legújabb kiadása _(a régiódnak, a konzolodnak és rendszer verziódnak megfelelő változat)_
-  - Ha a Soundhax a böngésződben nem lejátszható videónak tűnik, nyomj Ctrl+S vagy Cmd+S gombokat a gépedre mentéséhez
+    - Ha a Soundhax a böngésződben nem lejátszható videónak tűnik, nyomj Ctrl+S vagy Cmd+S gombokat a gépedre mentéséhez
 - A [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) legfrissebb verziója (közvetlen letöltés)
 - A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrissebb verziója (közvetlen letöltés)
 - A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
@@ -38,7 +38,7 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a Soundhax és az univer
 1. Kapcsold ki a konzolod
 2. Helyezd az SD kártyád a számítógépbe
 3. Másold a Soundhax `.m4a` fájlját az SD kártyád gyökerébe
-   - Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
+    - Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
 4. Másold az `otherapp.bin` fájlt az SD kártyád gyökerébe
 5. Másolj mindent a Luma3DS `.zip`-ből az SD kártya gyökerébe
 6. Hozz létre egy mappát `boot9strap` néven az SD kártya gyökerében
@@ -65,27 +65,27 @@ Ebben a fejezetben el fogod indítani a Soundhax-ot a Nintendo 3DS Sound app-on 
 
 1. Indítsd el a Nintendo 3DS Sound-ot
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/soundhax/soundhax-welcome.png)
+    ![](/images/screenshots/soundhax/soundhax-welcome.png)
 
-   :::
+    :::
 
 2. Ha ezelőtt még sohasem indítottad el a Nintendo 3DS Sound-ot, és a madár ikon elkezd tippeket adni, lépkedj végig a tippeken, zárd be a szokásos módon az alkalmazást, majd nyisd meg újra
-   - Ebben az esetben, ha azonnal indítanánk a Soundhax-et, minden egyes alkalommal megjelennének ezek a tippek a Nintendo 3DS Sound indításánál mindaddig, amíg nem végeznénk
+    - Ebben az esetben, ha azonnal indítanánk a Soundhax-et, minden egyes alkalommal megjelennének ezek a tippek a Nintendo 3DS Sound indításánál mindaddig, amíg nem végeznénk
 
 3. Válaszd a `/SDCARD` mappát, majd játszd le a "<3 nedwill 2016" nevű hangfájlt
 
-   - Ez lehet, hogy csak sok (akár 10) próba után fog működni
-   - Ha azt az üzenetet látod, hogy "Could not play", akkor vagy olyan rendszer verzión vagy, ami inkompatiblis a soundhax-szal, vagy rossz Soundhax kiadást töltöttél le
-   - Ha lefagyna, kényszerítsd leállásra a konzolt a bekapcsológomb lenyomva tartásával, majd próbálkozz újra
-   - Ha másik hibát kapsz, [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-soundhax)
+    - Ez lehet, hogy csak sok (akár 10) próba után fog működni
+    - Ha azt az üzenetet látod, hogy "Could not play", akkor vagy olyan rendszer verzión vagy, ami inkompatiblis a soundhax-szal, vagy rossz Soundhax kiadást töltöttél le
+    - Ha lefagyna, kényszerítsd leállásra a konzolt a bekapcsológomb lenyomva tartásával, majd próbálkozz újra
+    - Ha másik hibát kapsz, [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-soundhax)
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/soundhax/soundhax-launch.png)
+    ![](/images/screenshots/soundhax/soundhax-launch.png)
 
-   :::
+    :::
 
 4. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
 
@@ -94,7 +94,7 @@ Ebben a fejezetben el fogod indítani a Soundhax-ot a Nintendo 3DS Sound app-on 
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-soundhax)
+    - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-soundhax)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->
