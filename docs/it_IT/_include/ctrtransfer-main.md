@@ -1,12 +1,12 @@
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 2. Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
 3. Se ti viene chiesto di reimpostare la data e l'ora dell'RTC, premi (A) per farlo, poi imposta la data e l'ora, infine premi (A) per continuare
-   - Tieni presente che in tal caso dovrai anche reimpostare data ed ora anche nelle Impostazioni della Console al termine della guida
+    - Tieni presente che in tal caso dovrai anche reimpostare data ed ora anche nelle Impostazioni della Console al termine della guida
 4. Premi il pulsante HOME per far apparire il menu delle azioni
 5. Seleziona "Scripts..."
 6. Seleziona "ctrtransfer"
 7. Seleziona l'immagine CTRTransfer scaricata
-   - Lo script calcolerà l'hash dell'immagine per assicurarsi che sia valido
+    - Lo script calcolerà l'hash dell'immagine per assicurarsi che sia valido
 8. Una volta completati i controlli, premi (A) per proseguire
 9. Premi il pulsante (A) per sbloccare i permessi di scrittura di secondo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
 10. Una volta completato il trasferimento, premi (A) per proseguire
