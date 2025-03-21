@@ -16,8 +16,8 @@ Merk op dat je namaak flashkaarten in zeldzame gevallen kan **bricken** tijdens 
 
 - Your ntrboot compatible flashcart
 - Two 3DS family consoles
-  - **The source 3DS**: the 3DS family console that is already running boot9strap
-  - **The target 3DS**: the 3DS family console on stock firmware
+    - **The source 3DS**: the 3DS family console that is already running boot9strap
+    - **The target 3DS**: the 3DS family console on stock firmware
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
@@ -40,7 +40,7 @@ Merk op dat je namaak flashkaarten in zeldzame gevallen kan **bricken** tijdens 
 3. Lees de waarshuwing op het rode scherm
 4. Druk op (A) om door te gaan
 5. Selecteer je flashkaart
-   - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
+    - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
 6. Selecteer "Dump Flash"
 7. Wacht totdat het proces voltooid is
 8. Druk op (A) om door te gaan
