@@ -6,7 +6,7 @@ Ini adalah laman lebihan untuk memformat kartu SD agar terbaca di 3DS.
 
 Jika 3DS sudah bisa membaca kartu SD, panduan ini tidak perlu.
 
-Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [Memformat kartu SD (Windows)](formatting-sd-\(windows\)) atau [Memformat kartu SD (Linux)](formatting-sd-\(linux\)).
+Laman ini khusus pengguna Mac. Jika tidak menggunakan Mac, lihat laman [Memformat kartu SD (Windows)](formatting-sd-\(windows\)) atau [Memformat kartu SD (Linux)](formatting-sd-\(linux\)).
 
 ## Instruksi
 
@@ -22,11 +22,11 @@ Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [Mem
 
 5. Pilih kartu SD Anda di panel kiri
 
-   ::: danger
+    ::: danger
 
-   Pastikan pilih perangkat yang benar, **jangan memformat _drive_ yang salah**!
+    Pastikan pilih perangkat yang benar, **jangan memformat _drive_ yang salah**!
 
-   :::
+    :::
 
 6. Pencet "Erase" (Hapus) di atas
 
@@ -35,7 +35,7 @@ Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [Mem
 8. Pastikan kolom "Format" diatur ke "MS-DOS (FAT)"
 
 9. Pastikan kolom "Scheme" diatur ke "Master Boot Record"
-   - Jika "Scheme" tidak muncul, pencet "Cancel" (Batal) dan pilih yang perangkat dan bukan volume
+    - Jika "Scheme" tidak muncul, pencet "Cancel" (Batal) dan pilih yang perangkat dan bukan volume
 
 10. Pencet "Erase" (Hapus)
 
@@ -55,14 +55,14 @@ Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [Mem
 
 4. Pilih kartu SD Anda di panel kiri
 
-   ::: danger
+    ::: danger
 
-   Pastikan pilih perangkat yang benar, **jangan memformat _drive_ yang salah**!
+    Pastikan pilih perangkat yang benar, **jangan memformat _drive_ yang salah**!
 
-   :::
+    :::
 
 5. Pencet "Partition" di atas
-   - Jika "Partition" tidak muncul, pastikan pilih yang perangkat dan bukan _volume_
+    - Jika "Partition" tidak muncul, pastikan pilih yang perangkat dan bukan _volume_
 
 6. Pastikan "Partition Layout" diatur ke "1 Partition"
 
@@ -89,4 +89,4 @@ Laman ini hanya untuk pengguna Mac. Jika tidak menggunakan Mac, lihat laman [Mem
 ## Sidik Gangguan
 
 - Kartu SD tetap tidak terbaca konsol atau daya tampungnya salah setelah diformat
-  - Kartu SD mungkin dipartisi atau ada ruang tak dialokasikan. Ikuti [instruksi ini](https://wiki.hacks.guide/wiki/SD_Clean/Mac) untuk memformat ulang kartu SD.
+    - Kartu SD mungkin dipartisi atau ada ruang tak dialokasikan. Ikuti [instruksi ini](https://wiki.hacks.guide/wiki/SD_Clean/Mac) untuk memformat ulang kartu SD.
