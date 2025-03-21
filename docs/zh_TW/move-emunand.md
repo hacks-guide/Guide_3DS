@@ -38,10 +38,10 @@
 1. Press and hold (Start), and while holding (Start), power on your console. 這將會啟動 GodMode9
 2. 當提示重要檔案備份時，按下『A』繼續，並在完畢後按下『A』繼續
 3. 當提示修正 RTC 日期及時間時，按『A』繼續並設定日期及時間，再按『A』繼續
-   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
 4. 移動至 `[2:] SYSNAND TWLN` -> `title`
 5. 在 `00030004` 上按住『R』並同時按下『A』以選取資料夾，並選擇『Copy to 0:/gm9/out』
-   - This process may take some time if you have many DSiWare games
+    - This process may take some time if you have many DSiWare games
 6. 按『B』兩次回到主選單
 
 ### Section III - Backup GBA VC Saves
@@ -71,16 +71,16 @@
 :::
 
 1. 為各個想備份的 GBA 虛擬主機遊戲重複下列步驟：
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-   - Launch GodMode9 by pressing (A)
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Dump GBA VC save"
-   - 按『A』 繼續
-   - Press (Start) to reboot your console
+    - Launch the GBA VC game
+    - Exit the GBA VC game
+    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
+    - Launch GodMode9 by pressing (A)
+    - Navigate to `[S:] SYSNAND VIRTUAL`
+    - Press (A) on `agbsave.bin` to select it
+    - Select "AGBSAVE options..."
+    - Select "Dump GBA VC save"
+    - 按『A』 繼續
+    - Press (Start) to reboot your console
 
 ### Section IV - Copy EmuNAND to SysNAND
 
@@ -88,9 +88,9 @@
 2. 移動至 `[E:] EMUNAND VIRTUAL`
 3. 透過『A』選取 `nand.bin`，並選擇『NAND image options...』，再選『Restore SysNAND (safe)』
 4. 按『A』解鎖 SysNAND 的複寫保護，然後按下提示的按鍵組合
-   - This will not overwrite your boot9strap installation
+    - This will not overwrite your boot9strap installation
 5. 按下提示的按鍵組合以解鎖 SysNAND(lvl1)的寫入保護
-   - This process will take some time
+    - This process will take some time
 6. 過程結束後，按下『A』繼續
 7. 如提示時，按下『B』取消檔案寫入鎖定
 8. 按『B』回到主選單
@@ -111,7 +111,7 @@
 6. 選擇 『Copy path(s)』
 7. 按『A』解鎖 SysNAND(lvl1)的寫入保護，然後按下提示的按鍵組合
 8. 選擇『Overwrite file(s)』
-   - This process may take some time if you have many DSiWare games
+    - This process may take some time if you have many DSiWare games
 9. 如提示時，按下『B』取消檔案寫入鎖定
 10. 按『B』兩次回到主選單
 
@@ -132,21 +132,21 @@
 1. Hold (R) and press (Start) at the same time to power off your console
 2. Power on your console into SysNAND
 3. 為各個想還原的 GBA 虛擬主機 遊戲重複下列步驟：
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-   - Launch GodMode9 by pressing (A)
-   - 移動至 `[0:] SDCARD` -> `gm9`
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-   - 按『B』回到主選單
-   - Navigate to `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Inject GBA VC save"
-   - 按『A』 繼續
-   - Press (Start) to reboot your console
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+    - Launch the GBA VC game
+    - Exit the GBA VC game
+    - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
+    - Launch GodMode9 by pressing (A)
+    - 移動至 `[0:] SDCARD` -> `gm9`
+    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+    - 按『B』回到主選單
+    - Navigate to `[S:] SYSNAND VIRTUAL`
+    - Press (A) on `agbsave.bin` to select it
+    - Select "AGBSAVE options..."
+    - Select "Inject GBA VC save"
+    - 按『A』 繼續
+    - Press (Start) to reboot your console
+    - Launch the GBA VC game
+    - Exit the GBA VC game
 
 ### Section VII - Backup SysNAND
 
@@ -165,7 +165,7 @@
 1. 同時按住『R』及『B』以卸除 SD 卡
 2. 將 SD 卡插入至電腦中
 3. 將所有檔案複製回 SD 卡中
-   - Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+    - Ensure you replace the `boot.firm` file on your SD card with the one from your backup
 4. Reinsert your SD card into your console
 5. 按『A』重新載入 SD 卡
 6. 按『開始鍵 (Start)』以重新啟動系統
