@@ -15,11 +15,11 @@ Acest lucru vă va ușura în a găsi fișierele menționate în restul acestui 
 3. Go to "Show"
 4. Click "File name extensions" to enable it
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@ Acest lucru vă va ușura în a găsi fișierele menționate în restul acestui 
 2. Apăsați pe opțiunea "Vizualizare" de pe meniul superior
 3. Bifați căsuța care scrie "Extensii de nume de fișier"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@ Acest lucru vă va ușura în a găsi fișierele menționate în restul acestui 
 
 2. Căutați "Opțiuni folder" și selectați rezultatul corespunzător
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. Apăsați opțiunea "Vizualizare" de pe partea superioară a meniului Opțiuni folder
 
 4. Debifați căsuța care scrie "Ascundere extensii de fișier pentru tipuri de fișier cunoscute"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 
