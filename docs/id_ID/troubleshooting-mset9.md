@@ -1,6 +1,6 @@
 # Sidik Gangguan (MSET9)
 
-Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (MSET9)", "Memasang boot9strap (MSET9 CLI)", dan "Memasang boot9strap (MSET9 Play Store)". Jika saran dari laman ini tidak bisa menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
+Laman ini berisi saran sidik gangguan untuk isu yang umum ditemui saat mengikuti "Memasang boot9strap (MSET9)", "Memasang boot9strap (MSET9 CLI)", dan "Memasang boot9strap (MSET9 Play Store)". Jika saran dari laman ini tidak menyelesaikan isu, gabung ke [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp) dan jelaskan isunya, termasuk apa yang sudah dicoba.
 
 ## MSET9 (aplikasi / naskah)
 
@@ -140,11 +140,11 @@ Satu atau lebih berkas yang MSET9 perlu jalankan hilang atau rusak. Unduh ulang 
 
 :::
 
-:::details Error 18: Windows Locale Settings are broken!
+:::: details Error 18: Windows Locale Settings are broken!
 
 <!--@include: ./_include/winerror234.md -->
 
-:::
+::::
 
 ## MSET9 (eksploit)
 
