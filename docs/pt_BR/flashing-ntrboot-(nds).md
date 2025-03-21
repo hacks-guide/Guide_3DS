@@ -16,8 +16,8 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
 
 - Seu flashcart compatível com ntrboot
 - Dois consoles
-  - **NDS / NDSL de origem**: o Nintendo DS ou Nintendo DS Lite que é compatível com o seu flashcart
-  - **3DS de destino**: o console da família 3DS com firmware padrão
+    - **NDS / NDSL de origem**: o Nintendo DS ou Nintendo DS Lite que é compatível com o seu flashcart
+    - **3DS de destino**: o console da família 3DS com firmware padrão
 - A versão v1.3 do [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (download direto)
 - A versão mais recente do [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
