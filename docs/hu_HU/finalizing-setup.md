@@ -85,7 +85,7 @@ Ebben a fejezetben frissíteni fogod a rendszered a legutolsó verzióra, ami bi
 Ebben a fejezetben szinkronizálni fogod a 3DS belső óráját az aktuális időhöz és dumpolni a hang firmware-t (ami szükséges néhány homebrew alkalmazáshoz, hogy a hangot megfelelően használja).
 
 1. Nyomd le az (Bal Váll) + (D-Pad le) + (Select) gombokat egyszerre a Rosalina menü megnyitásához
-   - Ha valamelyik gombod törött, töltsd le a [config.ini](/assets/config.ini) fájlt és rakd a `luma` mappádba, felülírva az ott lévőt. Ez átállítja a Rosalina menu billentyű kombinációt (X) + (Y)
+    - Ha valamelyik gombod törött, töltsd le a [config.ini](/assets/config.ini) fájlt és rakd a `luma` mappádba, felülírva az ott lévőt. Ez átállítja a Rosalina menu billentyű kombinációt (X) + (Y)
 2. Válaszd ki a "Miscellaneous options"-t
 3. Válaszd a "Dump DSP firmware" opciót
 4. Nyomd meg a (B) gombot a folytatáshoz
@@ -100,18 +100,18 @@ Ebben a fejezetben szkripteket fogsz használni arra, hogy automatizáld a homeb
 
 1. Kapcsold ki a konzolod
 2. Nyomd le és tartsd nyomva az (X) gombot, és az (X) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a Finalizing Setup Helper-t
-   - Ha a HOME menübe bootoltál, akkor lehet hogy a `payloads` mappád neve elírt, vagy rossz helyen van
-   - Ha hibát kapsz, tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt
+    - Ha a HOME menübe bootoltál, akkor lehet hogy a `payloads` mappád neve elírt, vagy rossz helyen van
+    - Ha hibát kapsz, tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt
 3. Ha a Helper sikeres volt, a konzolodnak ezt követően be kell bootolni a GodMode9-be
-   - Ettől a ponttól kezdve a GodMode9-et a START gomb bekapcsolás melletti nyomva tartásával éred el
+    - Ettől a ponttól kezdve a GodMode9-et a START gomb bekapcsolás melletti nyomva tartásával éred el
 4. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
 5. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
 6. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
 7. Válaszd a "Scripts..." opciót
 8. Válaszd az "finalize" opciót
 9. Kövesd a script utasításait és válaszolj meg minden kérdést
-   - Ha "Information #05: No title database" üzenetet látsz, nyomj (A) gombot az importáláshoz, majd nyomd meg a gombokat a képernyőn a folytatáshoz
-   - Ha hibát kapsz, kövesd a hibaüzenet lépéseit vagy tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt
+    - Ha "Information #05: No title database" üzenetet látsz, nyomj (A) gombot az importáláshoz, majd nyomd meg a gombokat a képernyőn a folytatáshoz
+    - Ha hibát kapsz, kövesd a hibaüzenet lépéseit vagy tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt
 10. Ha a szkript a "Setup complete!" üzenetet írja, nyomj (A) gombot az eszköz kikapcsolásához
     - Ha NEM láttad a "Setup complete!" üzenetet, akkor a szkript nem volt sikeres és újra kell csinálnod ezt a részt a 3. lépéstől
 11. Helyezd az SD kártyád a számítógépbe
