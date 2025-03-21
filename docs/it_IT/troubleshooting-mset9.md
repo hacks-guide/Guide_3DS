@@ -52,7 +52,7 @@ Assicurati di aver resettato il database dei titoli.
 
 - Accendi la console con la scheda SD inserita
 - Avvia le Impostazioni della console e vai su `Gestione dati` -> `Nintendo 3DS` -> `Software` -> Reset ([immagine](/images/screenshots/database-reset.jpg))
-  - Non verranno cancellati i tuoi dati
+    - Non verranno cancellati i tuoi dati
 - Se ricevi una conferma di ripristino, al termine spegni e riaccendi la console e ricomincia dalla [Sezione I Passo 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Se _non_ ricevi una conferma di ripristino, la tua scheda SD deve essere formattata:
@@ -65,7 +65,7 @@ Se _non_ ricevi una conferma di ripristino, la tua scheda SD deve essere formatt
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
 2. Digita `2` quindi premi Invio per controllare lo stato di MSET9
-   - Verranno ricreati nuovamente i database fittizi
+    - Verranno ricreati nuovamente i database fittizi
 3. Chiudi la finestra dello script MSET9
 4. Ricomincia dalla [Sezione I Passo 12](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
 
@@ -106,12 +106,12 @@ Hai più cartelle ID0. Per determinare la cartella corretta, segui queste istruz
 2. Reinserisci la scheda SD nella tua console
 3. Accendi la tua console
 4. Attendi che la console generi i dati nella scheda SD
-   - Le tue applicazioni saranno scomparse. È normale e verrà risolto a breve
+    - Le tue applicazioni saranno scomparse. È normale e verrà risolto a breve
 5. Spegni la tua console
 6. Inserisci la scheda SD nel tuo computer
 7. Entra nella cartella `Nintendo 3DS` della tua scheda SD
 8. Trascrivi i primi caratteri della cartella che vedi
-   - Questo è il tuo vero ID0, che manterremo nella cartella Nintendo 3DS reale
+    - Questo è il tuo vero ID0, che manterremo nella cartella Nintendo 3DS reale
 9. Elimina la cartella ID0 dalla cartella `Nintendo 3DS` corrente
 10. Sposta la vera cartella ID0 dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
 11. Se esiste, sposta la cartella `Private` dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
@@ -140,11 +140,11 @@ Uno o più file necessari all'esecuzione di MSET9 mancano o sono corrotti. Ri-sc
 
 :::
 
-:::details Error 18: Windows Locale Settings are broken!
+:::: details Error 18: Windows Locale Settings are broken!
 
 <!--@include: ./_include/winerror234.md -->
 
-:::
+::::
 
 ## MSET9 (exploit)
 
@@ -158,8 +158,8 @@ Potrebbe mancarti il file `SafeB9S.bin` dalla directory principale della tua sch
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-   - Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - Se hai già rimosso il file scatenante (o non l'hai mai iniettato), lo stato attuale mostrerà [Ready](/images/screenshots/mset9/mset9-ready.png), e puoi [riprovare la Sezione II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+    - Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
+    - Se hai già rimosso il file scatenante (o non l'hai mai iniettato), lo stato attuale mostrerà [Ready](/images/screenshots/mset9/mset9-ready.png), e puoi [riprovare la Sezione II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Digita `4`, quindi premi Invio
 3. Una volta che la finestra dice "Removed trigger file", digita `0` quindi premi Invio
 4. Reinserisci la scheda SD nella console
@@ -187,8 +187,8 @@ Segui queste istruzioni per rimuovere il file scatenante e riprova la Sezione II
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
-   - Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - Se hai già rimosso il file scatenante (o non l'hai mai iniettato), lo stato attuale mostrerà [Ready](/images/screenshots/mset9/mset9-ready.png), e puoi riprovare la Sezione II
+    - Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
+    - Se hai già rimosso il file scatenante (o non l'hai mai iniettato), lo stato attuale mostrerà [Ready](/images/screenshots/mset9/mset9-ready.png), e puoi riprovare la Sezione II
 2. Digita `4`, quindi premi Invio
 3. Una volta che la finestra dice "Removed trigger file", digita `0` quindi premi Invio
 4. Reinserisci la scheda SD nella console
@@ -233,3 +233,5 @@ Ritorna a [Installazione di boot9strap (MSET9 Play Store)](installing-boot9strap
 :::
 
 <!--@include: ./_include/troubleshooting-return.md -->
+
+
