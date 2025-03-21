@@ -60,7 +60,7 @@ Kövesd az alábbi lépéseket:
 4. Állítsd a "Proxy Settings"-t "No"-ra
 5. Kattints az OK-ra, majd kattints a Save-re
 6. Amikor kérdezi, kattints a "Test"-re a kapcsolat ellenőrzéséhez
-   - A tesztnek sikeresnek kell lennie
+    - A tesztnek sikeresnek kell lennie
 7. Kattints az OK gombra a folytatáshoz
 8. Nyomj a "Back"-re kétszer, majd a "Close"-ra, hogy visszajuszz a HOME Menübe
 9. Nyisd meg az Internet Browser-t egyszer
