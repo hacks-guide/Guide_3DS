@@ -15,11 +15,11 @@ Isto facilitará para você encontrar os arquivos referenciados no restante dest
 3. Vá para "Mostrar"
 4. Clique em "Extensões no nome do arquivo" para ativá-lo
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@ Isto facilitará para você encontrar os arquivos referenciados no restante dest
 2. Clique na opção "Exibir" no menu da faixa de opções
 3. Marque a caixa rotulada "Extensões de nome de arquivo"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@ Isto facilitará para você encontrar os arquivos referenciados no restante dest
 
 2. Procure por "Opções de pasta" e selecione o resultado correspondente
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. Clique na opção "Modo de Exibição" na parte superior do menu de opções de pasta
 
 4. Desmarque a opção "Ocultar extensões para tipos de arquivo conhecidos"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 
