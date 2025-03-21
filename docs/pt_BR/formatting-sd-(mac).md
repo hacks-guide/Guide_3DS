@@ -22,11 +22,11 @@ Esta página é destinada apenas a usuários do Mac. Caso você não esteja usan
 
 5. Selecione seu cartão SD no painel da esquerda
 
-   ::: danger
+    ::: danger
 
-   Certifique-se de escolher o dispositivo correto, caso contrário você pode apagar a unidade errada acidentalmente!
+    Certifique-se de escolher o dispositivo correto, caso contrário você pode apagar a unidade errada acidentalmente!
 
-   :::
+    :::
 
 6. Clique em "Erase" no topo
 
@@ -35,7 +35,7 @@ Esta página é destinada apenas a usuários do Mac. Caso você não esteja usan
 8. Certifique-se de que "Format" está definido como "MS-DOS (FAT)"
 
 9. Certifique-se de que o "Scheme" está definido como "Master Boot Record"
-   - Se "Scheme" não aparecer, clique "Cancel" e certifique-se de escolher o dispositivo ao invés de um volume
+    - Se "Scheme" não aparecer, clique "Cancel" e certifique-se de escolher o dispositivo ao invés de um volume
 
 10. Clique em "Erase"
 
@@ -55,14 +55,14 @@ Esta página é destinada apenas a usuários do Mac. Caso você não esteja usan
 
 4. Selecione seu cartão SD no painel da esquerda
 
-   ::: danger
+    ::: danger
 
-   Certifique-se de escolher o dispositivo correto, caso contrário você pode apagar a unidade errada acidentalmente!
+    Certifique-se de escolher o dispositivo correto, caso contrário você pode apagar a unidade errada acidentalmente!
 
-   :::
+    :::
 
 5. Clique em "Partition" no topo
-   - Se "Partition" não aparecer, certifique-se de escolher o dispositivo ao invés de um volume
+    - Se "Partition" não aparecer, certifique-se de escolher o dispositivo ao invés de um volume
 
 6. Certifique-se de que "Partition Layout" está definido para "1 Partition"
 
@@ -89,4 +89,4 @@ Esta página é destinada apenas a usuários do Mac. Caso você não esteja usan
 ## Troubleshooting
 
 - O cartão SD permanece não sendo detectado pelo console, ou continua mostrando a capacidade errada após a formatação
-  - Seu cartão SD pode estar particionado ou ter espaço não alocado. Siga as instruções [aqui](https://wiki.hacks.guide/wiki/SD_Clean/Mac) para reformatar o seu cartão SD.
+    - Seu cartão SD pode estar particionado ou ter espaço não alocado. Siga as instruções [aqui](https://wiki.hacks.guide/wiki/SD_Clean/Mac) para reformatar o seu cartão SD.
