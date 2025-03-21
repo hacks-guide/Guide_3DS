@@ -76,7 +76,7 @@ Now that you have your NAND backup in a safe place:
 4. Select "Scripts..."
 5. Select "finalize"
 6. Continue the script as normal
-   - The NAND backup will be automatically skipped
+    - The NAND backup will be automatically skipped
 
 :::
 
@@ -121,7 +121,7 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
 3. Copy the contents of `/gm9/backups/` to a safe location on your computer
 4. Delete `/gm9/backups/` from your SD card
 5. If you moved your Nintendo 3DS folder off of your SD card to get to this point, copy it back to your SD card
-   - If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it
+    - If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it
 6. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 7. Press (Home) to bring up the action menu
 8. Select "Scripts..."
