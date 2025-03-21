@@ -17,5 +17,5 @@
 5. 将代理服务器设置为 `ssloth.nintendohomebrew.com`，端口设置为 `8080`
 6. Click OK, then click Save
 7. When prompted, click "Test" to perform the connection test
-   - The test should succeed
+    - The test should succeed
 8. Click "OK" to continue
