@@ -16,8 +16,8 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 
 - Az ntrboor kompatibilis flashkártyád
 - Két konzol a 3DS családból
-  - **A forrás 3DS**: egy konzol a 3DS családból, amin már boot9strap fut
-  - **A cél 3DS**: egy konzol a 3DS családból, ami gyári firmware-en van
+    - **A forrás 3DS**: egy konzol a 3DS családból, amin már boot9strap fut
+    - **A cél 3DS**: egy konzol a 3DS családból, ami gyári firmware-en van
 - A [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) v1.3 verziója (közvetlen letöltés)
 - A [ntrboot_flasher] legújabb kiadása (https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
@@ -40,7 +40,7 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 3. Olvasd el a figyelmeztetést a piros képernyőn
 4. Nyomd meg az (A) gombot a folytatáshoz
 5. Válaszd ki a flashkártyádat
-   - Ha nem találod a flashkártyádat a listában felül, olvasd el az alsó képernyőn megjelenő információkat minden opcióra
+    - Ha nem találod a flashkártyádat a listában felül, olvasd el az alsó képernyőn megjelenő információkat minden opcióra
 6. Válaszd a "Dump Flash" opciót
 7. Várj, amíg a folyamat befejeződik
 8. Nyomd meg az (A) gombot a folytatáshoz
