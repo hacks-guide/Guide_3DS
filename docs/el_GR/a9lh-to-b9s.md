@@ -20,7 +20,7 @@
 
 :::
 
-- <font-awesome-icon icon="fa-solid fa-magnet"/> - **Μόνο για χρήστες του New 3DS:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655\&dn=secret_sector.bin\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce) (σύνδεσμος magnet)
+- <font-awesome-icon icon="fa-solid fa-magnet"/> - **Μόνο για χρήστες του New 3DS:** [secret_sector.bin](magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&dn=secret_sector.bin&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce) (σύνδεσμος magnet)
 - Την πιο πρόσφατη έκδοση του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (το αρχείο `.zip` του Luma3DS)
 - Την έκδοση 7.0.5 του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/download/v7.0.5/Luma3DSv7.0.5.zip) (απευθείας λήψη)
 - Την πιο πρόσφατη έκδοση του [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (απευθείας λήψη)
@@ -41,13 +41,13 @@
 2. Εισαγάγετε την κάρτα SD στον υπολογιστή σας
 
 3. Αντιγράψτε τα πάντα από το πιο πρόσφατο αρχείο `.zip` του Luma3DS στη ρίζα της κάρτας SD σας
-   - Η ρίζα της κάρτας SD είναι ο αρχικός κατάλογος της κάρτας SD σας, όπου μπορείτε να δείτε τον φάκελο «Nintendo 3DS», χωρίς να βρίσκεστε μέσα σε αυτόν
+    - Η ρίζα της κάρτας SD είναι ο αρχικός κατάλογος της κάρτας SD σας, όπου μπορείτε να δείτε τον φάκελο «Nintendo 3DS», χωρίς να βρίσκεστε μέσα σε αυτόν
 
 4. Αντιγράψτε το `arm9loaderhax.bin` από το αρχείο `.zip` της έκδοσης 7.0.5 του Luma3DS στη ρίζα της κάρτας SD σας
 
 5. Αντιγράψτε το `SafeB9SInstaller.bin` από το αρχείο `.zip` του SafeB9SInstaller στον φάκελο `/luma/payloads/` της κάρτας SD σας
-   - Εάν δεν υπάρχουν οι φάκελοι `luma` ή `payloads`, δημιουργήστε τους
-   - Διαγράψτε οποιαδήποτε άλλα υπάρχοντα payload τύπου `.bin` (`GodMode9.bin`, `Decrypt9WIP.bin`, `Hourglass9.bin` κ.λπ.) στον φάκελο `/luma/payloads/` της κάρτας SD σας, καθώς δεν θα είναι συμβατά με τις εκδόσεις του Luma3DS που είναι συμβατές με το boot9strap
+    - Εάν δεν υπάρχουν οι φάκελοι `luma` ή `payloads`, δημιουργήστε τους
+    - Διαγράψτε οποιαδήποτε άλλα υπάρχοντα payload τύπου `.bin` (`GodMode9.bin`, `Decrypt9WIP.bin`, `Hourglass9.bin` κ.λπ.) στον φάκελο `/luma/payloads/` της κάρτας SD σας, καθώς δεν θα είναι συμβατά με τις εκδόσεις του Luma3DS που είναι συμβατές με το boot9strap
 
 6. Δημιουργήστε έναν φάκελο με το όνομα `boot9strap` στη ρίζα της κάρτας SD σας
 
@@ -55,23 +55,23 @@
 
 8. **Μόνο για χρήστες του New 3DS:** Αντιγράψτε το `secret_sector.bin` στον φάκελο `/boot9strap/` της κάρτας SD σας
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/a9lh-to-b9s-root-layout.png)
+    ![](/images/screenshots/a9lh-to-b9s-root-layout.png)
 
-   :::
+    :::
 
 9. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
 ### Ενότητα II - Εγκατάσταση του boot9strap
 
 1. Ενεργοποιήστε την κονσόλα σας κρατώντας παράλληλα πατημένο το (Start) για να κάνετε εκκίνηση του SafeB9SInstaller
-   - Εάν δείτε την οθόνη ρυθμίσεων του Luma αντί του SafeB9SInstaller, πατήστε απλώς το (Start), απενεργοποιήστε το 3DS σας και δοκιμάστε ξανά
-   - Εάν λάβετε σφάλμα, δοκιμάστε να χρησιμοποιήσετε μια νέα κάρτα SD ή να διαμορφώσετε την τρέχουσα κάρτα SD σας (δημιουργήστε πρώτα αντίγραφα ασφαλείας για τα υπάρχοντα αρχεία σας)
+    - Εάν δείτε την οθόνη ρυθμίσεων του Luma αντί του SafeB9SInstaller, πατήστε απλώς το (Start), απενεργοποιήστε το 3DS σας και δοκιμάστε ξανά
+    - Εάν λάβετε σφάλμα, δοκιμάστε να χρησιμοποιήσετε μια νέα κάρτα SD ή να διαμορφώσετε την τρέχουσα κάρτα SD σας (δημιουργήστε πρώτα αντίγραφα ασφαλείας για τα υπάρχοντα αρχεία σας)
 2. Περιμένετε μέχρι να ολοκληρωθούν όλοι οι έλεγχοι ασφαλείας
-   - Εάν λάβετε το σφάλμα «OTP Crypto Fail», κάντε λήψη του <font-awesome-icon icon="fa-solid fa-magnet"/> - [aeskeydb.bin](magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e\&dn=aeskeydb.bin\&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.lelux.fi%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.loadbt.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.moeking.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.monitorit4.me%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.ololosh.space%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.pomf.se%3a80%2fannounce\&tr=udp%3a%2f%2ftracker.srv00.com%3a6969%2fannounce\&tr=udp%3a%2f%2ftracker.theoks.net%3a6969%2fannounce\&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.zerobytes.xyz%3a1337%2fannounce\&tr=udp%3a%2f%2ftracker1.bt.moack.co.kr%3a80%2fannounce\&tr=udp%3a%2f%2fvibe.sleepyinternetfun.xyz%3a1738%2fannounce\&tr=udp%3a%2f%2fwww.torrent.eu.org%3a451%2fannounce\&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a6969%2fannounce\&tr=udp%3a%2f%2f9.rarbg.com%3a2810%2fannounce\&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce\&tr=http%3a%2f%2fopenbittorrent.com%3a80%2fannounce\&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce), τοποθετήστε το στον φάκελο `/boot9strap/` της κάρτας SD σας και δοκιμάστε ξανά
+    - Εάν λάβετε το σφάλμα «OTP Crypto Fail», κάντε λήψη του <font-awesome-icon icon="fa-solid fa-magnet"/> - aeskeydb.bin, τοποθετήστε το στον φάκελο `/boot9strap/` της κάρτας SD σας και δοκιμάστε ξανά
 3. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-   - Εάν το κείμενο κάποιου βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting-a9lh-to-b9s)
+    - Εάν το κείμενο κάποιου βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting-a9lh-to-b9s)
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
