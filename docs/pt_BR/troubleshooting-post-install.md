@@ -35,19 +35,19 @@ As etapas abaixo podem ser tentadas em qualquer ordem, mas são listadas de meno
 1. Desligue o console, remova o cartão SD, insira-o novamente e, em seguida, ligue seu console.
 2. Desligue seu console, ejete o cartucho do jogo se estiver inserido, ligue o seu console, e espere até dez minutos. Se o seu console inicializar dentro de dez minutos, o problema foi corrigido e é improvável que volte a ocorrer
 3. Renomeie a pasta `Nintendo 3DS` no seu cartão SD para `Nintendo 3DS_BACKUP`, depois tente inicializar. Se o seu console é iniciado com sucesso, há algum problema na pasta `Nintendo 3DS`. Tente limpar a extdata do Menu HOME:
-   - Navegue até `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-   - Delete a pasta correspondente à região de seu 3DS:
-     - **Região EUR**: `00000098`
-     - **Região JPN**: `00000082`
-     - **Região USA**: `0000008f`
-     - **Região CHN**: `000000A1`
-     - **Região KOR**: `000000A9`
-     - **Região TWN**: `000000B1`
+    - Navegue até `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+    - Delete a pasta correspondente à região de seu 3DS:
+        - **Região EUR**: `00000098`
+        - **Região JPN**: `00000082`
+        - **Região USA**: `0000008f`
+        - **Região CHN**: `000000A1`
+        - **Região KOR**: `000000A9`
+        - **Região TWN**: `000000B1`
 4. Tente iniciar no modo de recuperação e atualizar o seu sistema:
-   - Desligue seu console
-   - Segure (Gatilho Esquerdo) + (Gatilho Direito) + (D-Pad Cima) + (A)
-   - Ligue o seu console
-   - Se obtiver sucesso, o console iniciará em uma tela de "atualize seu sistema"
+    - Desligue seu console
+    - Segure (Gatilho Esquerdo) + (Gatilho Direito) + (D-Pad Cima) + (A)
+    - Ligue o seu console
+    - Se obtiver sucesso, o console iniciará em uma tela de "atualize seu sistema"
 5. Siga o guia de [CTRTransfer](ctrtransfer)
 6. Para mais suporte, peça ajuda no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp)
 
@@ -164,12 +164,12 @@ Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter a
 2. Insira o cartão SD no seu computador
 3. Navegue até a pasta `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` no seu cartão SD
 4. Delete a pasta correspondente à região de seu 3DS:
-   - **Região EUR**: `00000098`
-   - **Região JPN**: `00000082`
-   - **Região USA**: `0000008f`
-   - **Região CHN**: `000000A1`
-   - **Região KOR**: `000000A9`
-   - **Região TWN**: `000000B1`
+    - **Região EUR**: `00000098`
+    - **Região JPN**: `00000082`
+    - **Região USA**: `0000008f`
+    - **Região CHN**: `000000A1`
+    - **Região KOR**: `000000A9`
+    - **Região TWN**: `000000B1`
 5. Reinsira o cartão SD no seu console
 
 :::
@@ -180,10 +180,10 @@ Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter a
 2. Insira o cartão SD no seu computador
 3. Navegue até a pasta `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` no seu cartão SD
 4. Delete a pasta correspondente à região de seu 3DS:
-   - **Região EUR**: `000002ce`
-   - **Região JPN**: `000002cc`
-   - **Região USA**: `000002cd`
-   - **Região KOR**: `000002cf`
+    - **Região EUR**: `000002ce`
+    - **Região JPN**: `000002cc`
+    - **Região USA**: `000002cd`
+    - **Região KOR**: `000002cf`
 5. Reinsira o cartão SD no seu console
 
 :::
@@ -203,9 +203,9 @@ Entretanto, se você não sabe o PIN e, portanto, não pode acessar as configura
 
 1. Vá para [este site](https://mkey.eiphax.tech/)
 2. Preencha as seguintes caixas com as informações:
-   - Device Type: Selecione "3DS" (o mesmo se aplica se estiver utilizando um 2DS, New 3DS (XL/LL) ou New 2DS (XL/LL))
-   - System Date: O dia e mês definidos em seu console
-   - Inquiry Number: Pode ser obtido ao pressionar "Esqueci o PIN" então em "Eu esqueci" na tela de Controle dos Pais
+    - Device Type: Selecione "3DS" (o mesmo se aplica se estiver utilizando um 2DS, New 3DS (XL/LL) ou New 2DS (XL/LL))
+    - System Date: O dia e mês definidos em seu console
+    - Inquiry Number: Pode ser obtido ao pressionar "Esqueci o PIN" então em "Eu esqueci" na tela de Controle dos Pais
 3. Depois de obter sua mkey, pressione OK na tela onde você obteve seu Inquiry Number, então insira a mkey
 4. Pressione "Limpar Configurações", depois "Excluir" para remover todos os dados do Controle dos Pais
 
@@ -214,3 +214,4 @@ Entretanto, se você não sabe o PIN e, portanto, não pode acessar as configura
 ---
 
 <!--@include: ./_include/troubleshooting-return.md -->
+
