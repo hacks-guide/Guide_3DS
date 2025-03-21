@@ -35,19 +35,19 @@ This page offers troubleshooting advice for commonly encountered issues after cu
 1. 콘솔의 전원을 종료하고, SD 카드를 분리한 뒤, 다시 장착하고 전원을 켜 보세요.
 2. 전원을 끄고 게임 카트리지가 장착되어 있다면 분리한 다음, 10분 정도 기다려 주세요. 10분 후에 정상적으로 부팅된다면, 문제는 해결된 것이며 재발 가능성이 낮습니다
 3. SD 카드의 `Nintendo 3DS` 폴더를 다른 이름(예: `NIntendo 3DS_BACKUP`)으로 변경 후 부팅해보세요. 콘솔이 정상적으로 부팅된다면, `Nintendo 3DS` 폴더 내부에 문제가 있는 것입니다. 홈 메뉴의 추가 데이터를 정리해주세요:
-   - SD 카드에 있는 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 폴더로 이동해 주세요
-   - 콘솔 지역에 해당되는 폴더를 삭제해 주세요:
-     - **EUR 지역**: `00000098`
-     - **JPN 지역**: `00000082`
-     - **USA 지역**: `0000008f`
-     - **CHN 지역**: `000000A1`
-     - **KOR 지역**: `000000A9`
-     - **TWN 지역**: `000000B1`
+    - SD 카드에 있는 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 폴더로 이동해 주세요
+    - 콘솔 지역에 해당되는 폴더를 삭제해 주세요:
+        - **EUR 지역**: `00000098`
+        - **JPN 지역**: `00000082`
+        - **USA 지역**: `0000008f`
+        - **CHN 지역**: `000000A1`
+        - **KOR 지역**: `000000A9`
+        - **TWN 지역**: `000000B1`
 4. 복구 모드로 부팅하여 본체를 업데이트해 보세요:
-   - 콘솔의 전원을 꺼 주세요
-   - (L 버튼) + (R 버튼) + (D패드 상) + (A) 버튼을 길게 눌러주세요
-   - 콘솔의 전원을 켜 주세요
-   - 성공적일 경우엔 콘솔이 "본체 업데이트"로 부팅됩니다
+    - 콘솔의 전원을 꺼 주세요
+    - (L 버튼) + (R 버튼) + (D패드 상) + (A) 버튼을 길게 눌러주세요
+    - 콘솔의 전원을 켜 주세요
+    - 성공적일 경우엔 콘솔이 "본체 업데이트"로 부팅됩니다
 5. [CTRTransfer](ctrtransfer) 설명서를 따라 주세요
 6. 지원이 필요하면 [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 (영어로) 지원을 요청해 주세요
 
@@ -164,12 +164,12 @@ menuhax67가 여전히 설치되어 있는 듯합니다. menuhax67 제거를 위
 2. SD 카드를 컴퓨터에 삽입해 주세요
 3. SD 카드에 있는 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 폴더로 이동해 주세요
 4. 콘솔 지역에 해당되는 폴더를 삭제해 주세요:
-   - **EUR 지역**: `00000098`
-   - **JPN 지역**: `00000082`
-   - **USA 지역**: `0000008f`
-   - **CHN 지역**: `000000A1`
-   - **KOR 지역**: `000000A9`
-   - **TWN 지역**: `000000B1`
+    - **EUR 지역**: `00000098`
+    - **JPN 지역**: `00000082`
+    - **USA 지역**: `0000008f`
+    - **CHN 지역**: `000000A1`
+    - **KOR 지역**: `000000A9`
+    - **TWN 지역**: `000000B1`
 5. SD 카드를 콘솔에 다시 삽입해 주세요
 
 :::
@@ -180,10 +180,10 @@ menuhax67가 여전히 설치되어 있는 듯합니다. menuhax67 제거를 위
 2. SD 카드를 컴퓨터에 삽입해 주세요
 3. SD 카드에 있는 `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` 폴더로 이동해 주세요
 4. 콘솔 지역에 해당되는 폴더를 삭제해 주세요:
-   - **EUR 지역**: `000002ce`
-   - **JPN 지역**: `000002cc`
-   - **USA 지역**: `000002cd`
-   - **KOR 지역**: `000002cf`
+    - **EUR 지역**: `000002ce`
+    - **JPN 지역**: `000002cc`
+    - **USA 지역**: `000002cd`
+    - **KOR 지역**: `000002cf`
 5. SD 카드를 콘솔에 다시 삽입해 주세요
 
 :::
@@ -203,9 +203,9 @@ HOME 메뉴를 통해 Homebrew Launcher 애플리케이션에 접근이 불가�
 
 1. [이 사이트](https://mkey.eiphax.tech/) 에 들어가 주세요
 2. 다음 빈칸에 관련 정보를 넣어 주세요:
-   - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
-   - System Date: The day and month your console's clock is set to
-   - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
+    - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
+    - System Date: The day and month your console's clock is set to
+    - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
 3. After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key
 4. Press "Clear Settings", then "Delete" to remove all Parental Controls data
 
@@ -214,3 +214,4 @@ HOME 메뉴를 통해 Homebrew Launcher 애플리케이션에 접근이 불가�
 ---
 
 <!--@include: ./_include/troubleshooting-return.md -->
+
