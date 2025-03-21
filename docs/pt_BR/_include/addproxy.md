@@ -17,5 +17,5 @@ Um guia visual está disponível para esta seção [aqui](/images/screenshots/se
 5. Defina o Servidor Proxy para `ssloth.nintendohomebrew.com`, e a Porta para `8080`
 6. Clique OK, depois clique em Salvar
 7. Quando solicitado, clique em "Testar" para realizar o teste de conexão
-   - O teste deve ser bem-sucedido
+    - O teste deve ser bem-sucedido
 8. Clique "OK" para continuar
