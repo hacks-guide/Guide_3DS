@@ -38,10 +38,10 @@ Se non hai alcun DSiWare o se non hai salvataggi che desideri salvare, salta que
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 2. Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
 3. Se ti viene chiesto di reimpostare la data e l'ora dell'RTC, premi (A) per farlo, poi imposta la data e l'ora, infine premi (A) per continuare
-   - Tieni presente che in tal caso dovrai anche reimpostare data ed ora anche nelle Impostazioni della Console al termine della guida
+    - Tieni presente che in tal caso dovrai anche reimpostare data ed ora anche nelle Impostazioni della Console al termine della guida
 4. Entra nella cartella `[2:] SYSNAND TWLN` -> `title`
 5. Tenendo premuto (R), premi (A) sulla cartella `00030004` per selezionarla, quindi seleziona "Copy to 0:/gm9/out"
-   - Questo processo potrebbe durare molto se hai molti giochi DSiWare
+    - Questo processo potrebbe durare molto se hai molti giochi DSiWare
 6. Premi (B) due volte per ritornare al menu principale
 
 ### Sezione II - Backup dei salvataggi dei giochi GBA della Virtual Console
@@ -71,16 +71,16 @@ Per identificare il Title ID di un file `<ID titolo>.gbavc.sav`, puoi controllar
 :::
 
 1. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi mantenere i salvataggi:
-   - Avvia il gioco GBA
-   - Esci dal gioco GBA
-   - Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
-   - Avvia GodMode9 premendo (A)
-   - Entra nella cartella `[S:] SYSNAND VIRTUAL`
-   - Premi (A) su `agbsave.bin` per selezionarlo
-   - Seleziona "AGBSAVE options..."
-   - Seleziona "Dump GBA VC save"
-   - Premi il pulsante (A) per continuare
-   - Premi (Start) per riavviare la tua console
+    - Avvia il gioco GBA
+    - Esci dal gioco GBA
+    - Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+    - Avvia GodMode9 premendo (A)
+    - Entra nella cartella `[S:] SYSNAND VIRTUAL`
+    - Premi (A) su `agbsave.bin` per selezionarlo
+    - Seleziona "AGBSAVE options..."
+    - Seleziona "Dump GBA VC save"
+    - Premi il pulsante (A) per continuare
+    - Premi (Start) per riavviare la tua console
 
 ### Sezione IV - Copiare la EmuNAND nella SysNAND
 
@@ -88,9 +88,9 @@ Per identificare il Title ID di un file `<ID titolo>.gbavc.sav`, puoi controllar
 2. Entra in `[E:] EMUNAND VIRTUAL`
 3. Premi (A) su `nand.bin` per selezionarlo, quindi seleziona "NAND image options...", ed infine seleziona "Restore SysNAND (safe)"
 4. Premi il pulsante (A) per sbloccare la sovrascrittura su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
-   - Questo processo non eliminerà boot9strap
+    - Questo processo non eliminerà boot9strap
 5. Inserisci la combinazione di tasti richiesta a schermo per sbloccare i permessi di scrittura di primo livello su SysNAND
-   - Questo passaggio richiederà un po' di tempo
+    - Questo passaggio richiederà un po' di tempo
 6. Una volta completato, premi (A) per proseguire
 7. Se richiesto, premi (B) per rifiutare il ritiro delle autorizzazioni di scrittura
 8. Premi (B) per ritornare al menu principale
@@ -111,7 +111,7 @@ Se non hai mantenuto alcun salvataggio DSiWare, salta questa sezione.
 6. Seleziona "Copy path(s)"
 7. Premi il pulsante (A) per sbloccare i permessi di scrittura di primo livello su SysNAND, quindi inserisci la combinazione di tasti richiesta a schermo
 8. Seleziona "Overwrite file(s)"
-   - Questo processo potrebbe durare molto se hai molti giochi DSiWare
+    - Questo processo potrebbe durare molto se hai molti giochi DSiWare
 9. Se richiesto, premi (B) per rifiutare il ritiro delle autorizzazioni di scrittura
 10. Premi (B) due volte per ritornare al menu principale
 
@@ -132,21 +132,21 @@ Per identificare il Title ID di un file `<ID titolo>.gbavc.sav`, puoi controllar
 1. Tenendo premuto (R), premi (Start) per spegnere la console
 2. Avvia la tua console nella SysNAND
 3. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi ripristinare i salvataggi:
-   - Avvia il gioco GBA
-   - Esci dal gioco GBA
-   - Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
-   - Avvia GodMode9 premendo (A)
-   - Entra nella cartella `[0:] SDCARD` -> `gm9`
-   - Premi (Y) sul file `<ID titolo>.gbavc.sav` che vuoi ripristinare per copiarlo
-   - Premi (B) per ritornare al menu principale
-   - Entra nella cartella `[S:] SYSNAND VIRTUAL`
-   - Premi (A) su `agbsave.bin` per selezionarlo
-   - Seleziona "AGBSAVE options..."
-   - Seleziona "Inject GBA VC save"
-   - Premi il pulsante (A) per continuare
-   - Premi (Start) per riavviare la tua console
-   - Avvia il gioco GBA
-   - Esci dal gioco GBA
+    - Avvia il gioco GBA
+    - Esci dal gioco GBA
+    - Avvia la console tenendo premuto (Start) per avviare il menu chainloader di Luma3DS
+    - Avvia GodMode9 premendo (A)
+    - Entra nella cartella `[0:] SDCARD` -> `gm9`
+    - Premi (Y) sul file `<ID titolo>.gbavc.sav` che vuoi ripristinare per copiarlo
+    - Premi (B) per ritornare al menu principale
+    - Entra nella cartella `[S:] SYSNAND VIRTUAL`
+    - Premi (A) su `agbsave.bin` per selezionarlo
+    - Seleziona "AGBSAVE options..."
+    - Seleziona "Inject GBA VC save"
+    - Premi il pulsante (A) per continuare
+    - Premi (Start) per riavviare la tua console
+    - Avvia il gioco GBA
+    - Esci dal gioco GBA
 
 ### Sezione VII - Backup della SysNAND
 
@@ -165,7 +165,7 @@ Per identificare il Title ID di un file `<ID titolo>.gbavc.sav`, puoi controllar
 1. Tenendo premuto (R), premi (B) per rimuovere la scheda SD
 2. Inserisci la scheda SD nel tuo computer
 3. Ripristina tutti i file sulla tua scheda SD
-   - Assicurati di sostituire il file `boot.firm` sulla tua scheda SD con quello preso dal tuo backup
+    - Assicurati di sostituire il file `boot.firm` sulla tua scheda SD con quello preso dal tuo backup
 4. Reinserisci la scheda SD nella tua console
 5. Premi (A) per eseguire il remount della scheda SD
 6. Premi il pulsante (Start) per riavviare la console
