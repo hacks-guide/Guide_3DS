@@ -16,8 +16,8 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
 
 - Seu flashcart compatível com ntrboot
 - Dois consoles da família 3DS
-  - **3DS de origem**: o console da família 3DS que já possui boot9strap instalado
-  - **3DS de destino**: o console da família 3DS com firmware padrão
+    - **3DS de origem**: o console da família 3DS que já possui boot9strap instalado
+    - **3DS de destino**: o console da família 3DS com firmware padrão
 - A versão v1.3 do [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (download direto)
 - A versão mais recente do [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
@@ -40,7 +40,7 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
 3. Leia o aviso em vermelho na tela
 4. Aperte (A) para continuar
 5. Selecione seu flashcart
-   - Se você não vê seu flashcart na lista na tela superior, leia a tela inferior para obter mais informações sobre cada opção
+    - Se você não vê seu flashcart na lista na tela superior, leia a tela inferior para obter mais informações sobre cada opção
 6. Selecione "Dump Flash"
 7. Aguarde até que o processo seja concluído
 8. Aperte (A) para continuar
