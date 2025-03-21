@@ -15,11 +15,11 @@ Windows 显示扩展名后，你可以更快找到本教程需要的文件。
 3. 将光标移动至“显示”
 4. 点击“文件扩展名”来启用它
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@ Windows 显示扩展名后，你可以更快找到本教程需要的文件。
 2. 点击窗口上方的“查看”按钮
 3. 把“文件扩展名”打勾
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@ Windows 显示扩展名后，你可以更快找到本教程需要的文件。
 
 2. 找到 “文件夹选项” 。
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. 在文件夹选项菜单中点击 “视图” 选项卡。
 
 4. 取消选择 “为已知文件类型隐藏扩展名”。
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 
