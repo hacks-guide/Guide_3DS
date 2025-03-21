@@ -21,9 +21,9 @@ Se lo schermo lampeggia con i colori, poi si blocca o crasha:
 
 - Assicurati di avere la versione corretta di `arm11code.bin` e `browserhax_hblauncher_ropbin_payload.bin` per la versione e la regione della tua console
 - Prova a reimpostare i dati del browser:
-  1. Avvia il browser internet, quindi apri le sue impostazioni
-  2. Scorri verso il basso e seleziona "Reimposta tutti i dati salvati" (può avere nomi simili come "Inizializza i dati di salvataggio" o "Elimina tutti i dati salvati")
-  3. Riprova ad eseguire l'exploit
+    1. Avvia il browser internet, quindi apri le sue impostazioni
+    2. Scorri verso il basso e seleziona "Reimposta tutti i dati salvati" (può avere nomi simili come "Inizializza i dati di salvataggio" o "Elimina tutti i dati salvati")
+    3. Riprova ad eseguire l'exploit
 - Prova a cambiare la lingua di sistema in una lingua diversa da quella corrente
 
 :::
