@@ -26,20 +26,20 @@ A most következő lépésekben mindig írd felül az SD kártyán található f
 4. Másold a `SafeB9SInstaller.bin` fájlt a SafeB9SInstaller `.zip`-ből az SD kártyád gyökerébe, majd nevezd át `boot.firm`-re
 5. Tedd vissza az SD kártyád a konzoldba
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/updateb9s-root-layout.png)
+    ![](/images/screenshots/updateb9s-root-layout.png)
 
-   :::
+    :::
 
 ### II. rész - boot9strap telepítése
 
 1. Kapcsold be a konzolod
-   - Ennek automatikusan indítania kell a SafeB9SInstaller-t
+    - Ennek automatikusan indítania kell a SafeB9SInstaller-t
 2. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-   - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-updating-b9s)
+    - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-updating-b9s)
 3. Ha ez elkészült, kényszerítsd a konzolod leállásra a bekapcsológomb lenyomva tartásával
-   - A konzolod csak addig fog a SafeB9SInstaller képernyőre bootolni, amíg a következő részt be nem fejezed
+    - A konzolod csak addig fog a SafeB9SInstaller képernyőre bootolni, amíg a következő részt be nem fejezed
 
 ### III. rész - Luma3DS frissítése
 
@@ -48,8 +48,8 @@ A most következő lépésekben mindig írd felül az SD kártyán található f
 3. Tedd vissza az SD kártyád a konzoldba
 4. Kapcsold be a konzolod
 5. Ha a konzolod a Luma3DS konfigurációs menübe bootolt, nyomj (Start) gombot a mentéshez és az újraindításhoz
-   - A Luma3DS konfigurációs menü a beállítások a Luma3DS egyedi firmware-hez. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz
-   - Az útmutató céljának megfeleléshez ezen beállítások alapértelmezett állapoton lesznek hagyva
+    - A Luma3DS konfigurációs menü a beállítások a Luma3DS egyedi firmware-hez. Sok ezek közül a beállítások közül hasznos az egyedivé tételhez vagy a debuggoláshoz
+    - Az útmutató céljának megfeleléshez ezen beállítások alapértelmezett állapoton lesznek hagyva
 
 ___
 
