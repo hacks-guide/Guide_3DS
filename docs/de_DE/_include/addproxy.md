@@ -17,5 +17,5 @@ Eine visuelle Anleitung für diesen Abschnitt findest du [hier](/images/screensh
 5. Setze den Proxy-Server auf `ssloth.nintendohomebrew.com` und den Port auf `8080`
 6. Click OK, then click Save
 7. When prompted, click "Test" to perform the connection test
-   - The test should succeed
+    - The test should succeed
 8. Click "OK" to continue
