@@ -4,8 +4,8 @@
 4. Selectaţi "Backup Options"
 5. Selecciona "SysNAND Backup"
 6. Apăsați (A) pentru a confirma
-   - This process will take some time
-   - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
+    - This process will take some time
+    - If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
 7. Apăsați (A) pentru a continua
 8. Apăsați (B) ca să vă întoarceți în meniul principal
 9. Select "Exit"
