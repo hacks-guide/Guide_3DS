@@ -15,11 +15,11 @@
 3. Go to "Show"
 4. Click "File name extensions" to enable it
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@
 2. Нажмите кнопку "Вид" в верхнем меню
 3. Установите флажок "Расширения имен файлов"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@
 
 2. Введите в поле для поиска "Параметры папок" и выберите соответствующий результат
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. Нажмите на вкладку "Вид" в верхней части окна Параметры папок
 
 4. Снимите флажок "Скрывать расширения для зарегистрированных типов файлов"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 
