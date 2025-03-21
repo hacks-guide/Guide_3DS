@@ -14,10 +14,10 @@ Je SD-kaart moet geformatteerd zijn met FAT32 om deze handleiding te volgen, and
 
 1. Plaats je SD kaart in je computer
 2. Copy everything from the Luma3DS `.zip` (`boot.firm`, `boot.3dsx`, and `config`) to the root of your SD card, replacing any existing files
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 3. Stop je SD-kaart terug in je console
 4. Zet je console aan
-   - If you see the Luma3DS configuration menu, press (Start) to save and reboot
+    - If you see the Luma3DS configuration menu, press (Start) to save and reboot
 
 ::: info
 
