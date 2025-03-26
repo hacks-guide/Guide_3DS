@@ -1,94 +1,98 @@
-# Formatting SD (Windows)
+# Memformat kartu SD (Windows)
 
-## Required Reading
+## Bacaan Penting
 
-This is an add-on section for formatting an SD card to work with the 3DS.
+Ini adalah laman lebihan untuk memformat kartu SD agar terbaca di 3DS.
 
-If the 3DS already recognizes the SD card, this guide is not required.
+Jika 3DS sudah bisa membaca kartu SD, panduan ini tidak perlu.
 
-This page is for Windows users only. If you are not on Windows, check out the [Formatting SD (Linux)](formatting-sd-\(linux\)) or [Formatting SD (Mac)](formatting-sd-\(mac\)) pages.
+Laman ini khusus pengguna Windows. Jika tidak menggunakan Windows, lihat laman [Memformat kartu SD (Linux)](formatting-sd-\(linux\)) atau [Memformat kartu SD (Mac)](formatting-sd-\(mac\)).
 
-## What You Need
+## Apa yang Perlu
 
-- **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- **Untuk semua ukuran kartu SD:** Versi terkini dari [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **Khusus kartu SD ukuran 64GB ke atas:** Versi terkini dari [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## Instructions (32GB or smaller)
+## Instruksi
 
-1. Insert your SD card into your computer
+### Bagian I - SD Card Formatter
 
-2. If the SD card has any files and folders on it, copy everything to a folder on your computer
+1. Sisipkan kartu SD ke komputer Anda
 
-3. Run `SD Card Formatter Setup` (the `.exe` file) in the downloaded `.zip` file with Administrator privileges, then install the program
+2. Jika kartu SD ada berkas dan folder, salin dulu semuanya ke folder di komputer
 
-4. Run `SD Card Formatter` from the Start Menu
+3. Jalankan tata olah `SD Card Formatter Setup` (yang `.exe`) dari `.zip` unduhan dengan Hak Istimewa Admin, lalu pasang
 
-5. Select your SD card's drive letter for "Select card"
+4. Jalankan `SD Card Formatter` dari Menu Mulai
 
-   ::: danger
+5. Pilih huruf kandar kartu SD Anda di kolom "Select card"
 
-   Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!
+    ::: danger
 
-   :::
+    Pastikan pilih huruf kandar (_drive_) yang benar, **jangan memformat _drive_ yang salah**!
 
-6. Enter anything for "Volume label"
+    :::
 
-7. Ensure that "Quick Format" is selected
+6. Ketik apa saja di "Volume label"
 
-8. Click "Format"
+7. Pastikan "Quick Format" sudah dipilih
 
-9. Click "OK"
+8. Pencet "Format"
 
-10. Wait for the format to finish
+9. Pencet "OK"
 
-11. Click "OK"
+10. Tunggu selesai memformat
 
-12. Close SD Card Formatter
+11. Pencet "OK"
 
-13. If the SD card had any files and folders on it before the format, copy everything back from your computer
+12. Tutup SD Card Formatter
 
-## Instructions (64GB or larger)
+13. Jika ukuran kartu SD 32GB ke bawah dan ada berkas dan folder sebelum memformat, **salin balik semuanya dari komputer**
 
-1. Insert your SD card into your computer
+::: info
 
-2. If the SD card has any files and folders on it, copy everything to a folder on your computer
+Pemformatan selesai untuk kartu SD ukuran **32GB ke bawah.**
 
-3. Run `guiformat.exe`
+:::
 
-4. Select your SD card's drive letter for "Drive"
+### Bagian II - guiformat (KHUSUS 64GB ke atas)
 
-   ::: danger
+1. Jalankan `guiformat.exe`
 
-   Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!
+2. Pilih huruf kandar kartu SD Anda di kolom "Drive"
 
-   :::
+    ::: danger
 
-5. Select a size for "Allocation unit size"
-   - If the SD card is 64GB, choose 32768
-   - If the SD card is larger than 64GB, choose 65536
+    Pastikan pilih huruf kandar (_drive_) yang benar, **jangan memformat _drive_ yang salah**!
 
-6. Enter anything for "Volume label"
+    :::
 
-7. Ensure that "Quick Format" is selected
+3. Pilih ukuran di "Allocation unit size"
+    - Jika ukuran kartu SD 64GB, pilih 32768
+    - Jika ukuran kartu SD lebih dari 64GB, pilih 65536
 
-8. Click "Start"
+4. Ketik apa saja di "Volume label"
 
-9. Click "OK"
+5. Pastikan "Quick Format" sudah dipilih
 
-10. Wait for the format to finish
+6. Pencet "Start" (Mulai)
 
-11. Click "Close"
+7. Pencet "OK"
 
-12. If the SD card had any files and folders on it before the format, copy everything back from your computer
+8. Tunggu selesai memformat
 
-## Troubleshooting
+9. Pencet "Close" (Tutup)
 
-- guiformat shows the error "Failed to open device: GetLastError()=32"
-  - Close everything that may be using the SD card, such as any File Explorer windows.
-  - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
+10. Jika tadi kartu SD ada berkas dan folder sebelum memformat, **salin balik semuanya dari komputer**
 
-- guiformat shows the error "GetLastError()=1117"
-  - Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
+## Sidik Gangguan
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.
+- guiformat muncul galat "Failed to open device: GetLastError()=32"
+    - Tutup semua aplikasi yang membaca kartu SD, seperti jendela File Explorer.
+    - Jika masih ada isu, coba format ulang kartunya ke NTFS di File Explorer, tutup jendelanya saat selesai, dan coba lagi dengan guiformat.
+
+- guiformat muncul galat "GetLastError()=1117"
+    - Perlindungan-tulis pada kartu SD mungkin [aktif](/images/sdlock.png). Pengunci harus di posisi atas agar bisa menulis ke kartu SD (termasuk memformat).
+
+- Kartu SD tetap tidak terbaca konsol atau daya tampungnya salah setelah diformat
+    - Kartu SD mungkin dipartisi atau ada ruang tak dialokasikan. Ikuti [instruksi ini](https://wiki.hacks.guide/wiki/SD_Clean/Windows) untuk memformat ulang kartu SD.

@@ -2,12 +2,12 @@ This section will reset your system settings to its defaults. **Installed games 
 
 1. Power off your console
 2. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-3. Navigați spre `[0:] SDCARD` -> `gm9`
+3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. Apăsați (X) pe imaginea`.bin` CTRTransfer pentru a o șterge
 5. Apăsați (A) pentru a confirma
 6. Press (B) a few times to go back to the main menu
 7. Navigate to `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-   - The `<ID0>` will be a folder with a 32-character long name
+    - The `<ID0>` will be a folder with a 32-character long name
 8. Use the D-Pad to highlight `00010017`
 9. Press (Right Shoulder) + (A) to bring up the folder options
 10. Selectați "Copy to 0:/gm9/out"

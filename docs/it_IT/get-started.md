@@ -3,6 +3,8 @@ noneSelected: Il modello della console è richiesto.
 invalidVersion: Questa non sembra essere una versione di sistema valida.
 head:
   - - script
+    - src: /assets/js/common.js
+  - - script
     - src: /assets/js/selecting.js
 ---
 

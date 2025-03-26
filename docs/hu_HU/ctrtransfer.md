@@ -1,6 +1,6 @@
 # CTRTransfer
 
-## Required Reading
+## Kötelező olvasmány
 
 Ebben a kiegészítő részben a 11.15.0-s CTRTransfer képfájlt fogjuk a konzolodra telepíteni.
 
@@ -16,42 +16,46 @@ A folyamat részeként a rendszer beállításaid visszaállításra kerülnek a
 
 :::
 
-## What You Need
+## Amire szükséged lesz
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
-- The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
-- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
-- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-  - If you already have a torrent client, you do not need to download a new one
-- The 11.15.0 CTRTransfer image for your console and region:
+- A [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) legújabb kiadása (a GodMode9 `.zip` fájl)
+- Az [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) legfrissebb kiadása (közvetlen letöltés)
+- A [faketik](https://github.com/ihaveamac/faketik/releases/latest) legújabb kiadása _(a`.3dsx` fájl)_
+- Az [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) legfrissebb kiadása (jobb kattintás, Link mentése másként...)
+- A konzolodhoz és régiódhoz tartozó 11.15.0-s CTRTransfer képfájl
+  ::: warning
+
+Egy torrent kliens használata, mint például a [qBittorrent](https://www.qbittorrent.org/download) vagy a [Deluge](https://deluge-torrent.org/download/) szükséges a CTRTransfer képfájlok letöltéséhez.
+
+:::
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
-## Instructions
+## Lépések
 
-### Section I - Prep Work
+### I. rész - Előkészületek
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
-### Section II - NAND Backup
+### II. rész - NAND mentés
 
 1. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
 
 <!--@include: ./_include/nand-backup.md -->
 
-### Section III - CTRTransfer
+### III. rész - CTRTransfer
 
 <!--@include: ./_include/ctrtransfer-main.md -->
 
-### Section IV - Launching FBI
+### IV. rész - FBI elindítása
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
-### Section V - Reinstalling Tickets
+### V. rész - Ticketek újratelepítése
 
 <!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-### Section VI - Fixing locale-related issues
+### VI. rész - A terület specifikus problémák javítása
 
 <!--@include: ./_include/ctrnand-datayeet.md -->
 
@@ -59,6 +63,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Tovább a [telepítés véglegesítésére](finalizing-setup)
 
 :::

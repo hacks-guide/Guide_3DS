@@ -4,5 +4,5 @@
 4. Wybierz "No EmuNAND"
 5. Wybierz opcję "Auto"
 6. Naciśnij (A) aby zaakceptować etykietę `GM9SD`
-   - Optionally, you may input a custom name for the SD card
+    - Optionally, you may input a custom name for the SD card
 7. Kiedy zostaniesz poproszony, wprowadź podaną kombinację klawiszy

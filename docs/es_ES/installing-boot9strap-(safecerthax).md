@@ -4,7 +4,7 @@
 
 :::
 
-## Compatibility Notes
+## Notas de compatibilidad
 
 safecerthax is compatible with all Old 3DS and Old 2DS consoles in all regions on system versions 1.0.0 through 11.14.0.
 
@@ -14,13 +14,13 @@ This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ens
 
 :::
 
-## What You Need
+## Lo que necesitas
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- La última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (descarga directa)
+- La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (descarga directa)
+- La última versión de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (el archivo `.zip` de Luma3DS)
 
-## Instructions
+## Instrucciones
 
 ### Section I - Hardware Button Check
 
@@ -28,8 +28,8 @@ In this section, you will see whether your shoulder buttons are working on your 
 
 1. Power on your console
 2. Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
-   - The camera applet should appear
-3. Power off your console
+    - The camera applet should appear
+3. Apaga la consola
 
 ::: warning
 
@@ -41,43 +41,49 @@ If the camera did NOT appear, you cannot follow this method. If this is the case
 
 In this section, you will copy the files needed to trigger the safecerthax exploit.
 
-1. Insert your SD card into your computer
+1. Inserta la tarjeta SD en tu computadora
 2. Copy everything from the Luma3DS `.zip` to the root of your SD card
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
-3. Create a folder named `boot9strap` on the root of your SD card
-4. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+    - La raíz de la tarjeta SD se refiere al primer directorio de la tarjeta, donde puedes ver la carpeta Nintendo 3DS pero no estás dentro de ella
+3. Crea una carpeta llamada `boot9strap` en la raíz de la tarjeta SD
+4. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en la tarjeta SD
 5. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
-6. Reinsert your SD card into your console
+6. Reinserta la tarjeta SD en la consola
 7. Power on your console
 
 ### Section III - safecerthax proxy
+
+::: warning
+
+This section is MANDATORY! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
+
+:::
 
 In this section, you will change your Internet connection settings to use a proxy network designed to exploit the System Update feature of your console.
 
 <!--@include: ./_include/addproxy.md -->
 
-1. Power off your console
+1. Apaga la consola
 
 ### Section IV - safecerthax
 
 In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) where safecerthax will be triggered, which will launch you into the boot9strap (custom firmware) installer.
 
 1. With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
-   - Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
+    - Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
 2. Press "OK" to accept the update
-   - There is no update. This is part of the exploit
+    - There is no update. This is part of the exploit
 3. Press "I accept" to accept the terms and conditions
 4. The update will eventually fail, with the error code `003-1099`. This is intended behaviour
 5. Press "OK" to close the error message
 6. If the exploit was successful, you will have booted into SafeB9SInstaller
-   - If the console freezes or crashes, force power off the console, then retry this section
+    - If the console freezes or crashes, force power off the console, then retry this section
 
 ### Section V - Installing boot9strap
 
 En esta sección, instalarás custom firmware en tu consola.
 
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-safecerthax)
 2. Una vez completado, pulsa (A) para reiniciar tu consola
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -92,6 +98,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continúa a [Finalizar instalación](finalizing-setup)
 
 :::

@@ -1,5 +1,5 @@
 1. Tu consola debería haber iniciado en el menú de configuración de Luma3DS
-   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-   - For the purpose of this guide, **leave these options on the default settings** (do not check or uncheck anything)
-   - If your console shuts down when you try to power it on, ensure that you have copied `boot.firm` from the Luma3DS `.zip` to the root of your SD card
-2. Press (Start) to save and reboot
+    - En el menú de configuración de Luma3DS están los ajustes para el custom firmware Luma3DS. Muchos de estos ajustes pueden ser útiles para la personalización o depuración
+    - Para los fines de esta guía, **deja estas opciones en los valores por defecto** (no marques ni desmarques nada)
+    - Si la consola se apaga cuando intentas encenderla, asegúrate de que haber copiado `boot.firm` desde el archivo `.zip` de Luma3DS a la raíz de tu tarjeta SD
+2. Presiona (Start) para guardar y reiniciar

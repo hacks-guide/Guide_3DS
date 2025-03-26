@@ -17,7 +17,7 @@ Diese Seite ist nur für Linux-Nutzer gedacht. Falls du kein Linux-Nutzer bist, 
 1. Entpacke die f3 `.zip`-Datei
 2. Wechsel mit `cd` in das f3-Verzeichnis
 3. Verwende `make`, um F3 zu kompilieren
-4. Insert your SD card into your computer
+4. Stecke deine SD-Karte in deinen Computer
 5. Hänge deine SD-Karte ein
 6. Starte `./f3write <Dein SD-Karten-Einhängepunkt>`
 7. Warte, bis der Prozess abgeschlossen ist. Folgendermaßen könnte das Ergebnis aussehen:

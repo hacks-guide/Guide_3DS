@@ -2,12 +2,12 @@ Dieser Abschnitt wird deine Systemkonfiguration auf die Standardwerte zurückset
 
 1. Power off your console
 2. Press and hold (Start), and while holding (Start), power on your console. Dies wird GodMode9 starten
-3. Navigiere zu `[0:] SDCARD` -> `gm9`
+3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. Drücke (X) auf die CTRTransfer-Abbild `.bin` um es zu löschen
 5. Drücke (A), um zu bestätigen
 6. Drücke ein paar Mal (B), um zum Hauptmenü zurückzukehren
 7. Navigiere zu `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-   - The `<ID0>` will be a folder with a 32-character long name
+    - The `<ID0>` will be a folder with a 32-character long name
 8. Nutze das Steuerkreuz, um `00010017` auszuwählen
 9. Drücke (R) und (A), um die Optionen für den Ordner anzuzeigen
 10. Wähle "Copy to 0:/gm9/out" aus

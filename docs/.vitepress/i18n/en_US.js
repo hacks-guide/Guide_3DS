@@ -26,6 +26,7 @@ const themeConfig = {
 			text: localeData.extras,
 			items: [
 				{ text: localeData.pages["godmode9-usage"], link: `/godmode9-usage` },
+				{ text: localeData.pages["dumping-titles-and-game-cartridges"], link: `/dumping-titles-and-game-cartridges` },
 				{ text: localeData.pages["region-changing"], link: `/region-changing` },
 				{ text: localeData.pages["uninstall-cfw"], link: `/uninstall-cfw` },
 			]
@@ -39,7 +40,15 @@ const themeConfig = {
 					{ text: localeData.pages["key-information"], link: `/key-information` },
 					{ text: localeData.pages["get-started"], link: `/get-started` },
 					{ text: localeData.pages["ntrboot"], link: `/ntrboot` },
-					{ text: localeData.pages["multiple-options"] },
+					{
+						text: localeData.pages["multiple-options"],
+						items: [
+							{ text: localeData.pages["flashing-ntrboot-(3ds-single-system)"], link: `/flashing-ntrboot-(3ds-single-system)` },
+							{ text: localeData.pages["flashing-ntrboot-(3ds-multi-system)"], link: `/flashing-ntrboot-(3ds-multi-system)` },
+							{ text: localeData.pages["flashing-ntrboot-(dsi)"], link: `/flashing-ntrboot-(dsi)` },
+							{ text: localeData.pages["flashing-ntrboot-(nds)"], link: `/flashing-ntrboot-(nds)` },
+						]
+					},
 					{ text: localeData.pages["installing-boot9strap-(ntrboot)"], link: `/installing-boot9strap-(ntrboot)` },
 					{ text: localeData.pages["finalizing-setup"], link: `/finalizing-setup` }
 				]
@@ -109,7 +118,15 @@ const themeConfig = {
 					{ text: localeData.pages["key-information"], link: `/key-information` },
 					{ text: localeData.pages["get-started"], link: `/get-started` },
 					{ text: localeData.pages["ntrboot"], link: `/ntrboot` },
-					{ text: localeData.pages["multiple-options"] },
+					{
+						text: localeData.pages["multiple-options"],
+						items: [
+							{ text: localeData.pages["flashing-ntrboot-(3ds-single-system)"], link: `/flashing-ntrboot-(3ds-single-system)` },
+							{ text: localeData.pages["flashing-ntrboot-(3ds-multi-system)"], link: `/flashing-ntrboot-(3ds-multi-system)` },
+							{ text: localeData.pages["flashing-ntrboot-(dsi)"], link: `/flashing-ntrboot-(dsi)` },
+							{ text: localeData.pages["flashing-ntrboot-(nds)"], link: `/flashing-ntrboot-(nds)` },
+						]
+					},
 					{ text: localeData.pages["installing-boot9strap-(ntrboot)"], link: `/installing-boot9strap-(ntrboot)` },
 					{ text: localeData.pages["finalizing-setup"], link: `/finalizing-setup` }
 				]
@@ -135,7 +152,13 @@ const themeConfig = {
 					{ text: localeData.pages["key-information"], link: `/key-information` },
 					{ text: localeData.pages["get-started"], link: `/get-started` },
 					{ text: localeData.pages["installing-boot9strap-(mset9)"], link: `/installing-boot9strap-(mset9)` },
-					{ text: localeData.pages["multiple-options"] },
+					{
+						text: localeData.pages["multiple-options"],
+						items: [
+							{ text: localeData.pages["installing-boot9strap-(mset9-cli)"], link: `/installing-boot9strap-(mset9-cli)` },
+							{ text: localeData.pages["installing-boot9strap-(mset9-play-store)"], link: `/installing-boot9strap-(mset9-play-store)` }
+						]
+					},
 					{ text: localeData.pages["finalizing-setup"], link: `/finalizing-setup` }
 				]
 			},
@@ -243,7 +266,7 @@ const themeConfig = {
 
 export default {
 	lang: "en",
-	label: localeData.language,
+	label: "English",
     title: localeData.title,
     description: localeData.description,
     themeConfig: themeConfig

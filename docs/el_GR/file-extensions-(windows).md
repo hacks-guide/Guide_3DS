@@ -15,11 +15,11 @@
 3. Επιλέξτε «Εμφάνιση»
 4. Κάντε κλικ στο «Επεκτάσεις ονόματος αρχείων» για ενεργοποίηση
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10/8.1/8
 
@@ -27,11 +27,11 @@
 2. Κάντε κλικ στην επιλογή «Προβολή» του μενού κορδέλας
 3. Ενεργοποιήστε την επιλογή «Επεκτάσεις ονόματος αρχείων»
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@
 
 2. Κάντε αναζήτηση για «Επιλογές φακέλων» και επιλέξτε το αντίστοιχο αποτέλεσμα
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. Κάντε κλικ στην επιλογή «Προβολή», στο πάνω μέρος του μενού «Επιλογές φακέλων»
 
 4. Καταργήστε την επιλογή «Απόκρυψη επεκτάσεων για γνωστούς τύπους αρχείων»
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 

@@ -16,8 +16,8 @@ This method requires temporary access to a second 3DS family console that is alr
 
 - Your ntrboot compatible flashcart
 - Two 3DS family consoles
-  - **The source 3DS**: the 3DS family console that is already running boot9strap
-  - **The target 3DS**: the 3DS family console on stock firmware
+    - **The source 3DS**: the 3DS family console that is already running boot9strap
+    - **The target 3DS**: the 3DS family console on stock firmware
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
@@ -40,7 +40,7 @@ This method requires temporary access to a second 3DS family console that is alr
 3. Citiţi ecranul de avertisment de culoare roșie
 4. Apăsați (A) pentru a continua
 5. Selectaţi flashcart-ul
-   - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
+    - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
 6. Selectaţi "Dump Flash"
 7. Așteptați până când procesul este terminat
 8. Apăsați (A) pentru a continua

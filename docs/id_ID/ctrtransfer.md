@@ -1,57 +1,61 @@
 # CTRTransfer
 
-## Required Reading
+## Bacaan Penting
 
-This is an add-on section for installing an 11.15.0 CTRTransfer image to your console.
+Ini adalah laman lebihan untuk memasang CTRTransfer 11.15.0 ke konsol.
 
 ::: info
 
-This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.
+Konsol harus sudah ada Luma3DS dan boot9strap untuk laman ini. Jika sudah mengikuti panduan sampai "Penyiapan Akhir", Luma3DS dan boot9strap sudah ada.
 
 :::
 
 ::: warning
 
-As a part of this process, your system settings will be reset to its defaults. This includes things such as your username, country, and language. **Installed games and their save data will not be affected.**
+Untuk proses bagian ini, pengaturan sistem akan diatur ulang ke bawaan. Ini termasuk nama pengguna, negara, dan bahasa. **Tidak memengaruhi permainan terpasang dan simpanannya.**
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
-- The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
-- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
-- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-  - If you already have a torrent client, you do not need to download a new one
-- The 11.15.0 CTRTransfer image for your console and region:
+- Versi terkini dari [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (yang `.zip` GodMode9)
+- Versi terkini dari [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (unduhan langsung)
+- Versi terkini dari [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(yang berkas `.3dsx`)_
+- Versi terkini dari [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (pencet kanan lalu _save link as_; simpan tautan)
+- Berkas CTRTransfer 11.15.0 sesuai jenis dan daerah konsol
+  ::: warning
+
+Perlu klien torrent untuk mengunduh berkas CTRTransfer, seperti [qBitTorrent](https://www.qbittorrent.org/download) atau [Deluge](https://deluge-torrent.org/download/).
+
+:::
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
-### Section II - NAND Backup
+### Bagian II - Mencadang NAND
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
-### Section III - CTRTransfer
+### Bagian III - CTRTransfer
 
 <!--@include: ./_include/ctrtransfer-main.md -->
 
-### Section IV - Launching FBI
+### Bagian IV - Membuka FBI
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
-### Section V - Reinstalling Tickets
+### Bagian V - Memasang ulang Ticket
 
 <!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-### Section VI - Fixing locale-related issues
+### Bagian VI - Memperbaiki isu daerah konsol
 
 <!--@include: ./_include/ctrnand-datayeet.md -->
 
@@ -59,6 +63,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Lanjut ke [Penyiapan Akhir](finalizing-setup)
 
 :::

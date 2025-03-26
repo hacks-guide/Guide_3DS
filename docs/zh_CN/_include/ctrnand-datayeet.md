@@ -2,12 +2,12 @@
 
 1. 将主机关机
 2. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-3. 进入到 `[0:] SDCARD` -> `gm9`
+3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
 4. 在 CTRTransfer `.bin` 上按 “X” 来删除它
 5. 按下 “A” 键确认
 6. 按若干次 “B” 键回到主菜单
 7. 进入到 `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-   - The `<ID0>` will be a folder with a 32-character long name
+    - The `<ID0>` will be a folder with a 32-character long name
 8. 使用十字键将光标移动至 `00010017`
 9. 按下 “R” + “A” 键打开文件夹选项菜单
 10. 选择 “Copy to 0:/gm9/out”

@@ -18,13 +18,14 @@ This page requires a computer running Windows, Linux, or macOS. If you have an A
 
 * The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
 * Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
+    + If you are on Windows, Python from the Microsoft Store cannot be used. Please install a version from python.org.
     + If you are on Linux or macOS, you may already have Python 3. Check by opening a Terminal window and entering `python3 -V`. If this returns a version number, it will work for this guide.
 
 ## Instructions
 
 ::: info
 
-On this page, you will use the MSET9 script, which is used to trigger MSET9. While the script is in progress, user data will temporarily disappear but will return upon the completion of this page. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page.
+On this page, you will use the MSET9 script, which is used to trigger MSET9. While the script is in progress, user data will temporarily disappear but will return upon the completion of this page. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting-mset9) page.
 
 :::
 
@@ -60,7 +61,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
     + Ensure that the correct console model and version is displayed
 1. Type `1`, then press Enter to begin the process of creating the MSET9 ID1
 1. After reviewing the disclaimer, type `1` again and press Enter to accept it
-    + If you get an error, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9), then try again
+    + If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
 1. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
     + Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
 1. Reinsert your SD card into your console
@@ -86,7 +87,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
     + If the window says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
         + Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
         + Once you have resolved the issue, return to Section I Step 14
-        + For more information, check the [troubleshooting](troubleshooting#installing-boot9strap-mset9) page
+        + For more information, check the [troubleshooting](troubleshooting-mset9) page
 1. Type `0`, then press Enter to close the script
 1. Reinsert your SD card into your console
 
@@ -115,14 +116,14 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 1. Press Enter to close the MSET9 script
 1. Reinsert your SD card into your console **without pressing any buttons or touching the screen**
 1. If the exploit was successful, you will have booted into SafeB9SInstaller 
-    + If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting#installing-boot9strap-mset9)
+    + If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
 
 ### Section III - Installing boot9strap
 
 In this section, you will install custom firmware onto your console.
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
-    + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+    + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
 1. Once it is complete, press (A) to reboot your console
 <!--@include: ./_include/configure-luma3ds.md -->
 

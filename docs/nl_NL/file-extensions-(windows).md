@@ -15,11 +15,11 @@ Dit zal het gemakkelijker maken om de verwezen bestanden in de rest van deze han
 3. Ga naar "Show"
 4. Klik op "File name extensions" om het te activeren
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@ Dit zal het gemakkelijker maken om de verwezen bestanden in de rest van deze han
 2. Klik op de "View" optie in het lintmenu
 3. Check de box met het label "File name extensions" of 'Bestandsnaam extensies"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@ Dit zal het gemakkelijker maken om de verwezen bestanden in de rest van deze han
 
 2. Zoek naar "Folder Options" of "Folder Opties" en selecteer het overeenkomstige resultaat
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. Klik op de "View" of "Beeld" optie bovenaan het Folder Opties menu
 
 4. Uncheck de box met label "Verberg extensies van bekende bestandsstypen"
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 

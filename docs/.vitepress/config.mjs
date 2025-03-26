@@ -26,6 +26,9 @@ export default defineConfig({
     ko_KR: i18n.ko_KR,
     pt_BR: i18n.pt_BR
   },
+  sitemap: {
+    hostname: 'https://3ds.hacks.guide'
+  },
   themeConfig: {
     outline: {
       level: 'deep'

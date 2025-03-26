@@ -53,6 +53,12 @@ In this section, you will copy the files needed to trigger the safecerthax explo
 
 ### Section III - safecerthax proxy
 
+::: warning
+
+This section is MANDATORY! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
+
+:::
+
 In this section, you will change your Internet connection settings to use a proxy network designed to exploit the System Update feature of your console.
 
 <!--@include: ./_include/addproxy.md -->
@@ -77,7 +83,7 @@ In this section, you will enter Safe Mode (a feature available on all 3DS family
 In this section, you will install custom firmware onto your console.
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
-    + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+    + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-safecerthax)
 1. Once it is complete, press (A) to reboot your console
 <!--@include: ./_include/configure-luma3ds.md -->
 

@@ -1,11 +1,5 @@
 # Alapvető információk
 
-::: danger
-
-<!--@include: ./_include/3ds-online.md -->
-
-:::
-
 ::: info
 
 Ha ez az első alkalom, hogy moddolsz egy 3DS-t (vagy nem vagy ismerős a technológiával) akkor folytasd az olvasást! Egyébként, ha rendelkezel tapasztalattal és tudod, hogy mit csinálsz, folytasd a [Kezdeti lépésekkel](get-started).
@@ -16,9 +10,9 @@ Ez az oldal néhány alap számitástechnikai információt és 3DS specifikus i
 
 Minden szekció összezárt alapértelmezésként. Kattints rá vagy érintsd meg a nevét a szekciónak, hogy kinyisd.
 
-## Things you should know about the 3DS
+## Kompatibilitás
 
-:::: details 3DS/2DS compatibility
+:::: details Milyen konzolokkal kompatibilis ez az útmutató?
 
 ::: info
 
@@ -26,11 +20,11 @@ Minden szekció összezárt alapértelmezésként. Kattints rá vagy érintsd me
 
 :::
 
-Ez az útmutató minden kereskedelmi konzollal működik a Nintendo 3DS konzol családból (beleértve a 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, és a New 2DS XL/LL-t), függetlenül a régiótól és a firmware-től.
+Ez az útmutató minden kereskedelmi konzollal működik a Nintendo 3DS konzol családból (beleértve a 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, és a New 2DS XL/LL-t), függetlenül a régiótól és a firmware-től. NEM kompatibilis a DSi család konzoljaival(DSi, DSi XL/LL). A DSi-család konzoljaihoz, tekintsd meg [ezt az útmutatót](https://dsi.cfw.guide) helyette.
 
 ::::
 
-:::: details Computer compatibility
+:::: details Milyen számítógépre / hardware-re van szükségem ahhoz, hogy végigcsináljam ezt az útmutatót?
 
 ::: info
 
@@ -38,11 +32,11 @@ Ez az útmutató minden kereskedelmi konzollal működik a Nintendo 3DS konzol c
 
 :::
 
-A legtöbb esetben követheted ezt az útmutatót egészen addig, amíg képes vagy letölteni fájlokat az internetről és SD kártyára másolni. A számitógépedtől/telefonodtól/elektronikus eszközödtől függően szükséged lehet egy USB-SD kárya adapterre, ami lehetővé teszi a számítógéped számára, hogy olvassa az SD kártyádat.
+A legtöbb esetben követheted ezt az útmutatót egészen addig, amíg képes vagy letölteni fájlokat az internetről és SD kártyára másolni. Ez magába foglalja a legtöbb elektronikus eszközt, mint például a Windows, macOS, Linux vagy chromeOS (Chromebooks) operációs rendszert futtató számítógépeket, továbbá az Android telefonokat. Az elektronikus eszközödtől függően szükséged lehet egy USB-SD kárya adapterre, ami lehetővé teszi, hogy olvassa az SD kártyádat.
 
 ::::
 
-:::: details SD card location, type, and capacity
+:::: details Milyen SD kártyát tud a konzolom használni?
 
 ::: info
 
@@ -50,9 +44,15 @@ A legtöbb esetben követheted ezt az útmutatót egészen addig, amíg képes v
 
 :::
 
-Az SD kártyá slot helye és az SD kártya típusa amit elfogad a 3DS modelledtől függ. További infromációk találhatók erről a [Nintendo hivatalos támogatási oldalán](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
+Az SD kártya slot helye és az SD kártya típusa amit elfogad a 3DS modelledtől függ. További infromációk találhatók erről a [Nintendo hivatalos támogatási oldalán](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
 
 A 3DS bármilyen kapacitású SD kártyát tud olvasni (még akkor is, ha nagyobb, mint 32GB), de a kártyának FAT32-re kell formatálva lennie (**nem** exFAT vagy NTFS). A következő eszközöket használhatod az SD kártyád formázására, az operációs rendszeredtől függően: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). **128GB**-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt az egyedi témákkal és a GBA grafikával.
+
+::: info
+
+Erősen ajánlot, hogy **csak egy SD kártyát használj** bármikor a konzolhoz, mert nem tudod később két SD kártya tartalmát egyesíteni. Tehát, ha a konzolodnak van már SD kártyája, azt érdemes használnod a konzolod moddolásához, vagy másolj át mindent egy nagyobb kártyára, mielőtt vagy miután moddoltad.
+
+:::
 
 ::: warning
 
@@ -62,31 +62,33 @@ Ahhoz, hogy követhesd ezt az útmutatót szükséged van egy legalább **2GB** 
 
 ::: info
 
-Ha szeretnéd, leellenőrizheted az SD kártyádat valamelyik programmal az alábbiak közül: [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), vagy [F3XSwift (Mac)](f3xswift-\(mac\))
+Ha szeretnéd, leellenőrizheted az SD kártyádat valamelyik programmal az alábbiak közül: [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), vagy [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 
 ::::
 
 :::: warning
-::: details Potential risks (Disclaimer)
+
+:::details Potencionális kockázatok (Nyilatkozat)
 
 A konzolod moddolásával, van egy nagyon kicsi (de nem nulla) esélye, hogy a konzol brickelődik (nem működővé válik). _**A rossz helyre rakott fájlok NEM brickelik a konzolodat**_, de szándékosan kihagyott lépések elképzelhető, hogy igen.
 
 Röviden: A konzolod moddolása biztonságos, de a _**te felelősséged**_ ha valami elromlik.
 
 :::
+
 ::::
 
-## Things you need to do on your computer
+## Fontos terminológia
 
 ::: warning
 
-Az útmutató követése nem kell, hogy adatvesztéshez vezessen, de SD kártya hiba bármikor előfordulhat. Készítsd biztonsági mentést az SD kártyádról (különösen a `Nintendo 3DS` mappáról), ha tartalmaz fontos adatot.
+Az útmutató követése nem kell, hogy adatvesztéshez vezessen, de SD kártya hiba bármikor előfordulhat. Készíts biztonsági mentést az SD kártyádról (különösen a `Nintendo 3DS` mappáról), ha tartalmaz fontos adatot.
 
 :::
 
-:::: details File placement terminology (e.g. "root of SD", "/luma/")
+:::: details Mit jelent az "SG kártya gyökere" vagy "/luma/"?
 
 ::: info
 
@@ -96,7 +98,7 @@ Az útmutató követése nem kell, hogy adatvesztéshez vezessen, de SD kártya 
 
 Amikor fájlokat másolunk az SD kártyára, fontos, hogy jó helyre másoljuk, - egyébként a konzol nem fogja észrevenni a fájl és az exploit vagy a szoftver amit használni szeretnél nem fog működni. A fogalom, amit sűrűn fogsz látni ebben az útmutatóban az **SD kártya gyökere**, ami azt jelenti, amikor nem vagy benne semmilyen mappában az SD kártyán. A könyvtárat ami megjelenik először, amikor megnyitod az SD kártyád a számítógépeden, hívják 'gyökér'-nek.
 
-Látszhat még mappa neveket így jelölve: `/mappa/`. A használt perjelek könyvtárakat jelentenek, amik nem a részei a mappa nevének. Például, `/folder1/folder2/` a `folder2` mappára hivatkozik a `folder1` mappában:
+Láthatsz még mappa neveket így jelölve: `/mappa/`. A használt perjelek könyvtárakat jelentenek, amik nem a részei a mappa nevének. Például, `/folder1/folder2/` a `folder2` mappára hivatkozik a `folder1` mappában:
 
 ::: info
 
@@ -114,7 +116,7 @@ Látszhat még mappa neveket így jelölve: `/mappa/`. A használt perjelek kön
 
 ::::
 
-:::: details Downloading files from GitHub
+:::: details Hogyan töltök le fájlokat a GitHub-ról?
 
 ::: info
 
@@ -126,7 +128,7 @@ Ebben az útmutatóban másolni fogsz a 3DS-ed SD kártyájára olyan fájlokat,
 
 ::::
 
-:::: details Opening/extracting files
+:::: details Hogyan csomagolok ki egy ZIP fált?
 
 ::: info
 
@@ -142,7 +144,7 @@ A legtöbb operációs rendszeren dupla kattintással ki tudod csomagolni a fáj
 
 ::::
 
-:::: details (Windows only) File extensions
+:::: details Mik azok a fájl kiterjesztések?
 
 ::: info
 
@@ -154,13 +156,13 @@ Ha a számítógéped Windows-t futtat, a fájl kiterjesztések előfordulhat, h
 
 ::::
 
-## Getting help
+## Segítség kérése
 
 Ha problémád van ezen útmutató követésével, többféle módja van, hogy segítséget kapj!
 
-- If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-- If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- Ha olyan kérdésed van, amit nem válaszolt meg az az oldal, akkor a válaszaid lehet, hogy a [Telepítés előtti gyakran ismételt kérdések](faq#pre-installation-faq) oldalon találhatók.
+- Ha hibát kaptál a útmutató követése közben, ránézhetsz a [Hibaelhárítás](troubleshooting) oldalra a megoldásért.
+- Ha az itt található információk nem segítenek egy-egy támogatást kaphatsz a [Nintendo Homebrew Discord csatornán](https://discord.gg/MWxPgEp).
 
 ::: tip
 

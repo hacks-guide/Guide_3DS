@@ -1,6 +1,6 @@
 # Checando por CFW
 
-## Required Reading
+## Leitura Obrigatória
 
 Esta é uma seção adicional para checar se o seu console já possui custom firmware moderno.
 
@@ -8,18 +8,18 @@ Se o seu console já tem um custom firmware baseado em arm9loaderhax ou boot9str
 
 ::: info
 
-Se o seu console tem uma configuração de CFW baseada em menuhax, você deve [limpar a extdata do Menu HOME](troubleshooting#other-troubleshooting), e em seguida, seguir todas as instruções na sua SysNAND. Você provavelmente tem uma configuração baseada em menuhax se a versão do seu sistema ao inicializar sem um cartão SD é 9.2.0-20.
+Se o seu console tem uma configuração de CFW baseada em menuhax, você deve [limpar a extdata do Menu HOME](troubleshooting-post-install), e em seguida, seguir todas as instruções na sua SysNAND. Você provavelmente tem uma configuração baseada em menuhax se a versão do seu sistema ao inicializar sem um cartão SD é 9.2.0-20.
 
 :::
 
-## Instructions
+## Instruções
 
 1. Desligue seu console
 2. Segure o botão (Select)
 3. Ligue o seu console enquanto ainda segura o botão (Select)
 4. Agora você deve ver algo parecido com um menu de configuração
 
-## What to do next
+## O que fazer em seguida
 
 ::: tip
 

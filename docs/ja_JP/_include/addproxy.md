@@ -17,5 +17,5 @@
 5. Proxyサーバーをssloth.nintendohomebrew.comに設定し、ポート番号を8080に設定します。
 6. Click OK, then click Save
 7. When prompted, click "Test" to perform the connection test
-   - The test should succeed
+    - The test should succeed
 8. Click "OK" to continue

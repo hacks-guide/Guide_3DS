@@ -1,6 +1,6 @@
-# Move EmuNAND
+# Mover a EmuNAND
 
-## Required Reading
+## Leitura Obrigatória
 
 Esta é uma seção adicional, na qual moveremos o conteúdo de uma EmuNAND anterior para o seu novo CFW na SysNAND. Depois, removeremos a antiga partição da EmuNAND. Note que os termos EmuNAND e RedNAND se referem a implementações ligeiramente diferentes do [mesmo conceito](http://3dbrew.org/wiki/NAND_Redirection).
 
@@ -12,14 +12,14 @@ Você já DEVE ter instalado Luma3DS e boot9strap para usar isto.
 
 :::
 
-## What You Need
+## O que é necessário
 
-- An existing EmuNAND
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
+- Uma EmuNAND já existente
+- A versão mais recente do [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (o arquivo `.zip` do GodMode9)
 
-## Instructions
+## Instruções
 
-### Section I - Prep Work
+### Seção I - Preparação
 
 1. Desligue seu console
 2. Insira o cartão SD no seu computador
@@ -27,7 +27,7 @@ Você já DEVE ter instalado Luma3DS e boot9strap para usar isto.
 4. Copie a pasta `gm9` do `.zip` do GodMode9 para a raiz do seu cartão SD
 5. Reinsira o cartão SD no seu console
 
-### Section II - Backup SysNAND DSiWare Saves
+### Seção II - Backup dos dados salvos de DSiWare da SysNAND
 
 ::: info
 
@@ -38,13 +38,13 @@ Se você não tem nenhum jogo ou save de DSiWare que você se importa, pule esta
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 2. Se você for solicitado para criar backups de arquivos essenciais, aperte (A) para fazê-lo, então aperte (A) novamente para continuar quando o backup for concluído
 3. Se você for solicitado para consertar o RTC date&time, pressione (A) para consertar, então insira a data e a hora, depois pressione (A) para continuar
-   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
+    - Note que, se você teve que consertar a data e hora do RTC, você também terá que corrigir a hora na Configuração do Console após acabar o guia
 4. Navegue para `[2:] SYSNAND TWLN` -> `title`
 5. Segure (R) e aperte (A) ao mesmo tempo em `00030004` para selecionar a pasta, depois selecione "Copy to 0:/gm9/out"
-   - This process may take some time if you have many DSiWare games
+    - Este processo pode levar algum tempo caso você tenha muitos jogos DSiWare
 6. Aperte (B) duas vezes para retornar para o menu principal
 
-### Section III - Backup GBA VC Saves
+### Seção III - Backup de dados salvos do VC de GBA
 
 ::: info
 
@@ -71,31 +71,31 @@ Para identificar o TitleID de um arquivo `<TitleID>.gbavc.sav`, você pode obter
 :::
 
 1. Faça o seguinte processo para cada jogo de VC de GBA que você quer fazer um backup do save:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-   - Launch GodMode9 by pressing (A)
-   - Navegue para `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Dump GBA VC save"
-   - Aperte (A) para continuar
-   - Aperte (Start) para reiniciar seu console
+    - Inicie o jogo de VC de GBA
+    - Saia do jogo de VC de GBA
+    - Ligue o seu console enquanto segura (Start) para abrir o menu de chainloader do Luma3DS
+    - Inicie o GodMode9 pressionando (A)
+    - Navegue para `[S:] SYSNAND VIRTUAL`
+    - Pressione (A) no arquivo `agbsave.bin` para selecioná-lo
+    - Selecione "AGBSAVE options..."
+    - Selecione "Dump GBA VC save"
+    - Aperte (A) para continuar
+    - Aperte (Start) para reiniciar seu console
 
-### Section IV - Copy EmuNAND to SysNAND
+### Seção IV - Copiar a EmuNAND para a SysNAND
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 2. Navegue para `[E:] EMUNAND VIRTUAL`
 3. Aperte (A) em `nand.bin` para selecioná-lo, depois selecione "NAND image options...", depois selecione "Restore SysNAND (safe)"
 4. Aperte (A) para destravar as modificações na SysNAND, então aperte a sequência de botões solicitada
-   - This will not overwrite your boot9strap installation
+    - Isso não irá sobrescrever sua instalação do boot9strap
 5. Aperte a sequência de botões solicitada para desbloquear "SysNAND (lvl1) writing"
-   - This process will take some time
+    - Esse processo levará algum tempo
 6. Quando concluído, aperte (A) para continuar
 7. Se solicitado, aperte (B) para recusar o bloqueio da permissão de escrita
 8. Aperte (B) para retornar para o menu principal
 
-### Section V - Restore DSiWare Saves
+### Seção V - Restaurando dados salvos de DSiWare
 
 ::: info
 
@@ -111,11 +111,11 @@ Se você não fez o backup de Saves de DSiWare anteriormente, pule esta seção.
 6. Selecione "Copy path(s)"
 7. Aperte (A) para destravar "SysNAND (lvl1) writing", então aperte a sequência de botões solicitada
 8. Selecione "Overwrite file(s)"
-   - This process may take some time if you have many DSiWare games
+    - Este processo pode levar algum tempo caso você tenha muitos jogos DSiWare
 9. Se solicitado, aperte (B) para recusar o bloqueio da permissão de escrita
 10. Aperte (B) duas vezes para retornar para o menu principal
 
-### Section VI - Restore GBA VC Saves
+### Seção VI - Restaurando dados salvos do VC de GBA
 
 ::: info
 
@@ -132,23 +132,23 @@ Para identificar o TitleID de um arquivo `<TitleID>.gbavc.sav`, você pode obter
 1. Segure (R) e aperte (Start) ao mesmo tempo para desligar seu console
 2. Ligue o seu console na SysNAND
 3. Faça o seguinte processo para cada jogo de VC de GBA que você deseja restaurar o save:
-   - Launch the GBA VC game
-   - Exit the GBA VC game
-   - Boot your console while holding (Start) to launch the Luma3DS chainloader menu
-   - Launch GodMode9 by pressing (A)
-   - Navegue para `[0:] SDCARD` -> `gm9`
-   - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-   - Aperte (B) para retornar para o menu principal
-   - Navegue para `[S:] SYSNAND VIRTUAL`
-   - Press (A) on `agbsave.bin` to select it
-   - Select "AGBSAVE options..."
-   - Select "Inject GBA VC save"
-   - Aperte (A) para continuar
-   - Aperte (Start) para reiniciar seu console
-   - Launch the GBA VC game
-   - Exit the GBA VC game
+    - Inicie o jogo de VC de GBA
+    - Saia do jogo de VC de GBA
+    - Ligue o seu console enquanto segura (Start) para abrir o menu de chainloader do Luma3DS
+    - Inicie o GodMode9 pressionando (A)
+    - Navegue para `[0:] SDCARD` -> `gm9`
+    - Pressione (Y) no arquivo `<TitleID>.gbavc.sav` que você deseja restaurar para copiá-lo
+    - Aperte (B) para retornar para o menu principal
+    - Navegue para `[S:] SYSNAND VIRTUAL`
+    - Pressione (A) no arquivo `agbsave.bin` para selecioná-lo
+    - Selecione "AGBSAVE options..."
+    - Selecione "Inject GBA VC save"
+    - Aperte (A) para continuar
+    - Aperte (Start) para reiniciar seu console
+    - Inicie o jogo de VC de GBA
+    - Saia do jogo de VC de GBA
 
-### Section VII - Backup SysNAND
+### Seção VII - Backup da SysNAND
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 
@@ -156,7 +156,7 @@ Para identificar o TitleID de um arquivo `<TitleID>.gbavc.sav`, você pode obter
 
 1. **Faça backup de todos os arquivos no seu cartão SD para uma pasta no seu computador; todos os arquivos serão apagados na próxima etapa**
 
-### Section VIII - Format SD card
+### Seção VIII - Formatar o cartão SD
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 
@@ -165,7 +165,7 @@ Para identificar o TitleID de um arquivo `<TitleID>.gbavc.sav`, você pode obter
 1. Segure (R) e aperte (B) ao mesmo tempo para ejetar o cartão SD
 2. Insira o cartão SD no seu computador
 3. Copie todos os seus arquivos de volta para o seu cartão SD
-   - Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+    - Certifique-se de substituir o arquivo `boot.firm` no seu cartão SD com o do seu backup
 4. Reinsira o cartão SD no seu console
 5. Aperte (A) para remontar seu cartão SD
 6. Aperte (Start) para reiniciar
@@ -174,6 +174,6 @@ ___
 
 ::: tip
 
-Return to [Finalizing Setup](finalizing-setup)
+Retorne para [Finalizando a Instalação](finalizing-setup)
 
 :::

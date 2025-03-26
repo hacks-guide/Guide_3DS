@@ -22,11 +22,11 @@
 
 5. 在側邊欄中選擇您的 SD 卡
 
-   ::: danger
+    ::: danger
 
-   請確保您選擇的裝置是您的 SD 卡，否則您可能會不小心格式化錯的磁碟！
+    請確保您選擇的裝置是您的 SD 卡，否則您可能會不小心格式化錯的磁碟！
 
-   :::
+    :::
 
 6. 按一下工具列中的「清除」按鈕
 
@@ -35,7 +35,7 @@
 8. 請確保『格式』為『MS-DOS (FAT)』
 
 9. 請確保『分割區架構』為『主開機記錄』
-   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
+    - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
 
 10. 點選『清除』
 
@@ -55,14 +55,14 @@
 
 4. 在側邊欄中選擇您的 SD 卡
 
-   ::: danger
+    ::: danger
 
-   請確保您選擇的裝置是您的 SD 卡，否則您可能會不小心格式化錯的磁碟！
+    請確保您選擇的裝置是您的 SD 卡，否則您可能會不小心格式化錯的磁碟！
 
-   :::
+    :::
 
 5. 按一下工具列中的『分割』按鈕
-   - If "Partition" does not appear, make sure to choose the device instead of a volume
+    - If "Partition" does not appear, make sure to choose the device instead of a volume
 
 6. 請確保『分割區佈局』為『1 個分割區』
 
@@ -89,4 +89,4 @@
 ## 疑難排解
 
 - SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
+    - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.

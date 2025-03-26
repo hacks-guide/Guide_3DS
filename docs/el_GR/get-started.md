@@ -3,6 +3,8 @@ noneSelected: Απαιτείται το μοντέλο συστήματος.
 invalidVersion: Αυτή δεν φαίνεται να είναι έγκυρη έκδοση συστήματος.
 head:
   - - script
+    - src: /assets/js/common.js
+  - - script
     - src: /assets/js/selecting.js
 ---
 

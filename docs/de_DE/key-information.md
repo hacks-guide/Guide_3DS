@@ -1,11 +1,5 @@
 # Wichtige Informationen
 
-::: danger
-
-<!--@include: ./_include/3ds-online.md -->
-
-:::
-
 ::: info
 
 If this is your first time modding a 3DS (or you're unfamiliar with technology), keep reading! Otherwise, if you have prior experience and know what you're doing, continue to [Get Started](get-started).
@@ -16,9 +10,9 @@ This page covers some of the base computer terminology and 3DS-specific informat
 
 Each section is collapsed by default. Click or tap on the name of the section to open it.
 
-## Things you should know about the 3DS
+## Compatibility
 
-:::: details 3DS/2DS compatibility
+:::: details What consoles is this guide compatible with?
 
 ::: info
 
@@ -26,11 +20,11 @@ Each section is collapsed by default. Click or tap on the name of the section to
 
 :::
 
-This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware.
+This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware. It is NOT compatible with the DSi family of consoles (DSi, DSi XL/LL). For DSi-family consoles, consult [this guide](https://dsi.cfw.guide) instead.
 
 ::::
 
-:::: details Computer compatibility
+:::: details What kind of computer / hardware do I need to follow this guide?
 
 ::: info
 
@@ -38,11 +32,11 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 :::
 
-In most cases, you can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. Depending on your computer/phone/electronic device, you may need to purchase a USB to SD card adapter to allow your computer to read your SD card.
+In most cases, you can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as Android phones. Depending on your electronic device, you may need to purchase a USB to SD card adapter to allow it to read your SD card.
 
 ::::
 
-:::: details SD card location, type, and capacity
+:::: details What kind of SD card does my console use/need?
 
 ::: info
 
@@ -54,6 +48,12 @@ The location of the SD card slot and the type of SD card that is accepted depend
 
 The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD cards larger than **128GB** are not recommended due to known issues with custom themes and GBA/DS graphics.
 
+::: info
+
+It is highly recommended to **only use one SD card** with a console at any given time, as you cannot merge the contents of two SD cards later on. So, if your console already has an SD card, you should use that SD card to mod your console, or copy everything to a larger SD card before or after you mod it.
+
+:::
+
 ::: warning
 
 To follow this guide, you'll need an SD card with a capacity of at least **2GB**.
@@ -62,23 +62,25 @@ To follow this guide, you'll need an SD card with a capacity of at least **2GB**
 
 ::: info
 
-If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\))
+If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 
 ::::
 
 :::: warning
-::: details Potential risks (Disclaimer)
+
+:::details Potential risks (Disclaimer)
 
 By modding your console, you subject it to the remote (but non-zero) possibility of the console being bricked (rendered non-functional). _**Incorrect file placement will NOT brick your console**_, but purposely skipping instructions might.
 
 In short: Modding your console is safe, but it's _**your responsibility**_ if something goes wrong.
 
 :::
+
 ::::
 
-## Things you need to do on your computer
+## Important terminology
 
 ::: warning
 
@@ -86,7 +88,7 @@ Following this guide alone should not result in data loss, but SD card corruptio
 
 :::
 
-:::: details File placement terminology (e.g. "root of SD", "/luma/")
+:::: details What does "root of SD" or "/luma/" mean?
 
 ::: info
 
@@ -114,7 +116,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 ::::
 
-:::: details Downloading files from GitHub
+:::: details How do I download files from GitHub?
 
 ::: info
 
@@ -126,7 +128,7 @@ In this guide, you will copy files that are downloaded on your computer/phone to
 
 ::::
 
-:::: details Opening/extracting files
+:::: details How do I extract/open a ZIP file?
 
 ::: info
 
@@ -142,7 +144,7 @@ On most operating systems, you can extract files by double-clicking the file. If
 
 ::::
 
-:::: details (Windows only) File extensions
+:::: details What are file extensions?
 
 ::: info
 

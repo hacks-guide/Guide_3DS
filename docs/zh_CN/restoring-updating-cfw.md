@@ -13,22 +13,20 @@
 ## Instructions
 
 1. 将你的 SD 卡插入到电脑
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+2. Copy everything from the Luma3DS `.zip` (`boot.firm`, `boot.3dsx`, and `config`) to the root of your SD card, replacing any existing files
+    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 3. Reinsert your SD card into your console
 4. Power on your console
-   - If you see the Luma3DS configuration menu, press (Start) to save and reboot
+    - If you see the Luma3DS configuration menu, press (Start) to save and reboot
 
-::: tip
+::: info
 
 此时 Luma3DS 已经复制到主机的内部存储中。现在你的主机能够在不插 SD 卡的情况下开机了。
 
 :::
 
-___
+::: tip
 
-::: info
-
-如果你想要重新安装或升级 homebrew 程序，请至[完成安装](finalizing-setup)部分
+Continue to [Finalizing Setup](finalizing-setup) to install or update homebrew applications (e.g. FBI, Homebrew Launcher).
 
 :::

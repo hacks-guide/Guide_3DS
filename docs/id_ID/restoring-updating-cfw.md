@@ -1,34 +1,32 @@
-# Restoring / Updating CFW
+# Memulihkan / Memperbarui CFW
 
-## Required Reading
+## Bacaan Penting
 
-This page prepares consoles with an existing modern boot9strap installation for reinstallation and/or updating of custom firmware applications. It can also be used in the event of a lost or corrupted SD card.
+Laman ini berisi cara memperbarui dan/atau memasang ulang aplikasi CFW untuk konsol yang sudah ada boot9strap modern. Bisa juga digunakan kalau-kalau kartu SD hilang atau rusak.
 
-Your SD card must be formatted as FAT32 to follow this guide, or else the 3DS will be unable to recognize it. If your SD card is not yet properly formatted, use one of these pages to format it, depending on your operating system: [Windows](formatting-sd-\(windows\)), [Mac](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
+Kartu SD harus sudah diformat ke FAT32 untuk mengikuti panduan ini, jika tidak nanti tidak terbaca 3DS. Jika kartu SD belum diformat dengan benar, gunakan salah satu panduan berikut, tergantung sistem operasi: [Windows](formatting-sd-\(windows\)), [Mac](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
-## What You Need
+## Apa yang Perlu
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (yang `.zip` Luma3DS)
 
-## Instructions
+## Instruksi
 
-1. Insert your SD card into your computer
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
-3. Reinsert your SD card into your console
-4. Power on your console
-   - If you see the Luma3DS configuration menu, press (Start) to save and reboot
-
-::: tip
-
-The latest version of Luma3DS has now been installed on your SD card and on internal memory.
-
-:::
-
-___
+1. Sisipkan kartu SD ke komputer Anda
+2. Salin semua isi berkas `.zip` Luma3DS (`boot.firm`, `boot.3dsx`, dan `config`) ke akar kartu SD, timpa berkas yang ada
+    - Akar (_root_) kartu SD adalah direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
+3. Sisip kembali kartu SD ke konsol
+4. Nyalakan daya konsol
+    - Jika muncul menu konfigurasi Luma3DS, tekan (Start) untuk simpan dan nyala ulang
 
 ::: info
 
-If you wish to re-install or update other homebrew applications, continue to [Finalizing Setup](finalizing-setup)
+Luma3DS versi terkini sekarang sudah terpasang di kartu SD dan memori internal.
+
+:::
+
+::: tip
+
+Lanjut ke [Penyiapan Akhir](finalizing-setup) untuk memasang/memperbarui aplikasi _homebrew_ (misal: FBI, Homebrew Launcher).
 
 :::

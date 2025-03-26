@@ -1,11 +1,5 @@
 # 주요 내용
 
-::: danger
-
-<!--@include: ./_include/3ds-online.md -->
-
-:::
-
 ::: info
 
 만약 이번이 3DS를 처음으로 모딩하는 것 (혹은 모딩에 익숙하지 않다면) 이라면, 계속 정독하세요! 반면, 사전에 모딩을 해봤거나 할 줄 안다면, [시작하기](get-started) 페이지로 계속하세요.
@@ -16,9 +10,9 @@
 
 각 섹션은 기본으로 축소되어 있습니다. 섹션 이름을 탭하거나 클릭해서 여십시오.
 
-## 3DS에 대해 알고 있어야 할 것들
+## Compatibility
 
-:::: details 3DS/2DS compatibility
+:::: details What consoles is this guide compatible with?
 
 ::: info
 
@@ -26,11 +20,11 @@
 
 :::
 
-이 가이드는 국가나 펌웨어 상관없이, 모든 닌텐도 3DS 시리즈의 콘솔(3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, New 2DS XL/LL에 모두 해당)와 호환됩니다.
+This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware. It is NOT compatible with the DSi family of consoles (DSi, DSi XL/LL). For DSi-family consoles, consult [this guide](https://dsi.cfw.guide) instead.
 
 ::::
 
-:::: details Computer compatibility
+:::: details What kind of computer / hardware do I need to follow this guide?
 
 ::: info
 
@@ -38,11 +32,11 @@
 
 :::
 
-대부분의 경우, 인터넷에서 파일을 다운로드 하고 SD 카드에 옮길 수 있어야만 이용 가능합니다. 본인의 컴퓨터/스마트폰/전자기기에 따라서 컴퓨터에서 SD 카드를 읽기 위해 USB->SD 카드 어댑터를 구매해야 할 수도 있습니다.
+대부분의 경우, 인터넷에서 파일을 다운로드 하고 SD 카드에 옮길 수 있어야만 이용 가능합니다. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as Android phones. Depending on your electronic device, you may need to purchase a USB to SD card adapter to allow it to read your SD card.
 
 ::::
 
-:::: details SD card location, type, and capacity
+:::: details What kind of SD card does my console use/need?
 
 ::: info
 
@@ -52,7 +46,13 @@
 
 3DS 모델에 따라 SD카드 슬롯의 위치나 호환되는 종류가 다릅니다. 자세한 정보는 [닌텐도 공식 지원](https://www.nintendo.co.kr/3DS/customer/qna.php) 에서 찾아볼 수 있습니다.
 
-3DS는 어떤 용량의 SD 카드 (32GB보다 커도 가능)도 사용할 수 있지만, 그 카드는 무조건 FAT32로 포맷되어 있어야합니다. (exFAT이나 NTFS **는 불가능**). SD 카드를 포맷하기 위해 자신의 OS에 해당하는 프로그램을 사용할 수 있습니다: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). GBA/DS 그래픽과 커스텀 테마 문제 때문에 128GB를 넘기는 SD 카드를 사용하는 것은 권장하지 않습니다.
+3DS는 어떤 용량의 SD 카드 (32GB보다 커도 가능)도 사용할 수 있지만, 그 카드는 무조건 FAT32로 포맷되어 있어야합니다. (exFAT이나 NTFS **는 불가능**). SD 카드를 포맷하기 위해 자신의 OS에 해당하는 프로그램을 사용할 수 있습니다: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). GBA/DS 그래픽과 커스텀 테마 문제 때문에 **128GB**를 넘기는 SD 카드를 사용하는 것은 권장하지 않습니다.
+
+::: info
+
+It is highly recommended to **only use one SD card** with a console at any given time, as you cannot merge the contents of two SD cards later on. So, if your console already has an SD card, you should use that SD card to mod your console, or copy everything to a larger SD card before or after you mod it.
+
+:::
 
 ::: warning
 
@@ -62,23 +62,25 @@
 
 ::: info
 
-원하신다면, 이 가이드를 따라가기 전에 [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), 또는 [F3XSwift (Mac)](f3xswift-\(mac\))을 사용해 SD 카드의 오류 여부를 확인하실 수 있습니다.
+If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 
 ::::
 
 :::: warning
-::: details Potential risks (Disclaimer)
 
-By modding your console, you subject it to the remote (but non-zero) possibility of the console being bricked (rendered non-functional). **파일을 잘못 넣는다고 콘솔이 벽돌이 되지는 않지만**, 의도적으로 순서를 건너뛴다면 벽돌이 될 수도 있습니다.
+:::details Potential risks (Disclaimer)
+
+콘솔을 수정함으로서, 여러분은 콘솔이 벽돌이 되는 것(콘솔이 작동하지 않는 현상)에 대한 희박한, 하지만 0은 아닌 가능성을 염두에 두어야 합니다. **파일을 잘못 넣는다고 콘솔이 벽돌이 되지는 않지만**, 의도적으로 순서를 건너뛴다면 벽돌이 될 수도 있습니다.
 
 요약하자면: 콘솔을 수정하는 것은 안전하지만, 뭔가 잘못되었다면 그것은 __여러분의 책임__입니다.
 
 :::
+
 ::::
 
-## 컴퓨터에서 해야 할 일
+## Important terminology
 
 ::: warning
 
@@ -86,7 +88,7 @@ By modding your console, you subject it to the remote (but non-zero) possibility
 
 :::
 
-:::: details File placement terminology (e.g. "root of SD", "/luma/")
+:::: details What does "root of SD" or "/luma/" mean?
 
 ::: info
 
@@ -114,7 +116,7 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 ::::
 
-:::: details Downloading files from GitHub
+:::: details How do I download files from GitHub?
 
 ::: info
 
@@ -122,11 +124,11 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 :::
 
-이 가이드를 통해 컴퓨터나 핸드폰으로 다운받은 파일을 3DS의 SD 카드로 복사하게 됩니다. 이러한 파일의 대부분은 개발자가 오픈 소스 릴리즈를 게시하는 데 사용하는 웹사이트인 GitHub에서 제공됩니다. GitHub에서 파일을 다운로드할 때에는 소스 코드가 _아닌_ 파일을 다운로드해야 합니다.
+이 가이드를 통해 컴퓨터나 핸드폰으로 다운받은 파일을 콘솔의 SD 카드로 복사하게 됩니다. 이러한 파일의 대부분은 개발자가 오픈 소스 릴리즈를 게시하는 데 사용하는 웹사이트인 GitHub에서 제공됩니다. GitHub에서 파일을 다운로드할 때에는 소스 코드가 _아닌_ 파일을 다운로드해야 합니다.
 
 ::::
 
-:::: details Opening/extracting files
+:::: details How do I extract/open a ZIP file?
 
 ::: info
 
@@ -142,7 +144,7 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 ::::
 
-:::: details (Windows only) File extensions
+:::: details What are file extensions?
 
 ::: info
 

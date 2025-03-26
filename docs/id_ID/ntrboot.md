@@ -2,36 +2,36 @@
 
 ::: tip
 
-If your flashcart comes pre-flashed with ntrboot (or you have already flashed ntrboot to your flashcart), you can skip to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\)) for instructions on how to use it.
+Jika _flashcart_ sudah ada ntrboot (atau sudah mem-_flash_ sendiri ntrboot ke _flashcart_), langsung saja ke [Memasang boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\)) untuk arahan penggunaannya.
 
 :::
 
-## Required Reading
+## Bacaan Penting
 
-Installing boot9strap with ntrboot requires a compatible NDS / DSi flashcart to flash ntrboot to. Note that some of these flashcarts are sold pre-flashed with ntrboot.
+Memasang boot9strap dengan ntrboot perlu _flashcart_ NDS / DSi yang bisa di-_flash_ ntrboot. Perlu diingat beberapa _flashcart_ yang dijual ada yang sudah ntrboot.
 
-While the ntrboot exploit works independently of the system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and consoles supported by your flashcart, only certain methods may be available to you.
+Walaupun eksploit ntrboot berfungsi tanpa terikat versi sistem, tapi tidak untuk ntrboot flasher (pemasang eksploit ke _flashcart_). Ini berarti, tergantung versi konsol yang mau membaca _flashcart_, hanya akan tersedia metode tertentu.
 
-Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
+Perlu diingat untuk _flashcart_ dengan "Time Bomb" tidak akan bisa menjalankan `.nds` jika jam sistem sudah lewat tanggal yang ditentukan _firmware flashcart_. Ini bisa kita langkaui dengan memundurkan mentok tanggal jam sistem.
 
-| Flashcart Name                                                                                                              |          Current Price |                       "Time Bomb"?                       |                                 3DS Versions?                                 |                           DSi Versions?                           | Other Notes                                                                                                                                                                                                                                                                                                |
-| --------------------------------------------------------------------------------------------------------------------------- | ---------------------: | :------------------------------------------------------: | :---------------------------------------------------------------------------: | :---------------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**Ace3DS X**](https://www.nds-card.com/ProShow.asp?ProID=575)                                                              | $17.99 |                            No                            |                                      ALL                                      |                                ALL                                | **Comes pre-flashed with ntrboot** (external switch to switch between ntrboot ("3DS") and NDS modes); do not manually flash with ntrboot. This cart needs an SD card inserted to function for both ntrboot and regular NDS firmware. |
-| [**R4i-SDHC B9S** (r4i-sdhc.com)](http://www.nds-card.com/ProShow.asp?ProID=574)         | $16.99 |                     September 3, 2024                    |                                      ALL                                      |                                ALL                                | **Comes pre-flashed with ntrboot**; can be flashed back to an NDS flashcart.                                                                                                                                                                                                               |
-| [**DSTT** (ndstt.com)](http://www.nds-card.com/ProShow.asp?ProID=157)                    | $11.99 |                            No                            |                                      None                                     |                                None                               | Only models with [certain flash chips](https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6) are compatible with ntrboot.                                                                                                                                                    |
-| [**R4i-SDHC 3DS RTS** (r4i-sdhc.com)](http://www.nds-card.com/ProShow.asp?ProID=146)     | $15.99 | 1.85b: September 3, 2024 |                                      ALL                                      |                                ALL                                |                                                                                                                                                                                                                                                                                                            |
-| [**R4iSDHC GOLD Pro 20XX** (r4isdhc.com)](http://www.nds-card.com/ProShow.asp?ProID=490) | $17.99 |  4.0b: September 3, 2024 |                                      ALL                                      |                                ALL                                | Only r4isdhc **.com** carts marked with a year of 2014 or later are compatible.                                                                                                                                                                                            |
-| **Ace3DS Plus**                                                                                                             |                        |                            No                            |                                      ALL                                      |                                ALL                                | This cart needs an SD card inserted to function for both ntrboot and regular NDS firmware.                                                                                                                                                                                                 |
-| **Acekard 2i**                                                                                                              |                        |                            No                            |       <= 4.3.0       | <= 1.4.4 |                                                                                                                                                                                                                                                                                                            |
-| **Gateway Blue**                                                                                                            |                        |                            No                            | 4.1.0 - 4.5.0 |                                ALL                                |                                                                                                                                                                                                                                                                                                            |
-| **Infinity 3 R4i** (r4infinity.com)                                                      |                        |                            No                            |                                      ALL                                      |                                ALL                                |                                                                                                                                                                                                                                                                                                            |
-| **R4 3D Revolution**                                                                                                        |                        |                            No                            |                                      None                                     |                                None                               |                                                                                                                                                                                                                                                                                                            |
-| **R4i Gold 3DS Plus** (r4ids.cn)                                                         |                        |                            No                            |                                      ALL                                      |                                ALL                                | **Comes pre-flashed with ntrboot** ([internal switch to switch between ntrboot and NDS modes](/images/screenshots/r4i-gold-3ds-plus.png)); do not manually flash with ntrboot.                                                                                          |
-| **R4i Gold 3DS** (r4ids.cn)                                                              |                        |                            No                            |                                      ALL                                      |                                ALL                                | All carts are compatible.                                                                                                                                                                                                                                                                  |
-| **R4i Ultra** (r4ultra.com)                                                              |                        |                            No                            |       <= 4.3.0       |                                ALL                                |                                                                                                                                                                                                                                                                                                            |
-| **R4i-SDHC 3DS RTS Deluxe Edition**                                                                                         |                        |                          Unknown                         |                                      ALL                                      |                                ALL                                | Only the Deluxe Edition with the blue sticker is compatible.                                                                                                                                                                                                                               |
-| **R4iSDHC RTS LITE 20XX** (r4isdhc.com)                                                  |                        |  4.0b: September 3, 2024 |                                      ALL                                      |                                ALL                                | Only r4isdhc **.com** carts marked with a year of 2014 or later are compatible.                                                                                                                                                                                            |
-| **R4iSDHC Dual-Core 20XX** (r4isdhc.com)                                                 |                        |  4.0b: September 3, 2024 |                                      ALL                                      |                                ALL                                | Only r4isdhc **.com** carts marked with a year of 2014 or later are compatible.                                                                                                                                                                                            |
+| Nama _Flashcart_                                                                                                            |             Harga Jual |                      "_Time Bomb_"?                     |                                   Versi 3DS?                                  |                             Versi DSi?                            | Catatan Lain                                                                                                                                                                                                                                                            |
+| --------------------------------------------------------------------------------------------------------------------------- | ---------------------: | :-----------------------------------------------------: | :---------------------------------------------------------------------------: | :---------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Ace3DS X**](https://www.nds-card.com/ProShow.asp?ProID=575)                                                              | $17.99 |                          Tidak                          |                                     SEMUA                                     |                               SEMUA                               | **Sudah di-_flash_ ntrboot** (ada cetekan eksternal untuk beralih ke ntrboot 3DS atau mode NDS); jangan di-_flash_-kan ntrboot. _Flashcart_ ini perlu kartu SD agar bisa ntrboot dan muncul di _firmware_ NDS biasa. |
+| [**R4i-SDHC B9S** (r4i-sdhc.com)](http://www.nds-card.com/ProShow.asp?ProID=574)         | $16.99 |                     3 September 2024                    |                                     SEMUA                                     |                               SEMUA                               | **Sudah di-_flash_ ntrboot**; bisa di-_flash_ balik ke _flashcart_ NDS.                                                                                                                                                                                 |
+| [**DSTT** (ndstt.com)](http://www.nds-card.com/ProShow.asp?ProID=157)                    | $11.99 |                          Tidak                          |                                    Tak ada                                    |                              Tak ada                              | Hanya model dengan [_flash chip_ tertentu](https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6) yang bisa ntrboot.                                                                                                                       |
+| [**R4i-SDHC 3DS RTS** (r4i-sdhc.com)](http://www.nds-card.com/ProShow.asp?ProID=146)     | $15.99 | 1.85b: 3 September 2024 |                                     SEMUA                                     |                               SEMUA                               |                                                                                                                                                                                                                                                                         |
+| [**R4iSDHC GOLD Pro 20XX** (r4isdhc.com)](http://www.nds-card.com/ProShow.asp?ProID=490) | $17.99 |  4.0b: 3 September 2024 |                                     SEMUA                                     |                               SEMUA                               | Hanya _flashcart_ r4isdhc **.com** tahun 2014 ke atas yang kompatibel.                                                                                                                                                                  |
+| **Ace3DS Plus**                                                                                                             |                        |                          Tidak                          |                                     SEMUA                                     |                               SEMUA                               | _Flashcart_ ini perlu kartu SD agar bisa ntrboot dan muncul di _firmware_ NDS biasa.                                                                                                                                                                    |
+| **Acekard 2i**                                                                                                              |                        |                          Tidak                          |       <= 4.3.0       | <= 1.4.4 |                                                                                                                                                                                                                                                                         |
+| **Gateway Blue**                                                                                                            |                        |                          Tidak                          | 4.1.0 - 4.5.0 |                               SEMUA                               |                                                                                                                                                                                                                                                                         |
+| **Infinity 3 R4i** (r4infinity.com)                                                      |                        |                          Tidak                          |                                     SEMUA                                     |                               SEMUA                               |                                                                                                                                                                                                                                                                         |
+| **R4 3D Revolution**                                                                                                        |                        |                          Tidak                          |                                    Tak ada                                    |                              Tak ada                              |                                                                                                                                                                                                                                                                         |
+| **R4i Gold 3DS Plus** (r4ids.cn)                                                         |                        |                          Tidak                          |                                     SEMUA                                     |                               SEMUA                               | **Sudah di-_flash_ ntrboot** ([ada cetekan internal untuk beralih ke mode ntrboot atau NDS](/images/screenshots/r4i-gold-3ds-plus.png)); jangan di-_flash_-kan ntrboot.                                                              |
+| **R4i Gold 3DS** (r4ids.cn)                                                              |                        |                          Tidak                          |                                     SEMUA                                     |                               SEMUA                               | Kompatibel semua _flashcart_.                                                                                                                                                                                                                           |
+| **R4i Ultra** (r4ultra.com)                                                              |                        |                          Tidak                          |       <= 4.3.0       |                               SEMUA                               |                                                                                                                                                                                                                                                                         |
+| **R4i-SDHC 3DS RTS Deluxe Edition**                                                                                         |                        |                      Tak Diketahui                      |                                     SEMUA                                     |                               SEMUA                               | Hanya "Deluxe Edition" stiker biru yang kompatibel.                                                                                                                                                                                                     |
+| **R4iSDHC RTS LITE 20XX** (r4isdhc.com)                                                  |                        |  4.0b: 3 September 2024 |                                     SEMUA                                     |                               SEMUA                               | Hanya _flashcart_ r4isdhc **.com** tahun 2014 ke atas yang kompatibel.                                                                                                                                                                  |
+| **R4iSDHC Dual-Core 20XX** (r4isdhc.com)                                                 |                        |  4.0b: 3 September 2024 |                                     SEMUA                                     |                               SEMUA                               | Hanya _flashcart_ r4isdhc **.com** tahun 2014 ke atas yang kompatibel.                                                                                                                                                                  |
 
 ::: info
 
@@ -39,74 +39,74 @@ Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files
 
 :::
 
-Ensure your flashcart is able to launch `.nds` files on your console before beginning. Some flashcarts may require firmware or "kernel" files to be copied to the flashcart SD card. Consult your specific flashcart's instructions for more information.
+Sebelum mulai, pastikan _flashcart_ bisa menjalankan berkas `.nds` di konsol. Beberapa _flashcart_ perlu ditaruh dulu "_firmware_" atau "kernel" ke kartu SD _flashcart_. Rujuk ke instruksi _flashcart_ tersebut untuk informasi lanjut.
 
-Note that specific methods may have additional compatibility information.
+Perlu diingat, metode tertentu punya kompatibilitas berbeda.
 
-The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target console is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your console to enter sleep mode while still having access to the buttons.
+Untuk eksploit ini, dengan metode _flashing_ apa pun, akan perlu besi berani kecil jika konsol sasaran Anda model lipat (hanya old 2DS yang tidak perlu besi berani karena ada sakelar tidur). Itu karena eksploit ini mengharuskan konsol masuk mode tidur tapi tetap ada akses ke tombol.
 
 ::: info
 
-To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the console is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
+Untuk menguji fungsi besi berani, tahan di atas atau sekitar tombol (A)(B)(X)(Y) ketika konsol menyala apakah mode tidur bisa aktif. Jika bisa, kedua layar akan hitam selama besi berani ditahan di situ.
 
 :::
 
-Note that the flashcart will not be able to be used for its standard functions while the ntrboot exploit is installed on it (except for in the case of the Acekard 2i, which remains functional _on NDS and custom firmware 3DS systems only_). This means that, for most flashcarts, it will not even display on the HOME Menu. There are optional steps at the end of the ntrboot flashing instructions to remove it from your flashcart when you are done.
+Perlu diingat, _flashcart_ tidak akan bisa digunakan seperti biasa ketika sudah di-_flash_ eksploit ntrboot (kecuali di kasus Acekard 2i yang masih berfungsi _hanya di konsol DS dan 3DS CFW_). Berarti untuk _flashcart_ lain biasanya tidak akan muncul di HOME Menu walau terbaca. Di ujung panduan mem-_flash_ ntrboot, ada instruksi memulihkan _flashcart_ jika mau.
 
 ::: danger
 
-Note that in some rare circumstances, it may be possible for the flashing process to **brick** a counterfeit flashcart and render it permanently unusable. This is unlikely, but nevertheless, only original listed flashcarts are supported. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
+Perlu diingat pada kejadian langka tertentu, _flashcart_ kawe bisa **matot (_brick_)** saat mem-_flash_ sehingga tidak terbaca lagi. Kemungkinan tidak, tapi yang pasti, panduan ini hanya mendukung _flashcart_ ori. Untuk mengurangi kemungkinan mendapat _flashcart_ kawe, sebaiknya beli dari situs bereputasi baik (seperti [NDS Card](https://www.nds-card.com/)).
 
 :::
 
 ___
 
-## Methods
+## Metode
 
 ___
 
-### Flashing ntrboot (3DS Single System)
+### Mem-flash ntrboot (Satu Sistem 3DS)
 
-This method requires nothing more than your stock unhacked 3DS and a compatible flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your 3DS. This means that your flashcart must support launching `.nds` files on your 3DS's version. See the flashcart table above for more information.
+Metode ini hanya perlu konsol 3DS belum diretas dan _flashcart_ yang kompatibel. Metode ini menggunakan _flashcart_ untuk menjalankan `.nds` ntrboot flasher di 3DS. Ini berarti _flashcart_ harus bisa menjalankan `.nds` di _firmware_ 3DS. Lihat tabel _flashcart_ di atas untuk informasi lanjut.
 
 ::: tip
 
-Continue to [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single-system\))
+Lanjut ke [Mem-_flash_ ntrboot (Satu Sistem 3DS)](flashing-ntrboot-\(3ds-single-system\))
 
 :::
 
 ___
 
-### Flashing ntrboot (3DS Multi System)
+### Mem-flash ntrboot (Beberapa Sistem 3DS)
 
-This method requires temporary access to a second 3DS family console that is already running boot9strap. This does not require your flashcart to support either 3DS's version.
+Metode ini perlu akses sementara ke jenis konsol 3DS lain yang sudah ada boot9strap. _Flashcart_ tidak harus untuk 3DS, yang penting bisa di-_flash_ ntrboot.
 
 ::: tip
 
-Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-system\))
+Lanjut ke [Mem-_flash_ ntrboot (Beberapa Sistem 3DS)](flashing-ntrboot-\(3ds-multi-system\))
 
 :::
 
 ___
 
-### Flashing ntrboot (NDS)
+### Mem-flash ntrboot (NDS)
 
-This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS.
+Metode ini perlu akses sementara ke Nintendo DS atau Nintendo DS Lite yang bisa membaca _flashcart_ Anda. Metode ini perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di NDS.
 
 ::: tip
 
-Continue to [Flashing ntrboot (NDS)](flashing-ntrboot-\(nds\))
+Lanjut ke [Mem-_flash_ ntrboot (NDS)](flashing-ntrboot-\(nds\))
 
 :::
 
 ___
 
-### Flashing ntrboot (DSi)
+### Mem-flash ntrboot (DSi)
 
-This method requires temporary access to a Nintendo DSi that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your DSi. This means that your flashcart must support launching `.nds` files on your DSi's version. See the flashcart table above for more information.
+Metode ini perlu akses sementara ke konsol Nintendo DSi yang bisa membaca _flashcart_ Anda. Metode ini juga perlu _flashcart_ untuk menjalankan `.nds` ntrboot flasher di DSi. Berarti _flashcart_ harus bisa menjalankan `.nds` di _firmware_ DSi. Lihat tabel _flashcart_ di atas untuk informasi lanjut.
 
 ::: tip
 
-Continue to [Flashing ntrboot (DSi)](flashing-ntrboot-\(dsi\))
+Lanjut ke [Mem-_flash_ ntrboot (DSi)](flashing-ntrboot-\(dsi\))
 
 :::

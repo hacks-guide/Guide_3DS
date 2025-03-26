@@ -13,22 +13,20 @@ La scheda SD deve essere formattata come FAT32 per seguire questa guida, altrime
 ## Istruzioni
 
 1. Inserisci la scheda SD nel tuo computer
-2. Copia tutto dall'archivio `.zip` di Luma3DS nella directory principale della tua scheda SD, sovrascrivendo i file già esistenti
-   - La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
+2. Copia tutto il contenuto dall'archivio `.zip` di Luma3DS (`boot.firm`, `boot.3dsx`, e `config`) nella directory principale della tua scheda SD, sostituendo qualunque file preesistente
+    - La directory principale della scheda SD è la cartella della tua scheda SD in cui è possibile visualizzare la cartella Nintendo 3DS, ma non il suo interno
 3. Reinserisci la scheda SD nella tua console
 4. Accendi la tua console
-   - Se vedi il menu di configurazione di Luma3DS, premi (Start) per salvare e riavviare
+    - Se vedi il menu di configurazione di Luma3DS, premi (Start) per salvare e riavviare
 
-::: tip
+::: info
 
 La versione più recente di Luma3DS è ora installata sulla scheda SD e nella memoria interna.
 
 :::
 
-___
+::: tip
 
-::: info
-
-Se vuoi re-installare o aggiornare altre applicazioni homebrew, prosegui con [Completamento dell'installazione](finalizing-setup)
+Prosegui con il [Completamento dell'installazione](finalizing-setup) per installare o aggiornare le applicazioni homebrew (ad esempio FBI, Homebrew Launcher).
 
 :::

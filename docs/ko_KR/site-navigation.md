@@ -12,6 +12,24 @@
 
 ::: info
 
+**문제 해결**
+
+- [문제 해결](troubleshooting)
+- [문제 해결 (Soundhax)](troubleshooting-soundhax)
+- [문제 해결 (MSET9)](troubleshooting-mset9)
+- [문제 해결 (super-skaterhax)](troubleshooting-super-skaterhax)
+- [문제 해결 (ntrboot)](troubleshooting-ntrboot)
+- [문제 해결 (safecerthax)](troubleshooting-safecerthax)
+- [문제 해결 (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [문제 해결 (마무리 단계)](troubleshooting-finalizing-setup)
+- [문제 해결 (A9LH를 B9S로 업데이트)](troubleshooting-a9lh-to-b9s)
+- [문제 해결 (B9S 업데이트)](troubleshooting-updating-b9s)
+- [문제 해결 (마무리 단계)](troubleshooting-post-install)
+
+:::
+
+::: info
+
 **모든 페이지**
 
 - [A9LH를 B9S로 업데이트](a9lh-to-b9s)
@@ -52,6 +70,16 @@
 - [지역 변경](region-changing)
 - [CFW 복구 / 업데이트](restoring-updating-cfw)
 - [문제 해결](troubleshooting)
+- [문제 해결 (A9LH를 B9S로 업데이트)](troubleshooting-a9lh-to-b9s)
+- [문제 해결 (마무리 단계)](troubleshooting-finalizing-setup)
+- [문제 해결 (MSET9)](troubleshooting-mset9)
+- [문제 해결 (ntrboot)](troubleshooting-ntrboot)
+- [문제 해결 (마무리 단계)](troubleshooting-post-install)
+- [문제 해결 (Soundhax)](troubleshooting-soundhax)
+- [문제 해결 (safecerthax)](troubleshooting-safecerthax)
+- [문제 해결 (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [문제 해결 (super-skaterhax)](troubleshooting-super-skaterhax)
+- [문제 해결 (B9S 업데이트)](troubleshooting-updating-b9s)
 - [CFW 제거](uninstall-cfw)
 - [B9S 업데이트](updating-b9s)
 

@@ -10,10 +10,12 @@
 
 ## What You Need
 
-- **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## Instructions (32GB or smaller)
+## Instructions
+
+### Section I - SD Card Formatter
 
 1. 將 SD 卡插入至電腦中
 
@@ -25,11 +27,11 @@
 
 5. 在『Select card』中選擇您的 SD 卡磁碟代號
 
-   ::: danger
+    ::: danger
 
-   請確保您選擇的裝置是您的 SD 卡，否則您可能會不小心格式化錯的磁碟！
+    請確保您選擇的裝置是您的 SD 卡，否則您可能會不小心格式化錯的磁碟！
 
-   :::
+    :::
 
 6. 如有需要，請為您的 SD 卡輸入新名稱
 
@@ -45,50 +47,52 @@
 
 12. 關閉 SD Card Formatter
 
-13. 如果此 SD 卡中先前含有任何檔案及資料夾，請將這些檔案從電腦中複製回 SD 卡中
+13. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
 
-## Instructions (64GB or larger)
+::: info
 
-1. 將 SD 卡插入至電腦中
+You're done formatting your SD card if it's **32GB or smaller.**
 
-2. 如果此 SD 卡中含有任何重要的檔案及資料夾，請在格式化前將這些檔案備份於您的電腦中
+:::
 
-3. 執行 `guiformat.exe`
+### Section II - guiformat (ONLY for 64GB or larger)
 
-4. 選擇您的 SD 卡磁碟代號
+1. Run `guiformat.exe`
 
-   ::: danger
+2. Select your SD card's drive letter for "Drive"
 
-   請確保您選擇的裝置是您的 SD 卡，否則您可能會不小心格式化錯的磁碟！
+    ::: danger
 
-   :::
+    請確保您選擇的裝置是您的 SD 卡，否則您可能會不小心格式化錯的磁碟！
 
-5. 於『Allocation unit size』選擇大小
-   - If the SD card is 64GB, choose 32768
-   - If the SD card is larger than 64GB, choose 65536
+    :::
 
-6. 如有需要，請為您的 SD 卡輸入新名稱
+3. Select a size for "Allocation unit size"
+    - If the SD card is 64GB, choose 32768
+    - If the SD card is larger than 64GB, choose 65536
 
-7. 請勾選『Quick Format』
+4. 如有需要，請為您的 SD 卡輸入新名稱
 
-8. 選擇『Start』
+5. 請勾選『Quick Format』
 
-9. 點選『OK』
+6. Click "Start"
 
-10. 等待格式化完成
+7. 點選『OK』
 
-11. 點選『Close』
+8. 等待格式化完成
 
-12. 如果此 SD 卡中先前含有任何檔案及資料夾，請將這些檔案從電腦中複製回 SD 卡中
+9. 點選『Close』
+
+10. 如果此 SD 卡中先前含有任何檔案及資料夾，請將這些檔案從電腦中複製回 SD 卡中
 
 ## 疑難排解
 
 - guiformat shows the error "Failed to open device: GetLastError()=32"
-  - Close everything that may be using the SD card, such as any File Explorer windows.
-  - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
+    - Close everything that may be using the SD card, such as any File Explorer windows.
+    - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
 
 - guiformat shows the error "GetLastError()=1117"
-  - Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
+    - Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
 
 - SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.
+    - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.

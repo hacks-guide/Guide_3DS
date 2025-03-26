@@ -4,5 +4,5 @@
 4. Valitse "No EmuNAND"
 5. Valitse "Auto"
 6. Paina (A):ta käyttääksesi nimeä `GM9SD`
-   - Optionally, you may input a custom name for the SD card
+    - Optionally, you may input a custom name for the SD card
 7. Syötä kehotettaessa annettu painikeyhdistelmä

@@ -16,8 +16,8 @@
 
 - Τη flashcart σας, που πρέπει να είναι συμβατή με το ntrboot
 - Δύο κονσόλες
-  - **Το DSi προέλευσης**: το Nintendo DSi που είναι συμβατό με τη flashcart σας
-  - **Το 3DS προορισμού**: την κονσόλα της οικογένειας 3DS με το μη τροποποιημένο firmware
+    - **Το DSi προέλευσης**: το Nintendo DSi που είναι συμβατό με τη flashcart σας
+    - **Το 3DS προορισμού**: την κονσόλα της οικογένειας 3DS με το μη τροποποιημένο firmware
 - Την πιο πρόσφατη έκδοση του [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
 ## Οδηγίες

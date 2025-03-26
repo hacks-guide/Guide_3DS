@@ -8,7 +8,7 @@
 
 ::: info
 
-If your console has a menuhax-based CFW setup, you should [clear HOME Menu's extdata](troubleshooting#other-troubleshooting), then follow all instructions on your SysNAND. 且拔出内存卡后开机进入系统设置，可以看到系统版本为 9.2.0-20。
+If your console has a menuhax-based CFW setup, you should [clear HOME Menu's extdata](troubleshooting-post-install), then follow all instructions on your SysNAND. 且拔出内存卡后开机进入系统设置，可以看到系统版本为 9.2.0-20。
 
 :::
 

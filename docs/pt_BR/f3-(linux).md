@@ -1,6 +1,6 @@
 # F3 (Linux)
 
-## Required Reading
+## Leitura Obrigatória
 
 Esta é uma seção adicional para verificar erros no seu cartão SD usando F3.
 
@@ -8,11 +8,11 @@ Dependendo do tamanho do seu cartão SD e da velocidade do seu computador, este 
 
 Esta página é destinada apenas a usuários do Linux. Se você não está no Linux, confira as páginas [H2testw (Windows)](h2testw-\(windows\)) ou [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
 
-## What You Need
+## O que é necessário
 
-- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- A versão mais recente do [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
 
-## Instructions
+## Instruções
 
 1. Descompacte o arquivo `.zip` do f3
 2. `cd` para o diretório f3
@@ -66,6 +66,6 @@ Se o teste mostrar outros resultados, o cartão SD pode estar corrompido ou dani
 
 ::: tip
 
-Return to [Get Started](get-started)
+Voltar para [Começando](get-started)
 
 :::

@@ -1,6 +1,6 @@
 # Flashing ntrboot (Vários 3DS)
 
-## Required Reading
+## Leitura Obrigatória
 
 Antes de prosseguir, certifique-se de que você leu todas as informações em [ntrboot](ntrboot).
 
@@ -12,18 +12,18 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
 
 :::
 
-## What You Need
+## O que é necessário
 
-- Your ntrboot compatible flashcart
-- Two 3DS family consoles
-  - **The source 3DS**: the 3DS family console that is already running boot9strap
-  - **The target 3DS**: the 3DS family console on stock firmware
-- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
-- The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
+- Seu flashcart compatível com ntrboot
+- Dois consoles da família 3DS
+    - **3DS de origem**: o console da família 3DS que já possui boot9strap instalado
+    - **3DS de destino**: o console da família 3DS com firmware padrão
+- A versão v1.3 do [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (download direto)
+- A versão mais recente do [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
-## Instructions
+## Instruções
 
-### Section I - Prep Work
+### Seção I - Preparação
 
 1. Desligue o \*\* 3DS de origem\*\*
 2. Insira o cartão SD do **3ds de origem** no seu computador
@@ -33,14 +33,14 @@ Note que em algumas raras circunstâncias, pode ser possível que o processo de 
 6. Reinsira o cartão SD do **3DS de origem** no **3DS de origem**
 7. Insira o seu flashcart do DS / DSi compatível com o ntrboot no seu **3DS de origem**
 
-### Section II - Flashing ntrboot
+### Seção II - Preparando ntrboot
 
 1. Execute o chainloader do Luma3DS segurando (Start) durante a inicialização do **3DS de origem**
 2. Selecione "ntrboot_flasher"
 3. Leia o aviso em vermelho na tela
 4. Aperte (A) para continuar
 5. Selecione seu flashcart
-   - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
+    - Se você não vê seu flashcart na lista na tela superior, leia a tela inferior para obter mais informações sobre cada opção
 6. Selecione "Dump Flash"
 7. Aguarde até que o processo seja concluído
 8. Aperte (A) para continuar
@@ -55,6 +55,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Continue para [Instalando boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::

@@ -1,6 +1,6 @@
 # Ntrboot flashelése (egy 3DS rendszer)
 
-## Required Reading
+## Kötelező olvasmány
 
 Mielőtt elkezdenénk, bizonyosodj meg róla, hogy mindent elolvastál az [ntrboot](ntrboot)-tal kapcsolatban
 
@@ -12,15 +12,15 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 
 :::
 
-## What You Need
+## Amire szükséged lesz
 
-- Your ntrboot compatible flashcart
-- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
-- The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
+- Az ntrboor kompatibilis flashkártyád
+- A [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) v1.3 verziója (közvetlen letöltés)
+- A [ntrboot_flasher_nds] legújabb kiadása (https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-## Instructions
+## Lépések
 
-### Section I - Prep Work
+### I. rész - Előkészületek
 
 1. Kapcsold ki a konzolod
 2. Helyezd a flashkártyád SD kártyáját a számítógépbe
@@ -30,7 +30,7 @@ Vedd figyelembe, hogy néhány ritka esetben lehetséges, hogy a flashelési fol
 6. Helyezd vissza a flashkártyád SD kártyáját a flashkártyádba
 7. Helyezd be az ntrboot kompatibilis DS / DSi flashkártyádat a konzolodba
 
-### Section II - Flashing ntrboot
+### II. rész - ntrboot flashelése
 
 1. Indítsd el az `ntrboot_flasher_nds.nds` fájlt a konzolodon a flashkártyád segítségével
 2. Nyomd meg az (A) gombot a folytatáshoz
@@ -50,6 +50,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Továbblépés a [boot9strap telepítésére (ntrboot)](installing-boot9strap-\(ntrboot\))
 
 :::

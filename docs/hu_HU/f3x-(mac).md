@@ -1,6 +1,6 @@
 # F3X (Mac)
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez egy kiegészítő rész, amelyben F3X segítségével keresünk hibákat az SD kártyádon.
 
@@ -14,11 +14,11 @@ Ha Mac-et használsz macOS 10.13 (High Sierra) vagy újabb verzióval, akkor kö
 
 :::
 
-## What You Need
+## Amire szükséged lesz
 
-- The latest release of [F3X](https://github.com/insidegui/F3X/releases/latest)
+- Az [F3X](https://github.com/insidegui/F3X/releases/latest) legújabb kiadása
 
-## Instructions
+## Lépések
 
 1. Csomagold ki az F3X `.zip` fájlt
 2. Helyezd az SD kártyád a számítógépbe
@@ -43,6 +43,6 @@ Ha a teszt eredménye bármi más, elképzelhető, hogy az SD kártyád sérült
 
 ::: tip
 
-Return to [Get Started](get-started)
+Vissza a [kezdeti lépésekhez](get-started)
 
 :::

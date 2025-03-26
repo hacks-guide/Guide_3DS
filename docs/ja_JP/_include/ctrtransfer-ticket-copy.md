@@ -10,12 +10,12 @@ If the script found no user tickets, continue to the next section.
 4. 「out」を選択します
 5. 「Ctrtransfer_tickets」を選択します
 6. 次の操作を `eshop` フォルダと `unknown` フォルダのいずれか、または両方に対して行います
-   - Navigate to the folder
-   - Select "\<current directory>"
-   - Select "Install and delete all tickets"
-   - Wait. システムはフリーズすることがあります。
-   - (A) を押して確認します
-   - Press (B) to decline installing tickets from CDN.
+    - Navigate to the folder
+    - Select "\<current directory>"
+    - Select "Install and delete all tickets"
+    - Wait. システムはフリーズすることがあります。
+    - (A) を押して確認します
+    - Press (B) to decline installing tickets from CDN.
 7. ホームボタンを押してFBIを終了します
 8. Re-open the Homebrew Launcher, either through the Homebrew Launcher icon on the HOME Menu or by re-following Section IV of this page
 9. Launch faketik from the list of homebrew

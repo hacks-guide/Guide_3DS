@@ -1,6 +1,6 @@
 # Boot9strap telepítése (MSET9)
 
-## Choose your operating system
+## Válaszd ki az operációs rendszered
 
 Az MSET9 lépések eltérnek attól függően, hogy számítógépet, telefont vagy tabletet **használsz a konzolod moddolásához**.
 

@@ -15,11 +15,11 @@
 3. Go to "Show"
 4. Click "File name extensions" to enable it
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-11-file-extensions.png)
+    ![](/images/screenshots/windows-11-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@
 2. リボンメニューの "表示" オプションをクリックします
 3. "登録されている拡張子は表示しない"というラベルボックスをチェックします
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-10-file-extensions.png)
+    ![](/images/screenshots/windows-10-file-extensions.png)
 
-   :::
+    :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@
 
 2. "フォルダオプション" を検索し、対応する結果を選択します
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-   :::
+    :::
 
 3. フォルダオプションメニューの上部にある "表示" オプションをクリックします
 
 4. "既知のファイルタイプの拡張子を表示しない"チェックボックスをオフにします
 
-   ::: info
+    ::: info
 
-   ![](/images/screenshots/windows-7-folder-options.png)
+    ![](/images/screenshots/windows-7-folder-options.png)
 
-   :::
+    :::
 
 ::: tip
 

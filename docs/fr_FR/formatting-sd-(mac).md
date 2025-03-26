@@ -1,6 +1,6 @@
 # Formatting SD (Mac)
 
-## Required Reading
+## Lecture Requise
 
 This is an add-on section for formatting an SD card to work with the 3DS.
 
@@ -12,7 +12,7 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 
 ### OS X El Capitan (10.11) and later
 
-1. Insert your SD card into your computer
+1. Insérez votre carte SD dans votre ordinateur
 
 2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
@@ -22,11 +22,11 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 
 5. Select your SD card in the left panel
 
-   ::: danger
+    ::: danger
 
-   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
+    Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
-   :::
+    :::
 
 6. Click "Erase" at the top
 
@@ -35,7 +35,7 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 8. Ensure that "Format" is set to "MS-DOS (FAT)"
 
 9. Ensure that "Scheme" is set to "Master Boot Record"
-   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
+    - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
 
 10. Click "Erase"
 
@@ -47,7 +47,7 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 
 ### OS X Yosemite (10.10) and earlier
 
-1. Insert your SD card into your computer
+1. Insérez votre carte SD dans votre ordinateur
 
 2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
@@ -55,14 +55,14 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 
 4. Select your SD card in the left panel
 
-   ::: danger
+    ::: danger
 
-   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
+    Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
-   :::
+    :::
 
 5. Click "Partition" at the top
-   - If "Partition" does not appear, make sure to choose the device instead of a volume
+    - If "Partition" does not appear, make sure to choose the device instead of a volume
 
 6. Ensure that "Partition Layout" is set to "1 Partition"
 
@@ -89,4 +89,4 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 ## Dépannage
 
 - SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
+    - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.

@@ -16,8 +16,8 @@ In manchen seltenen Fällen ist es möglich, dass während des Flashens einer ge
 
 - Your ntrboot compatible flashcart
 - Two 3DS family consoles
-  - **The source 3DS**: the 3DS family console that is already running boot9strap
-  - **The target 3DS**: the 3DS family console on stock firmware
+    - **The source 3DS**: the 3DS family console that is already running boot9strap
+    - **The target 3DS**: the 3DS family console on stock firmware
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 
@@ -40,7 +40,7 @@ In manchen seltenen Fällen ist es möglich, dass während des Flashens einer ge
 3. Lies die rote Warnung auf dem Bildschirm
 4. Drücke (A), um fortzufahren
 5. Wähle deine Flashcart aus
-   - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
+    - If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
 6. Wähle "Dump Flash"
 7. Warte bis der Prozess beendet ist
 8. Drücke (A), um fortzufahren

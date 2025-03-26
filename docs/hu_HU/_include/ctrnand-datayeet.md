@@ -2,12 +2,12 @@ Ez a rész a rendszer beállítások alaphelyzetbe állítását szolgálja. **A
 
 1. Kapcsold ki a konzolod
 2. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
-3. Menj ide: `[0:] SDCARD` -> `gm9`
+3. Menj ide: `[0:] SDCARD` -> `gm9` -> `in`
 4. Nyomd meg az (X) gombot, miközben a CTRTransfer `.bin` van kijelölve, hogy kitöröld
 5. Nyomd meg az (A) gombot a megerősítéshez
 6. Nyomd meg a (B) gombot néhányszor, hogy visszamenj a főmenübe
 7. Navigálj ide: `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-   - The `<ID0>` will be a folder with a 32-character long name
+    - Az `<ID0>` egy 32 karakter hosszú nevű mappa
 8. Használd a D-Pad-et a `00010017` kijelöléséhez
 9. Nyomd meg a (jobb váll) + (A) gombokat a mappa opciók előhozásához
 10. Válaszd ki ezt: "Copy to 0:/gm9/out"
@@ -19,5 +19,5 @@ Ez a rész a rendszer beállítások alaphelyzetbe állítását szolgálja. **A
 16. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
 17. Nyomd meg a (Start) gombot a konzolod újraindításához
 18. A konzolod be fog tölteni a kezdeti telepítési menübe
-    - This is expected behaviour. Valószínüleg nem vesztettél el játék adatot
+    - Ez az elvárt viselkedés. Valószínüleg nem vesztettél el játék adatot
 19. Fejezd be a kezdeti telepítési menüt, követve az utasításokat a konzolod képernyőjén

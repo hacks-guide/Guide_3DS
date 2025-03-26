@@ -1,6 +1,6 @@
-This occurs when you use multiple SD cards with the same 3DS and then merge the SD card contents together. Both are "valid", but the 3DS can only read one at a time.
+Ini terjadi jika menggunakan kartu SD lain di 3DS yang sama lalu menggabungkan isi kartu SD tersebut. Keduanya "benar", tapi 3DS hanya bisa baca satu-satu.
 
-You will need to determine which one contains your data. First of all, back up all of the folders, in case something goes wrong:
+Harus tahu mana yang benar berisi data Anda. Cadangkan dulu semua folder ID1 untuk jaga-jaga jika salah:
 
 ::: info
 
@@ -8,7 +8,7 @@ You will need to determine which one contains your data. First of all, back up a
 
 :::
 
-Now, delete all but one of the folders from your SD card. Generally, you will want to delete the **smallest** one(s), as the one with all your data will probably have more space occupied. You can compare which folder is occupying more space by right-clicking it and clicking "Properties":
+Untuk tahu folder ID1 yang benar di kartu SD. Cari folder **berukuran kecil** untuk dihapus, folder yang lebih besar biasanya berisi data Anda. Untuk membandingkan folder mana yang lebih besar, pencet kanan dan pilih "Properties":
 
 ::: info
 
@@ -22,7 +22,7 @@ Now, delete all but one of the folders from your SD card. Generally, you will wa
 
 :::
 
-Your SD card should now look something like this:
+Isi kartu SD seharusnya seperti ini:
 
 ::: info
 
@@ -30,4 +30,4 @@ Your SD card should now look something like this:
 
 :::
 
-Now, put your SD card into your 3DS and turn it on. If your data is still there, you deleted the right folder and have now determined your correct ID1. If everything has disappeared, go back into the backup folder that you made earlier and try the other folder.
+Sekarang, sisipkan kartu SD ke 3DS dan nyalakan. Jika data Anda tidak hilang, berarti folder ID1 di kartu SD sudah benar. Jika semuanya menghilang, balik ke folder cadangan yang dibuat tadi dan coba dengan folder lain.

@@ -3,6 +3,8 @@ noneSelected: A rendszer modell szükséges.
 invalidVersion: Ez nem tűnik egy érvényes rendszer verziónak.
 head:
   - - script
+    - src: /assets/js/common.js
+  - - script
     - src: /assets/js/selecting.js
 ---
 
@@ -10,7 +12,7 @@ head:
 
 Mielőtt elkezdenénk ezt az útmutatót, ellenőrizzük, hogy van-e már egyedi firmware telepítve, illetve mi a konzolod jelenlegi rendszer verziója.
 
-### Section I - CFW Check
+### I. rész - CFW ellenőrzés
 
 1. Kapcsold ki a konzolod
 2. Nyomd le és tartsd nyomva (Select) gombot
@@ -23,12 +25,12 @@ Ha a Luma3DS konfigurációs képernyőt vagy egyéb egyedi menüt (pl. GodMode9
 
 :::
 
-### Section II - System Version Check
+### II. rész - Rendszer verzió ellenőrzés
 
 1. Lépj be a "System Settings"-be a konzolodon
-2. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.17.0-50U")
+2. A rendszer verziód ki lesz írva a felső képernyő jobb alsó sarkában (pl. "Ver. 11.17.0-50U")
 
-### Section III - Select a Method
+### III. rész - Metódus választása
 
 A korrrekt metódushoz a konzolodhoz, kérjük add meg azt a rendszer verziót, amit a II. részben találtál.
 
@@ -36,7 +38,7 @@ A korrrekt metódushoz a konzolodhoz, kérjük add meg azt a rendszer verziót, 
 
 ---
 
-#### Alternate Methods
+#### Alternatív metódusok
 
 Ha lehetséges, azt a metódust kell követned, ami feljebb látszik.
 

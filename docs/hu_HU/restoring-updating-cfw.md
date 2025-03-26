@@ -1,34 +1,32 @@
-# Restoring / Updating CFW
+# CFW visszaállítása / frissítése
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez az oldal egy létező modern boot9strap telepítésre mutatja be a custom firmware appok újra telepítését és/vagy frissítését. Továbbá használható abban az esetben is helyreállításra, ha elveszett vagy megsérült az SD kártya.
 
 Az SD kártyád FAT32-re kell legyen formázva, hogy követhesd ezt az útmutatót, vagy a 3DS nem fogja felismerni. Ha az SD kártyád nem megfelelően formázott, használd ezen oldalak valamelyikét a formázáshoz, az operációs rendszeredtől függően: [Windows](formatting-sd-\(windows\)), [Mac](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
-## What You Need
+## Amire szükséged lesz
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
 
-## Instructions
+## Lépések
 
 1. Helyezd az SD kártyád a számítógépbe
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+2. Másolj mindent a Luma3DS `.zip`-ből (`boot.firm`, `boot.3dsx`, és `config`) az SD kártyád gyökerébe, és cseréld le a már meglévő fájlt
+    - Az SD kártya gyökere a kezdőkönyvtárt jelenti az SD kártyán, ahol látható a Nintendo 3DS könyvtár, de nem vagyunk benne
 3. Tedd vissza az SD kártyád a konzoldba
 4. Kapcsold be a konzolod
-   - If you see the Luma3DS configuration menu, press (Start) to save and reboot
+    - Ha a Luma3DS konfigurációs menüt látod, nyomj (Start) gombot a mentéshez és az újraindításhoz
 
-::: tip
+::: info
 
 A Luma3DS legfrissebb verziója most már telepítésre került az SD kártyára és a belső memóriába.
 
 :::
 
-___
+::: tip
 
-::: info
-
-Ha szeretnél újratelepíteni, vagy frissíteni más homebrew alkalmazásokat, folytasd a [Telepítés véglegesítése](finalizing-setup) oldallal
+Folytatás a [telepítés véglegesítésével](finalizing-setup) a homebrew alkalmazások (pl. FBI, Homebrew Launcher) telepítéséhez vagy frissítéséhez.
 
 :::

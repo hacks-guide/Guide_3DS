@@ -1,11 +1,5 @@
 # Informazioni importanti
 
-::: danger
-
-<!--@include: ./_include/3ds-online.md -->
-
-:::
-
 ::: info
 
 Se è la prima volta che modifichi un Nintendo 3DS (o non hai esperienza con la tecnologia), continua a leggere! Altrimenti, se hai già qualche esperienza e sai cosa tu stia facendo, prosegui con [Cominciamo!](get-started).
@@ -14,11 +8,11 @@ Se è la prima volta che modifichi un Nintendo 3DS (o non hai esperienza con la 
 
 Questa pagina contiene alcune terminologie informatiche di base e informazioni specifiche dei 3DS che dovresti conoscere prima di seguire questa guida.
 
-Ogni sezione è collassata. Fai clic o tocca il nome della sezione per aprirla.
+Ogni sezione è inizialmente collassata. Fai clic o tocca il nome della sezione per aprirla.
 
-## Cose che dovresti sapere sul 3DS
+## Compatibilità
 
-:::: details Compatibilità 3DS/2DS
+:::: details Con quali console è compatibile questa guida?
 
 ::: info
 
@@ -26,11 +20,11 @@ Ogni sezione è collassata. Fai clic o tocca il nome della sezione per aprirla.
 
 :::
 
-Questa guida funziona su tutte le versioni retail della famiglia di console Nintendo 3DS (compresi 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, e New 2DS XL/LL), indipendentemente dalla regione o dal firmware.
+Questa guida funziona su tutte le versioni retail della famiglia di console Nintendo 3DS (compresi 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, e New 2DS XL/LL), indipendentemente dalla regione o dal firmware. NON è compatibile con la famiglia di console DSi (DSi, DSi XL/LL). Per queste, consulta invece [questa guida](https://dsi.cfw.guide).
 
 ::::
 
-:::: details Compatibilità del computer
+:::: details Di che tipo di computer / hardware ho bisogno per seguire questa guida?
 
 ::: info
 
@@ -38,11 +32,11 @@ Questa guida funziona su tutte le versioni retail della famiglia di console Nint
 
 :::
 
-Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa scaricare file tramite Internet e copiarli sulla tua scheda SD. A seconda del tuo computer/cellulare/dispositivo elettronico, potresti aver bisogno di acquistare un adattatore da scheda SD a USB, per far sì che il tuo computer possa leggere la scheda SD.
+Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa scaricare file tramite Internet e copiarli sulla tua scheda SD. Questo include la maggior parte dei dispositivi elettronici di consumo, come i computer che eseguono Windows, macOS, Linux e chromeOS (Chromebook), come anche i telefoni Android. A seconda del tuo dispositivo elettronico, potresti aver bisogno di acquistare un adattatore da scheda SD a USB, per permettergli di leggere la scheda SD.
 
 ::::
 
-:::: details Posizione, tipo e capienza della scheda SD
+:::: details Di che tipo di scheda SD ha bisogno/usa la mia console?
 
 ::: info
 
@@ -50,9 +44,15 @@ Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa sca
 
 :::
 
-La posizione dello slot della scheda SD e il tipo di scheda SD da usare dipendono dal modello del tuo 3DS. Ulteriori informazioni sono disponibili alla [pagina ufficiale di supporto Nintendo](https://www.nintendo.it/Servizio-al-consumatore/Nintendo-3DS-e-Nintendo-2DS/Uso/Schede-SD/Usare-le-schede-SD/Usare-le-schede-SD-826532.html).
+La posizione dello slot della scheda SD e il tipo di scheda SD da usare dipendono dal modello del tuo 3DS. Ulteriori informazioni sono disponibili alla [pagina ufficiale di supporto Nintendo](https://www.nintendo.com/it-it/Assistenza/Nintendo-3DS-e-Nintendo-2DS/Uso/Schede-SD/Usare-le-schede-SD/Usare-le-schede-SD-826532.html).
 
 Il 3DS può leggere schede SD di qualunque capienza (anche più grandi di 32GB), tuttavia la scheda dev'essere formattata con filesystem FAT32 (**non** exFAT né NTFS). Puoi usare una delle seguenti applicazioni per formattare la tua scheda SD, a seconda del tuo sistema operativo: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD più grandi di **128GB** non sono consigliate a causa di problemi noti con i temi personalizzati e con la grafica GBA/DS.
+
+::: info
+
+Si consiglia vivamente di **utilizzare solo una scheda SD** con una console in qualsiasi momento, poiché non è possibile unire successivamente il contenuto di due schede SD. Quindi, se la console ha già una scheda SD, è necessario utilizzare quella scheda SD per modificare la console, o dovrai copiare tutto su una scheda SD più grande prima o dopo la modifica.
+
+:::
 
 ::: warning
 
@@ -62,23 +62,25 @@ Per seguire questa guida, ti servirà una scheda SD di almeno **2GB**.
 
 ::: info
 
-È consigliabile verificare che la tua scheda SD sia priva di errori prima di seguire questa guida usando [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), o [F3XSwift (Mac)](f3xswift-\(mac\))
+Se vuoi, puoi verificare che la tua scheda SD sia priva di errori prima di seguire questa guida usando [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), o [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 
 ::::
 
 :::: warning
-::: details Potenziali rischi (disclaimer)
+
+:::details Potenziali rischi (disclaimer)
 
 Effettuando la modifica alla tua console, la sottoponi ad un remoto (ma possibile) rischio di brick (che la renderebbe inutilizzabile). _**Se sbagli a posizionare dei file NON brickerai la console**_, potresti invece brickarla saltando alcuni passaggi.
 
 Riassumendo: Modificare la tua console è sicuro, ma _**è una tua responsabilità**_ se qualcosa dovesse andare storto.
 
 :::
+
 ::::
 
-## Cose che devi fare sul tuo computer
+## Terminologia importante
 
 ::: warning
 
@@ -86,7 +88,7 @@ Seguendo questa guida non dovrebbero verificarsi perdite di dati, ma è sempre p
 
 :::
 
-:::: details Terminologia del posizionamento dei file (es. "directory principale della scheda SD", "/luma/")
+:::: details Cosa significano "directory principale della scheda SD" o "/luma/"?
 
 ::: info
 
@@ -114,7 +116,7 @@ Potresti anche vedere i nomi delle cartelle indicati in questa maniera: `/cartel
 
 ::::
 
-:::: details Scaricare file da GitHub
+:::: details Come scarico file da GitHub?
 
 ::: info
 
@@ -126,7 +128,7 @@ In questa guida copierai i file scaricati dal tuo computer o cellulare nella sch
 
 ::::
 
-:::: details Aprire/estrarre i file
+:::: details Come estraggo/apro un file ZIP?
 
 ::: info
 
@@ -142,7 +144,7 @@ Nella maggior parte dei sistemi operativi, per estrarre i file basta farci un do
 
 ::::
 
-:::: details (solo Windows) Estensioni dei file
+:::: details Cosa sono le estensioni dei file?
 
 ::: info
 

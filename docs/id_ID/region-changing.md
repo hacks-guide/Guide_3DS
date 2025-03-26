@@ -1,73 +1,77 @@
-# Region Changing
+# Mengubah Daerah
 
-## Required Reading
+## Bacaan Penting
 
-This is an add-on section for region changing your console. This is done by installing the 11.15.0 CTRTransfer image for the region you want to switch to. After installing the image, you can update your console normally to the latest firmware (11.17.0).
+Ini adalah laman lebihan untuk mengubah daerah konsol. Caranya dengan memasang citra CTRTransfer 11.15.0 sesuai daerah yang ingin diganti. Setelah memasang citra, konsol bisa diperbarui seperti biasa ke _firmware_ terkini (11.17.0).
 
-Note that region changing is almost completely unnecessary since Luma3DS supports out-of-region games and individual title [Locale Emulation](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). Additionally, running NDS games with alternative out-of-region languages is supported by [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases). You should only perform a region change if you wish to have your system UI is in a language that is not available on your console's current region.
+Mohon diingat, mengubah daerah hampir sama sekali tidak perlu karena Luma3DS mendukung permainan luar-daerah dan [emulasi daerah tiap apli] (https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). Malah, permainan NDS dengan bahasa luar-daerah bisa dijalankan [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases). Mengubah daerah hanya boleh dilakukan jika tidak mengerti bahasa antarmuka yang ada di sistem konsol.
 
 ::: info
 
-This page assumes that you have already installed Luma3DS and boot9strap. If you followed this website to the end (Finalizing Setup), you have Luma3DS and boot9strap.
+Konsol harus sudah ada Luma3DS dan boot9strap untuk laman ini. Jika sudah mengikuti panduan sampai "Penyiapan Akhir", Luma3DS dan boot9strap sudah ada.
 
 :::
 
 ::: warning
 
-As a part of this process, your system settings will be reset to its defaults. This includes things such as your username, country, and language. **Installed games and their save data will not be affected.**
+Untuk proses bagian ini, pengaturan sistem akan diatur ulang ke bawaan. Ini termasuk nama pengguna, negara, dan bahasa. **Tidak memengaruhi permainan terpasang dan simpanannya.**
 
 :::
 
 ::: danger
 
-If you change the region of your console:
+Jika daerah konsol diubah:
 
-- You will not be able to use your NNID (if you have one). NNIDs are locked to the region that they were created in.
-- You may not be able to access the eShop, even if you [delete your eShop account](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account) beforehand. This is because certain titles tend to remain linked to the 3DS, even after account deletion (especially on New 3DS).
-  - This is still relevant because, while purchases can no longer be made on eShop, game updates are still being provided. Updates may provide extra content or fix bugs.
-  - This logic extends to system transfers, meaning you would not be able to perform a system transfer from a USA 3DS to a region-changed JPN-to-USA 3DS.
-  - Pokémon Bank also requires working eShop access.
-  - That being said, system transfer and game updates are region locked anyway (e.g. Japanese eShop only has Japanese game updates).
-- **You will not be able to uninstall custom firmware without bricking the console!** If you intend to uninstall custom firmware in the future, you **MUST** restore your NAND backup that was created before the region change.
+- NNID Anda tidak akan bisa digunakan (jika ada). NNID dikunci sesuai daerah konsol tempat akun dibuat.
+- Akses ke eShop juga mungkin tidak bisa, bahkan jika sebelumnya sudah [menghapus akun eShop](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account). Ini karena aplikasi tertentu cenderung tetap tertaut ke 3DS, bahkan setelah hapus akun (khususnya di New 3DS).
+    - Ini masih perlu karena walaupun sudah tidak bisa membeli di eShop tapi **masih bisa memperbarui permainan**. Pembaruan akan ada perbaikan kutu / konten tambahan.
+    - Begitu pun untuk System Transfer, berarti tidak bisa transfer sistem beda daerah, misal: dari konsol 3DS JPN-terubah-USA ke 3DS USA asli.
+    - Pokémon Bank juga perlu akses ke eShop.
+    - Dan juga, transfer sistem dan pembaruan permainan itu terkunci-daerah (misal: eShop Jepang hanya punya pembaruan Jepang).
+- **Mencopot _custom firmware_ berkemungkinan konsol menjadi matot!** Jika berniat mencopot _custom firmware_, berarti **HARUS** memulihkan dulu cadangan NAND **yang** dibuat sebelum mengubah daerah.
 
 :::
 
-## What You Need
+## Apa yang Perlu
 
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
-- The latest release of [FBI](https://github.com/lifehackerhansol/FBI/releases/download/2.6.1/FBI.3dsx) (direct download)
-- The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
-- A torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download)
-  - If you already have a torrent client, you do not need to download a new one
-- The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
+- Versi terkini dari [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (yang `.zip` GodMode9)
+- Versi terkini dari [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (unduhan langsung)
+- Versi terkini dari [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(yang berkas `.3dsx`)_
+- Versi terkini dari [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (pencet kanan lalu _save link as_; simpan tautan)
+- Berkas citra 11.15.0 CTRTransfer daerah lain **sesuai jenis konsol Anda** (misal: Unduh "New 3DS / New 2DS - USA" jika punya konsol jenis New 3DS dan ingin diubah ke daerah USA)
+    ::: warning
+
+Perlu klien torrent untuk mengunduh berkas CTRTransfer, seperti [qBitTorrent](https://www.qbittorrent.org/download) atau [Deluge](https://deluge-torrent.org/download/).
+
+:::
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 
-## Instructions
+## Instruksi
 
-### Section I - Prep Work
+### Bagian I - Persiapan
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 
-### Section II - NAND Backup
+### Bagian II - Mencadang NAND
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 
 <!--@include: ./_include/nand-backup.md -->
 
-### Section III - CTRTransfer
+### Bagian III - CTRTransfer
 
 <!--@include: ./_include/ctrtransfer-main.md -->
 
-### Section IV - Launching FBI
+### Bagian IV - Membuka FBI
 
 <!--@include: ./_include/launch-hbl-dlp.md -->
 
-### Section V - Reinstalling Tickets
+### Bagian V - Memasang ulang Ticket
 
 <!--@include: ./_include/ctrtransfer-ticket-copy.md -->
 
-### Section VI - Fixing locale-related issues
+### Bagian VI - Memperbaiki isu daerah konsol
 
 <!--@include: ./_include/ctrnand-datayeet.md -->
 
@@ -75,6 +79,6 @@ ___
 
 ::: tip
 
-Your 3DS has successfully been region changed!
+Daerah konsol 3DS sekarang sudah diubah!
 
 :::

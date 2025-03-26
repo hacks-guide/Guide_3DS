@@ -44,9 +44,9 @@ Inserisci nella console la scheda di gioco del quale vuoi creare un backup
 1. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 2. Entra in `[C:] GAMECART`
 3. Segui i passaggi corretti per la tua scheda di gioco:
-   - **Scheda di gioco 3DS:** Premi (A) su `[ID titolo].trim.3ds` per selezionarlo
-   - **Scheda di gioco NDS:** Premi (A) su `[ID titolo].nds` per selezionarlo
-     - I backup trimmati non sono consigliati per i giochi NDS in generale, in quanto possono causare problemi durante l'esecuzione
+    - **Scheda di gioco 3DS:** Premi (A) su `[ID titolo].trim.3ds` per selezionarlo
+    - **Scheda di gioco NDS:** Premi (A) su `[ID titolo].nds` per selezionarlo
+        - I backup trimmati non sono consigliati per i giochi NDS in generale, in quanto possono causare problemi durante l'esecuzione
 4. Seleziona "Copy to 0:/gm9/out"
 5. Il file non-installabile `.3ds` o `.nds` verrà salvato nella cartella `/gm9/out/` della tua scheda SD
 
@@ -89,8 +89,8 @@ Permette il backup di titoli digitali installati sia dal sistema sia dall'utente
 2. Premi il pulsante HOME per far apparire il menu delle azioni
 3. Seleziona "Title manager"
 4. Seleziona una delle seguenti opzioni a seconda del titolo di cui vuoi creare un backup
-   - **Titolo installato dall'utente**: `[A:] SD CARD`
-   - **Titolo di sistema / DSiWare**: `[1:] NAND / TWL`
+    - **Titolo installato dall'utente**: `[A:] SD CARD`
+    - **Titolo di sistema / DSiWare**: `[1:] NAND / TWL`
 5. Seleziona il titolo di cui vuoi creare il backup
 6. Seleziona "Manage Title..."
 7. Seleziona "Build CIA (standard)"
@@ -111,16 +111,16 @@ Per identificare il Title ID di un file `<ID titolo>.gbavc.sav`, puoi controllar
 :::
 
 1. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi mantenere i salvataggi:
-   - Avvia il gioco GBA
-   - Esci dal gioco GBA
-   - Spegni la tua console
-   - Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
-   - Entra nella cartella `[S:] SYSNAND VIRTUAL`
-   - Premi (A) su `agbsave.bin` per selezionarlo
-   - Seleziona "AGBSAVE options..."
-   - Seleziona "Dump GBA VC save"
-   - Premi il pulsante (A) per continuare
-   - Premi (Start) per riavviare la tua console
+    - Avvia il gioco GBA
+    - Esci dal gioco GBA
+    - Spegni la tua console
+    - Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
+    - Entra nella cartella `[S:] SYSNAND VIRTUAL`
+    - Premi (A) su `agbsave.bin` per selezionarlo
+    - Seleziona "AGBSAVE options..."
+    - Seleziona "Dump GBA VC save"
+    - Premi il pulsante (A) per continuare
+    - Premi (Start) per riavviare la tua console
 
 ## Ripristinare i salvataggi dei giochi GBA della Virtual Console
 
@@ -131,21 +131,21 @@ Per identificare il Title ID di un file `<ID titolo>.gbavc.sav`, puoi controllar
 :::
 
 1. Esegui i seguenti passaggi per ogni gioco GBA della Virtual Console del quale vuoi ripristinare i salvataggi:
-   - Avvia il gioco GBA
-   - Esci dal gioco GBA
-   - Spegni la tua console
-   - Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
-   - Entra nella cartella `[0:] SDCARD` -> `gm9` -> `out`
-   - Premi (Y) sul file `<ID titolo>.gbavc.sav` che vuoi ripristinare per copiarlo
-   - Premi (B) per ritornare al menu principale
-   - Entra nella cartella `[S:] SYSNAND VIRTUAL`
-   - Premi (A) su `agbsave.bin` per selezionarlo
-   - Seleziona "AGBSAVE options..."
-   - Seleziona "Inject GBA VC save"
-   - Premi il pulsante (A) per continuare
-   - Premi (Start) per riavviare la tua console
-   - Avvia il gioco GBA
-   - Esci dal gioco GBA
+    - Avvia il gioco GBA
+    - Esci dal gioco GBA
+    - Spegni la tua console
+    - Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
+    - Entra nella cartella `[0:] SDCARD` -> `gm9` -> `out`
+    - Premi (Y) sul file `<ID titolo>.gbavc.sav` che vuoi ripristinare per copiarlo
+    - Premi (B) per ritornare al menu principale
+    - Entra nella cartella `[S:] SYSNAND VIRTUAL`
+    - Premi (A) su `agbsave.bin` per selezionarlo
+    - Seleziona "AGBSAVE options..."
+    - Seleziona "Inject GBA VC save"
+    - Premi il pulsante (A) per continuare
+    - Premi (Start) per riavviare la tua console
+    - Avvia il gioco GBA
+    - Esci dal gioco GBA
 
 ## Criptare / Decriptare un file .CIA
 
@@ -159,8 +159,8 @@ Per motivi pratici, copia i file `.cia` che desideri criptare/decriptare dentro 
 2. Entra nella cartella `[0:] SDCARD` -> `cias`
 3. Premi (A) sul file `.cia` per selezionarlo, quindi seleziona "CIA image options..."
 4. Seleziona l'opzione appropriata per la funzione desiderata:
-   - **Encrypt to 0:/gm9/out:** Crea una copia criptata del file `.cia` selezionato nella cartella `/gm9/out/` della tua scheda SD
-   - **Decrypt to 0:/gm9/out:** Crea una copia decriptata del file `.cia` selezionato nella cartella `/gm9/out/` della tua scheda SD
-   - **Encrypt inplace:** Sostituisce il file `.cia` con una versione criptata dello stesso
-   - **Decrypt inplace:** Sostituisce il file `.cia` con una versione decriptata dello stesso
+    - **Encrypt to 0:/gm9/out:** Crea una copia criptata del file `.cia` selezionato nella cartella `/gm9/out/` della tua scheda SD
+    - **Decrypt to 0:/gm9/out:** Crea una copia decriptata del file `.cia` selezionato nella cartella `/gm9/out/` della tua scheda SD
+    - **Encrypt inplace:** Sostituisce il file `.cia` con una versione criptata dello stesso
+    - **Decrypt inplace:** Sostituisce il file `.cia` con una versione decriptata dello stesso
 5. Il tuo file criptato/decriptato in formato `.cia` verrà salvato nella posizione desiderata

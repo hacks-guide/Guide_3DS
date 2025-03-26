@@ -244,8 +244,8 @@ const themeConfig = {
 };
 
 export default {
-	lang: "de",
-	label: localeData.language,
+	lang: "el",
+	label: "Ελληνικά",
     title: localeData.title,
     description: localeData.description,
     themeConfig: themeConfig

@@ -1,6 +1,6 @@
-# Formatting SD (Windows)
+# SD formázás (Windows)
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez egy kiegészítő rész az SD kártya formázásához, hogy az működjön a 3DS-el.
 
@@ -8,12 +8,14 @@ Ha a 3DS már felismeri az SD kártyát, ez az útmutató nem szükséges.
 
 Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy, kövesd az [SD formázás (Linux)](formatting-sd-\(linux\)) vagy [SD formázás (Mac)](formatting-sd-\(mac\)) útmutatókat.
 
-## What You Need
+## Amire szükséged lesz
 
-- **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- **Minden SD kártya méret esetén:** Az [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/) legfrissebb verziója
+- **csak 64GB vagy nagyobb SD kártya esetén:** A [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm) legfrissebb verziója
 
-## Instructions (32GB or smaller)
+## Lépések
+
+### I. rész - SD Card Formatter
 
 1. Helyezd az SD kártyád a számítógépbe
 
@@ -25,11 +27,11 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 
 5. Válaszd ki az SD kártyád betűjelét a "Select card"-nál
 
-   ::: danger
+    ::: danger
 
-   Legyél biztos abban, hogy a jó meghajtó betűt választod, egyébként rossz merevlemezt törölhetsz!
+    Legyél biztos abban, hogy a jó meghajtó betűt választod, egyébként rossz merevlemezt törölhetsz!
 
-   :::
+    :::
 
 6. Írj be valamit "Volume label"-nek
 
@@ -45,50 +47,52 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 
 12. Zárd be az SD Card Formatter-t
 
-13. Ha az SD kártya tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről
+13. Ha az SD kártya 32GB vagy kisebb és tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről
 
-## Instructions (64GB or larger)
+::: info
 
-1. Helyezd az SD kártyád a számítógépbe
+Végeztél az SD kártyád formázásával ha az **32GB vagy kisebb.**
 
-2. Ha az SD kártya tartalmaz adatot, akkor azokat másold át a számítógépre
+:::
 
-3. Futtasd a `guiformat.exe` alkalmazást
+### II. rész - guiformat (CSAK 64GB vagy nagyobbhoz)
 
-4. Válaszd ki az SD kártyád betűjelét a "Drive" alatt
+1. Futtasd a `guiformat.exe` alkalmazást
 
-   ::: danger
+2. Válaszd ki az SD kártyád betűjelét a "Drive" alatt
 
-   Legyél biztos abban, hogy a jó meghajtó betűt választod, egyébként rossz merevlemezt törölhetsz!
+    ::: danger
 
-   :::
+    Legyél biztos abban, hogy a jó meghajtó betűt választod, egyébként rossz merevlemezt törölhetsz!
 
-5. Válassz méretet az "Allocation unit size" alatt
-   - If the SD card is 64GB, choose 32768
-   - If the SD card is larger than 64GB, choose 65536
+    :::
 
-6. Írj be valamit "Volume label"-nek
+3. Válassz méretet az "Allocation unit size" alatt
+    - Ha az SD kártya 64GB, válaszd a 32768-ot
+    - Ha az SD kártya nagyobb, mint 64GB, válaszd a 65536-ot
 
-7. Ügyelj rá, hogy a "Quick Format" ki legyen választva
+4. Írj be valamit "Volume label"-nek
 
-8. Kattints a "Start"-ra
+5. Ügyelj rá, hogy a "Quick Format" ki legyen választva
 
-9. Kattints az "OK"-ra
+6. Kattints a "Start"-ra
 
-10. Várd meg amíg a formázás befejeződik
+7. Kattints az "OK"-ra
 
-11. Kattints a "Close"-ra
+8. Várd meg amíg a formázás befejeződik
 
-12. Ha az SD kártya tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről
+9. Kattints a "Close"-ra
+
+10. Ha az SD kártya tartalmazott adatot a formázás előtt, akkor azokat most másold vissza a számítógépről
 
 ## Hibaelhárítás
 
-- guiformat shows the error "Failed to open device: GetLastError()=32"
-  - Close everything that may be using the SD card, such as any File Explorer windows.
-  - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
+- a guiformat a "Failed to open device: GetLastError()=32" hibaüzenetet mutatja
+    - Csukj le mindent, ami esetleg használhatja az SD kártyát, mint például bármelyik Fájlkezelő ablak.
+    - Ha a probléma fennáll, próbáld meg leformázni a kártyát NTFS-re az Fájlkezelővel, zárd be azt az ablakot ha kész, és próbáld meg újra a guiformat folyamatot.
 
-- guiformat shows the error "GetLastError()=1117"
-  - Your SD card write-protection switch may be [enabled](/images/sdlock.png). A zárat felfelé kell tolni, hogy engedélyezd az írást az SD kártyára (beleértve a formázást is).
+- a guiformat a "GetLastError()=1117" hibaüzenetet mutatja
+    - Az SD kártyád írás védelmi kapcsolója lehet, hogy [be van állítva](/images/sdlock.png). A zárat felfelé kell tolni, hogy engedélyezd az írást az SD kártyára (beleértve a formázást is).
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Kövesd a lépéseket [itt](https://wiki.hacks.guide/wiki/SD_Clean/Windows) az SD kártyád újraformázásához.
+- SD kártya továbbra sem detektálható a konzol által, vagy a formázás után továbbra is a rossz kapacitást mutatja
+    - Az SD kártyád lehet, hogy partícionált vagy van nem lefoglalt területe. Kövesd a lépéseket [itt](https://wiki.hacks.guide/wiki/SD_Clean/Windows) az SD kártyád újraformázásához.

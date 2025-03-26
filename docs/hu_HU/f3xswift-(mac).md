@@ -1,6 +1,6 @@
 # F3XSwift (Mac)
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez egy kiegészítő rész, amelyben F3XSwift segítségével keresünk hibákat az SD kártyádon.
 
@@ -14,11 +14,11 @@ Az F3XSwift csak macOS 10.13 (High Sierra) és újabb verziókkal kompatibilis. 
 
 :::
 
-## What You Need
+## Amire szükséged lesz
 
-- The latest release of [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
+- Az [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest) legújabb kiadása
 
-## Instructions
+## Lépések
 
 1. Helyezd az SD kártyád a számítógépbe
 2. Futtasd az F3XSwift alkalmazást
@@ -43,6 +43,6 @@ Ha a teszt eredménye bármi más, elképzelhető, hogy az SD kártyád sérült
 
 ::: tip
 
-Return to [Get Started](get-started)
+Vissza a [kezdeti lépésekhez](get-started)
 
 :::

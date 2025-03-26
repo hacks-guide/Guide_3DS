@@ -1,4 +1,4 @@
-At this point, your console will boot to Luma3DS by default.
+Sekarang, konsol akan menyala ke Luma3DS secara bawaan.
 
-- Luma3DS does not look any different from the normal HOME Menu. If your console has booted into the HOME Menu, it is running custom firmware.
-- On the next page, you will install useful homebrew applications to complete your setup.
+- Luma3DS memang seperti HOME Menu biasa. Berarti jika menyala ke HOME Menu, konsol sudah ada _custom firmware_.
+- Di laman berikutnya akan memasang aplikasi _homebrew_ untuk melengkapi penyiapan.

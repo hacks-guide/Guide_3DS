@@ -12,6 +12,24 @@
 
 ::: info
 
+**Επίλυση προβλημάτων**
+
+- [Επίλυση προβλημάτων](troubleshooting)
+- [Επίλυση προβλημάτων (Soundhax)](troubleshooting-soundhax)
+- [Επίλυση προβλημάτων (MSET9)](troubleshooting-mset9)
+- [Επίλυση προβλημάτων (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Επίλυση προβλημάτων (ntrboot)](troubleshooting-ntrboot)
+- [Επίλυση προβλημάτων (safecerthax)](troubleshooting-safecerthax)
+- [Επίλυση προβλημάτων (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Επίλυση προβλημάτων (Ολοκλήρωση εγκατάστασης)](troubleshooting-finalizing-setup)
+- [Επίλυση προβλημάτων (Από το A9LH στο B9S)](troubleshooting-a9lh-to-b9s)
+- [Επίλυση προβλημάτων (Ενημέρωση του B9S)](troubleshooting-updating-b9s)
+- [Επίλυση προβλημάτων (Μετά την εγκατάσταση)](troubleshooting-post-install)
+
+:::
+
+::: info
+
 **Όλα**
 
 - [Από το A9LH στο B9S](a9lh-to-b9s)
@@ -52,6 +70,16 @@
 - [Αλλαγή περιοχής](region-changing)
 - [Επαναφορά/ενημέρωση του CFW](restoring-updating-cfw)
 - [Επίλυση προβλημάτων](troubleshooting)
+- [Επίλυση προβλημάτων (Από το A9LH στο B9S)](troubleshooting-a9lh-to-b9s)
+- [Επίλυση προβλημάτων (Ολοκλήρωση εγκατάστασης)](troubleshooting-finalizing-setup)
+- [Επίλυση προβλημάτων (MSET9)](troubleshooting-mset9)
+- [Επίλυση προβλημάτων (ntrboot)](troubleshooting-ntrboot)
+- [Επίλυση προβλημάτων (Μετά την εγκατάσταση)](troubleshooting-post-install)
+- [Επίλυση προβλημάτων (Soundhax)](troubleshooting-soundhax)
+- [Επίλυση προβλημάτων (safecerthax)](troubleshooting-safecerthax)
+- [Επίλυση προβλημάτων (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Επίλυση προβλημάτων (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Επίλυση προβλημάτων (Ενημέρωση του B9S)](troubleshooting-updating-b9s)
 - [Αφαίρεση του CFW](uninstall-cfw)
 - [Ενημέρωση του B9S](updating-b9s)
 

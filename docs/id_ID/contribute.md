@@ -1,24 +1,24 @@
-# Contribute
+# Bersumbangsih
 
-We're glad to hear that you'd like to contribute to 3ds.hacks.guide! Here are a few ways that you can do so:
+Kami senang Anda ingin bersumbangsih untuk 3ds.hacks.guide! Berikut cara-cara yang bisa dilakukan:
 
-## Maintenance
+## Pemeliharaan
 
-This guide is open-source; our repository is available [here](https://github.com/hacks-guide/Guide_3DS). If you've noticed an issue on this guide, you can file an issue to make us aware, or file a pull request to make the necessary changes yourself. You can also have a chat with us in the #guide-meta channel at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+Panduan ini bersumber terbuka - repositori tersedia di [sini](https://github.com/hacks-guide/Guide_3DS). Jika ada yang salah di panduan ini, buat saja _issue_ agar kami tahu, atau buat _pull request_ untuk melakukan sendiri apa yang perlu diubah. Bisa juga mengobrol dengan kami dalam saluran #guide-meta di [Discord Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
-## Translations
+## Penerjemahan
 
-If you'd like to translate this guide into other languages (or help keep the existing translations up-to-date), check out our [Crowdin](https://crowdin.com/project/3ds-guide).
+Jika ingin menerjemahkan panduan ini ke bahasa lain (atau memutakhirkan terjemahan yang ada), lihat laman [Crowdin](https://crowdin.com/project/3ds-guide) kami.
 
-## Seeding
+## Seed Torrent
 
-A number of files on this guide are only available as torrents. If you'd like to help seed these torrents to ensure their availability in the future, you can download the `.zip` file containing all our `.torrent` files: [torrents.zip](/assets/torrents.zip) (last updated 2023-03-16)
+Beberapa berkas di panduan ini hanya tersedia bentuk torrent. Jika ingin melakukan _seed_ pada torrent ini agar tetap tersedia ke depannya, unduh berkas `.zip` yang berisi semua berkas `.torrent` kami: [torrents.zip](/assets/torrents.zip) (terakhir diperbarui: 2023-03-16)
 
-There is also an [RSS feed](/rss.xml) that may be updated for future torrents, which you can subscribe to.
+Ada juga [umpan RSS](/rss.xml) untuk berita pembaruan torrent ke depannya, berlangganan juga bisa.
 
-## Donations
+## Sumbangan
 
-Maintaining this guide (as well as our support channels) is primarily a volunteer effort, so if this guide has helped you in some way, donations are greatly appreciated!
+Mengurus panduan ini (sekaligus saluran dukungan kami) pada dasarnya upaya sukarela, jadi jika terbantu dengan panduan ini, sumbangan sangat kami hargai!
 
 ::: tip
 

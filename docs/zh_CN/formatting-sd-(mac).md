@@ -22,11 +22,11 @@
 
 5. 在左侧面板中选择你的 SD 卡
 
-   ::: danger
+    ::: danger
 
-   请确保你选对了驱动器，否则你可能会把别的驱动器格式化了！
+    请确保你选对了驱动器，否则你可能会把别的驱动器格式化了！
 
-   :::
+    :::
 
 6. 点击顶部的“擦除（Erase）”
 
@@ -35,7 +35,7 @@
 8. 确保“格式（Format）”设置为 “MS-DOS (FAT)”
 
 9. 确保“方案（Scheme）”设置为“主启动记录（Master Boot Record）”
-   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
+    - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
 
 10. 点击“擦除（Erase）”
 
@@ -55,14 +55,14 @@
 
 4. 在左侧面板中选择你的 SD 卡
 
-   ::: danger
+    ::: danger
 
-   请确保你选对了驱动器，否则你可能会把别的驱动器格式化了！
+    请确保你选对了驱动器，否则你可能会把别的驱动器格式化了！
 
-   :::
+    :::
 
 5. 点击顶部的“分区（Partition）”
-   - If "Partition" does not appear, make sure to choose the device instead of a volume
+    - If "Partition" does not appear, make sure to choose the device instead of a volume
 
 6. 确保“分区布局（Partition Layout）”设置为“1 分区（1 Partition）”
 
@@ -89,4 +89,4 @@
 ## 问题排查
 
 - SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
+    - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.

@@ -8,7 +8,7 @@
 
 ::: info
 
-만약 콘솔에 menuhax 관련 CFW가 설치되어 있다면, [HOME 메뉴의 extdata를 제거](troubleshooting#other-troubleshooting)한 뒤, 다음 절차를 SysNAND에서 따르면 됩니다. SD카드 없이 부팅되는 시스템 버전이 9.2.0-20이라면, menuhax 관련 설치가 되어 있을 가능성이 있습니다.
+만약 기기에 menuhax 관련 CFW가 설치되어 있다면, [HOME 메뉴의 extdata를 제거](troubleshooting-post-install)한 뒤, 다음 절차를 SysNAND에서 따르면 됩니다. SD카드 없이 부팅되는 시스템 버전이 9.2.0-20이라면, menuhax 관련 설치가 되어 있을 가능성이 있습니다.
 
 :::
 

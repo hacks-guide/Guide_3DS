@@ -22,11 +22,11 @@ Deze pagina is alleen voor Mac-gebruikers. Als je geen Mac gebruikt, bekijk dan 
 
 5. Selecteer je SD-kaart in het linkerpaneel
 
-   ::: danger
+    ::: danger
 
-   Zorg ervoor dat je het juiste apparaat kiest, anders kan je per ongeluk de verkeerde schijf verwijderen!
+    Zorg ervoor dat je het juiste apparaat kiest, anders kan je per ongeluk de verkeerde schijf verwijderen!
 
-   :::
+    :::
 
 6. Klik boven op "Wissen"
 
@@ -35,7 +35,7 @@ Deze pagina is alleen voor Mac-gebruikers. Als je geen Mac gebruikt, bekijk dan 
 8. Zorg ervoor dat "Formaat" is ingesteld op "MS-DOS (FAT)"
 
 9. Zorg ervoor dat "Scheme" is ingesteld op "Master Boot Record"
-   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
+    - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
 
 10. Klik op "Wissen"
 
@@ -55,14 +55,14 @@ Deze pagina is alleen voor Mac-gebruikers. Als je geen Mac gebruikt, bekijk dan 
 
 4. Selecteer je SD-kaart in het linkerpaneel
 
-   ::: danger
+    ::: danger
 
-   Zorg ervoor dat je het juiste apparaat kiest, anders kan je per ongeluk de verkeerde schijf verwijderen!
+    Zorg ervoor dat je het juiste apparaat kiest, anders kan je per ongeluk de verkeerde schijf verwijderen!
 
-   :::
+    :::
 
 5. Klik op "Partitie" bovenaan
-   - If "Partition" does not appear, make sure to choose the device instead of a volume
+    - If "Partition" does not appear, make sure to choose the device instead of a volume
 
 6. Zorg ervoor dat "Partition Layout" is ingesteld op "1 Partition"
 
@@ -89,4 +89,4 @@ Deze pagina is alleen voor Mac-gebruikers. Als je geen Mac gebruikt, bekijk dan 
 ## Probleemoplossing
 
 - SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
+    - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.

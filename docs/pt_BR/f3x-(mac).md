@@ -1,6 +1,6 @@
 # F3X (Mac)
 
-## Required Reading
+## Leitura Obrigatória
 
 Esta é uma seção adicional para verificar erros no seu cartão SD usando F3X.
 
@@ -14,11 +14,11 @@ Se você está usando um Mac com a macOS 10.13 (High Sierra) e adiante, siga [F3
 
 :::
 
-## What You Need
+## O que é necessário
 
-- The latest release of [F3X](https://github.com/insidegui/F3X/releases/latest)
+- A versão mais recente do [F3X](https://github.com/insidegui/F3X/releases/latest)
 
-## Instructions
+## Instruções
 
 1. Descompacte o arquivo `.zip` do F3X
 2. Insira o cartão SD no seu computador
@@ -43,6 +43,6 @@ Se o teste mostrar outros resultados, o cartão SD pode estar corrompido ou dani
 
 ::: tip
 
-Return to [Get Started](get-started)
+Voltar para [Começando](get-started)
 
 :::

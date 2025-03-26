@@ -15,7 +15,7 @@ Diese Seite ist nur für Windowsnutzer gedacht. If you are not on windows, check
 ## Instructions
 
 1. Kopiere `h2testw.exe` aus der h2testw`.zip` auf dein Desktop
-2. Insert your SD card into your computer
+2. Stecke deine SD-Karte in deinen Computer
 3. Starte `h2testw.exe`
 4. Wähle "Deutsch"
 5. Klicke "Ziel wählen"

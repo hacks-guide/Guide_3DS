@@ -1,4 +1,20 @@
+---
+head: [
+    ['script', {src: '/assets/js/common.js'}],
+    ['script', {src: '/assets/js/skater-link.js'}],
+    ['script', {src: '/assets/js/link-common.js'}],
+]
+---
+
 # Installing boot9strap (super-skaterhax)
+
+::: danger
+
+# This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-(mset9)) instead.
+
+[![distraction so that people don't look at the rest of the page](/images/distraction.gif)](installing-boot9strap-(mset9))
+
+:::
 
 ::: details Technical Details (optional)
 
@@ -39,8 +55,9 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 1. Launch System Settings
 1. Select "Other Settings"
 1. Navigate to "Profile" -> "Region Settings"
-    + If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that tells you that you will lose access to Nintendo Network ID features, you can safely select OK to continue
-    + After completing this page, you can restore the region settings back to normal
+    + These settings will be temporarily changed to increase the success rate of the exploit
+    + You can restore your region settings back to normal once you have finished this page
+    + If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
 1. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
     + USA: United States, Do Not Set
     + EUR: United Kingdom, Do Not Set
@@ -83,7 +100,7 @@ If you haven't already, make sure you have a working Internet connection set up 
     + If your console freezes on a yellow screen, hold the POWER button until it turns off, then retry this section
     + If your console freezes on a red screen, hold the POWER button until it turns off, redo step 3 of Section II, then retry this section
     + If your console [shows the word Text on the top-left corner of the bottom screen](/images/screenshots/skaterhax/skater-old3ds.png), you have an Old 3DS and this exploit **will not work on your device**. If this is the case, you should follow [MSET9](installing-boot9strap-(mset9)) instead
-    + If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting#installing-boot9strap-super-skaterhax)
+    + If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
 1. Your console will have booted into the Homebrew Launcher
 1. Launch nimdsphax from the list of homebrew
 1. If the exploit was successful, you will have booted into SafeB9SInstaller
@@ -95,7 +112,7 @@ If you haven't already, make sure you have a working Internet connection set up 
 In this section, you will install custom firmware onto your console.
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
-    + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting#issues-with-safeb9sinstaller)
+    + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
 1. Once it is complete, press (A) to reboot your console
 <!--@include: ./_include/configure-luma3ds.md -->
 

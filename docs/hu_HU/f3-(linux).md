@@ -1,6 +1,6 @@
 # F3 (Linux)
 
-## Required Reading
+## Kötelező olvasmány
 
 Ez egy kiegészítő rész, amelyben F3 segítségével keresünk hibákat az SD kártyádon.
 
@@ -8,11 +8,11 @@ Az SD kártyád méretétől és a számítógéped sebességétől függően ez
 
 Ez az oldal Linux felhasználókra vonatkozik. Ha nem Linuxod van, nézd meg a [H2testw (Windows)](h2testw-\(windows\)) vagy az [F3X (Mac)](f3x-\(mac\)) oldalt.
 
-## What You Need
+## Amire szükséged lesz
 
-- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- Az [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0) legújabb kiadása
 
-## Instructions
+## Lépések
 
 1. Csomagold ki az f3 `.zip` fájlt
 2. Lépj `cd` paranccsal az f3 könyvtárba
@@ -66,6 +66,6 @@ Ha a teszt eredménye bármi más, elképzelhető, hogy az SD kártyád sérült
 
 ::: tip
 
-Return to [Get Started](get-started)
+Vissza a [kezdeti lépésekhez](get-started)
 
 :::

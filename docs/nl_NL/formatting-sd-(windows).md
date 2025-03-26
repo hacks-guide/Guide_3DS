@@ -10,10 +10,12 @@ Deze pagina is alleen voor windows-gebruikers. Als je geen Windows gebruikt, bek
 
 ## What You Need
 
-- **For SD cards 32GB or smaller:** the latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
-## Instructions (32GB or smaller)
+## Instructions
+
+### Section I - SD Card Formatter
 
 1. Plaats je SD kaart in je computer
 
@@ -25,11 +27,11 @@ Deze pagina is alleen voor windows-gebruikers. Als je geen Windows gebruikt, bek
 
 5. Selecteer uw SD kaart stationsletter voor "Select card"
 
-   ::: danger
+    ::: danger
 
-   Zorg ervoor dat je de juiste stationsletter kiest, anders kan je per ongeluk de verkeerde schijf verwijderen!
+    Zorg ervoor dat je de juiste stationsletter kiest, anders kan je per ongeluk de verkeerde schijf verwijderen!
 
-   :::
+    :::
 
 6. Voer iets in voor "Volume label"
 
@@ -45,50 +47,52 @@ Deze pagina is alleen voor windows-gebruikers. Als je geen Windows gebruikt, bek
 
 12. Sluit SD Card Formatter
 
-13. Als de SD-kaart al bestanden en mappen voor het formatteren bevatte, kopieer dan alles terug van uw computer
+13. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
 
-## Instructions (64GB or larger)
+::: info
 
-1. Plaats je SD kaart in je computer
+You're done formatting your SD card if it's **32GB or smaller.**
 
-2. Als de SD kaart bestanden en mappen erop heeft, kopieer dan alles naar een map op uw computer
+:::
 
-3. Voer `guiformat.exe` uit
+### Section II - guiformat (ONLY for 64GB or larger)
 
-4. Selecteer uw SD kaart stationsletter voor "Drive"
+1. Run `guiformat.exe`
 
-   ::: danger
+2. Select your SD card's drive letter for "Drive"
 
-   Zorg ervoor dat je de juiste stationsletter kiest, anders kan je per ongeluk de verkeerde schijf verwijderen!
+    ::: danger
 
-   :::
+    Zorg ervoor dat je de juiste stationsletter kiest, anders kan je per ongeluk de verkeerde schijf verwijderen!
 
-5. Selecteer een grootte voor "Allocation unit size"
-   - If the SD card is 64GB, choose 32768
-   - If the SD card is larger than 64GB, choose 65536
+    :::
 
-6. Voer iets in voor "Volume label"
+3. Select a size for "Allocation unit size"
+    - If the SD card is 64GB, choose 32768
+    - If the SD card is larger than 64GB, choose 65536
 
-7. Zorg ervoor dat "Quick Format" is geselecteerd
+4. Voer iets in voor "Volume label"
 
-8. Klik op "Start"
+5. Zorg ervoor dat "Quick Format" is geselecteerd
 
-9. Klik op "OK"
+6. Click "Start"
 
-10. Wacht tot het formatteren is voltooid
+7. Klik op "OK"
 
-11. Klik op "Close"
+8. Wacht tot het formatteren is voltooid
 
-12. Als de SD-kaart al bestanden en mappen voor het formatteren bevatte, kopieer dan alles terug van uw computer
+9. Klik op "Close"
+
+10. Als de SD-kaart al bestanden en mappen voor het formatteren bevatte, kopieer dan alles terug van uw computer
 
 ## Probleemoplossing
 
 - guiformat shows the error "Failed to open device: GetLastError()=32"
-  - Close everything that may be using the SD card, such as any File Explorer windows.
-  - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
+    - Close everything that may be using the SD card, such as any File Explorer windows.
+    - If this issue persists, try reformatting the card to NTFS in File Explorer, close that window when it's done, and re-attempt the guiformat process.
 
 - guiformat shows the error "GetLastError()=1117"
-  - Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
+    - Your SD card write-protection switch may be [enabled](/images/sdlock.png). The lock must be flipped upwards to allow writing to the SD card (including formatting).
 
 - SD card remains undetected by console or continues to display the wrong capacity after formatting
-  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.
+    - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Windows) to reformat your SD card.

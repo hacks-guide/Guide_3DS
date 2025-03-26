@@ -10,14 +10,14 @@ Se esquecemos de adicionar você a essa lista de créditos, [nos informe](https:
 
 **Agradecimentos especiais a:**
 
-- **Plailect**, the original creator and maintainer of this guide
-- [The guide translators](https://crowdin.com/project/3ds-guide), who make this guide more accessible around the world
-- Anyone who has ever submitted an issue, pull request, or otherwise informed us about problems on this guide
-- The historical contributors to this guide, without whom this guide would not exist today
+- **Plailect**, o criador original e mantenedor deste guia
+- [Os tradutores do guia](https://crowdin.com/project/3ds-guide), que tornam este guia mais acessível em todo o mundo
+- Qualquer pessoa que já tenha relatado um problema, feito um pull request, ou de outra maneira nos informou sobre problemas neste guia
+- Os contribuidores históricos a este guia, sem os quais este guia não existiria hoje
 
 :::
 
-:::details Historical contributors
+:::details Contribuidores históricos
 
 ```
 + #Cakey on freenode
