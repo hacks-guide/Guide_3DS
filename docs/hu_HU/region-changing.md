@@ -4,7 +4,7 @@
 
 Ez egy kiegészítő rész, amelyben régióváltást végzünk a konzolodon. Ezt úgy hajtjuk végre, hogy telepítünk egy olyan 11.15.0-s CTRTransfer képfájlt, ami az általad kívánt régiójú. A képfájl telepítését követően frissítheted a konzolod a szokásos módon a legutolsó firmware-re (11.17.0).
 
-Fontos, hogy tudd, hogy a régióváltás majdnem teljesen felesleges, mivel a Luma3DS támogatja a régiódon kívüli játékokat, illetve a játékonkénti [lokalizáció emulációt](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) is. Ezen felül, NDS játékok futtatása más, régión kívüli nyelveken is támogatott [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases) segítségével. You should only perform a region change if you wish to have your system UI in a language that is not available on your console's current region.
+Fontos, hogy tudd, hogy a régióváltás majdnem teljesen felesleges, mivel a Luma3DS támogatja a régiódon kívüli játékokat, illetve a játékonkénti [lokalizáció emulációt](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features) is. Ezen felül, NDS játékok futtatása más, régión kívüli nyelveken is támogatott [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases) segítségével. Csak akkor van szükséged régió módosításra, ha az szeretnéd, hogy a rendszer felülete olyan nyelven legyen, ami nem elérhető a konzolod aktuális régiójában.
 
 ::: info
 
