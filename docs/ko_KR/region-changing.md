@@ -4,7 +4,7 @@
 
 이 페이지는 콘솔의 지역을 변경하는 방법을 안내하는 부가 섹션입니다. 이 작업은 바꾸고자 하는 지역의 11.15.0 CTRTransfer 이미지를 설치합니다. 이미지 설치 후, 콘솔을 최신 펌웨어 버전(11.17.0)으로 업데이트할 수 있습니다.
 
-Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)을 지원하기 때문에, 지역 변경은 거의 불필요하다는 점을 참고해 주시기 바랍니다. 또한, 다른 지역의 NDS게임을 실행하는 것 또한 [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)에 의해 지원됩니다. 이 작업은 원하는 언어가 시스템 UI에 제공되지 않을 시에만 하는 것을 권장합니다.
+Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)을 지원하기 때문에, 지역 변경은 거의 불필요하다는 점을 참고해 주시기 바랍니다. 또한, 다른 지역의 NDS게임을 실행하는 것 또한 [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)에 의해 지원됩니다. You should only perform a region change if you wish to have your system UI in a language that is not available on your console's current region.
 
 ::: info
 
