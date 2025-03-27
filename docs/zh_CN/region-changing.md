@@ -4,7 +4,7 @@
 
 This is an add-on section for region changing your console. 这是通过安装你想要切换到的地区的 11.15.0 CTRTransfer 镜像而达成的。 After installing the image, you can update your console normally to the latest firmware (11.17.0).
 
-注意，Luma3DS 本身就自带了[区域模拟](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)的功能，这使得变更区域几乎是不必要的。 顺带一提，你可以使用 [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases) 来运行其他区域的 NDS 游戏。 You should only perform a region change if you wish to have your system UI is in a language that is not available on your console's current region.
+注意，Luma3DS 本身就自带了[区域模拟](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)的功能，这使得变更区域几乎是不必要的。 顺带一提，你可以使用 [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases) 来运行其他区域的 NDS 游戏。 You should only perform a region change if you wish to have your system UI in a language that is not available on your console's current region.
 
 ::: info
 
