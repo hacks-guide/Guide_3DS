@@ -4,7 +4,7 @@
 
 Ini adalah laman lebihan untuk mengubah daerah konsol. Caranya dengan memasang citra CTRTransfer 11.15.0 sesuai daerah yang ingin diganti. Setelah memasang citra, konsol bisa diperbarui seperti biasa ke _firmware_ terkini (11.17.0).
 
-Mohon diingat, mengubah daerah hampir sama sekali tidak perlu karena Luma3DS mendukung permainan luar-daerah dan [emulasi daerah tiap apli] (https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). Malah, permainan NDS dengan bahasa luar-daerah bisa dijalankan [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases). You should only perform a region change if you wish to have your system UI in a language that is not available on your console's current region.
+Mohon diingat, mengubah daerah hampir sama sekali tidak perlu karena Luma3DS mendukung permainan luar-daerah dan [emulasi daerah tiap apli] (https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). Malah, permainan NDS dengan bahasa luar-daerah bisa dijalankan [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases). Mengubah daerah hanya boleh dilakukan jika bahasa antarmuka yang diinginkan tidak ada di sistem konsol.
 
 ::: info
 
