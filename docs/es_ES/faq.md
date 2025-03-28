@@ -32,27 +32,27 @@ Bricks are now effectively impossible unless you are purposely trying to brick y
 
 :::
 
-:::details Can I run awesome homebrew and emulators with this?
+:::details ¿Puedo ejecutar Homebrew y emuladores increíbles con esto?
 
-Yes! This guide will install a few useful homebrew applications, including [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), which acts as a homebrew app store.
-
-:::
-
-:::details Can I use this to play games from other regions?
-
-Yes; Luma3DS will automatically ignore the region check for cartridges and installed titles. Some games may need to make use of Luma's [locale emulation feature](https://wiki.hacks.guide/wiki/3DS:Setting_game_locales) in order to work properly on out-of-region consoles.
+¡Sí! Esta guía instalará algunas aplicaciones homebrew útiles incluyendo [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), que actúa como una tienda de aplicaciones homebrew.
 
 :::
 
-:::details Will I lose any features if I install CFW?
+:::details ¿Puedo usar esto para jugar a juegos de otras regiones?
 
-No. Consoles with custom firmware can download game updates and run physical cartridges as any other 3DS can.
+Sí; Luma3DS ignorará automáticamente la comprobación de región de cartuchos y títulos instalados. Algunos juegos podrían necesitar hacer uso de la [función de emulación de región (información en inglés)](https://wiki.hacks.guide/wiki/3DS:Setting_game_locales) de Luma para funcionar adecuadamente en consolas fuera de su región.
 
 :::
 
-:::details Can I keep my NNID, saves, digital games (etc.)?
+:::details ¿Perderé alguna característica si instalo CFW?
 
-Your NNID (if you have one) will not be affected by this guide. Consoles with a region of KOR, CHN, or TWN do not have NNID functionality to begin with and are thus unaffected.
+No. Las consolas con custom firmware pueden descargar actualizaciones de juegos y ejecutar cartuchos físicos, como cualquier otra 3DS.
+
+:::
+
+:::details ¿Puedo mantener mi NNID, archivos de guardado, juegos digitales (etc.)?
+
+Tu NNID (si tienes una) no se verá afectada por esta guía. Consoles with a region of KOR, CHN, or TWN do not have NNID functionality to begin with and are thus unaffected.
 
 Following this guide alone should not result in data loss (saves, digital games, etc), but SD card corruption is always a possibility. You should make a backup of your SD card contents if you have important data.
 
