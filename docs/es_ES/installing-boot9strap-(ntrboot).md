@@ -36,7 +36,7 @@ Para utilizar los enlaces [magnéticos](https://es.wikipedia.org/wiki/Magnet) de
 
 6. Reinserta la tarjeta SD en la consola
 
-7. Power on your console
+7. Enciende tu consola
 
 ### Section II - ntrboot
 
@@ -67,7 +67,7 @@ En esta sección, instalarás custom firmware en tu consola.
 2. Delete `boot.firm` from the root of your SD card
 3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Reinserta la tarjeta SD en la consola
-5. Power on your console
+5. Enciende tu consola
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
