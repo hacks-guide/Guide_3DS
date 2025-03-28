@@ -60,13 +60,13 @@ Following this guide alone should not result in data loss (saves, digital games,
 
 :::details Will my 3DS be banned for having CFW?
 
-Bans are no longer possible because Nintendo Network services have been shut down (for everyone).
+Los baneos ya no son posibles debido a que los servicios de Nintendo Network ya no están activos para ningún usuario.
 
 :::
 
 :::details Can I do this without a computer (e.g. an Android phone)?
 
-In most cases, yes! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+Generalmente, ¡sí! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
 
 You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
 
