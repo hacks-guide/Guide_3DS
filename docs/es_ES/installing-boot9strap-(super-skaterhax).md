@@ -56,7 +56,7 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 
 4. Reinserta la tarjeta SD en la consola
 
-5. Power on your console
+5. Enciende tu consola
 
 6. Launch System Settings
 
@@ -123,7 +123,7 @@ En esta sección, instalarás custom firmware en tu consola.
 
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
     - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
-2. Una vez completado, pulsa (A) para reiniciar tu consola
+2. Una vez completado, presiona (A) para reiniciar tu consola
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
