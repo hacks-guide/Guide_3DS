@@ -2,7 +2,7 @@
 
 :::details Detalles técnicos (opcional)
 
-[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa Configuración del sistema desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
+[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa Configuración de la consola desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
 
 :::
 
@@ -69,7 +69,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 4. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
     - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
 5. Reinserta la tarjeta SD en la consola
-6. Power on your console
+6. Enciende tu consola
 7. Open Mii Maker
 8. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the HOME Menu
     - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
