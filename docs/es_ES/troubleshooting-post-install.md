@@ -46,7 +46,7 @@ The steps below can be attempted in any order, but are listed from least to most
 4. Try booting into recovery mode and updating your system:
     - Apaga la consola
     - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
-    - Power on your console
+    - Enciende tu consola
     - If you were successful, the console will boot to an "update your system" screen
 5. Follow the [CTRTransfer](ctrtransfer) guide
 6. For further support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
