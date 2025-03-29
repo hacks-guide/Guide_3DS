@@ -4,7 +4,8 @@ Creando l'ID1 MSET9 con Windows 10 e superiori, lo script potrebbe fallire con i
 
 Succede a causa del supporto beta UTF-8 in Windows. È necessario disattivarlo per eseguire MSET9:
 
-1. Premi **Tasto Windows + R** per aprire il la finestra di dialogo Esegui, digita `intl.cpl` e fai clic su "OK"
+1. Hit **Windows Key + R** to open up the Run dialogue, type `intl.cpl` then click "OK"
+
     ::: info
 
     ![](/images/screenshots/troubleshooting/234run.png)
