@@ -41,7 +41,7 @@
 
 2. SD 카드를 컴퓨터에 삽입해 주세요
 
-3. Copy everything from the latest Luma3DS `.zip` to the root of your SD card
+3. 최신 버전의 Luma3DS `.zip`안에 있는 모든 파일들을 SD 카드의 루트에 복사해 주세요
     - SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
 
 4. v7.0.5 버전의 Luma3DS `.zip` 파일에서 `arm9loaderhax.bin`을 SD 카드의 루트에 복사해 주세요
