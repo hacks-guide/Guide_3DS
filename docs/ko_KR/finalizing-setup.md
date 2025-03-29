@@ -88,9 +88,9 @@ All applications installed on this guide are open-source. If you are interested 
     - 만일 이들 중 하나의 버튼이 고장났을 경우, [config.ini](/assets/config.ini) 파일을 받아 `luma` 폴더에 덮어쓰기 해주세요. 이 파일은 Rosalina 키 조합을 (X) + (Y)로 바꿉니다
 2. "Miscellaneous options"을 선택해 주세요
 3. "Dump DSP firmware"를 선택해 주세요
-4. Press (B) to continue
+4. (B)를 눌러 진행해 주세요
 5. "Nullify user time offset"를 선택해 주세요
-6. Press (B) to continue
+6. (B)를 눌러 진행해 주세요
 7. (B)를 눌러 Rosalina 메뉴로 돌아가 주세요
 8. (B)를 눌러 Rosalina 메뉴를 나와 주세요
 
