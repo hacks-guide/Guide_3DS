@@ -54,7 +54,7 @@ safecerthax는 시스템 버전 1.0.0 - 11.14.0가 설치되어 있는 모든 �
 
 ::: warning
 
-This section is MANDATORY! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
+이 섹션은 **필수적입니다!** 프록시 설정에 실패할 경우 실수로 인해 콘솔이 최신 버전으로 업데이트될 수 있습니다.
 
 :::
 
