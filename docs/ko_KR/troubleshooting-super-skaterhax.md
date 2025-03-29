@@ -28,7 +28,7 @@ If the screen flashes colors then freezes/crashes:
 
 :::
 
-:::: details "에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (black screen with text)
+:::: details "에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (텍스트와 함께 검정 화면이 나옴)
 
 `arm11code.bin` 파일이 없거나 잘못 들어갔습니다. Make sure to copy the files of the [latest version of super-skaterhax](https://skater.nintendohomebrew.com/) for your region and version to the root of your SD card (not inside of a folder).
 
