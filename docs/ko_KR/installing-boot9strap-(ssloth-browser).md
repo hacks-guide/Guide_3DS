@@ -61,7 +61,7 @@ SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브�
 
 ::: danger
 
-If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
+만약 콘솔을 업데이트하라는 프롬프트가 떴다면, **멈추세요**! 섹션 II를 처음부터 다시 하고 프록시가 제대로 설정되어 있는지 확인해 주세요.
 
 :::
 
