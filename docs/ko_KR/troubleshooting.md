@@ -1,8 +1,8 @@
 # 문제 해결
 
-This page serves a landing page for troubleshooting resources that we offer for commonly encountered issues. Click on the link corresponding to the page you are following to explore it.
+이 페이지는 가이드를 진행하면서 일반적으로 마주치는 에러에 대한 정보를 제공하는 페이지입니다. 진행하는 목차에 해당하는 링크를 클릭해 주세요.
 
-If you're unable to fix your issue, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp). If your issue is missing and you know the solution, [let us know!](https://github.com/hacks-guide/Guide_3DS/issues)
+만약 문제가 해결되지 않는다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 영어로 도움을 요청하세요. 만약 문제가 위키에 있지 않고 해결 방법을 알고 있다면, [저희에게 알려주세요!](https://github.com/hacks-guide/Guide_3DS/issues)
 
 ::: tip
 
@@ -28,6 +28,6 @@ If you're unable to fix your issue, ask for help at [Nintendo Homebrew on Discor
 
 ---
 
-- [Post-Install](troubleshooting-post-install)
+- [설치 이후](troubleshooting-post-install)
 
 :::
