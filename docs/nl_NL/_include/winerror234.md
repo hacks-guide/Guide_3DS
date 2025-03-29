@@ -5,6 +5,7 @@ When creating the MSET9 ID1 on Windows 10 and above, the script may fail with th
 This occurs because of the beta UTF-8 support in Windows. You must disable it to run MSET9:
 
 1. Hit **Windows Key + R** to open up the Run dialogue, type `intl.cpl` then click "OK"
+
     ::: info
 
     ![](/images/screenshots/troubleshooting/234run.png)
