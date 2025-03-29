@@ -13,7 +13,7 @@
 ## 진행 방법
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
-2. Copy everything from the Luma3DS `.zip` (`boot.firm`, `boot.3dsx`, and `config`) to the root of your SD card, replacing any existing files
+2. Luma3DS `.zip`안에 있는 모든 파일들(`boot.firm`, `boot.3dsx`와 `config`)을 SD 카드의 루트에 복사하여 기존 파일들을 모두 덮어쓰기 합니다
     - SD 카드의 루트는 SD 카드를 열 때 보이는 디렉토리이고, Nintendo 3DS 폴더가 보이지만 그 안에 들어가 있지 않은 상태의 폴더입니다
 3. SD 카드를 콘솔에 다시 삽입해 주세요
 4. 콘솔의 전원을 켜 주세요
