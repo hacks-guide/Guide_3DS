@@ -1,10 +1,10 @@
 # 문제 해결 (SSLoth-Browser)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (SSLoth-Browser)" page, which is used on system versions between 11.4.0 and 11.13.0. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
+이 페이지는 11.4.0에서 11.13.0 버전 사이에 쓰이는 방법인 "boot9strap 설치 (SSLoth-Browser)" 페이지의 주요 해결 방법을 다루고 있습니다. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (SSLoth-Browser)" page. If you are using a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (super-skaterhax)](troubleshooting-super-skaterhax) instead.
+이 가이드들은 "boot9strap 설치 (SSLoth-Browser)" 페이지에 대해서만 유효합니다. 만약 **11.15.0 에서 11.17.0 사이의** **New 3DS**를 사용 중이라면, [문제 해결 (super-skaterhax)](troubleshooting-super-skaterhax) 페이지를 참고하세요.
 
 :::
 
@@ -16,7 +16,7 @@ These instructions are only valid for the "Installing boot9strap (SSLoth-Browser
 
 :::
 
-:::details "에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (black screen with text)
+:::details "에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (텍스트와 함께 검정 화면이 나옴)
 
 `arm11code.bin` 파일이 없거나 잘못 들어갔습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 
