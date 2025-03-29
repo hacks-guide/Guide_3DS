@@ -1,8 +1,8 @@
-# Troubleshooting (Post-Install)
+# 문제 해결 (설치 이후)
 
-This page offers troubleshooting advice for commonly encountered issues after custom firmware is installed. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
+이 페이지는 커스텀 펌웨어가 설치된 이후에 흔히 일어나는 문제에 관한 해결책을 기재합니다. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
 
-## Boot issues
+## 부팅 문제
 
 ::: info
 
@@ -57,7 +57,7 @@ This page offers troubleshooting advice for commonly encountered issues after cu
 
 :::details "An error has occurred: Failed to apply 1 FIRM patch(es)" 또는 "An exception has occurred -- Current process: pm"
 
-Your Luma3DS version is outdated. 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)을 다시 내려받고 `boot.firm` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 파일이 있으면 덮어씌워 주세요. ZIP 파일을 압축 해제할 때, 3DS 관련 파일에서 문제가 있다고 알려져 있은 WinRAR를 제외한 프로그램으로 압축 해제해 주세요.
+구 버전의 Luma3DS가 설치된 상태입니다. 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)을 다시 내려받고 `boot.firm` 파일을 SD 카드의 최상위 디렉토리에 복사해주세요. 이미 파일이 있으면 덮어씌워 주세요. ZIP 파일을 압축 해제할 때, 3DS 관련 파일에서 문제가 있다고 알려져 있은 WinRAR를 제외한 프로그램으로 압축 해제해 주세요.
 
 :::
 
@@ -92,17 +92,17 @@ SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 
 
 :::
 
-:::details Blue "BOOTROM ERROR" screen
+:::details 파란 "BOOTROM ERROR" 화면
 
 이 콘솔은 벽돌 상태입니다. ntrboot 플래시카트를 구매한 후 이를 이용해 boot9strap를 설치하여 콘솔을 복구해야 합니다. 이 문제는 또 콘솔의 하드웨어 문제가 있다는 뜻일수도 있습니다. 어떠한 경우가 됐든, [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 
-- It is also possible that someone has set a boot-time splash screen that just looks like a brick. Try leaving your console powered on, waiting on the blue screen, for five minutes.
+- 또는, 누군가가 부팅 배경화면을 벽돌 상태처럼 보이도록 설정했을 수도 있습니다. 콘솔을 켜둔 채로, 파란 화면에서 5분 정도 기다려보세요.
 
 :::
 
-:::details Some other error
+:::details 다른 에러
 
-Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+에러 사진을 찍고 [Nintendo Homebrew Discord 서버](https://discord.gg.MWxPgEp)에 오셔서 도움을 요청하세요.
 
 :::
 
@@ -133,7 +133,7 @@ Please take a photo of the error and join [Nintendo Homebrew on Discord](https:/
 
 :::details 확장 메모리 모드 게임 (포켓몬 썬/문, 스매시 브라더스 등)이 정상 작동하지 않습니다
 
-이 문제는 구 3DS / 2DS 콘솔의 지역을 변경하거자 CTRTransfer를 한 이후 나타날 수 있는 상황입니다. Follow the instructions [here](region-changing#section-vi---fixing-locale-related-issues) to fix this issue (skipping steps 3, 4, 5, and 6).
+이 문제는 구 3DS / 2DS 콘솔의 지역을 변경하거자 CTRTransfer를 한 이후 나타날 수 있는 상황입니다. [이 설명](region-changing#section-vi---fixing-locale-related-issues)을 따라 문제를 해결하세요(3번과 4번, 5번, 6번 과정은 건너뛰세요).
 
 :::
 
@@ -156,7 +156,7 @@ menuhax67가 여전히 설치되어 있는 듯합니다. menuhax67 제거를 위
 
 :::
 
-## Other troubleshooting
+## 기타 문제 해결
 
 :::details HOME 메뉴 추가 데이터 정리
 
@@ -196,15 +196,15 @@ HOME 메뉴를 통해 Homebrew Launcher 애플리케이션에 접근이 불가�
 
 :::
 
-:::details Turning off Parental Controls
+:::details 청소년 보호 기능 해제하기
 
 본체 설정 -> 청소년 보호 기능으로 들어간 다음, PIN을 입력하고 설정 삭제를 선택한 다음 삭제를 눌러 제거할 수 있습니다.
-그러나, PIN을 몰라 본체 설정에 접근할 수 없는 경우, 이를 비활성화해야 합니다. In order to do this, you need to obtain your console's master key (mkey):
+그러나, PIN을 몰라 본체 설정에 접근할 수 없는 경우, 이를 비활성화해야 합니다. 이 경우, 해당 본체의 마스터 키 (mkey)를 확인해야 합니다.
 
 1. [이 사이트](https://mkey.eiphax.tech/) 에 들어가 주세요
 2. 다음 빈칸에 관련 정보를 넣어 주세요:
-    - Device Type: Select "3DS" (the same applies if you are using a 2DS, New 3DS (XL/LL) or New 2DS (XL/LL))
-    - System Date: The day and month your console's clock is set to
+    - Device Type(장치 종류): "3DS" 를 선택하세요(2DS나 New 3DS (XL/LL), New 2DS (XL/LL)을 사용하고 있는 경우에도 똑같이 선택하세요.).
+    - System Date(본체 날짜): 본체에 설정된 현재 월과 일을 입력하세요.
     - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
 3. After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key
 4. Press "Clear Settings", then "Delete" to remove all Parental Controls data
