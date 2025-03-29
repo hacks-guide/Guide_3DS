@@ -74,7 +74,7 @@ You may need a computer running Windows, macOS, or Linux to reformat your SD car
 
 :::details What size SD card can I use?
 
-Necesitarás al menos 1,5GB de espacio libre en la tarjeta SD para seguir esta guía en su totalidad. While the 3DS is officially compatible with SD cards up to 32GB, larger SD cards can be used if they are manually re-formatted as FAT32. It is not recommended to use SD cards greater than 128GB due to known issues with GBA graphics and custom themes.
+Necesitarás al menos 1,5GB de espacio libre en la tarjeta SD para seguir esta guía en su totalidad. Si bien la 3DS es oficialmente compatible con tarjetas SD de hasta 32GB, se pueden usar tarjetas SD más grandes siempre y cuando sean reformateadas manualmente en formato FAT32. No se recomienda usar tarjetas SD de tamaño mayor a 128GB debido a problemas conocidos con gráficos en juegos de GBA y temas personalizados.
 
 :::
 
