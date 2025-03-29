@@ -4,7 +4,7 @@ Saat membuat ID1 MSET9 di Windows 10 ke atas, naskah bisa gagal berkode galat in
 
 Ini terjadi karena fitur "beta UTF-8" di Windows. Ini harus nonaktif agar MSET9 berjalan:
 
-1. Hit **Windows Key + R** to open up the Run dialogue, type `intl.cpl` then click "OK"
+1. Tekan **Tombol Windows + R** untuk membuka Run, ketik `intl.cpl`, lalu pencet "OK"
 
     ::: info
 
