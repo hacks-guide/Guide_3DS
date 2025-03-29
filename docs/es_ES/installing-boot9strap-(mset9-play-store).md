@@ -66,7 +66,7 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 9. Tap on the photo corresponding to your console model, then at the bottom, pick your current firmware version
 
 10. If you see the prompt of `Hax ID1 Created`, tap OK to continue
-    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+    - Si aparece un error, consulta la página de [resolución de problemas](troubleshooting-mset9) e inténtalo otra vez
     - Your 3DS will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step
 
 11. Reinserta la tarjeta SD en la consola
@@ -89,7 +89,7 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 18. The MSET9 Installer application should automatically check if you have done previous steps properly
     - It may take a few seconds for the app to detect the SD card and react
     - If it doesn't check automatically, tap `Check MSET9 status` to check manually
-    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+    - Si aparece un error, consulta la página de [resolución de problemas](troubleshooting-mset9) e inténtalo otra vez
 
 19. If the check passed, you'll see `Inject trigger file` become [highlighted](/images/screenshots/mset9/inject-trigger-highlighted.png) and you can continue to the next step. **Do not inject trigger yet.** Put your phone/tablet/computer aside for now
 
