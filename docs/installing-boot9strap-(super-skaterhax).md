@@ -8,14 +8,6 @@ head: [
 
 # Installing boot9strap (super-skaterhax)
 
-::: danger
-
-# This method is currently **not working** due to server-side SSL certificate changes. The timeline for a fix is unknown. In the meantime, follow [Installing boot9strap (MSET9)](installing-boot9strap-(mset9)) instead.
-
-[![distraction so that people don't look at the rest of the page](/images/distraction.gif)](installing-boot9strap-(mset9))
-
-:::
-
 ::: details Technical Details (optional)
 
 For technical details on the exploits that you will be using on this page, see [here](https://github.com/zoogie/super-skaterhax).
@@ -71,41 +63,38 @@ In this section, you will visit the browser exploit webpage, which will launch t
 
 ::: info
 
-If you haven't already, make sure you have a working Internet connection set up on your console.
+A video detailing these steps is available [here](https://www.youtube.com/watch?v=DEcZB72vJts).
 
 :::
 
-1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
-    + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/super/` for EUR/USA/JPN, `https://zoogie.github.io/web/korea` for KOR)
-1. Tap the QR code button and scan one of the following QR codes for your console's region [here](https://user-images.githubusercontent.com/28328903/226086338-585bfdac-0aac-44c0-b413-89206d2815d8.png)
-    + If you get a security certificate warning, please ensure that the system date is today's
-1. Press (Select) to open the bookmark tab
-    + If your (Select) button does not respond, tap the star icon on the bottom-left corner of the screen
-1. Tap "Bookmark this page"
-1. Press (B) once to return to the browser
-1. Press (ZR) to open the tab list
-    + If your (ZR) button does not respond, tap the two overlapped squares near the bottom-right corner of the screen
-1. Make sure that the only tab open is the super-skaterhax website
-    + This tab should be highlighted in blue on the tab list
-    + If other tabs are open, close them
-1. Press (B) once to return to the browser
-1. Press (Start) to open the context menu
-    + If your (Start) button does not respond, tap the 3-line menu on the bottom-right corner of the screen
-1. Tap on "Settings"
-1. Tap on "Delete Cookies"
-1. Press (A) to continue
-1. Press (Home) to return to the HOME Menu, then immediately press (A) to launch the browser again
-1. Select the "GO GO!" button on the top of the bottom screen
+1. Open the Internet Browser
+1. Tap the 3-line (☰) icon on the bottom-right corner of the screen
+1. Tap `Settings` -> scroll down -> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK`
+    + The browser will close
+1. Reopen the Internet Browser
+1. Tap `Next` -> `Google` -> `OK` -> `OK`
+1. Tap on the address bar at the top of the bottom screen
+1. Enter the URL corresponding to your console's region:
+    + **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
+    + **KOR**: `https://skater.686178.xyz/go/korea`
+1. Tap "Open"
+    + You should see the text "GO GO!". Do not click on it yet
+1. Tap the 3-line (☰) icon on the bottom-right corner of the screen
+1. Tap on "Add to Bookmarks"
+1. Tap the 3-line (☰) icon on the bottom-right corner of the screen
+1. Tap on `Settings` -> `Delete Cookies` -> `Yes`
+1. Press (Home) to return to the HOME Menu, then immediately reopen the Internet Browser
+1. Tap the "GO GO!" button on the top of the bottom screen
 1. Press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
-    + If your console freezes on a yellow screen, hold the POWER button until it turns off, then retry this section
-    + If your console freezes on a red screen, hold the POWER button until it turns off, redo step 3 of Section II, then retry this section
-    + If your console [shows the word Text on the top-left corner of the bottom screen](/images/screenshots/skaterhax/skater-old3ds.png), you have an Old 3DS and this exploit **will not work on your device**. If this is the case, you should follow [MSET9](installing-boot9strap-(mset9)) instead
-    + If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
-1. Your console will have booted into the Homebrew Launcher
+1. If your console displays:
+    + **"The Homebrew Launcher" screen**: Continue to the next step
+    + **A white "Error has occurred" message box**: Open System Settings, change the language to a different one (if possible), then retry this section
+    + **A black screen that says "An error has occurred"**: Your file placement is incorrect; ensure that the super-skaterhax files are on the root of the SD card
+    + **A yellow screen**: Hold the POWER button until the console turns off, then retry this section
+    + **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. If this is the case, you should follow [MSET9](installing-boot9strap-(mset9)) instead
 1. Launch nimdsphax from the list of homebrew
 1. If the exploit was successful, you will have booted into SafeB9SInstaller
     + If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
-    + This may take up to five attempts
 
 #### Section III - Installing boot9strap
 
