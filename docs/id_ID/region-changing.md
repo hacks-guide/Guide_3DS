@@ -4,7 +4,7 @@
 
 Ini adalah laman lebihan untuk mengubah daerah konsol. Caranya dengan memasang citra CTRTransfer 11.15.0 sesuai daerah yang ingin diganti. Setelah memasang citra, konsol bisa diperbarui seperti biasa ke _firmware_ terkini (11.17.0).
 
-Mohon diingat, mengubah daerah hampir sama sekali tidak perlu karena Luma3DS mendukung permainan luar-daerah dan [emulasi daerah tiap apli] (https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). Malah, permainan NDS dengan bahasa luar-daerah bisa dijalankan [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases). Mengubah daerah hanya boleh dilakukan jika tidak mengerti bahasa antarmuka yang ada di sistem konsol.
+Mohon diingat, mengubah daerah hampir sama sekali tidak perlu karena Luma3DS mendukung permainan luar-daerah dan [emulasi daerah tiap apli] (https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). Malah, permainan NDS dengan bahasa luar-daerah bisa dijalankan [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases). Mengubah daerah hanya boleh dilakukan jika bahasa antarmuka yang diinginkan tidak ada di sistem konsol.
 
 ::: info
 
@@ -38,12 +38,13 @@ Jika daerah konsol diubah:
 - Versi terkini dari [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (unduhan langsung)
 - Versi terkini dari [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(yang berkas `.3dsx`)_
 - Versi terkini dari [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (pencet kanan lalu _save link as_; simpan tautan)
-- Berkas citra 11.15.0 CTRTransfer daerah lain **sesuai jenis konsol Anda** (misal: Unduh "New 3DS / New 2DS - USA" jika punya konsol jenis New 3DS dan ingin diubah ke daerah USA)
+- The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
+
     ::: warning
 
-Perlu klien torrent untuk mengunduh berkas CTRTransfer, seperti [qBitTorrent](https://www.qbittorrent.org/download) atau [Deluge](https://deluge-torrent.org/download/).
+    Perlu klien torrent untuk mengunduh berkas CTRTransfer, seperti [qBitTorrent](https://www.qbittorrent.org/download) atau [Deluge](https://deluge-torrent.org/download/).
 
-:::
+    :::
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 

@@ -32,27 +32,27 @@ Bricks are now effectively impossible unless you are purposely trying to brick y
 
 :::
 
-:::details Can I run awesome homebrew and emulators with this?
+:::details ¿Puedo ejecutar Homebrew y emuladores increíbles con esto?
 
-Yes! This guide will install a few useful homebrew applications, including [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), which acts as a homebrew app store.
-
-:::
-
-:::details Can I use this to play games from other regions?
-
-Yes; Luma3DS will automatically ignore the region check for cartridges and installed titles. Some games may need to make use of Luma's [locale emulation feature](https://wiki.hacks.guide/wiki/3DS:Setting_game_locales) in order to work properly on out-of-region consoles.
+¡Sí! Esta guía instalará algunas aplicaciones homebrew útiles incluyendo [Universal-Updater](https://github.com/Universal-Team/Universal-Updater/releases/latest), que actúa como una tienda de aplicaciones homebrew.
 
 :::
 
-:::details Will I lose any features if I install CFW?
+:::details ¿Puedo usar esto para jugar a juegos de otras regiones?
 
-No. Consoles with custom firmware can download game updates and run physical cartridges as any other 3DS can.
+Sí; Luma3DS ignorará automáticamente la comprobación de región de cartuchos y títulos instalados. Algunos juegos podrían necesitar hacer uso de la [función de emulación de región (información en inglés)](https://wiki.hacks.guide/wiki/3DS:Setting_game_locales) de Luma para funcionar adecuadamente en consolas fuera de su región.
 
 :::
 
-:::details Can I keep my NNID, saves, digital games (etc.)?
+:::details ¿Perderé alguna característica si instalo CFW?
 
-Your NNID (if you have one) will not be affected by this guide. Consoles with a region of KOR, CHN, or TWN do not have NNID functionality to begin with and are thus unaffected.
+No. Las consolas con custom firmware pueden descargar actualizaciones de juegos y ejecutar cartuchos físicos, como cualquier otra 3DS.
+
+:::
+
+:::details ¿Puedo mantener mi NNID, archivos de guardado, juegos digitales (etc.)?
+
+Tu NNID (si tienes una) no se verá afectada por esta guía. Consoles with a region of KOR, CHN, or TWN do not have NNID functionality to begin with and are thus unaffected.
 
 Following this guide alone should not result in data loss (saves, digital games, etc), but SD card corruption is always a possibility. You should make a backup of your SD card contents if you have important data.
 
@@ -60,13 +60,13 @@ Following this guide alone should not result in data loss (saves, digital games,
 
 :::details Will my 3DS be banned for having CFW?
 
-Bans are no longer possible because Nintendo Network services have been shut down (for everyone).
+Los baneos ya no son posibles debido a que los servicios de Nintendo Network ya no están activos para ningún usuario.
 
 :::
 
 :::details Can I do this without a computer (e.g. an Android phone)?
 
-In most cases, yes! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+Generalmente, ¡sí! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
 
 You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
 
@@ -74,7 +74,7 @@ You may need a computer running Windows, macOS, or Linux to reformat your SD car
 
 :::details What size SD card can I use?
 
-You will need at least 1.5GB of free SD card space to follow this guide in its entirety. While the 3DS is officially compatible with SD cards up to 32GB, larger SD cards can be used if they are manually re-formatted as FAT32. It is not recommended to use SD cards greater than 128GB due to known issues with GBA graphics and custom themes.
+Necesitarás al menos 1,5GB de espacio libre en la tarjeta SD para seguir esta guía en su totalidad. Si bien la 3DS es oficialmente compatible con tarjetas SD de hasta 32GB, se pueden usar tarjetas SD más grandes siempre y cuando sean reformateadas manualmente en formato FAT32. No se recomienda usar tarjetas SD de tamaño mayor a 128GB debido a problemas conocidos con gráficos en juegos de GBA y temas personalizados.
 
 :::
 

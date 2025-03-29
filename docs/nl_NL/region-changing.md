@@ -4,7 +4,7 @@
 
 This is an add-on section for region changing your console. Dit wordt gedaan door het installeren van de 11.15.0 CTRTransfer image voor de regio waarnaar je wilt overschakelen. After installing the image, you can update your console normally to the latest firmware (11.17.0).
 
-Merk wel op dat je regio veranderen bijna altijd compleet onnodig zal zijn omdat Luma3DS ook spellen uit een andere regio kan spelen, en ook individuele [Lokale emulatie](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). Daarnaast worden ook NDS spellen uit andere regio's ondersteund door [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases). You should only perform a region change if you wish to have your system UI is in a language that is not available on your console's current region.
+Merk wel op dat je regio veranderen bijna altijd compleet onnodig zal zijn omdat Luma3DS ook spellen uit een andere regio kan spelen, en ook individuele [Lokale emulatie](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features). Daarnaast worden ook NDS spellen uit andere regio's ondersteund door [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases). You should only perform a region change if you wish to have your system UI in a language that is not available on your console's current region.
 
 ::: info
 
@@ -39,11 +39,12 @@ If you change the region of your console:
 - The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
 - The latest release of [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (right click, save link as)
 - The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
+
     ::: warning
 
-You need to use a torrent client to download the CTRTransfer images, such as [qBitTorrent](https://www.qbittorrent.org/download) or [Deluge](https://deluge-torrent.org/download/).
+    You need to use a torrent client to download the CTRTransfer images, such as [qBitTorrent](https://www.qbittorrent.org/download) or [Deluge](https://deluge-torrent.org/download/).
 
-:::
+    :::
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 

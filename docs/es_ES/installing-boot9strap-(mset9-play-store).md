@@ -2,7 +2,7 @@
 
 :::details Technical Details (optional)
 
-[MSET9](https://github.com/zoogie/MSET9) es un exploit para la aplicación de los Ajustes del Sistema desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
+[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa Configuración de la consola desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
 
 :::
 
@@ -66,12 +66,12 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 9. Tap on the photo corresponding to your console model, then at the bottom, pick your current firmware version
 
 10. If you see the prompt of `Hax ID1 Created`, tap OK to continue
-    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+    - Si aparece un error, consulta la página de [resolución de problemas](troubleshooting-mset9) e inténtalo otra vez
     - Your 3DS will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step
 
 11. Reinserta la tarjeta SD en la consola
 
-12. Power on your console
+12. Enciende tu consola
 
 13. Open Mii Maker
 
@@ -89,7 +89,7 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 18. The MSET9 Installer application should automatically check if you have done previous steps properly
     - It may take a few seconds for the app to detect the SD card and react
     - If it doesn't check automatically, tap `Check MSET9 status` to check manually
-    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+    - Si aparece un error, consulta la página de [resolución de problemas](troubleshooting-mset9) e inténtalo otra vez
 
 19. If the check passed, you'll see `Inject trigger file` become [highlighted](/images/screenshots/mset9/inject-trigger-highlighted.png) and you can continue to the next step. **Do not inject trigger yet.** Put your phone/tablet/computer aside for now
 
@@ -126,7 +126,7 @@ En esta sección, instalarás custom firmware en tu consola.
 
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
     - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
-2. Una vez completado, pulsa (A) para reiniciar tu consola
+2. Una vez completado, presiona (A) para reiniciar tu consola
 
 <!--@include: ./_include/configure-luma3ds.md -->
 

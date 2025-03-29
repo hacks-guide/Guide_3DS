@@ -39,7 +39,7 @@ In this section, you will copy the files needed to trigger both browserhax and u
 6. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en la tarjeta SD
 7. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 8. Reinserta la tarjeta SD en la consola
-9. Power on your console
+9. Enciende tu consola
 
 ### Section II - SSLoth
 
@@ -75,7 +75,7 @@ En esta sección, instalarás custom firmware en tu consola.
 
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
     - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
-2. Una vez completado, pulsa (A) para reiniciar tu consola
+2. Una vez completado, presiona (A) para reiniciar tu consola
 
 <!--@include: ./_include/configure-luma3ds.md -->
 

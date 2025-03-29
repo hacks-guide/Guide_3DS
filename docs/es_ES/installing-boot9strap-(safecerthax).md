@@ -26,7 +26,7 @@ This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ens
 
 In this section, you will see whether your shoulder buttons are working on your console. This will determine whether your console is compatible with this method.
 
-1. Power on your console
+1. Enciende tu consola
 2. Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
     - The camera applet should appear
 3. Apaga la consola
@@ -48,7 +48,7 @@ In this section, you will copy the files needed to trigger the safecerthax explo
 4. Copia `boot9strap.firm` y `boot9strap.firm.sha` desde el `.zip` de boot9strap a la carpeta `/boot9strap/` en la tarjeta SD
 5. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 6. Reinserta la tarjeta SD en la consola
-7. Power on your console
+7. Enciende tu consola
 
 ### Section III - safecerthax proxy
 
@@ -84,7 +84,7 @@ En esta sección, instalarás custom firmware en tu consola.
 
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
     - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-safecerthax)
-2. Una vez completado, pulsa (A) para reiniciar tu consola
+2. Una vez completado, presiona (A) para reiniciar tu consola
 
 <!--@include: ./_include/configure-luma3ds.md -->
 

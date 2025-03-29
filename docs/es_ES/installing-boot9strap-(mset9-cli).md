@@ -2,7 +2,7 @@
 
 :::details Detalles técnicos (opcional)
 
-[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa Configuración del sistema desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
+[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa Configuración de la consola desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
 
 :::
 
@@ -31,10 +31,10 @@ En esta página, utilizarás el script MSET9, que se utiliza para activar MSET9.
 
 ### Sección I - Preparativos
 
-In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
+En esta sección, prepararás el exploit MSET9 creando **temporalmente** un nuevo perfil de Menú HOME sin datos de usuario, y luego completando el perfil con solo los datos mínimos requeridos para activar MSET9. Tus datos de usuario existentes desaparecerán, pero volverán cuando finalices con esta página.
 
 1. Inserta la tarjeta SD en tu computadora
-2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files
+2. Copia todo lo que está dentro del `.zip` de MSET9 a la raíz de tu tarjeta SD, sobreescribiendo cualquier archivo existente
 
     ::: info
 
@@ -52,9 +52,9 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 :::
 ```
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
 
-    - The window should change to this:
+    - La ventana debería cambiar a esto:
 
     ::: info
 
@@ -62,14 +62,14 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
     :::
 
-    - Ensure that the correct console model and version is displayed
+    - Asegúrate de que el modelo y versión de la consola mostrados sean los correctos
 2. Type `1`, then press Enter to begin the process of creating the MSET9 ID1
 3. After reviewing the disclaimer, type `1` again and press Enter to accept it
-    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+    - Si aparece un error, consulta la página de [resolución de problemas](troubleshooting-mset9) e inténtalo otra vez
 4. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
-    - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
+    - Tu 3DS aparecerá como si no tuviera datos ni programas instalados por el usuario en el Menú HOME. **Esto es normal.** Tus datos volverán más tarde en un paso posterior
 5. Reinserta la tarjeta SD en la consola
-6. Power on your console
+6. Enciende tu consola
 7. Open Mii Maker
 8. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the HOME Menu
     - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
@@ -81,7 +81,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
 
     - The window should change to this and display `Ready`:
 
@@ -119,7 +119,7 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
 2. In the MSET9 window, type `3`, then press Enter to inject MSET9
     - You should see "MSET9 successfully injected!"
 3. Press Enter to close the MSET9 script
@@ -152,7 +152,7 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
     - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
     - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
 2. Type `4`, then press Enter to remove the trigger file

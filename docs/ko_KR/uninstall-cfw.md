@@ -59,7 +59,7 @@
 4. SD 카드의 `/luma/payloads/`폴더에 GodMode9 `.zip`안에 압축되있는 `GodMode9.firm`을 복사해 주세요
 5. SD 카드의 루트로 GodMode9 `.zip`안에 압축이 되있는 `gm9` 폴더를 복사해 주세요
 6. `DSiWareUninstaller.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사해 주세요
-7. Copy `safety_test.gm9` and `uninstall_cfw.gm9` to the `/gm9/scripts/` folder on your SD card
+7. SD 카드의 `/gm9/scripts/`폴더에 `safety_test.gm9`와 `uninstall_cfw.gm9`을 복사해 주세요
 8. SD 카드를 콘솔에 다시 삽입해 주세요
 
 ### 섹션 II - DS 모드 확인
@@ -86,7 +86,7 @@
 
 ::: warning
 
-만약 이 테스트 중 하나라도 실패했다면, 커펌 삭제 이후 DS 모드, DS 다운로드 플레이, 혹은 DS 연결 설정이 작동하지 않을 수 있습니다. You should [fix DS mode](troubleshooting-post-install) before continuing.
+만약 이 테스트 중 하나라도 실패했다면, 커펌 삭제 이후 DS 모드, DS 다운로드 플레이, 혹은 DS 연결 설정이 작동하지 않을 수 있습니다. [DS 모드를 고치고](troubleshooting-post-install) 계속해야 합니다.
 
 :::
 
@@ -158,7 +158,7 @@
 10. (L 어깨) + (십자 Down) + (Select) 을 동시에 눌러서 Rosalina 메뉴를 실행해 주세요
 11. "Miscellaneous options"을 선택해 주세요
 12. "Switch the hb. title to the current app."를 선택해 주세요
-13. Press (B) to continue
+13. (B)를 눌러 진행해 주세요
 14. (B)를 눌러 Rosalina 메뉴로 돌아가 주세요
 15. (B)를 눌러 Rosalina 메뉴를 나와 주세요
 16. (Home) 키를 누르고, 다운로드 플레이를 종료해 주세요
@@ -204,9 +204,9 @@
     - Luma3DS 체인로더가 대신 표시되면, 십자 패드와 (A) 버튼으로 GodMode9을 선택해주세요
 2. (Home)을 눌러 작업 메뉴를 열어 주세요
 3. "Scripts..."를 선택해 주세요
-4. Select "uninstall_cfw"
+4. "uninstall_cfw"를 선택해 주세요
 5. 프롬프트가 뜨면, (A) 를 눌러서 진행해 주세요
-6. Press (A) again to proceed
+6. (A)를 다시 눌러 진행해 주세요
 7. (A) 를 눌려 SysNAND (lvl3) 쓰기 잠금을 풀고 화면에 표시된 키 조합을 입력해 주세요
 8. (A)를 눌러 진행해 주세요
 9. 메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요

@@ -1,10 +1,11 @@
-When creating the MSET9 ID1 on Windows 10 and above, the script may fail with this error:
+윈도우 10 이상 환경에서 MSET ID1을 생성하게 되면, 이런 에러와 함께 오류가 날 수 있습니다:
 
 ![](/images/screenshots/troubleshooting/234.png)
 
-This occurs because of the beta UTF-8 support in Windows. You must disable it to run MSET9:
+해당 오류는 윈도우의 UTF-8 지원과 관련된 베타 기능 때문에 발생합니다. MEST9를 실행하기 위해선 이를 비활성화 해야합니다:
 
 1. Hit **Windows Key + R** to open up the Run dialogue, type `intl.cpl` then click "OK"
+
     ::: info
 
     ![](/images/screenshots/troubleshooting/234run.png)
@@ -41,4 +42,4 @@ This occurs because of the beta UTF-8 support in Windows. You must disable it to
 
     :::
 
-After your PC has rebooted, try creating the MSET9 ID1 again.
+PC가 재부팅된 후, MSET9 ID1을 다시 생성해보세요.

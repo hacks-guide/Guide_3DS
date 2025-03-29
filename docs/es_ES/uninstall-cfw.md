@@ -68,7 +68,7 @@ The purpose of this section is to check whether built-in DS mode applications wi
 
 #### DS Connection Settings Test
 
-1. Power on your console
+1. Enciende tu consola
 2. Launch System Settings on your console
 3. Navigate to `Internet Settings` -> `Nintendo DS Connection Settings`, then click OK
 4. You should boot into the Nintendo DS Connection Setup menu
@@ -77,7 +77,7 @@ The purpose of this section is to check whether built-in DS mode applications wi
 
 #### DS Download Play Test
 
-1. Power on your console
+1. Enciende tu consola
 2. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 3. Select "Nintendo DS"
 4. If your console loads into a "Download software via DS Download Play" menu, the test was successful
@@ -143,7 +143,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 
 :::
 
-1. Power on your console
+1. Enciende tu consola
 2. Launch System Settings on your console
 3. Navigate to Data Management > Nintendo 3DS > Software
 4. In this list of software, delete any non-Nintendo content you installed while using CFW
@@ -172,7 +172,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 
 This section will ensure that all illegitimate tickets are removed, allowing eShop to work normally. This will remove all content from the 3DS and log you out of your NNID. Keep in mind that your console's encryption key will be shuffled, meaning that any old data will be rendered inaccessible, even if you have a backup of your SD contents.
 
-1. Power on your console
+1. Enciende tu consola
 2. Launch System Settings on your console
 3. Navigate to Other Settings -> Next Page (until the final page) -> Format System Memory
 4. Follow the prompts to format your 3DS

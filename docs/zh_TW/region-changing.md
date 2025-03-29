@@ -4,7 +4,7 @@
 
 This is an add-on section for region changing your console. 這是透過安裝所選區域的 11.15.0 CTRTransfer 鏡像檔達成的。 After installing the image, you can update your console normally to the latest firmware (11.17.0).
 
-**請注意，區碼變更通常是不需要的，因為 Luma3DS 本身就支援跨區遊玩及程式[語碼模擬](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)的功能。** 另外，您也可透過[TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)來運行非支援語系的 NDS 遊戲。 You should only perform a region change if you wish to have your system UI is in a language that is not available on your console's current region.
+**請注意，區碼變更通常是不需要的，因為 Luma3DS 本身就支援跨區遊玩及程式[語碼模擬](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)的功能。** 另外，您也可透過[TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)來運行非支援語系的 NDS 遊戲。 You should only perform a region change if you wish to have your system UI in a language that is not available on your console's current region.
 
 ::: info
 
@@ -39,11 +39,12 @@ If you change the region of your console:
 - The latest release of [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(the `.3dsx` file)_
 - The latest release of [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (right click, save link as)
 - The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
+
     ::: warning
 
-You need to use a torrent client to download the CTRTransfer images, such as [qBitTorrent](https://www.qbittorrent.org/download) or [Deluge](https://deluge-torrent.org/download/).
+    You need to use a torrent client to download the CTRTransfer images, such as [qBitTorrent](https://www.qbittorrent.org/download) or [Deluge](https://deluge-torrent.org/download/).
 
-:::
+    :::
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 

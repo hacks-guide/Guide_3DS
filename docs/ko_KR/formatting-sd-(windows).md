@@ -10,7 +10,7 @@
 
 ## 준비물
 
-- **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
+- **모든 SD 카드**: 최신 버전의 [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
 - **64GB 이상의 SD 카드를 사용하는 경우:** 최신 버전의 [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
 
 ## 진행 방법

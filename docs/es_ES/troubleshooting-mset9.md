@@ -63,7 +63,7 @@ If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
 2. Type `2` then press enter to check the MSET9 status
     - This will create the dummy databases again
 3. Close the MSET9 script window
@@ -104,7 +104,7 @@ You have multiple ID0 folders. To determine the correct folder, follow these ins
 
 1. Rename the `Nintendo 3DS` folder to `BACKUP_Nintendo 3DS`
 2. Reinserta la tarjeta SD en la consola
-3. Power on your console
+3. Enciende tu consola
 4. Wait for the console to generate the SD card data
     - Your applications will have disappeared. This is normal and will be resolved shortly
 5. Apaga la consola
@@ -157,13 +157,13 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
     - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
     - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
-5. Power on your console
+5. Enciende tu consola
 6. Return to [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
 Alternatively, your SD card may be improperly formatted or partitioned. After removing the trigger file, format it:
@@ -186,13 +186,13 @@ Follow these instructions to remove the trigger file and to retry Section II:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then press Enter
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
     - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
     - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
-5. Power on your console
+5. Enciende tu consola
 6. Return to [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 
 If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
