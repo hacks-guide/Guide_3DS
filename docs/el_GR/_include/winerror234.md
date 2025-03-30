@@ -4,7 +4,7 @@
 
 Αυτό οφείλεται στην υποστήριξη beta για UTF-8 των Windows. Πρέπει να την απενεργοποιήσετε για την εκτέλεση του MSET9:
 
-1. Hit **Windows Key + R** to open up the Run dialogue, type `intl.cpl` then click "OK"
+1. Πατήστε το **πλήκτρο Windows + R** για να ανοίξει το παράθυρο διαλόγου «Εκτέλεση», πληκτρολογήστε `intl.cpl` και κάντε κλικ στο «OK»
 
     ::: info
 
