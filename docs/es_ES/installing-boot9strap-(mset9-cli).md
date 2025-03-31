@@ -70,20 +70,20 @@ En esta sección, prepararás el exploit MSET9 creando **temporalmente** un nuev
     - Tu 3DS aparecerá como si no tuviera datos ni programas instalados por el usuario en el Menú HOME. **Esto es normal.** Tus datos volverán más tarde en un paso posterior
 5. Reinserta la tarjeta SD en la consola
 6. Enciende tu consola
-7. Open Mii Maker
-8. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the HOME Menu
-    - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
-    - If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Exit Mii Maker and return to the HOME Menu
-9. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-    - This will not wipe any of your data
-10. Power off your console by pressing the power button then tapping Power Off on the lower screen
+7. Abre el Editor de Mii
+8. Espera a que tu consola llegue al mensaje que dice ["¡Estás en el editor de Mii!"](/images/screenshots/mset9/mii-welcome.png), luego cierra el Editor de Mii y vuelve al Menú HOME
+    - Puede que veas [este mensaje](/images/screenshots/mset9/mii-extdata.png), cuál indica que los datos necesarios han sido creados
+    - Si llegas al [menú principal](/images/screenshots/mset9/mii-existing.png) del Editor de Mii, entonces los datos ya existen. Sal del Editor de Mii y vuelve al Menú HOME
+9. Abre la configuración de la consola y ve hacia `Gestión de datos` -> `Nintendo 3DS` -> `Programas` -> Borrar ([imagen](/images/screenshots/database-reset.jpg))
+    - Esto no borrará ninguno de tus datos
+10. Apaga la consola presionando el botón POWER y luego tocando «Apagar» en la pantalla táctil
 11. Inserta la tarjeta SD en tu computadora
 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
 
-    - The window should change to this and display `Ready`:
+    - La ventana debería cambiar a esto y mostrar `Ready`:
 
     ::: info
 
@@ -91,16 +91,16 @@ En esta sección, prepararás el exploit MSET9 creando **temporalmente** un nuev
 
     :::
 
-    - If the window says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-not-ready.png):
+    - Si la ventana dice [«Not ready - check MSET9 status for more details»](/images/screenshots/mset9/mset9-not-ready.png):
         - Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
-        - Once you have resolved the issue, return to Section I Step 14
-        - For more information, check the [troubleshooting](troubleshooting-mset9) page
+        - Una vez que hayas resuelto el problema, vuelve a la Sección I Paso 14
+        - Para más información, consulta la página de [resolución de problemas](troubleshooting-mset9)
 2. Type `0`, then press Enter to close the script
 3. Reinserta la tarjeta SD en la consola
 
-### Section II - MSET9
+### Sección II - MSET9
 
-In this section, you will trigger MSET9 to launch SafeB9SInstaller (the custom firmware installer).
+En esta sección, activarás el exploit MSET9 para iniciar SafeB9SInstaller (el instalador de custom firmware).
 
 ::: danger
 
@@ -108,13 +108,13 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 
 :::
 
-1. Power on your console, ensuring System Settings is selected
-    - If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
-2. Press (A) to launch System Settings
-3. Navigate to `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
-4. **Do not press any buttons or touch the screen**
-5. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
-    - The menu will refresh and say that no SD card is inserted
+1. Enciende tu consola, asegurándote de que el ícono de la configuración de la consola este seleccionado
+    - Si la configuración de la consola no está seleccionada, **[mueve el cursor](/images/screenshots/mset9/hover-settings.png)** al ícono de la configuración de la consola usando la cruz de control, apaga la consola, y enciéndela
+2. Pulsa (A) para iniciar los Ajustes del Sistema
+3. Navega a `Gestion de datos` -> `Nintendo 3DS` -> `Datos Adicionales` ([imagen](/images/screenshots/mset9/settings-extdata.png))
+4. **No presiones ningún botón ni toques la pantalla**
+5. **Con la consola AÚN ENCENDIDA, y sin presionar ningún botón y sin tocar la pantalla**, saca la tarjeta SD de tu consola
+    - El menú se actualizará y dirá que la tarjeta SD no está insertada
 6. Inserta la tarjeta SD en tu computadora
 
 <!--@include: ./_include/mset9-chorus.md -->
