@@ -2,7 +2,7 @@
 
 :::details Technical Details (optional)
 
-[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa Configuración de la consola desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
+[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa «Configuración de la consola» desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
 
 :::
 
@@ -82,7 +82,7 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 15. Abre la configuración de la consola y ve hacia `Gestión de datos` -> `Nintendo 3DS` -> `Programas` -> Borrar ([imagen](/images/screenshots/database-reset.jpg))
     - Esto no borrará ninguno de tus datos
 
-16. Apaga la consola presionando el botón POWER y luego tocando «Apagar» en la pantalla táctil
+16. Apaga la consola presionando el botón POWER y luego tocando Apagar en la pantalla táctil
 
 17. Insert your SD card into your phone/tablet/computer
 
@@ -101,7 +101,7 @@ En esta sección, activarás el exploit MSET9 para iniciar SafeB9SInstaller (el 
 
 ::: danger
 
-These instructions must be followed **EXACTLY**, so double-check EVERYTHING you are doing to avoid errors!
+Debes de seguir estas instrucciones de forma **EXACTA**, ¡así que revisa cautelosamente TODO lo que haces para evitar problemas!
 
 :::
 
@@ -116,27 +116,27 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 7. Open the MSET9 Installer application
 8. Tap `Inject trigger file`
     - The button should become greyed out and `Remove trigger file` become [highlighted](/images/screenshots/mset9/remove-trigger-highlighted.png)
-9. Reinsert your SD card into your console **without pressing any buttons or touching the screen**
-10. If the exploit was successful, you will have booted into SafeB9SInstaller
-    - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
+9. Reinserta la tarjeta SD en tu consola **sin presionar ningún botón y sin tocar la pantalla**
+10. Si el exploit fue exitoso, habrás iniciado SafeB9SInstaller
+    - Si aparece una pantalla roja o la consola se queda trabada en una pantalla de carga, sigue la [guía de resolución de problemas](troubleshooting-mset9)
 
-### Section III - Installing boot9strap
+### Sección III - Instalar boot9strap
 
 En esta sección, instalarás custom firmware en tu consola.
 
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
-    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
+    - Si algún paso en la pantalla inferior tiene el texto en color rojo y no se te pide que introduzcas una combinación de botones, [sigue la guía de resolución de problemas](troubleshooting-mset9)
 2. Una vez completado, presiona (A) para reiniciar tu consola
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### Sección IV - Remover MSET9
 
 In this section, you will remove MSET9 to prevent further issues. (This will not remove the custom firmware that you just installed.)
 
 ::: danger
 
-Do NOT skip this section! If you skip it, applications may crash unexpectedly and you will encounter errors on the next page!
+¡NO saltes esta sección! Si te saltas esta sección; ¡las aplicaciones podrían congelarse inesperadamente y te encontrarás con varios errores al seguir la página siguiente!
 
 :::
 
@@ -152,7 +152,7 @@ ___
 
 ::: danger
 
-Did you follow Section IV (Removing MSET9)? That section is MANDATORY!
+¿Has seguido la Sección IV (Eliminar MSET9)? ¡Esa sección es OBLIGATORIA!
 
 :::
 
