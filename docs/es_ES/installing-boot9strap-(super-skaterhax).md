@@ -113,11 +113,11 @@ If you haven't already, make sure you have a working Internet connection set up 
     - If you get another error, try again up to 5 times, and if it still doesn't work, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
 16. Your console will have booted into the Homebrew Launcher
 17. Launch nimdsphax from the list of homebrew
-18. If the exploit was successful, you will have booted into SafeB9SInstaller
+18. Si el exploit fue exitoso, habrás iniciado SafeB9SInstaller
     - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
     - This may take up to five attempts
 
-#### Section III - Installing boot9strap
+#### Sección III - Instalar boot9strap
 
 En esta sección, instalarás custom firmware en tu consola.
 
