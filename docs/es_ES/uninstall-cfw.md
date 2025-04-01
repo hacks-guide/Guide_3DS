@@ -124,11 +124,11 @@ If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your key
 1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Presiona el botón (HOME) para abrir el menú de acciones
 3. Select "Scripts..."
-4. Select "GM9Megascript"
+4. Selecciona "GM9Megascript"
 5. Select "Backup Options"
 6. Select "SysNAND Backup"
 7. Press (A) to confirm
-    - This process will take some time
+    - Este proceso tomará un tiempo
     - If you get an error, ensure you have at least 1.3GB of free space on your SD card
 8. Presiona (B) para regresar al menú principal
 9. Select “Exit”
