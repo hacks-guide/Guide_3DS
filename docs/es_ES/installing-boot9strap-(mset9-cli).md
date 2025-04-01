@@ -2,7 +2,7 @@
 
 :::details Detalles técnicos (opcional)
 
-[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa Configuración de la consola desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
+[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa «Configuración de la consola» desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
 
 :::
 
@@ -52,7 +52,7 @@ En esta sección, prepararás el exploit MSET9 creando **temporalmente** un nuev
 :::
 ```
 
-1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego presiona Enter
 
     - La ventana debería cambiar a esto:
 
@@ -63,10 +63,10 @@ En esta sección, prepararás el exploit MSET9 creando **temporalmente** un nuev
     :::
 
     - Asegúrate de que el modelo y versión de la consola mostrados sean los correctos
-2. Type `1`, then press Enter to begin the process of creating the MSET9 ID1
-3. After reviewing the disclaimer, type `1` again and press Enter to accept it
+2. Escribe `1` y presiona Enter para iniciar la creación del ID1 de MSET9
+3. Después de leer la advertencia, escribe `1` otra vez y presiona Enter para aceptarla
     - Si aparece un error, consulta la página de [resolución de problemas](troubleshooting-mset9) e inténtalo otra vez
-4. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
+4. Si ves el mensaje "Created hacked ID1.", presiona Enter para cerrar el script MSET9
     - Tu 3DS aparecerá como si no tuviera datos ni programas instalados por el usuario en el Menú HOME. **Esto es normal.** Tus datos volverán más tarde en un paso posterior
 5. Reinserta la tarjeta SD en la consola
 6. Enciende tu consola
@@ -76,12 +76,12 @@ En esta sección, prepararás el exploit MSET9 creando **temporalmente** un nuev
     - Si llegas al [menú principal](/images/screenshots/mset9/mii-existing.png) del Editor de Mii, entonces los datos ya existen. Sal del Editor de Mii y vuelve al Menú HOME
 9. Abre la configuración de la consola y ve hacia `Gestión de datos` -> `Nintendo 3DS` -> `Programas` -> Borrar ([imagen](/images/screenshots/database-reset.jpg))
     - Esto no borrará ninguno de tus datos
-10. Apaga la consola presionando el botón POWER y luego tocando «Apagar» en la pantalla táctil
+10. Apaga la consola presionando el botón POWER y luego tocando Apagar en la pantalla táctil
 11. Inserta la tarjeta SD en tu computadora
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego presiona Enter
 
     - La ventana debería cambiar a esto y mostrar `Ready`:
 
@@ -92,10 +92,10 @@ En esta sección, prepararás el exploit MSET9 creando **temporalmente** un nuev
     :::
 
     - Si la ventana dice [«Not ready - check MSET9 status for more details»](/images/screenshots/mset9/mset9-not-ready.png):
-        - Type `2`, then press Enter to check the MSET9 status and follow the directions indicated
+        - Escribe `2` y presiona Enter para comprobar el estado de MSET9 y sigue las instrucciones indicadas
         - Una vez que hayas resuelto el problema, vuelve a la Sección I Paso 14
         - Para más información, consulta la página de [resolución de problemas](troubleshooting-mset9)
-2. Type `0`, then press Enter to close the script
+2. Escribe `0` y presiona Enter para cerrar el script
 3. Reinserta la tarjeta SD en la consola
 
 ### Sección II - MSET9
@@ -104,7 +104,7 @@ En esta sección, activarás el exploit MSET9 para iniciar SafeB9SInstaller (el 
 
 ::: danger
 
-These instructions must be followed **EXACTLY**, so double-check EVERYTHING you are doing to avoid errors!
+Debes de seguir estas instrucciones de forma **EXACTA**, ¡así que revisa cautelosamente TODO lo que haces para evitar problemas!
 
 :::
 
@@ -119,31 +119,31 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
-2. In the MSET9 window, type `3`, then press Enter to inject MSET9
-    - You should see "MSET9 successfully injected!"
-3. Press Enter to close the MSET9 script
-4. Reinsert your SD card into your console **without pressing any buttons or touching the screen**
-5. If the exploit was successful, you will have booted into SafeB9SInstaller
-    - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego presiona Enter
+2. En la ventana de MSET9, escribe `3` y presiona Enter para inyectar MSET9
+    - Deberías ver el mensaje: "MSET9 successfully injected!"
+3. Presiona Enter para cerrar el script MSET9
+4. Reinserta la tarjeta SD en tu consola **sin presionar ningún botón y sin tocar la pantalla**
+5. Si el exploit fue exitoso, habrás iniciado SafeB9SInstaller
+    - Si aparece una pantalla roja o la consola se queda trabada en una pantalla de carga, sigue la [guía de resolución de problemas](troubleshooting-mset9)
 
-### Section III - Installing boot9strap
+### Sección III - Instalar boot9strap
 
 En esta sección, instalarás custom firmware en tu consola.
 
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
-    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
+    - Si algún paso en la pantalla inferior tiene el texto en color rojo y no se te pide que introduzcas una combinación de botones, [sigue la guía de resolución de problemas](troubleshooting-mset9)
 2. Una vez completado, presiona (A) para reiniciar tu consola
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
-### Section IV - Removing MSET9
+### Sección IV - Remover MSET9
 
-In this section, you will remove MSET9 to prevent further issues and to restore your user data (games, themes, etc). (This will not remove the custom firmware that you have just installed.)
+En esta sección, se removerá MSET9 para evitar futuros problemas y para restaurar tus datos (juegos, temas, etc). (Esto no removerá el custom firmware que acabas de instalar.)
 
 ::: danger
 
-Do NOT skip this section! If you skip it, applications may crash unexpectedly and you will encounter errors on the next page!
+¡NO saltes esta sección! Si te saltas esta sección; ¡las aplicaciones podrían congelarse inesperadamente y te encontrarás con varios errores al seguir la página siguiente!
 
 :::
 
@@ -152,14 +152,14 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
-    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
-2. Type `4`, then press Enter to remove the trigger file
-    - You should see "Removed trigger file."
-3. Type `5`, then press Enter to remove MSET9
-    - You should see "Successfully removed MSET9!"
-4. Press Enter to close the MSET9 script
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego presiona Enter
+    - El estado actual debería mostrar ["Injected"](/images/screenshots/mset9/mset9-injected.png)
+    - Si ya removiste el archivo activador (o nunca lo inyectaste en el primer lugar), el estado actual mostrará ["Ready"](/images/screenshots/mset9/mset9-ready.png). Salta al Paso 6
+2. Escribe `4` y presiona Enter para remover el archivo activador
+    - Deberías ver el mensaje: "Removed trigger file."
+3. Escribe `5` y presiona Enter para remover MSET9
+    - Deberías ver el mensaje: "Successfully removed MSET9!"
+4. Presiona Enter para cerrar el script MSET9
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 
@@ -167,7 +167,7 @@ ___
 
 ::: danger
 
-Did you follow Section IV (Removing MSET9)? That section is MANDATORY!
+¿Has seguido la Sección IV (Eliminar MSET9)? ¡Esa sección es OBLIGATORIA!
 
 :::
 
