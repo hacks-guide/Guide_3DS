@@ -1,5 +1,5 @@
 ::: tip
 
-Go back to [Troubleshooting](troubleshooting)
+Volver a [Resolución de problemas](troubleshooting)
 
 :::
