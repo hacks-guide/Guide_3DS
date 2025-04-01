@@ -12,7 +12,7 @@ Esto ocurre debido al soporte beta de UTF-8 en Windows. Debes deshabilitarlo par
 
     :::
 
-2. Haz clic en “Administrativo” y luego en “Cambiar configuración regional del sistema”
+2. Haz clic en `Administrativo` y luego en `Cambiar configuración regional del sistema`
 
     ::: info
 
@@ -26,7 +26,7 @@ Esto ocurre debido al soporte beta de UTF-8 en Windows. Debes deshabilitarlo par
 
     :::
 
-3. Uncheck the box next to `Beta: Use Unicode UTF-8 for worldwide language support` then click "OK"
+3. Desmarca la casilla junto a `Beta: usar Unicode UTF-8 para compatibilidad con idiomas en todo el mundo` y luego haz clic en "Aceptar"
 
     ::: info
 
@@ -34,7 +34,7 @@ Esto ocurre debido al soporte beta de UTF-8 en Windows. Debes deshabilitarlo par
 
     :::
 
-4. Click "Restart Now"
+4. Haz clic en "Reiniciar ahora"
 
     ::: info
 
@@ -42,4 +42,4 @@ Esto ocurre debido al soporte beta de UTF-8 en Windows. Debes deshabilitarlo par
 
     :::
 
-After your PC has rebooted, try creating the MSET9 ID1 again.
+Después de que tu PC se haya reiniciado, intenta crear el ID1 de MSET9 de nuevo.
