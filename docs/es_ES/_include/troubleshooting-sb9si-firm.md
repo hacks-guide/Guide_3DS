@@ -1,4 +1,4 @@
-### Before opening SafeB9SInstaller
+### Antes de abrir SafeB9SInstaller
 
 :::details Failed to open SafeB9SInstaller.firm
 
