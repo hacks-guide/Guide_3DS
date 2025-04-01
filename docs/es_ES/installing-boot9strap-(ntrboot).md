@@ -48,11 +48,11 @@ Para utilizar los enlaces [magnéticos](https://es.wikipedia.org/wiki/Magnet) de
     - On old 2DS, you should instead enable the sleep mode switch
 5. Hold (Start) + (Select) + (X) + (Power) for several seconds, then release the buttons
     - It may take a few attempts to get this to work because the positioning is awkward
-6. If the exploit was successful, you will have booted into SafeB9SInstaller
+6. Si el exploit fue exitoso, habrás iniciado SafeB9SInstaller
 7. Remove the magnet from your console
     - On old 2DS, you should instead disable the sleep mode switch
 
-### Section III - Installing boot9strap
+### Sección III - Instalar boot9strap
 
 En esta sección, instalarás custom firmware en tu consola.
 
