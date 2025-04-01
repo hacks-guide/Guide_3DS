@@ -1,10 +1,10 @@
-When creating the MSET9 ID1 on Windows 10 and above, the script may fail with this error:
+Al crear el ID1 de MSET9 en Windows 10 y versiones posteriores, el script puede fallar con este error:
 
 ![](/images/screenshots/troubleshooting/234.png)
 
-This occurs because of the beta UTF-8 support in Windows. You must disable it to run MSET9:
+Esto ocurre debido al soporte beta de UTF-8 en Windows. Debes deshabilitarlo para ejecutar MSET9:
 
-1. Hit **Windows Key + R** to open up the Run dialogue, type `intl.cpl` then click "OK"
+1. Presiona **Windows + R** para abrir el cuadro de diálogo Ejecutar, escribe `intl.cpl` y luego haz clic en "Aceptar"
 
     ::: info
 
@@ -12,7 +12,7 @@ This occurs because of the beta UTF-8 support in Windows. You must disable it to
 
     :::
 
-2. Click on `Administrative`, then `Change System Locale`
+2. Haz clic en “Administrativo” y luego en “Cambiar configuración regional del sistema”
 
     ::: info
 
