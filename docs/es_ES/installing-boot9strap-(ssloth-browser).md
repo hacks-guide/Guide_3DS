@@ -66,7 +66,7 @@ Si aparece un mensaje pidiéndote que actualices la consola, ¡DETENTE! Haz de n
 :::
 
 1. Tap the "PROCEED TO HAXX" button
-2. If the exploit was successful, you will have booted into SafeB9SInstaller
+2. Si el exploit fue exitoso, habrás iniciado SafeB9SInstaller
     - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
 ### Section IV - Installing boot9strap
