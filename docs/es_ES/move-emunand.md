@@ -90,7 +90,7 @@ Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes 
 4. Press (A) to unlock SysNAND overwriting, then input the key combo given
     - This will not overwrite your boot9strap installation
 5. Input the key combo given to unlock SysNAND (lvl1) writing
-    - This process will take some time
+    - Este proceso tomará un tiempo
 6. Once it is completed, press (A) to continue
 7. Press (B) to decline relocking write permissions if prompted
 8. Presiona (B) para regresar al menú principal
