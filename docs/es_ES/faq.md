@@ -52,9 +52,9 @@ No. Las consolas con custom firmware pueden descargar actualizaciones de juegos 
 
 :::details ¿Puedo mantener mi NNID, archivos de guardado, juegos digitales (etc.)?
 
-Tu NNID (si tienes una) no se verá afectada por esta guía. Consoles with a region of KOR, CHN, or TWN do not have NNID functionality to begin with and are thus unaffected.
+Tu NNID (si tienes una) no se verá afectada por esta guía. Las consolas con región KOR, CHN o TWN no tienen funcionalidad NNID de por sí y por ello no se ven afectadas.
 
-Following this guide alone should not result in data loss (saves, digital games, etc), but SD card corruption is always a possibility. You should make a backup of your SD card contents if you have important data.
+Esta guía por sí sola no debería causar pérdida de datos (archivos de guardado, juegos digitales, etc.), pero siempre existe la posibilidad de que la tarjeta SD se corrompa. Recomendamos que hagas una copia de seguridad de los contenidos de tu tarjeta SD si tienes datos importantes en ella.
 
 :::
 
@@ -64,41 +64,41 @@ Los baneos ya no son posibles debido a que los servicios de Nintendo Network ya 
 
 :::
 
-:::details Can I do this without a computer (e.g. an Android phone)?
+:::details ¿Puedo hacer esto sin una computadora (por ejemplo, con un teléfono Android)?
 
-Generalmente, ¡sí! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+Generalmente, ¡sí! El exploit MSET9 (usado principalmente para el último firmware en Old 3DS) requiere ejecutar un script de Python o usar una aplicación de Android, mientras que los demás exploits solo requieren colocar archivos en la tarjeta SD.
 
-You may need a computer running Windows, macOS, or Linux to reformat your SD card if it is 64GB or larger.
-
-:::
-
-:::details What size SD card can I use?
-
-Necesitarás al menos 1,5GB de espacio libre en la tarjeta SD para seguir esta guía en su totalidad. Si bien la 3DS es oficialmente compatible con tarjetas SD de hasta 32GB, se pueden usar tarjetas SD más grandes siempre y cuando sean reformateadas manualmente en formato FAT32. No se recomienda usar tarjetas SD de tamaño mayor a 128GB debido a problemas conocidos con gráficos en juegos de GBA y temas personalizados.
+Puede que necesites una computadora con Windows, macOS o Linux para formatear la tarjeta SD si es de 64GB o más.
 
 :::
 
-:::details Should I use a new SD card, or the one I already have?
+:::details ¿Qué tamaño de tarjeta SD puedo utilizar?
 
-You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
-
-If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
+Necesitarás al menos 1,5 GB de espacio libre en la tarjeta SD para seguir esta guía en su totalidad. Si bien la 3DS es oficialmente compatible con tarjetas SD de hasta 32GB, se pueden usar tarjetas SD más grandes siempre y cuando sean reformateadas manualmente en formato FAT32. No se recomienda usar tarjetas SD de tamaño mayor a 128GB debido a problemas conocidos con gráficos en juegos de GBA y temas personalizados.
 
 :::
 
-:::details I heard about this thing I have to pay for (Gateway, Sky3DS, ntrboot, R4, etc). Is that something I need?
+:::details ¿Debería usar una tarjeta SD nueva, o la que ya tengo?
 
-No. While a DS flashcart can be used to mod a 3DS using [ntrboot](ntrboot), there is now a free software method available for most consoles.
+Con una 3DS deberías usar solamente una tarjeta SD a la vez. Si usas otra tarjeta SD para modificar tu consola, se creará otro "perfil" para tu software modificado, el cual será inaccesible en tu tarjeta SD anterior. Sin embargo, **tu consola permanecerá modificada**, ya que la modificación se instala a la memoria interna (no en la tarjeta SD).
+
+Si has comprado una nueva tarjeta SD para usar con tu consola, deberías formatear la nueva tarjeta SD ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), y luego copiar y pegar todos los archivos de tu antigua tarjeta SD a la nueva tarjeta SD. Puedes hacer esto antes o después de modificar la consola.
+
+:::
+
+:::details He oído hablar de esto por lo que tengo que pagar (Gateway, Sky3DS, ntrboot, R4, etc.). ¿Es eso algo que necesito?
+
+No. Aunque un flashcart de DS se puede utlizar para modificar una 3DS utilizando [ntrboot](ntrboot), hoy en día hay un método por software gratuito disponible para la mayoría de consolas.
 
 3DS-mode flashcarts like Gateway and Sky3DS are not recommended because they are obsolete and may carry brick risk.
 
 :::
 
-:::details What's the difference between custom firmware and homebrew?
+:::details ¿Cuál es la diferencia entre custom firmware y homebrew?
 
-Definitionally speaking, custom firmware refers to a modification of the 3DS system software to do things that it normally isn't able to. Homebrew generally refers to software created outside of official sources (i.e. not distributed by eShop or cartridges).
+Por definición, custom firmware se refiere a una modificación del software del sistema de la 3DS para que pueda hacer cosas que normalmente no es capaz de hacer. Homebrew se refiere generalmente al software creado fuera de fuentes oficiales (es decir, no distribuido por eShop o cartuchos).
 
-Historically, the 3DS used to have userland homebrew access through older exploits like ninjhax, which people sometimes called just "homebrew". The level of system access granted with userland allowed you to run basic homebrew and emulators but did not allow you to (easily) modify games or dump cartridges. It was also a lot less stable, with homebrew often ungracefully crashing and requiring a full reboot. Custom firmware grants a far greater level of system access while also being more stable than homebrew-only entrypoints.
+Históricamente, la 3DS solía tener acceso a homebrew en espacio de usuario a través de vulnerabilidades más antiguas como ninjhax, cuál la gente a veces llamaba solamente "homebrew". El nivel de acceso al sistema que estos métodos otorgaban con el espacio de usuario permitía ejecutar aplicaciones homebrew simples y emuladores, pero no permitía (de manera sencilla) modificar juegos o volcar cartuchos. También era muy inestable, a menudo sucediendo que el homebrew se crasheaba y requería apagar y encender la consola. El custom firmware otorga un nivel mucho mayor de acceso al sistema, al mismo tiempo que es más estable que los puntos de entrada por homebrew.
 
 :::
 
