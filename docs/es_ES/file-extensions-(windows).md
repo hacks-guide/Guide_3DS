@@ -1,4 +1,4 @@
-# File Extensions (Windows)
+# Extensiones de archivo (Windows)
 
 ## Lectura requerida
 
