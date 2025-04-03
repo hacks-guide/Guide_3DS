@@ -156,24 +156,24 @@ Por favor, mira la [guía de resolución de problemas](troubleshooting-post-inst
 
 :::details Modifiqué mi consola hace (x) años, así que ya tiene algún tipo de homebrew. ¿Qué debería hacer?
 
-Se recomienda que actualices tu configuracion a una moderna, basada en boot9strap. Sigue la guía de [Comprobación de CFW](checking-for-cfw) para ver cómo actualizar tu configuración.
+Se recomienda que actualices tu instalación a una moderna, basada en boot9strap. Sigue la guía de [Comprobación de CFW](checking-for-cfw) para ver cómo actualizar tu instalación.
 
 :::
 
-:::details My setup works for me. Why should I upgrade it?
+:::details Mi instalación funciona para mí. ¿Por qué debería actualizarla?
 
-The vast majority of modern homebrew (such as Checkpoint and BootNTR Selector) have only been tested on modern, boot9strap-based setups and may not work entirely (or at all) on older setups based on menuhax, A9LH, or Gateway. In addition, depending on your setup, you may be unable to safely update to the latest firmware. Modern, boot9strap-based setups allow for a greater level of system access than previous hacks, including the ability to dump your console's bootrom.
-
-:::
-
-:::details Will I lose anything if I upgrade my setup?
-
-Your old setup (including your EmuNAND, if you have one) can usually be directly migrated to boot9strap with no data loss. If you have data that is particularly important to you, it would be a good idea to make a decrypted backup of your save data before upgrading your setup with a tool like [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+La gran mayoría de los homebrew modernos (como Checkpoint y BootNTR Selector) solo han sido probados en instalaciones modernas basadas en boot9strap y pueden directamente no funcionar en instalaciones antiguas basadas en menuhax, A9LH o Gateway. Además, dependiendo de tu instalación, es posible que no puedas actualizar con seguridad a la última versión del sistema. Las instalaciones modernas basadas en boot9strap permiten un mayor nivel de acceso al sistema que las anteriores, incluyendo la posibilidad de volcar el archivo de arranque de la consola.
 
 :::
 
-:::details How do I move saves from an existing Gateway setup to a more modern setup?
+:::details ¿Perderé algo si actualizo mi instalación?
 
-See [this thread](https://gbatemp.net/threads/425743/).
+Su instalación antigua (incluyendo su EmuNAND, si tiene una) generalmente puede migrarse directamente a boot9strap sin pérdida de datos. Si tienes datos que son especialmente importantes para ti, sería una buena idea hacer un respaldo de tus datos de guardado desencriptados antes de actualizar tu instalación, por medio de una herramienta como [JKSM](https://github.com/J-D-K/JKSM/releases/tag/12%2F20%2F2018).
+
+:::
+
+:::details ¿Cómo puedo mover los datos guardados de una configuración de Gateway existente a una configuración más moderna?
+
+Echa un vistazo a [este hilo](https://gbatemp.net/threads/425743/) (_en inglés_).
 
 :::
