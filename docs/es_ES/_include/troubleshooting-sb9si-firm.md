@@ -2,7 +2,7 @@
 
 :::details Failed to open SafeB9SInstaller.firm (No se pudo abrir SafeB9SInstaller.firm)
 
-Falta el archivo `SafeB9SInstaller.bin` o está fuera de lugar. Descarga la última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extráela, y pon `SafeB9SInstaller.bin` en la raíz de tu tarjeta SD. Do not add the `.firm` extension if you do not already see it.
+Falta el archivo `SafeB9SInstaller.bin` o está fuera de lugar. Descarga la última versión de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip), extráela, y pon `SafeB9SInstaller.bin` en la raíz de tu tarjeta SD. No añadas manualmente la extensión `.bin` al archivo si no ves que la tenga.
 
 :::
 
