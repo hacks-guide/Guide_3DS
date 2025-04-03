@@ -1,4 +1,4 @@
-# Finalizing Setup
+# Finalizar instalación
 
 ## Lectura requerida
 
