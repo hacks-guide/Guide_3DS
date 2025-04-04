@@ -1,4 +1,4 @@
-# GodMode9 Usage
+# Usos de GodMode9
 
 ::: info
 
@@ -66,7 +66,7 @@ Your NAND backup has been successfully created.
 4. Reinserta la tarjeta SD en la consola
 5. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 6. Presiona el botón (HOME) para abrir el menú de acciones
-7. Select "Scripts..."
+7. Selecciona "Scripts..."
 8. Selecciona "GM9Megascript"
 9. Select "Restore Options"
 10. Select "SysNAND Restore (safe)"
@@ -162,7 +162,7 @@ This process will only log you out of your NNID. You will still not be able to u
 
 1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Presiona el botón (HOME) para abrir el menú de acciones
-3. Select "Scripts..."
+3. Selecciona "Scripts..."
 4. Selecciona "GM9Megascript"
 5. Select "Scripts from Plailect's Guide"
 6. Select "Remove NNID"
