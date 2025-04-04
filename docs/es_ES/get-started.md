@@ -1,6 +1,6 @@
 ---
-noneSelected: System model is required.
-invalidVersion: This doesn't seem to be a valid system version.
+noneSelected: El modelo del sistema es requerido.
+invalidVersion: Esta no parece ser una versión válida del sistema.
 head:
   - - script
     - src: /assets/js/common.js
@@ -10,39 +10,39 @@ head:
 
 # Comencemos
 
-Before starting this guide, we will see if custom firmware is already installed and check the current system version of your console.
+Antes de empezar con esta guía, comprobaremos si ya hay custom firmware instalado y cuál es la versión actual de la consola.
 
-### Section I - CFW Check
+### Seccion II - Comprobar CFW
 
 1. Apaga la consola
 2. Mantén presionado el Botón (Select)
 3. Enciende la consola mientras mantienes presionado el botón (Select)
-4. If you do not see a custom menu (your console just boots to the HOME Menu), you may proceed to the next section
+4. Si no aparece un menú personalizado (tu consola simplemente muestra el Menú HOME), puedes seguir a la siguiente sección
 
 ::: warning
 
-If you see the Luma3DS configuration screen or any other custom menu (e.g. GodMode9, Decrypt9WIP), STOP - you already have custom firmware! Continue from [here](checking-for-cfw#what-to-do-next).
+Si aparece la pantalla de configuración de Luma3DS o cualquier otro menú personalizado (por ejemplo, GodMode9, Decrypt9WIP), DETENTE - ¡ya tienes custom firmware! Continúa desde [aquí](checking-for-cfw#what-to-do-next).
 
 :::
 
-### Section II - System Version Check
+### Sección II - Comprobando la versión del sistema
 
-1. Launch System Settings on your console
-2. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.17.0-50U")
+1. Inicia la configuración de la consola
+2. Tu versión del sistema se mostrará en la parte inferior derecha de la pantalla superior (p.ej. "Ver. 11.17.0-50U")
 
-### Section III - Select a Method
+### Sección III - Selecciona un método
 
-To find the correct method for your console, please select the model of your console and the system version you found in Section II.
+Para averiguar el método correcto para modificar tu consola, introduce la versión del sistema que encontraste en la Sección II.
 
 <!--@include: @/_internal/consoleVersionSelect.html -->
 
 ---
 
-#### Alternate Methods
+#### Métodos alternativos
 
-If possible, you should follow the method given by the prompt above.
+De ser posible, deberías seguir el método dado por el enunciado arriba.
 
-Otherwise, methods that work on all versions are available, but require additional hardware:
+De lo contrario, existen otros métodos que funcionan en todas las versiones, pero requieren hardware adicional:
 
 1. [ntrboot](ntrboot) - requires compatible DS flashcart
-2. [Installing boot9strap (Hardmod)](installing-boot9strap-\(hardmod\)) - requires soldering
+2. [Instalar boot9strap (modificación de hardware)](installing-boot9strap-\(hardmod\)) - requiere hacer soldaduras
