@@ -60,7 +60,7 @@ En esta sección, copiarás los archivos necesarios para seguir el resto de las 
 5. Copia "x_finalize_helper.firm" a la carpeta "payloads"
 6. Reinserta la tarjeta SD en la consola
 
-La siguiente captura de pantalla indica la estructura básica que debe tener la tarjeta SD para poder seguir esta página. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+La siguiente captura de pantalla indica la estructura básica que debe tener la tarjeta SD para poder seguir esta página. Puede que tengas archivos o carpetas adicionales en tu tarjeta SD, dependiendo de la instalación anterior o del método que siguieras.
 
 ::: info
 
@@ -74,83 +74,83 @@ La siguiente captura de pantalla indica la estructura básica que debe tener la 
 
 :::
 
-### Section II - Updating the System
+### Sección II - Actualizar el sistema
 
-In this section, you will update your system to the latest version, which is safe to do with custom firmware.
+En esta sección, actualizarás tu sistema a la última versión, lo cual es seguro de hacer con custom firmware.
 
 <!--@include: ./_include/sysupdate.md -->
 
-### Section III - RTC and DSP setup
+### Sección III - configuración RTC y DSP
 
-In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
+En esta sección, sincronizarás el reloj interno de la 3DS con la hora real y volcarás el firmware de sonido (que es necesario para que algunos software homebrew utilicen el sonido correctamente).
 
-1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
-    - If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
-2. Select "Miscellaneous options"
-3. Select "Dump DSP firmware"
-4. Press (B) to continue
-5. Select "Nullify user time offset"
-6. Press (B) to continue
-7. Press (B) to return to the Rosalina main menu
-8. Press (B) to exit the Rosalina menu
+1. Oprime (L) + (Abajo) + (SELECT) a la vez para abrir el menú Rosalina
+    - Si alguno de estos botones no funciona, descarga [config.ini](/assets/config.ini) y ponlo en tu carpeta `luma `, reemplazando el archivo existente. Esto cambiará la combinación de botones del menú de Rosalina a (X) + (Y)
+2. Selecciona "Miscellaneous options"
+3. Selecciona "Dump DSP firmware"
+4. Presiona (B) para continuar
+5. Selecciona "Nullify user time offset"
+6. Presiona (B) para continuar
+7. Presiona (B) para volver al menú principal de Rosalina
+8. Presiona (B) para salir del menú de Rosalina
 
-### Section IV - Setup Script
+### Sección IV - Script de configuración
 
-In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
+En esta sección, usarás una serie de scripts para automatizar la instalación de homebrew, la limpieza de la tarjeta SD y la copia de seguridad de archivos del sistema.
 
 1. Apaga la consola
-2. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
-    - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
-    - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
+2. Mantén presionado (X), y mientras mantienes (X), enciende la consola. This will launch the Finalizing Setup Helper
+    - Si arrancas al menú HOME, tu carpeta `payloads` puede estar mal escrita o en la ubicación incorrecta
+    - Si encuentras un error, consulta la página de [resolución de problemas](troubleshooting-finalizing-setup)
 3. If the Helper was successful, your console will boot into GodMode9
-    - From this point forward, you can access GodMode9 by holding START while powering on your console
-4. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-5. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-6. Presiona el botón (HOME) para abrir el menú de acciones
-7. Select "Scripts..."
-8. Select "finalize"
-9. Follow the prompts in the script, answering any questions that you are asked
-    - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
-    - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
-10. Once the script says "Setup complete!", press (A) to power off the device
-    - If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
+    - De ahora en adelante, puedes acceder a GodMode9 manteniendo presionado START al encender la consola
+4. Si se te pide crear copias de seguridad de archivos esenciales, presiona (A) para hacerlo y luego presiona (A) para continuar una vez que haya terminado
+5. Si se te pide establecer la fecha y hora RTC, presiona (A) para hacerlo, después establece la fecha y hora, y después presiona (A) para continuar
+6. Presiona el botón (Home) para abrir el menú de acciones
+7. Selecciona "Scripts..."
+8. Selecciona "finalize"
+9. Sigue las instrucciones del script, respondiendo a las preguntas que aparezcan
+    - Si ves "Information #05: No title database", presiona (A) para importar e introduce los botones en pantalla para proceder
+    - Si encuentras un error, sigue las instrucciones en el mensaje de error o consulta la página de [resolución de problemas](troubleshooting-finalizing-setup)
+10. Una vez el script diga "Setup complete!", presiona (A) para apagar el dispositivo
+    - Si NO aparece el mensaje "Setup complete!", el script no tuvo exito y tendrás que rehacer esta sección desde el Paso 3
 11. Inserta la tarjeta SD en tu computadora
-12. Copy the `/gm9/backups/` folder to a safe location on your computer
-    - This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
+12. Copia la carpeta `/gm9/backups` a una ubicación segura en tu computadora
+    - Esta carpeta contiene copias de seguridad de archivos críticos y se debería de respaldar a varias ubicaciones (p. ej. almacenamiento en la nube) si es posible
     - The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue
-    - The `essential.exefs` file contains your console's system-unique files and can be used to recover your data in the event of a hardware failure
-13. If you still have them, delete the two `SysNAND` files from the `/gm9/backups/` folder from your SD card
-    - The `essential.exefs` file is small and may be kept on your SD card for ease of access
+    - El archivo `essential.exefs` contiene los archivos únicos a tu consola y se pueden usar para recuperar tus datos en caso de un fallo de hardware
+13. Si aún los tienes, borra los dos archivos `SysNAND` de la carpeta `/gm9/backups` de tu tarjeta SD
+    - El archivo `essential.exefs` es pequeño, por lo que puede ser guardado en la tarjeta SD para tenerlo a mano
 
 ___
 
 ::: tip
 
-You're done! Custom firmware is now fully configured on your console.
+¡Listo! Ya tienes configurado el custom firmware en tu consola.
 
 :::
 
 ::: info
 
-Trying to figure out what to do with your newly modded device? Visit [our wiki](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
+¿Estás intentando averiguar que hacer con tu dispositivo recientemente modificado? ¡Visita [nuestra wiki](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
 
 :::
 
-### Information and Notes
+### Información y notas
 
 ::: info
 
-Here are some key combos that you should know:
+Aquí tienes algunas combinaciones de botones que deberías saber:
 
-- Holding (Select) on boot will launch the Luma3DS configuration menu.
-- Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
-- By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. This can be changed from the Rosalina menu.
-- Holding (Start) + (Select) + (X) on boot will make the notification LED show a color for debug purposes. See the [changelog](https://github.com/SciresM/boot9strap/releases/tag/1.4) for a list.
+- Mantener presionado (Select) al encender la consola iniciará el menú de configuración de Luma3DS.
+- Mantener presionado (Start) al encender la consola iniciará GodMode9, o el menú de paylods de Luma3DS si tienes múltiples payloads en `/luma/payloads/`.
+- Con los ajustes predeterminados, presionar (L) + (Abajo) + (Select) en el modo 3DS abrirá el menú de Rosalina, donde puedes ver información del sistema, hacer capturas de pantalla, activar trucos, y más. Esto se puede cambiar desde el menú de Rosalina.
+- Mantener presionados (Start) + (Select) + (X) al encender la consola hará que el LED de notificación muestre un color para propósitos de depuración. Mira la [lista de cambios](https://github.com/SciresM/boot9strap/releases/tag/1.4) para saber que significan los distintos tipos de parpadeo.
 
 :::
 
 ::: info
 
-For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) and [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges) pages.
+Para obtener información sobre cómo usar las diversas características de GodMode9, consulta las páginas [Uso GodMode9](godmode9-usage) y [Volcar Títulos y Cartuchos de Juego](dumping-titles-and-game-cartridges).
 
 :::
