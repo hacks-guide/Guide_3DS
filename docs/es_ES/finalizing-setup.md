@@ -2,27 +2,27 @@
 
 ## Lectura requerida
 
-On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) as our `boot.firm` to patch the console, allowing it to run homebrew software.
+En la anterior página instalaste boot9strap, un cargador de custom firmware que carga el archivo `boot.firm` desde la tarjeta SD o NAND (memoria interna). En este caso, estamos usando Luma3DS por [LumaTeam](https://github.com/LumaTeam/) como `boot.firm` para parchear la consola, permitiéndole ejecutar software homebrew.
 
-On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.
+En esta página, haremos respaldos de archivos críticos del sistema e instalaremos algunos programas homebrew. La mayoría de estos pasos serán automatizados usando un script que ejecutarás en tu consola.
 
 ::: info
 
-The script will install the following applications:
+El script instalará las siguientes aplicaciones:
 
-- **FBI** by Steveice10 _(installs CIA formatted applications)_
-- **Homebrew Launcher Loader** by PabloMK7 _(runs Homebrew Launcher, for 3DSX format homebrew)_
-- **Anemone3DS** by astronautlevel2 _(installs custom themes, splashes, and badges)_
-- **Checkpoint** by BernardoGiordano/FlagBrew _(manages 3DS/DS game save data)_
-- **ftpd** by mtheall _(allows wireless 3DS SD card access over FTP)_
-- **Universal-Updater** by Universal-Team _(on-device app store for downloading homebrew over Wi-Fi)_
-- **GodMode9** by d0k3 _(multipurpose tool for extracting data from internal memory or cartridges)_
+- **FBI** por Steveice10 _(instala programas en formato CIA)_
+- **Homebrew Launcher Loader** por PabloMK7 _(ejecuta Homebrew Launcher, para homebrew en formato 3DSX)_
+- **Anemone3DS** por astronautlevel2 _(instala temas personalizados, pantallas de inicio e insignias)_
+- **Checkpoint** por BernardoGiordano/FlagBrew _(gestiona datos de guardado de juegos de 3DS/DS)_
+- **ftpd** by mtheall _(permite acceder inalámbricamente a la tarjeta SD en la 3DS a través de FTP)_
+- **Universal-Updater** por Universal-Team _(una tienda de aplicaciones para la 3DS que permite descargar homebrew por Wi-Fi)_
+- **GodMode9** por d0k3 _(herramienta multipropósito para extraer datos de la memoria interna o tarjetas de juego)_
 
-If you don't want one of these applications, you can remove them after you have finished this page by navigating to System Settings -> Data Management -> Nintendo 3DS -> Software. (GodMode9 cannot be removed in this way and is generally required for other functions.)
+Si no quieres alguna de estas aplicaciones, las puedes eliminar después de haber terminado esta página, yendo a Configuración de la consola -> Gestión de Datos -> Nintendo 3DS -> Programas. (GodMode9 no puede ser eliminado de esta manera y es generalmente requerido para otras funciones).
 
-::: details Source code links (optional)
+::: details Enlaces de los códigos fuente (opcional)
 
-All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
+Todos los programas instalados de esta guía son de código abierto. Si te interesa ver como funcionan, o si te gustaría dejar una estrella para mostrar tu apreciación, puedes visitar su código fuente aquí:
 
 - [FBI](https://github.com/lifehackerhansol/FBI)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
@@ -38,29 +38,29 @@ All applications installed on this guide are open-source. If you are interested 
 
 ::: info
 
-If your previous CFW setup was EmuNAND-based and you wish to move the contents of your EmuNAND/RedNAND to SysNAND, follow [Move EmuNAND](move-emunand) before following this page. If you don't know what an EmuNAND is, this doesn't apply to you.
+Si tu instalación anterior de CFW estaba basada en EmuNAND y deseas mover el contenido de tu EmuNAND/RedNAND a SysNAND, ve a [Mover EmuNAND](move-emunand) antes de seguir esta página. Si no sabes lo que es una EmuNAND, ignora esto.
 
 :::
 
 ## Lo que necesitas
 
-- [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
-- [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
+- [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (descarga directa)
+- [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (descarga directa)
 
 ## Instrucciones
 
 ### Sección I - Preparativos
 
-In this section, you will copy the files necessary to follow the rest of the instructions on this page.
+En esta sección, copiarás los archivos necesarios para seguir el resto de las instrucciones en esta página.
 
 1. Apaga la consola
 2. Inserta la tarjeta SD en tu computadora
-3. Copy `finalize.romfs` to the root of your SD card
-4. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
-5. Copy `x_finalize_helper.firm` to the `payloads` folder
+3. Copia `finalize.romfs` a la raíz de tu tarjeta SD
+4. Abre la carpeta `luma` en tu tarjeta SD y crea una carpeta llamada `payloads` adentro si es que no existe una ya de antemano
+5. Copia "x_finalize_helper.firm" a la carpeta "payloads"
 6. Reinserta la tarjeta SD en la consola
 
-The screenshot below indicates the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+La siguiente captura de pantalla indica la estructura básica que debe tener la tarjeta SD para poder seguir esta página. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
 
 ::: info
 
