@@ -51,8 +51,8 @@ If this does not work, your SD card needs to be formatted:
 Ensure that you have reset the title database.
 
 - Please power on your console with your SD inserted
-- Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-    - This will not wipe any of your data
+- Abre la configuración de la consola y ve hacia `Gestión de datos` -> `Nintendo 3DS` -> `Programas` -> Borrar ([imagen](/images/screenshots/database-reset.jpg))
+    - Esto no borrará ninguno de tus datos
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
@@ -63,7 +63,7 @@ If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego presiona Enter
 2. Type `2` then press enter to check the MSET9 status
     - This will create the dummy databases again
 3. Close the MSET9 script window
@@ -157,8 +157,8 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
-    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego presiona Enter
+    - El estado actual debería mostrar ["Injected"](/images/screenshots/mset9/mset9-injected.png)
     - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
@@ -186,8 +186,8 @@ Follow these instructions to remove the trigger file and to retry Section II:
 
 <!--@include: ./_include/mset9-chorus.md -->
 
-1. Escribe el número correspondiente al modelo y versión de tu consola, luego pulsa Enter
-    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+1. Escribe el número correspondiente al modelo y versión de tu consola, luego presiona Enter
+    - El estado actual debería mostrar ["Injected"](/images/screenshots/mset9/mset9-injected.png)
     - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter

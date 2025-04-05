@@ -1,19 +1,19 @@
-# File Extensions (Windows)
+# Extensiones de archivo (Windows)
 
 ## Lectura requerida
 
-This is an add-on section for disabling Windows's default behavior of hiding file extensions.
+Esta es una sección adicional para desactivar el comportamiento por defecto de Windows de ocultar las extensiones de archivos.
 
-This will make it easier for you to find the referenced files in the rest of this guide.
+Esto te facilitará encontrar los archivos referenciados en el resto de esta guía.
 
 ## Instrucciones
 
 ### Windows 11
 
-1. Launch File Explorer by opening any directory, such as your SD card directory
-2. Click the "View" option in the toolbar
-3. Go to "Show"
-4. Click "File name extensions" to enable it
+1. Inicia el explorador de archivos abriendo cualquier directorio, como el de tu tarjeta SD
+2. Haz clic en la opción "Ver" en la barra de herramientas
+3. Ve a "Mostrar"
+4. Haz clic en "Extensiones de nombre de archivo" para activarla
 
     ::: info
 
@@ -23,9 +23,9 @@ This will make it easier for you to find the referenced files in the rest of thi
 
 ### Windows 10 / 8.1 / 8
 
-1. Launch File Explorer by opening any directory, such as your SD card directory
-2. Click the "View" option on the ribbon menu
-3. Check the box labeled "File name extensions"
+1. Inicia el explorador de archivos abriendo cualquier directorio, como el de tu tarjeta SD
+2. Haz clic en la opción "Ver" en el menú de cinta
+3. Marca la casilla que dice "Extensiones de nombre de archivo"
 
     ::: info
 
@@ -35,9 +35,9 @@ This will make it easier for you to find the referenced files in the rest of thi
 
 ### Windows 7
 
-1. Open the start menu by clicking on it or using the Windows key
+1. Abre el menú Inicio haciendo clic en él o usando la tecla Windows
 
-2. Search for "Folder Options" and select the corresponding result
+2. Busca "Opciones de carpeta" y selecciona el resultado con el mismo nombre
 
     ::: info
 
@@ -45,9 +45,9 @@ This will make it easier for you to find the referenced files in the rest of thi
 
     :::
 
-3. Click the "View" option at the top of the Folder Options menu
+3. Selecciona la pestaña "Ver" en la parte superior del menú de opciones
 
-4. Uncheck the box labeled "Hide extensions for known file types"
+4. Desmarca la casilla que dice "Ocultar las extensiones de archivo para tipos de archivo conocidos"
 
     ::: info
 
@@ -57,6 +57,6 @@ This will make it easier for you to find the referenced files in the rest of thi
 
 ::: tip
 
-Continue to [Get Started](get-started)
+Continúa a [Comencemos](get-started)
 
 :::

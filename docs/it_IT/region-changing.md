@@ -38,7 +38,7 @@ Se cambi la regione della tua console:
 - L'ultima versione di [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (download diretto)
 - L'ultima versione di [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(il file `.3dsx`)_
 - L'ultima versione di [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (clicca con il tasto destro del mouse, salva il link come)
-- The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
+- L'immagine CTRTransfer 11.15.0 per il tipo di console della regione a cui si desidera cambiare (ad esempio scarica "New 3DS or 2DS - USA" se hai un New 3DS e vuoi cambiare la tua regione in USA)
 
     ::: warning
 

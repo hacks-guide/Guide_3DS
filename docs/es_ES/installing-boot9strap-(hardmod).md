@@ -1,4 +1,4 @@
-# Installing boot9strap (Hardmod)
+# Instalar boot9strap (modificación de hardware)
 
 :::details Technical Details (optional)
 

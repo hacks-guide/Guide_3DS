@@ -1,4 +1,4 @@
-# GodMode9 Usage
+# Usos de GodMode9
 
 ::: info
 
@@ -66,17 +66,17 @@ Your NAND backup has been successfully created.
 4. Reinserta la tarjeta SD en la consola
 5. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 6. Presiona el botón (HOME) para abrir el menú de acciones
-7. Select "Scripts..."
-8. Select "GM9Megascript"
+7. Selecciona "Scripts..."
+8. Selecciona "GM9Megascript"
 9. Select "Restore Options"
 10. Select "SysNAND Restore (safe)"
 11. Select your NAND backup
 12. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
     - This will **not** overwrite your boot9strap installation
-    - This process will take some time
+    - Este proceso tomará un tiempo
 13. Presiona (A) para continuar
 14. Presiona (B) para regresar al menú principal
-15. Select "Exit"
+15. Selecciona "Exit"
 16. Press (A) to relock write permissions if prompted
 
 ::: tip
@@ -162,15 +162,15 @@ This process will only log you out of your NNID. You will still not be able to u
 
 1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. Presiona el botón (HOME) para abrir el menú de acciones
-3. Select "Scripts..."
-4. Select "GM9Megascript"
+3. Selecciona "Scripts..."
+4. Selecciona "GM9Megascript"
 5. Select "Scripts from Plailect's Guide"
 6. Select "Remove NNID"
 7. Presiona (A) para continuar
 8. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y luego introduce la combinación de botones mostrada
 9. Presiona (A) para continuar
 10. Presiona (B) para regresar al menú principal
-11. Select "Exit"
+11. Selecciona "Exit"
 12. Press (A) to relock write permissions if prompted
 13. Presiona (Start) para reiniciar tu consola
 

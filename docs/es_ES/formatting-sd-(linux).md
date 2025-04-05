@@ -33,5 +33,5 @@ Esta página es sólo para usuarios de Linux. If you are not on Linux, check out
 
 ## Resolución de Problemas
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
+- La tarjeta SD sigue sin ser detectada por la consola o muestra la capacidad incorrecta tras formatear
     - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Linux) to reformat your SD card.

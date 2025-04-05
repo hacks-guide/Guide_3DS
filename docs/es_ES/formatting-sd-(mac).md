@@ -14,7 +14,7 @@ Esta página es sólo para usuarios de Mac. If you are not on Mac, check out the
 
 1. Inserta la tarjeta SD en tu computadora
 
-2. If the SD card has any files and folders on it, copy everything to a folder on your computer
+2. Si la tarjeta SD tiene archivos o carpetas en ella, copia todo a una carpeta de respaldo en tu computadora
 
 3. Run the Disk Utility app
 
@@ -39,9 +39,9 @@ Esta página es sólo para usuarios de Mac. If you are not on Mac, check out the
 
 10. Click "Erase"
 
-11. Wait for the format to finish
+11. Espera a que termine el formateo
 
-12. Click "Close"
+12. Haz clic en "Cerrar"
 
 13. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
@@ -49,7 +49,7 @@ Esta página es sólo para usuarios de Mac. If you are not on Mac, check out the
 
 1. Inserta la tarjeta SD en tu computadora
 
-2. If the SD card has any files and folders on it, copy everything to a folder on your computer
+2. Si la tarjeta SD tiene archivos o carpetas en ella, copia todo a una carpeta de respaldo en tu computadora
 
 3. Run the Disk Utility app
 
@@ -74,13 +74,13 @@ Esta página es sólo para usuarios de Mac. If you are not on Mac, check out the
 
 10. Choose "Master Boot Record"
 
-11. Click "OK"
+11. Haz clic en "OK"
 
 12. Click "Apply"
 
 13. Click "Partition"
 
-14. Wait for the format to finish
+14. Espera a que termine el formateo
 
 15. Close Disk Utility
 
@@ -88,5 +88,5 @@ Esta página es sólo para usuarios de Mac. If you are not on Mac, check out the
 
 ## Resolución de Problemas
 
-- SD card remains undetected by console or continues to display the wrong capacity after formatting
+- La tarjeta SD sigue sin ser detectada por la consola o muestra la capacidad incorrecta tras formatear
     - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.

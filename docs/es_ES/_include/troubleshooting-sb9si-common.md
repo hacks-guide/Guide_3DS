@@ -1,25 +1,25 @@
-### SigHaxed FIRM was not installed! Check lower screen for more info.
+### SigHaxed FIRM was not installed! Revisa la pantalla inferior para más información.
 
-:::details MicroSD Card - init failed
+:::details MicroSD Card - init failed (La tarjeta microSD fallo en inicializarse)
 
-Your SD card is most likely acting weird. Try reformatting your SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). If this doesn't work, try another SD card.
-
-:::
-
-:::details SigHaxed FIRM - File not found
-
-You are missing `boot9strap.firm` and `boot9strap.firm.sha` from the `boot9strap` folder, or the `boot9strap` folder is misnamed. Download the latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip), and place `boot9strap.firm` and `boot9strap.firm.sha` in the `boot9strap` folder.
+Lo más probable es que tu tarjeta SD esté actuando de forma extraña. Prueba a formatearla de nuevo ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). Si esto no funciona, prueba con otra tarjeta SD.
 
 :::
 
-:::details SigHaxed FIRM - invalid FIRM
+:::details SigHaxed FIRM - File not found (Archivo no encontrado)
 
-There is an issue with your `boot9strap.firm` and `boot9strap.firm.sha` files. Re-download the latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip), and place `boot9strap.firm` and `boot9strap.firm.sha` in the `boot9strap` folder.
+Los archivos `boot9strap.firm` y `boot9strap.firm.sha` no están en la carpeta `boot9strap`, o la carpeta `boot9strap` tiene un nombre equivocado. Descarga la última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip), y coloca `boot9strap.firm` y `boot9strap.firm.sha` en la carpeta `boot9strap`.
 
 :::
 
-:::details Secret Sector - File not found
+:::details SigHaxed FIRM - invalid FIRM (FIRM inválido)
 
-You are missing `secret_sector.bin` from the `boot9strap` folder, or the `boot9strap` folder is misnamed. Download secret_sector.bin using a torrent client, and place it in the `boot9strap` folder.
+Hay un problema con los archivos `boot9strap.firm` y `boot9strap.firm.sha`. Vuelve a descargar la última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip), y coloca `boot9strap.firm` y `boot9strap.firm.sha` en la carpeta `boot9strap`.
+
+:::
+
+:::details Secret Sector - File not found (Archivo Secret Sector no encontrado)
+
+El archivo `secret_sector.bin` no está en la carpeta `boot9strap`, o la carpeta `boot9strap` tiene un nombre equivocado. Descarga secret_sector.bin utilizando un cliente torrent, y ponlo en la carpeta `boot9strap`.
 
 :::

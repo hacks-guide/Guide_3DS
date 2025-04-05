@@ -37,7 +37,7 @@ If you do not have any DSiWare games or saves that you care about, skip this sec
 
 1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
 2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
-3. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+3. Si se te pide establecer la fecha y hora RTC, presiona (A) para hacerlo, después establece la fecha y hora, y después presiona (A) para continuar
     - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
 4. Navigate to `[2:] SYSNAND TWLN` -> `title`
 5. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
@@ -90,7 +90,7 @@ Para identificar el "ID de Título" de un archivo `<TitleID>.gbavc.sav`, puedes 
 4. Press (A) to unlock SysNAND overwriting, then input the key combo given
     - This will not overwrite your boot9strap installation
 5. Input the key combo given to unlock SysNAND (lvl1) writing
-    - This process will take some time
+    - Este proceso tomará un tiempo
 6. Once it is completed, press (A) to continue
 7. Press (B) to decline relocking write permissions if prompted
 8. Presiona (B) para regresar al menú principal
