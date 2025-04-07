@@ -38,7 +38,7 @@ Jika daerah konsol diubah:
 - Versi terkini dari [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (unduhan langsung)
 - Versi terkini dari [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(yang berkas `.3dsx`)_
 - Versi terkini dari [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (pencet kanan lalu _save link as_; simpan tautan)
-- Berkas citra 11.15.0 CTRTransfer daerah lain **sesuai jenis konsol Anda** (misal: Unduh "New 3DS / New 2DS - USA" jika punya konsol jenis New 3DS dan ingin diubah ke daerah USA)
+- Berkas CTRTransfer 11.15.0 daerah lain **sesuai jenis konsol Anda** (misal: Unduh "New 3DS / New 2DS - USA" jika punya konsol jenis New 3DS dan ingin diubah ke daerah USA)
 
     ::: warning
 
