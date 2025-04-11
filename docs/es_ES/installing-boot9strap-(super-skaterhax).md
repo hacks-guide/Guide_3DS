@@ -18,7 +18,7 @@ head:
 
 :::
 
-:::details Technical Details (optional)
+:::details Detalles técnicos (opcional)
 
 For technical details on the exploits that you will be using on this page, see [here](https://github.com/zoogie/super-skaterhax).
 
