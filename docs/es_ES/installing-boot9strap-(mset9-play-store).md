@@ -32,14 +32,14 @@ On Android phones/tablets, the minimum Android version required is 6.0 (Marshmal
 
 ### Sección I - Preparativos
 
-In this section, you will prepare the SD card data necessary for the MSET9 exploit to trigger.
+En esta sección, prepararás los datos de tarjeta SD necesarios para que el exploit MSET9 pueda activarse.
 
 1. Insert your SD card into your phone/tablet/computer
 
 2. Copy everything from the Release `.zip` to the root of your SD card, overwriting any existing files:
 
-    - Open ZArchiver
-    - If prompted, [allow ZArchiver to access files on your SD card](/images/screenshots/mset9/zarchiver-allow.png)
+    - Abre ZArchiver
+    - Si se te pide, [concédele el permiso para acceder a archivos en tu tarjeta SD a ZArchiver](/images/screenshots/mset9/zarchiver-allow.png)
     - Navigate to where the downloaded MSET9 Release `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
     - Select the Release `.zip`, then select "Extract..." ([image](/images/screenshots/mset9/zarchiver-extract-1.png))
     - Navigate to your SD card, then tap the blue 'down arrow' icon to extract the files to the root of your SD card ([image](/images/screenshots/mset9/zarchiver-extract-2.png))
@@ -50,11 +50,11 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 
     :::
 
-3. Run the [MSET9 Installer application](/images/screenshots/mset9/mset9-setup-android.png)
+3. Abre la [aplicación MSET9 Installer](/images/screenshots/mset9/mset9-setup-android.png)
 
-4. Tap on `Select "Nintendo 3DS" Folder`, then navigate to your `Nintendo 3DS` folder on your SD card ([image](/images/screenshots/mset9/select-mset9-folder-1.png))
+4. Toca en `Select "Nintendo 3DS" Folder`, después navega a la carpeta `Nintendo 3DS` en tu tarjeta SD ([imagen](/images/screenshots/mset9/select-mset9-folder-1.png))
 
-5. Once inside the `Nintendo 3DS` folder, tap on "Use this folder", then "Allow" if asked ([image](/images/screenshots/mset9/select-mset9-folder-2.png))
+5. Una vez estés dentro de la carpeta `Nintendo 3DS`, presiona en "Seleccionar", y después en "Permitir" si se pide permiso ([imagen](/images/screenshots/mset9/select-mset9-folder-2.png))
 
 6. If `Setup MSET9` is [highlighted](/images/screenshots/mset9/setup-mset9-highlighted.png), proceed to the next step
     - If you get an error, you need to resolve before you can use MSET9. Refer to the [troubleshooting](troubleshooting-mset9)
@@ -65,9 +65,9 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 
 9. Tap on the photo corresponding to your console model, then at the bottom, pick your current firmware version
 
-10. If you see the prompt of `Hax ID1 Created`, tap OK to continue
+10. Si ves el aviso de `Hax ID1 Created`, toca OK para continuar
     - Si aparece un error, consulta la página de [resolución de problemas](troubleshooting-mset9) e inténtalo otra vez
-    - Your 3DS will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step
+    - Tu 3DS aparecerá como si no tuviera datos ni programas instalados por el usuario en el Menú HOME. Esto es normal. Tus datos volverán más tarde en un paso posterior
 
 11. Reinserta la tarjeta SD en la consola
 
@@ -75,9 +75,9 @@ In this section, you will prepare the SD card data necessary for the MSET9 explo
 
 13. Abre el Editor de Mii
 
-14. Wait for your console to reach the "Welcome to Mii Maker" screen, then exit Mii Maker
+14. Espera a que tu consola llegue al mensaje que dice "¡Estás en el editor de Mii!" Luego cierra el Editor de Mii
     - Puede que veas [este mensaje](/images/screenshots/mset9/mii-extdata.png), cuál indica que los datos necesarios han sido creados
-    - If you just reach the normal Mii Maker screen, exit Mii Maker and return to the HOME Menu
+    - Si llegas al menú principal de siempre del Editor de Mii entonces sal del Editor de Mii y vuelve al Menú HOME
 
 15. Abre la configuración de la consola y ve hacia `Gestión de datos` -> `Nintendo 3DS` -> `Programas` -> Borrar ([imagen](/images/screenshots/database-reset.jpg))
     - Esto no borrará ninguno de tus datos
@@ -142,9 +142,9 @@ In this section, you will remove MSET9 to prevent further issues. (This will not
 
 1. Apaga la consola
 2. Insert your SD card into your phone/tablet/computer
-3. Open the MSET9 Installer application
-4. Tap `Remove MSET9`
-5. Close the MSET9 Installer application
+3. Inicia la aplicación MSET9 Installer
+4. Toca `Remove MSET9`
+5. Cierra la aplicación MSET9 Installer
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 
