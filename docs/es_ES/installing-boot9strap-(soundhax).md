@@ -10,7 +10,7 @@ head:
 
 # Installing boot9strap (Soundhax)
 
-:::details Technical Details (optional)
+:::details Detalles técnicos (opcional)
 
 For technical details on the exploits that you will be using on this page, see [here](https://github.com/nedwill/soundhax) (Soundhax) and [here](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
 
