@@ -1,20 +1,20 @@
-# Uninstall CFW
+# Desinstalar CFW
 
 ## Lectura requerida
 
-This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.
+Esto quitará completamente el CFW de tu consola, incluyendo boot9strap y Luma3DS, con el propósito de restaurar la consola a su estado original.
 
-Any unsigned (illegitimate) games will be rendered unusable and will be removed during this process. Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to back up any saves that you care about.
+Any unsigned (illegitimate) games will be rendered unusable and will be removed during this process. Usa un [gestor de datos de guardado](https://github.com/FlagBrew/Checkpoint/releases/latest) para respaldar los datos de guardado que te importen.
 
 ::: danger
 
-If you're removing CFW because:
+Si estás desinstalando CFW porque:
 
-- You want to re-install it
-- You want to change SD cards
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
+- Quieres reinstalarlo
+- Necesitas cambiar la tarjeta SD
+- La tarjeta SD se perdió o se corrompió
+- Uno de tus juegos no funciona
+- Uno de los programas del sistema no funciona
 - Your console is unable to boot to HOME Menu
 
 <u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
@@ -25,9 +25,9 @@ If you're removing CFW because:
 
 If you have done ANY of the following:
 
-- [Changed the region](region-changing) of the console
-- Installed a custom keyboard
-- Installed a custom HOME Menu (_not_ a custom theme)
+- [Cambiar la región](region-changing) de la consola
+- Instalar un teclado personalizado
+- Instalar un menú HOME personalizado (_no_ un tema personalizado)
 - Manually changed the encryption key (`movable.sed`) of the console
 - Unbanned the console
 
@@ -187,13 +187,13 @@ This is your final opportunity to verify that all safety steps above have been f
 
 ::: danger
 
-If you're removing CFW because:
+Si estás desinstalando CFW porque:
 
-- You want to re-install it
-- You want to change SD cards
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
+- Quieres reinstalarlo
+- Necesitas cambiar la tarjeta SD
+- La tarjeta SD se perdió o se corrompió
+- Uno de tus juegos no funciona
+- Uno de los programas del sistema no funciona
 - Your console is unable to boot to HOME Menu
 
 <u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
