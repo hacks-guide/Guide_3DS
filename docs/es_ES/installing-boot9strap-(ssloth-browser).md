@@ -1,6 +1,6 @@
 # Instalar boot9strap (SSLoth-Browser)
 
-:::details Technical Details (optional)
+:::details Detalles técnicos (opcional)
 
 In order to exploit the Browser application, we need to bypass the browser version check, which is designed to disallow the use of the browser without updating to the latest system version.
 
