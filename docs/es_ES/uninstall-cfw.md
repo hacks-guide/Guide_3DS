@@ -119,21 +119,21 @@ If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your key
 
 :::
 
-### Section IV - NAND Backup
+### Sección IV - Copia de seguridad de la NAND
 
 1. Presiona y mantén (Start), luego enciende la consola mientras lo mantienes. Esto abrirá GodMode9
-2. Presiona el botón (HOME) para abrir el menú de acciones
+2. Presoina (Home) para abrir el menú de acciones
 3. Selecciona "Scripts..."
 4. Selecciona "GM9Megascript"
-5. Select "Backup Options"
-6. Select "SysNAND Backup"
-7. Press (A) to confirm
+5. Selecciona "Backup Options"
+6. Selecciona "SysNAND Backup"
+7. Presiona (A) para confirmar
     - Este proceso tomará un tiempo
-    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
+    - Si aparece un error, asegúrate de que tienes al menos 1,3GB de espacio libre en la tarjeta SD
 8. Presiona (B) para regresar al menú principal
-9. Select “Exit”
-10. Presiona el botón (HOME) para abrir el menú de acciones
-11. Select "Poweroff system" to power off your console
+9. Selecciona “Exit”
+10. Presiona (Home) para abrir el menú de acciones
+11. Selecciona "Poweroff system" para apagar tu consola
 
 ### Section V - Removing illegitimate content
 
