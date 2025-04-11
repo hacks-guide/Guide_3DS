@@ -1,6 +1,6 @@
 # Instalar boot9strap (modificación de hardware)
 
-:::details Technical Details (optional)
+:::details Detalles técnicos (opcional)
 
 An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/).
 
