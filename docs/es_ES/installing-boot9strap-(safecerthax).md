@@ -1,6 +1,6 @@
 # Instalar boot9strap (safecerthax)
 
-:::details Technical Details (optional)
+:::details Detalles técnicos (opcional)
 
 :::
 
