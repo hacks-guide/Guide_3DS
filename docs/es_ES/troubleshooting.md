@@ -1,30 +1,30 @@
 # Resolución de Problemas
 
-This page serves a landing page for troubleshooting resources that we offer for commonly encountered issues. Click on the link corresponding to the page you are following to explore it.
+Esta página sirve como página de inicio para encontrar los recursos de resolución de problemas que ofrecemos para los problemas más comunes. Haz clic en el enlace correspondiente a la página que estás siguiendo para verlo.
 
-If you're unable to fix your issue, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp). If your issue is missing and you know the solution, [let us know!](https://github.com/hacks-guide/Guide_3DS/issues)
+Si no consigues solucionar el problema, pide ayuda (en inglés) en el servidor de [Nintendo Homebrew en Discord](https://discord.gg/MWxPgEp). Si no encuentras tu problema aquí y conoces su solución, [¡háznoslo saber!](https://github.com/hacks-guide/Guide_3DS/issues)
 
 ::: tip
 
-**Table of Contents**
+**Tabla de Contenidos**
 
-- [Installing boot9strap (Soundhax)](troubleshooting-soundhax)
+- [Instalar boot9strap (Soundhax)](troubleshooting-soundhax)
 
-- [Installing boot9strap (MSET9)](troubleshooting-mset9)
+- [Instalar boot9strap (MSET9)](troubleshooting-mset9)
 
-- [Installing boot9strap (super-skaterhax)](troubleshooting-super-skaterhax)
+- [Instalar boot9strap (super-skaterhax)](troubleshooting-super-skaterhax)
 
-- [Installing boot9strap (ntrboot)](troubleshooting-ntrboot)
+- [Instalar boot9strap (ntrboot)](troubleshooting-ntrboot)
 
-- [Installing boot9strap (safecerthax)](troubleshooting-safecerthax)
+- [Instalar boot9strap (safecerthax)](troubleshooting-safecerthax)
 
-- [Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser)
+- [Instalar (SSLoth-Browser)](troubleshooting-ssloth-browser)
 
-- [Finalizing Setup](troubleshooting-finalizing-setup)
+- [Finalizar Instalación](troubleshooting-finalizing-setup)
 
-- [A9LH to B9S](troubleshooting-a9lh-to-b9s)
+- [A9LH a B9S](troubleshooting-a9lh-to-b9s)
 
-- [Updating B9S](troubleshooting-updating-b9s)
+- [Actualizar B9S](troubleshooting-updating-b9s)
 
 ---
 
