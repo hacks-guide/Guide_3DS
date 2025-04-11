@@ -1,6 +1,6 @@
 # Instalar boot9strap (MSET9 Play Store)
 
-:::details Technical Details (optional)
+:::details Detalles técnicos (opcional)
 
 [MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa «Configuración de la consola» desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
 
@@ -10,7 +10,7 @@
 
 ::: warning
 
-This page requires an Android phone/tablet or a Chromebook. If you have a computer running Windows, macOS, or Linux, follow [Installing boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)) instead. Si no tienes acceso a ninguno de estos dispositivos, deberás utilizar un [exploit alternativo](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
+This page requires an Android phone/tablet or a Chromebook. Si tienes una computadora con Windows, macOS o Linux, sigue [Instalar boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)). Si no tienes acceso a ninguno de estos dispositivos, deberás utilizar un [exploit alternativo](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
 
 :::
 
@@ -22,11 +22,11 @@ On Android phones/tablets, the minimum Android version required is 6.0 (Marshmal
 
 ## Lo que necesitas
 
-- The following applications installed from the Google Play Store:
+- Las siguientes aplicaciones instaladas desde Google Play Store:
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
-    - If you wish, you can sideload these applications instead
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the Release `.zip` file)
+    - Si quieres, puedes descargar estas aplicaciones desde otros lugares
+- La última versión de [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (El archivo `.zip` "Release")
 
 ## Instrucciones
 
