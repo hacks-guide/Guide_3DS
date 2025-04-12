@@ -26,7 +26,7 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     - If you wish, you can sideload these applications instead
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the Release `.zip` file)
+- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
 
 ## 진행 방법
 
@@ -36,12 +36,12 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 1. SD 카드를 휴대폰/태블릿/컴퓨터에 삽입해 주세요
 
-2. Copy everything from the Release `.zip` to the root of your SD card, overwriting any existing files:
+2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files:
 
     - Open ZArchiver
     - If prompted, [allow ZArchiver to access files on your SD card](/images/screenshots/mset9/zarchiver-allow.png)
-    - Navigate to where the downloaded MSET9 Release `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
-    - Select the Release `.zip`, then select "Extract..." ([image](/images/screenshots/mset9/zarchiver-extract-1.png))
+    - Navigate to where the downloaded MSET9 MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Select the MSET9 `.zip`, then select "Extract..." ([image](/images/screenshots/mset9/zarchiver-extract-1.png))
     - Navigate to your SD card, then tap the blue 'down arrow' icon to extract the files to the root of your SD card ([image](/images/screenshots/mset9/zarchiver-extract-2.png))
 
     ::: info
