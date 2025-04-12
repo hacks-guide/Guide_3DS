@@ -1,5 +1,11 @@
 Questa sezione ripristinerà la configurazione di sistema ai valori predefiniti. **I giochi installati e i loro dati di salvataggio non saranno influenzati.** È **necessario** per evitare problemi noti relativi alla modalità a memoria estesa e alle applet su alcune console.
 
+::: warning
+
+This process will reset your Mii data. If you wish to save any Miis that you have created, either [generate a QR code](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) for each Mii that you want to save, or make a backup of `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b` before following these instructions. You can restore this file to the same directory _after_ your console has gone through initial setup.
+
+:::
+
 1. Spegni la tua console
 2. Premi (Start) e accendi la console continuando a tenerlo premuto. Verrà avviato GodMode9
 3. Entra nella cartella `[0:] SDCARD` -> `gm9` -> `in`
