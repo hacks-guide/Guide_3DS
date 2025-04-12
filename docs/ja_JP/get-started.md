@@ -1,6 +1,7 @@
 ---
 noneSelected: System model is required.
 invalidVersion: This doesn't seem to be a valid system version.
+otherPrefix: (Other)
 head:
   - - script
     - src: /assets/js/common.js
