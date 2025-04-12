@@ -55,18 +55,21 @@ Nesta seção, você vai visitar a página de exploit do navegador, que usará o
 
 1. No Menu HOME, pressione os gatilhos da Esquerda e da Direita ao mesmo tempo para abrir a câmera
     - Se você não conseguir abrir a câmera, ao invés disso, abra o Navegador de Internet e digite manualmente a URL (`https://zoogie.github.io/web/nbhax/`)
+
 2. Toque no botão do código QR e escaneie [este código QR](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
-    - Se você receber um crash ou um código de erro, [siga esse guia de troubleshooting](troubleshooting-ssloth-browser)
-    - Se você receber um aviso de certificado de segurança, pressione (A) para permitir a conexão
 
-::: danger
+    - When you get a prompt with error code `012-1511`, press (A) to allow the connection
+    - If you get a crash or a different error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
-If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
+    ::: danger
 
-:::
+    If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
 
-1. Toque no botão "PROCEED TO HAXX"
-2. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
+    :::
+
+3. Toque no botão "PROCEED TO HAXX"
+
+4. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
     - Se você receber um erro, [siga este guia de troubleshooting](troubleshooting-ssloth-browser)
 
 ### Seção IV - Instalando boot9strap
