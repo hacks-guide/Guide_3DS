@@ -1,5 +1,11 @@
 이 섹션에서는 시스템 설정을 기본값으로 복구하게 됩니다. **설치된 게임과 저장 데이터에는 영향이 없습니다.** 이 절차는 확장 메모리와 에플릿 관련 문제를 해결하는데 **필수입니다.**
 
+::: warning
+
+This process will reset your Mii data. If you wish to save any Miis that you have created, either [generate a QR code](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) for each Mii that you want to save, or make a backup of `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b` before following these instructions. You can restore this file to the same directory _after_ your console has gone through initial setup.
+
+:::
+
 1. 콘솔의 전원을 꺼 주세요
 2. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
 3. `[0:] SDCARD` -> `gm9` -> `in`으로 이동해 주세요
