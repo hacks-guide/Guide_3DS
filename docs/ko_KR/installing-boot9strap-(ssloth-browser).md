@@ -55,18 +55,21 @@ SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브�
 
 1. HOME 메뉴에서 L, R 버튼을 동시에 눌러 카메라를 열어 주세요
     - 카메가 사용이 불가는하다면, 인터넷 브라우저를 열어 URL을 직접 입력하세요: (`https://zoogie.github.io/web/nbhax/`)
+
 2. QR 코드 버튼을 눌러 이 QR 코드 를 스캔해 주세요
-    - 오류가 발생하면 이 [문제 해결 가이드](troubleshooting-ssloth-browser) 를 참고해 주세요
-    - 보안 인증서 경고가 표시되면, (A)를 눌러 연결을 허용하세요
 
-::: danger
+    - When you get a prompt with error code `012-1511`, press (A) to allow the connection
+    - If you get a crash or a different error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
-만약 콘솔을 업데이트하라는 프롬프트가 떴다면, **멈추세요**! 섹션 II를 처음부터 다시 하고 프록시가 제대로 설정되어 있는지 확인해 주세요.
+    ::: danger
 
-:::
+    만약 콘솔을 업데이트하라는 프롬프트가 떴다면, **멈추세요**! 섹션 II를 처음부터 다시 하고 프록시가 제대로 설정되어 있는지 확인해 주세요.
 
-1. "PROCEED TO HAXX" 버튼을 눌러주세요
-2. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
+    :::
+
+3. "PROCEED TO HAXX" 버튼을 눌러주세요
+
+4. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
     - 오류가 발생하면 이 [문제 해결 가이드](troubleshooting-ssloth-browser) 를 참고해 주세요
 
 ### 섹션 IV - boot9strap 설치
