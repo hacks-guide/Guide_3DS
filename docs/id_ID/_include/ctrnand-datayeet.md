@@ -1,5 +1,11 @@
 Bagian ini akan mengembalikan pengaturan sistem ke bawaan. **Tidak memengaruhi permainan terpasang dan simpanannya.** Ini **diperlukan** untuk mencegah isu terkait _applet_ dan mode memori perluasan di beberapa konsol.
 
+::: warning
+
+This process will reset your Mii data. If you wish to save any Miis that you have created, either [generate a QR code](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) for each Mii that you want to save, or make a backup of `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b` before following these instructions. You can restore this file to the same directory _after_ your console has gone through initial setup.
+
+:::
+
 1. Matikan daya konsol
 2. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 3. Navigasi ke `[0:] SDCARD` -> `gm9` -> `in`
