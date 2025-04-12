@@ -58,8 +58,8 @@ Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami az univ
 
 2. Érintsd meg a QR Code gombot és olvasd le [ezt a QR kódot](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
 
-    - When you get a prompt with error code `012-1511`, press (A) to allow the connection
-    - If you get a crash or a different error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+    - Ha tanúsítvány figyelmeztetést kapsz a `012-1511` hibakóddal, nyomd meg az (A) gombot a kapcsolat engedélyezéséhez
+    - Ha összeomlik a konzol vagy másik hibakódot kapsz, [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-ssloth-browser)
 
     ::: danger
 
