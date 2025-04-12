@@ -1,6 +1,7 @@
 ---
 noneSelected: A rendszer modell szükséges.
 invalidVersion: Ez nem tűnik egy érvényes rendszer verziónak.
+otherPrefix: (Other)
 head:
   - - script
     - src: /assets/js/common.js
