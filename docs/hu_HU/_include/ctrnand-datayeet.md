@@ -1,8 +1,8 @@
-Ez a rész a rendszer beállítások alaphelyzetbe állítását szolgálja. **A telepített játékok ls mentéseik nem érintettek.** Ez **szükséges**, hogy megelőzzük az ismert problémákat, amit a kibővített memória módhoz és appletekhez bizonyos konzolokon.
+Ez a rész a rendszer beállítások alaphelyzetbe állítását szolgálja. **A telepített játékok és mentéseik nem érintettek.** Ez **szükséges**, hogy megelőzzük az ismert problémákat, amit a kibővített memória módhoz és appletekhez bizonyos konzolokon.
 
 ::: warning
 
-This process will reset your Mii data. If you wish to save any Miis that you have created, either [generate a QR code](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) for each Mii that you want to save, or make a backup of `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b` before following these instructions. You can restore this file to the same directory _after_ your console has gone through initial setup.
+Ez a folyamat alaphelyzetbe állítja a Mii adatot. Ha szeretnéd menteni Mii-ket amiket létrehoztál, either [generálj egy QR kódot](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) minden Mii-hez, amit menteni szeretnél, vagy készíts egy mentést a `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b`-ről mielőtt folytatot ezeket a lépéseket. Visszaállíthatod ezt a fájlt ugyanebbe a könyvtárba _miután_ a konzolod végig ment a kezdeti telepítési folyamaton.
 
 :::
 
