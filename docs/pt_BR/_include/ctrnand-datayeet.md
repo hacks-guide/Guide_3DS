@@ -1,5 +1,11 @@
 Esta seção redefinirá a configuração do console para os valores padrão. \*\*Os jogos instalados e seus dados salvos não serão afetados. \* Isto é **necessário** para evitar problemas conhecidos relacionados ao modo de memória estendida e applets em alguns consoles.
 
+::: warning
+
+This process will reset your Mii data. If you wish to save any Miis that you have created, either [generate a QR code](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) for each Mii that you want to save, or make a backup of `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b` before following these instructions. You can restore this file to the same directory _after_ your console has gone through initial setup.
+
+:::
+
 1. Desligue seu console
 2. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 3. Navegue para `[0:] SDCARD` -> `gm9` -> `in`
