@@ -1,6 +1,6 @@
 ::: info
 
-在开始之前，请确保你的主机已经设置了一个可以连接互联网的无线网络。
+If you haven't already, make sure you have a working Internet connection set up on your console.
 
 :::
 
