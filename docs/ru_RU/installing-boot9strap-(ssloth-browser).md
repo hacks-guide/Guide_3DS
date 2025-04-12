@@ -55,18 +55,21 @@ In this section, you will visit the browser exploit webpage, which will use univ
 
 1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
     - If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
+
 2. Tap the QR code button and scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
-    - If you get a crash or an error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
-    - If you get a security certificate warning, press (A) to allow the connection
 
-::: danger
+    - When you get a prompt with error code `012-1511`, press (A) to allow the connection
+    - If you get a crash or a different error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
-If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
+    ::: danger
 
-:::
+    If you receive a prompt telling you to update your console, STOP! Redo Section II from the beginning and ensure you have set up the proxy correctly.
 
-1. Tap the "PROCEED TO HAXX" button
-2. Если эксплойт сработал, запустится SafeB9SInstaller
+    :::
+
+3. Tap the "PROCEED TO HAXX" button
+
+4. Если эксплойт сработал, запустится SafeB9SInstaller
     - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
 ### Section IV - Installing boot9strap
