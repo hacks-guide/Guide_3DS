@@ -55,18 +55,21 @@ Di bagian ini akan membuka laman web eksploit Browser dengan universal-otherapp 
 
 1. Saat di HOME Menu, tekan tombol L dan R bersamaan untuk membuka kamera
     - Jika tidak bisa membuka kamera, buka Internet Browser dan coba ketik sendiri URL `https://zoogie.github.io/web/nbhax/`
+
 2. Sentuh tombol kode QR dan pindai [kode QR ini](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
-    - Jika mogok atau muncul kode galat, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
-    - Jika muncul peringatan sertifikat keamanan, tekan (A) untuk boleh menyambung
 
-::: danger
+    - When you get a prompt with error code `012-1511`, press (A) to allow the connection
+    - If you get a crash or a different error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
-Jika diminta untuk memperbarui sistem konsol, BERHENTI! Ulangi lagi Bagian II dari awal dan pastikan pengaturan Proxy sudah benar.
+    ::: danger
 
-:::
+    Jika diminta untuk memperbarui sistem konsol, BERHENTI! Ulangi lagi Bagian II dari awal dan pastikan pengaturan Proxy sudah benar.
 
-1. Sentuh tombol "PROCEED TO HAXX"
-2. Jika eksploit berhasil akan muncul SafeB9SInstaller
+    :::
+
+3. Sentuh tombol "PROCEED TO HAXX"
+
+4. Jika eksploit berhasil akan muncul SafeB9SInstaller
     - Jika muncul galat, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
 
 ### Bagian IV - Memasang boot9strap
