@@ -55,18 +55,21 @@ Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami az univ
 
 1. A HOME menüben nyomd meg a bal és jobb váll gombokat egyszerre, hogy megnyisd a kamerát
     - Ha nem tudod megnyitni a kamerát, nyisd meg az Internet Browser-t kézzel, és írd be az URL-t e helyett. (`https://zoogie.github.io/web/nbhax/`)
+
 2. Érintsd meg a QR Code gombot és olvasd le [ezt a QR kódot](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
-    - Ha összeomlik vagy hibakódot kapsz, [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-ssloth-browser)
-    - Ha tanúsítvány figyelmeztetést kapsz, nyomd meg az (A) gombot a kapcsolat engedélyezéséhez
 
-::: danger
+    - When you get a prompt with error code `012-1511`, press (A) to allow the connection
+    - If you get a crash or a different error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
-Ha egy üzenetet kapsz ami azt mondja, hogy frissítsd a konzolod (update your console), ÁLLJ MEG! Csináld újra a II. részt az elejétől, és figyelj arra, hogy jól állítsd be a proxy-t.
+    ::: danger
 
-:::
+    Ha egy üzenetet kapsz ami azt mondja, hogy frissítsd a konzolod (update your console), ÁLLJ MEG! Csináld újra a II. részt az elejétől, és figyelj arra, hogy jól állítsd be a proxy-t.
 
-1. Nyomj a "PROCEED TO HAXX" gombra
-2. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
+    :::
+
+3. Nyomj a "PROCEED TO HAXX" gombra
+
+4. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
     - Ha hibát kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting-ssloth-browser)
 
 ### IV. rész - Boot9strap telepítése
