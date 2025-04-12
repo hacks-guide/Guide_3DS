@@ -1,6 +1,7 @@
 ---
 noneSelected: Le modèle de la console doit être sélectionné.
 invalidVersion: Il semblerait que ce numéro de version soit invalide.
+otherPrefix: (Other)
 head:
   - - script
     - src: /assets/js/common.js
