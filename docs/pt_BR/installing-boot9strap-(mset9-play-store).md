@@ -26,7 +26,7 @@ Em telefones/tablets Android, a versão mínima do Android é 6.0 (Marshmallow).
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     - Se você desejar, você pode fazer sideloading destes aplicativos em vez disso
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the Release `.zip` file)
+- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
 
 ## Instruções
 
@@ -36,12 +36,12 @@ Nesta seção, você irá preparar os dados no seu cartão SD necessários para 
 
 1. Insira o cartão SD no seu telefone/tablet/computador
 
-2. Copie tudo do Release `.zip` para a raíz do seu cartão SD, substituindo quaisquer arquivos existentes:
+2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files:
 
     - Abra o ZArchiver
     - Se solicitado, [permita ao ZArchiver acessar os arquivos do seu cartão SD](/images/screenshots/mset9/zarchiver-allow.png)
-    - Navegue para onde o Release `.zip` do MSET9 está localizado ([provavelmente na pasta de Downloads](/images/screenshots/mset9/zarchiver-zip-location.png))
-    - Selecione o Release `.zip`, então selecione "Extract..." ([imagem](/images/screenshots/mset9/zarchiver-extract-1.png))
+    - Navigate to where the downloaded MSET9 MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Select the MSET9 `.zip`, then select "Extract..." ([imagem](/images/screenshots/mset9/zarchiver-extract-1.png))
     - Navegue para o seu cartão SD, então toque o ícone azul de 'seta para baixo' para extrair os arquivos para a raiz do seu cartão SD ([imagem](/images/screenshots/mset9/zarchiver-extract-2.png))
 
     ::: info
