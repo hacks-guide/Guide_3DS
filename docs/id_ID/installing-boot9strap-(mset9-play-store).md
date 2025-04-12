@@ -26,7 +26,7 @@ Di ponsel/tablet Android, versi Android yang diperlukan minimal 6.0 (Marshmallow
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     - Atau, pasang .apk tersebut dari sumber lain (_sideload_)
-- Versi terkini dari [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (yang `.zip` Release)
+- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
 
 ## Instruksi
 
@@ -36,12 +36,12 @@ Di bagian ini akan menyiapkan data ke kartu SD untuk mengaktifkan eksploit MSET9
 
 1. Sisipkan kartu SD ke ponsel/tablet/komputer
 
-2. Salin semua isi berkas `.zip` Release_v2.0 ke akar kartu SD, timpa berkas yang ada:
+2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files:
 
     - Buka ZArchiver
     - Jika diminta, [izinkan ZArchiver mengakses ke kartu SD](/images/screenshots/mset9/zarchiver-allow.png)
-    - Navigasi ke letak `.zip` Release_v2.0 MSET9 diunduh ([mungkin di folder Downloads](/images/screenshots/mset9/zarchiver-zip-location.png))
-    - Pilih `.zip` Release_v2.0, lalu pilih "Extract..." ([gambar](/images/screenshots/mset9/zarchiver-extract-1.png))
+    - Navigate to where the downloaded MSET9 MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Select the MSET9 `.zip`, then select "Extract..." ([gambar](/images/screenshots/mset9/zarchiver-extract-1.png))
     - Navigasi ke kartu SD, lalu sentuh ikon 'panah bawah' biru untuk mengekstrak berkas ke akar kartu SD ([gambar](/images/screenshots/mset9/zarchiver-extract-2.png))
 
     ::: info
