@@ -26,7 +26,7 @@ Su telefoni/tablet Android, la versione minima di Android richiesta è 6.0 (Mars
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     - Se lo desideri, puoi anche caricare queste applicazioni via sideload
-- L'ultima versione di [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (il file Release `.zip`)
+- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
 
 ## Istruzioni
 
@@ -36,12 +36,12 @@ In questa sezione preparerai i dati della scheda SD necessari per attivare l'exp
 
 1. Inserisci la tua scheda SD nel tuo telefono/tablet/computer
 
-2. Copia tutto il contenuto dell'archivio Release `.zip` nella directory principale della tua scheda SD, sovrascrivendo tutti i file esistenti:
+2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files:
 
     - Avvia ZArchiver
     - Se richiesto, [consenti a ZArchiver di accedere ai file sulla tua scheda SD](/images/screenshots/mset9/zarchiver-allow.png)
-    - Naviga dove si trova il file `.zip` di MSET9 Release ([probabilmente nella cartella Download](/images/screenshots/mset9/zarchiver-zip-location.png))
-    - Selezionare il file Release `.zip`, quindi seleziona "Extract..." ([immagine](/images/screenshots/mset9/zarchiver-extract-1.png))
+    - Navigate to where the downloaded MSET9 MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Select the MSET9 `.zip`, then select "Extract..." ([immagine](/images/screenshots/mset9/zarchiver-extract-1.png))
     - Vai nella tua scheda SD, quindi tocca l'icona blu della freccia verso il basso per estrarre i file nella directory principale della tua scheda SD ([immagine](/images/screenshots/mset9/zarchiver-extract-2.png))
 
     ::: info
