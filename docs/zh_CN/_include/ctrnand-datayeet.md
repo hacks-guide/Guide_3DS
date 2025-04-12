@@ -1,5 +1,11 @@
 此章节的操作将会将你的系统设置重置为默认值。 **已安装的游戏和存档不会受到任何影响。**这个是为了防止某些主机出现有关扩展内存模式和小程序的一些问题而进行的**必要**操作。
 
+::: warning
+
+This process will reset your Mii data. If you wish to save any Miis that you have created, either [generate a QR code](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) for each Mii that you want to save, or make a backup of `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b` before following these instructions. You can restore this file to the same directory _after_ your console has gone through initial setup.
+
+:::
+
 1. 将主机关机
 2. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 3. Navigate to `[0:] SDCARD` -> `gm9` -> `in`
