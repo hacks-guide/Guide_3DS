@@ -1,6 +1,7 @@
 ---
 noneSelected: 시스템 모델을 선택하세요.
 invalidVersion: 올바른 시스템 버전으로 확인되지 않습니다.
+otherPrefix: (Other)
 head:
   - - script
     - src: /assets/js/common.js
