@@ -26,7 +26,7 @@
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     - Εάν θέλετε, μπορείτε να εγκαταστήσετε αυτές τις εφαρμογές μέσω sideload
-- Την πιο πρόσφατη έκδοση του [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (το αρχείο `.zip` του Release)
+- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
 
 ## Οδηγίες
 
@@ -36,12 +36,12 @@
 
 1. Εισαγάγετε την κάρτα SD στο τηλέφωνο, το tablet ή τον υπολογιστή σας
 
-2. Αντιγράψτε τα πάντα από το αρχείο `.zip` του Release στη ρίζα της κάρτας SD σας, αντικαθιστώντας τυχόν υπάρχοντα αρχεία:
+2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files:
 
     - Ανοίξτε το ZArchiver
     - Εάν σας ζητηθεί, [επιτρέψτε στο ZArchiver να έχει πρόσβαση στα αρχεία της κάρτας SD σας](/images/screenshots/mset9/zarchiver-allow.png)
-    - Μεταβείτε στην τοποθεσία του ληφθέντος αρχείου `.zip` του MSET9 Release ([πιθανότατα στον φάκελο λήψεων](/images/screenshots/mset9/zarchiver-zip-location.png))
-    - Επιλέξτε το αρχείο `.zip` του Release και έπειτα, «Extract...» ([εικόνα](/images/screenshots/mset9/zarchiver-extract-1.png))
+    - Navigate to where the downloaded MSET9 MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Select the MSET9 `.zip`, then select "Extract..." ([εικόνα](/images/screenshots/mset9/zarchiver-extract-1.png))
     - Μεταβείτε στην κάρτα SD σας και πατήστε το εικονίδιο «μπλε κάτω βέλος» για να αποσυμπιέσετε τα αρχεία στη ρίζα της κάρτας SD σας ([εικόνα](/images/screenshots/mset9/zarchiver-extract-2.png))
 
     ::: info
