@@ -1,5 +1,11 @@
 Αυτή η ενότητα θα επαναφέρει τις ρυθμίσεις του συστήματός σας στις προεπιλογές τους. **Δεν θα επηρεαστούν τα εγκατεστημένα παιχνίδια και τα αποθηκευμένα δεδομένα τους.** Αυτό είναι **απαραίτητο** για την πρόληψη γνωστών θεμάτων που σχετίζονται με τη λειτουργία εκτεταμένης μνήμης και τις μικροεφαρμογές σε ορισμένες κονσόλες.
 
+::: warning
+
+This process will reset your Mii data. If you wish to save any Miis that you have created, either [generate a QR code](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) for each Mii that you want to save, or make a backup of `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b` before following these instructions. You can restore this file to the same directory _after_ your console has gone through initial setup.
+
+:::
+
 1. Απενεργοποιήστε την κονσόλα σας
 2. Κρατήστε πατημένο το (Start) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Αυτή η ενέργεια θα εκκινήσει το GodMode9
 3. Μεταβείτε στο `[0:] SDCARD` -> `gm9` -> `in`
