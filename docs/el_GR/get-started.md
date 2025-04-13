@@ -1,7 +1,7 @@
 ---
 noneSelected: Απαιτείται το μοντέλο συστήματος.
 invalidVersion: Αυτή δεν φαίνεται να είναι έγκυρη έκδοση συστήματος.
-otherPrefix: (Other)
+otherPrefix: (Άλλο)
 head:
   - - script
     - src: /assets/js/common.js
