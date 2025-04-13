@@ -65,7 +65,7 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
     - JPN: 日本, 設定しない
     - KOR: 대한민국, 설정하지 않음
 
-10. Navigate to "Date & Time"
+10. Dirígete a "Fecha y hora"
 
 11. Set "Today's Date" and "Current Time" to the current date and time in your timezone
 
