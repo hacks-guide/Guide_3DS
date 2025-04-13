@@ -4,7 +4,7 @@
 
 이 페이지는 콘솔의 지역을 변경하는 방법을 안내하는 부가 섹션입니다. 이 작업은 바꾸고자 하는 지역의 11.15.0 CTRTransfer 이미지를 설치합니다. 이미지 설치 후, 콘솔을 최신 펌웨어 버전(11.17.0)으로 업데이트할 수 있습니다.
 
-Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)을 지원하기 때문에, 지역 변경은 거의 불필요하다는 점을 참고해 주시기 바랍니다. 또한, 다른 지역의 NDS게임을 실행하는 것 또한 [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)에 의해 지원됩니다. You should only perform a region change if you wish to have your system UI in a language that is not available on your console's current region.
+Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https://github.com/LumaTeam/Luma3DS/wiki/Optional-features)을 지원하기 때문에, 지역 변경은 거의 불필요하다는 점을 참고해 주시기 바랍니다. 또한, 다른 지역의 NDS게임을 실행하는 것 또한 [TWiLight Menu++](https://github.com/DS-Homebrew/TWiLightMenu/releases)에 의해 지원됩니다. 이 작업은 원하는 언어가 시스템 UI에 제공되지 않을 시에만 하는 것을 권장합니다.
 
 ::: info
 
@@ -38,7 +38,7 @@ Luma3DS가 지역 외 게임들과 [타이틀별 지역 에뮬레이션](https:/
 - 최신 버전의 [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (직접 다운로드)
 - 최신 버전의 [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(`.3dsx` 파일)_
 - 최신 버전의 [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (우클릭 후 "링크를 다른 이름으로 저장..."을 선택)
-- The 11.15.0 CTRTransfer image for your console type of the region that you want to change to (e.g. Download "New 3DS or 2DS - USA" if you have a New 3DS and want to change your region to USA)
+- 변경하고 싶은 지역의 종류에 맞는 11.15.0 CTRTransfer 이미지 (예: New 3DS를 가지고 있고 지역을 미국으로 변경하려면 "New 3DS or 2DS - USA"를 다운로드)
 
     ::: warning
 
