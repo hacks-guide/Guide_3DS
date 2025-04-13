@@ -142,6 +142,12 @@ Quando dizem para "copiar (arquivo) de (arquivo).zip" significa que você precis
 
 Na maioria dos sistemas operacionais, você pode extrair arquivos clicando duas vezes no arquivo. Se isso não funcionar, você pode instalar uma ferramenta de extração confiável de terceiros como o [7-zip](https://7-zip.org/).
 
+::: warning
+
+The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+
+:::
+
 ::::
 
 :::: details O que são extensões de arquivos?
