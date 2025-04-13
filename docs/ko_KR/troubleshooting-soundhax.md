@@ -10,9 +10,9 @@ head:
 
 # 문제 해결 (Soundhax)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (Soundhax)" page, which is used on system versions between 1.0.0 and 11.3.0. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
+이 페이지는 1.0.0에서 11.3.0 버전 사이에 쓰이는 방법인 "boot9strap 설치 (Soundhax)" 페이지의 주요 해결 방법을 다루고 있습니다. 만약 이 페이지의 해결책만으로 문제를 해결할 수 없다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 들어가서 당신의 문제와 시도한 해결책을 설명해 주세요.
 
-## Issues with Soundhax
+## Soundhax의 주요 문제
 
 :::details Soundhax를 실행하면 빨간색/보라색/분홍색 혹은 하얀색 화면이 표시됩니다
 
@@ -26,21 +26,21 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 `otherapp.bin` 파일에 문제가 있습니다. (없거나, 잘못 들어갔거나, 혹은 잘못된 파일) 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 다시 내려받아 SD 카드의 최상위 디렉토리에 복사해주세요.
 
-You may also have the wrong Soundhax file for your console, region and version. Verify that your console details are correct and redownload your Soundhax file from [here](http://soundhax.com), then place it on the root of your SD card, replacing the existing one.
+콘솔의 지역이나 버전에 맞지 않는 Soundhax 파일이 사용되었을 수도 있습니다. 콘솔의 세부 정보가 맞는지 확인해고 [여기](https://soundhax.com)에서 Soundhax 파일을 다시 받은 후, 기존 파일을 대체하여 SD 카드의 루트에 넣으세요.
 
-If the above doesn't fix your issue, and you are using an Old 3DS / Old 3DS XL / Old 2DS, you may be encountering an issue involving cartridge updates. Take another look at the system version. If the number before the letter is 4 or lower (e.g. 11.3.0-**4**U), replace the Soundhax file on the root of your SD card with the one from [here](http://soundhax.686178.xyz/frankenfirm.html?crash).
+여전히 문제가 해결되지 않고, 구형 3DS/구형 3DS XL/구형 2DS를 사용 중이라면 카트리지 업데이트와 관련된 문제가 발생된 것일 수 있습니다. 시스템 버전을 다시 한 번 살펴보세요. 만약 문자 앞의 번호가 4 이하라면 (예. 11.3.4-**4**U), SD 카드 루트에 있는 Soundhax 파일을 [여기](http://soundhax.686178.xyz/frankenfirm.html?crash)의 파일로 교체해 주세요.
 
-If none of these fix your issue, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+모든 방법을 시도해도 문제가 해결되지 않는다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 오셔서 도움을 요청하세요.
 
 :::
 
 :::details "재생할 수 없습니다"
 
-You have the wrong Soundhax file for your console, region and version. Verify that your console details are correct and redownload your Soundhax file from [here](http://soundhax.com), then place it on the root of your SD card, replacing the existing one.
+콘솔의 지역이나 버전에 맞지 않는 Soundhax 파일을 이용했습니다. 콘솔의 세부 정보가 맞는지 확인해고 [여기](https://soundhax.com)에서 Soundhax 파일을 다시 받은 후, 기존 파일을 대체하여 SD 카드의 루트에 넣으세요.
 
-If the above doesn't fix your issue, and you are using an Old 3DS / Old 3DS XL / Old 2DS, you may be encountering an issue involving cartridge updates. Take another look at the system version. If the number before the letter is 3 or lower (e.g. 11.3.0-**0**U), replace the Soundhax file on the root of your SD card with the one from [here](http://soundhax.686178.xyz/frankenfirm.html?unplayable).
+여전히 문제가 해결되지 않고, 구형 3DS/구형 3DS XL/구형 2DS를 사용 중이라면 카트리지 업데이트와 관련된 문제가 발생된 것일 수 있습니다. 시스템 버전을 다시 한 번 살펴보세요. 만약 문자 앞의 번호가 3 이하라면 (예. 11.3.0-**0**U), SD 카드 루트에 있는 Soundhax 파일을 [여기](http://soundhax.686178.xyz/frankenfirm.html?unplayable)의 파일로 교체해 주세요.
 
-If none of these fix your issue, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+모든 방법을 시도해도 문제가 해결되지 않는다면, [Nintendo Homebrew Discord 서버](https://discord.gg/MWxPgEp)에 오셔서 도움을 요청하세요.
 
 :::
 
