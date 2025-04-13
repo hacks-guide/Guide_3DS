@@ -2,7 +2,7 @@
 
 ## 중요
 
-On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) as our `boot.firm` to patch the console, allowing it to run homebrew software.
+이전 페이지에서는, SD 카드나 NAND (내부 메모리)에서 'boot.firm' 파일을 로드하는 커스텀 펌웨어 로더인 boot9strap을 설치했습니다. 이번 단계에서는, `boot.firm`으로 [LumaTeam](https://github.com/LumaTeam/)의 Luma3DS를 사용해서 콘솔을 패치하고, 홈브류 소프트웨어를 실행할 수 있도록 합니다.
 
 이 가이드에서는, 중요한 시스템 파일의 백업을 하고, 몆 가지의 홈브류 프로그램을 설치할 겁니다. 이러한 단계의 대부분은 콘솔에서 실행할 스크립트를 사용하여 자동화됩니다.
 
@@ -10,19 +10,19 @@ On the previous page, you installed boot9strap, a custom firmware loader that lo
 
 본 스크립트는 다음과 같은 어플리케이션을 설치할 것입니다:
 
-- **FBI** by Steveice10 _(installs CIA formatted applications)_
-- **Homebrew Launcher Loader** by PabloMK7 _(runs Homebrew Launcher, for 3DSX format homebrew)_
-- **Anemone3DS** by astronautlevel2 _(installs custom themes, splashes, and badges)_
-- **Checkpoint** by BernardoGiordano/FlagBrew _(manages 3DS/DS game save data)_
-- **ftpd** by mtheall _(allows wireless 3DS SD card access over FTP)_
-- **Universal-Updater** by Universal-Team _(on-device app store for downloading homebrew over Wi-Fi)_
-- **GodMode9** by d0k3 _(multipurpose tool for extracting data from internal memory or cartridges)_
+- Steveice10의 **FBI** _(CIA 형식의 앱 설치)_
+- PabloMK7의 **Homebrew Launcher Loader** _(3DSX 형식의 흠브류를 위한 Homebrew Launcher 실행용)_
+- astronautlevel2의 **Anemone3DS** _(커스텀 테마, 부팅 화면, 배지 설치)_
+- BernardoGiordano/FlagBrew의 **Checkpoint** _(3DS/DS 게임 저장 데이터 관리)_
+- mtheall의 **ftpd** _(FTP를 통해 3DS SD 카드를 원격으로 접속 가능하게 함)_
+- Universal-Team의 **Universal-Updater** _(Wi-Fi를 사용해 홈브류를 다운로드 받을 수 있는 기기 내 앱 스토어)_
+- d0k3의 **GodMode9** _(내부 메모리 또는 카트리지에서 데이터를 추출하는 다목적 도구)_
 
 해당 프로그램이 필요하지 않은 경우 본 페이지에 적힌 모든 설정이 완료된 뒤에 본체 설정 -> 데이터 관리 -> Nintendo 3DS -> 소프트웨어 관리에서 지울 수 있습니다. (GodMode9은 이 방식으로 지울 수 없으며 또한 다른 기능들을 위해 필요합니다.)
 
-::: details Source code links (optional)
+::: details 소스코드 링크 (선택적)
 
-All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
+이 가이드에서 설치하는 모든 애플리케이션들은 모두 오픈 소스입니다. 만약 이 애플리케이션들의 작동 방식이 궁금하거나, 또는 Star를 남겨 감사의 의미를 전하고 싶다면, 소스 코드가 아래 링크되어 있으니 참고하세요:
 
 - [FBI](https://github.com/lifehackerhansol/FBI)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
