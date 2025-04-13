@@ -144,7 +144,7 @@
 
 ::: warning
 
-The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+Η εφαρμογή «WinRAR» για Windows είναι γνωστό ότι προκαλεί προβλήματα συμβατότητας με το 3DS, ιδιαίτερα με τα exploit εγκατάστασης custom firmware. Εάν χρησιμοποιείτε υπολογιστή με Windows, θα πρέπει να χρησιμοποιήσετε είτε την εφαρμογή «Εξερεύνηση αρχείων» του συστήματος είτε το 7-zip, για την εξαγωγή των αρχείων.
 
 :::
 
