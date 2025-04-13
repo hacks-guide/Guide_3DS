@@ -54,20 +54,20 @@ head:
 
 7. "기타 설정"을 선택해 주세요
 
-8. Navigate to "Profile" -> "Region Settings"
-    - These settings will be temporarily changed to increase the success rate of the exploit
-    - You can restore your region settings back to normal once you have finished this page
-    - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
+8. "유저 정보" -> "지역 정보"로 이동해 주세요
+    - 이 설정은 취약점의 성공 확률을 높이기 위해 일시적으로 변경하는 설정입니다.
+    - 이 페이지를 완료하게 되면 지역 설정을 원래대로 복구해도 됩니다.
+    - 만약 닌텐도 네트워크 ID 기능에 대한 접근 권한을 잃는다는 [경고 (영어)](/images/screenshots/skaterhax/country-change-notice.png)가 나타난다면, OK를 눌러 넘어가도 괜찮습니다.
 
-9. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
+9. 콘솔의 지역에 따라 다음 옵션을 선택합니다 ([이미지](/images/screenshots/skaterhax/skater-lang.png))
     - USA: United States, Do Not Set
     - EUR: United Kingdom, Do Not Set
     - JPN: 日本, 設定しない
     - KOR: 대한민국, 설정하지 않음
 
-10. Navigate to "Date & Time"
+10. "날짜와 시각"으로 이동해 주세요
 
-11. Set "Today's Date" and "Current Time" to the current date and time in your timezone
+11. "날짜"와 "시각"을 당신의 시간대에 맞는 날짜와 시각으로 설정해주세요
 
 12. 본체 설정을 종료해 주세요
 
@@ -77,35 +77,35 @@ head:
 
 ::: info
 
-A video detailing these steps is available [here](https://www.youtube.com/watch?v=DEcZB72vJts).
+아래 단계에 대한 세부 영상은 [여기 (영어)](https://www.youtube.com/watch?v=DEcZB72vJts) 있습니다.
 
 :::
 
-1. Open the Internet Browser
-2. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-3. Tap `Settings` -> scroll down -> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK`
-    - The browser will close
-4. Reopen the Internet Browser
-5. Tap `Next` -> `Google` -> `OK` -> `OK`
-6. Tap on the address bar at the top of the bottom screen
-7. Enter the URL corresponding to your console's region:
+1. 인터넷 브라우저를 열어주세요
+2. 화면 오른쪽 아래 구석에 있는 3줄 (☰) 아이콘을 누르세요
+3. `설정` -> 아래로 스크롤 -> `저장 데이터 초기화` -> `초기화` -> `초기화` -> `OK` 를 누르세요
+    - 브라우저가 닫힐 것입니다
+4. 인터넷 브라우저를 다시 열어주세요
+5. `다음` -> `Google` -> `OK` -> `OK` 를 누르세요
+6. 아래 화면의 위에 있는 주소 바를 누르세요
+7. 콘솔 지역에 해당하는 URL을 입력하세요:
     - **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
     - **KOR**: `https://skater.686178.xyz/go/korea`
-8. Tap "Open"
-    - You should see the text "GO GO!". Do not click on it yet
-9. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-10. Tap on "Add to Bookmarks"
-11. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-12. Tap on `Settings` -> `Delete Cookies` -> `Yes`
-13. Press (Home) to return to the HOME Menu, then immediately reopen the Internet Browser
-14. Wait for the page to fully load, then tap the "GO GO!" button on the top of the bottom screen
-15. Wait for the page to fully load, then press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
-16. If your console displays:
-    - **"The Homebrew Launcher" screen**: Continue to the next step
-    - **A white "Error has occurred" message box**: The exploit failed due to random chance. Open System Settings, change the language to a different one (if possible), then retry this section. Be persistent; you may have to repeat this sequence up to ten times
-        - On JPN/KOR region consoles, there is only one language setting. On those consoles, you should open System Settings, close it, then retry this section
-        - If the exploit is still unsuccessful after more than ten attempts, there may be a problem with your files or SD card. Ensure that you are **not** using WinRAR to extract files, as it is known to cause issues
-    - **A black screen that says "An error has occurred"**: Your file placement is incorrect. Ensure that the super-skaterhax files are on the root of the SD card
+8. "열기"를 누르세요
+    - "GO GO!"라는 글자가 보일 겁니다. 아직 누르지 마세요
+9. 화면 오른쪽 아래 구석에 있는 3줄 (☰) 아이콘을 누르세요
+10. "즐겨찾기에 추가" 버튼을 누르세요
+11. 화면 오른쪽 아래 구석에 있는 3줄 (☰) 아이콘을 누르세요
+12. `설정` -> `쿠키 삭제` -> `삭제`를 누르세요
+13. (Home) 을 눌러 HOME 메뉴로 돌아간 다음 바로 브라우저를 다시 열어 주세요
+14. 페이지가 완전히 로딩될때까지 기다린 후, 아래 화면의 위에 있는 "GO GO!" 버튼을 누르세요
+15. 페이지가 완전히 로딩될때까지 기다린 후, (A)를 눌러 [팝업](/images/screenshots/skaterhax/skater-popup.png)을 끄세요
+16. 만약 콘솔이 아래처럼 표시한다면:
+    - **"Homebrew Launcher" 화면**: 다음 단계로 계속
+    - **하얀색 "오류가 발생했습니다" 메시지 상자**: 랜덤 확률로 인해 취약점이 실패했습니다. 본체 설정을 열고, (가능하다면) 언어를 다른 것으로 바꾼 후, 이 단계를 다시 시도해보세요. 끈기 있게 노력해보세요. 이 순서를 10번 이상 반복해야 할 수도 있습니다
+        - JPN/KOR 지역 콘솔의 경우, 언어 설정이 1가지 뿐입니다. 이런 콘솔에서는, 본체 설정을 연 후, 닫고, 다시 단계를 진행해보세요
+        - 10번 이상 시도해도 취약점이 실패하면 파일이나 SD 카드에 문제가 있을 수 있습니다. 파일 압축해제를 할 때 WinRAR를 사용하지 **마세요**. 이는 문제를 일으키는 것으로 알려져 있습니다
+    - **"오류가 발생했습니다"라고 나오는 검정색 화면**: 파일 배치가 올바르지 않습니다. Ensure that the super-skaterhax files are on the root of the SD card
     - **A yellow screen**: Homebrew Launcher failed to open due to random chance. Hold the POWER button until the console turns off, then retry this section
     - **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. 이 경우, [MSET9](installing-boot9strap-\(mset9\)) 취약점을 진행해야 합니다
 17. 홈브류 목록에서 nimdsphax를 실행해 주세요
