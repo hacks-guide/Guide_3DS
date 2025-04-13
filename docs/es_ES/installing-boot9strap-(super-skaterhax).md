@@ -12,27 +12,27 @@ head:
 
 :::details Detalles técnicos (opcional)
 
-For technical details on the exploits that you will be using on this page, see [here](https://github.com/zoogie/super-skaterhax).
+Para obtener detalles técnicos sobre el exploit que usarás en esta página, entra [aquí](https://github.com/zoogie/super-skaterhax).
 
 :::
 
 ### Notas de compatibilidad
 
-Super-skaterhax (when used to launch the Homebrew Launcher) is compatible with New models on version 11.15.0 and above in all regions.
+Super-skaterhax (como método para iniciar Homebrew Launcher) es compatible con los modelos New en las versiones 11.15.0 y superior en todas las regiones.
 
 ::: warning
 
-The instructions provided only apply to the New 3DS, New 3DS XL, and New 2DS XL. Please ensure that the console you are modding is a New 3DS, New 3DS XL, or New 2DS XL before continuing.
+Las instrucciones proporcionadas solo se aplican a los modelos New 3DS, New 3DS XL y New 2DS XL. Por favor, asegúrate de que la consola que estés modificando sea una New 3DS, New 3DS XL o New 2DS XL antes de continuar.
 
 :::
 
 ### Lo que necesitas
 
-- The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
+- El zip [Super-skaterhax](https://skater.nintendohomebrew.com) para la región y la versión del sistema de tu consola
 
 #### Sección I - Preparativos
 
-In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher.
+En esta sección, copiarás los archivos necesarios para activar super-skaterhax y Homebrew Launcher.
 
 1. Apaga la consola
 
@@ -50,13 +50,13 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 
 5. Enciende tu consola
 
-6. Launch System Settings
+6. Inicia la configuración de la consola
 
 7. Selecciona "Otras opciones"
 
-8. Navigate to "Profile" -> "Region Settings"
-    - These settings will be temporarily changed to increase the success rate of the exploit
-    - You can restore your region settings back to normal once you have finished this page
+8. Ve hacia "Perfil" -> "Residencia"
+    - Estos ajustes serán cambiados temporalmente para aumentar la tasa de éxito del exploit
+    - Podrás restaurar los ajustes de residencia a la normalidad una vez que hayas terminado de seguir esta página
     - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
 
 9. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
@@ -67,11 +67,11 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 
 10. Dirígete a "Fecha y hora"
 
-11. Set "Today's Date" and "Current Time" to the current date and time in your timezone
+11. Configura "Fecha de hoy" y "Hora actual" con la fecha y hora correspondiente a tu franja horaria
 
-12. Exit System Settings
+12. Sal de la configuración de la consola
 
-#### Section II - super-skaterhax
+#### Sección II - super-skaterhax
 
 In this section, you will visit the browser exploit webpage, which will launch the Homebrew Launcher.
 
@@ -81,24 +81,24 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
 
 :::
 
-1. Open the Internet Browser
-2. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-3. Tap `Settings` -> scroll down -> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK`
-    - The browser will close
-4. Reopen the Internet Browser
-5. Tap `Next` -> `Google` -> `OK` -> `OK`
-6. Tap on the address bar at the top of the bottom screen
-7. Enter the URL corresponding to your console's region:
+1. Dirígete al navegador de internet
+2. Toca el icono de 3 líneas (☰) en la esquina inferior derecha de la pantalla
+3. Toca `Ajustes` -> desliza hacia abajo -> `Borrar datos` -> `Sí` -> `Sí` -> `Aceptar`
+    - El navegador se cerrará
+4. Abre el navegador de internet de nuevo
+5. Toca `Seguir` -> `Google` -> `Aceptar` -> `Aceptar`
+6. Toca la barra de búsqueda en la parte superior de la pantalla inferior
+7. Introduce el URL correspondiente a la región de la consola:
     - **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
     - **KOR**: `https://skater.686178.xyz/go/korea`
-8. Tap "Open"
-    - You should see the text "GO GO!". Do not click on it yet
-9. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-10. Tap on "Add to Bookmarks"
-11. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-12. Tap on `Settings` -> `Delete Cookies` -> `Yes`
-13. Press (Home) to return to the HOME Menu, then immediately reopen the Internet Browser
-14. Wait for the page to fully load, then tap the "GO GO!" button on the top of the bottom screen
+8. Toca «Abrir»
+    - Te debería aparecer el texto «GO GO!». No hagas clic aún
+9. Toca el icono de 3 líneas (☰) en la esquina inferior derecha de la pantalla
+10. Toca «Añadir a favoritos»
+11. Toca el icono de 3 líneas (☰) en la esquina inferior derecha de la pantalla
+12. Toca `Ajustes` -> `Borrar cookies` -> `Sí`
+13. Regresa al Menú HOME presionando el botón (Home) y seguidamente abre el navegador de internet de nuevo
+14. Cuando la página cargue del todo, toca el botón "GO GO!" en la parte superior de la pantalla inferior
 15. Wait for the page to fully load, then press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
 16. If your console displays:
     - **"The Homebrew Launcher" screen**: Continue to the next step
