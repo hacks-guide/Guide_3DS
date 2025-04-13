@@ -27,7 +27,7 @@ _**Custom firmware**_ ("CFW") adalah modifikasi peranti lunak penuh pada konsol 
 Kegunaan umum _custom firmware_ seperti:
 
 - Menjalankan _homebrew_ dan permainan yang dibuat atau diporta ke Nintendo 3DS
-- Melangkaui pengunci-daerah untuk memainkan permainan luar daerah
+- Melongkap pengunci-daerah untuk memainkan permainan luar daerah
 - Kustomisasi HOME Menu dengan [tema dan lencana](https://themeplaza.art) oleh komunitas
 - Modifikasi permainan ("retasan ROM") melalui [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-\(Only-version-8.0-and-higher\))
 - Menyunting, mencadang, dan memulihkan _save data_ (simpanan)
