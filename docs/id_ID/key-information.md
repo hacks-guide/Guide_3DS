@@ -142,6 +142,12 @@ Jika disuruh "menyalin (berkas) dari (berkas).zip", berarti harus membuka (atau 
 
 Di hampir semua sistem operasi, berkas bisa diekstrak dengan pencet dua kali. Jika itu tidak bisa, gunakan saja alat ekstraksi pihak ketiga ternama seperti [7-zip](https://7-zip.org/).
 
+::: warning
+
+The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+
+:::
+
 ::::
 
 :::: details Apa itu ekstensi berkas?
