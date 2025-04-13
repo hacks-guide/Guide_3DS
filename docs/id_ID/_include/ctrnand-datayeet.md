@@ -2,7 +2,7 @@ Bagian ini akan mengembalikan pengaturan sistem ke bawaan. **Tidak memengaruhi p
 
 ::: warning
 
-Ini akan mengatur ulang data Mii Anda. If you wish to save any Miis that you have created, either [generate a QR code](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) for each Mii that you want to save, or make a backup of `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b` before following these instructions. You can restore this file to the same directory _after_ your console has gone through initial setup.
+Ini akan mengatur ulang data Mii Anda. Jika ingin menyimpan Mii buatan Anda, bisa [buat kode QR](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) untuk tiap Mii yang ingin disimpan, atau cadangkan `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b` sebelum mengikuti instruksi ini. Berkas ini boleh dipulihkan ke direktori itu lagi _**seusai**_ melewati penyiapan awal konsol.
 
 :::
 
