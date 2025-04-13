@@ -22,7 +22,7 @@
 - 최신 버전의 [FBI](https://github.com/nh-server/FBI-NH/releases/download/2.6.1/FBI.3dsx) (직접 다운로드)
 - 최신 버전의 [faketik](https://github.com/ihaveamac/faketik/releases/latest) _(`.3dsx` 파일)_
 - 최신 버전의 [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (우클릭 후 "링크를 다른 이름으로 저장..."을 선택)
-- The 11.15.0 CTRTransfer image for your console and region
+- 콘솔과 지역에 맞는 11.15.0 CTRTransfer 이미지
 
     ::: warning
 
