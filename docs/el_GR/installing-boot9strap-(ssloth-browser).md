@@ -58,8 +58,8 @@
 
 2. Πατήστε το κουμπί κωδικού QR και σαρώστε [αυτόν τον κωδικό QR](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
 
-    - When you get a prompt with error code `012-1511`, press (A) to allow the connection
-    - If you get a crash or a different error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+    - Όταν λάβετε ένα μήνυμα με τον κωδικό σφάλματος `012-1511`, πατήστε το (A) για να επιτρέψετε τη σύνδεση
+    - Εάν προκύψει απρόσμενη διακοπή λειτουργίας ή αν λάβετε άλλο κωδικό σφάλματος, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting-ssloth-browser)
 
     ::: danger
 
