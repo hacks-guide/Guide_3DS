@@ -38,7 +38,7 @@ En esta sección, copiarás los archivos necesarios para activar super-skaterhax
 
 2. Inserta la tarjeta SD en tu computadora
 
-3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card, overwriting any existing files
+3. Copia todo el contenido del `.zip` de Super-skaterhax en la raíz de tu tarjeta SD, sobreescribiendo cualquier archivo existente
 
     ::: info
 
@@ -56,10 +56,10 @@ En esta sección, copiarás los archivos necesarios para activar super-skaterhax
 
 8. Ve hacia "Perfil" -> "Residencia"
     - Estos ajustes serán cambiados temporalmente para aumentar la tasa de éxito del exploit
-    - Podrás restaurar los ajustes de residencia a la normalidad una vez que hayas terminado de seguir esta página
-    - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
+    - Podrás restablecer los ajustes de residencia a los originales una vez que hayas terminado de seguir esta página
+    - Si aparece una [advertencia](/images/screenshots/skaterhax/country-change-notice.png) diciendo que perderás acceso a funciones de Nintendo Network ID, puedes seleccionar "Aceptar" para continuar sin ningún problema
 
-9. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
+9. Selecciona las siguientes opciones según la región de tu consola ([imagen](/images/screenshots/skaterhax/skater-lang.png))
     - USA: United States, Do Not Set
     - EUR: United Kingdom, Do Not Set
     - JPN: 日本, 設定しない
@@ -73,11 +73,11 @@ En esta sección, copiarás los archivos necesarios para activar super-skaterhax
 
 #### Sección II - super-skaterhax
 
-In this section, you will visit the browser exploit webpage, which will launch the Homebrew Launcher.
+En esta sección, visitarás la página web del exploit para el navegador, la cual iniciará el Homebrew Launcher.
 
 ::: info
 
-A video detailing these steps is available [here](https://www.youtube.com/watch?v=DEcZB72vJts).
+[Aquí](https://www.youtube.com/watch?v=DEcZB72vJts) encontrarás un vídeo paso a paso que explica este proceso.
 
 :::
 
@@ -99,25 +99,25 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
 12. Toca `Ajustes` -> `Borrar cookies` -> `Sí`
 13. Regresa al Menú HOME presionando el botón (Home) y seguidamente abre el navegador de internet de nuevo
 14. Cuando la página cargue del todo, toca el botón "GO GO!" en la parte superior de la pantalla inferior
-15. Wait for the page to fully load, then press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
-16. If your console displays:
-    - **"The Homebrew Launcher" screen**: Continue to the next step
-    - **A white "Error has occurred" message box**: The exploit failed due to random chance. Open System Settings, change the language to a different one (if possible), then retry this section. Be persistent; you may have to repeat this sequence up to ten times
-        - On JPN/KOR region consoles, there is only one language setting. On those consoles, you should open System Settings, close it, then retry this section
-        - If the exploit is still unsuccessful after more than ten attempts, there may be a problem with your files or SD card. Ensure that you are **not** using WinRAR to extract files, as it is known to cause issues
-    - **A black screen that says "An error has occurred"**: Your file placement is incorrect. Ensure that the super-skaterhax files are on the root of the SD card
-    - **A yellow screen**: Homebrew Launcher failed to open due to random chance. Hold the POWER button until the console turns off, then retry this section
-    - **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. If this is the case, you should follow [MSET9](installing-boot9strap-\(mset9\)) instead
-17. Launch nimdsphax from the list of homebrew
+15. Espera a que la página cargue por completo y después presiona (A) para cerrar la [ventana emergente](/images/screenshots/skaterhax/skater-popup.png)
+16. Si la consola muestra:
+    - **La pantalla de "The Homebrew Launcher"**: Sigue con el siguiente paso
+    - **Un cuadro en blanco que dice "Error has occurred"**: el exploit falló. Abre la configuración de la consola, cambia el idioma a uno distinto (si es posible) y vuelve a intentarlo. No te rindas; podrías tener que repetir este proceso hasta diez veces
+        - En las consolas con región JPN/KOR, solo hay un idioma disponible. En esas consolas, deberás abrir la configuración de la consola, cerrarlo y volver a intentarlo
+        - Si el exploit sigue fallando después de más de diez intentos, podría haber un problema con los archivos o la tarjeta SD. Asegúrate de **no** utilizar WinRAR para extraer los archivos, ya que puede causar errores
+    - **Una pantalla negra que dice "An error has occurred"**: Los archivos no están colocados correctamente. Asegúrate de que los archivos de super-skaterhax se encuentran en la raíz de la tarjeta SD
+    - **Una pantalla amarilla**: el Homebrew Launcher no pudo abrirse. Mantén el botón POWER hasta que la consola se apague e inténtalo de nuevo
+    - **[La palabra "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: Posees una Old 3DS, en la que el exploit **no es compatible**. Si este es el caso, entones debes de usar el exploit [MSET9](installing-boot9strap-\(mset9\))
+17. Inicia nimdsphax desde la lista de homebrew
 18. Si el exploit fue exitoso, habrás iniciado SafeB9SInstaller
-    - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
+    - Si tu consola se queda congelada en una pantalla roja o verde, mantén el botón POWER hasta que se apague y vuelve a intentarlo
 
 #### Sección III - Instalar boot9strap
 
 En esta sección, instalarás custom firmware en tu consola.
 
 1. Cuando se te pida, introduce la combinación de botones mostrada para instalar boot9strap
-    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+    - Si algún paso en la pantalla inferior tiene el texto en color rojo y no se te pide que introduzcas una combinación de botones, [sigue la guía de resolución de problemas](troubleshooting-super-skaterhax)
 2. Una vez completado, presiona (A) para reiniciar tu consola
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -128,7 +128,7 @@ ___
 
 ::: info
 
-You may now restore your region settings back to normal.
+Ya puedes restablecer los ajustes de residencia.
 
 :::
 
