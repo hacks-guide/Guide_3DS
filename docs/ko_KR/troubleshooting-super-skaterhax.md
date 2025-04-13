@@ -14,12 +14,12 @@
 
 "GO GO!"버튼을 누른 뒤 아무 색깔도 깜빡이지 않는다면:
 
-- Ensure that you have set your system date and [region](/images/screenshots/skaterhax/skater-lang.png) correctly
-- Ensure that no other browser tabs are open, then restart the browser and try the exploit again
+- 시스템의 날짜와 [지역](/images/screenshots/skaterhax/skater-lang.png)을 제대로 선택하였는지 확인하세요
+- 다른 브라우저 탭이 열려있지 않는지 확인하고, 브라우저를 재시작 한 뒤 취약점을 실행해보세요
 
-If the screen flashes colors then freezes/crashes:
+화면 색깔이 깜빡인 뒤 멈추거나 크래시가 난다면:
 
-- Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
+- `arm11code.bin`와 `browserhax_hblauncher_ropbin_payload.bin`이 기기의 버전과 지역에 맞게 정확하게 복사되었는지 확인해보세요
 - 브라우저 데이터 삭제를 시도해 보세요:
     1. 브라우저를 실행하고 브라우저 설정을 실행해 주세요
     2. 아래쪽으로 스크롤하여 "세이브 데이터 리셋"을 선택합니다("데이터 초기화" 또는 "모든 저장 데이터 지우기" 라고도 함).
@@ -30,7 +30,7 @@ If the screen flashes colors then freezes/crashes:
 
 :::: details "에러가 발생했습니다. 본체의 전원 버튼을 길게 눌러 전원을 끈 후..." (텍스트와 함께 검정 화면이 나옴)
 
-`arm11code.bin` 파일이 없거나 잘못 들어갔습니다. Make sure to copy the files of the [latest version of super-skaterhax](https://skater.nintendohomebrew.com/) for your region and version to the root of your SD card (not inside of a folder).
+`arm11code.bin` 파일이 없거나 잘못 들어갔습니다. [최신 버전의 super-skaterhax](https://skater.nintendohomebrew.com/) 를 지역과 버전에 맞춰 복사해 SD카드 안의 그 어느 폴더도 아닌 가장 최상단에 넣었는지를 확인해 주세요.
 
 ::: info
 
