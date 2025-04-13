@@ -110,7 +110,7 @@
 7. "Scripts..."를 선택해 주세요
 8. "finalize"를 선택해 주세요
 9. 스크립트 표시에 따라 필요한 행동을 취해주세요
-    - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
+    - "Information #05: No title database"라고 나왔을 경우, (A) 버튼을 눌러 가져오고 화면에 있는 버튼을 입력해 진행해 주세요
     - 만일 오류가 발생할 경우, 오류 메세지에 나온 안내를 따르거나 [문제 해경](troubleshooting-finalizing-setup) 페이지를 참고해 주세요
 10. "Setup Complete!" 가 떴을 경우, (A) 버튼을 눌러 전원을 꺼 주세요
     - 만일 "Setup Complete!"(설정 완료!) 가 뜨지 않은 경우, 스크립트가 정상 실행되지 않은 것이며 해당 섹션의 작업을 3단계부터 다시 해야 합니다
