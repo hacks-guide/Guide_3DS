@@ -142,6 +142,12 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 대부분의 환경에서는 파일을 두 번 클릭하는 것으로 파일 추출이 가능합니다. 만약 동작하지 않는다면, [7-zip](https://7-zip.org)과 같은 서드 파티 압축 해제 툴을 설치해 이용할 수 있습니다.
 
+::: warning
+
+The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+
+:::
+
 ::::
 
 :::: details What are file extensions?
