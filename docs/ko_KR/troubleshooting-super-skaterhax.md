@@ -4,15 +4,15 @@
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (super-skaterhax)" page. If you are using **anything other than** a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (SSLoth-Browser)](troubleshooting-ssloth-browser) instead.
+이 가이드들은 "boot9strap 설치 (super-skaterhax)" 페이지에 대해서만 유효합니다. 만약 **11.15.0 에서 11.17.0 사이의** **New 3DS**를 **제외한 다른 기기**를 사용 중이라면, [문제 해결 (SSLoth-Browser)](troubleshooting-ssloth-browser) 페이지를 참고하세요.
 
 :::
 
-## Issues with super-skaterhax
+## super-skaterhax 문제 해결
 
 :::details "에러가 발생했습니다. 현재 사용 중인 소프트웨어에 데이터를 저장한 후 시스템을 다시 시작합니다."
 
-If no colors flash after pressing "GO GO!":
+"GO GO!"버튼을 누른 뒤 아무 색깔도 깜빡이지 않는다면:
 
 - Ensure that you have set your system date and [region](/images/screenshots/skaterhax/skater-lang.png) correctly
 - Ensure that no other browser tabs are open, then restart the browser and try the exploit again
