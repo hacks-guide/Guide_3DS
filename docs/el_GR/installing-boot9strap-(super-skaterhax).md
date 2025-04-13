@@ -65,9 +65,9 @@ head:
     - JPN: 日本, 設定しない
     - KOR: 대한민국, 설정하지 않음
 
-10. Navigate to "Date & Time"
+10. Μεταβείτε στο «Date & Time»
 
-11. Set "Today's Date" and "Current Time" to the current date and time in your timezone
+11. Ορίστε τα «Today's Date» και «Current Time» στην τρέχουσα ημερομηνία και ώρα της ζώνης ώρας σας
 
 12. Κλείστε την εφαρμογή «System Settings»
 
@@ -77,37 +77,37 @@ head:
 
 ::: info
 
-A video detailing these steps is available [here](https://www.youtube.com/watch?v=DEcZB72vJts).
+Μπορείτε να βρείτε ένα βίντεο που αναλύει αυτά τα βήματα [εδώ](https://www.youtube.com/watch?v=DEcZB72vJts).
 
 :::
 
-1. Open the Internet Browser
-2. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-3. Tap `Settings` -> scroll down -> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK`
-    - The browser will close
-4. Reopen the Internet Browser
-5. Tap `Next` -> `Google` -> `OK` -> `OK`
-6. Tap on the address bar at the top of the bottom screen
-7. Enter the URL corresponding to your console's region:
+1. Ανοίξτε την εφαρμογή «Internet Browser»
+2. Πατήστε το εικονίδιο τριών γραμμών (☰) στην κάτω δεξιά γωνία της οθόνης
+3. Πατήστε `Settings` -> κάντε κύλιση προς τα κάτω -> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK`
+    - Θα κλείσει το πρόγραμμα περιήγησης
+4. Ανοίξτε ξανά την εφαρμογή «Internet Browser»
+5. Πατήστε `Next` -> `Google` -> `OK` -> `OK`
+6. Πατήστε τη γραμμή διευθύνσεων στο επάνω μέρος της κάτω οθόνης
+7. Εισαγάγετε το URL που αντιστοιχεί στην περιοχή της κονσόλας σας:
     - **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
     - **KOR**: `https://skater.686178.xyz/go/korea`
-8. Tap "Open"
-    - You should see the text "GO GO!". Do not click on it yet
-9. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-10. Tap on "Add to Bookmarks"
-11. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-12. Tap on `Settings` -> `Delete Cookies` -> `Yes`
-13. Press (Home) to return to the HOME Menu, then immediately reopen the Internet Browser
-14. Wait for the page to fully load, then tap the "GO GO!" button on the top of the bottom screen
-15. Wait for the page to fully load, then press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
-16. If your console displays:
-    - **"The Homebrew Launcher" screen**: Continue to the next step
-    - **A white "Error has occurred" message box**: The exploit failed due to random chance. Open System Settings, change the language to a different one (if possible), then retry this section. Be persistent; you may have to repeat this sequence up to ten times
-        - On JPN/KOR region consoles, there is only one language setting. On those consoles, you should open System Settings, close it, then retry this section
-        - If the exploit is still unsuccessful after more than ten attempts, there may be a problem with your files or SD card. Ensure that you are **not** using WinRAR to extract files, as it is known to cause issues
-    - **A black screen that says "An error has occurred"**: Your file placement is incorrect. Ensure that the super-skaterhax files are on the root of the SD card
-    - **A yellow screen**: Homebrew Launcher failed to open due to random chance. Hold the POWER button until the console turns off, then retry this section
-    - **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. Σε αυτήν την περίπτωση, θα πρέπει να ακολουθήσετε τις οδηγίες στο [MSET9](installing-boot9strap-\(mset9\))
+8. Επιλέξτε «Open»
+    - Θα δείτε το κείμενο «GO GO!». Μην το πατήσετε ακόμα
+9. Πατήστε το εικονίδιο τριών γραμμών (☰) στην κάτω δεξιά γωνία της οθόνης
+10. Επιλέξτε «Add to Bookmarks»
+11. Πατήστε το εικονίδιο τριών γραμμών (☰) στην κάτω δεξιά γωνία της οθόνης
+12. Πατήστε `Settings` -> `Delete Cookies` -> `Yes`
+13. Πατήστε το (Home) για να επιστρέψετε στο μενού «HOME» και αμέσως μετά, ανοίξετε ξανά την εφαρμογή «Internet Browser»
+14. Περιμένετε μέχρι να φορτωθεί πλήρως η σελίδα και πατήστε το κουμπί «GO GO!» στο επάνω μέρος της κάτω οθόνης
+15. Περιμένετε μέχρι να φορτωθεί πλήρως η σελίδα και πατήστε το (A) για να απορρίψετε το [αναδυόμενο παράθυρο](/images/screenshots/skaterhax/skater-popup.png)
+16. Εάν η κονσόλα σας εμφανίσει:
+    - **Την οθόνη «The Homebrew Launcher»**: Συνεχίστε στο επόμενο βήμα
+    - **Ένα λευκό πλαίσιο μηνύματος «Error has occurred»**: Το exploit απέτυχε λόγω τυχαιότητας. Ανοίξτε την εφαρμογή «System Settings», αλλάξετε τη γλώσσα σε κάποια άλλη (αν είναι δυνατόν) και επαναλάβετε τα βήματα αυτής της ενότητας. Να είστε επίμονοι· ίσως χρειαστεί να επαναλάβετε αυτήν τη διαδικασία έως και δέκα φορές
+        - Στις κονσόλες της περιοχής JPN/KOR, υπάρχει μόνο μία ρύθμιση γλώσσας. Σε αυτές τις κονσόλες, θα πρέπει να ανοίξετε την εφαρμογή «System Settings», να την κλείσετε και στη συνέχεια, να επαναλάβετε τα βήματα αυτής της ενότητας
+        - Εάν το exploit εξακολουθεί να αποτυγχάνει μετά από περισσότερες από δέκα απόπειρες, ενδέχεται να υπάρχει κάποιο πρόβλημα με τα αρχεία ή την κάρτα SD σας. Βεβαιωθείτε ότι **δεν** χρησιμοποιείτε το WinRAR για την εξαγωγή των αρχείων, καθώς είναι γνωστό ότι προκαλεί ζητήματα
+    - **Μια μαύρη οθόνη με το μήνυμα «An error has occurred»**: Η τοποθέτηση των αρχείων είναι λανθασμένη. Βεβαιωθείτε ότι τα αρχεία του super-skaterhax βρίσκονται στη ρίζα της κάρτας SD
+    - **Μια κίτρινη οθόνη**: Το άνοιγμα του Homebrew Launcher απέτυχε λόγω τυχαιότητας. Κρατήστε πατημένο το κουμπί POWER μέχρι να απενεργοποιηθεί η κονσόλα και επαναλάβετε τα βήματα αυτής της ενότητας
+    - **[Τη λέξη «Text»](/images/screenshots/skaterhax/skater-old3ds.png)**: Έχετε ένα Old 3DS, στα οποία **δεν λειτουργεί** αυτό το exploit. Σε αυτήν την περίπτωση, θα πρέπει να ακολουθήσετε τις οδηγίες στο [MSET9](installing-boot9strap-\(mset9\))
 17. Εκκινήστε το nimdsphax από τη λίστα των εφαρμογών homebrew
 18. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
     - Εάν η κονσόλα σας «παγώσει» σε μια κόκκινη ή πράσινη οθόνη, κρατήστε πατημένο το κουμπί POWER μέχρι να απενεργοποιηθεί και έπειτα, επαναλάβετε τα βήματα αυτής της ενότητας
@@ -117,7 +117,7 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
 Σε αυτήν την ενότητα, θα εγκαταστήσετε custom firmware στην κονσόλα σας.
 
 1. Όταν ζητηθεί, εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην πάνω οθόνη, ώστε να εγκαταστήσετε το boot9strap
-    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+    - Εάν το κείμενο κάποιου βήματος στην κάτω οθόνη έχει κόκκινο χρώμα και δεν σας ζητείται να εισαγάγετε κάποιον συνδυασμό πλήκτρων, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting-super-skaterhax)
 2. Μόλις ολοκληρωθεί, πατήστε το (Α) για να επανεκκινήσετε την κονσόλα σας
 
 <!--@include: ./_include/configure-luma3ds.md -->
