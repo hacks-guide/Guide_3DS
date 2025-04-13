@@ -2,7 +2,7 @@
 
 ::: warning
 
-This process will reset your Mii data. If you wish to save any Miis that you have created, either [generate a QR code](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) for each Mii that you want to save, or make a backup of `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b` before following these instructions. You can restore this file to the same directory _after_ your console has gone through initial setup.
+이 작업은 Mii 데이터를 초기화시킵니다. If you wish to save any Miis that you have created, either [generate a QR code](https://en-americas-support.nintendo.com/app/answers/detail/a_id/298/~/how-to-generate-a-qr-code%E2%84%A2-for-a-mii) for each Mii that you want to save, or make a backup of `SYSNAND CTRNAND:/data/<ID0>/extdata/00048000/f000000b` before following these instructions. 콘솔의 초기 설정이 완료된 _이후에_ 이 파일을 같은 경로로 복사할 수 있습니다.
 
 :::
 
@@ -22,7 +22,7 @@ This process will reset your Mii data. If you wish to save any Miis that you hav
 13. (A)를 눌러 확인해 주세요
 14. (A)를 눌려 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력해 주세요
 15. 작업이 완료되면 (A)를 눌려 계속해 주세요
-16. 메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요
+16. 메세지가 표시되면, (A)를 눌러서 쓰기 권한을 다시 잠궈주세요
 17. (Start)를 눌러 콘솔을 다시 시작해 주세요
 18. 콘솔이 최초 실행 메뉴로 부팅될 것입니다
     - 이것은 의도적 행동입니다. 게임 데이터는 손실되지 않습니다
