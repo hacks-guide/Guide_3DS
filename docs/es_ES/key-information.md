@@ -144,7 +144,7 @@ On most operating systems, you can extract files by double-clicking the file. If
 
 ::: warning
 
-The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+La aplicación de Windows "WinRAR" es específicamente conocida por causar problemas de compatibilidad con la 3DS, particularmente con los exploits de instalación de custom firmware. Si usas una computadora con Windows, entonces usa el explorador de archivos o 7-zip para extraer archivos.
 
 :::
 
