@@ -142,6 +142,12 @@
 
 Στα περισσότερα λειτουργικά συστήματα, μπορείτε να αποσυμπιέσετε τα αρχεία με διπλό κλικ. Εάν δεν λειτουργεί αυτό, μπορείτε να εγκαταστήσετε ένα αξιόπιστο εργαλείο αποσυμπίεσης, όπως το [7-zip](https://7-zip.org/).
 
+::: warning
+
+The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+
+:::
+
 ::::
 
 :::: details Τι είναι οι επεκτάσεις αρχείων;
