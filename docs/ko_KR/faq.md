@@ -66,7 +66,7 @@ NNID는 닌텐도 네트워크 ID의 약칭이며, 본 가이드에서 NNID 걱�
 
 :::details 컴퓨터 없이도 작업을 할 수 있나요? (예를 들어 안드로이드 폰과 같이)
 
-대부분의 경우, 그렇습니다! The MSET9 exploit (primarily used for the latest firmware on Old 3DS) requires running a Python script or using an Android application, while all other exploits only require placing files on the SD card.
+대부분의 경우, 그렇습니다! 다른 취약점들은 SD 카드에 파일을 옮기기만 하면 되지만, (구형 3DS 최신 펌웨어에서 주로 사용하는) MSET9 취약점은 Python 스크립트나 안드로이드 애플리케이션을 사용하는 것을 필요로 합니다.
 
 만약 SD 카드의 크기가 64GB 이상일 경우, Windows, macOS, 또는 Linux를 구동하는 컴퓨터가 필요할 수 있습니다.
 
@@ -112,7 +112,7 @@ Luma3DS를 사용하고 계신 경우, 커스텀 펌웨어 로더(boot9strap)는
 
 :::details SD 카드를 어떻게 업그레이드할 수 있나요?
 
-FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사하세요. 128GB 카드들의 경우에는 할당량 (allocation size)을 65536으로 설정하는걸 권장드립니다. GBA 그래픽과 커스텀 테마 문제 때문에 128GB를 넘기는 SD 카드를 사용하는 것은 권장하지 않습니다. Specific formatting instructions are available here: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
+FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사하세요. 128GB 카드들의 경우에는 할당량 (allocation size)을 65536으로 설정하는걸 권장드립니다. GBA 그래픽과 커스텀 테마 문제 때문에 128GB를 넘기는 SD 카드를 사용하는 것은 권장하지 않습니다. 구체적인 포맷 방법은 여기에서 확인할 수 있습니다: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
 
 :::
 
@@ -124,7 +124,7 @@ FAT32로 포맷된 새 SD 카드에 기존 SD 카드의 파일들을 복사하�
 
 :::details 어떻게 하면 일본 3DS에서 시스템 언어를 다른 언어로 변경할 수 있나요?
 
-일본어 외의 다른 언어로 일본 3DS의 언어를 바꾸는 유일한 방법은 [지역 변경](region-changing) 뿐입니다. 지역 변경을 하면 닌텐도 e숍을 사용할 수 없게 될 수 있다는 점을 명심해 주세요. 게임을 업데이트할 수 없게 될 수도 있습니다. You will also be unable to access Pokémon Bank (if you have it installed), as it relies on eShop access.
+일본어 외의 다른 언어로 일본 3DS의 언어를 바꾸는 유일한 방법은 [지역 변경](region-changing) 뿐입니다. 지역 변경을 하면 닌텐도 e숍을 사용할 수 없게 될 수 있다는 점을 명심해 주세요. 게임을 업데이트할 수 없게 될 수도 있습니다. 그리고 포켓몬 뱅크가 e숍 접근에 의존하기 때문에 때문에 포켓몬 뱅크에도 접속할 수 없게 됩니다 (포켓몬 뱅크를 설치한 경우).
 
 :::
 
