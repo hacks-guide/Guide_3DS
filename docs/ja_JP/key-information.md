@@ -142,6 +142,12 @@ When you are told to "copy (file) from (file).zip", that means that you need to 
 
 On most operating systems, you can extract files by double-clicking the file. If this doesn't work, you can install a reputable third-party extraction tool like [7-zip](https://7-zip.org/) instead.
 
+::: warning
+
+The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+
+:::
+
 ::::
 
 :::: details What are file extensions?
