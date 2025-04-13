@@ -142,6 +142,12 @@ Quando ti verrà chiesto di "copiare il file (tizio) dall'archivio (caio).zip", 
 
 Nella maggior parte dei sistemi operativi, per estrarre i file basta farci un doppio clic sopra. Se non ci riesci o non funziona, puoi installare invece un tool di terze parti affidabile come [7-Zip](https://7-zip.org/).
 
+::: warning
+
+The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+
+:::
+
 ::::
 
 :::: details Cosa sono le estensioni dei file?
