@@ -65,9 +65,9 @@ Di bagian ini akan menaruh berkas untuk mengaktifkan super-skaterhax dan Homebre
     - JPN: 日本, 設定しない
     - KOR: 대한민국, 설정하지 않음
 
-10. Navigate to "Date & Time"
+10. Navigasi ke "Date & Time"
 
-11. Set "Today's Date" and "Current Time" to the current date and time in your timezone
+11. Atur "Today's Date" dan "Current Time" ke tanggal dan waktu hari ini sesuai zona waktu
 
 12. Keluar dari System Settings
 
@@ -77,37 +77,37 @@ Di bagian ini akan membuka laman web eksploit Browser untuk menjalankan Homebrew
 
 ::: info
 
-A video detailing these steps is available [here](https://www.youtube.com/watch?v=DEcZB72vJts).
+Video yang menjelaskan langkah ini ada di [sini](https://www.youtube.com/watch?v=DEcZB72vJts).
 
 :::
 
-1. Open the Internet Browser
-2. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-3. Tap `Settings` -> scroll down -> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK`
-    - The browser will close
-4. Reopen the Internet Browser
-5. Tap `Next` -> `Google` -> `OK` -> `OK`
-6. Tap on the address bar at the top of the bottom screen
-7. Enter the URL corresponding to your console's region:
+1. Buka Internet Browser
+2. Sentuh ikon 3 garis (☰) di pojok kanan bawah layar bawah
+3. Sentuh `Settings` -> gulir ke bawah -> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK`
+    - Browser akan ditutup
+4. Buka lagi Internet Browser
+5. Sentuh `Next` -> `Google` -> `OK` -> `OK`
+6. Sentuh kolom alamat di bagian atas layar bawah
+7. Ketik URL berikut sesuai daerah konsol Anda:
     - **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
     - **KOR**: `https://skater.686178.xyz/go/korea`
-8. Tap "Open"
-    - You should see the text "GO GO!". Do not click on it yet
-9. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-10. Tap on "Add to Bookmarks"
-11. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-12. Tap on `Settings` -> `Delete Cookies` -> `Yes`
-13. Press (Home) to return to the HOME Menu, then immediately reopen the Internet Browser
-14. Wait for the page to fully load, then tap the "GO GO!" button on the top of the bottom screen
-15. Wait for the page to fully load, then press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
-16. If your console displays:
-    - **"The Homebrew Launcher" screen**: Continue to the next step
-    - **A white "Error has occurred" message box**: The exploit failed due to random chance. Open System Settings, change the language to a different one (if possible), then retry this section. Be persistent; you may have to repeat this sequence up to ten times
-        - On JPN/KOR region consoles, there is only one language setting. On those consoles, you should open System Settings, close it, then retry this section
-        - If the exploit is still unsuccessful after more than ten attempts, there may be a problem with your files or SD card. Ensure that you are **not** using WinRAR to extract files, as it is known to cause issues
-    - **A black screen that says "An error has occurred"**: Your file placement is incorrect. Ensure that the super-skaterhax files are on the root of the SD card
-    - **A yellow screen**: Homebrew Launcher failed to open due to random chance. Hold the POWER button until the console turns off, then retry this section
-    - **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. Jika begitu, maka ikuti saja [MSET9](installing-boot9strap-\(mset9\))
+8. Sentuh "Open"
+    - Seharusnya muncul teks "GO GO!". Jangan dipencet dulu
+9. Sentuh ikon 3 garis (☰) di pojok kanan bawah layar bawah
+10. Sentuh "Add to Bookmarks"
+11. Sentuh ikon 3 garis (☰) di pojok kanan bawah layar bawah
+12. Sentuh `Settings` -> `Delete Cookies` -> `Yes`
+13. Tekan (Home) untuk ke HOME Menu, lalu langsung buka lagi Internet Browser
+14. Tunggu sampai laman selesai dimuat, lalu sentuh tombol "GO GO!" di bagian atas layar bawah
+15. Tunggu sampai laman selesai dimuat, lalu tekan (A) untuk tutup [sembulan](/images/screenshots/skaterhax/skater-popup.png)
+16. Jika konsol muncul:
+    - **Layar "Homebrew Launcher"**: Lanjut ke langkah berikutnya
+    - **Kotak pesan putih "Error has occurred"**: Eksploitnya kebetulan gagal. Buka System Settings, ubah bahasa sistem ke yang lain (jika bisa), lalu coba lagi bagian ini. Coba terus; bagian ini mungkin harus diulangi hingga sepuluh kali
+        - Di konsol berdaerah JPN/KOR, pengaturan hanya ada satu bahasa. Untuk konsol tersebut, caranya buka System Settings, ditutup, lalu coba lagi bagian ini
+        - Jika eksploit masih tidak berhasil setelah sepuluh kali lebih mencoba, mungkin masalahnya di berkas atau kartu SD. Pastikan **tidak** menggunakan WinRAR untuk mengekstrak berkas, karena bermasalah
+    - **Layar hitam bertulis "An error has occurred"**: Berkasnya salah taruh. Pastikan berkas super-skaterhax ditaruh di akar kartu SD
+    - **Layar kuning**: Homebrew Launcher tidak bisa dibuka karena kebetulan gagal. Tahan tombol POWER konsol sampai daya mati, lalu coba lagi bagian ini
+    - **[Tulisan "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: Konsol Anda Old 3DS, eksploit ini **bukan untuk Old 3DS**. Jika begitu, maka ikuti saja [MSET9](installing-boot9strap-\(mset9\))
 17. Buka nimdsphax dari Homebrew Launcher
 18. Jika eksploit berhasil akan muncul SafeB9SInstaller
     - Jika konsolnya macet di layar merah atau hijau, tahan tombol POWER sampai daya mati, lalu coba lagi bagian ini
@@ -117,7 +117,7 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
 Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
-    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+    - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-super-skaterhax)
 2. Saat selesai, tekan (A) untuk nyalakan ulang konsol
 
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -128,7 +128,7 @@ ___
 
 ::: info
 
-You may now restore your region settings back to normal.
+Sekarang pengaturan daerah bisa dikembalikan ke biasa lagi.
 
 :::
 
