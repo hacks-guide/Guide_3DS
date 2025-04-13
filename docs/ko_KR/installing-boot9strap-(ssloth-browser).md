@@ -59,7 +59,7 @@ SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브�
 2. QR 코드 버튼을 눌러 이 QR 코드 를 스캔해 주세요
 
     - When you get a prompt with error code `012-1511`, press (A) to allow the connection
-    - If you get a crash or a different error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+    - 오류가 발생하거나 다른 에러 코드가 나오면 이 [문제 해결 가이드](troubleshooting-ssloth-browser) 를 참고해 주세요
 
     ::: danger
 
