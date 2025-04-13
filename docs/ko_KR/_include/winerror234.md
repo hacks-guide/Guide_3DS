@@ -4,7 +4,7 @@
 
 해당 오류는 윈도우의 UTF-8 지원과 관련된 베타 기능 때문에 발생합니다. MEST9를 실행하기 위해선 이를 비활성화 해야합니다:
 
-1. Hit **Windows Key + R** to open up the Run dialogue, type `intl.cpl` then click "OK"
+1. **윈도우 키 + R**을 입력해 실행 창을 열고, `intl.cpl`을 입력한 후 "확인"을 클릭하세요.
 
     ::: info
 
