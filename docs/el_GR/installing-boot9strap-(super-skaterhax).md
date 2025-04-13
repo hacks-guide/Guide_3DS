@@ -128,7 +128,7 @@ ___
 
 ::: info
 
-You may now restore your region settings back to normal.
+Μπορείτε τώρα να επαναφέρετε τις ρυθμίσεις περιοχής στις κανονικές επιλογές.
 
 :::
 
