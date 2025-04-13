@@ -28,7 +28,7 @@ head:
 
 ### 준비물
 
-- The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
+- 콘솔의 지역과 시스템 버전에 맞는 [Super-skaterhax](https://skater.nintendohomebrew.com) zip 파일
 
 #### 섹션 I - 준비 작업
 
