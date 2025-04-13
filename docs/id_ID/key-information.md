@@ -144,7 +144,7 @@ Di hampir semua sistem operasi, berkas bisa diekstrak dengan pencet dua kali. Ji
 
 ::: warning
 
-The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+Aplikasi "WinRAR" Windows untuk tujuan ini diketahui bermasalah dengan berkas ekspoit 3DS, khususnya yang pemasangan _custom firmware_. Jika menggunakan komputer Windows, sebaiknya gunakan File Explorer atau 7-zip untuk mengekstrak berkas.
 
 :::
 
