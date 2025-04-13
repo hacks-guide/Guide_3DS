@@ -18,7 +18,7 @@ GodMode9 adalah penelusur berkas berakses penuh untuk Nintendo 3DS, mampu mengak
 
 Perlu diingat jika ada _payload_ selain `GodMode9.firm` dalam folder `/luma/payloads/` di kartu SD, menahan (Start) saat awal nyala akan ke "chainloader menu" dan hanya bisa Tombol Arah dan (A) untuk memilih "GodMode9" pada instruksi ini.
 
-GodMode9 adalah peranti lunak penuh daya yang mampu memodif apa pun pada konsol. Tapi, banyak dari modifikasi ini terkunci di balik sistem izin sehingga mustahil tidak sengaja berbuat berbahaya, kecuali jika sebelumnya _sengaja_ membuka izin sistem. Jadi tetaplah teliti mengikuti instruksi dan **sering-sering membuat cadangan**.
+GodMode9 adalah peranti lunak penuh daya yang mampu memodif apa pun pada konsol. Tapi, banyak dari modifikasi ini terkunci di balik sistem izin sehingga mustahil tidak sengaja berbuat berbahaya, kecuali jika sebelumnya _sengaja_ membuka izin sistem. Jadi tetaplah teliti mengikuti instruksi dan **jangan lupa membuat cadangan**.
 
 ## Memperbarui GodMode9
 
