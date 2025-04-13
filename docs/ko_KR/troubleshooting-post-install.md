@@ -106,7 +106,7 @@ SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 
 
 :::
 
-## Software issues on consoles with custom firmware
+## 커펌이 설치된 콘솔에서 소프트웨어 문제가 발생합니다
 
 :::details DSi / DS 기능이 오작동 하거나 Flipnote Studio가 대신 표시됩니다
 
@@ -205,9 +205,9 @@ HOME 메뉴를 통해 Homebrew Launcher 애플리케이션에 접근이 불가�
 2. 다음 빈칸에 관련 정보를 넣어 주세요:
     - Device Type(장치 종류): "3DS" 를 선택하세요(2DS나 New 3DS (XL/LL), New 2DS (XL/LL)을 사용하고 있는 경우에도 똑같이 선택하세요.).
     - System Date(본체 날짜): 본체에 설정된 현재 월과 일을 입력하세요.
-    - Inquiry Number: Can be obtained by pressing "Forgot PIN" then "I Forgot" in the Parental Controls screen
-3. After you have obtained your mkey, press OK on the screen you have obtained your Inquiry Number, then input the master key
-4. Press "Clear Settings", then "Delete" to remove all Parental Controls data
+    - Inquiry Number(인증 번호): 청소년 보호 기능에서 "비밀번호를 잊어버렸다면"과 "기억나지 않음"을 선택하면 뜨는 숫
+3. mkey를 획득한 뒤, 인증 번호 화면에서 OK 버튼을 누른 다음 마스터키를 입력하는 곳에서 입력해주세요
+4. "설정 삭제"를 누른 다음 "삭제"를 눌러 청소년 보호 기능 데이터를 제거해 주세요
 
 :::
 
