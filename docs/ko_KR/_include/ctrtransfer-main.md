@@ -5,12 +5,12 @@
 4. (Home)을 눌러 작업 메뉴를 열어 주세요
 5. "Scripts..."를 선택해 주세요
 6. "ctrtransfer"를 선택해 주세요
-7. Select your downloaded CTRTransfer image
-    - The script will calculate the hash of your image to make sure it's valid
-8. Once the checks are completed, press (A) to continue
+7. 다운로드한 CTRTransfer 이미지를 선택하세요.
+    - 스크립트가 이미지의 해시값을 계산하여, 유효한 이미지인지 확인할 것입니다.
+8. 작업이 완료되면 (A)를 눌려 계속해 주세요
 9. (A) 를 눌러 SysNAND (lvl2) 쓰기 잠금을 풀고 화면에 표시된 키 조합을 입력해 주세요
 10. 작업이 완료되면 (A)를 눌려 계속해 주세요
-11. 메세지가 표시되면, (A)를 눌러서 쓰기잠금을 확인해 주세요
+11. 메세지가 표시되면, (A)를 눌러서 쓰기 권한을 다시 잠궈주세요
 12. (Start)를 눌러 콘솔을 다시 시작해 주세요
 13. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 콘솔을 업데이트해 주세요
     - boot9strap과 Luma을 이용한 (지금 가지고 계신 버전) 업데이트는 안전합니다
