@@ -10,9 +10,9 @@
 
 각 섹션은 기본으로 축소되어 있습니다. 섹션 이름을 탭하거나 클릭해서 여십시오.
 
-## Compatibility
+## 호환성
 
-:::: details What consoles is this guide compatible with?
+:::: details 이 가이드를 어느 콘솔에 사용할 수 있나요?
 
 ::: info
 
@@ -20,11 +20,11 @@
 
 :::
 
-This guide works with every retail console in the Nintendo 3DS family of consoles (including the 3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, and New 2DS XL/LL), regardless of region or firmware. It is NOT compatible with the DSi family of consoles (DSi, DSi XL/LL). For DSi-family consoles, consult [this guide](https://dsi.cfw.guide) instead.
+이 가이드는 국가나 펌웨어 상관없이, 모든 닌텐도 3DS 시리즈의 콘솔(3DS, 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL, New 2DS XL/LL 모두 해당)과 호환됩니다. DSi 시리즈 콘솔과는 호환되지 않습니다(DSi, DSi XL/LL).  DSi 콘솔 시리즈에 대해서는, [이 가이드](https://dsi.cfw.guide)를 따르세요.
 
 ::::
 
-:::: details What kind of computer / hardware do I need to follow this guide?
+:::: details 이 가이드를 따르기 위해서 어떤 종류의 컴퓨터/하드웨어가 필요한가요?
 
 ::: info
 
@@ -32,11 +32,11 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 :::
 
-대부분의 경우, 인터넷에서 파일을 다운로드 하고 SD 카드에 옮길 수 있어야만 이용 가능합니다. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as Android phones. Depending on your electronic device, you may need to purchase a USB to SD card adapter to allow it to read your SD card.
+대부분의 경우, 인터넷에서 파일을 다운로드 하고 SD 카드에 옮길 수 있어야만 이용 가능합니다. 여기에는 Windows, macOS, 그리고 chromeOS (Chromebook)을 실행하는 컴퓨터와 안드로이드 폰 등의 대부분의 소비자용 전자 기기가 포함됩니다. 본인의 전자기기가 무엇인지에 따라서 SD 카드를 읽기 위해 USB->SD 카드 어댑터를 구매해야 할 수도 있습니다.
 
 ::::
 
-:::: details What kind of SD card does my console use/need?
+:::: details 콘솔을 사용하기 위해 어떤 종류의 SD 카드를 사용해야 되나요?
 
 ::: info
 
@@ -50,7 +50,7 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 ::: info
 
-It is highly recommended to **only use one SD card** with a console at any given time, as you cannot merge the contents of two SD cards later on. So, if your console already has an SD card, you should use that SD card to mod your console, or copy everything to a larger SD card before or after you mod it.
+두 개의 SD 카드에 있는 내용물을 나중에 하나로 합칠 수 없기 때문에, 콘솔에는 언제나 **오직 SD 카드 하나만 사용**하는 것을 강력히 권장합니다. 그래서, 만약 여러분의 콘솔에 이미 SD 카드가 있을 경우, 커펌을 하기 위해 해당 SD 카드를 사용하거나 커펌 전 또는 후에 더 큰 SD 카드에 모든 것을 복사하여야 합니다.
 
 :::
 
@@ -62,7 +62,7 @@ It is highly recommended to **only use one SD card** with a console at any given
 
 ::: info
 
-If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\)).
+원한다면, 이 가이드를 따르기 전에 [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), 또는 [F3XSwift (Mac)](f3xswift-\(mac\))을 사용해 SD 카드의 오류 여부를 확인할 수 있습니다.
 
 :::
 
@@ -70,7 +70,7 @@ If you want, you can check your SD card for errors before following this guide u
 
 :::: warning
 
-:::details Potential risks (Disclaimer)
+:::details 잠재적 위험성 (고지)
 
 콘솔을 수정함으로서, 여러분은 콘솔이 벽돌이 되는 것(콘솔이 작동하지 않는 현상)에 대한 희박한, 하지만 0은 아닌 가능성을 염두에 두어야 합니다. **파일을 잘못 넣는다고 콘솔이 벽돌이 되지는 않지만**, 의도적으로 순서를 건너뛴다면 벽돌이 될 수도 있습니다.
 
@@ -80,7 +80,7 @@ If you want, you can check your SD card for errors before following this guide u
 
 ::::
 
-## Important terminology
+## 중요 용어
 
 ::: warning
 
@@ -88,7 +88,7 @@ If you want, you can check your SD card for errors before following this guide u
 
 :::
 
-:::: details What does "root of SD" or "/luma/" mean?
+:::: details "SD 카드의 루트" 나 "/luma/" 가 무슨 뜻인가요?
 
 ::: info
 
@@ -116,7 +116,7 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 ::::
 
-:::: details How do I download files from GitHub?
+:::: details GitHub에서 파일을 어떻게 다운로드 받나요?
 
 ::: info
 
@@ -128,7 +128,7 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 ::::
 
-:::: details How do I extract/open a ZIP file?
+:::: details ZIP 파일을 어떻게 압축 해제하거나 여나요?
 
 ::: info
 
@@ -144,13 +144,13 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 ::: warning
 
-The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+Windows 애플리케이션 "WinRAR"는 특히 3DS 커스텀 펌웨어 설치 취약점에 호환성 문제가 있는 것으로 알려졌습니다. Windows 컴퓨터를 사용한다면, 기본 파일 탐색기나 7-zip를 사용해 파일을 압축 해제하세요.
 
 :::
 
 ::::
 
-:::: details What are file extensions?
+:::: details 파일 확장자가 뭔가요?
 
 ::: info
 
