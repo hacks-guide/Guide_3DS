@@ -23,7 +23,7 @@ Soundhax itu (jika dengan universal-otherapp) kompatibel pada _firmware_ 1.0.0 h
 ## Apa yang Perlu
 
 - Versi terkini dari [Soundhax](http://soundhax.com) _(sesuaikan daerah, versi, dan jenis konsol)_
-    - Jika Soundhax muncul sebagai video rusak di peramban web, tekan Ctrl+S atau Cmd+S untuk simpan di komputer
+    - Jika Soundhax muncul sebagai video rusak di perambah web, tekan Ctrl+S atau Cmd+S untuk simpan di komputer
 - Versi terkini dari [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (unduhan langsung)
 - Versi terkini dari [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (unduhan langsung)
 - Versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (yang `.zip` Luma3DS)
