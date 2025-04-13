@@ -114,7 +114,7 @@ Pastikan pengunci kartu SD tidak [dikunci](/images/sdlock.png). Jika kartu SD ti
 
 :::details Information #17: Duplicate NAND backup
 
-Naskahnya mendeteksi folder Nintendo 3DS tidak ada _DAN_ ternyata sudah ada cadangan NAND. Jika berniat memasang aplikasi _homebrew_, lakukan berikut ini:
+Naskahnya mendeteksi tidak ada folder Nintendo 3DS _DAN_ ternyata sudah pernah mencadang NAND. Jika berniat memasang aplikasi _homebrew_, lakukan berikut ini:
 
 1. Tekan (B) untuk batal mencadang NAND baru lagi
 2. Tahan (R) dan tekan (Start) bersamaan untuk matikan daya konsol
