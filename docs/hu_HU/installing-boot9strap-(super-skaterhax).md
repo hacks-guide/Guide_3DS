@@ -92,21 +92,21 @@ Egy videó ami részletesen bemutatja a lépéseket elérhető [itt](https://www
     - **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
     - **KOR**: `https://skater.686178.xyz/go/korea`
 8. Érintsd meg az "Open"-t
-    - You should see the text "GO GO!". Do not click on it yet
+    - Látnod kell a "GO GO!" feliratot. Még ne kattints rá
 9. Érintsd meg a 3-vonal (☰) ikont a jobb alsó sarkában a képernyőnek
 10. Érintsd meg az "Add to Bookmarks" opciót
 11. Érintsd meg a 3-vonal (☰) ikont a jobb alsó sarkában a képernyőnek
 12. Érintsd meg a `Settings` -> `Delete Cookies` -> `Yes` opciókat
 13. Nyomj (Home) gombot a HOME Menübe visszatéréshez, majd azonnal nyisd meg újra az Internet Browser-t
-14. Wait for the page to fully load, then tap the "GO GO!" button on the top of the bottom screen
-15. Wait for the page to fully load, then press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
-16. If your console displays:
-    - **"The Homebrew Launcher" screen**: Continue to the next step
-    - **A white "Error has occurred" message box**: The exploit failed due to random chance. Open System Settings, change the language to a different one (if possible), then retry this section. Be persistent; you may have to repeat this sequence up to ten times
-        - On JPN/KOR region consoles, there is only one language setting. On those consoles, you should open System Settings, close it, then retry this section
-        - If the exploit is still unsuccessful after more than ten attempts, there may be a problem with your files or SD card. Ensure that you are **not** using WinRAR to extract files, as it is known to cause issues
-    - **A black screen that says "An error has occurred"**: Your file placement is incorrect. Ensure that the super-skaterhax files are on the root of the SD card
-    - **A yellow screen**: Homebrew Launcher failed to open due to random chance. Hold the POWER button until the console turns off, then retry this section
+14. Várj, amíg az oldal teljesen betöltődik, majd érintsd meg a "GO GO!" gombot az alsó képernyő tetején
+15. Várj, amíg az oldal teljesen betöltődik, majd nyomj (A) gombot a felugró [popup](/images/screenshots/skaterhax/skater-popup.png) figyelmen kívül hagyásához
+16. Ha a konzolod megjeleníti a következők valamelyikét:
+    - **A "Homebrew Launcher" képernyő**: Folytatsd a következő lépéssel
+    - **Egy fehér "Error has occurred" üzenetdoboz**: Az exploit sikertelen volt egy véletlen esély miatt. Nyisd meg a System Settings-t és módosítsd a nyelvet egy másikra (ha lehetséges) majd próbáld újra ezt a részt. Legyél kitartó, elképzelhető, hogy tízszer is meg kell ismételned ezt a részt
+        - A JPN/KOR régiós konzolokon csak egy nyelv van a beállításokban. Ezeken a konzolokon meg kell nyitnod a System Settings-t, majd bezárnod és újra próbálnod ezt a részt
+        - Ha az exploit sikertelen volt több mint tíz alkalommal, lehet, hogy problémák vannak a fájljaiddal vagy az SD kártyával. Legyél biztos abban, hogy **nem** WinRAR-t használsz a fájlok kitömörítéséhez, mert ismert, hogy problémákat okoz
+    - **Egy fekete képernyő mondja "An error has occurred"**: A fájlok nem jó helyre lettek rakva. Biztosítsd, hogy a super-skaterhax fájlok az SD kártya gyökerébe kerüljenek
+    - **Egy sárga képernyő**: Homebrew Launcher véletlen esély miatt nem tudott megnyílni. Tartsd nyomva a POWER gombot, amíg ki nem kapcsol a konzol, és próbáld újra ezt a részt
     - **[A "Text"szöveg](/images/screenshots/skaterhax/skater-old3ds.png)**: Old 3DS-ed van és ez az exploit **nem fog működni**. Ha ez az eset, használd az [MSET9](installing-boot9strap-\(mset9\))-et helyette
 17. Indítsd el a nimdsphax-et a homebrew listájáról
 18. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
@@ -128,7 +128,7 @@ ___
 
 ::: info
 
-You may now restore your region settings back to normal.
+Most már visszaállíthatod a régiós beállításaidat a normálisra.
 
 :::
 
