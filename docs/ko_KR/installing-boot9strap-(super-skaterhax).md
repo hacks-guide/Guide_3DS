@@ -20,9 +20,9 @@ head:
 
 (Homebrew Launcher를 실행하기 위해 활용되는) super-skaterhax는 모든 지역의 11.15.0 이상 버전 뉴 3DS 시리즈에 호환됩니다.
 
-::: warning
+::: info
 
-여기에서 제공하는 방법은 New 3DS, New 3DS XL, New 2DS XL에만 적용됩니다. 해킹되는 콘솔이 New 3DS, New 3DS XL, 또는 New 2DS XL이 맞는지 확인 하고 진행하시길 바랍니다.
+This exploit is known to be inconsistent: it works for some people, but not others. If you prefer to use a more consistent exploit (which may take longer, but will have the same end result), follow [MSET9](installing-boot9strap-\(mset9\)) instead.
 
 :::
 
@@ -102,9 +102,10 @@ head:
 15. 페이지가 완전히 로딩될때까지 기다린 후, (A)를 눌러 [팝업](/images/screenshots/skaterhax/skater-popup.png)을 끄세요
 16. 만약 콘솔이 아래처럼 표시한다면:
     - **"Homebrew Launcher" 화면**: 다음 단계로 계속
-    - **하얀색 "오류가 발생했습니다" 메시지 상자**: 랜덤 확률로 인해 취약점이 실패했습니다. 본체 설정을 열고, (가능하다면) 언어를 다른 것으로 바꾼 후, 이 단계를 다시 시도해보세요. 끈기 있게 노력해보세요. 이 순서를 10번 이상 반복해야 할 수도 있습니다
+    - **하얀색 "오류가 발생했습니다" 메시지 상자**: 랜덤 확률로 인해 취약점이 실패했습니다. 본체 설정을 열고, (가능하다면) 언어를 다른 것으로 바꾼 후, 이 단계를 다시 시도해보세요. You may have to repeat this sequence up to ten times
         - JPN/KOR 지역 콘솔의 경우, 언어 설정이 1가지 뿐입니다. 이런 콘솔에서는, 본체 설정을 연 후, 닫고, 다시 단계를 진행해보세요
-        - 10번 이상 시도해도 취약점이 실패하면 파일이나 SD 카드에 문제가 있을 수 있습니다. 파일 압축해제를 할 때 WinRAR를 사용하지 **마세요**. 이는 문제를 일으키는 것으로 알려져 있습니다
+        - If the exploit is still unsuccessful after five attempts, there may be a problem with your files or prep work. Ensure that region and date/time are correct, and that you have been following this section **exactly**. If you used WinRAR to extract files to the SD card, re-extract the files using File Explorer or 7-zip instead
+        - If the exploit is still unsuccessful after ten attempts, follow [MSET9](installing-boot9strap-\(mset9\)) instead
     - **"오류가 발생했습니다"라고 나오는 검정색 화면**: 파일 배치가 올바르지 않습니다. Ensure that the super-skaterhax files are on the root of the SD card
     - **A yellow screen**: Homebrew Launcher failed to open due to random chance. Hold the POWER button until the console turns off, then retry this section
     - **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. 이 경우, [MSET9](installing-boot9strap-\(mset9\)) 취약점을 진행해야 합니다
