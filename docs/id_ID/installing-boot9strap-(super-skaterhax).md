@@ -20,9 +20,9 @@ Untuk perincian teknis perihal eksploit pada laman ini, lihat di [sini](https://
 
 Super-skaterhax itu (jika untuk Homebrew Launcher) kompatibel pada 3DS "New" _firmware_ 11.15.0 ke atas di semua daerah kecuali CHN/TWN.
 
-::: warning
+::: info
 
-Instruksi di sini hanya berlaku untuk New 3DS, New 3DS XL, dan New 2DS XL. Mohon pastikan konsol yang akan dimodif itu New 3DS, New 3DS XL, atau New 2DS XL sebelum lanjut.
+This exploit is known to be inconsistent: it works for some people, but not others. If you prefer to use a more consistent exploit (which may take longer, but will have the same end result), follow [MSET9](installing-boot9strap-\(mset9\)) instead.
 
 :::
 
@@ -102,9 +102,10 @@ Video yang menjelaskan langkah ini ada di [sini](https://www.youtube.com/watch?v
 15. Tunggu sampai laman selesai dimuat, lalu tekan (A) untuk tutup [sembulan](/images/screenshots/skaterhax/skater-popup.png)
 16. Jika konsol muncul:
     - **Layar "Homebrew Launcher"**: Lanjut ke langkah berikutnya
-    - **Kotak pesan putih "Error has occurred"**: Eksploitnya kebetulan gagal. Buka System Settings, ubah bahasa sistem ke yang lain (jika bisa), lalu coba lagi bagian ini. Coba terus; bagian ini mungkin harus diulangi hingga sepuluh kali
+    - **Kotak pesan putih "Error has occurred"**: Eksploitnya kebetulan gagal. Buka System Settings, ubah bahasa sistem ke yang lain (jika bisa), lalu coba lagi bagian ini. You may have to repeat this sequence up to ten times
         - Di konsol berdaerah JPN/KOR, pengaturan hanya ada satu bahasa. Untuk konsol tersebut, caranya buka System Settings, ditutup, lalu coba lagi bagian ini
-        - Jika eksploit masih tidak berhasil setelah sepuluh kali lebih mencoba, mungkin masalahnya di berkas atau kartu SD. Pastikan **tidak** menggunakan WinRAR untuk mengekstrak berkas, karena bermasalah
+        - If the exploit is still unsuccessful after five attempts, there may be a problem with your files or prep work. Ensure that region and date/time are correct, and that you have been following this section **exactly**. If you used WinRAR to extract files to the SD card, re-extract the files using File Explorer or 7-zip instead
+        - If the exploit is still unsuccessful after ten attempts, follow [MSET9](installing-boot9strap-\(mset9\)) instead
     - **Layar hitam bertulis "An error has occurred"**: Berkasnya salah taruh. Pastikan berkas super-skaterhax ditaruh di akar kartu SD
     - **Layar kuning**: Homebrew Launcher tidak bisa dibuka karena kebetulan gagal. Tahan tombol POWER konsol sampai daya mati, lalu coba lagi bagian ini
     - **[Tulisan "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: Konsol Anda Old 3DS, eksploit ini **bukan untuk Old 3DS**. Jika begitu, maka ikuti saja [MSET9](installing-boot9strap-\(mset9\))
