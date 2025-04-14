@@ -65,9 +65,9 @@ Ebben a fejezetben fel fogod másolni a fájlokat, amik a super-skaterhax és a 
     - JPN: 日本, 設定しない
     - KOR: 대한민국, 설정하지 않음
 
-10. Navigate to "Date & Time"
+10. Navigálj a "Date & Time"-hoz
 
-11. Set "Today's Date" and "Current Time" to the current date and time in your timezone
+11. Állítsd be a "Today's Date"-t és a "Current Time"-ot az időzónád aktuális dátumára és idejére
 
 12. Lépj ki a System Settings-ből
 
@@ -77,27 +77,27 @@ Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami elindí
 
 ::: info
 
-A video detailing these steps is available [here](https://www.youtube.com/watch?v=DEcZB72vJts).
+Egy videó ami részletesen bemutatja a lépéseket elérhető [itt](https://www.youtube.com/watch?v=DEcZB72vJts).
 
 :::
 
-1. Open the Internet Browser
-2. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-3. Tap `Settings` -> scroll down -> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK`
-    - The browser will close
-4. Reopen the Internet Browser
-5. Tap `Next` -> `Google` -> `OK` -> `OK`
-6. Tap on the address bar at the top of the bottom screen
-7. Enter the URL corresponding to your console's region:
+1. Nyisd meg az Internet Browser-t
+2. Érintsd meg a 3-vonal (☰) ikont a jobb alsó sarkában a képernyőnek
+3. Érintsd meg a `Settings` -> lefelé görget-> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK` opciókat
+    - A böngésző be fog zárulni
+4. Nyisd meg újra az Internet Browser-t
+5. Érintsd meg a `Next` -> `Google` -> `OK` -> `OK` opciókat
+6. Érintsd meg a címsort az alsó képernyő tetején
+7. Írd be a konzolod régiójának megfelelő címet:
     - **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
     - **KOR**: `https://skater.686178.xyz/go/korea`
-8. Tap "Open"
+8. Érintsd meg az "Open"-t
     - You should see the text "GO GO!". Do not click on it yet
-9. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-10. Tap on "Add to Bookmarks"
-11. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-12. Tap on `Settings` -> `Delete Cookies` -> `Yes`
-13. Press (Home) to return to the HOME Menu, then immediately reopen the Internet Browser
+9. Érintsd meg a 3-vonal (☰) ikont a jobb alsó sarkában a képernyőnek
+10. Érintsd meg az "Add to Bookmarks" opciót
+11. Érintsd meg a 3-vonal (☰) ikont a jobb alsó sarkában a képernyőnek
+12. Érintsd meg a `Settings` -> `Delete Cookies` -> `Yes` opciókat
+13. Nyomj (Home) gombot a HOME Menübe visszatéréshez, majd azonnal nyisd meg újra az Internet Browser-t
 14. Wait for the page to fully load, then tap the "GO GO!" button on the top of the bottom screen
 15. Wait for the page to fully load, then press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
 16. If your console displays:
@@ -107,7 +107,7 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
         - If the exploit is still unsuccessful after more than ten attempts, there may be a problem with your files or SD card. Ensure that you are **not** using WinRAR to extract files, as it is known to cause issues
     - **A black screen that says "An error has occurred"**: Your file placement is incorrect. Ensure that the super-skaterhax files are on the root of the SD card
     - **A yellow screen**: Homebrew Launcher failed to open due to random chance. Hold the POWER button until the console turns off, then retry this section
-    - **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. Ha ez az eset, használd az [MSET9](installing-boot9strap-\(mset9\))-et helyette
+    - **[A "Text"szöveg](/images/screenshots/skaterhax/skater-old3ds.png)**: Old 3DS-ed van és ez az exploit **nem fog működni**. Ha ez az eset, használd az [MSET9](installing-boot9strap-\(mset9\))-et helyette
 17. Indítsd el a nimdsphax-et a homebrew listájáról
 18. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
     - Ha a konzolod lefagy egy vörös vagy zöld képernyőn, tartsd nyomva a POWER gombot, amíg ki nem kapcsol, és próbáld újra ezt a részt
@@ -117,7 +117,7 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
 Ebben a fejezetben egyedi firmware-t fogsz telepíteni a konzolodra.
 
 1. Ha kéri, akkor nyomd meg a gombokat egyszerre, amiket kijelez a felső képernyőn, hogy telepíthesd a boot9strap-et
-    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+    - Ha egy lépés az alsó képernyőn piros színű szöveget eredményez, és nem kér a rendszer tőled egy gomb-kombinációt, akkor [kövesd ezt a hibaelhárítási útmutatót](troubleshooting-super-skaterhax)
 2. Ha ez elkészült, nyomd meg az (A) gombot a konzolod újraindításához
 
 <!--@include: ./_include/configure-luma3ds.md -->
