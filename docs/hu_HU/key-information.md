@@ -144,7 +144,7 @@ A legtöbb operációs rendszeren dupla kattintással ki tudod csomagolni a fáj
 
 ::: warning
 
-The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+A Windows-os "WinRAR" applikáció kifejezetten ismert, hogy kompatibilitási problémákat okoz a 3DS-el különösen az egyéni firmware telepítő exploitok esetében. Ha Windows számítógépen vagy, inkább használd az alapértelmezett Fájlkezelő-t vagy a 7-zip-et fájlok kicsomagolására.
 
 :::
 
