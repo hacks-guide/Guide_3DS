@@ -20,9 +20,9 @@ head:
 
 Το super-skaterhax (όταν χρησιμοποιείται για την εκκίνηση του Homebrew Launcher) είναι συμβατό με τα μοντέλα New στην έκδοση 11.15.0 και νεότερες, σε όλες τις περιοχές.
 
-::: warning
+::: info
 
-Οι παρεχόμενες οδηγίες αφορούν μόνο τα New 3DS, New 3DS XL και New 2DS XL. Βεβαιωθείτε ότι η κονσόλα που τροποποιείτε είναι ένα New 3DS, New 3DS XL ή New 2DS XL πριν συνεχίσετε.
+This exploit is known to be inconsistent: it works for some people, but not others. If you prefer to use a more consistent exploit (which may take longer, but will have the same end result), follow [MSET9](installing-boot9strap-\(mset9\)) instead.
 
 :::
 
@@ -102,9 +102,10 @@ head:
 15. Περιμένετε μέχρι να φορτωθεί πλήρως η σελίδα και πατήστε το (A) για να απορρίψετε το [αναδυόμενο παράθυρο](/images/screenshots/skaterhax/skater-popup.png)
 16. Εάν η κονσόλα σας εμφανίσει:
     - **Την οθόνη «The Homebrew Launcher»**: Συνεχίστε στο επόμενο βήμα
-    - **Ένα λευκό πλαίσιο μηνύματος «Error has occurred»**: Το exploit απέτυχε λόγω τυχαιότητας. Ανοίξτε την εφαρμογή «System Settings», αλλάξετε τη γλώσσα σε κάποια άλλη (αν είναι δυνατόν) και επαναλάβετε τα βήματα αυτής της ενότητας. Να είστε επίμονοι· ίσως χρειαστεί να επαναλάβετε αυτήν τη διαδικασία έως και δέκα φορές
+    - **Ένα λευκό πλαίσιο μηνύματος «Error has occurred»**: Το exploit απέτυχε λόγω τυχαιότητας. Ανοίξτε την εφαρμογή «System Settings», αλλάξετε τη γλώσσα σε κάποια άλλη (αν είναι δυνατόν) και επαναλάβετε τα βήματα αυτής της ενότητας. You may have to repeat this sequence up to ten times
         - Στις κονσόλες της περιοχής JPN/KOR, υπάρχει μόνο μία ρύθμιση γλώσσας. Σε αυτές τις κονσόλες, θα πρέπει να ανοίξετε την εφαρμογή «System Settings», να την κλείσετε και στη συνέχεια, να επαναλάβετε τα βήματα αυτής της ενότητας
-        - Εάν το exploit εξακολουθεί να αποτυγχάνει μετά από περισσότερες από δέκα απόπειρες, ενδέχεται να υπάρχει κάποιο πρόβλημα με τα αρχεία ή την κάρτα SD σας. Βεβαιωθείτε ότι **δεν** χρησιμοποιείτε το WinRAR για την εξαγωγή των αρχείων, καθώς είναι γνωστό ότι προκαλεί ζητήματα
+        - If the exploit is still unsuccessful after five attempts, there may be a problem with your files or prep work. Ensure that region and date/time are correct, and that you have been following this section **exactly**. If you used WinRAR to extract files to the SD card, re-extract the files using File Explorer or 7-zip instead
+        - If the exploit is still unsuccessful after ten attempts, follow [MSET9](installing-boot9strap-\(mset9\)) instead
     - **Μια μαύρη οθόνη με το μήνυμα «An error has occurred»**: Η τοποθέτηση των αρχείων είναι λανθασμένη. Βεβαιωθείτε ότι τα αρχεία του super-skaterhax βρίσκονται στη ρίζα της κάρτας SD
     - **Μια κίτρινη οθόνη**: Το άνοιγμα του Homebrew Launcher απέτυχε λόγω τυχαιότητας. Κρατήστε πατημένο το κουμπί POWER μέχρι να απενεργοποιηθεί η κονσόλα και επαναλάβετε τα βήματα αυτής της ενότητας
     - **[Τη λέξη «Text»](/images/screenshots/skaterhax/skater-old3ds.png)**: Έχετε ένα Old 3DS, στα οποία **δεν λειτουργεί** αυτό το exploit. Σε αυτήν την περίπτωση, θα πρέπει να ακολουθήσετε τις οδηγίες στο [MSET9](installing-boot9strap-\(mset9\))
