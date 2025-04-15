@@ -15,3 +15,9 @@
 13. Actualiza tu consola dirigiéndote a la configuración de la consola, después a "Otras opciones", luego ve al último menú de la derecha y toca "Actualización"
     - Actualizar la consola teniendo B9S y Luma (lo que acabas de instalar) es seguro
     - Si esto te da un error, ajusta tu configuración de DNS a "Obtención automática"
+
+::: info
+
+At this point, you may remove the CTRTransfer image from `/gm9/in/` to reclaim space on your SD card.
+
+:::
