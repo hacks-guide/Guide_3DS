@@ -8,19 +8,18 @@ This process will reset your Mii data. If you wish to save any Miis that you hav
 
 1. Power off your console
 2. Press and hold (Start), and while holding (Start), power on your console. Dies wird GodMode9 starten
-3. Drücke ein paar Mal (B), um zum Hauptmenü zurückzukehren
-4. Navigiere zu `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
+3. Navigiere zu `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
     - The `<ID0>` will be a folder with a 32-character long name
-5. Nutze das Steuerkreuz, um `00010017` auszuwählen
-6. Drücke (R) und (A), um die Optionen für den Ordner anzuzeigen
-7. Wähle "Copy to 0:/gm9/out" aus
-8. Drücke (A), um fortzufahren
-9. Drücke (X), während `00010017` markiert ist, um den Ordner zu löschen
-10. Drücke (A), um zu bestätigen
-11. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
-12. Sobald die Datei gelöscht wurde, drücke (A) um fortzufahren
-13. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
-14. Drücke (Start), um deine Konsole neu zu starten
-15. Deine Konsole wird das Setup-Menü laden
+4. Nutze das Steuerkreuz, um `00010017` auszuwählen
+5. Drücke (R) und (A), um die Optionen für den Ordner anzuzeigen
+6. Wähle "Copy to 0:/gm9/out" aus
+7. Drücke (A), um fortzufahren
+8. Drücke (X), während `00010017` markiert ist, um den Ordner zu löschen
+9. Drücke (A), um zu bestätigen
+10. Drücke (A), um die SysNAND (Stufe 1) Bearbeitung zu aktivieren. Dann gebe die angegebene Tastenkombination ein
+11. Sobald die Datei gelöscht wurde, drücke (A) um fortzufahren
+12. Drücke (A), um die Schreibrechte zu deaktivieren, wenn du dazu aufgefordert wirst
+13. Drücke (Start), um deine Konsole neu zu starten
+14. Deine Konsole wird das Setup-Menü laden
     - This is expected behaviour. Du hast keine Spieldaten verloren
-16. Schließe das Setup-Menü ab, indem du den Anweisungen auf dem Bildschirm deiner Konsole folgst
+15. Schließe das Setup-Menü ab, indem du den Anweisungen auf dem Bildschirm deiner Konsole folgst
