@@ -15,3 +15,9 @@
 13. Führe ein System Update durch, indem du zu den Systemeinstellungen gehst, danach "Allgemeine Einstellungen", ganz nach rechts navigierst, und dann "System-Update" auswählst
     - Updates while using B9S + Luma (what you have) are safe
     - If this gives you an error, set your DNS settings to "auto"
+
+::: info
+
+At this point, you may remove the CTRTransfer image from `/gm9/in/` to reclaim space on your SD card.
+
+:::
