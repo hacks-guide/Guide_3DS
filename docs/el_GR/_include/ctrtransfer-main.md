@@ -15,3 +15,9 @@
 13. Ενημερώστε την κονσόλα σας ανοίγοντας την εφαρμογή «System Settings», επιλέγοντας «Other Settings» και τέλος, «System Update» στην τελευταία σελίδα προς τα δεξιά
     - Οι ενημερώσεις είναι ασφαλείς όταν χρησιμοποιείτε B9S + Luma (αυτό που έχετε)
     - Εάν αντιμετωπίσετε κάποιο σφάλμα, ορίστε τις ρυθμίσεις DNS σε «auto»
+
+::: info
+
+At this point, you may remove the CTRTransfer image from `/gm9/in/` to reclaim space on your SD card.
+
+:::
