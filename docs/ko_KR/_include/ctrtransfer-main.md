@@ -15,3 +15,9 @@
 13. 본체 설정의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택해 콘솔을 업데이트해 주세요
     - boot9strap과 Luma을 이용한 (지금 가지고 계신 버전) 업데이트는 안전합니다
     - 오류가 발생하면 DNS 설정을 "자동"으로 설정해 주세요
+
+::: info
+
+At this point, you may remove the CTRTransfer image from `/gm9/in/` to reclaim space on your SD card.
+
+:::
