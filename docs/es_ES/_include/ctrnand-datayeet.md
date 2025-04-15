@@ -8,19 +8,18 @@ Este proceso borrará los personajes Mii guardados. Si deseas salvarlos, entonce
 
 1. Apaga tu consola
 2. Presiona y mánten (Start), y mientras mantienes (Start), enciende la consola. Esto abrirá GodMode9
-3. Presiona (B) varias veces para volver al menú principal
-4. Ve a `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
+3. Ve a `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
     - `<ID0>` será una carpeta con un nombre compuesto por 32 caracteres aleatorios
-5. Utiliza la cruz de control para seleccionar `00010017`
-6. Presiona (R) y (A) juntos para mostrar las opciones de carpeta
-7. Seleciona "Copy to 0:/gm9/out"
-8. Presiona (A) para continuar
-9. Mientras seleccionas `00010017`, pulsa (X) para eliminar
-10. Presiona (A) para confirmar
-11. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después introduce la combinación de botones mostrada
-12. Una vez eliminado el archivo, pulsa (A) para continuar
-13. Presiona (A) para volver a bloquear los permisos de escritura si se solicita
-14. Presiona (Start) para reiniciar la consola
-15. Tu consola iniciará en el menú de configuración inicial
+4. Utiliza la cruz de control para seleccionar `00010017`
+5. Presiona (R) y (A) juntos para mostrar las opciones de carpeta
+6. Seleciona "Copy to 0:/gm9/out"
+7. Presiona (A) para continuar
+8. Mientras seleccionas `00010017`, pulsa (X) para eliminar
+9. Presiona (A) para confirmar
+10. Presiona (A) para desbloquear la escritura de SysNAND (lvl1) y después introduce la combinación de botones mostrada
+11. Una vez eliminado el archivo, pulsa (A) para continuar
+12. Presiona (A) para volver a bloquear los permisos de escritura si se solicita
+13. Presiona (Start) para reiniciar la consola
+14. Tu consola iniciará en el menú de configuración inicial
     - Esto es normal y esperado. No has perdido ningún dato de tus juegos
-16. Completa la configuración inicial siguiendo los pasos mostrados en la pantalla de tu consola
+15. Completa la configuración inicial siguiendo los pasos mostrados en la pantalla de tu consola
