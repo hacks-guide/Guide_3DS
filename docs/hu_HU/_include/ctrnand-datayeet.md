@@ -8,19 +8,18 @@ Ez a folyamat alaphelyzetbe állítja a Mii adatot. Ha szeretnéd menteni Mii-ke
 
 1. Kapcsold ki a konzolod
 2. Nyomd le és tartsd nyomva a (Start) gombot, és a (Start) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a GodMode9-et
-3. Nyomd meg a (B) gombot néhányszor, hogy visszamenj a főmenübe
-4. Navigálj ide: `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
+3. Navigálj ide: `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
     - Az `<ID0>` egy 32 karakter hosszú nevű mappa
-5. Használd a D-Pad-et a `00010017` kijelöléséhez
-6. Nyomd meg a (jobb váll) + (A) gombokat a mappa opciók előhozásához
-7. Válaszd ki ezt: "Copy to 0:/gm9/out"
-8. Nyomd meg az (A) gombot a folytatáshoz
-9. A `00010017`-et mg mindig kijelölve, nyomj (X)-et a törléséhez
-10. Nyomd meg az (A) gombot a megerősítéshez
-11. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
-12. Miután a fájl törlődött, nyomd meg az (A) gombot a folytatáshoz
-13. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
-14. Nyomd meg a (Start) gombot a konzolod újraindításához
-15. A konzolod be fog tölteni a kezdeti telepítési menübe
+4. Használd a D-Pad-et a `00010017` kijelöléséhez
+5. Nyomd meg a (jobb váll) + (A) gombokat a mappa opciók előhozásához
+6. Válaszd ki ezt: "Copy to 0:/gm9/out"
+7. Nyomd meg az (A) gombot a folytatáshoz
+8. A `00010017`-et mg mindig kijelölve, nyomj (X)-et a törléséhez
+9. Nyomd meg az (A) gombot a megerősítéshez
+10. Nyomd meg az (A) gombot, hogy feloldd a SysNAND (lvl1) írást, majd sorban nyomd meg a kijelzett gombokat
+11. Miután a fájl törlődött, nyomd meg az (A) gombot a folytatáshoz
+12. Nyomd meg az (A) gombot az írási engedélyek visszavonásához
+13. Nyomd meg a (Start) gombot a konzolod újraindításához
+14. A konzolod be fog tölteni a kezdeti telepítési menübe
     - Ez az elvárt viselkedés. Valószínüleg nem vesztettél el játék adatot
-16. Fejezd be a kezdeti telepítési menüt, követve az utasításokat a konzolod képernyőjén
+15. Fejezd be a kezdeti telepítési menüt, követve az utasításokat a konzolod képernyőjén
