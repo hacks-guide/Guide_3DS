@@ -15,3 +15,9 @@
 13. Frissítsd a konzolod következőképp: Lépj be a System Settings-be, majd az "Other settings"-be, ahol addig lépkedj jobbra, amíg a végére nem érsz. Itt válaszd a "System Update" opciót
     - B9S és Luma használatakor (mint esetedben) biztonságosak a rendszerfrissítések
     - Ha ez hibát ad, akkor állítsd a DNS beállításodat "auto"-ra
+
+::: info
+
+At this point, you may remove the CTRTransfer image from `/gm9/in/` to reclaim space on your SD card.
+
+:::
