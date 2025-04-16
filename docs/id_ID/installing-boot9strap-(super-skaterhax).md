@@ -104,7 +104,7 @@ Video yang menjelaskan langkah ini ada di [sini](https://www.youtube.com/watch?v
     - **Layar "Homebrew Launcher"**: Lanjut ke langkah berikutnya
     - **Kotak pesan putih "Error has occurred"**: Eksploitnya kebetulan gagal. Buka System Settings, ubah bahasa sistem ke yang lain (jika bisa), lalu coba lagi bagian ini. Bagian ini mungkin harus diulangi hingga sepuluh kali
         - Di konsol berdaerah JPN/KOR, pengaturan hanya ada satu bahasa. Untuk konsol tersebut, caranya buka System Settings, ditutup, lalu coba lagi bagian ini
-        - Jika eksploit masih gagal setelah mencoba lima kali, mungkin masalahnya di persiapan berkas. Pastikan mengikuti bagian ini dengan **persis** dan daerah dan tanggal/waktu konsol sudah benar. Jika tadi mengekstrak berkas ke kartu SD dengan WinRAR, ekstrak ulang berkasnya dengan File Explorer atau 7-zip
+        - Jika eksploit masih gagal setelah mencoba lima kali, mungkin masalahnya di persiapan berkas. Pastikan daerah dan tanggal/waktu konsol sudah benar dan mengikuti bagian ini dengan **persis**. Jika tadi mengekstrak berkas ke kartu SD dengan WinRAR, ekstrak ulang berkasnya dengan File Explorer atau 7-zip
         - Jika eksploit masih gagal setelah mencoba sepuluh kali, ikuti saja [MSET9](installing-boot9strap-\(mset9\))
     - **Layar hitam bertulis "An error has occurred"**: Berkasnya salah taruh. Pastikan berkas super-skaterhax ditaruh di akar kartu SD
     - **Layar kuning**: Homebrew Launcher tidak bisa dibuka karena kebetulan gagal. Tahan tombol POWER konsol sampai daya mati, lalu coba lagi bagian ini
@@ -129,7 +129,7 @@ ___
 
 ::: info
 
-Sekarang pengaturan daerah bisa dikembalikan ke biasa lagi.
+Sekarang pengaturan daerah boleh diatur ke biasa lagi.
 
 :::
 
