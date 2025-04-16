@@ -144,7 +144,7 @@ Di hampir semua sistem operasi, berkas bisa diekstrak dengan pencet dua kali. Ji
 
 ::: warning
 
-Aplikasi "WinRAR" Windows untuk tujuan ini diketahui bermasalah dengan berkas ekspoit 3DS, khususnya yang pemasangan _custom firmware_. Jika menggunakan komputer Windows, sebaiknya gunakan File Explorer atau 7-zip untuk mengekstrak berkas.
+Aplikasi "WinRAR" Windows diketahui bermasalah, khususnya dengan berkas eksploit pemasang _custom firmware_ 3DS. Jika menggunakan komputer Windows, sebaiknya gunakan File Explorer atau 7-zip untuk mengekstrak berkas.
 
 :::
 
