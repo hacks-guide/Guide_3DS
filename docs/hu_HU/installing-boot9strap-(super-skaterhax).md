@@ -22,7 +22,7 @@ A super-skaterhax (ami a Homebrew Launcher indítására használt) kompatibilis
 
 ::: info
 
-This exploit is known to be inconsistent: it works for some people, but not others. If you prefer to use a more consistent exploit (which may take longer, but will have the same end result), follow [MSET9](installing-boot9strap-\(mset9\)) instead.
+Erről az expliotról ismert, hogy inkonzisztens: működik egyeseknek, de nem másoknak. Ha egy sokkal konzisztensebb megoldás használatát preferálod (ami tovább tart, de ugyanaz lesz a végeredménye), akkor használd az [MSET9](installing-boot9strap-\(mset9\)) metódust helyette.
 
 :::
 
@@ -102,10 +102,10 @@ Egy videó ami részletesen bemutatja a lépéseket elérhető [itt](https://www
 15. Várj, amíg az oldal teljesen betöltődik, majd nyomj (A) gombot a felugró [popup](/images/screenshots/skaterhax/skater-popup.png) figyelmen kívül hagyásához
 16. Ha a konzolod megjeleníti a következők valamelyikét:
     - **A "Homebrew Launcher" képernyő**: Folytatsd a következő lépéssel
-    - **Egy fehér "Error has occurred" üzenetdoboz**: Az exploit sikertelen volt egy véletlen esély miatt. Nyisd meg a System Settings-t és módosítsd a nyelvet egy másikra (ha lehetséges) majd próbáld újra ezt a részt. You may have to repeat this sequence up to ten times
+    - **Egy fehér "Error has occurred" üzenetdoboz**: Az exploit sikertelen volt egy véletlen esély miatt. Nyisd meg a System Settings-t és módosítsd a nyelvet egy másikra (ha lehetséges) majd próbáld újra ezt a részt. Elképzelhető, hogy tízszer is meg kell ismételned ezt a részt
         - A JPN/KOR régiós konzolokon csak egy nyelv van a beállításokban. Ezeken a konzolokon meg kell nyitnod a System Settings-t, majd bezárnod és újra próbálnod ezt a részt
-        - If the exploit is still unsuccessful after five attempts, there may be a problem with your files or prep work. Ensure that region and date/time are correct, and that you have been following this section **exactly**. If you used WinRAR to extract files to the SD card, re-extract the files using File Explorer or 7-zip instead
-        - If the exploit is still unsuccessful after ten attempts, follow [MSET9](installing-boot9strap-\(mset9\)) instead
+        - Ha az exploit sikertelen volt több, mint öt alkalommal, lehet, hogy problémák vannak a fájljaiddal vagy az előkészületekkel. Ügyelj arra, hogy a régió és a dátum/idő helyes legyen, és hogy ezt a részt **pontosan** követed. Ha WinRAR-t használtál a fájlok kicsomagolásához az SD kártyára, akkor csomagold ki újra azokat a Fájlkezelő vagy a 7-zip programmal helyette
+        - Ha az exploit tíz próbálkozást követően még mindig sikertelen, kövesd az [MSET9](installing-boot9strap-\(mset9\))-et helyette
     - **Egy fekete képernyő mondja "An error has occurred"**: A fájlok nem jó helyre lettek rakva. Biztosítsd, hogy a super-skaterhax fájlok az SD kártya gyökerébe kerüljenek
     - **Egy sárga képernyő**: Homebrew Launcher véletlen esély miatt nem tudott megnyílni. Tartsd nyomva a POWER gombot, amíg ki nem kapcsol a konzol, és próbáld újra ezt a részt
     - **[A "Text"szöveg](/images/screenshots/skaterhax/skater-old3ds.png)**: Old 3DS-ed van és ez az exploit **nem fog működni**. Ha ez az eset, használd az [MSET9](installing-boot9strap-\(mset9\))-et helyette
