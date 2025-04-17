@@ -18,6 +18,6 @@
 
 ::: info
 
-At this point, you may remove the CTRTransfer `.bin` and `.bin.sha` files  from the `/gm9/in/` folder to reclaim space on your SD card.
+Ezen a ponton törölheted a CTRTransfer `.bin` és `.bin.sha` fájlokat a `/gm9/in/` mappából, hogy helyt nyerj vissza az SD kártyádon.
 
 :::
