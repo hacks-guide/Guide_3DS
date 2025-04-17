@@ -22,7 +22,7 @@ head:
 
 ::: info
 
-This exploit is known to be inconsistent: it works for some people, but not others. If you prefer to use a more consistent exploit (which may take longer, but will have the same end result), follow [MSET9](installing-boot9strap-\(mset9\)) instead.
+Αυτό το exploit είναι γνωστό για ότι είναι απρόβλεπτο· λειτουργεί για κάποιους χρήστες, ενώ για άλλους όχι. If you prefer to use a more consistent exploit (which may take longer, but will have the same end result), follow [MSET9](installing-boot9strap-\(mset9\)) instead.
 
 :::
 
