@@ -6,11 +6,11 @@
 
 ## Notas de compatibilidad
 
-safecerthax is compatible with all Old 3DS and Old 2DS consoles in all regions on system versions 1.0.0 through 11.14.0.
+safecerthax es compatible con todas las consolas Old 3DS y Old 2DS en todas las regiones en versiones de sistema desde la 1.0.0 hasta la 11.14.0.
 
 ::: info
 
-This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ensure that the console you are modding is an Old 3DS, Old 3DS XL, or Old 2DS before continuing.
+Este exploit NO funcionará en consolas New 3DS, New 3DS XL o New 2DS XL. Por favor, asegúrate de que la consola que estés modificando sea una Old 3DS, Old 3DS XL u Old 2DS antes de continuar.
 
 :::
 
@@ -22,9 +22,9 @@ This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ens
 
 ## Instrucciones
 
-### Section I - Hardware Button Check
+### Sección I - Probar los botones laterales
 
-In this section, you will see whether your shoulder buttons are working on your console. This will determine whether your console is compatible with this method.
+En esta sección, verás si tus botones laterales funcionan en tu consola. This will determine whether your console is compatible with this method.
 
 1. Enciende tu consola
 2. Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
