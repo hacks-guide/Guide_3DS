@@ -40,7 +40,7 @@ Di bagian ini akan menyiapkan data ke kartu SD untuk mengaktifkan eksploit MSET9
 
     - Buka ZArchiver
     - Jika diminta, [izinkan ZArchiver mengakses ke kartu SD](/images/screenshots/mset9/zarchiver-allow.png)
-    - Navigasi ke letak `.zip` MSET9 diunduh ([mungkin di folder Downloads](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Navigate to where the downloaded MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
     - Pencet kanan pada `.zip` MSET9, lalu pilih "Extract..." ([gambar](/images/screenshots/mset9/zarchiver-extract-1.png))
     - Navigasi ke kartu SD, lalu sentuh ikon 'panah bawah' biru untuk mengekstrak berkas ke akar kartu SD ([gambar](/images/screenshots/mset9/zarchiver-extract-2.png))
 
