@@ -2,7 +2,7 @@
 
 :::details Perincian Teknis (opsional)
 
-[MSET9](https://github.com/zoogie/MSET9) adalah eksploit untuk System Settings yang dikembangkan oleh [zoogie](https://github.com/zoogie). Eksploit ini menyasar kelemahan ID1 (32 huruf dari nama folder kedua, di folder Nintendo 3DS setelah ID0) yang bisa nama _apa saja_ asalkan 32 huruf. Gunanya untuk melakukan tindakan tertentu yang membuat konsol menjalankan instruksi sesuai kode dalam nama folder ID1, sehingga mendapat kendali penuh atas konsol 3DS.
+[MSET9](https://github.com/zoogie/MSET9) adalah eksploit untuk System Settings yang dikembangkan oleh [zoogie](https://github.com/zoogie). Eksploit ini menyasar kelemahan ID1 (32 huruf dari nama folder kedua, di folder Nintendo 3DS setelah ID0) yang bisa nama _apa saja_ asalkan 32 huruf. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the console.
 
 :::
 
@@ -16,7 +16,7 @@ Laman ini perlu komputer bersistem Windows, Linux, atau macOS. Atau jika punya p
 
 ## Apa yang Perlu
 
-- Versi terkini dari [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
+- Versi terkini dari [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (yang `.zip` MSET9)
 - Versi 3.x berapa pun dari [Python](https://www.python.org/downloads/) **terpasang di komputer**
     - Jika menggunakan Windows, Python dari Microsoft Store tidak bisa. Sebaiknya pasang versi dari python.org.
     - Jika menggunakan Linux atau macOS, mungkin sudah ada Python 3. Periksa dengan membuka Terminal dan ketik `python3 -V`. Jika muncul nomor versi, berarti bisa untuk panduan ini.
@@ -31,7 +31,7 @@ Di laman ini akan menggunakan naskah MSET9 untuk mengaktifkan MSET9. Saat naskah
 
 ### Bagian I - Persiapan
 
-Di bagian ini akan menyiapkan eksploit MSET9 dengan membuat profil HOME Menu baru **sementara** tanpa data, lalu sedikit mengatur data profil itu untuk mengaktifkan MSET9. Data pengguna yang ada akan hilang, tapi akan kembali setelah menyelesaikan laman ini.
+In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Data pengguna yang ada akan hilang, tapi akan kembali setelah menyelesaikan laman ini.
 
 1. Sisipkan kartu SD ke komputer Anda
 2. Salin semua isi berkas `.zip` MSET9 ke akar kartu SD, timpa berkas yang ada
@@ -67,7 +67,7 @@ Di bagian ini akan menyiapkan eksploit MSET9 dengan membuat profil HOME Menu bar
 3. Setelah membaca sangkalan yang ada, ketik `1` dan tekan Enter untuk iya
     - Jika muncul galat, lihat laman [sidik gangguan](troubleshooting-mset9), lalu coba lagi
 4. Jika muncul pesan "Created hacked ID1.", tekan Enter untuk menutup naskah MSET9
-    - Konsol 3DS akan seperti tidak ada aplikasi terpasang / data di HOME Menu. **Memang seperti ini.** Data akan kembali di langkah berikutnya
+    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **Memang seperti ini.** Data akan kembali di langkah berikutnya
 5. Sisip kembali kartu SD ke konsol
 6. Nyalakan daya konsol
 7. Buka Mii Maker
@@ -114,7 +114,7 @@ Instruksi ini harus diikuti **PERSIS**, periksa lagi SEMUA yang tadi sudah agar 
 3. Navigasi ke `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([gambar](/images/screenshots/mset9/settings-extdata.png))
 4. **Jangan tekan tombol apa pun atau sentuh layar**
 5. **Selagi konsol MASIH NYALA, dan tidak menyentuh layar atau menekan tombol apa pun**, lepas kartu SD dari konsol
-    - Menu akan menyegar dan muncul pesan tidak ada kartu SD
+    - Menu akan menyegar dan muncul pesan tidak ada kartu SD, memang begitu
 6. Sisipkan kartu SD ke komputer Anda
 
 <!--@include: ./_include/mset9-chorus.md -->
