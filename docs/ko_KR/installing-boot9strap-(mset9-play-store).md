@@ -2,7 +2,7 @@
 
 :::details 기술적 상세 정보 (선택 사항)
 
-[MSET9](https://github.com/zoogie/MSET9) 은 [zoogie](https://github.com/zoogie) 에 의해 개발된 본체 설정 앱의 취약점을 공략하는 방법입니다. 이 취약점은 ID1의 이름이 _어떤 이름이든 간에_ 32글자면 된다는 것을 이용합니다. (ID1 폴더는 Nintendo 3DS 폴더 속, 32글자짜리 ID0 폴더 안에 있는 또다른 32글자 폴더입니다.) 특정한 작업들을 수행하면 콘솔에서 ID1 폴더 이름으로 인코딩된 명령어가 실행되며, 이를 통해 3DS에 대한 전체 제어 권한을 획득할 수 있습니다.
+[MSET9](https://github.com/zoogie/MSET9) 은 [zoogie](https://github.com/zoogie) 에 의해 개발된 본체 설정 앱의 취약점을 공략하는 방법입니다. 이 취약점은 ID1의 이름이 _어떤 이름이든 간에_ 32글자면 된다는 것을 이용합니다. (ID1 폴더는 Nintendo 3DS 폴더 속, 32글자짜리 ID0 폴더 안에 있는 또다른 32글자 폴더입니다.) Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the console.
 
 :::
 
@@ -22,17 +22,17 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 ## 준비물
 
+- 최신 버전의 [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (MSET9 `.zip` 파일)
 - Google Play 스토어에서 다음과 같은 애플리케이션을 설치해 주세요:
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     - 필요한 경우 Play 스토어 외의 사이트에서 받아서 설치할 수 있습니다.
-- 최신 버전의 [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (MSET9 `.zip` 파일)
 
 ## 진행 방법
 
 ### 섹션 I - 준비 작업
 
-이 섹션에서, MSET9 취약점 발동을 위해 SD 카드에 필요한 데이터를 작성할 것입니다.
+In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. 현재 존재하는 유저 데이터는 사라지지만, 이 페이지의 작업을 끝낸다면 다시 복구될 것입니다．
 
 1. SD 카드를 휴대폰/태블릿/컴퓨터에 삽입해 주세요
 
@@ -57,7 +57,7 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 5. `Nintendo 3DS` 폴더에 들어간 후, "Use this folder" (이 폴더 사용)을 터치한 다음, "Allow" 를 눌러 접근을 허용해줍니다 ([예시](/images/screenshots/mset9/select-mset9-folder-2.png))
 
 6. If `Setup MSET9` is [highlighted](/images/screenshots/mset9/setup-mset9-highlighted.png), proceed to the next step
-    - If you get an error, you need to resolve before you can use MSET9. Refer to the [troubleshooting](troubleshooting-mset9)
+    - If you get an error, you need to resolve before you can use MSET9. [문제 해결](troubleshooting-mset9)을 참조해 주십시오
 
 7. Tap on `Setup MSET9` to begin the process of setting up MSET9
 
@@ -67,7 +67,7 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 10. If you see the prompt of `Hax ID1 Created`, tap OK to continue
     - 에러 발생시, [문제 해결](troubleshooting-mset9)을 확인 후 다시 시도해 주세요
-    - Your 3DS will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step
+    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **이건 예상된 결과입니다.** 이후 과정을 거치면서 원본 데이터는 복구될 것입니다
 
 11. SD 카드를 콘솔에 다시 삽입해 주세요
 
@@ -75,9 +75,9 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 13. Mii 스튜디오를 열어주세요
 
-14. Wait for your console to reach the "Welcome to Mii Maker" screen, then exit Mii Maker
+14. 콘솔이 [Mii 스튜디오에 오신 것을 환영합니다! (영어 사진)](/images/screenshots/mset9/mii-welcome.png) 화면까지 오면, Mii 스튜디오를 종료하고 HOME 메뉴로 나가주세요
     - [이 화면 (영어)](/images/screenshots/mset9/mii-extdata.png)을 보게 될 것입니다. 필요한 파일을 작성하고 있는 것이니 기다려주세요
-    - If you just reach the normal Mii Maker screen, exit Mii Maker and return to the HOME Menu
+    - [(영어 사진) 일반적인](/images/screenshots/mset9/mii-existing.png) Mii 스튜디오 화면을 보게된다면, 데이터가 이미 존재하는 것입니다. Mii 스튜디오를 종료한 후 HOME 메뉴로 돌아가세요.
 
 15. 본체 설정을 실행한 후 `데이터 관리` -> `Nintendo 3DS 데이터 관리` -> `소프트웨어 관리` -> 초기화 ([영어 사진](/images/screenshots/database-reset.jpg))로 이동해 주세요.
     - 이 과정은 데이터를 삭제하지 않습니다.
@@ -132,7 +132,7 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 ### 섹션 IV - MSET9 제거
 
-이 섹션에서, 이후에 생길 문제를 방지하기 위해 MSET9를 제거할 것입니다. (MSET9이 지워진다고 방금 설치한 커스텀 펌웨어가 지워지진 않습니다.)
+이 섹션에서는, 추가 문제를 방지하고 게임, 테마 등의 유저 데이터를 복구하기 위해 MSET9을 제거할 것입니다. (방금 설치한 커스텀 펌웨어가 지워지진 않습니다.)
 
 ::: danger
 
