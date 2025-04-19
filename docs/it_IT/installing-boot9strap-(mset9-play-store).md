@@ -2,7 +2,7 @@
 
 :::details Dettagli tecnici (opzionale)
 
-[MSET9](https://github.com/zoogie/MSET9) è un exploit per l'applicazione "Impostazioni della console" sviluppata da [zoogie](https://github.com/zoogie). Sfrutta una falla per cui l'ID1 (la seconda cartella a 32 caratteri all'interno di Nintendo 3DS, all'interno di ID0) può essere _qualsiasi_ nome a condizione che sia lungo 32 caratteri. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the console.
+[MSET9](https://github.com/zoogie/MSET9) è un exploit per l'applicazione "Impostazioni della console" sviluppata da [zoogie](https://github.com/zoogie). Sfrutta una falla per cui l'ID1 (la seconda cartella a 32 caratteri all'interno di Nintendo 3DS, all'interno di ID0) può essere _qualsiasi_ nome a condizione che sia lungo 32 caratteri. L'esecuzione di una sequenza specifica di azioni determina nella console l'esecuzione delle istruzioni codificate nel nome della cartella ID1, che può essere utilizzato per garantire pieno controllo della console.
 
 :::
 
@@ -22,7 +22,7 @@ Su telefoni/tablet Android, la versione minima di Android richiesta è 6.0 (Mars
 
 ## Cosa serve
 
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
+- L'ultima versione di [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (il file `.zip` di MSET9)
 - Le seguenti applicazioni installate da Google Play Store:
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
@@ -32,16 +32,16 @@ Su telefoni/tablet Android, la versione minima di Android richiesta è 6.0 (Mars
 
 ### Sezione I - Preparazione
 
-In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. I tuoi dati dati utente attuali scompariranno, ma torneranno al termine di questa pagina.
+In questa sezione preparerai l'exploit MSET9 creando **temporaneamente** un nuovo profilo per il menu HOME quasi senza dati utente, configurandolo con i dati minimi necessari per l'esecuzione di MSET9. I tuoi dati dati utente attuali scompariranno, ma torneranno al termine di questa pagina.
 
 1. Inserisci la tua scheda SD nel tuo telefono/tablet/computer
 
-2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files:
+2. Copia tutto il contenuto dell'archivio `.zip` di MSET9 nella directory principale della tua scheda SD, sovrascrivendo tutti i file esistenti:
 
     - Avvia ZArchiver
     - Se richiesto, [consenti a ZArchiver di accedere ai file sulla tua scheda SD](/images/screenshots/mset9/zarchiver-allow.png)
-    - Navigate to where the downloaded MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
-    - Select the MSET9 `.zip`, then select "Extract..." ([immagine](/images/screenshots/mset9/zarchiver-extract-1.png))
+    - Naviga dove si trova il file `.zip` di MSET9 ([probabilmente nella cartella Download](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Selezionare il file MSET9 `.zip`, quindi seleziona "Extract..." ([immagine](/images/screenshots/mset9/zarchiver-extract-1.png))
     - Vai nella tua scheda SD, quindi tocca l'icona blu della freccia verso il basso per estrarre i file nella directory principale della tua scheda SD ([immagine](/images/screenshots/mset9/zarchiver-extract-2.png))
 
     ::: info
@@ -67,7 +67,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
 10. Se appare la scritta `Hax ID1 Created`, tocca OK per continuare
     - Se ottieni un errore, controlla la pagina [Risoluzione dei problemi](troubleshooting-mset9), quindi riprova
-    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **È normale.** I tuoi dati saranno ripristinati in un secondo momento
+    - La tua console sembrerà aver perso la maggior parte dei dati, e non appariranno le applicazioni installate dall'utente nel menu HOME. **È normale.** I tuoi dati saranno ripristinati in un secondo momento
 
 11. Reinserisci la scheda SD nella tua console
 

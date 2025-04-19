@@ -58,8 +58,8 @@ In questa sezione visiterai la pagina web dell'exploit del browser, che userà u
 
 2. Tocca il pulsante Codice QR e scansiona [questo codice QR](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
 
-    - When you get a prompt with error code `012-1511`, press (A) to allow the connection
-    - If you get a crash or a different error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+    - Quando ottieni un messaggio con codice di errore `012-1511`, premi (A) per consentire la connessione
+    - Se crasha o se ottieni un diverso codice di errore, [segui questa guida per risolvere il problema](troubleshooting-ssloth-browser)
 
     ::: danger
 

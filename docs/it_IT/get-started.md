@@ -1,7 +1,7 @@
 ---
 noneSelected: Il modello della console è richiesto.
 invalidVersion: Questa non sembra essere una versione di sistema valida.
-otherPrefix: (Other)
+otherPrefix: (Altro)
 head:
   - - script
     - src: /assets/js/common.js

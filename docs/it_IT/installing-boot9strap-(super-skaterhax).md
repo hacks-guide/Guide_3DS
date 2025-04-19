@@ -22,7 +22,7 @@ Super-skaterhax (quando utilizzato per avviare l'Homebrew Launcher) è compatibi
 
 ::: info
 
-This exploit is known to be inconsistent: it works for some people, but not others. If you prefer to use a more consistent exploit (which may take longer, but will have the same end result), follow [MSET9](installing-boot9strap-\(mset9\)) instead.
+Questo exploit è noto per essere inconsistente: può funzionare per alcuni ma non per tutti. Se preferisci usare un exploit più consistente (che potrebbe richiedere più tempo, ma otterrà lo stesso risultato finale), segui invece la guida di [MSET9](installing-boot9strap-\(mset9\)).
 
 :::
 
@@ -65,9 +65,9 @@ In questa sezione copierai i file necessari per attivare sia super-skaterhax che
     - JPN: 日本, 設定しない
     - KOR: 대한민국, 설정하지 않음
 
-10. Navigate to "Date & Time"
+10. Vai a "Data e ora"
 
-11. Set "Today's Date" and "Current Time" to the current date and time in your timezone
+11. Imposta "Data" e "Ora" alla data e ora correnti nel tuo fuso orario
 
 12. Esci dalle Impostazioni della console
 
@@ -77,31 +77,31 @@ In questa sezione visiterai la pagina web dell'exploit del browser, che avvierà
 
 ::: info
 
-A video detailing these steps is available [here](https://www.youtube.com/watch?v=DEcZB72vJts).
+[Qui](https://www.youtube.com/watch?v=DEcZB72vJts) puoi trovare un video dettagliato per questi passaggi.
 
 :::
 
-1. Open the Internet Browser
-2. Tap the 3-line (☰) icon on the bottom-right corner of the screen
+1. Apri il Browser Internet
+2. Tocca l'icona a 3 linee (☰) nell'angono in basso a destra dello schermo
 3. Tap `Settings` -> scroll down -> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK`
-    - The browser will close
-4. Reopen the Internet Browser
-5. Tap `Next` -> `Google` -> `OK` -> `OK`
-6. Tap on the address bar at the top of the bottom screen
-7. Enter the URL corresponding to your console's region:
+    - Il browser si chiuderà
+4. Riapri il Browser Internet
+5. Tocca `Avanti` -> `Google` -> `OK` -> `OK`
+6. Tocca la barra degli indirizzi nella parte superiore dello schermo inferiore
+7. Inserisci l'URL corrispondente alla regione della tua console:
     - **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
     - **KOR**: `https://skater.686178.xyz/go/korea`
-8. Tap "Open"
-    - You should see the text "GO GO!". Do not click on it yet
-9. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-10. Tap on "Add to Bookmarks"
-11. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-12. Tap on `Settings` -> `Delete Cookies` -> `Yes`
-13. Press (Home) to return to the HOME Menu, then immediately reopen the Internet Browser
-14. Wait for the page to fully load, then tap the "GO GO!" button on the top of the bottom screen
-15. Wait for the page to fully load, then press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
-16. If your console displays:
-    - **"The Homebrew Launcher" screen**: Continue to the next step
+8. Seleziona "Apri"
+    - Dovresti vedere il testo "GO GO!". Non cliccarci ancora
+9. Tocca l'icona a 3 linee (☰) nell'angono in basso a destra dello schermo
+10. Tocca su "Aggiungi ai segnalibri"
+11. Tocca l'icona a 3 linee (☰) nell'angono in basso a destra dello schermo
+12. Tocca `Impostazioni` -> `Elimina cookies` -> `Sì`
+13. Premi (Home) per tornare al menu HOME, quindi riapri subito il Browser Internet
+14. Attendi che la pagina venga caricata completamente, quindi tocca il pulsante "GO GO!" nella parte superiore dello schermo inferiore
+15. Attendi che la pagina venga caricata completamente, quindi premi (A) per chiudere il [popup](/images/screenshots/skaterhax/skater-popup.png)
+16. Se la console visualizza:
+    - **La schermata "The Homebrew Launcher"**: Continua al passo successivo
     - **A white "Error has occurred" message box**: The exploit failed due to random chance. Open System Settings, change the language to a different one (if possible), then retry this section. You may have to repeat this sequence up to ten times
         - On JPN/KOR region consoles, there is only one language setting. On those consoles, you should open System Settings, close it, then retry this section
         - If the exploit is still unsuccessful after five attempts, there may be a problem with your files or prep work. Ensure that region and date/time are correct, and that you have been following this section **exactly**. If you used WinRAR to extract files to the SD card, re-extract the files using File Explorer or 7-zip instead
