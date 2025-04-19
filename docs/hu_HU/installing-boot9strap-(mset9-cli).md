@@ -2,7 +2,7 @@
 
 :::details Technikai részletek (opcionális)
 
-Az [MSET9](https://github.com/zoogie/MSET9) egy exploit a System Setting alkalmazáshoz, amit [zoogie](https://github.com/zoogie) készített. Kihasznál egy hibát, ahol az ID1 (a második 32 karakteres mappanév a Nintendo 3DS mappán belül, az ID0-n belül) lehet _minden_ név, amíg 32 karakteres. Egy adott műveletsor végrehajtása azt eredményezi, hogy a konzol végrehajtja az ID1 mappanévbe kódolt utasításokat, amelyek segítségével teljes körű irányítást szerez a 3DS felett.
+Az [MSET9](https://github.com/zoogie/MSET9) egy exploit a System Setting alkalmazáshoz, amit [zoogie](https://github.com/zoogie) készített. Kihasznál egy hibát, ahol az ID1 (a második 32 karakteres mappanév a Nintendo 3DS mappán belül, az ID0-n belül) lehet _minden_ név, amíg 32 karakteres. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the console.
 
 :::
 
@@ -16,7 +16,7 @@ Ez a metódus Windows, Linux vagy MacOS számítógépet igényel. Ha Android te
 
 ## Amire szükséged lesz
 
-- Az [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) legújabb kiadása
+- Az [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) legújabb kiadása (az MSET9 `.zip` fájl)
 - Bármelyik a **számítógépedre telepített 3.x verziója** a [Python](https://www.python.org/downloads/)-nak
     - Ha Windows-on vagy, a Python a Microsoft Store-ból nem használható. Kérjük telepíts egy verziót a python.org-ról.
     - Ha Linux-ot vagy macOS-t használsz valószínűleg már van Python 3-ad. Ellenőrizd egy Terminal ablak megnyitásával, majd a `python3 -V` parancs megadásával. Ha ez egy verziószámot ad vissza, működni fog ezzel az útmutatóval.
@@ -31,7 +31,7 @@ Ezen az oldalon a MSET9 szkriptet fogod használni, ami kiváltja az MSET9-et. A
 
 ### I. rész - Előkészületek
 
-Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg**\* létrehozol egy új HOME menüt felhasználói adat nélkül, majd úgy beállítod a azt a profilt, hogy a minimum adatot tartalmazza ahhoz, hogy kiváltsa az MSET9-et. Felhasználói adataid átmenetileg eltűnnek, de vissza fognak térni az oldal befejezésekor.
+In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Felhasználói adataid átmenetileg eltűnnek, de vissza fognak térni az oldal befejezésekor.
 
 1. Helyezd az SD kártyád a számítógépbe
 2. Másolj át a mindent a MSET9 `.zip`-ből az SD kártyád gyökerébe, felülírva minden már ott lévő fájlt
@@ -67,7 +67,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 3. A nyilatkozatot elolvasását követően írj `1`-est és nyomj Enter-t annak elfogadásához
     - Ha hibát kapsz, nézd meg a [hibaelhárítási útmutatót](troubleshooting-mset9), majd próbáld újra
 4. Ha a "Created hacked ID1." üzenetet látod, nyomj Enter-t az MSET9 szkript bezárásához
-    - A 3DS-ed úgy fog tűnni, hogy nem tartalmaz adatot / felhasználó által telepített alkalmazást a HOME menüben. **Ez elvárt működés** Az adataid visszatérnek egy későbbi lépésben
+    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **Ez elvárt működés** Az adataid visszatérnek egy későbbi lépésben
 5. Tedd vissza az SD kártyád a konzoldba
 6. Kapcsold be a konzolod
 7. Nyisd meg a Mii Maker alkalmazást
@@ -114,7 +114,7 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
 3. Navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
 4. **Ne nyomj meg semmi gombot vagy éríntsd meg a képernyőt**
 5. \*\* A konzolod BEKAPCSOLT állapotában, bármilyen gomb vagy a képernyő érintése nélkül\*\* vedd ki az SD kártyádat a konzolból
-    - A menü frissülni fog, és ki fogja írni, hogy nincs SD kártya behelyezve
+    - A menü frissülni fog, és ki fogja írni, hogy nincs SD kártya behelyezve, ami elvárt működés
 6. Helyezd az SD kártyád a számítógépbe
 
 <!--@include: ./_include/mset9-chorus.md -->
