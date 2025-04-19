@@ -2,7 +2,7 @@
 
 :::details Τεχνικές λεπτομέρειες (προαιρετικό)
 
-Το [MSET9](https://github.com/zoogie/MSET9) είναι ένα exploit για την εφαρμογή «System Settings», το οποίο αναπτύσσεται από τον [zoogie](https://github.com/zoogie). Εκμεταλλεύεται ένα ελάττωμα όπου το ID1 (το όνομα του δεύτερου φακέλου, που αποτελείται από 32 χαρακτήρες, μέσα στον φάκελο «Nintendo 3DS», εντός του ID0) μπορεί να είναι _οποιοδήποτε_ όνομα εφόσον είναι 32 χαρακτήρες. Η εκτέλεση μιας συγκεκριμένης ακολουθίας ενεργειών έχει ως αποτέλεσμα την εκτέλεση των οδηγιών από την κονσόλα, οι οποίες κωδικοποιούνται στο όνομα του φακέλου ID1, πράγμα που μπορεί να χρησιμοποιηθεί για την παροχή πλήρους ελέγχου επί του 3DS.
+Το [MSET9](https://github.com/zoogie/MSET9) είναι ένα exploit για την εφαρμογή «System Settings», το οποίο αναπτύσσεται από τον [zoogie](https://github.com/zoogie). Εκμεταλλεύεται ένα ελάττωμα όπου το ID1 (το όνομα του δεύτερου φακέλου, που αποτελείται από 32 χαρακτήρες, μέσα στον φάκελο «Nintendo 3DS», εντός του ID0) μπορεί να είναι _οποιοδήποτε_ όνομα εφόσον είναι 32 χαρακτήρες. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the console.
 
 :::
 
@@ -22,17 +22,17 @@
 
 ## Τι χρειάζεστε
 
+- Την πιο πρόσφατη έκδοση του [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (το αρχείο `.zip` με όνομα «MSET9»)
 - Τις ακόλουθες εφαρμογές από το Google Play Store:
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     - Εάν θέλετε, μπορείτε να εγκαταστήσετε αυτές τις εφαρμογές μέσω sideload
-- Την πιο πρόσφατη έκδοση του [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (το αρχείο `.zip` με όνομα «MSET9»)
 
 ## Οδηγίες
 
 ### Ενότητα I - Προετοιμασία
 
-Σε αυτήν την ενότητα, θα προετοιμάσετε τα δεδομένα της κάρτας SD που είναι απαραίτητα για την ενεργοποίηση του exploit «MSET9».
+In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Τα υπάρχοντα δεδομένα χρήστη θα εξαφανιστούν, αλλά θα επανέλθουν όταν τελειώσετε με τις οδηγίες αυτής της σελίδας.
 
 1. Εισαγάγετε την κάρτα SD στο τηλέφωνο, το tablet ή τον υπολογιστή σας
 
@@ -67,7 +67,7 @@
 
 10. Εάν δείτε το μήνυμα `Hax ID1 Created`, πατήστε «OK» για να συνεχίσετε
     - Εάν λάβετε κάποιο σφάλμα, δείτε τη σελίδα [Επίλυση προβλημάτων](troubleshooting-mset9) και δοκιμάστε ξανά
-    - Θα παρατηρήσετε απώλεια των περισσότερων δεδομένων και εγκατεστημένων εφαρμογών από το μενού «HOME» του 3DS σας. Αυτό είναι μέρος της διαδικασίας. Τα δεδομένα σας θα επιστρέψουν σε μεταγενέστερο βήμα
+    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **Αυτό είναι αναμενόμενο.** Τα δεδομένα σας θα επιστρέψουν σε ένα μεταγενέστερο βήμα
 
 11. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 
@@ -75,9 +75,9 @@
 
 13. Ανοίξτε το Mii Maker
 
-14. Περιμένετε μέχρι η κονσόλα σας να φτάσει στην οθόνη «Welcome to Mii Maker» και έπειτα, κλείστε τό Mii Maker
+14. Περιμένετε μέχρι η κονσόλα σας να φτάσει στην οθόνη [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) και έπειτα, κλείστε το Mii Maker και επιστρέψτε στο μενού «HOME»
     - Ενδέχεται να δείτε [αυτήν την οθόνη](/images/screenshots/mset9/mii-extdata.png), η οποία υποδεικνύει ότι έχουν δημιουργηθεί τα απαραίτητα δεδομένα
-    - Εάν φτάσετε απλώς στην κανονική οθόνη του Mii Maker, κλείστε το Mii Maker και επιστρέψτε στο μενού «HOME»
+    - Εάν οδηγηθείτε απλώς στην [κανονική](/images/screenshots/mset9/mii-existing.png) οθόνη του Mii Maker, τότε τα δεδομένα υπάρχουν ήδη. Κλείστε το Mii Maker και επιστρέψτε στο μενού «HOME»
 
 15. Εκκινήστε την εφαρμογή «System Settings» και μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Software` -> «Reset» ([εικόνα](/images/screenshots/database-reset.jpg))
     - Αυτή η ενέργεια δεν θα διαγράψει τα δεδομένα σας
@@ -132,7 +132,7 @@
 
 ### Ενότητα IV - Αφαίρεση του MSET9
 
-Σε αυτήν την ενότητα, θα αφαιρέσετε το MSET9 για να αποτρέψετε περαιτέρω ζητήματα. (Αυτή η ενέργεια δεν θα αφαιρέσει το custom firmware που μόλις εγκαταστήσατε.)
+Σε αυτήν την ενότητα, θα αφαιρέσετε το MSET9 για να αποτρέψετε περαιτέρω προβλήματα και να επαναφέρετε τα δεδομένα χρήστη σας (παιχνίδια, θέματα, κ.λπ.). (Αυτή η ενέργεια δεν θα αφαιρέσει το custom firmware που μόλις εγκαταστήσατε.)
 
 ::: danger
 
