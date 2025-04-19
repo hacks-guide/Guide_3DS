@@ -40,7 +40,7 @@ Nesta seção, você irá preparar os dados no seu cartão SD necessários para 
 
     - Abra o ZArchiver
     - Se solicitado, [permita ao ZArchiver acessar os arquivos do seu cartão SD](/images/screenshots/mset9/zarchiver-allow.png)
-    - Navigate to where the downloaded MSET9 MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Navigate to where the downloaded MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
     - Select the MSET9 `.zip`, then select "Extract..." ([imagem](/images/screenshots/mset9/zarchiver-extract-1.png))
     - Navegue para o seu cartão SD, então toque o ícone azul de 'seta para baixo' para extrair os arquivos para a raiz do seu cartão SD ([imagem](/images/screenshots/mset9/zarchiver-extract-2.png))
 
