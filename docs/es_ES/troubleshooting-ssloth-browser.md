@@ -54,7 +54,7 @@ The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the pag
 
 Follow these steps in order:
 
-1. Launch System Settings on your console
+1. Inicia la configuración de la consola
 2. Navega hasta `Configuración de Internet` -> `Conexión a Internet`
 3. Haz clic en tu conexión de red y navega hasta `Modificar ajustes` -> `Página siguiente (Flecha hacia la derecha)` -> `Servidor proxy`
 4. Cambia «Configuración del servidor proxy» a «No»
