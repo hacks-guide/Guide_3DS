@@ -2,7 +2,7 @@
 
 :::details Detalles técnicos (opcional)
 
-[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa «Configuración de la consola» desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
+[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa «Configuración de la consola» desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the console.
 
 :::
 
@@ -16,7 +16,7 @@ Esta página requiere un PC con Windows, Linux o macOS. Si tienes un teléfono/t
 
 ## Lo que necesitas
 
-- La última versión de [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
+- La última versión de [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (El archivo MSET9 `.zip`)
 - Cualquier versión 3.x de [Python](https://www.python.org/downloads/) **instalada en tu computadora**
     - Si estas en Windows, no puedes usar Python de la Microsoft Store. Por favor instala una versión desde python.org.
     - Si estás en Linux o en macOS, puede que ya tengas Python 3. Compruébalo abriendo una ventana de Terminal e introduciendo `python3 -V`. Si esto devuelve un número de versión, funcionará para esta guía.
@@ -31,7 +31,7 @@ En esta página, utilizarás el script MSET9, que se utiliza para activar MSET9.
 
 ### Sección I - Preparativos
 
-En esta sección, prepararás el exploit MSET9 creando **temporalmente** un nuevo perfil de Menú HOME sin datos de usuario, y luego completando el perfil con solo los datos mínimos requeridos para activar MSET9. Tus datos de usuario existentes desaparecerán, pero volverán cuando finalices con esta página.
+In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Tus datos de usuario existentes desaparecerán, pero volverán cuando finalices con esta página.
 
 1. Inserta la tarjeta SD en tu computadora
 2. Copia todo lo que está dentro del `.zip` de MSET9 a la raíz de tu tarjeta SD, sobreescribiendo cualquier archivo existente
@@ -67,7 +67,7 @@ En esta sección, prepararás el exploit MSET9 creando **temporalmente** un nuev
 3. Después de leer la advertencia, escribe `1` otra vez y presiona Enter para aceptarla
     - Si aparece un error, consulta la página de [resolución de problemas](troubleshooting-mset9) e inténtalo otra vez
 4. Si ves el mensaje "Created hacked ID1.", presiona Enter para cerrar el script MSET9
-    - Tu 3DS aparecerá como si no tuviera datos ni programas instalados por el usuario en el Menú HOME. **Esto es normal.** Tus datos volverán más tarde en un paso posterior
+    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **Esto es normal.** Tus datos volverán más tarde en un paso posterior
 5. Reinserta la tarjeta SD en la consola
 6. Enciende tu consola
 7. Abre el Editor de Mii
@@ -114,7 +114,7 @@ Debes de seguir estas instrucciones de forma **EXACTA**, ¡así que revisa caute
 3. Navega a `Gestion de datos` -> `Nintendo 3DS` -> `Datos Adicionales` ([imagen](/images/screenshots/mset9/settings-extdata.png))
 4. **No presiones ningún botón ni toques la pantalla**
 5. **Con la consola AÚN ENCENDIDA, y sin presionar ningún botón y sin tocar la pantalla**, saca la tarjeta SD de tu consola
-    - El menú se actualizará y dirá que la tarjeta SD no está insertada
+    - The menu will refresh and say that no SD card is inserted, which is expected
 6. Inserta la tarjeta SD en tu computadora
 
 <!--@include: ./_include/mset9-chorus.md -->
