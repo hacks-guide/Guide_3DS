@@ -22,11 +22,11 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 ## 준비물
 
-- The following applications installed from the Google Play Store:
+- Google Play 스토어에서 다음과 같은 애플리케이션을 설치해 주세요:
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
-    - If you wish, you can sideload these applications instead
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
+    - 필요한 경우 Play 스토어 외의 사이트에서 받아서 설치할 수 있습니다.
+- 최신 버전의 [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (MSET9 `.zip` 파일)
 
 ## 진행 방법
 
@@ -36,12 +36,12 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 1. SD 카드를 휴대폰/태블릿/컴퓨터에 삽입해 주세요
 
-2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files:
+2. MEST9 `.zip` 안의 파일들을 모두 복사하여 SD 카드의 루트에 붙여넣어 주세요. 존재하는 파일이 있을 경우 덮어쓰기 해주세요:
 
-    - Open ZArchiver
+    - ZArchiver를 열어주세요
     - If prompted, [allow ZArchiver to access files on your SD card](/images/screenshots/mset9/zarchiver-allow.png)
-    - Navigate to where the downloaded MSET9 MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
-    - Select the MSET9 `.zip`, then select "Extract..." ([image](/images/screenshots/mset9/zarchiver-extract-1.png))
+    - Navigate to where the downloaded MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Select the MSET9 `.zip`, then select "Extract..." ([이미지 (영어)](/images/screenshots/mset9/zarchiver-extract-1.png))
     - Navigate to your SD card, then tap the blue 'down arrow' icon to extract the files to the root of your SD card ([image](/images/screenshots/mset9/zarchiver-extract-2.png))
 
     ::: info
@@ -63,24 +63,24 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 8. After reviewing the disclaimer, tap on `Confirm` to accept it
 
-9. Tap on the photo corresponding to your console model, then at the bottom, pick your current firmware version
+9. 콘솔 모델에 맞는 사진을 터치한 다음, 현재 펌웨어 버전에 맞는 버튼을 터치해 주세요
 
 10. If you see the prompt of `Hax ID1 Created`, tap OK to continue
-    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+    - 에러 발생시, [문제 해결](troubleshooting-mset9)을 확인 후 다시 시도해 주세요
     - Your 3DS will appear to lose most data / no user-installed apps on HOME Menu. This is expected. Your data will come back at a later step
 
 11. SD 카드를 콘솔에 다시 삽입해 주세요
 
 12. 콘솔의 전원을 켜 주세요
 
-13. Open Mii Maker
+13. Mii 스튜디오를 열어주세요
 
 14. Wait for your console to reach the "Welcome to Mii Maker" screen, then exit Mii Maker
-    - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
+    - [이 화면 (영어)](/images/screenshots/mset9/mii-extdata.png)을 보게 될 것입니다. 필요한 파일을 작성하고 있는 것이니 기다려주세요
     - If you just reach the normal Mii Maker screen, exit Mii Maker and return to the HOME Menu
 
-15. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-    - This will not wipe any of your data
+15. 본체 설정을 실행한 후 `데이터 관리` -> `Nintendo 3DS 데이터 관리` -> `소프트웨어 관리` -> 초기화 ([영어 사진](/images/screenshots/database-reset.jpg))로 이동해 주세요.
+    - 이 과정은 데이터를 삭제하지 않습니다.
 
 16. Power off your console by pressing the power button then tapping Power Off on the lower screen
 
@@ -89,13 +89,13 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 18. The MSET9 Installer application should automatically check if you have done previous steps properly
     - It may take a few seconds for the app to detect the SD card and react
     - If it doesn't check automatically, tap `Check MSET9 status` to check manually
-    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+    - 에러 발생시, [문제 해결](troubleshooting-mset9)을 확인 후 다시 시도해 주세요
 
 19. If the check passed, you'll see `Inject trigger file` become [highlighted](/images/screenshots/mset9/inject-trigger-highlighted.png) and you can continue to the next step. **Do not inject trigger yet.** Put your phone/tablet/computer aside for now
 
 20. SD 카드를 콘솔에 다시 삽입해 주세요
 
-### Section II - MSET9
+### 섹션 II - MSET9
 
 이 섹션에서는, MSET9을 작동시켜 SafeB9SInstaller (커스텀 펌웨어 설치 프로그램) 를 실행할 것입니다.
 
@@ -105,11 +105,11 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
 
 :::
 
-1. Power on your console, ensuring System Settings is selected
-    - If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
+1. 콘솔의 전원을 켜고, 본체 설정이 선택되어 있는지 확인하세요
+    - 본체 설정이 선택되어 있지 않다면, 십자 패드를 이용해 본체 설정 앱을 **[띄워 놓고 (영어 사진)](/images/screenshots/mset9/hover-settings.png)**, 전원을 종료한 뒤, 다시 시도해 주세요
 2. (A)를 눌러 본체 설정을 실행해 주세요
-3. Navigate to `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
-4. **Do not press any buttons or touch the screen**
+3. `데이터 관리` -> `Nintendo 3DS` -> `추가 데이터 관리`로 들어가주세요. ([영어 사진](/images/screenshots/mset9/settings-extdata.png))
+4. **절대 어떠한 버튼도 만지지 말고 스크린도 터치하지 마세요**
 5. **어떠한 버튼도 하단 화면도 건드리지 않은 상태에서, 기기의 전원이 여전히 켜진 상태에서** SD 카드를 기기에서 제거해 주세요
     - The menu will refresh and say that no SD card is inserted, which is expected
 6. SD 카드를 휴대폰/태블릿/컴퓨터에 삽입해 주세요
@@ -118,14 +118,14 @@ Android 휴대폰/태블릿에서 요구되는 최소 Android 버전은 6.0 (마
     - The button should become greyed out and `Remove trigger file` become [highlighted](/images/screenshots/mset9/remove-trigger-highlighted.png)
 9. **어떠한 버튼도 하단 화면도 건드리지 않은 상태에서** SD 카드를 콘솔에 삽입해 주세요
 10. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
-    - If you get a red screen or the console gets stuck on a loading screen, follow the [troubleshooting guide](troubleshooting-mset9)
+    - 붉은 화면이 뜨거나 로딩 화면에서 멈출 경우, [다음 문제 해결 가이드](troubleshooting-mset9) 내용을 따라주세요
 
 ### 섹션 III - boot9strap 설치하기
 
 이 섹션에서는, 커스텀 펌웨어를 설치할 것입니다.
 
 1. 메시지가 나타나면, boot9strap을 설치하기 위하여 화면에 주어진 키 조합을 입력해 주세요
-    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9)
+    - 하단 화면의 단계가 붉은색 글자로 표시되고 키 조합 입력을 요구하지 않는다면, [이 문제 해결 가이드를 참고해주세요](troubleshooting-mset9)
 2. 작업이 완료되면, (A) 를 눌려 콘솔을 재부팅해 주세요
 
 <!--@include: ./_include/configure-luma3ds.md -->
