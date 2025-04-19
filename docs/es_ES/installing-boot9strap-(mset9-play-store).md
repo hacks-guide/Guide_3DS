@@ -2,7 +2,7 @@
 
 :::details Detalles técnicos (opcional)
 
-[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa «Configuración de la consola» desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Realizar una secuencia específica de acciones lleva a la consola a ejecutar las instrucciones codificadas en el nombre de la carpeta ID1, la cual puede ser utilizada para conseguir un control total sobre la 3DS.
+[MSET9](https://github.com/zoogie/MSET9) es un exploit para el programa «Configuración de la consola» desarrollado por [zoogie](https://github.com/zoogie). Utiliza una falla donde la ID1 (la segunda carpeta de 32 caracteres dentro de la carpeta Nintendo 3DS, dentro de la ID0) puede tener _cualquier_ nombre siempre que sean 32 caracteres. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the console.
 
 :::
 
@@ -22,17 +22,17 @@ On Android phones/tablets, the minimum Android version required is 6.0 (Marshmal
 
 ## Lo que necesitas
 
+- La última versión de [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (El archivo MSET9 `.zip`)
 - Las siguientes aplicaciones instaladas desde Google Play Store:
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     - Si quieres, puedes descargar estas aplicaciones desde otros lugares
-- La última versión de [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (El archivo MSET9 `.zip`)
 
 ## Instrucciones
 
 ### Sección I - Preparativos
 
-En esta sección, prepararás los datos de tarjeta SD necesarios para que el exploit MSET9 pueda activarse.
+In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Tus datos de usuario existentes desaparecerán, pero volverán cuando finalices con esta página.
 
 1. Insert your SD card into your phone/tablet/computer
 
@@ -67,7 +67,7 @@ En esta sección, prepararás los datos de tarjeta SD necesarios para que el exp
 
 10. Si ves el aviso de `Hax ID1 Created`, toca OK para continuar
     - Si aparece un error, consulta la página de [resolución de problemas](troubleshooting-mset9) e inténtalo otra vez
-    - Tu 3DS aparecerá como si no tuviera datos ni programas instalados por el usuario en el Menú HOME. Esto es normal. Tus datos volverán más tarde en un paso posterior
+    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **Esto es normal.** Tus datos volverán más tarde en un paso posterior
 
 11. Reinserta la tarjeta SD en la consola
 
@@ -75,9 +75,9 @@ En esta sección, prepararás los datos de tarjeta SD necesarios para que el exp
 
 13. Abre el Editor de Mii
 
-14. Espera a que tu consola llegue al mensaje que dice "¡Estás en el editor de Mii!" Luego cierra el Editor de Mii
+14. Espera a que tu consola llegue al mensaje que dice ["¡Estás en el editor de Mii!"](/images/screenshots/mset9/mii-welcome.png), luego cierra el Editor de Mii y vuelve al Menú HOME
     - Puede que veas [este mensaje](/images/screenshots/mset9/mii-extdata.png), cuál indica que los datos necesarios han sido creados
-    - Si llegas al menú principal de siempre del Editor de Mii entonces sal del Editor de Mii y vuelve al Menú HOME
+    - Si llegas al [menú principal](/images/screenshots/mset9/mii-existing.png) del Editor de Mii, entonces los datos ya existen. Sal del Editor de Mii y vuelve al Menú HOME
 
 15. Abre la configuración de la consola y ve hacia `Gestión de datos` -> `Nintendo 3DS` -> `Programas` -> Borrar ([imagen](/images/screenshots/database-reset.jpg))
     - Esto no borrará ninguno de tus datos
@@ -132,7 +132,7 @@ En esta sección, instalarás custom firmware en tu consola.
 
 ### Sección IV - Remover MSET9
 
-In this section, you will remove MSET9 to prevent further issues. (This will not remove the custom firmware that you just installed.)
+En esta sección, se removerá MSET9 para evitar futuros problemas y para restaurar tus datos (juegos, temas, etc). (Esto no removerá el custom firmware que acabas de instalar.)
 
 ::: danger
 
