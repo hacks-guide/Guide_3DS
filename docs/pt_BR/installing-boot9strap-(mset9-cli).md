@@ -2,7 +2,7 @@
 
 :::details Detalhes Técnicos (opcional)
 
-[MSET9](https://github.com/zoogie/MSET9) é um exploit para o aplicativo de Configurações do Sistema desenvolvido por [zoogie](https://github.com/zoogie). Ele faz uso de um erro onde a ID1 (a pasta de 32 caractéres dentro da pasta Nintendo 3DS, dentro de ID0) pode ter _qualquer_ nome desde que seja composto por 32 caractéres. Fazer uma sequência de ações específicas resultará no console executando instruções que estão codificadas no nome da pasta da ID1, que pode ser utilizada para garantir controle total sobre o 3DS.
+[MSET9](https://github.com/zoogie/MSET9) é um exploit para o aplicativo de Configurações do Sistema desenvolvido por [zoogie](https://github.com/zoogie). Ele faz uso de um erro onde a ID1 (a pasta de 32 caractéres dentro da pasta Nintendo 3DS, dentro de ID0) pode ter _qualquer_ nome desde que seja composto por 32 caractéres. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the console.
 
 :::
 
@@ -16,7 +16,7 @@ Esta página requer um computador rodando Windows, Linux ou macOS. Se você tem 
 
 ## O que é necessário
 
-- A versão mais recente do [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
+- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
 - Qualquer versão 3.x de [Python](https://www.python.org/downloads/) **instalada no seu computador**
     - If you are on Windows, Python from the Microsoft Store cannot be used. Please install a version from python.org.
     - Se você estiver no Linux ou no macOS, você possivelmente já tem Python 3. Verifique abrindo uma janela terminal e digitando `python3 -V`. Se este retornar um número de versão, ele funcionará para este guia.
@@ -31,7 +31,7 @@ Nesta página, você usará o script MSET9, que é usado para acionar o MSET9. E
 
 ### Seção I - Preparação
 
-Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente** criar um novo perfil do Menu HOME sem dados de usuário, e, em seguida, configurar esse perfil com apenas os dados mínimos necessários para que o MSET9 acione. Seus dados de usuário existentes desaparecerão, mas voltarão quando você terminar esta página.
+In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Seus dados de usuário existentes desaparecerão, mas voltarão quando você terminar esta página.
 
 1. Insira o cartão SD no seu computador
 2. Copie tudo do `.zip` MSET9 para a raiz do seu cartão SD, substituindo quaisquer arquivos existentes
@@ -67,7 +67,7 @@ Nesta seção, você vai preparar o exploit MSET9 através de **temporariamente*
 3. Após ler o aviso, digite `1` novamente e pressione Enter para aceitá-lo
     - Se você receber um erro, verifique o [guia de troubleshooting](troubleshooting-mset9), depois tente novamente
 4. Se você ver a mensagem "Created hacked ID1.", pressione Enter para fechar o script MSET9
-    - Seu 3DS vai parecer não ter dados/nenhum aplicativo instalado no Menu HOME. **Isto é esperado.** Seus dados voltarão mais tarde
+    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **Isto é esperado.** Seus dados voltarão mais tarde
 5. Reinsira o cartão SD no seu console
 6. Ligue o seu console
 7. Abra o Mii Maker
@@ -114,7 +114,7 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
 3. Navegue para `Gerenciamento de Dados` -> `Nintendo 3DS` -> `Extra Data` ([imagem](/images/screenshots/mset9/settings-extdata.png))
 4. **Não pressione nenhum botão ou toque na tela**
 5. **Com o console AINDA LIGADO, e sem pressionar nenhum dos botões ou a tela de toque**, remova seu cartão SD do seu console
-    - O menu atualizará e dirá que nenhum cartão SD foi inserido
+    - O menu atualizará e dirá que nenhum cartão SD foi inserido, o que é esperado
 6. Insira o cartão SD no seu computador
 
 <!--@include: ./_include/mset9-chorus.md -->
