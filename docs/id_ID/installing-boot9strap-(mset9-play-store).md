@@ -2,7 +2,7 @@
 
 :::details Perincian Teknis (opsional)
 
-[MSET9](https://github.com/zoogie/MSET9) adalah eksploit untuk System Settings yang dikembangkan oleh [zoogie](https://github.com/zoogie). Eksploit ini menyasar kelemahan ID1 (32 huruf dari nama folder kedua, di folder Nintendo 3DS setelah ID0) yang bisa nama _apa saja_ asalkan 32 huruf. Gunanya untuk melakukan tindakan tertentu yang membuat konsol menjalankan instruksi sesuai kode dalam nama folder ID1, sehingga mendapat kendali penuh atas konsol 3DS.
+[MSET9](https://github.com/zoogie/MSET9) adalah eksploit untuk System Settings yang dikembangkan oleh [zoogie](https://github.com/zoogie). Eksploit ini menyasar kelemahan ID1 (32 huruf dari nama folder kedua, di folder Nintendo 3DS setelah ID0) yang bisa nama _apa saja_ asalkan 32 huruf. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the console.
 
 :::
 
@@ -22,17 +22,17 @@ Di ponsel/tablet Android, versi Android yang diperlukan minimal 6.0 (Marshmallow
 
 ## Apa yang Perlu
 
+- Versi terkini dari [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (yang `.zip` MSET9)
 - Memasang aplikasi berikut dari Google Play Store:
     - [MSET9 Installer](https://play.google.com/store/apps/details?id=moe.saru.homebrew.console3ds.mset9_installer_android)
     - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
     - Atau, pasang .apk tersebut dari sumber lain (_sideload_)
-- Versi terkini dari [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (yang `.zip` MSET9)
 
 ## Instruksi
 
 ### Bagian I - Persiapan
 
-Di bagian ini akan menyiapkan data ke kartu SD untuk mengaktifkan eksploit MSET9.
+In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Data pengguna yang ada akan hilang, tapi akan kembali setelah menyelesaikan laman ini.
 
 1. Sisipkan kartu SD ke ponsel/tablet/komputer
 
@@ -67,7 +67,7 @@ Di bagian ini akan menyiapkan data ke kartu SD untuk mengaktifkan eksploit MSET9
 
 10. Jika ada sembulan `Hax ID1 Created`, sentuh OK untuk lanjut
     - Jika muncul galat, lihat laman [sidik gangguan](troubleshooting-mset9), lalu coba lagi
-    - Konsol 3DS akan seperti kehilangan aplikasi terpasang / data di HOME Menu. Memang seperti ini. Data akan balik di langkah berikutnya
+    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **Memang seperti ini.** Data akan kembali di langkah berikutnya
 
 11. Sisip kembali kartu SD ke konsol
 
@@ -75,9 +75,9 @@ Di bagian ini akan menyiapkan data ke kartu SD untuk mengaktifkan eksploit MSET9
 
 13. Buka Mii Maker
 
-14. Tunggu konsol sampai layar "Welcome to Mii Maker", lalu keluar dari Mii Maker
+14. Tunggu konsol sampai layar [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png), lalu keluar dari Mii Maker dan balik ke HOME Menu
     - Mungkin muncul [layar ini](/images/screenshots/mset9/mii-extdata.png), ini menandakan data yang perlu sudah dibuat
-    - Jika hanya sampai layar Mii Maker biasa, keluar dari Mii Maker dan kembali ke HOME Menu
+    - Jika hanya sampai layar Mii Maker [biasa](/images/screenshots/mset9/mii-existing.png), berarti sudah ada data. Keluar dari Mii Maker dan balik ke HOME Menu
 
 15. Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
     - Ini tidak akan menghapus data
@@ -132,7 +132,7 @@ Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 ### Bagian IV - Menghapus MSET9
 
-Di bagian ini akan menghapus MSET9 agar tidak ada isu lain. (Ini tidak akan menghapus _custom firmware_ yang tadi dipasang.)
+Di bagian ini akan menghapus MSET9 untuk mencegah isu dan memulihkan data (permainan, tema, dll.). (Ini tidak akan menghapus _custom firmware_ yang tadi dipasang).
 
 ::: danger
 
