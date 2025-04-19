@@ -51,8 +51,8 @@ Mii Maker data was not found on the SD card. Please power on your console with y
 Ensure that you have reset the title database.
 
 - Please power on your console with your SD inserted
-- Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-    - This will not wipe any of your data
+- 본체 설정을 실행한 후 `데이터 관리` -> `Nintendo 3DS 데이터 관리` -> `소프트웨어 관리` -> 초기화 ([영어 사진](/images/screenshots/database-reset.jpg))로 이동해 주세요.
+    - 이 과정은 데이터를 삭제하지 않습니다.
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
@@ -158,7 +158,7 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. 콘솔의 모델과 버전을 입력한 다음 엔터키를 눌러주세요
-    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+    - 현재 상태가 [Injected](/images/screenshots/mset9/mset9-injected.png)로 표시되어야 합니다
     - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
@@ -187,7 +187,7 @@ Follow these instructions to remove the trigger file and to retry Section II:
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. 콘솔의 모델과 버전을 입력한 다음 엔터키를 눌러주세요
-    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+    - 현재 상태가 [Injected](/images/screenshots/mset9/mset9-injected.png)로 표시되어야 합니다
     - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
