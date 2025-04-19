@@ -2,7 +2,7 @@
 
 :::details Technical Details (optional)
 
-[MSET9](https://github.com/zoogie/MSET9) is an exploit for the System Settings application developed by [zoogie](https://github.com/zoogie). It exploits a flaw where the ID1 (the second 32-character folder name inside of the Nintendo 3DS folder, inside of the ID0) can be _any_ name as long as it is 32 characters. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the 3DS.
+[MSET9](https://github.com/zoogie/MSET9) is an exploit for the System Settings application developed by [zoogie](https://github.com/zoogie). It exploits a flaw where the ID1 (the second 32-character folder name inside of the Nintendo 3DS folder, inside of the ID0) can be _any_ name as long as it is 32 characters. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the console.
 
 :::
 
@@ -16,7 +16,7 @@ This page requires a computer running Windows, Linux, or macOS. If you have an A
 
 ## Ce dont vous avez besoin
 
-- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
+- The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
 - Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
     - If you are on Windows, Python from the Microsoft Store cannot be used. Please install a version from python.org.
     - If you are on Linux or macOS, you may already have Python 3. Check by opening a Terminal window and entering `python3 -V`. If this returns a version number, it will work for this guide.
@@ -31,7 +31,7 @@ On this page, you will use the MSET9 script, which is used to trigger MSET9. Whi
 
 ### Section I - Prep Work
 
-In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
+In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
 1. Insérez votre carte SD dans votre ordinateur
 2. Copy everything from the MSET9 `.zip` to the root of your SD card, overwriting any existing files
@@ -67,7 +67,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 3. After reviewing the disclaimer, type `1` again and press Enter to accept it
     - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
 4. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
-    - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
+    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
 5. Reinsert your SD card into your console
 6. Power on your console
 7. Open Mii Maker
@@ -114,7 +114,7 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 3. Navigate to `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
 4. **Do not press any buttons or touch the screen**
 5. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
-    - The menu will refresh and say that no SD card is inserted
+    - The menu will refresh and say that no SD card is inserted, which is expected
 6. Insérez votre carte SD dans votre ordinateur
 
 <!--@include: ./_include/mset9-chorus.md -->
