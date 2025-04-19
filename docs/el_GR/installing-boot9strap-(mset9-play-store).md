@@ -40,7 +40,7 @@
 
     - Ανοίξτε το ZArchiver
     - Εάν σας ζητηθεί, [επιτρέψτε στο ZArchiver να έχει πρόσβαση στα αρχεία της κάρτας SD σας](/images/screenshots/mset9/zarchiver-allow.png)
-    - Μεταβείτε στην τοποθεσία του ληφθέντος αρχείου `.zip` του MSET9 ([πιθανότατα στον φάκελο λήψεων](/images/screenshots/mset9/zarchiver-zip-location.png))
+    - Navigate to where the downloaded MSET9 `.zip` is located ([likely in the Downloads folder](/images/screenshots/mset9/zarchiver-zip-location.png))
     - Επιλέξτε το αρχείο `.zip` του MSET9 και έπειτα, «Extract...» ([εικόνα](/images/screenshots/mset9/zarchiver-extract-1.png))
     - Μεταβείτε στην κάρτα SD σας και πατήστε το εικονίδιο «μπλε κάτω βέλος» για να αποσυμπιέσετε τα αρχεία στη ρίζα της κάρτας SD σας ([εικόνα](/images/screenshots/mset9/zarchiver-extract-2.png))
 
