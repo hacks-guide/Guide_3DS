@@ -2,7 +2,7 @@
 
 :::details 기술적 상세 정보 (선택 사항)
 
-[MSET9](https://github.com/zoogie/MSET9) 은 [zoogie](https://github.com/zoogie) 에 의해 개발된 본체 설정 앱의 취약점을 공략하는 방법입니다. 이 취약점은 ID1의 이름이 _어떤 이름이든 간에_ 32글자면 된다는 것을 이용합니다. (ID1 폴더는 Nintendo 3DS 폴더 속, 32글자짜리 ID0 폴더 안에 있는 또다른 32글자 폴더입니다.) 특정한 작업들을 수행하면 콘솔에서 ID1 폴더 이름으로 인코딩된 명령어가 실행되며, 이를 통해 3DS에 대한 전체 제어 권한을 획득할 수 있습니다.
+[MSET9](https://github.com/zoogie/MSET9) 은 [zoogie](https://github.com/zoogie) 에 의해 개발된 본체 설정 앱의 취약점을 공략하는 방법입니다. 이 취약점은 ID1의 이름이 _어떤 이름이든 간에_ 32글자면 된다는 것을 이용합니다. (ID1 폴더는 Nintendo 3DS 폴더 속, 32글자짜리 ID0 폴더 안에 있는 또다른 32글자 폴더입니다.) Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the console.
 
 :::
 
@@ -16,7 +16,7 @@
 
 ## 준비물
 
-- 최신 버전의 [MSET9](https://github.com/hacks-guide/MSET9/releases/latest)
+- 최신 버전의 [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (MSET9 `.zip` 파일)
 - **컴퓨터에 설치된** 3.x 버전의 [Python](https://www.python.org/downloads/) (파이썬)
     - 만약 윈도우를 사용중이라면, Microsoft Store에 있는 Python은 작동하지 않을겁니다. python.org 에 있는 버전을 설치해 주세요.
     - 리눅스나 macOS를 사용 중인 경우 Python 3(파이썬 3)이 이미 설치되어 있을 것입니다. 터미널을 열고 'python3 -V'를 입력해 주세요. 버전 번호가 나올 경우, 본 가이드에 따라 잘 작동할 것입니다.
@@ -31,7 +31,7 @@
 
 ### 섹션 I - 준비 작업
 
-이 섹션에서는, **일시적으로** 유저 데이터가 없는 HOME 메뉴 프로필을 생성한 후, MSET9가 가동하는 데 필요한 만큼만의 데이터를 프로필에 설정함으로써 MSET9 익스플로잇을 준비합니다． 현재 존재하는 유저 데이터는 사라지지만, 이 페이지의 작업을 끝낸다면 다시 복구될 것입니다．
+In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. 현재 존재하는 유저 데이터는 사라지지만, 이 페이지의 작업을 끝낸다면 다시 복구될 것입니다．
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
 2. MEST9 `.zip` 안의 파일들을 모두 복사하여 SD 카드의 루트에 붙여넣어 주세요. 존재하는 파일이 있을 경우 덮어쓰기 해주세요.
@@ -67,7 +67,7 @@
 3. 면책 사항을 확인한 뒤, `1`을 다시 누른 후 엔터를 눌러 수락하세요
     - 에러 발생시, [문제 해결](troubleshooting-mset9)을 확인 후 다시 시도해 주세요
 4. "Created hacked ID1." 이라는 메시지가 나오면, 엔터를 눌러 MSET9 스크립트를 닫아주세요
-    - 3DS의 데이터가 사라지고 / HOME 메뉴에 설치한 유저 앱들이 사라질 것입니다. **이건 예상된 결과입니다.** 이후 과정을 거치면서 원본 데이터는 복구될 것입니다
+    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **이건 예상된 결과입니다.** 이후 과정을 거치면서 원본 데이터는 복구될 것입니다
 5. SD 카드를 콘솔에 다시 삽입해 주세요
 6. 콘솔의 전원을 켜 주세요
 7. Mii 스튜디오를 열어주세요
@@ -114,7 +114,7 @@
 3. `데이터 관리` -> `Nintendo 3DS` -> `추가 데이터 관리`로 들어가주세요. ([영어 사진](/images/screenshots/mset9/settings-extdata.png))
 4. **절대 어떠한 버튼도 만지지 말고 스크린도 터치하지 마세요**
 5. **어떠한 버튼도 하단 화면도 건드리지 않은 상태에서, 기기의 전원이 여전히 켜진 상태에서** SD 카드를 기기에서 제거해 주세요
-    - The menu will refresh and say that no SD card is inserted
+    - The menu will refresh and say that no SD card is inserted, which is expected
 6. SD 카드를 컴퓨터에 삽입해 주세요
 
 <!--@include: ./_include/mset9-chorus.md -->
