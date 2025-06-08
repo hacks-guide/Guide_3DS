@@ -32,7 +32,7 @@ Note that, only on New 3DS, `secret_sector.bin` is needed to revert the arm9load
 
 ::: info
 
-For all steps in this section, overwrite any existing files on your SD card.
+For all steps in this section, if any of the files already exist, overwrite them with the new files.
 
 :::
 

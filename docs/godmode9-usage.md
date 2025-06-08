@@ -24,7 +24,7 @@ GodMode9 is powerful software that has the capability to modify essentially anyt
 
 ::: info
 
-Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. Overwrite any existing files.
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. If any of the files exist, overwrite them with the new files.
 
 :::
 
