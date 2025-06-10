@@ -180,7 +180,7 @@ function redirect() {
     sessionStorage.setItem("selected_version", JSON.stringify({major, minor, nver, region, model}));
 
     if(prefix != "Ver.") {
-        window.location.href = "checking-for-cfw";
+        window.location.href = "already-have-cfw";
         return true;
     }
 
