@@ -69,6 +69,7 @@ You're done formatting your SD card if it's **32GB or smaller.**
 1. Open File Explorer.
 1. Navigate to your formatted SD card.
 1. Delete the files that Rufus created in it.
+1. If the SD card had any files and folders on it before the format, copy everything back from your computer.
 
 ## Troubleshooting
 
