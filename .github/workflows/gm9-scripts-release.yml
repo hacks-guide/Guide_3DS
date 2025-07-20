@@ -1,0 +1,28 @@
+name: Release gm9 scripts
+
+on:
+  push:
+    branches: [ master ]
+    paths: [ 'docs/public/gm9_scripts/*' ]
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: rickstaa/action-create-tag@v1
+        with:
+          tag: gm9-scripts
+          force_push_tag: true
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          name: GM9 Scripts
+          tag_name: gm9-scripts
+          prerelease: true
+          files: docs/public/gm9_scripts/*
