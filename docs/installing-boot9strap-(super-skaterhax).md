@@ -26,7 +26,7 @@ This exploit is known to be inconsistent: it works for some people, but not othe
 
 ### What You Need
 
-* The [Super-skaterhax](https://skater.nintendohomebrew.com) zip for your console's region and system version
+* The [Super-skaterhax](https://skater.nintendohomebrew.com) `.zip` for your console's region and system version
 
 #### Section I - Prep Work
 
@@ -50,12 +50,12 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
     + You can restore your region settings back to normal once you have finished this page
     + If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
 1. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
-    + USA: United States, Do Not Set
-    + EUR: United Kingdom, Do Not Set
-    + JPN: 日本, 設定しない
-    + KOR: 대한민국, 설정하지 않음
+    + USA: First select United States, then select Do Not Set
+    + EUR: First select United Kingdom, then select Do Not Set
+    + JPN: First select 日本, then select 設定しない
+    + KOR: First select 대한민국, then select 설정하지 않음
 1. Navigate to "Date & Time"
-1. Set "Today's Date" and "Current Time" to the current date and time in your timezone
+1. Set "Today's Date" and "Current Time" to the current date and time
 1. Exit System Settings
 
 #### Section II - super-skaterhax
