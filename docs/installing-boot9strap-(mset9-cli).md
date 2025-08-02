@@ -45,27 +45,31 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 <!--@include: ./_include/mset9-chorus.md -->
     ::: info
 
-    ![](/images/screenshots/mset9/mset9-select.png)
-
-    :::
-
-1. Type the number corresponding to your console model and version, then press Enter
-    + The window should change to this:
-
-    ::: info
-
     ![](/images/screenshots/mset9/mset9-setup-notcreated.png)
 
     :::
 
-    + Ensure that the correct console model and version is displayed
 1. Type `1`, then press Enter to begin the process of creating the MSET9 ID1
+    + The window should change to this:
+
+    ::: info
+
+    ![](/images/screenshots/mset9/mset9-select.png)
+
+    :::
+1. Type the number corresponding to your console model and version, then press Enter
+
+    ::: info
+
+    ![](/images/screenshots/mset9/mset9-disclaimer.png)
+
+    :::
 1. After reviewing the disclaimer, type `1` again and press Enter to accept it
     + If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
-1. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
-    + Your console will appear to lose most data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
+1. If you see the message "[Created hacked ID1.](/images/screenshots/mset9/mset9-created-hacked-id1.png)", press Enter to close the MSET9 script
 1. Reinsert your SD card into your console
 1. Power on your console
+    + Your console will appear to lose most data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
 1. Open Mii Maker
 1. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the HOME Menu
     + You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
@@ -75,8 +79,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 1. Power off your console by pressing the power button then tapping Power Off on the lower screen
 1. Insert your SD card into your computer
 <!--@include: ./_include/mset9-chorus.md -->
-1. Type the number corresponding to your console model and version, then press Enter
-    + The window should change to this and display `Ready`:
+    + The window should display `Ready`:
 
     ::: info
 
@@ -110,7 +113,6 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
     + The menu will refresh and say that no SD card is inserted, which is expected
 1. Insert your SD card into your computer
 <!--@include: ./_include/mset9-chorus.md -->
-1. Type the number corresponding to your console model and version, then press Enter
 1. In the MSET9 window, type `3`, then press Enter to inject MSET9
     + You should see "MSET9 successfully injected!"
 1. Press Enter to close the MSET9 script
@@ -142,12 +144,15 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 1. Power off your console
 1. Insert your SD card into your computer
 <!--@include: ./_include/mset9-chorus.md -->
-1. Type the number corresponding to your console model and version, then press Enter
-    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
-1. Type `4`, then press Enter to remove the trigger file
-    + You should see "Removed trigger file."
-1. Type `5`, then press Enter to remove MSET9
+    ::: info
+
+    ![](/images/screenshots/mset9/mset9-removed-trigger-file.png)
+
+    :::
+
+    + The current state should display Removed trigger file
+    + If you never injected in the first place, or it was removed earlier, the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png)
+1. Type `4`, then press Enter to remove MSET9
     + You should see "Successfully removed MSET9!"
 1. Press Enter to close the MSET9 script
 
