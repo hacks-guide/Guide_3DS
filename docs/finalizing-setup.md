@@ -149,6 +149,10 @@ Here are some key combos that you should know:
 
 :::
 
+### Pretendo
+
+Pretendo is a replacement service for the Nintendo Network, which resurrects online services from the now shut down Nintendo Network. It also revives the Miiverse service, via juxtaposition. The official guide can be found [here](https://pretendo.network/docs/install/3ds).
+
 ::: info
 
 For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) and [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges) pages.
