@@ -33,6 +33,7 @@
 **All**
 
 + [A9LH to B9S](a9lh-to-b9s)
++ [Already have CFW](already-have-cfw)
 + [Credits](credits)
 + [Checking for CFW](checking-for-cfw)
 + [Contribute](contribute)
