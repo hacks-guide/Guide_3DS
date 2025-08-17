@@ -46,6 +46,12 @@ This likely indicates that you already have custom firmware. You should [check f
 
 :::
 
+::::
+
+::: details Error 032-1035 occured when attempting to view the skater hax webpage
+
+To attempt to fix this try connecting your console to a mobile hotspot of off your phone
+
 <!--@include: ./_include/troubleshooting-khc-common.md -->
 
 ## Issues with SafeB9SInstaller
