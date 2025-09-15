@@ -15,37 +15,37 @@ Si estás desinstalando CFW porque:
 - La tarjeta SD se perdió o se corrompió
 - Uno de tus juegos no funciona
 - Uno de los programas del sistema no funciona
-- Your console is unable to boot to HOME Menu
+- Tu consola no puede arrancar el Menú HOME
 
-<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+<u>**¡¡¡DETENTE!!!**</u> Desinstalar custom firmware es un riesgo innecesario que en el mejor de los casos solo desperdiciará tu tiempo y en el peor <u>**ROMPERÁ**</u> tu consola. Una mejor idea sería pedir ayuda (en inglés) en el [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
 :::
 
 ::: danger
 
-If you have done ANY of the following:
+Si has hecho CUALQUIERA de las siguientes cosas:
 
 - [Cambiar la región](region-changing) de la consola
 - Instalar un teclado personalizado
 - Instalar un menú HOME personalizado (_no_ un tema personalizado)
-- Manually changed the encryption key (`movable.sed`) of the console
+- Cambiar manualmente la clave de encriptado (`movable.sed`) de la consola
 - Unbanned the console
 
-then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. If this applies to you, [restore a clean NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+Entonces desinstalar CFW <u>**ROMPERÁ TU CONSOLA**</u>. Si este es el caso, [restaura una copia de seguridad limpia de la NAND](godmode9-usage#restoring-a-nand-backup) antes de continuar.
 
 :::
 
 ::: warning
 
-These instructions will only work on consoles with a Luma3DS version of 8.0 or higher. If you have an older version of Luma, you must upgrade your setup before following these instructions. Follow [this page](checking-for-cfw) to find your upgrade instructions.
+Estas instrucciones solo funcionarán en consolas con una versión de Luma3DS igual o mayor a la 8.0. Si tienes una versión anterior de Luma, debes actualizar tu configuración antes de seguir estas instrucciones. Ve a [esta página](checking-for-cfw) para encontrar instrucciones de actualización acordes a tu instalación.
 
 :::
 
 ## Lo que necesitas
 
 - La última versión de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (el archivo `.zip` de Luma3DS)
-- - La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (el archivo GodMode `.zip`)
-- The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
+- La última versión de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (el archivo GodMode `.zip`)
+- La última versión de [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 - [uninstall_cfw.gm9](/gm9_scripts/uninstall_cfw.gm9)
 
@@ -56,17 +56,17 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 1. Apaga la consola
 2. Inserta la tarjeta SD en tu computadora
 3. Copia todo lo que está dentro del `.zip` de Luma3DS a la raíz de tu tarjeta SD
-4. Copia `Godmode9.firm` desde Godmode9 `.zip` a la carpeta `/luma/payloads/` en la tarjeta SD
-5. Copia la carpeta `gm9` de GodMode9 `.zip` a la raíz de la tarjeta SD
-6. Copy `DSiWareUninstaller.3dsx` to the `/3ds/` folder on your SD card
-7. Copy `safety_test.gm9` and `uninstall_cfw.gm9` to the `/gm9/scripts/` folder on your SD card
+4. Copia `Godmode9.firm` desde Godmode9 `.zip` a la carpeta `/luma/payloads/` en tu tarjeta SD
+5. Copia la carpeta `gm9` desde GodMode9 `.zip` a la raíz de tu tarjeta SD
+6. Copia `DSiWareUninstaller.3dsx` a la carpeta `/3ds/` de tu tarjeta SD
+7. Copia `safety_test.gm9` y `uninstall_cfw.gm9` a la carpeta `/gm9/scripts/` en tu tarjeta SD
 8. Reinserta la tarjeta SD en la consola
 
-### Section II - DS Mode Tests
+### Sección II - Probar el Modo DS
 
-The purpose of this section is to check whether built-in DS mode applications will continue to work once CFW is uninstalled. If you skip this section, DS mode or its functions may be inaccessible until CFW is reinstalled.
+El propósito de esta sección es comprobar si las aplicaciones integradas del modo DS continuarán funcionando una vez que el CFW esté desinstalado. Si omites esta sección, el modo DS o sus funciones pueden ser inaccesibles hasta que se reinstale el CFW.
 
-#### DS Connection Settings Test
+#### Prueba de Ajustes de conexión Wi-Fi de Nintendo
 
 1. Enciende tu consola
 2. Inicia la configuración de la consola
@@ -194,9 +194,9 @@ Si estás desinstalando CFW porque:
 - La tarjeta SD se perdió o se corrompió
 - Uno de tus juegos no funciona
 - Uno de los programas del sistema no funciona
-- Your console is unable to boot to HOME Menu
+- Tu consola no puede arrancar el Menú HOME
 
-<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+<u>**¡¡¡DETENTE!!!**</u> Desinstalar custom firmware es un riesgo innecesario que en el mejor de los casos solo desperdiciará tu tiempo y en el peor <u>**ROMPERÁ**</u> tu consola. Una mejor idea sería pedir ayuda (en inglés) en el [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
 :::
 

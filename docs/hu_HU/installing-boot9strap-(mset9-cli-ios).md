@@ -121,7 +121,7 @@ Ezeket a lépéseket **PONTOSAN** kell követni, így ellenőrizz MINDENT kétsz
 3. Érintsd meg a Return-t az MSET9 szkript bezárásához
 4. Helyezd vissza az SD kártyád a konzolodba, **bármilyen gomb vagy a képernyő érintése nélkül**
 5. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
-   - If you get a red screen or the console gets stuck on a loading screen for more than 10 seconds, follow the [troubleshooting guide](troubleshooting-mset9)
+   - Ha piros képernyőt kapsz vagy a konzol beragad a betöltő képernyőn több mint 10 másodpercig, kövesd a [hibaelhárítási útmutatót](troubleshooting-mset9)
 
 ### III. rész - boot9strap telepítése
 

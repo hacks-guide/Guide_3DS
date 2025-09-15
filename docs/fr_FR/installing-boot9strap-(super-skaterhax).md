@@ -38,11 +38,11 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 2. Insérez votre carte SD dans votre ordinateur
 
 3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card. If any of the files exist, overwrite them with the new files.
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/skaterhax/skater-root-layout.png)
+   ![](/images/screenshots/skaterhax/skater-root-layout.png)
 
-    :::
+   :::
 
 4. Reinsert your SD card into your console
 
@@ -53,15 +53,15 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 7. Select "Other Settings"
 
 8. Navigate to "Profile" -> "Region Settings"
-    - These settings will be temporarily changed to increase the success rate of the exploit
-    - You can restore your region settings back to normal once you have finished this page
-    - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
+   - These settings will be temporarily changed to increase the success rate of the exploit
+   - You can restore your region settings back to normal once you have finished this page
+   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
 
 9. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
-    - USA: First select United States, then select Do Not Set
-    - EUR: First select United Kingdom, then select Do Not Set
-    - JPN: First select 日本, then select 設定しない
-    - KOR: First select 대한민국, then select 설정하지 않음
+   - USA: First select United States, then select Do Not Set
+   - EUR: First select United Kingdom, then select Do Not Set
+   - JPN: First select 日本, then select 設定しない
+   - KOR: First select 대한민국, then select 설정하지 않음
 
 10. Navigate to "Date & Time"
 
@@ -82,15 +82,15 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
 1. Open the Internet Browser
 2. Tap the 3-line (☰) icon on the bottom-right corner of the screen
 3. Tap `Settings` -> scroll down -> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK`
-    - The browser will close
+   - The browser will close
 4. Reopen the Internet Browser
 5. Tap `Next` -> `Google` -> `OK` -> `OK`
 6. Tap on the address bar at the top of the bottom screen
 7. Enter the URL corresponding to your console's region:
-    - **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
-    - **KOR**: `https://skater.686178.xyz/go/korea`
+   - **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
+   - **KOR**: `https://skater.686178.xyz/go/korea`
 8. Tap "Open"
-    - You should see the text "GO GO!". Do not click on it yet
+   - You should see the text "GO GO!". Do not click on it yet
 9. Tap the 3-line (☰) icon on the bottom-right corner of the screen
 10. Tap on "Add to Bookmarks"
 11. Tap the 3-line (☰) icon on the bottom-right corner of the screen
@@ -101,9 +101,9 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
 16. If your console displays:
     - **"The Homebrew Launcher" screen**: Continue to the next step
     - **A white "Error has occurred" message box**: The exploit failed due to random chance. Open System Settings, change the language to a different one (if possible), then retry this section. You may have to repeat this sequence up to ten times
-        - On JPN/KOR region consoles, there is only one language setting. On those consoles, you should open System Settings, close it, then retry this section
-        - If the exploit is still unsuccessful after five attempts, there may be a problem with your files or prep work. Ensure that region and date/time are correct, and that you have been following this section **exactly**. If you used WinRAR to extract files to the SD card, re-extract the files using File Explorer or 7-zip instead
-        - If the exploit is still unsuccessful after ten attempts, follow [MSET9](installing-boot9strap-\(mset9\)) instead
+      - On JPN/KOR region consoles, there is only one language setting. On those consoles, you should open System Settings, close it, then retry this section
+      - If the exploit is still unsuccessful after five attempts, there may be a problem with your files or prep work. Ensure that region and date/time are correct, and that you have been following this section **exactly**. If you used WinRAR to extract files to the SD card, re-extract the files using File Explorer or 7-zip instead
+      - If the exploit is still unsuccessful after ten attempts, follow [MSET9](installing-boot9strap-\(mset9\)) instead
     - **A black screen that says "An error has occurred"**: Your file placement is incorrect. Ensure that the super-skaterhax files are on the root of the SD card
     - **A yellow screen**: Homebrew Launcher failed to open due to random chance. Hold the POWER button until the console turns off, then retry this section
     - **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. If this is the case, you should follow [MSET9](installing-boot9strap-\(mset9\)) instead
@@ -116,7 +116,7 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
 In this section, you will install custom firmware onto your console.
 
 1. Lorsque vous y êtes invité, entrez la combinaison de touches indiquée sur l'écran supérieur pour installer boot9strap
-    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
 2. Once it is complete, press (A) to reboot your console
 
 <!--@include: ./_include/configure-luma3ds.md -->

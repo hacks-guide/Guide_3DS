@@ -152,7 +152,7 @@ Your console likely still has menuhax67 installed. To uninstall menuhax67, downl
 
 :::details Otra cosa
 
-Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, and describe the issue that you see.
+Únete al [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) y describe tu problema (en inglés) para obtener más ayuda.
 
 :::
 

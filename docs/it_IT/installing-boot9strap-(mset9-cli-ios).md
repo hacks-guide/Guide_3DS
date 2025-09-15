@@ -121,7 +121,7 @@ Queste istruzioni vanno eseguite **ALLA LETTERA**, quindi ricontrolla TUTTO quel
 3. Premi Invio per chiudere lo script di MSET9
 4. Reinserisci la scheda SD nella console **senza premere alcun pulsante o toccare lo schermo**
 5. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
-   - If you get a red screen or the console gets stuck on a loading screen for more than 10 seconds, follow the [troubleshooting guide](troubleshooting-mset9)
+   - Se vedi una schermata rossa o se la console si blocca ad una schermata di caricamento per più di 10 secondi, [segui questa guida per risolvere il problema](troubleshooting-mset9)
 
 ### Sezione III - Installazione di boot9strap
 
