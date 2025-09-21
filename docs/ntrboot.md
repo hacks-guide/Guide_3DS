@@ -17,10 +17,10 @@ Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files
 | Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | Other Notes |
 |-|-:|:-:|:-:|:-:|-|
 | [**Ace3DS X**](https://www.nds-card.com/ProShow.asp?ProID=575) | $24.99 | No | ALL | ALL | **Comes pre-flashed with ntrboot** (external switch to switch between ntrboot ("3DS") and NDS modes); do not manually flash with ntrboot. This cart needs an SD card inserted to function for both ntrboot and regular NDS firmware. |
-| [**R4i-SDHC B9S** (r4i-sdhc.com)](http://www.nds-card.com/ProShow.asp?ProID=574) | Out of Stock | September 3, 2024 | ALL | ALL | **Comes pre-flashed with ntrboot**; can be flashed back to an NDS flashcart. |
-| [**DSTT** (ndstt.com)](http://www.nds-card.com/ProShow.asp?ProID=157) | $19.99 | No | None | None | Only models with [certain flash chips](https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6) are compatible with ntrboot. |
-| [**R4i-SDHC 3DS RTS** (r4i-sdhc.com)](http://www.nds-card.com/ProShow.asp?ProID=146) | $20.99 | 1.85b: September 3, 2024 | ALL | ALL | |
-| [**R4iSDHC GOLD Pro 20XX** (r4isdhc.com)](http://www.nds-card.com/ProShow.asp?ProID=490) | $22.99 | 4.0b: September 3, 2024 | ALL | ALL | Only r4isdhc **.com** carts marked with a year of 2014 or later are compatible. |
+| [**R4i-SDHC B9S** (r4i-sdhc.com)](https://www.nds-card.com/ProShow.asp?ProID=574) | Out of Stock | September 3, 2024 | ALL | ALL | **Comes pre-flashed with ntrboot**; can be flashed back to an NDS flashcart. |
+| [**DSTT** (ndstt.com)](https://www.nds-card.com/ProShow.asp?ProID=157) | $19.99 | No | None | None | Only models with [certain flash chips](https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6) are compatible with ntrboot. |
+| [**R4i-SDHC 3DS RTS** (r4i-sdhc.com)](https://www.nds-card.com/ProShow.asp?ProID=146) | $20.99 | 1.85b: September 3, 2024 | ALL | ALL | |
+| [**R4iSDHC GOLD Pro 20XX** (r4isdhc.com)](https://www.nds-card.com/ProShow.asp?ProID=490) | $22.99 | 4.0b: September 3, 2024 | ALL | ALL | Only r4isdhc **.com** carts marked with a year of 2014 or later are compatible. |
 | **Ace3DS Plus** | | No | ALL | ALL | This cart needs an SD card inserted to function for both ntrboot and regular NDS firmware. |
 | **Acekard 2i** | | No | <= 4.3.0 | <= 1.4.4 | |
 | **Gateway Blue** | | No | 4.1.0 - 4.5.0 | ALL | |
