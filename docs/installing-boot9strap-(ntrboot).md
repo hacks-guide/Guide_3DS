@@ -53,9 +53,8 @@ In this section, you will install custom firmware onto your console.
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
     + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ntrboot#sighaxed-firm-was-not-installed-check-lower-screen-for-more-info)
-    + If the top screen is blank **and** you see "Crypto Status - all checks passed" on the bottom screen, or if both screens are blank, you will have to enter the key combo blindly. Press the following buttons on your console in this order:
+    + If the top screen is blank **and** you see "Crypto Status - all checks passed" on the bottom screen, you will have to enter the key combo blindly. Press the following buttons on your console in this order:
         + D-Pad Left, D-Pad Down, D-Pad Right, D-Pad Up, A
-        + If both screens are blank and entering the key combo does not do anything, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 1. Once it is complete (all seven steps on the bottom screen are green), force your console to power off by holding down the power button
     + Your console will only boot to the SafeB9SInstaller screen until the next section is completed
 
