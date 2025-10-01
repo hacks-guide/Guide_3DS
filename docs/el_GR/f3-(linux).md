@@ -10,7 +10,7 @@
 
 ## Τι χρειάζεστε
 
-- Την πιο πρόσφατη έκδοση του [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- Την πιο πρόσφατη έκδοση του [F3](https://github.com/AltraMayor/f3/releases/latest)
 
 ## Οδηγίες
 

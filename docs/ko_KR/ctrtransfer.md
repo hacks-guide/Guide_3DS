@@ -24,11 +24,11 @@
 - 최신 버전의 [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (우클릭 후 "링크를 다른 이름으로 저장..."을 선택)
 - 콘솔과 지역에 맞는 11.15.0 CTRTransfer 이미지
 
-    ::: warning
+  ::: warning
 
-    CTRTransfer 이미지를 다운로드 하기 위해선 [qBitTorrent](https://www.qbittorrent.org/download)나 [Deluge](https://deluge-torrent.org/download/)와 같은 토렌트 클라이언트가 필요합니다.
+  CTRTransfer 이미지를 다운로드 하기 위해선 [qBitTorrent](https://www.qbittorrent.org/download)나 [Deluge](https://deluge-torrent.org/download/)와 같은 토렌트 클라이언트가 필요합니다.
 
-    :::
+  :::
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 

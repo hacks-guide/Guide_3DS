@@ -10,7 +10,7 @@ This page is for Linux users only. If you are not on Linux, check out the [H2tes
 
 ## Ce dont vous avez besoin
 
-- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- The latest version of [F3](https://github.com/AltraMayor/f3/releases/latest)
 
 ## Instructions
 

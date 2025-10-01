@@ -10,7 +10,7 @@ Această pagină este doar pentru utilizatorii de Linux. If you are not on Linux
 
 ## What You Need
 
-- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- The latest version of [F3](https://github.com/AltraMayor/f3/releases/latest)
 
 ## Instructions
 

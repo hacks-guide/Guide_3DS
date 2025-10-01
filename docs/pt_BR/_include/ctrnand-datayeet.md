@@ -1,4 +1,10 @@
-Esta seção redefinirá a configuração do console para os valores padrão. \*\*Os jogos instalados e seus dados salvos não serão afetados. \* Isto é **necessário** para evitar problemas conhecidos relacionados ao modo de memória estendida e applets em alguns consoles.
+Esta seção redefinirá a configuração do console para os valores padrão. **Os jogos instalados e seus dados salvos não serão afetados.**
+
+::: danger
+
+NÃO pule esta seção! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+
+:::
 
 ::: warning
 
@@ -9,7 +15,7 @@ Este processo irá redefinir seus dados do Mii. Se você deseja salvar qualquer 
 1. Desligue seu console
 2. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 3. Navegue para `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-    - O `<ID0>` é uma pasta com um nome de 32 caracteres
+   - O `<ID0>` é uma pasta com um nome de 32 caracteres
 4. Use os botões direcionais para destacar `00010017`
 5. Aperte (Gatilho Direito) + (A) para abrir as opções de pasta
 6. Selecione "Copy to 0:/gm9/out''

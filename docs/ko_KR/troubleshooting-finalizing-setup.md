@@ -76,7 +76,7 @@ GodMode9에서 "Make essential files backup?" 알림에서 No를 선택했을 �
 4. "Scripts..."를 선택해 주세요
 5. "finalize"를 선택해 주세요
 6. 스크립트를 계속 실행해 주세요
-    - NAND 백업은 자동으로 스킵됩니다.
+   - NAND 백업은 자동으로 스킵됩니다.
 
 :::
 
@@ -121,7 +121,7 @@ SD 카드가 [쓰기 금지](/images/sdlock.png) 상태가 아닌지 확인해 �
 3. `/gm9/backups/` 폴더 내 파일들을 컴퓨터에 백업해 주세요
 4. `/gm9/backups/` 폴더를 SD 카드에서 지워주세요
 5. Nintendo 3DS 폴더를 SD 카드에서 다른 곳으로 옮겨놨을 경우, SD 카드로 다시 복사해 주세요.
-    - Nintendo 3DS 폴더가 없을 경우, 콘솔에 SD 카드를 장착한 채로 HOME 메뉴로 부팅하여 SD 카드에 자동으로 폴더가 생성되도록 해야 합니다.
+   - Nintendo 3DS 폴더가 없을 경우, 콘솔에 SD 카드를 장착한 채로 HOME 메뉴로 부팅하여 SD 카드에 자동으로 폴더가 생성되도록 해야 합니다.
 6. (Start) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. GodMode9이 실행될 겁니다
 7. (Home)을 눌러 작업 메뉴를 열어 주세요
 8. "Scripts..."를 선택해 주세요

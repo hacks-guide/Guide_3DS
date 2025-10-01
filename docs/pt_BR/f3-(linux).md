@@ -10,7 +10,7 @@ Esta página é destinada apenas a usuários do Linux. Se você não está no Li
 
 ## O que é necessário
 
-- A versão mais recente do [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- The latest version of [F3](https://github.com/AltraMayor/f3/releases/latest)
 
 ## Instruções
 

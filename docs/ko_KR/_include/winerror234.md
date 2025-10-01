@@ -6,40 +6,40 @@
 
 1. **윈도우 키 + R**을 입력해 실행 창을 열고, `intl.cpl`을 입력한 후 "확인"을 클릭하세요.
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/troubleshooting/234run.png)
+   ![](/images/screenshots/troubleshooting/234run.png)
 
-    :::
+   :::
 
 2. Click on `Administrative`, then `Change System Locale`
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/troubleshooting/234region.png)
+   ![](/images/screenshots/troubleshooting/234region.png)
 
-    :::
+   :::
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/troubleshooting/234administrative.png)
+   ![](/images/screenshots/troubleshooting/234administrative.png)
 
-    :::
+   :::
 
 3. Uncheck the box next to `Beta: Use Unicode UTF-8 for worldwide language support` then click "OK"
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/troubleshooting/234locale.png)
+   ![](/images/screenshots/troubleshooting/234locale.png)
 
-    :::
+   :::
 
 4. Click "Restart Now"
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/troubleshooting/234restart.png)
+   ![](/images/screenshots/troubleshooting/234restart.png)
 
-    :::
+   :::
 
 PC가 재부팅된 후, MSET9 ID1을 다시 생성해보세요.

@@ -1,4 +1,10 @@
-此章节的操作将会将你的系统设置重置为默认值。 **已安装的游戏和存档不会受到任何影响。**这个是为了防止某些主机出现有关扩展内存模式和小程序的一些问题而进行的**必要**操作。
+此章节的操作将会将你的系统设置重置为默认值。 **Installed games and their save data will not be affected.**
+
+::: danger
+
+Do NOT skip this section! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+
+:::
 
 ::: warning
 
@@ -9,7 +15,7 @@ This process will reset your Mii data. If you wish to save any Miis that you hav
 1. 将主机关机
 2. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 3. 进入到 `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-    - The `<ID0>` will be a folder with a 32-character long name
+   - The `<ID0>` will be a folder with a 32-character long name
 4. 使用十字键将光标移动至 `00010017`
 5. 按下 “R” + “A” 键打开文件夹选项菜单
 6. 选择 “Copy to 0:/gm9/out”

@@ -10,7 +10,7 @@ Laman ini khusus pengguna Linux. Jika tidak menggunakan Linux, lihat laman [H2te
 
 ## Apa yang Perlu
 
-- Versi terkini dari [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- The latest version of [F3](https://github.com/AltraMayor/f3/releases/latest)
 
 ## Instruksi
 

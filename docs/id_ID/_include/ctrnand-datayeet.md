@@ -1,4 +1,10 @@
-Bagian ini akan mengembalikan pengaturan sistem ke bawaan. **Tidak memengaruhi permainan terpasang dan simpanannya.** Ini **diperlukan** untuk mencegah isu terkait _applet_ dan mode memori perluasan di beberapa konsol.
+Bagian ini akan mengembalikan pengaturan sistem ke bawaan. **Tidak memengaruhi permainan terpasang dan simpanannya.**
+
+::: danger
+
+JANGAN lewati bagian ini! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+
+:::
 
 ::: warning
 
@@ -9,7 +15,7 @@ Ini akan mengatur ulang data Mii Anda. Jika ingin menyimpan Mii buatan Anda, bis
 1. Matikan daya konsol
 2. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 3. Navigasi ke `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-    - `<ID0>` di sini folder dengan nama berjumlah 32 huruf
+   - `<ID0>` di sini folder dengan nama berjumlah 32 huruf
 4. Sorot ke `00010017` dengan Tombol Arah
 5. Tekan (R) + (A) untuk memunculkan opsi folder
 6. Pilih "Copy to 0:/gm9/out"

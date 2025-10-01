@@ -1,4 +1,10 @@
-Ez a rész a rendszer beállítások alaphelyzetbe állítását szolgálja. **A telepített játékok és mentéseik nem érintettek.** Ez **szükséges**, hogy megelőzzük az ismert problémákat, amit a kibővített memória módhoz és appletekhez bizonyos konzolokon.
+Ez a rész a rendszer beállítások alaphelyzetbe állítását szolgálja. **A telepített játékok és mentés adatuk nem érintett.**
+
+::: danger
+
+NE ugord át ezt a részt! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+
+:::
 
 ::: warning
 

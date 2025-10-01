@@ -1,4 +1,10 @@
-This section will reset your system settings to its defaults. **Installed games and their save data will not be affected.** This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+This section will reset your system settings to its defaults. **Installed games and their save data will not be affected.**
+
+::: danger
+
+Do NOT skip this section! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+
+:::
 
 ::: warning
 

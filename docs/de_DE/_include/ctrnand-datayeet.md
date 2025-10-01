@@ -1,4 +1,10 @@
-Dieser Abschnitt wird deine Systemkonfiguration auf die Standardwerte zurücksetzen. **Installierte Spiele und deren Speicherdaten werden nicht verändert.** Dies ist **erforderlich** um bekannte Probleme im Zusammenhang mit dem Extended Memory-Modus und Applets auf einigen Konsolen zu vermeiden.
+Dieser Abschnitt wird deine Systemkonfiguration auf die Standardwerte zurücksetzen. **Installed games and their save data will not be affected.**
+
+::: danger
+
+Do NOT skip this section! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+
+:::
 
 ::: warning
 
@@ -9,7 +15,7 @@ This process will reset your Mii data. If you wish to save any Miis that you hav
 1. Power off your console
 2. Press and hold (Start), and while holding (Start), power on your console. Dies wird GodMode9 starten
 3. Navigiere zu `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
-    - The `<ID0>` will be a folder with a 32-character long name
+   - The `<ID0>` will be a folder with a 32-character long name
 4. Nutze das Steuerkreuz, um `00010017` auszuwählen
 5. Drücke (R) und (A), um die Optionen für den Ordner anzuzeigen
 6. Wähle "Copy to 0:/gm9/out" aus

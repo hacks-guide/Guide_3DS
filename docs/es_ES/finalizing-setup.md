@@ -84,7 +84,7 @@ En esta sección, actualizarás tu sistema a la última versión, lo cual es seg
 
 En esta sección, sincronizarás el reloj interno de la 3DS con la hora real y volcarás el firmware de sonido (que es necesario para que algunos software homebrew utilicen el sonido correctamente).
 
-1. Oprime (L) + (Abajo) + (SELECT) a la vez para abrir el menú Rosalina
+1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
    - Si alguno de estos botones no funciona, descarga [config.ini](/assets/config.ini) y ponlo en tu carpeta `luma `, reemplazando el archivo existente. Esto cambiará la combinación de botones del menú de Rosalina a (X) + (Y)
 2. Selecciona "Miscellaneous options"
 3. Selecciona "Dump DSP firmware"

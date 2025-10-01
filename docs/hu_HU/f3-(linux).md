@@ -10,7 +10,7 @@ Ez az oldal Linux felhasználókra vonatkozik. Ha nem Linuxod van, nézd meg a [
 
 ## Amire szükséged lesz
 
-- Az [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0) legújabb kiadása
+- Az [F3](https://github.com/AltraMayor/f3/releases/latest) legújabb kiadása
 
 ## Lépések
 

@@ -1,4 +1,10 @@
-Esta sección restablecerá los ajustes del sistema a los predeterminados. **Los juegos instalados y sus datos de guardados no serán afectados.** Esto es **requerido** para prevenir problemas conocidos en relación con el modo de memoria extendida y aplicaciones en algunas consolas.
+Esta sección restablecerá los ajustes del sistema a los predeterminados. **Los juegos instalados y sus datos de guardado no se verán afectados.**
+
+::: danger
+
+¡NO saltes esta sección! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+
+:::
 
 ::: warning
 

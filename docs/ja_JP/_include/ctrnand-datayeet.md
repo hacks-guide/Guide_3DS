@@ -1,4 +1,10 @@
-このセクションではシステム設定を初期状態にリセットします。 **Installed games and their save data will not be affected.** This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+このセクションではシステム設定を初期状態にリセットします。 **Installed games and their save data will not be affected.**
+
+::: danger
+
+Do NOT skip this section! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+
+:::
 
 ::: warning
 

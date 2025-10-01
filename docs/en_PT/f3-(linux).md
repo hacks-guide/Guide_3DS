@@ -10,7 +10,7 @@ Dependin' on th' size 'o ye SD card 'n th' speed 'o ye computer, 'tis process ca
 
 ## What You Need
 
-- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- The latest version of [F3](https://github.com/AltraMayor/f3/releases/latest)
 
 ## Instructions
 

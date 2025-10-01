@@ -10,7 +10,7 @@ Deze pagina is alleen voor Linux gebruikers. Als je geen Linux gebruikt, zie dan
 
 ## What You Need
 
-- The latest version of [F3](https://github.com/AltraMayor/f3/releases/tag/v8.0)
+- The latest version of [F3](https://github.com/AltraMayor/f3/releases/latest)
 
 ## Instructions
 

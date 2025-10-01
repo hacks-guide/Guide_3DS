@@ -1,4 +1,10 @@
-Questa sezione ripristinerà la configurazione di sistema ai valori predefiniti. **I giochi installati e i loro dati di salvataggio non saranno influenzati.** È **necessario** per evitare problemi noti relativi alla modalità a memoria estesa e alle applet su alcune console.
+Questa sezione ripristinerà la configurazione di sistema ai valori predefiniti. **I giochi installati e i loro dati di salvataggio non verranno toccati.**
+
+::: danger
+
+NON saltare questa sezione! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+
+:::
 
 ::: warning
 
