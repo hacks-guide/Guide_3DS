@@ -15,6 +15,23 @@ export default defineConfig({
   description: "A complete guide to 3DS custom firmware",
   head: [
     ['link', { rel: 'icon', href: '/images/site-config/favicon.ico' }],
+    ['link', {
+      rel: 'stylesheet',
+      href: 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css',
+      integrity: "sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==",
+      crossorigin: "anonymous",
+      referrerpolicy: "no-referrer"
+    }],
+    ['script', {
+      src: 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js',
+      integrity: "sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==",
+      crossorigin: "anonymous",
+      referrerpolicy: "no-referrer"
+    }],
+    ['link', {
+      rel: 'stylesheet',
+      href: '/assets/css/cookieconsent.css'
+    }],
     ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-760Y60FQ3T' }],
     ['script', {}, `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-760Y60FQ3T');`]
   ],

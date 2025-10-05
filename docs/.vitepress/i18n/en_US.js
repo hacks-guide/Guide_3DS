@@ -269,5 +269,14 @@ export default {
 	label: "English",
     title: localeData.title,
     description: localeData.description,
-    themeConfig: themeConfig
+    themeConfig: themeConfig,
+	head: [
+		['script',
+			{
+				id: "cookieconsent_i18n",
+				content: localeData.cookieConsent,
+				src: "/assets/js/cookieconsent.js"
+			},
+		]
+	],
 }
