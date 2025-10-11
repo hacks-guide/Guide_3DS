@@ -111,13 +111,22 @@ function can_superskaterhax(major, minor, native, region, model) {
 // MSET9
 // 11.4-11.17
 function can_mset9(major, minor, native, region, model) {
-
+    // CHN has no extra data
+    if (region == "C") {
+        return false;
+    }
     // Exploit supports 11.4 or later
     if(major == 11 && minor >= 4) {
-        window.location.href = "installing-boot9strap-(mset9)"
+        window.location.href = "installing-boot9strap-(mset9)";
         return true;
     }
     return false;
+}
+
+function can_ntrboot(major, minor, native, region, model) {
+    // The only reason ntrboot (ever) wouldn't work is when Start, Select, or X cannot be pressed.
+    window.location.href = "installing-boot9strap-(ntrboot)";
+    return true;
 }
 
 /*
@@ -148,6 +157,10 @@ function can_mset9(major, minor, native, region, model) {
         - N3DS only
     - MSET9
         - 11.4 - 11.17
+        - All regions (except CHN)
+        - All models
+    - ntrboot
+        - 1.0 - 11.17
         - All regions
         - All models
 */
@@ -189,7 +202,8 @@ function redirect() {
       can_ssloth,
       can_safecerthax,
       can_superskaterhax,
-      can_mset9
+      can_mset9,
+      can_ntrboot
     ].some(func => func(major, minor, nver, region, model));
     if (redirected) return true;
 
