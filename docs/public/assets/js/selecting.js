@@ -111,7 +111,6 @@ function can_superskaterhax(major, minor, native, region, model) {
 // MSET9
 // 11.4-11.17
 function can_mset9(major, minor, native, region, model) {
-    // CHN has no extra data
     if (region == "C") {
         return false;
     }
