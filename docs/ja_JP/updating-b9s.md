@@ -1,30 +1,30 @@
-# Updating B9S
+# B9Sのアップデート
 
-## Required Reading
+## 必読
 
-This page is for existing boot9strap users to update their installation of boot9strap to the latest version.
+このページは、既存のboot9strap ユーザーがboot9strap を最新バージョンにアップデートするためのものです。
 
-## What You Need
+## 必要なもの
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- 最新リリースの [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (直接ダウンロード)
+- 最新リリースの [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (直接ダウンロード)
+- 最新リリースの [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (Luma3DSの`.zip` ファイル)
 
-## Instructions
+## 手順
 
-### Section I - Prep Work
+### セクション I - 準備作業
 
 ::: info
 
-For all steps in this section, overwrite any existing files on your SD card.
+このセクションのすべての手順では、SD カード上の既存のファイルをすべて上書きします。
 
 :::
 
 1. パソコンにSDカードを入れます
 2. `boot9strap`という名前のフォルダをSDカードのルート上に作成します。
 3. `boot9strap.firm`と`boot9strap.firm.sha`を boot9strap `.zip` ファイルから解凍し、SD カードのboot9strapフォルダにコピーします。
-4. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the root of your SD card and rename it to `boot.firm`
-5. Reinsert your SD card into your console
+4. `SafeB9SInstaller.zip` から `SafeB9SInstaller.firm` をSDカードのルートにコピーし、名前を `boot.firm` に変更します。
+5. SDカードをコンソールに再度挿入します
 
    ::: info
 
@@ -32,29 +32,29 @@ For all steps in this section, overwrite any existing files on your SD card.
 
    :::
 
-### Section II - Installing boot9strap
+### セクション II - boot9strapのインストール
 
-1. Power on your console
-   - This should automatically launch SafeB9SInstaller
-2. When prompted, input the key combo given on the top screen to install boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-updating-b9s)
-3. Once it is completed, force your console to power off by holding down the power button
-   - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
+1. コンソールの電源をオンにします
+   - これにより、SafeB9SInstallerが自動的に起動します。
+2. プロンプトが表示されたら、上部の画面に表示されているキーの組み合わせを入力してboot9strapをインストールします。
+   - 画面下部の手順に赤いテキストが表示され、キーの組み合わせを入力するように求められない場合は、[このトラブルシューティングガイドに従ってください](troubleshooting-updating-b9s)
+3. 完了したら、電源ボタンを長押ししてコンソールの電源を強制的にオフにします。
+   - 次のセクションが完了するまで、コンソールはSafeB9SInstallerの画面のみ起動します。
 
-### Section III - Update Luma3DS
+### セクション III - Luma3DSのアップデート
 
 1. パソコンにSDカードを入れます
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
-3. Reinsert your SD card into your console
-4. Power on your console
-5. If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot
-   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-   - For the purpose of this guide, these settings will be left on default settings
+2. Luma3DS の `.zip` ファイルをSDカードのルートディレクトリにコピーし、既存のファイルを置き換えます。
+3. SDカードをコンソールに挿入し直します。
+4. コンソールの電源を入れます。
+5. コンソールがLuma3DSの設定メニューを起動した場合は、（スタート）ボタンを押して保存し、再起動します。
+   - Luma3DSの設定メニューは、Luma3DSカスタムファームウェアの設定です。これらの設定の多くは、カスタマイズやデバッグに役立ちます。
+   - このガイドでは、これらの設定はデフォルト設定のままとします。
 
 ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+[セットアップの最終処理](finalizing-setup) に進む
 
 :::
