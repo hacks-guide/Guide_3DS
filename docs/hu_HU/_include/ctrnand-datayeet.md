@@ -2,7 +2,7 @@ Ez a rész a rendszer beállítások alaphelyzetbe állítását szolgálja. **A
 
 ::: danger
 
-NE ugord át ezt a részt! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+NE ugord át ezt a részt! Ez **szükséges**, hogy megelőzzünk ismert problémákat, amik a kiterjesztett memória módhoz és appletekhez kapcsolódnak néhány konzolon.
 
 :::
 

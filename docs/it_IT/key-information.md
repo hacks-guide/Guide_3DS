@@ -32,7 +32,7 @@ Questa guida funziona su tutte le versioni retail della famiglia di console Nint
 
 :::
 
-Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa scaricare file tramite Internet e copiarli sulla tua scheda SD. Questo include la maggior parte dei dispositivi elettronici di consumo, come i computer che eseguono Windows, macOS, Linux e chromeOS (Chromebook), come anche i telefoni Android. A seconda del tuo dispositivo elettronico, potresti aver bisogno di acquistare un adattatore per schede SD, per leggere la tua scheda SD.
+Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa scaricare file tramite Internet e copiarli sulla tua scheda SD. Questo include la maggior parte dei dispositivi elettronici di consumo, come i computer che eseguono Windows, macOS, Linux e chromeOS (Chromebook), come anche telefoni o tablet con Android o iOS. A seconda del tuo dispositivo elettronico, potresti aver bisogno di acquistare un adattatore per schede SD, per leggere la tua scheda SD.
 
 ::::
 

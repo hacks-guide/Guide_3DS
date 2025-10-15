@@ -2,7 +2,7 @@ Questa sezione ripristinerà la configurazione di sistema ai valori predefiniti.
 
 ::: danger
 
-NON saltare questa sezione! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+NON saltare questa sezione! È **necessario** per prevenire problemi noti sulla modalità a memoria estesa e su applet in alcune console.
 
 :::
 

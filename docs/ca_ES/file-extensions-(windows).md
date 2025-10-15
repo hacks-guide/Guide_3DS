@@ -15,11 +15,11 @@ This will make it easier for you to find the referenced files in the rest of thi
 3. Go to "Show"
 4. Click "File name extensions" to enable it
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/windows-11-file-extensions.png)
+   ![](/images/screenshots/windows-11-file-extensions.png)
 
-    :::
+   :::
 
 ### Windows 10 / 8.1 / 8
 
@@ -27,11 +27,11 @@ This will make it easier for you to find the referenced files in the rest of thi
 2. Click the "View" option on the ribbon menu
 3. Check the box labeled "File name extensions"
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/windows-10-file-extensions.png)
+   ![](/images/screenshots/windows-10-file-extensions.png)
 
-    :::
+   :::
 
 ### Windows 7
 
@@ -39,21 +39,21 @@ This will make it easier for you to find the referenced files in the rest of thi
 
 2. Search for "Folder Options" and select the corresponding result
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/windows-7-folder-options-start-menu.png)
+   ![](/images/screenshots/windows-7-folder-options-start-menu.png)
 
-    :::
+   :::
 
 3. Click the "View" option at the top of the Folder Options menu
 
 4. Uncheck the box labeled "Hide extensions for known file types"
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/windows-7-folder-options.png)
+   ![](/images/screenshots/windows-7-folder-options.png)
 
-    :::
+   :::
 
 ::: tip
 

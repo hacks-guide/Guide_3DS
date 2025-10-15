@@ -85,7 +85,7 @@ Nesta seção, você atualizará seu sistema para a versão mais recente, que é
 Nesta seção, você irá sincronizar o relógio interno do seu 3DS com a hora real e descarregar o firmware de som (que é necessário para que alguns softwares de homebrew utilizem o som corretamente).
 
 1. Aperte (Gatilho Esquerdo) + (D-pad pra baixo) + (Select) ao mesmo tempo para abrir o menu Rosalina
-    - Se algum desses botões estiver quebrado, baixe o arquivo [config.ini](/assets/config.ini) e coloque-o na pasta `luma`, substituindo o arquivo já existente. Isso vai mudar a combinação de botões do Rosalina menu para (X) + (Y)
+   - Se algum desses botões estiver quebrado, baixe o arquivo [config.ini](/assets/config.ini) e coloque-o na pasta `luma`, substituindo o arquivo já existente. Isso vai mudar a combinação de botões do Rosalina menu para (X) + (Y)
 2. Selecione "Miscellaneous options"
 3. Selecione "Dump DSP firmware"
 4. Pressione (B) para continuar
@@ -100,18 +100,18 @@ Nesta seção, você usará uma série de scripts para automatizar a instalaçã
 
 1. Desligue seu console
 2. Aperte e segure (X), e enquanto segura (X), ligue o console. Isto irá iniciar o Finalizing Setup Helper
-    - Se você inicializar no Menu HOME, sua pasta `payloads` pode estar nomeada incorretamente ou no local errado
-    - Se você encontrar um erro, consulte a página de [troubleshooting](troubleshooting-finalizing-setup)
+   - Se você inicializar no Menu HOME, sua pasta `payloads` pode estar nomeada incorretamente ou no local errado
+   - Se você encontrar um erro, consulte a página de [troubleshooting](troubleshooting-finalizing-setup)
 3. Se o Helper for bem-sucedido, o seu console iniciará no GodMode9
-    - A partir deste ponto, você pode acessar o GodMode9 segurando START enquanto liga o console
+   - A partir deste ponto, você pode acessar o GodMode9 segurando START enquanto liga o console
 4. Se você for solicitado para criar um backup de arquivos essenciais, aperte (A) pra fazê-lo, e depois aperte (A) para continuar quando ele for concluído
 5. Se você for solicitado para consertar o RTC date&time, pressione (A) para consertar, então insira a data e a hora, depois pressione (A) para continuar
 6. Aperte (Home) para abrir o menu de ações
 7. Selecione "Scripts..."
 8. Selecione "finalize"
 9. Siga as instruções no script, respondendo a quaisquer perguntas que lhe sejam feitas
-    - Se você ver "Information #05: No title database", pressione (A) para importar e aperte os botões na tela para prosseguir
-    - Se você encontrar um erro, siga as instruções na mensagem de erro ou consulte a página de [troubleshooting](troubleshooting-finalizing-setup)
+   - Se você ver "Information #05: No title database", pressione (A) para importar e aperte os botões na tela para prosseguir
+   - Se você encontrar um erro, siga as instruções na mensagem de erro ou consulte a página de [troubleshooting](troubleshooting-finalizing-setup)
 10. Uma vez que o script disser "Setup complete!", aperte (A) para desligar o dispositivo
     - Se você NÃO ver a mensagem "Setup complete!", o script não foi bem-sucedido e você terá que refazer esta seção a partir do Passo 3
 11. Insira o cartão SD no seu computador
@@ -148,6 +148,14 @@ Aqui estão alguns combos que você deve saber:
 - Segurar (Start) + (Select) + (X) ao ligar o console fará com que o LED de notificação mostre uma cor, para fins de depuração. Veja o [changelog](https://github.com/SciresM/boot9strap/releases/tag/1.4) para uma lista.
 
 :::
+
+### Pretendo
+
+Pretendo is a replacement service for the Nintendo Network, which resurrects online services from the now shut down Nintendo Network. It also revives the Miiverse service, via juxtaposition. The official guide can be found [here](https://pretendo.network/docs/install/3ds).
+
+**Note: Pretendo does not support every online service, however work is being done to achieve this.**
+
+A list of games that Pretendo supports can be found [here](https://wiki.pretendo.zip/game-support-status).
 
 ::: info
 

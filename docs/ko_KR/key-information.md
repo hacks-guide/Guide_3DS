@@ -32,7 +32,7 @@
 
 :::
 
-대부분의 경우, 인터넷에서 파일을 다운로드 하고 SD 카드에 옮길 수 있어야만 이용 가능합니다. 여기에는 Windows, macOS, 그리고 chromeOS (Chromebook)을 실행하는 컴퓨터와 안드로이드 폰 등의 대부분의 소비자용 전자 기기가 포함됩니다. Depending on your electronic device, you may need to purchase an SD card adapter to allow it to read your SD card.
+대부분의 경우, 인터넷에서 파일을 다운로드 하고 SD 카드에 옮길 수 있어야만 이용 가능합니다. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as phones and tablets running Android and iOS. Depending on your electronic device, you may need to purchase an SD card adapter to allow it to read your SD card.
 
 ::::
 

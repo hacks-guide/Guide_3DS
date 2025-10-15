@@ -85,7 +85,7 @@ The screenshot below indicates the minimum SD card layout that is required to fo
 本节中，你将会把主机的内部时钟同步现实时间，并导出声卡的固件（部分自制程序需要使用它来正确发声）。
 
 1. 同时按下 “L” + “↓” + “Select” 键来打开 Rosalina 菜单
-    - If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
+   - If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
 2. 选择 “Miscellaneous options”
 3. 选择“Dump DSP firmware”
 4. Press (B) to continue
@@ -100,18 +100,18 @@ In this section, you will use a series of scripts to automate homebrew installat
 
 1. 将主机关机
 2. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
-    - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
-    - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
+   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
+   - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
 3. If the Helper was successful, your console will boot into GodMode9
-    - From this point forward, you can access GodMode9 by holding START while powering on your console
+   - From this point forward, you can access GodMode9 by holding START while powering on your console
 4. 如果提示创建重要文件备份，按下 “A” 键确认，在完成后再次按下 “A” 键来继续。
 5. 如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
 6. 按下 “Home” 键来打开功能菜单
 7. 选择 “Scripts...”
 8. Select "finalize"
 9. Follow the prompts in the script, answering any questions that you are asked
-    - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
-    - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
+   - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
+   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
 10. Once the script says "Setup complete!", press (A) to power off the device
     - If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
 11. 将你的 SD 卡插入到电脑
@@ -148,6 +148,14 @@ Trying to figure out what to do with your newly modded device? Visit [our wiki](
 - Holding (Start) + (Select) + (X) on boot will make the notification LED show a color for debug purposes. 参见[更新日志](https://github.com/SciresM/boot9strap/releases/tag/1.4)以获取信息。
 
 :::
+
+### Pretendo
+
+Pretendo is a replacement service for the Nintendo Network, which resurrects online services from the now shut down Nintendo Network. It also revives the Miiverse service, via juxtaposition. The official guide can be found [here](https://pretendo.network/docs/install/3ds).
+
+**Note: Pretendo does not support every online service, however work is being done to achieve this.**
+
+A list of games that Pretendo supports can be found [here](https://wiki.pretendo.zip/game-support-status).
 
 ::: info
 

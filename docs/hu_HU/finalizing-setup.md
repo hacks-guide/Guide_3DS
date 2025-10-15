@@ -149,6 +149,14 @@ Néhány billentyű kombináció amit ismerned kell:
 
 :::
 
+### Pretendo
+
+Pretendo is a replacement service for the Nintendo Network, which resurrects online services from the now shut down Nintendo Network. It also revives the Miiverse service, via juxtaposition. The official guide can be found [here](https://pretendo.network/docs/install/3ds).
+
+**Note: Pretendo does not support every online service, however work is being done to achieve this.**
+
+A list of games that Pretendo supports can be found [here](https://wiki.pretendo.zip/game-support-status).
+
 ::: info
 
 Információkért a GodMode9 különféle funkcióiról olvasd el a [GodMode9 használata](godmode9-usage) és a [Címek és Játék Cartridge-ek dumpolása](dumping-titles-and-game-cartridges) című leírásokat.

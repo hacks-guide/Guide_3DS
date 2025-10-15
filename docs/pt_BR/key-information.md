@@ -32,7 +32,7 @@ Este guia funciona com todos os consoles de varejo da família de consoles do Ni
 
 :::
 
-Na maioria dos casos você pode seguir este guia desde que você consiga baixar arquivos da internet e copiá-los para seu cartão SD. Isso inclui a maioria dos dispositivos eletrônicos de consumidores, como computadores que rodam Windows, macOS, Linux e chromeOS (Chromebooks), bem como os telefones Android. Depending on your electronic device, you may need to purchase an SD card adapter to allow it to read your SD card.
+Na maioria dos casos você pode seguir este guia desde que você consiga baixar arquivos da internet e copiá-los para seu cartão SD. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as phones and tablets running Android and iOS. Depending on your electronic device, you may need to purchase an SD card adapter to allow it to read your SD card.
 
 ::::
 

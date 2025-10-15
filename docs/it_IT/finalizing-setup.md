@@ -149,6 +149,14 @@ Ecco alcune combinazioni di tasti che dovresti conoscere:
 
 :::
 
+### Pretendo
+
+Pretendo è un servizio sostitutivo per il Nintendo Network, che punta a ripristinare i servizi online terminati con la chiusura del Nintendo Network. Resuscita anche il servizio Miiverse, tramite juxtaposition. La guida ufficiale può essere trovata [qui](https://pretendo.network/docs/install/3ds).
+
+**Attenzione: Pretendo non supporta tutti i servizi online, tuttavia si sta lavorando con questo obiettivo in mente.**
+
+Un elenco di giochi supportati da Pretendo può essere trovato [qui](https://wiki.pretendo.zip/game-support-status).
+
 ::: info
 
 Per informazioni sull'utilizzo delle varie funzionalità di GodMode9, consulta le pagine [Usare GodMode9](godmode9-usage) e [Dump di titoli e schede di gioco](dumping-titles-and-game-cartridges).
