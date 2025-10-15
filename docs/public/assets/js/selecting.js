@@ -1,6 +1,6 @@
 /*
     Copyright (C) 2023 Gruetzig
-    Copyright (C) 2023 Nintendo Homebrew
+    Copyright (C) 2025 Nintendo Homebrew
 
     SPDX-License-Identifier: MIT
 */
@@ -180,7 +180,7 @@ function redirect() {
     sessionStorage.setItem("selected_version", JSON.stringify({major, minor, nver, region, model}));
 
     if(prefix != "Ver.") {
-        window.location.href = "checking-for-cfw";
+        document.getElementById("result_cfwPrefixDetected").style.display = "block";
         return true;
     }
 

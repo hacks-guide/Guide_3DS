@@ -1,23 +1,27 @@
 <table id="modeltable" class="modeltable">
   <thead>
-    <th><div align="center">Old 3DS/2DS</div></th>
-    <th><div align="center">New 3DS/2DS</div></th>
+    <tr>
+      <th><div style="text-align:center">Old 3DS/2DS</div></th>
+      <th><div style="text-align:center">New 3DS/2DS</div></th>
+    </tr>
   </thead>
   <tbody>
-    <td> <img class="tableimage" src="/images/old3ds.png" alt="old 3DS"> <img class="tableimage" src="/images/old3dsxl.png" alt="old 3DS"> <img class="tableimage" src="/images/2ds.png" alt="old 3DS"><br><br><input type="radio" name="checkbox" id="old3DS"></td>
-    <td> <img class="tableimage" src="/images/new3ds.png" alt="old 3DS"> <img class="tableimage" src="/images/new3dsxl.png" alt="old 3DS"> <img class="tableimage" src="/images/new2dsxl.png" alt="old 3DS"><br><br><input type="radio" name="checkbox" id="new3DS"></td>
+    <tr>
+      <td><img class="tableimage" src="/images/old3ds.png" alt="Old 3DS"> <img class="tableimage" src="/images/old3dsxl.png" alt="Old 3DS XL"> <img class="tableimage" src="/images/2ds.png" alt="Old 2DS"><br><br><input type="radio" name="checkbox" id="old3DS"></td>
+      <td><img class="tableimage" src="/images/new3ds.png" alt="New 3DS"> <img class="tableimage" src="/images/new3dsxl.png" alt="New 3DS XL"> <img class="tableimage" src="/images/new2dsxl.png" alt="New 2DS XL"><br><br><input type="radio" name="checkbox" id="new3DS"></td>
+    </tr>
   </tbody>
 </table>
 <div id="selectversion" class="selectversion">
     <br>
     <select id="prefix">
-      <option />
+      <option></option>
       <option>Ver.</option>
       <option>Sys.</option>
       <option>Emu.</option>
       <option>{{ $frontmatter.otherPrefix }}</option>
     </select>&nbsp;<select id="major">
-      <option />
+      <option></option>
       <option>11</option>
       <option>10</option>
       <option>9</option>
@@ -31,7 +35,7 @@
       <option>1</option>
       <option>0</option>
     </select>.<select id="minor">
-      <option />
+      <option></option>
       <option>17</option>
       <option>16</option>
       <option>15</option>
@@ -51,10 +55,10 @@
       <option>1</option>
       <option>0</option>
     </select>.<select id="whydidnintendodecidetodothingslikethis">
-      <option />
+      <option></option>
       <option>0</option>
     </select>-<select id="nver">
-      <option />
+      <option></option>
       <option>50</option>
       <option>49</option>
       <option>48</option>
@@ -107,7 +111,7 @@
       <option>1</option>
       <option>0</option>
     </select><select id="region">
-      <option />
+      <option></option>
       <option>E</option>
       <option>U</option>
       <option>J</option>
@@ -119,7 +123,12 @@
     <input type="button" onclick="redirect()" value="Confirm">
 </div>
 
-<p id="result_noneSelected" style="display:none">{{ $frontmatter.noneSelected }}</p>
-<p id="result_invalidVersion" style="display:none">{{ $frontmatter.invalidVersion }}</p>
+<div class="custom-block danger" id="result_noneSelected" style="display:none">{{ $frontmatter.noneSelected }}</div>
+<div class="custom-block danger" id="result_invalidVersion" style="display:none">{{ $frontmatter.invalidVersion }}</div>
+<div class="custom-block danger" id="result_cfwPrefixDetected" style="display:none">
+  {{ $frontmatter.cfwPrefixDetected }}
+  <br>
+  <a href="https://discord.gg/MWxPgEp"> {{ $frontmatter.inviteLinkText }}</a>
+</div>
 
 <noscript>Please enable JavaScript to continue with the guide.</noscript>
