@@ -1,6 +1,6 @@
 # Troubleshooting (Finalizando a Instalação)
 
-Esta página oferece recursos de solução de problemas para problemas com a página "Finalizando a Instalação". If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+Esta página oferece recursos de solução de problemas para problemas com a página "Finalizando a Instalação". Se você não conseguir resolver seu problema com a ajuda nesta página, junte-se à [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva seu problema, incluindo o que você já tentou.
 
 ## Problemas com a Finalização da Instalação
 
@@ -17,7 +17,7 @@ As etapas abaixo podem ser tentadas em qualquer ordem, mas são listadas de mane
 7. Conecte-se a uma conexão Wi-Fi diferente, como um ponto de acesso móvel
 8. Servidores Nintendo podem estar desligados; Tente novamente mais tarde
 9. Se o erro persistir, [siga CTRTransfer](ctrtransfer), e tente novamente
-10. For further support (in English), join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+10. Para mais suporte (em Inglês), junte-se a [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp)
 
 :::
 
@@ -35,7 +35,7 @@ O arquivo `finalize.romfs` foi colocado no local errado ao invés de raiz do SD.
 
 :::details Error #24: SD is write-protected
 
-Certifique-se de que seu cartão SD não esteja [bloqueado](/images/sdlock.png). If the SD card is not locked and you continue to get this error, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Certifique-se de que seu cartão SD não esteja [bloqueado](/images/sdlock.png). Se o cartão SD não estiver bloqueado e você continuar a receber este erro, junte-se a [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) para obter ajuda.
 
 :::
 
@@ -76,7 +76,7 @@ Agora que você tem seu backup da NAND em um lugar seguro:
 4. Selecione "Scripts..."
 5. Selecione "finalize"
 6. Continue o script normalmente
-    - O backup da NAND será ignorado automaticamente
+   - O backup da NAND será ignorado automaticamente
 
 :::
 
@@ -108,7 +108,7 @@ Se você tiver espaço suficiente no seu cartão SD, seu SD pode estar corrompid
 
 :::details Error #12: Copy (file).db fail
 
-Certifique-se de que seu cartão SD não esteja [bloqueado](/images/sdlock.png). If the SD card is not locked and you continue to get this error, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Certifique-se de que seu cartão SD não esteja [bloqueado](/images/sdlock.png). Se o cartão SD não estiver bloqueado e você continuar a receber este erro, junte-se a [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) para obter ajuda.
 
 :::
 
@@ -121,7 +121,7 @@ O script detectou que a pasta Nintendo 3DS está faltando e que você já fez um
 3. Copie os arquivos em `/gm9/backups/` do seu SD para um local seguro no seu computador
 4. Apague `/gm9/backups/` do seu cartão SD
 5. Se você moveu sua pasta Nintendo 3DS para fora do seu cartão SD para chegar a este ponto, copie-a de volta para o seu cartão SD
-    - Se você não possuir uma pasta Nintendo 3DS, abra o Menu HOME pelo menos uma vez com o cartão SD inserido para criá-la automaticamente
+   - Se você não possuir uma pasta Nintendo 3DS, abra o Menu HOME pelo menos uma vez com o cartão SD inserido para criá-la automaticamente
 6. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 7. Aperte (Home) para abrir o menu de ações
 8. Selecione "Scripts..."

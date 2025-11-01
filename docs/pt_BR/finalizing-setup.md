@@ -151,11 +151,11 @@ Aqui estão alguns combos que você deve saber:
 
 ### Pretendo
 
-Pretendo is a replacement service for the Nintendo Network, which resurrects online services from the now shut down Nintendo Network. It also revives the Miiverse service, via juxtaposition. The official guide can be found [here](https://pretendo.network/docs/install/3ds).
+Pretendo é um serviço de substituição da Nintendo Network, que ressuscita serviços on-line da Nintendo Network. Também revive o serviço Miiverse através do juxtaposition. O guia oficial pode ser encontrado [aqui](https://pretendo.network/docs/install/3ds).
 
-**Note: Pretendo does not support every online service, however work is being done to achieve this.**
+**Nota: Pretendo não suporta todos os serviços on-line, porém trabalho está sendo feito para que isso seja possível.**
 
-A list of games that Pretendo supports can be found [here](https://wiki.pretendo.zip/game-support-status).
+Uma lista de jogos que o Pretendo suporta pode ser encontrada [aqui](https://wiki.pretendo.zip/game-support-status).
 
 ::: info
 

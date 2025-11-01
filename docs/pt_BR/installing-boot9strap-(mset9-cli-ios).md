@@ -1,8 +1,8 @@
-# Installing boot9strap (MSET9 CLI iOS)
+# Instalando boot9strap (MSET9 CLI iOS)
 
 :::details Detalhes Técnicos (opcional)
 
-[MSET9](https://github.com/zoogie/MSET9) é um exploit para o aplicativo de Configurações do Sistema desenvolvido por [zoogie](https://github.com/zoogie). Ele faz uso de uma falha onde a ID1 (a pasta de 32 caracteres dentro da pasta Nintendo 3DS, dentro da ID0) pode ter _qualquer_ nome desde que seja composto por 32 caracteres. Performing a specific sequence of actions results in the console executing the instructions that are encoded into the ID1 folder name, which can be used to grant full control over the 3DS.
+[MSET9](https://github.com/zoogie/MSET9) é um exploit para o aplicativo de Configurações do Sistema desenvolvido por [zoogie](https://github.com/zoogie). Ele faz uso de uma falha onde a ID1 (a pasta de 32 caracteres dentro da pasta Nintendo 3DS, dentro da ID0) pode ter _qualquer_ nome desde que seja composto por 32 caracteres. Executar uma sequência específica de ações resultarão no console executando as instruções que são codificadas no nome da pasta ID1, que pode ser usado para conceder controle total sobre o 3DS.
 
 :::
 
@@ -10,19 +10,19 @@
 
 ::: warning
 
-This page requires an iPhone or iPad running iOS/iPadOS 14.0 or higher. Se você tiver um computador executando Windows, macOS ou Linux, siga [Instalando boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)) em vez disso. Se você tem um celular/tablet Android ou um Chromebook, siga [Instalando boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)) em vez disso. Se você não tiver acesso a nenhum desses dispositivos, será necessário usar um [método alternativo](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
+Esta página requer um iPhone ou iPad executando iOS/iPadOS 14.0 ou superior. Se você tiver um computador executando Windows, macOS ou Linux, siga [Instalando boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)) em vez disso. Se você tem um celular/tablet Android ou um Chromebook, siga [Instalando boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)) em vez disso. Se você não tiver acesso a nenhum desses dispositivos, será necessário usar um [método alternativo](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
 
 :::
 
 ::: warning
 
-As iPhones and iPads do not have an SD card slot, you will need an adapter to plug in your SD card to your device (e.g. a Lightning to SD card or USB-C to SD card adapter).
+Como iPhones e iPads não possuem um slot de cartão SD, você precisará de um adaptador para conectar seu cartão SD ao seu dispositivo (ex: um Lightning para cartão SD ou USB-C para adaptador de cartão SD).
 
 :::
 
 ## O que é necessário
 
-- [iSH](https://apps.apple.com/us/app/ish-shell/id1436902243) from App Store
+- [iSH](https://apps.apple.com/us/app/ish-shell/id1436902243) da App Store
 
 ## Instruções
 
@@ -34,9 +34,9 @@ Nesta página, você usará o script MSET9, que é usado para acionar o MSET9. E
 
 ### Seção I - Preparação
 
-In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Seus dados de usuário existentes desaparecerão, mas voltarão quando você terminar esta página.
+Nesta seção, você irá preparar o exploit MSET9 **temporariamente** criando um novo perfil do Menu HOME sem dados de usuário, e, em seguida, configurar esse perfil com apenas os dados mínimos necessários para que o MSET9 acione. Seus dados de usuário existentes desaparecerão, mas voltarão quando você terminar esta página.
 
-1. Insert your SD card into your iPhone/iPad (using an adapter)
+1. Insira seu cartão SD no seu iPhone/iPad (usando um adaptador)
 
 <!--@include: ./_include/ish-chorus.md -->
 
@@ -48,9 +48,9 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
     :::
     ```
 
-1. Type the number corresponding to your console model and version, then tap Return
+1. Digite o número correspondente ao seu modelo e versão do console, em seguida, toque em Voltar
 
-   - The screen should change to this:
+   - A tela deve mudar para isto:
 
    ::: info
 
@@ -59,11 +59,11 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    :::
 
    - Certifique-se de que o modelo e a versão mostrados estão corretos
-2. Type `1`, then tap Return to begin the process of creating the MSET9 ID1
-3. After reviewing the disclaimer, type `1` again and tap Return to accept it
+2. Digite `1`, depois toque em Voltar para começar o processo de criação do ID1 do MSET9
+3. Após rever o aviso, digite `1` novamente e toque em Voltar para aceitá-lo
    - Se você receber um erro, verifique o [guia de troubleshooting](troubleshooting-mset9), depois tente novamente
-4. If you see the message "Created hacked ID1.", tap Return to close the MSET9 script
-   - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **Isto é esperado.** Seus dados voltarão mais tarde
+4. Se você ver a mensagem "Created hacked ID1.", toque em Voltar para fechar o script MSET9
+   - Seu 3DS irá aparentar não ter dados / nenhum aplicativo instalado pelo usuário no Menu HOME. **Isto é esperado.** Seus dados voltarão mais tarde
 5. Reinsira o cartão SD no seu console
 6. Ligue o seu console
 7. Abra o Mii Maker
@@ -73,13 +73,13 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 9. Inicie as Configurações do Sistema e navegue para `Gerenciador de Dados` -> `Nintendo 3DS` -> `Software` -> Apagar ([imagem](/images/screenshots/database-reset.jpg))
    - Isso não irá apagar nenhum dos seus dados
 10. Desligue seu console apertando o botão POWER e depois toque em Desligar na tela inferior
-11. Insert your SD card into your iPhone/iPad (using an adapter)
+11. Insira seu cartão SD no seu iPhone/iPad (usando um adaptador)
 
 <!--@include: ./_include/ish-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then tap Return
+1. Digite o número correspondente ao seu modelo e versão do console, em seguida, toque em Voltar
 
-   - The screen should change to this and display `Ready`:
+   - A tela deve mudar para isto e exibir `Ready`:
 
    ::: info
 
@@ -87,11 +87,11 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
    :::
 
-   - If the screen says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-ish-not-ready.png):
-     - Type `2`, then tap Return to check the MSET9 status and follow the directions indicated
+   - Se a tela disser [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-ish-not-ready.png):
+     - Digite `2`, depois toque em Voltar para verificar o status do MSET9 e siga as instruções indicadas
      - Assim que você resolver o problema, volte à Seção I Passo 14
      - Para mais informações, verifique a página de [troubleshooting](troubleshooting-mset9)
-2. Type `0`, then tap Return to close the script
+2. Digite `0`, depois toque em Voltar para fechar o script
 3. Reinsira o cartão SD no seu console
 
 ### Seção II - MSET9
@@ -110,28 +110,28 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
 3. Navegue para `Gerenciamento de Dados` -> `Nintendo 3DS` -> `Dados adicionais` ([imagem](/images/screenshots/mset9/settings-extdata.png))
 4. **Não pressione nenhum botão ou toque na tela**
 5. **Com o console AINDA LIGADO, e sem pressionar nenhum botão ou tocar na tela**, remova seu cartão SD do seu console
-   - The menu will refresh and say that no SD card is inserted
-6. Insert your SD card into your iPhone/iPad (using an adapter)
+   - O menu irá atualizar e dizer que nenhum cartão SD foi inserido
+6. Insira seu cartão SD no seu iPhone/iPad (usando um adaptador)
 
 <!--@include: ./_include/ish-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then tap Return
-2. In the MSET9 screen, type `3`, then tap Return to inject MSET9
+1. Digite o número correspondente ao seu modelo e versão do console, em seguida, toque em Voltar
+2. Na tela MSET9, digite `3`, depois toque em Voltar para injetar o MSET9
    - Você deve ver "MSET9 successfully injected!"
-3. Tap Return to close the MSET9 script
+3. Toque em Voltar para fechar o script MSET9
 4. Reinsira o cartão SD no seu console **sem pressionar nenhum botão ou tocar na tela**
 5. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
-   - If you get a red screen or the console gets stuck on a loading screen for more than 10 seconds, follow the [troubleshooting guide](troubleshooting-mset9)
+   - Se você receber uma tela vermelha ou o console ficar preso em uma tela de carregamento por mais de 10 segundos, siga o [Guia de Troubleshooting](troubleshooting-mset9)
 
 ### Seção III - Instalando boot9strap
 
 Nesta seção, você instalará custom firmware no seu console.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9#sighaxed-firm-was-not-installed-check-lower-screen-for-more-info)
-   - If the top screen is blank **and** you see "Crypto Status - all checks passed" on the bottom screen, you will have to enter key combo blindly. Press the following buttons on your console in this order:
-     - D-Pad Left, D-Pad Down, D-Pad Right, D-Pad Up, A
-2. Once it is complete (all seven steps on the bottom screen are green), press (A) to reboot your console
+   - Se um passo na parte inferior da tela tiver texto vermelho e você não for solicitado a introduzir um combo de botões, [siga este Guia de Troubleshooting](troubleshooting-mset9#sighaxed-firm-was-not-installed-check-lower-screen-for-more-info)
+   - Se a tela superior estiver em branco **e** você vê "Crypto Status - all checks passed" na tela inferior, você terá que inserir o combo de botões cegamente. Pressione os seguintes botões no seu console nesta ordem:
+     - Botão Direcional Esquerdo, Botão Direcional Baixo, Botão Direcional Direito, Botão Direcional Cima, A
+2. Assim que estiver completo (todos os sete passos na tela inferior estão verdes), aperte (A) para reiniciar o seu console
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
@@ -146,18 +146,18 @@ NÃO pule esta seção! Se você pular isso, os aplicativos podem ter um crash i
 :::
 
 1. Desligue seu console
-2. Insert your SD card into your iPhone/iPad (using an adapter)
+2. Insira seu cartão SD no seu iPhone/iPad (usando um adaptador)
 
 <!--@include: ./_include/ish-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then tap Return
-   - The current state should display [Injected](/images/screenshots/mset9/mset9-ish-injected.png)
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ish-ready.png), skip to Step 6
-2. Type `4`, then tap Return to remove the trigger file
+1. Digite o número correspondente ao seu modelo e versão do console, em seguida, toque em Voltar
+   - O estado atual deve exibir [Injected](/images/screenshots/mset9/mset9-ish-injected.png)
+   - Se você já removeu o arquivo de ativação (ou nunca o injetou), o estado atual mostrará [Ready](/images/screenshots/mset9/mset9-ish-ready.png), pule para a Etapa 6
+2. Digite `4` e toque em Voltar para remover o arquivo de gatilho
    - Você deve ver "Removed trigger file."
-3. Type `5`, then tap Return to remove MSET9
+3. Digite `5`, depois toque em Voltar para remover o MSET9
    - Você deve ver "Successfully removed MSET9!"
-4. Tap Return to close the MSET9 script
+4. Toque em Voltar para fechar o script MSET9
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 

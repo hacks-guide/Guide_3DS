@@ -17,7 +17,7 @@ Se você está removendo o CFW porque:
 - Um dos seus aplicativos do sistema não funciona
 - Seu console não consegue iniciar o Menu HOME
 
-<u>**PARE!!!**</u> Desinstalar o custom firmware é um risco desnecessário que na melhor das hipóteses fará você perder tempo, e na pior das hipoteses causará um <u>**BRICK**</u> no seu console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+<u>**PARE!!!**</u> Desinstalar o custom firmware é um risco desnecessário que na melhor das hipóteses fará você perder tempo, e na pior das hipoteses causará um <u>**BRICK**</u> no seu console. Uma ideia melhor seria pedir ajuda em [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp).
 
 :::
 
@@ -72,7 +72,7 @@ O objetivo desta seção é verificar se os aplicativos do modo DS embutidos con
 2. Abra as Configurações do Sistema no seu console
 3. Navegue para `Configuração de Internet` -> `Conexões Nintendo DS`, depois clique em OK
 4. Você deve iniciar no menu de Conexões Nintendo DS
-    - Se o seu console exibir a versão japonesa do Flipnote Studio, uma tela preta, ou uma mensagem de erro, o teste falhou
+   - Se o seu console exibir a versão japonesa do Flipnote Studio, uma tela preta, ou uma mensagem de erro, o teste falhou
 5. Desligue seu console
 
 #### Teste do Download Play de DS
@@ -81,7 +81,7 @@ O objetivo desta seção é verificar se os aplicativos do modo DS embutidos con
 2. Abra o aplicativo Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
 3. Selecione "Nintendo DS"
 4. Se o seu console carregar em um menu "Download de software via DS Download Play", o teste foi bem sucedido
-    - Se o seu console exibir a versão japonesa do Flipnote Studio, uma tela preta, ou uma mensagem de erro, o teste falhou
+   - Se o seu console exibir a versão japonesa do Flipnote Studio, uma tela preta, ou uma mensagem de erro, o teste falhou
 5. Desligue seu console
 
 ::: warning
@@ -97,15 +97,15 @@ O objetivo desta seção é verificar se o console irá ligar e que as funções
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 2. Se você for solicitado para criar um backup de arquivos essenciais, aperte (A) para fazê-lo, e então aperte (A) para continuar assim que estiver concluído
 3. Se você for solicitado para consertar o RTC date&time, pressione (A) para consertar, então insira a data e a hora, depois pressione (A) para continuar
-    - Note que, se você teve que consertar a data e hora do RTC, você também terá que corrigir a hora na Configuração do Console após acabar o guia
+   - Note que, se você teve que consertar a data e hora do RTC, você também terá que corrigir a hora na Configuração do Console após acabar o guia
 4. Aperte (Home) para abrir o menu de ações
 5. Selecione "Scripts..."
 6. Selecione "safety_test"
 7. Leia o texto na tela e aperte (A) para continuar
 8. Você deve iniciar no Menu HOME padrão do 3DS (qualquer tema personalizado é irrelevante). Se sim, continue estas instruções
-    - Se o Menu HOME padrão do 3DS não aparecer (tela preta, tela de erro, etc.), desinstalar CFW **VAI CAUSAR UM BRICK NO SEU CONSOLE!**
+   - Se o Menu HOME padrão do 3DS não aparecer (tela preta, tela de erro, etc.), desinstalar CFW **VAI CAUSAR UM BRICK NO SEU CONSOLE!**
 9. Abra as Configurações do Sistema no seu console
-    - Se o console travar ou exibir um erro neste ponto, o teste falhou
+   - Se o console travar ou exibir um erro neste ponto, o teste falhou
 10. Selecione "Outras Configurações"
 11. Selecione "Perfil"
 12. Selecione "Nome de Usuário"
@@ -115,7 +115,7 @@ O objetivo desta seção é verificar se o console irá ligar e que as funções
 
 ::: danger
 
-Se você NÃO inicializar no Menu HOME padrão do 3DS, ou a configuração do sistema / seu teclado está inacessível, **NÃO continue com estas instruções**! Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you.
+Se você NÃO inicializar no Menu HOME padrão do 3DS, ou a configuração do sistema / seu teclado está inacessível, **NÃO continue com estas instruções**! Junte-se a [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e peça (em Inglês) para alguém lá te ajudar.
 
 :::
 
@@ -128,8 +128,8 @@ Se você NÃO inicializar no Menu HOME padrão do 3DS, ou a configuração do si
 5. Selecione "Backup Options"
 6. Selecione "SysNAND Backup"
 7. Aperte (A) para confirmar
-    - Esse processo levará algum tempo
-    - Se você receber um erro, certifique-se de ter pelo menos 1.3GB de espaço livre no seu cartão SD
+   - Esse processo levará algum tempo
+   - Se você receber um erro, certifique-se de ter pelo menos 1.3GB de espaço livre no seu cartão SD
 8. Aperte (B) para retornar para o menu principal
 9. Selecione "Exit"
 10. Aperte (Home) para abrir o menu de ações
@@ -147,11 +147,11 @@ Esta seção removerá conteúdo ilegítimo, como homebrew e cartuchos dumped. S
 2. Abra as Configurações do Sistema no seu console
 3. Navegue até Gerenciador de Dados > Nintendo 3DS > Software
 4. Nessa lista de software, delete qualquer conteúdo que não seja relativo a Nintendo instalado enquanto estiver usando o CFW
-    - Isso inclui softwares de sistema comuns como FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint e outros, assim como quaisquer jogos e títulos que você _não_ instalou da eShop
+   - Isso inclui softwares de sistema comuns como FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint e outros, assim como quaisquer jogos e títulos que você _não_ instalou da eShop
 5. Navegue para `Gerenciador de Dados` -> `DSiWare`
 6. Nessa lista de software, delete qualquer conteúdo que não seja relativo a Nintendo instalado enquanto estiver usando o CFW
-    - Isso inclui software como TWiLightMenu++, assim como quaisquer jogos e aplicativos que você _não_ instalou da eShop
-    - Falhar ao remover todos os softwares CFW das seções de 3DS e DSiWare antes de desinstalar o CFW pode impedir ou desabilitar o acesso ao menu de Gerenciamento de Dados após desinstalar o CFW, o que pode dificultar a reinstalação de CFW no futuro
+   - Isso inclui software como TWiLightMenu++, assim como quaisquer jogos e aplicativos que você _não_ instalou da eShop
+   - Falhar ao remover todos os softwares CFW das seções de 3DS e DSiWare antes de desinstalar o CFW pode impedir ou desabilitar o acesso ao menu de Gerenciamento de Dados após desinstalar o CFW, o que pode dificultar a reinstalação de CFW no futuro
 7. Saia do aplicativo Configuração do Console
 8. Abra o aplicativo Download Play (![](/images/download-play-icon.png){height="24px" width="24px"})
 9. Aguarde até que você veja os dois botões
@@ -196,12 +196,12 @@ Se você está removendo o CFW porque:
 - Um dos seus aplicativos do sistema não funciona
 - Seu console não consegue iniciar o Menu HOME
 
-<u>**PARE!!!**</u> Desinstalar o custom firmware é um risco desnecessário que na melhor das hipóteses fará você perder tempo, e na pior das hipoteses causará um <u>**BRICK**</u> no seu console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+<u>**PARE!!!**</u> Desinstalar o custom firmware é um risco desnecessário que na melhor das hipóteses fará você perder tempo, e na pior das hipoteses causará um <u>**BRICK**</u> no seu console. Uma ideia melhor seria pedir ajuda em [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp).
 
 :::
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
-    - Se ao invés disso você ver o chainloader do Luma3DS, use o D-Pad e o botão (A) para selecionar o GodMode9
+   - Se ao invés disso você ver o chainloader do Luma3DS, use o D-Pad e o botão (A) para selecionar o GodMode9
 2. Aperte (Home) para abrir o menu de ações
 3. Selecione "Scripts..."
 4. Selecione "uninstall_cfw"

@@ -1,6 +1,6 @@
 # Troubleshooting (A9LH para B9S)
 
-Esta página oferece recursos de solução de problemas para problemas com a página "A9LH para B9S". If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+Esta página oferece recursos de solução de problemas para problemas com a página "A9LH para B9S". Se você não conseguir resolver seu problema com a ajuda nesta página, junte-se à [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva seu problema, incluindo o que você já tentou.
 
 ## Problemas com o SafeB9SInstaller
 

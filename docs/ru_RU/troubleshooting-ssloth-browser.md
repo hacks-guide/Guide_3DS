@@ -70,7 +70,7 @@ Follow these steps in order:
 4. Set "Proxy Settings" to "No"
 5. Click OK, then click Save
 6. When prompted, click "Test" to perform the connection test
-    - The test should succeed
+   - The test should succeed
 7. Click "OK" to continue
 8. Press "Back" twice, then "Close" to go back to the HOME Menu
 9. Open the Internet Browser once

@@ -24,7 +24,7 @@ GodMode9 é um poderoso software que tem a capacidade de modificar essencialment
 
 ::: info
 
-Algumas das instruções abaixo só são aplicáveis para a versão mais recente do GodMode9, e como tal deve seguir esta seção para atualizar sua cópia antes de continuar. If any of the files exist, overwrite them with the new files.
+Algumas das instruções abaixo só são aplicáveis para a versão mais recente do GodMode9, e como tal deve seguir esta seção para atualizar sua cópia antes de continuar. Se algum dos arquivos existir, substitua-os pelos novos arquivos.
 
 :::
 
@@ -142,7 +142,7 @@ Saúde e Segurança foi revertido para o normal.
 
 1. Aperte e segure (Start), e enquanto segura (Start), ligue seu console. Isso vai inicializar o GodMode9
 2. Aperte (Gatilho Direito) + (B) para desmontar o cartão SD atual e inserir o que você deseja formatar
-    - Se o GodMode9 mostrar um erro de inicialização ao inserir o cartão SD a ser formatado, o erro pode ser dispensado
+   - Se o GodMode9 mostrar um erro de inicialização ao inserir o cartão SD a ser formatado, o erro pode ser dispensado
 
 <!--@include: ./_include/format-sd-gm9.md -->
 

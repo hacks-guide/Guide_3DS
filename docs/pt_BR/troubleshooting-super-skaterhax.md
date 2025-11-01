@@ -1,6 +1,6 @@
 # Troubleshooting (super-skaterhax)
 
-Esta página oferece recursos de solução de problemas para problemas com a página "Instalando boot9strap (super-skaterhax)". If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+Esta página oferece recursos de solução de problemas para problemas com a página "Instalando boot9strap (super-skaterhax)". Se você não conseguir resolver seu problema com a ajuda nesta página, junte-se à [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva seu problema, incluindo o que você já tentou.
 
 ::: warning
 
@@ -46,9 +46,9 @@ Isso provavelmente indica que você já possui custom firmware. Você deve [chec
 
 :::
 
-:::details Error 032-1035 when trying to view the skaterhax webpage
+:::details Erro 032-1035 ao tentar ver a página da web skaterhax
 
-Your Internet connection is blocking access to the skaterhax webpage. If possible, try a mobile hotspot. If you do not have another Internet connection available, follow [MSET9](installing-boot9strap-\(mset9\)) instead.
+Sua conexão com a internet está bloqueando o acesso à página da web skaterhax. Se possível, tente com um ponto de acesso móvel. Se você não tem outra conexão de Internet disponível, siga [MSET9](installing-boot9strap-\(mset9\)) em vez disso.
 
 :::
 
@@ -66,7 +66,7 @@ Your Internet connection is blocking access to the skaterhax webpage. If possibl
 
 ::: tip
 
-Go back to [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+Volte para [Instalando boot9strap (superskaterhax)](installing-boot9strap-\(super-skaterhax\))
 
 :::
 

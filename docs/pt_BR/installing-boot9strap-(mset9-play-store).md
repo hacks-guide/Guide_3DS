@@ -10,7 +10,7 @@
 
 ::: warning
 
-Esta página requer um celular/tablet Android ou um Chromebook. If you have an iPhone or iPad, follow [Installing boot9strap (MSET9 CLI iOS)](installing-boot9strap-\(mset9-cli-ios\)) instead. Se você tiver um computador executando Windows, macOS ou Linux, siga [Instalando boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)) em vez disso. Se você não tiver acesso a nenhum desses dispositivos, será necessário usar um [método alternativo](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
+Esta página requer um celular/tablet Android ou um Chromebook. Se você tem um iPhone ou iPad, siga [Instalando boot9strap (MSET9 CLI iOS)](installing-boot9strap-\(mset9-cli-ios\)) em vez disso. Se você tiver um computador executando Windows, macOS ou Linux, siga [Instalando boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)) em vez disso. Se você não tiver acesso a nenhum desses dispositivos, será necessário usar um [método alternativo](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
 
 :::
 
@@ -36,7 +36,7 @@ Nesta seção, você vai preparar o exploit MSET9 através da criação **tempor
 
 1. Insira o cartão SD no seu telefone/tablet/computador
 
-2. Copy everything from the MSET9 `.zip` to the root of your SD card. If any of the files exist, overwrite them with the new files:
+2. Copie tudo do `.zip` do MSET9 para a raiz do seu cartão SD. Se algum dos arquivos existir, substitua-os pelos novos arquivos:
 
    - Abra o ZArchiver
    - Se solicitado, [permita ao ZArchiver acessar os arquivos do seu cartão SD](/images/screenshots/mset9/zarchiver-allow.png)
@@ -118,17 +118,17 @@ Estas instruções devem ser seguidas **EXATAMENTE** como estão, então confira
    - O botão deve tornar-se cinza e `Remove trigger file` irá se tornar [destacado](/images/screenshots/mset9/remove-trigger-highlighted.png)
 9. Reinsira o cartão SD no seu console **sem pressionar nenhum botão ou tocar na tela**
 10. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
-    - If you get a red screen or the console gets stuck on a loading screen for more than 10 seconds, follow the [troubleshooting guide](troubleshooting-mset9)
+    - Se você receber uma tela vermelha ou o console ficar preso em uma tela de carregamento por mais de 10 segundos, siga o [Guia de Troubleshooting](troubleshooting-mset9)
 
 ### Seção III - Instalando boot9strap
 
 Nesta seção, você instalará custom firmware no seu console.
 
 1. Quando solicitado, aperte a sequência de botões fornecida na tela superior para instalar o boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9#sighaxed-firm-was-not-installed-check-lower-screen-for-more-info)
-   - If the top screen is blank **and** you see "Crypto Status - all checks passed" on the bottom screen, you will have to enter key combo blindly. Press the following buttons on your console in this order:
-     - D-Pad Left, D-Pad Down, D-Pad Right, D-Pad Up, A
-2. Once it is complete (all seven steps on the bottom screen are green), press (A) to reboot your console
+   - Se um passo na parte inferior da tela tiver texto vermelho e você não for solicitado a introduzir um combo de botões, [siga este Guia de Troubleshooting](troubleshooting-mset9#sighaxed-firm-was-not-installed-check-lower-screen-for-more-info)
+   - Se a tela superior estiver em branco **e** você vê "Crypto Status - all checks passed" na tela inferior, você terá que inserir o combo de botões cegamente. Pressione os seguintes botões no seu console nesta ordem:
+     - Botão Direcional Esquerdo, Botão Direcional Baixo, Botão Direcional Direito, Botão Direcional Cima, A
+2. Assim que estiver completo (todos os sete passos na tela inferior estão verdes), aperte (A) para reiniciar o seu console
 
 <!--@include: ./_include/configure-luma3ds.md -->
 

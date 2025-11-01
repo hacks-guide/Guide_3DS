@@ -151,11 +151,11 @@ ___
 
 ### Pretendo
 
-Pretendo is a replacement service for the Nintendo Network, which resurrects online services from the now shut down Nintendo Network. It also revives the Miiverse service, via juxtaposition. The official guide can be found [here](https://pretendo.network/docs/install/3ds).
+Το Pretendo είναι μια υπηρεσία που έχει ως σκοπό να αντικαταστήσει το Nintendo Network και να αναβιώσει τις online υπηρεσίες του πλέον μη λειτουργικού Nintendo Network. Αναβιώνει επίσης την υπηρεσία Miiverse, μέσω juxtaposition. Μπορείτε να βρείτε τον επίσημο οδηγό [εδώ](https://pretendo.network/docs/install/3ds).
 
-**Note: Pretendo does not support every online service, however work is being done to achieve this.**
+**Σημείωση: Το Pretendo δεν υποστηρίζει όλες τις online υπηρεσίες. Πραγματοποιούνται όμως εργασίες για να επιτευχθεί αυτό.**
 
-A list of games that Pretendo supports can be found [here](https://wiki.pretendo.zip/game-support-status).
+Μπορείτε να βρείτε μια λίστα με τα παιχνίδια που υποστηρίζει το Pretendo [εδώ](https://wiki.pretendo.zip/game-support-status).
 
 ::: info
 

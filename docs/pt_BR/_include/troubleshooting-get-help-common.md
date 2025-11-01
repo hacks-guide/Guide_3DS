@@ -2,6 +2,6 @@ ___
 
 :::details Outra coisa
 
-Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, and describe the issue that you see.
+Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter ajuda, e descreva o erro que você vê.
 
 :::

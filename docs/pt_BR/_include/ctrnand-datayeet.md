@@ -2,7 +2,7 @@ Esta seção redefinirá a configuração do console para os valores padrão. **
 
 ::: danger
 
-NÃO pule esta seção! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+NÃO pule esta seção! Isto é **necessário** para evitar problemas conhecidos relacionados ao modo de memória estendida e applets em alguns consoles.
 
 :::
 

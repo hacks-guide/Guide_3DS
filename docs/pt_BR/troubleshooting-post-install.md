@@ -1,6 +1,6 @@
 # Troubleshooting (Pós-Instalação)
 
-Esta página oferece recursos de solução de problemas para problemas encontrados depois que custom firmware foi instalado. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+Esta página oferece recursos de solução de problemas para problemas encontrados depois que custom firmware foi instalado. Se você não conseguir resolver seu problema com a ajuda nesta página, junte-se à [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) e descreva seu problema, incluindo o que você já tentou.
 
 ## Problemas de inicialização
 
@@ -35,21 +35,21 @@ As etapas abaixo podem ser tentadas em qualquer ordem, mas são listadas de meno
 1. Desligue o console, remova o cartão SD, insira-o novamente e, em seguida, ligue seu console.
 2. Desligue seu console, ejete o cartucho do jogo se estiver inserido, ligue o seu console, e espere até dez minutos. Se o seu console inicializar dentro de dez minutos, o problema foi corrigido e é improvável que volte a ocorrer
 3. Renomeie a pasta `Nintendo 3DS` no seu cartão SD para `Nintendo 3DS_BACKUP`, depois tente inicializar. Se o seu console é iniciado com sucesso, há algum problema na pasta `Nintendo 3DS`. Tente limpar a extdata do Menu HOME:
-    - Navegue até `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-    - Delete a pasta correspondente à região de seu 3DS:
-        - **Região EUR**: `00000098`
-        - **Região JPN**: `00000082`
-        - **Região USA**: `0000008f`
-        - **Região CHN**: `000000A1`
-        - **Região KOR**: `000000A9`
-        - **Região TWN**: `000000B1`
+   - Navegue até `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+   - Delete a pasta correspondente à região de seu 3DS:
+     - **Região EUR**: `00000098`
+     - **Região JPN**: `00000082`
+     - **Região USA**: `0000008f`
+     - **Região CHN**: `000000A1`
+     - **Região KOR**: `000000A9`
+     - **Região TWN**: `000000B1`
 4. Tente iniciar no modo de recuperação e atualizar o seu sistema:
-    - Desligue seu console
-    - Segure (Gatilho Esquerdo) + (Gatilho Direito) + (D-Pad Cima) + (A)
-    - Ligue o seu console
-    - Se obtiver sucesso, o console iniciará em uma tela de "atualize seu sistema"
+   - Desligue seu console
+   - Segure (Gatilho Esquerdo) + (Gatilho Direito) + (D-Pad Cima) + (A)
+   - Ligue o seu console
+   - Se obtiver sucesso, o console iniciará em uma tela de "atualize seu sistema"
 5. Siga o guia de [CTRTransfer](ctrtransfer)
-6. For further support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
+6. Para mais suporte, peça ajuda em [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp)
 
 :::
 
@@ -88,13 +88,13 @@ Se este for o caso, tente os passos abaixo, os quais são listados de mais fáci
 2. Desligue o console, remova o cartão SD, insira-o no seu computador, baixe a versão mais recente do [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extraia `boot.firm` do `Luma3DS.zip` e coloque-o na raiz do seu cartão SD (substituindo qualquer arquivo existente)
 3. Desligue o console, remova o cartão SD, insira-o no seu computador e reformate o cartão SD de acordo com o sistema operacional do seu computador: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)) _(isso irá apagar os dados do seu cartão SD)_
 4. Verifique se há erros no seu cartão SD de acordo com o sistema operacional do seu computador: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)). Se o seu cartão SD estiver marcado como defeituoso, então você terá que substituir o cartão SD
-5. Sua entrada de cartão SD pode estar com problemas. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance
+5. Sua entrada de cartão SD pode estar com problemas. Junte-se a [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) para obter mais ajuda
 
 :::
 
 :::details Tela azul "BOOTROM ERROR"
 
-Seu console provavelmente está hard-bricked. Você precisará comprar um flashcart de ntrboot para reinstalar o boot9strap para tentar consertar seu console. Isso também pode indicar um problema de hardware que não pode ser corrigido. In any case, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Seu console provavelmente está hard-bricked. Você precisará comprar um flashcart de ntrboot para reinstalar o boot9strap para tentar consertar seu console. Isso também pode indicar um problema de hardware que não pode ser corrigido. De qualquer forma, junte-se a [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) para obter ajuda.
 
 - Também é possível que alguém tenha definido um splash que se pareça com um brick. Tente deixar o seu console ligado, esperando na tela azul, por cinco minutos.
 
@@ -102,7 +102,7 @@ Seu console provavelmente está hard-bricked. Você precisará comprar um flashc
 
 :::details Algum outro erro
 
-Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+Tire uma foto do erro e junte-se [ao Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter ajuda.
 
 :::
 
@@ -140,7 +140,7 @@ Isso pode ocorrer após uma CTRTransfer ou mudança de região no Old 3DS / 2DS.
 :::details Exception screen ao iniciar/carregar um aplicativo
 
 Procure pela sua exception screen [nesta página](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen).
-If you weren't able to find your error or the instructions didn't work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
+Se você não conseguiu encontrar seu erro ou as instruções não funcionaram, entre em [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp) para obter mais ajuda.
 
 :::
 
@@ -152,7 +152,7 @@ Seu console provavelmente ainda tem menuhax67 instalado. Para desinstalar o menu
 
 :::details Outra coisa
 
-Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, and describe the issue that you see.
+Entre no [Discord do Nintendo Homebrew](https://discord.gg/MWxPgEp) para obter ajuda, e descreva o erro que você vê.
 
 :::
 
@@ -164,12 +164,12 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 2. Insira o cartão SD no seu computador
 3. Navegue até a pasta `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` no seu cartão SD
 4. Delete a pasta correspondente à região de seu 3DS:
-    - **Região EUR**: `00000098`
-    - **Região JPN**: `00000082`
-    - **Região USA**: `0000008f`
-    - **Região CHN**: `000000A1`
-    - **Região KOR**: `000000A9`
-    - **Região TWN**: `000000B1`
+   - **Região EUR**: `00000098`
+   - **Região JPN**: `00000082`
+   - **Região USA**: `0000008f`
+   - **Região CHN**: `000000A1`
+   - **Região KOR**: `000000A9`
+   - **Região TWN**: `000000B1`
 5. Reinsira o cartão SD no seu console
 
 :::
@@ -180,10 +180,10 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 2. Insira o cartão SD no seu computador
 3. Navegue até a pasta `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` no seu cartão SD
 4. Delete a pasta correspondente à região de seu 3DS:
-    - **Região EUR**: `000002ce`
-    - **Região JPN**: `000002cc`
-    - **Região USA**: `000002cd`
-    - **Região KOR**: `000002cf`
+   - **Região EUR**: `000002ce`
+   - **Região JPN**: `000002cc`
+   - **Região USA**: `000002cd`
+   - **Região KOR**: `000002cf`
 5. Reinsira o cartão SD no seu console
 
 :::
@@ -203,9 +203,9 @@ Entretanto, se você não sabe o PIN e, portanto, não pode acessar as configura
 
 1. Vá para [este site](https://mkey.eiphax.tech/)
 2. Preencha as seguintes caixas com as informações:
-    - Device Type: Selecione "3DS" (o mesmo se aplica se estiver utilizando um 2DS, New 3DS (XL/LL) ou New 2DS (XL/LL))
-    - System Date: O dia e mês definidos em seu console
-    - Inquiry Number: Pode ser obtido ao pressionar "Esqueci o PIN" então em "Eu esqueci" na tela de Controle dos Pais
+   - Device Type: Selecione "3DS" (o mesmo se aplica se estiver utilizando um 2DS, New 3DS (XL/LL) ou New 2DS (XL/LL))
+   - System Date: O dia e mês definidos em seu console
+   - Inquiry Number: Pode ser obtido ao pressionar "Esqueci o PIN" então em "Eu esqueci" na tela de Controle dos Pais
 3. Depois de obter sua mkey, pressione OK na tela onde você obteve seu Inquiry Number, então insira a mkey
 4. Pressione "Limpar Configurações", depois "Excluir" para remover todos os dados do Controle dos Pais
 

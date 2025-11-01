@@ -24,11 +24,11 @@ Como parte deste processo, a configuração do console será redefinida para os 
 - A versão mais recente do [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (botão direito do mouse, "Salvar link como...")
 - A imagem de CTRTransfer 11.15.0 para o seu console e região
 
-    ::: warning
+  ::: warning
 
-    Você precisa usar um cliente de torrent para baixar as imagens de CTRTransfer, como [qBitTorrent](https://www.qbittorrent.org/download) ou [Deluge](https://deluge-torrent.org/download/).
+  Você precisa usar um cliente de torrent para baixar as imagens de CTRTransfer, como [qBitTorrent](https://www.qbittorrent.org/download) ou [Deluge](https://deluge-torrent.org/download/).
 
-    :::
+  :::
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 

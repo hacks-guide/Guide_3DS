@@ -32,7 +32,7 @@ Este guia funciona com todos os consoles de varejo da família de consoles do Ni
 
 :::
 
-Na maioria dos casos você pode seguir este guia desde que você consiga baixar arquivos da internet e copiá-los para seu cartão SD. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as phones and tablets running Android and iOS. Depending on your electronic device, you may need to purchase an SD card adapter to allow it to read your SD card.
+Na maioria dos casos você pode seguir este guia desde que você consiga baixar arquivos da internet e copiá-los para seu cartão SD. Isso inclui a maioria dos dispositivos eletrônicos de consumidor, como computadores executando Windows, macOS, Linux e chromeOS (Chromebooks), bem como telefones e tablets executando Android e iOS. Dependendo do seu dispositivo eletrônico, talvez seja necessário comprar um adaptador de cartão SD para permitir que ele leia seu cartão SD.
 
 ::::
 
@@ -168,7 +168,7 @@ Se você experienciar algum problema enquanto segue este guia, existem muitas ma
 
 - Se você possuir qualquer dúvida não respondida nesta página, as respostas podem estar no [FAQ de Pré-Instalação](faq#pre-installation-faq).
 - Se você estiver experienciando um problema ao seguir este guia, você pode verificar a página de [Troubleshooting](troubleshooting).
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- Se os recursos que fornecemos aqui não forem úteis, você pode obter suporte individual em [Nintendo Homebrew no Discord](https://discord.gg/MWxPgEp).
 
 ::: tip
 

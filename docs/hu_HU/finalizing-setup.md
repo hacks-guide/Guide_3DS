@@ -151,11 +151,11 @@ Néhány billentyű kombináció amit ismerned kell:
 
 ### Pretendo
 
-Pretendo is a replacement service for the Nintendo Network, which resurrects online services from the now shut down Nintendo Network. It also revives the Miiverse service, via juxtaposition. The official guide can be found [here](https://pretendo.network/docs/install/3ds).
+A Pretendo egy helyettesítő szolgáltatása a Nintendo Network-nek, ami visszahozza az online szolgáltatásokat, amik leállításra kerültek már a Nintendo Network-ön. Újraéleszti a Miiverse-t is a juxtaposition-ön keresztül. A hivatalos útmutató [itt](https://pretendo.network/docs/install/3ds) érhető el.
 
-**Note: Pretendo does not support every online service, however work is being done to achieve this.**
+**Megjegyzés: A Pretendo nem támogat minden online szolgáltatást, habár a munka célja ennek elérése.**
 
-A list of games that Pretendo supports can be found [here](https://wiki.pretendo.zip/game-support-status).
+A Pretendo által támogatott játékok listája megtalálható [itt](https://wiki.pretendo.zip/game-support-status).
 
 ::: info
 
