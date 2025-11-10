@@ -16,6 +16,8 @@ If you're removing CFW because:
 * One of your games is broken
 * One of your system applications is broken
 * Your console is unable to boot to HOME Menu
+* Your system is crashing randomly
+* You want to update your system firmware/CFW install
 
 <u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
@@ -189,6 +191,8 @@ If you're removing CFW because:
 * One of your games is broken
 * One of your system applications is broken
 * Your console is unable to boot to HOME Menu
+* Your system is crashing randomly
+* You want to update your system firmware/CFW install
 
 <u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
