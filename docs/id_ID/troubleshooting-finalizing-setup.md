@@ -76,7 +76,7 @@ Sesudah menaruh cadangan NAND di tempat aman:
 4. Pilih "Scripts..."
 5. Pilih "finalize"
 6. Lanjutkan naskah seperti biasa
-    - Pencadangan NAND akan otomatis dilewati
+   - Pencadangan NAND akan otomatis dilewati
 
 :::
 
@@ -121,7 +121,7 @@ Naskahnya mendeteksi tidak ada folder Nintendo 3DS _DAN_ ternyata sudah pernah m
 3. **Salin isi folder `/gm9/backups/` ke letak yang aman di komputer Anda**
 4. Hapus `/gm9/backups/` dari kartu SD
 5. Jika tadi folder Nintendo 3DS sudah disalin dan ada di luar kartu SD, salin balik ke kartu SD
-    - Jika tidak punya folder Nintendo 3DS, nyalakan konsol ke HOME Menu setidaknya sekali dengan kartu SD untuk membuatnya
+   - Jika tidak punya folder Nintendo 3DS, nyalakan konsol ke HOME Menu setidaknya sekali dengan kartu SD untuk membuatnya
 6. Tahan tombol (Start) selagi menyalakan konsol. Ini akan masuk ke GodMode9
 7. Tekan (Home) untuk membuka menu tindakan
 8. Pilih "Scripts..."

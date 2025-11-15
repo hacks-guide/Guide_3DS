@@ -2,7 +2,7 @@
 
 ::: info
 
-If this is your first time modding a 3DS (or you're unfamiliar with technology), keep reading! Otherwise, if you have prior experience and know what you're doing, continue to [Get Started](get-started).
+Si esta es la primera vez que modificas una 3DS (o no estás familiarizado con la tecnología en general), ¡sigue leyendo! Otherwise, if you have prior experience and know what you're doing, continue to [Get Started](get-started).
 
 :::
 
@@ -32,7 +32,7 @@ This guide works with every retail console in the Nintendo 3DS family of console
 
 :::
 
-In most cases, you can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as phones and tablets running Android and iOS. Depending on your electronic device, you may need to purchase an SD card adapter to allow it to read your SD card.
+In most cases, you can follow this guide as long as you are able to download files from the Internet and copy them to your SD card. Esto incluye la mayoría de dispositivos electrónicos disponibles al consumidor, como computadoras con sistema operativo Windows, macOS, Linux y chromeOS (Chromebooks), así como teléfonos y tablets con sistema operativo Android y iOS. Depending on your electronic device, you may need to purchase an SD card adapter to allow it to read your SD card.
 
 ::::
 

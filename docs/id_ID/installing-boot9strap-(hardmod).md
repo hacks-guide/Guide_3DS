@@ -21,7 +21,7 @@ Ini berfungsi di New 3DS, New 2DS, Old 3DS, dan Old 2DS di _semua_ versi jika pu
 - Berkas NAND Anda yang diekstrak dengan [oprek fisik](https://gbatemp.net/threads/414498/)
 - Versi terkini dari [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (unduhan langsung)
 - Versi terkini dari [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
-    - Pengguna Windows bisa menggunakan `.exe` terkompil, sedangkan pengguna Mac dan Linux perlu [Python 3](https://www.python.org/downloads/) untuk menjalakan `.py`
+  - Pengguna Windows bisa menggunakan `.exe` terkompil, sedangkan pengguna Mac dan Linux perlu [Python 3](https://www.python.org/downloads/) untuk menjalakan `.py`
 - Versi terkini dari [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (yang `.zip` Luma3DS)
 - Berkas `.firm` yang sesuai versi dan jenis konsol:
 
@@ -81,8 +81,8 @@ Di bagian ini akan mengunduh berkas yang perlu untuk oprek fisik lalu membuat _d
 Di bagian ini akan memasang _custom firmware_ ke hasil _dump_ NAND tadi, lalu memasang NAND tersebut balik ke konsol untuk memasang _custom firmware_.
 
 1. Jalankan hardmod-b9s-installer
-    - Pengguna Windows: Jalankan `install-b9s.exe`
-    - Pengguna Mac dan Linux: Jalankan`install-b9s.py`
+   - Pengguna Windows: Jalankan `install-b9s.exe`
+   - Pengguna Mac dan Linux: Jalankan`install-b9s.py`
 2. _Flash_-kan hasil `NAND-patched.bin` ke konsol dengan oprek keras
 3. Matikan daya konsol
 4. Cabut kabel konsol oprek fisik

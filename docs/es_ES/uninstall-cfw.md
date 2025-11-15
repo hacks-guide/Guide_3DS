@@ -16,6 +16,8 @@ Si estás desinstalando CFW porque:
 - Uno de tus juegos no funciona
 - Uno de los programas del sistema no funciona
 - Tu consola no puede arrancar el Menú HOME
+- Your system is crashing randomly
+- You want to update your system firmware/CFW install
 
 <u>**¡¡¡DETENTE!!!**</u> Desinstalar custom firmware es un riesgo innecesario que en el mejor de los casos solo desperdiciará tu tiempo y en el peor <u>**ROMPERÁ**</u> tu consola. Una mejor idea sería pedir ayuda (en inglés) en el [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
@@ -195,6 +197,8 @@ Si estás desinstalando CFW porque:
 - Uno de tus juegos no funciona
 - Uno de los programas del sistema no funciona
 - Tu consola no puede arrancar el Menú HOME
+- Your system is crashing randomly
+- You want to update your system firmware/CFW install
 
 <u>**¡¡¡DETENTE!!!**</u> Desinstalar custom firmware es un riesgo innecesario que en el mejor de los casos solo desperdiciará tu tiempo y en el peor <u>**ROMPERÁ**</u> tu consola. Una mejor idea sería pedir ayuda (en inglés) en el [Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp).
 

@@ -16,6 +16,8 @@ Se stai rimuovendo il CFW perché:
 - Uno dei tuoi giochi non funziona correttamente
 - Una delle applicazioni di sistema non funziona correttamente
 - La tua console non riesce ad avviare il menu HOME
+- La console crasha randomicamente
+- Vuoi aggiornare la tua versione del software o il tuo CFW
 
 <u>**FERMATI!!!**</u> Disinstallare il custom firmware è un rischio non necessario che nel migliore dei casi ti farà perdere tempo e nel peggiore <u>**BRICKARE**</u> la tua console. Un'idea migliore sarebbe chiedere aiuto nel [canale Discord Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
@@ -195,6 +197,8 @@ Se stai rimuovendo il CFW perché:
 - Uno dei tuoi giochi non funziona correttamente
 - Una delle applicazioni di sistema non funziona correttamente
 - La tua console non riesce ad avviare il menu HOME
+- La console crasha randomicamente
+- Vuoi aggiornare la tua versione del software o il tuo CFW
 
 <u>**FERMATI!!!**</u> Disinstallare il custom firmware è un rischio non necessario che nel migliore dei casi ti farà perdere tempo e nel peggiore <u>**BRICKARE**</u> la tua console. Un'idea migliore sarebbe chiedere aiuto nel [canale Discord Nintendo Homebrew](https://discord.gg/MWxPgEp).
 

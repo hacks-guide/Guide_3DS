@@ -4,8 +4,8 @@
 4. Pilih "Backup Options"
 5. Pilih "SysNAND Backup"
 6. Tekan (A) untuk konfirmasi
-    - Proses ini akan lumayan lama
-    - Jika muncul galat, cari penanganannya di [panduan sidik gangguan](troubleshooting-finalizing-setup.html)
+   - Proses ini akan lumayan lama
+   - Jika muncul galat, cari penanganannya di [panduan sidik gangguan](troubleshooting-finalizing-setup.html)
 7. Tekan (A) untuk lanjut
 8. Tekan (B) untuk kembali ke menu utama
 9. Pilih "Exit"

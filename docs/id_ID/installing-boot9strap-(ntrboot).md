@@ -19,20 +19,20 @@ Untuk menggunakan tautan [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) 
 1. Matikan daya konsol
 
 2. Sisipkan kartu SD konsol ke komputer
-    - Ini kartu SD yang dari 3DS, **bukan** yang dari _flashcart_
+   - Ini kartu SD yang dari 3DS, **bukan** yang dari _flashcart_
 
 3. Salin `SafeB9SInstaller.firm` dari berkas `.zip` SafeB9SInstaller ke akar kartu SD dan ubah nama menjadi `boot.firm`
-    - Akar (_root_) kartu SD adalah direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
+   - Akar (_root_) kartu SD adalah direktori awal kartu SD yang ada folder Nintendo 3DS, berarti **tidak di dalam folder apa pun**
 
 4. Buat folder dengan nama `boot9strap` di akar kartu SD konsol
 
 5. Salin `boot9strap.firm` dan `boot9strap.firm.sha` dari `.zip` boot9strap ke folder `/boot9strap/` di kartu SD konsol
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/boot9strap-ntrboot-file-layout.png)
+   ![](/images/screenshots/boot9strap-ntrboot-file-layout.png)
 
-    :::
+   :::
 
 6. Sisip kembali kartu SD ke konsol
 
@@ -41,25 +41,25 @@ Untuk menggunakan tautan [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) 
 ### Bagian II - ntrboot
 
 1. Gunakan besi berani untuk mencari titik pemicu mode tidur pada konsol
-    - Langkah ini tidak perlu di Old 2DS (karena ada cetekan mode tidur)
+   - Langkah ini tidak perlu di Old 2DS (karena ada cetekan mode tidur)
 2. Matikan daya konsol
 3. Sisipkan _flashcart_ ke konsol Anda
 4. Taruh besi berani pada konsol untuk memicu mode tidur
-    - Di Old 2DS, geser saja cetekan mode tidur ke kanan
+   - Di Old 2DS, geser saja cetekan mode tidur ke kanan
 5. Tahan (Start) + (Select) + (X) + (Power) selama beberapa detik, lalu lepas tombolnya
-    - Mungkin perlu dicoba berkali-kali agar berhasil karena posisinya agak canggung
+   - Mungkin perlu dicoba berkali-kali agar berhasil karena posisinya agak canggung
 6. Jika eksploit berhasil akan muncul SafeB9SInstaller
 7. Lepaskan besi berani dari konsol
-    - Di Old 2DS, geser saja cetekan mode tidur ke kiri
+   - Di Old 2DS, geser saja cetekan mode tidur ke kiri
 
 ### Bagian III - Memasang boot9strap
 
 Di bagian ini akan mulai memasang _custom firmware_ ke konsol.
 
 1. Saat diminta, tekan kombo tombol mengikuti layar atas untuk memasang boot9strap
-    - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-ntrboot)
+   - Jika langkah di layar bawah ada teks warna merah, dan tidak diminta kombo tombol, [ikuti panduan sidik gangguan ini](troubleshooting-ntrboot)
 2. Sesudah selesai, matikan paksa daya konsol dengan menekan lama tombol Power
-    - Konsol hanya akan menyala ke SafeB9SInstaller jika langkah setelah ini belum dilakukan
+   - Konsol hanya akan menyala ke SafeB9SInstaller jika langkah setelah ini belum dilakukan
 
 ### Bagian IV - Menyetel Luma3DS
 
@@ -95,9 +95,9 @@ Jangan ikuti bagian ini jika belum menyelesaikan instruksi di atas.
 
 - Versi terkini dari [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 - Cadangan _flashrom_ sesuai jenis _flashcart_
-    - Jika sudah mengikuti [Mem-_flash_ ntrboot (Beberapa Sistem 3DS)](flashing-ntrboot-\(3ds-multi-system\)), cadangan _flashrom_ sudah di letak yang benar dan tidak usah diunduh
-    - Jika sudah mengikuti [Mem-_flash_ ntrboot (Satu Sistem 3DS)](flashing-ntrboot-\(3ds-single-system\)) atau [Mem-_flash_ ntrboot (NDS)](flashing-ntrboot-\(nds\)), cadangan _flashrom_ sudah di kartu SD _flashcart_ dan harus disalin sesuai instruksi di bawah
-    - Jika tidak tahu punya HW revisi berapa, coba _flash_-kan satu-satu ke _flashcart_. _Flashrom_ harus yang benar agar _flashcart_ terbaca lagi di HOME Menu, **_flashcart_ tidak akan matot jika salah mem-_flash_**
+  - Jika sudah mengikuti [Mem-_flash_ ntrboot (Beberapa Sistem 3DS)](flashing-ntrboot-\(3ds-multi-system\)), cadangan _flashrom_ sudah di letak yang benar dan tidak usah diunduh
+  - Jika sudah mengikuti [Mem-_flash_ ntrboot (Satu Sistem 3DS)](flashing-ntrboot-\(3ds-single-system\)) atau [Mem-_flash_ ntrboot (NDS)](flashing-ntrboot-\(nds\)), cadangan _flashrom_ sudah di kartu SD _flashcart_ dan harus disalin sesuai instruksi di bawah
+  - Jika tidak tahu punya HW revisi berapa, coba _flash_-kan satu-satu ke _flashcart_. _Flashrom_ harus yang benar agar _flashcart_ terbaca lagi di HOME Menu, **_flashcart_ tidak akan matot jika salah mem-_flash_**
 
 | Flashcart                                                       | Revisi Fisik (HW) |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Flashrom                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------------------------------------------- | :----------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -129,7 +129,7 @@ Jangan ikuti bagian ini jika belum menyelesaikan instruksi di atas.
 
 1. Matikan daya konsol
 2. Sisipkan kartu SD ke komputer Anda
-    - Ini kartu SD yang dari 3DS, **bukan** yang dari _flashcart_
+   - Ini kartu SD yang dari 3DS, **bukan** yang dari _flashcart_
 3. Buat folder dengan nama `ntrboot` di akar kartu SD
 4. Salin berkas `.bin` dari `.zip` cadangan _flashrom_ Anda ke folder `/ntrboot/` di akar kartu SD
 5. Buat folder dengan nama `payloads` dalam folder `luma` di kartu SD

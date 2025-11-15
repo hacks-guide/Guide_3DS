@@ -24,10 +24,10 @@ Jika daerah konsol diubah:
 
 - NNID Anda tidak akan bisa digunakan (jika ada). NNID dikunci sesuai daerah konsol tempat akun dibuat.
 - Akses ke eShop juga mungkin tidak bisa, bahkan jika sebelumnya sudah [menghapus akun eShop](https://en-americas-support.nintendo.com/app/answers/detail/a_id/74/~/how-to-delete-a-nintendo-eshop-account). Ini karena aplikasi tertentu cenderung tetap tertaut ke 3DS, bahkan setelah hapus akun (khususnya di New 3DS).
-    - Ini masih perlu karena walaupun sudah tidak bisa membeli di eShop tapi **masih bisa memperbarui permainan**. Pembaruan akan ada perbaikan kutu / konten tambahan.
-    - Begitu pun untuk System Transfer, berarti tidak bisa transfer sistem beda daerah, misal: dari konsol 3DS JPN-terubah-USA ke 3DS USA asli.
-    - Pokémon Bank juga perlu akses ke eShop.
-    - Dan juga, transfer sistem dan pembaruan permainan itu terkunci-daerah (misal: eShop Jepang hanya punya pembaruan Jepang).
+  - Ini masih perlu karena walaupun sudah tidak bisa membeli di eShop tapi **masih bisa memperbarui permainan**. Pembaruan akan ada perbaikan kutu / konten tambahan.
+  - Begitu pun untuk System Transfer, berarti tidak bisa transfer sistem beda daerah, misal: dari konsol 3DS JPN-terubah-USA ke 3DS USA asli.
+  - Pokémon Bank juga perlu akses ke eShop.
+  - Dan juga, transfer sistem dan pembaruan permainan itu terkunci-daerah (misal: eShop Jepang hanya punya pembaruan Jepang).
 - **Mencopot _custom firmware_ berkemungkinan konsol menjadi matot!** Jika berniat mencopot _custom firmware_, berarti **HARUS** memulihkan dulu cadangan NAND **yang** dibuat sebelum mengubah daerah.
 
 :::
@@ -40,11 +40,11 @@ Jika daerah konsol diubah:
 - Versi terkini dari [ctrtransfer.gm9](https://raw.githubusercontent.com/nh-server/scripts/refs/heads/main/3DS/ctrtransfer.gm9) (pencet kanan lalu _save link as_; simpan tautan)
 - Berkas CTRTransfer 11.15.0 daerah lain **sesuai jenis konsol Anda** (misal: Unduh "New 3DS / New 2DS - USA" jika punya konsol jenis New 3DS dan ingin diubah ke daerah USA)
 
-    ::: warning
+  ::: warning
 
-    Perlu klien torrent untuk mengunduh berkas CTRTransfer, seperti [qBitTorrent](https://www.qbittorrent.org/download) atau [Deluge](https://deluge-torrent.org/download/).
+  Perlu klien torrent untuk mengunduh berkas CTRTransfer, seperti [qBitTorrent](https://www.qbittorrent.org/download) atau [Deluge](https://deluge-torrent.org/download/).
 
-    :::
+  :::
 
 <!--@include: ./_include/ctrtransfer-images.md -->
 

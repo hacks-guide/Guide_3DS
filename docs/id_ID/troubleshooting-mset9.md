@@ -52,7 +52,7 @@ Pastikan sudah mengatur ulang _title database_.
 
 - Mohon nyalakan daya konsol dengan kartu SD disisip
 - Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
-    - Ini tidak akan menghapus data
+  - Ini tidak akan menghapus data
 - Atur ulang jika diminta, lalu matikan daya konsol dan mulai lagi dari [Bagian I Langkah 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 Jika _tidak_ diminta atur ulang, kartu SD Anda perlu diformat:
@@ -65,7 +65,7 @@ Jika _tidak_ diminta atur ulang, kartu SD Anda perlu diformat:
 
 1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
 2. Ketik `2` lalu tekan Enter untuk periksa status MSET9
-    - Ini akan membuat pangkalan data bonekaan lagi
+   - Ini akan membuat pangkalan data bonekaan lagi
 3. Tutup jendela naskah MSET9
 4. Mulai lagi dari [Bagian I Langkah 12](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
 
@@ -106,12 +106,12 @@ Folder ID0 ada lebih dari satu. Untuk tahu folder mana yang benar, ikuti instruk
 2. Sisip kembali kartu SD ke konsol
 3. Nyalakan daya konsol
 4. Tunggu konsol membuat data baru kartu SD
-    - Aplikasi yang ada akan menghilang. Memang seperti ini dan akan segera diatasi
+   - Aplikasi yang ada akan menghilang. Memang seperti ini dan akan segera diatasi
 5. Matikan daya konsol
 6. Sisipkan kartu SD ke komputer Anda
 7. Navigasi ke folder `Nintendo 3DS` di kartu SD
 8. Catat nama folder yang ada
-    - Ini ID0 yang benar, cari nama ini di folder `BACKUP_Nintendo 3DS` tadi
+   - Ini ID0 yang benar, cari nama ini di folder `BACKUP_Nintendo 3DS` tadi
 9. Hapus folder ID0 dari folder `Nintendo 3DS` yang sekarang
 10. Pindahkan folder ID0 yang benar dari folder `BACKUP_Nintendo 3DS` ke folder `Nintendo 3DS`
 11. Jika ada, pindahkan juga `Private` dari folder `BACKUP_Nintendo 3DS` ke folder `Nintendo 3DS`
@@ -158,8 +158,8 @@ Mungkin belum ada `SafeB9S.bin` di akar kartu SD, atau berkasnya rusak. Salin `S
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
-    - Terminal seharusnya bertulis [Injected](/images/screenshots/mset9/mset9-injected.png)
-    - Jika sudah menghapus _trigger file_ (atau memang belum disuntikkan), terminal akan bertulis [Ready](/images/screenshots/mset9/mset9-ready.png), baru [coba lagi Bagian II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+   - Terminal seharusnya bertulis [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Jika sudah menghapus _trigger file_ (atau memang belum disuntikkan), terminal akan bertulis [Ready](/images/screenshots/mset9/mset9-ready.png), baru [coba lagi Bagian II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Ketik `4`, lalu tekan Enter
 3. Sesudah bertulis "Removed trigger file", ketik `0` lalu tekan Enter
 4. Sisip kembali kartu SD ke konsol
@@ -187,8 +187,8 @@ Ikuti instruksi ini untuk menghapus _trigger file_ dan coba lagi Bagian II:
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Ketik nomornya sesuai dengan model dan versi konsol, lalu tekan Enter
-    - Terminal seharusnya bertulis [Injected](/images/screenshots/mset9/mset9-injected.png)
-    - Jika sudah menghapus _trigger file_ (atau memang belum disuntikkan), terminal akan bertulis [Ready](/images/screenshots/mset9/mset9-ready.png), baru coba lagi Bagian II
+   - Terminal seharusnya bertulis [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - Jika sudah menghapus _trigger file_ (atau memang belum disuntikkan), terminal akan bertulis [Ready](/images/screenshots/mset9/mset9-ready.png), baru coba lagi Bagian II
 2. Ketik `4`, lalu tekan Enter
 3. Sesudah bertulis "Removed trigger file", ketik `0` lalu tekan Enter
 4. Sisip kembali kartu SD ke konsol

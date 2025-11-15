@@ -70,7 +70,7 @@ Ikuti langkah ini berurutan:
 4. Atur "Proxy Settings" ke "No"
 5. Pencet OK, lalu pencet Save
 6. Saat diminta, pencet "Test" untuk menguji sambungan
-    - Pengujiannya harus berhasil
+   - Pengujiannya harus berhasil
 7. Pencet "OK" untuk lanjut
 8. Tekan "Back" dua kali, lalu "Close" untuk kembali ke HOME Menu
 9. Buka Internet Browser satu kali

@@ -35,19 +35,19 @@ Langkah di bawah ini bisa dicoba dari urutan mana saja, diurutkan dari instruksi
 1. Matikan daya konsol, lepas kartu SD, sisip kembali, lalu nyalakan ulang konsol.
 2. Matikan daya konsol, keluarkan kartrid jika ada, nyalakan daya konsol, lalu tunggu sepuluh menit. Jika konsol menyala dalam kurun 10 menit, berarti isu sudah diperbaiki dan tidak akan terulang
 3. Ubah nama folder `Nintendo 3DS` di kartu SD menjadi `Nintendo 3DS_BACKUP`, lalu coba nyalakan. Jika konsol berhasil menyala biasa, berarti ada yang salah dengan folder `Nintendo 3DS`. Coba hapus extdata HOME Menu:
-    - Navigasi ke `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
-    - Hapus satu folder sesuai daerah konsol 3DS:
-        - **Daerah EUR**: `00000098`
-        - **Daerah JPN**: `00000082`
-        - **Daerah USA**: `0000008f`
-        - **Daerah CHN**: `000000A1`
-        - **Daerah KOR**: `000000A9`
-        - **Daerah TWN**: `000000B1`
+   - Navigasi ke `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/`
+   - Hapus satu folder sesuai daerah konsol 3DS:
+     - **Daerah EUR**: `00000098`
+     - **Daerah JPN**: `00000082`
+     - **Daerah USA**: `0000008f`
+     - **Daerah CHN**: `000000A1`
+     - **Daerah KOR**: `000000A9`
+     - **Daerah TWN**: `000000B1`
 4. Coba masuk ke Recovery Mode dan perbarui konsol:
-    - Matikan daya konsol
-    - Tahan (L) + (R) + (Tombol Atas) + (A)
-    - Nyalakan daya konsol
-    - Jika berhasil, konsol akan menyala ke layar "update your system"
+   - Matikan daya konsol
+   - Tahan (L) + (R) + (Tombol Atas) + (A)
+   - Nyalakan daya konsol
+   - Jika berhasil, konsol akan menyala ke layar "update your system"
 5. Ikuti panduan [CTRTransfer](ctrtransfer)
 6. For further support, ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)
 
@@ -164,12 +164,12 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 2. Sisipkan kartu SD ke komputer Anda
 3. Navigasi ke folder `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` di kartu SD
 4. Hapus satu folder sesuai daerah konsol 3DS:
-    - **Daerah EUR**: `00000098`
-    - **Daerah JPN**: `00000082`
-    - **Daerah USA**: `0000008f`
-    - **Daerah CHN**: `000000A1`
-    - **Daerah KOR**: `000000A9`
-    - **Daerah TWN**: `000000B1`
+   - **Daerah EUR**: `00000098`
+   - **Daerah JPN**: `00000082`
+   - **Daerah USA**: `0000008f`
+   - **Daerah CHN**: `000000A1`
+   - **Daerah KOR**: `000000A9`
+   - **Daerah TWN**: `000000B1`
 5. Sisip kembali kartu SD ke konsol
 
 :::
@@ -180,10 +180,10 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 2. Sisipkan kartu SD ke komputer Anda
 3. Navigasi ke folder `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` di kartu SD
 4. Hapus satu folder sesuai daerah konsol 3DS:
-    - **Daerah EUR**: `000002ce`
-    - **Daerah JPN**: `000002cc`
-    - **Daerah USA**: `000002cd`
-    - **Daerah KOR**: `000002cf`
+   - **Daerah EUR**: `000002ce`
+   - **Daerah JPN**: `000002cc`
+   - **Daerah USA**: `000002cd`
+   - **Daerah KOR**: `000002cf`
 5. Sisip kembali kartu SD ke konsol
 
 :::
@@ -203,9 +203,9 @@ Namun, jika tidak tahu kode PIN sehingga tidak bisa ke pengaturan konsol, berart
 
 1. Buka [situs ini](https://mkey.eiphax.tech/)
 2. Isi kotak kolom seperti berikut:
-    - Device Type: Pilih "3DS" (untuk konsol 3DS (XL/LL), 2DS, New 3DS (XL/LL), atau New 2DS XL/LL)
-    - System Date: Bulan dan hari yang diatur di konsol
-    - Inquiry Number: Bisa didapat dengan menekan "Forgot PIN" lalu "I Forgot" di layar Parental Controls
+   - Device Type: Pilih "3DS" (untuk konsol 3DS (XL/LL), 2DS, New 3DS (XL/LL), atau New 2DS XL/LL)
+   - System Date: Bulan dan hari yang diatur di konsol
+   - Inquiry Number: Bisa didapat dengan menekan "Forgot PIN" lalu "I Forgot" di layar Parental Controls
 3. Setelah mendapatkan mkey, tekan OK di layar Inquiry Number, lalu masukkan _master key_ (mkey) di 3DS
 4. Tekan "Clear Settings", lalu "Delete" untuk menghapus semua data Parental Controls
 

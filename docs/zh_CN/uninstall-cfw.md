@@ -16,6 +16,8 @@ This will completely remove CFW from your console, including boot9strap and Luma
 - One of your games is broken
 - One of your system applications is broken
 - Your console is unable to boot to HOME Menu
+- Your system is crashing randomly
+- You want to update your system firmware/CFW install
 
 <u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
@@ -72,7 +74,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 2. Launch System Settings on your console
 3. 移动到 `网络设置（Internet Settings）` -> `任天堂 DS 连接（Nintendo DS Connections）`，然后选择 “OK”
 4. 你的主机应该会正常启动到任天堂 DS 连接设置菜单
-    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
 5. 将主机关机
 
 #### DS Download Play Test
@@ -81,7 +83,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 2. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 3. 选择 “Nintendo DS”
 4. If your console loads into a "Download software via DS Download Play" menu, the test was successful
-    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
 5. 将主机关机
 
 ::: warning
@@ -97,15 +99,15 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 2. 如果工具提示是否需要创建重要文件备份，请按下 “A” 键确认。完成后再次按下 “A” 键来继续。
 3. 如果出现修复 RTC 日期与时间的提示，按 “A” 键执行修复，然后设置好日期和时间，并按 “A” 继续
-    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
+   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
 4. 按下 “Home” 键来打开功能菜单
 5. 选择 “Scripts...”
 6. 选择 “safety_test”
 7. 阅读屏幕上的文本，然后按下 “A” 键继续
 8. 主机应该会自动进入到正常的 3DS 主菜单（有没有自制主题无关）。 如果是这样，那么继续下面的操作
-    - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
+   - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
 9. Launch System Settings on your console
-    - If the console crashes at this point, the test has failed
+   - If the console crashes at this point, the test has failed
 10. 选择 “其他设置（Other Settings）”
 11. 选择 “档案（Profile）”
 12. 选择 “用户名（User Name）”
@@ -128,8 +130,8 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 5. 选择 “Backup Options”
 6. 选择 “SysNAND Backup”
 7. 按下 “A” 键确认
-    - This process will take some time
-    - If you get an error, ensure you have at least 1.3GB of free space on your SD card
+   - This process will take some time
+   - If you get an error, ensure you have at least 1.3GB of free space on your SD card
 8. 按下 “B” 键返回到主菜单
 9. 选择 “退出（Exit）”
 10. 按下 “Home” 键来打开功能菜单
@@ -147,11 +149,11 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 2. Launch System Settings on your console
 3. 进入到 “数据管理（Data Management）” > “Nintendo 3DS” > “软件（Software）”
 4. 在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
-    - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
+   - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
 5. 进入到 `資料管理` -> `DSiWare`
 6. 在此列表中，删除你在使用自制系统时安装的任何非来自任天堂的自制程序。
-    - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
-    - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
+   - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
+   - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
 7. 退出系统设置
 8. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 9. 等到你看到两个按钮
@@ -195,13 +197,15 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 - One of your games is broken
 - One of your system applications is broken
 - Your console is unable to boot to HOME Menu
+- Your system is crashing randomly
+- You want to update your system firmware/CFW install
 
 <u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
 :::
 
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-    - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
+   - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 2. 按下 “Home” 键来打开功能菜单
 3. 选择 “Scripts...”
 4. Select "uninstall_cfw"

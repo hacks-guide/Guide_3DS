@@ -16,6 +16,8 @@
 - 게임 하나가 정상 동작하지 않습니다
 - 시스템 어플리케이션 하나가 정상 동작하지 않습니다
 - 콘솔이 HOME 메뉴로 정상 부팅되지 않습니다
+- Your system is crashing randomly
+- You want to update your system firmware/CFW install
 
 <u>**당장 멈추세요!!**</u> 커펌을 삭제하는 것은 시간만 잡아먹는 불필요한 모험이며, 심할 경우 콘솔을 <u>**벽돌로 만들 수 있습니다**</u>. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
@@ -195,6 +197,8 @@
 - 게임 하나가 정상 동작하지 않습니다
 - 시스템 어플리케이션 하나가 정상 동작하지 않습니다
 - 콘솔이 HOME 메뉴로 정상 부팅되지 않습니다
+- Your system is crashing randomly
+- You want to update your system firmware/CFW install
 
 <u>**당장 멈추세요!!**</u> 커펌을 삭제하는 것은 시간만 잡아먹는 불필요한 모험이며, 심할 경우 콘솔을 <u>**벽돌로 만들 수 있습니다**</u>. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 

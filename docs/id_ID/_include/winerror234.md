@@ -6,40 +6,40 @@ Ini terjadi karena fitur "beta UTF-8" di Windows. Ini harus nonaktif agar MSET9 
 
 1. Tekan **Tombol Windows + R** untuk membuka Run, ketik `intl.cpl`, lalu pencet "OK"
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/troubleshooting/234run.png)
+   ![](/images/screenshots/troubleshooting/234run.png)
 
-    :::
+   :::
 
 2. Pencet `Administrative`, lalu `Change System Locale`
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/troubleshooting/234region.png)
+   ![](/images/screenshots/troubleshooting/234region.png)
 
-    :::
+   :::
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/troubleshooting/234administrative.png)
+   ![](/images/screenshots/troubleshooting/234administrative.png)
 
-    :::
+   :::
 
 3. Lepas centang di sebelah `Beta: Use Unicode UTF-8 for worldwide language support`, lalu "OK"
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/troubleshooting/234locale.png)
+   ![](/images/screenshots/troubleshooting/234locale.png)
 
-    :::
+   :::
 
 4. Pencet "Restart Now"
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/troubleshooting/234restart.png)
+   ![](/images/screenshots/troubleshooting/234restart.png)
 
-    :::
+   :::
 
 Setelah komputer menyala ulang, coba buat lagi ID1 MSET9.

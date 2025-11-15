@@ -16,6 +16,8 @@ Ha azért távolítod el a CFW-t, mert:
 - Valamelyik játékod hibás
 - Valamelyik rendszer alkalmazásod hibás
 - A konzolod nem tud bebootolni a HOME Menübe
+- A rendszered véletlenül összeomlik
+- Szeretnéd frissíteni a rendszer firmware-t/CFW telepítésed
 
 <u>**ÁLLJ!!!**</u> Az egyedi firmware eltávolítása egy felesleges kockázat, ami legjobb esetben az időd pocsékolása, a legrosszabb esetben pedig <u>**BRICKELI**</u> a konzolodat. Jobb ötlet az, hogy segítséget kérsz (angolul) a [Nintendo Homebrew Discord szerveren](https://discord.gg/MWxPgEp).
 
@@ -195,6 +197,8 @@ Ha azért távolítod el a CFW-t, mert:
 - Valamelyik játékod hibás
 - Valamelyik rendszer alkalmazásod hibás
 - A konzolod nem tud bebootolni a HOME Menübe
+- A rendszered véletlenül összeomlik
+- Szeretnéd frissíteni a rendszer firmware-t/CFW telepítésed
 
 <u>**ÁLLJ!!!**</u> Az egyedi firmware eltávolítása egy felesleges kockázat, ami legjobb esetben az időd pocsékolása, a legrosszabb esetben pedig <u>**BRICKELI**</u> a konzolodat. Jobb ötlet az, hogy segítséget kérsz (angolul) a [Nintendo Homebrew Discord szerveren](https://discord.gg/MWxPgEp).
 
