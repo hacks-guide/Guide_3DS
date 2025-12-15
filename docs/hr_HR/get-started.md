@@ -1,12 +1,14 @@
 ---
 noneSelected: System model is required.
 invalidVersion: This doesn't seem to be a valid system version.
+cfwPrefixDetected: Your console may already have custom firmware installed. Please retry Section I. If you still only reach the HOME menu, click the link below and ask, in English, for assistance.
+inviteLinkText: Nintendo Homebrew on Discord
 otherPrefix: (Other)
 head:
-  - - script
-    - src: /assets/js/common.js
-  - - script
-    - src: /assets/js/selecting.js
+  [
+    [ 'script', { src: '/assets/js/common.js' } ],
+    [ 'script', { src: '/assets/js/selecting.js' } ]
+  ]
 ---
 
 # Get Started

@@ -1,6 +1,8 @@
 ---
 noneSelected: 시스템 모델을 선택하세요.
 invalidVersion: 올바른 시스템 버전으로 확인되지 않습니다.
+cfwPrefixDetected: Your console may already have custom firmware installed. Please retry Section I. If you still only reach the HOME menu, click the link below and ask, in English, for assistance.
+inviteLinkText: Nintendo Homebrew on Discord
 otherPrefix: (기타)
 head:
   [

@@ -1,6 +1,8 @@
 ---
 noneSelected: Perlu tahu model konsol.
 invalidVersion: Versi sistem ini sepertinya tidak absah.
+cfwPrefixDetected: Your console may already have custom firmware installed. Please retry Section I. If you still only reach the HOME menu, click the link below and ask, in English, for assistance.
+inviteLinkText: Nintendo Homebrew on Discord
 otherPrefix: (Lainnya)
 head:
   [
