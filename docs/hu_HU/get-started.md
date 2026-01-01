@@ -1,8 +1,8 @@
 ---
 noneSelected: A rendszer modell szükséges.
 invalidVersion: Ez nem tűnik egy érvényes rendszer verziónak.
-cfwPrefixDetected: Your console may already have custom firmware installed. Please retry Section I. If you still only reach the HOME menu, click the link below and ask, in English, for assistance.
-inviteLinkText: Nintendo Homebrew on Discord
+cfwPrefixDetected: A konzolod már lehet rendelkezik egyedi firmware telepítéssel. Próbáld meg újra az I. részt. Ha továbbra is a HOME menübe jutsz, kattints a linkre alább és kérj angolul segítséget.
+inviteLinkText: Nintendo Homebrew a Discord-on
 otherPrefix: (Egyéb)
 head:
   [
