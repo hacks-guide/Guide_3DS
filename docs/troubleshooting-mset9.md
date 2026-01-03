@@ -143,6 +143,18 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 
 ::::
 
+::: details FileNotFoundError: [Errno 2] No such file or directory
+
+To manually remove MSET9, follow these instructions:
+
+1. Navigate to the `Nintendo 3DS` folder on your SD card
+1. Open the 32 character long folder that you see
+1. You should see two folders, delete the folder containing garbled text
+1. If the remaining folder ends with _user-id1, remove _user-id1 by renaming it
+1. MSET9 is now removed, consider this a completion of Section IV
+
+:::
+
 ## MSET9 (exploit)
 
 ::: details Red screen after reinserting SD card (Section II Step 11)
