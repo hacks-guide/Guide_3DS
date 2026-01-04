@@ -106,8 +106,9 @@ In this section, you will use a series of scripts to automate homebrew installat
     + From this point forward, you can access GodMode9 by holding (Start) while powering on your console
     + Holding (X) on boot will no longer do anything
 1. If necessary, configure GodMode9:
-    + If you are prompted to select a language, use the D-Pad and press (A) to select the language of your choice
+    + If you are prompted to select a language, use the D-Pad and press (A) to select English
         + This language choice only affects GodMode9's menu options
+        + You can set it to your language of choice after completing this guide
     + If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue
     + If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
 1. Once you see [root] and a list of drives, press (Home) to bring up the action menu
