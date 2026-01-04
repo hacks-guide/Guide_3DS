@@ -100,18 +100,22 @@ In this section, you will use a series of scripts to automate homebrew installat
 
 1. Power off your console
 1. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
-    + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
+    + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled, or `x_finalize_helper.firm` may be in the wrong location
     + If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
-1. If the Helper was successful, your console will boot into GodMode9
-    + From this point forward, you can access GodMode9 by holding START while powering on your console
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-1. Press (Home) to bring up the action menu
-1. Select "Scripts..."
+1. After a few seconds, your console should automatically boot into GodMode9
+    + From this point forward, you can access GodMode9 by holding (Start) while powering on your console
+    + Holding (X) on boot will no longer do anything
+1. If necessary, configure GodMode9:
+    + If you are prompted to select a language, use the D-Pad and press (A) to select the language of your choice
+        + This language choice only affects GodMode9's menu options
+    + If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue
+    + If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+1. Once you see [root] and a list of drives, press (Home) to bring up the action menu
+1. Select "Scripts..." (*not* Lua scripts)
 1. Select "finalize"
 1. Follow the prompts in the script, answering any questions that you are asked
-    + If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
-    + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
+    + If you see "Information #05: No title database", press (A) and enter the key combination on the bottom screen to proceed
+    + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page, then open GodMode9 by holding (Start) on boot to re-run the script
 1. Once the script says "Setup complete!", press (A) to power off the device
     + If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
 1. Insert your SD card into your computer
