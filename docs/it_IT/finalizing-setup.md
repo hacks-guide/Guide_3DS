@@ -100,26 +100,31 @@ In questa sezione, userai una serie di script per automatizzare l'installazione 
 
 1. Spegni la tua console
 2. Premi (X) e accendi la console continuando a tenerlo premuto. Questo avvierà il supporto al Completamento dell'installazione
-   - Se si avvia nel menu HOME, la cartella `payloads` potrebbe essere scritta in modo errato o trovarsi nella posizione sbagliata
+   - Se si avvia nel menu HOME, la cartella `payloads` potrebbe essere scritta in modo errato, oppure `x_finalize_helper.firm` potrebbe trovarsi nella posizione sbagliata
    - Se riscontri un errore, consulta la pagina [Risoluzione dei problemi](troubleshooting-finalizing-setup)
-3. Se il supporto ha avuto successo, la console si avvierà in GodMode9
-   - Da qui in avanti sarà possibile accedere a GodMode9 tenendo premuto START all'accensione della console
-4. Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
-5. Se ti viene chiesto di reimpostare la data e l'ora dell'RTC, premi (A) per farlo, poi imposta la data e l'ora, infine premi (A) per continuare
-6. Premi il pulsante HOME per far apparire il menu delle azioni
-7. Seleziona "Scripts..."
-8. Seleziona "finalize"
-9. Segui le istruzioni dello script, rispondendo alle domande che ti vengono poste
-   - Se vedi "Information #05: No title database", premi (A) per importarlo inserendo i pulsanti a schermo per procedere
-   - - Se riscontri un errore, segui le istruzioni riportate nel messaggio di errore o consulta la pagina [Risoluzione dei problemi](troubleshooting-finalizing-setup)
-10. Quando lo script mostrerà "Setup complete!", premi (A) per spegnere la console
-    - Se NON vedi il messaggio "Setup complete!", lo script non ha avuto successo e dovrai ripetere questa sezione dal Punto 3
-11. Inserisci la scheda SD nel tuo computer
-12. Copia la cartella `/gm9/backups/` in una posizione sicura sul tuo computer
+3. Dopo alcuni secondi la console dovrebbe avviare automaticamente GodMode9
+   - Da qui in avanti sarà possibile accedere a GodMode9 tenendo premuto (Start) all'accensione della console
+   - Tenere premuto (X) all'avvio non farà più nulla
+4. Se necessario, configura GodMode9:
+   - Se ti viene richiesto di selezionare una lingua, usa il D-Pad e premi (A) per selezionare l'inglese
+     - Questa scelta della lingua influisce solo sulle opzioni del menu di GodMode9
+     - È possibile impostare una lingua di propria scelta dopo aver completato questa guida
+   - Se ti viene richiesto di creare un backup dei file essenziali, premi (A) per accettare, e al termine di nuovo (A) per proseguire
+   - Se ti viene chiesto di reimpostare la data e l'ora dell'RTC, premi (A) per farlo, poi imposta la data e l'ora, infine premi (A) per continuare
+5. Quando vedi [root] e un elenco di unità, premi (Home) per far apparire il menu delle azioni
+6. Seleziona "Scripts..." (_non_ "Lua scripts")
+7. Seleziona "finalize"
+8. Segui le istruzioni dello script, rispondendo alle domande che ti vengono poste
+   - Se vedi "Information #05: No title database", premi (A) e inserisci i pulsanti a schermo per procedere
+   - Se riscontri un errore, segui le istruzioni nel messaggio che appare o consulta la [guida per risolvere i problemi](troubleshooting-finalizing-setup), dopodiché apri GodMode9 tenendo premuto (Start) all'avvio per rieseguire lo script
+9. Quando lo script mostrerà "Setup complete!", premi (A) per spegnere la console
+   - Se NON vedi il messaggio "Setup complete!", lo script non ha avuto successo e dovrai ripetere questa sezione dal Punto 3
+10. Inserisci la scheda SD nel tuo computer
+11. Copia la cartella `/gm9/backups/` in una posizione sicura sul tuo computer
     - Questa cartella contiene backup dei file critici e dovrebbe essere salvata in più posizioni (es. archiviazione in cloud) se possibile
     - I due file SysNAND sono il backup della NAND e possono essere utilizzati per ripristinare la console ad uno stato funzionante se viene resa inutilizzabile con un errore software
     - Il file `essential.exefs` contiene i file univoci di sistema della tua console e può essere utilizzato per recuperare i tuoi dati in caso di guasto hardware
-13. Se li hai ancora, elimina i due file `SysNAND` dalla cartella `/gm9/backups/` dalla tua scheda SD
+12. Se li hai ancora, elimina i due file `SysNAND` dalla cartella `/gm9/backups/` dalla tua scheda SD
     - Il file `essential.exefs` è piccolo e può essere tenuto sulla tua scheda SD per facilità di accesso
 
 ___

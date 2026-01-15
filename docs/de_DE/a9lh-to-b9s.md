@@ -1,4 +1,4 @@
-# A9LH to B9S
+# A9LH zu B9S
 
 ## Required Reading
 

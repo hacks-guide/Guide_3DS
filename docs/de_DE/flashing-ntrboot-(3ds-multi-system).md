@@ -25,11 +25,11 @@ In manchen seltenen Fällen ist es möglich, dass während des Flashens einer ge
 
 ### Section I - Prep Work
 
-1. Schalte den **Quell-3DS** aus
+1. Schalte den **Quellen-3DS** aus
 2. Lege die SD-Karte des **Quell-3DS** in deinen Computer ein
 3. Erstelle einen Ordner mit dem Namen `ntrboot` im Stammverzeichnis deiner SD-Karte
 4. Kopiere `boot9strap_ntr.firm` und `boot9strap_ntr.firm.sha` aus der boot9strap ntr `.zip`-Datei in den `/ntrboot/`-Ordner auf deiner SD-Karte
-5. Kopiere `ntrboot_flasher.firm` in den `/luma/payloads` Ordner auf der **Quell-3DS** SD-Karte
+5. Kopiere `ntrboot_flasher.firm` in den `/luma/payloads` Ordner auf der **Quellen-3DS** SD-Karte
 6. Lege die **Quell-3DS**'s SD-Karte zurück in den **Quell-3DS**
 7. Lege deine ntrboot-kompatible DS / DSi Flashkarte in den **Quell-3DS**
 

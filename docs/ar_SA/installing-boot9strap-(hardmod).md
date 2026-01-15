@@ -21,7 +21,7 @@ This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on _all_ versions that 
 - Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
 - The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
 - The latest version of [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
-    - Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
+  - Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
 - The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
 - The `.firm` corresponding to your console and version:
 
@@ -81,8 +81,8 @@ In this section, you will download the necessary files for the hardmod and dump 
 In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the console to install custom firmware on it.
 
 1. Run hardmod-b9s-installer
-    - Windows Users: Run `install-b9s.exe`
-    - Mac and Linux Users: Run `install-b9s.py`
+   - Windows Users: Run `install-b9s.exe`
+   - Mac and Linux Users: Run `install-b9s.py`
 2. Flash your outputted `NAND-patched.bin` to your console with your hardmod
 3. Power off your console
 4. Disconnect your hardmod

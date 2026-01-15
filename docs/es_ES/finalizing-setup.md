@@ -100,26 +100,31 @@ En esta sección, usarás una serie de scripts para automatizar la instalación 
 
 1. Apaga la consola
 2. Mantén presionado (X), y mientras mantienes (X), enciende la consola. This will launch the Finalizing Setup Helper
-   - Si arrancas al menú HOME, tu carpeta `payloads` puede estar mal escrita o en la ubicación incorrecta
+   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled, or `x_finalize_helper.firm` may be in the wrong location
    - Si encuentras un error, consulta la página de [resolución de problemas](troubleshooting-finalizing-setup)
-3. If the Helper was successful, your console will boot into GodMode9
-   - De ahora en adelante, puedes acceder a GodMode9 manteniendo presionado START al encender la consola
-4. Si se te pide crear copias de seguridad de archivos esenciales, presiona (A) para hacerlo y luego presiona (A) para continuar una vez que haya terminado
-5. Si se te pide establecer la fecha y hora RTC, presiona (A) para hacerlo, después establece la fecha y hora, y después presiona (A) para continuar
-6. Presiona el botón (Home) para abrir el menú de acciones
-7. Selecciona "Scripts..."
-8. Selecciona "finalize"
-9. Sigue las instrucciones del script, respondiendo a las preguntas que aparezcan
-   - Si ves "Information #05: No title database", presiona (A) para importar e introduce los botones en pantalla para proceder
-   - Si encuentras un error, sigue las instrucciones en el mensaje de error o consulta la página de [resolución de problemas](troubleshooting-finalizing-setup)
-10. Una vez el script diga "Setup complete!", presiona (A) para apagar el dispositivo
-    - Si NO aparece el mensaje "Setup complete!", el script no tuvo exito y tendrás que rehacer esta sección desde el Paso 3
-11. Inserta la tarjeta SD en tu computadora
-12. Copia la carpeta `/gm9/backups` a una ubicación segura en tu computadora
+3. After a few seconds, your console should automatically boot into GodMode9
+   - From this point forward, you can access GodMode9 by holding (Start) while powering on your console
+   - Holding (X) on boot will no longer do anything
+4. If necessary, configure GodMode9:
+   - If you are prompted to select a language, use the D-Pad and press (A) to select English
+     - This language choice only affects GodMode9's menu options
+     - You can set it to your language of choice after completing this guide
+   - If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue
+   - Si se te pide establecer la fecha y hora RTC, presiona (A) para hacerlo, después establece la fecha y hora, y después presiona (A) para continuar
+5. Once you see [root] and a list of drives, press (Home) to bring up the action menu
+6. Selecciona "Scripts..." (_not_ Lua scripts)
+7. Selecciona "finalize"
+8. Sigue las instrucciones del script, respondiendo a las preguntas que aparezcan
+   - If you see "Information #05: No title database", press (A) and enter the key combination on the bottom screen to proceed
+   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page, then open GodMode9 by holding (Start) on boot to re-run the script
+9. Una vez el script diga "Setup complete!", presiona (A) para apagar el dispositivo
+   - Si NO aparece el mensaje "Setup complete!", el script no tuvo exito y tendrás que rehacer esta sección desde el Paso 3
+10. Inserta la tarjeta SD en tu computadora
+11. Copia la carpeta `/gm9/backups` a una ubicación segura en tu computadora
     - Esta carpeta contiene copias de seguridad de archivos críticos y se debería de respaldar a varias ubicaciones (p. ej. almacenamiento en la nube) si es posible
     - The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue
     - El archivo `essential.exefs` contiene los archivos únicos a tu consola y se pueden usar para recuperar tus datos en caso de un fallo de hardware
-13. Si aún los tienes, borra los dos archivos `SysNAND` de la carpeta `/gm9/backups` de tu tarjeta SD
+12. Si aún los tienes, borra los dos archivos `SysNAND` de la carpeta `/gm9/backups` de tu tarjeta SD
     - El archivo `essential.exefs` es pequeño, por lo que puede ser guardado en la tarjeta SD para tenerlo a mano
 
 ___

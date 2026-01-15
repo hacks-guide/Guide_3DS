@@ -167,6 +167,7 @@ NÃO pule esta seção! Se você pular isso, os aplicativos podem ter um crash i
    - Você deve ver "Removed trigger file."
 3. Digite `5` e pressione Enter para remover o MSET9
    - Você deve ver "Successfully removed MSET9!"
+   - If you see "FileNotFoundError: [Errno 2] No such file or directory:" followed by a long file path containing "Nintendo 3DS", [follow the corresponding section of this troubleshooting guide](troubleshooting-mset9#mset9-application-script)
 4. Pressione Enter para fechar o script MSET9
 
 <!--@include: ./_include/luma3ds-installed-note.md -->

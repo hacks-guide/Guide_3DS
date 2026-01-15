@@ -167,6 +167,7 @@ NE ugord át ezt a részt! Ha kihagyod, akkor az alkalmazások váratlanul össz
    - Azt kell látnod, hogy "Removed trigger file."
 3. Írj `5`-öt és nyomj Enter-t az MSET9 eltávolításához
    - A "Successfully removed MSET9!" üzenetet kell látnod
+   - Ha "FileNotFoundError: [Errno 2] No such file or directory:" hibát látsz, amit egy hosszú útvonalnév követ, ami "Nintendo 3DS"-re végződik, [kövesd a megfelelő részt ebből a hibaelhárítási útmutatóból](troubleshooting-mset9#mset9-application-script)
 4. Nyomj Enter-t az MSET9 szkript bezárásához
 
 <!--@include: ./_include/luma3ds-installed-note.md -->

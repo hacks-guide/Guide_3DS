@@ -100,26 +100,31 @@
 
 1. 콘솔의 전원을 꺼 주세요
 2. (X) 를 길게 누르고, 이 상태에서 콘솔의 전원을 켜 주세요. 최종 설치 도우미가 실행됩니다
-   - HOME 메뉴가 실행된 경우, `payloads` 폴더의 이름이나 위치가 잘못되었을 수 있습니다
+   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled, or `x_finalize_helper.firm` may be in the wrong location
    - 오류가 발생했을 경우, [문제 해결](troubleshooting-finalizing-setup) 페이지를 참고해 주세요
-3. 도우미가 정상적으로 작동했을 경우, GodMode9으로 부팅될 것입니다.
-   - 이 지점 이후부터는 START 버튼을 누르면서 콘솔을 켜는 것으로 GodMode9에 접근할 수 있습니다.
-4. 만약 "Essential files backup not found" 메세지가 표시되면, (A) 룰 눌러서 하세요. 백업이 끝나면 (A) 를 눌러서 진행해 주세요
-5. 만약 "RTC date&time seems to be wrong" 메세지가 표시되면 (A) 버튼을 눌러 하고, 날짜와 시간을 고친 다음 (A) 버튼을 눌러 계속해 주세요
-6. (Home)을 눌러 작업 메뉴를 열어 주세요
-7. "Scripts..."를 선택해 주세요
-8. "finalize"를 선택해 주세요
-9. 스크립트 표시에 따라 필요한 행동을 취해주세요
-   - "Information #05: No title database"라고 나왔을 경우, (A) 버튼을 눌러 가져오고 화면에 있는 버튼을 입력해 진행해 주세요
-   - 만일 오류가 발생할 경우, 오류 메세지에 나온 안내를 따르거나 [문제 해경](troubleshooting-finalizing-setup) 페이지를 참고해 주세요
-10. "Setup Complete!" 가 떴을 경우, (A) 버튼을 눌러 전원을 꺼 주세요
-    - 만일 "Setup Complete!"(설정 완료!) 가 뜨지 않은 경우, 스크립트가 정상 실행되지 않은 것이며 해당 섹션의 작업을 3단계부터 다시 해야 합니다
-11. SD 카드를 컴퓨터에 삽입해 주세요
-12. SD 카드의 `/gm9/backups/` 폴더 내 파일을 컴퓨터의 안전한 위치에 복사해 주세요
+3. After a few seconds, your console should automatically boot into GodMode9
+   - From this point forward, you can access GodMode9 by holding (Start) while powering on your console
+   - Holding (X) on boot will no longer do anything
+4. If necessary, configure GodMode9:
+   - If you are prompted to select a language, use the D-Pad and press (A) to select English
+     - This language choice only affects GodMode9's menu options
+     - You can set it to your language of choice after completing this guide
+   - If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue
+   - 만약 "RTC date&time seems to be wrong" 메세지가 표시되면 (A) 버튼을 눌러 하고, 날짜와 시간을 고친 다음 (A) 버튼을 눌러 계속해 주세요
+5. Once you see [root] and a list of drives, press (Home) to bring up the action menu
+6. "Scripts..."를 선택해 주세요 (_not_ Lua scripts)
+7. "finalize"를 선택해 주세요
+8. 스크립트 표시에 따라 필요한 행동을 취해주세요
+   - If you see "Information #05: No title database", press (A) and enter the key combination on the bottom screen to proceed
+   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page, then open GodMode9 by holding (Start) on boot to re-run the script
+9. "Setup Complete!" 가 떴을 경우, (A) 버튼을 눌러 전원을 꺼 주세요
+   - 만일 "Setup Complete!"(설정 완료!) 가 뜨지 않은 경우, 스크립트가 정상 실행되지 않은 것이며 해당 섹션의 작업을 3단계부터 다시 해야 합니다
+10. SD 카드를 컴퓨터에 삽입해 주세요
+11. SD 카드의 `/gm9/backups/` 폴더 내 파일을 컴퓨터의 안전한 위치에 복사해 주세요
     - 본 폴더에는 중요 파일의 백업이 들어 있으며 가능한 여러 곳에 백업되어야 합니다. (예시: 온라인 파일 저장소)
     - 두 개의 SysNAND 파일은 해당 콘솔의 NAND 백업이며 소프트웨어적 문제로 벽돌 현상이 일어났을 경우 원상복구하는데 반드시 필요합니다
     - `essential.exefs` 파일은 해당 콘솔의 시스템 고유 파일을 가지고 있으며 하드웨어 문제로 없어진 고유 데이터를 복구하는 데 사용할 수 있습니다
-13. 백업하고 남은 두 개의 SysNAND 파일은 SD카드에서 지우면 됩니다
+12. 백업하고 남은 두 개의 SysNAND 파일은 SD카드에서 지우면 됩니다
     - `essential.exefs` 파일의 크기는 작으며 접근성을 위해 SD 카드에 남겨둬도 됩니다
 
 ___

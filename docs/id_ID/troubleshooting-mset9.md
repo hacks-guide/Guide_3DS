@@ -10,16 +10,6 @@ Python masih belum dipasang di komputer Anda. Unduh dari [situs Python](https://
 
 :::
 
-:::details ModuleNotFoundError: No module named 'pyfatfs'
-
-Modul "pyfatfs" belum dipasang, ini diperlukan MSET9 installer untuk komputer macOS.
-
-1. Buka jendela Terminal baru
-2. Ketik `python3 -m pip install pyfatfs`, lalu tekan Enter
-3. Mulai lagi dari [Bagian I Langkah 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
-
-:::
-
 :::details HOME Menu extdata: Missing!
 
 Mohon nyalakan daya konsol dengan kartu SD disisip, lalu periksa lagi status MSET9.
@@ -145,6 +135,18 @@ Satu atau lebih berkas yang MSET9 perlu jalankan hilang atau rusak. Unduh ulang 
 <!--@include: ./_include/winerror234.md -->
 
 ::::
+
+:::details FileNotFoundError: [Errno 2] No such file or directory
+
+To manually remove MSET9, follow these instructions:
+
+1. Navigasi ke folder `Nintendo 3DS` di kartu SD
+2. Open the 32 character long folder that you see
+3. You should see two folders, delete the folder containing garbled text
+4. If the remaining folder ends with _user-id1, remove _user-id1 by renaming it
+5. MSET9 is now removed, consider this a completion of Section IV
+
+:::
 
 ## MSET9 (eksploit)
 

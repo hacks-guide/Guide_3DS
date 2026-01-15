@@ -100,26 +100,31 @@ Ebben a fejezetben szkripteket fogsz használni arra, hogy automatizáld a homeb
 
 1. Kapcsold ki a konzolod
 2. Nyomd le és tartsd nyomva az (X) gombot, és az (X) nyomva tartása mellett kapcsold be a konzolod. Ez elindítja a Finalizing Setup Helper-t
-   - Ha a HOME menübe bootoltál, akkor lehet hogy a `payloads` mappád neve elírt, vagy rossz helyen van
+   - Ha a HOME menübe bootoltál, akkor lehet hogy a `payloads` mappád neve elírt, vagy a `x_finalize_helper.firm` fájl lehet rossz helyen van
    - Ha hibát kapsz, tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt
-3. Ha a Helper sikeres volt, a konzolodnak ezt követően be kell bootolni a GodMode9-be
-   - Ettől a ponttól kezdve a GodMode9-et a START gomb bekapcsolás melletti nyomva tartásával éred el
-4. Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd amikor végzett, nyomd meg ismét az (A) gombot a folytatáshoz
-5. Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
-6. Nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
-7. Válaszd a "Scripts..." opciót
-8. Válaszd az "finalize" opciót
-9. Kövesd a script utasításait és válaszolj meg minden kérdést
-   - Ha "Information #05: No title database" üzenetet látsz, nyomj (A) gombot az importáláshoz, majd nyomd meg a gombokat a képernyőn a folytatáshoz
-   - Ha hibát kapsz, kövesd a hibaüzenet lépéseit vagy tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt
-10. Ha a szkript a "Setup complete!" üzenetet írja, nyomj (A) gombot az eszköz kikapcsolásához
-    - Ha NEM láttad a "Setup complete!" üzenetet, akkor a szkript nem volt sikeres és újra kell csinálnod ezt a részt a 3. lépéstől
-11. Helyezd az SD kártyád a számítógépbe
-12. Másold a `/gm9/backups/` mappát az SD kártyádról egy biztonságos helyre a számítógépeden
+3. Néhány másodperc múlva a konozlodnak automatikusan a GodMode9-be kell bootolnia
+   - Ettől a ponttól kezdve a GodMode9-et a (Start) gomb bekapcsolás melletti nyomva tartásával éred el
+   - Az (X) nyomva tartása a továbbiakban már nem csinál semmit
+4. Ha szükséges, állítsd be a GodMode9-et:
+   - Ha nyelv választást szeretne a szoftver, akkor használd a D-Pad-et és nyomj (A) gombot az angol (English) kiválasztásához
+     - Ez a nyelvi választás csak a GodMode9 menü opcióira hat
+     - Beállíthatod a kívánt nyelvre, miután befejezted ezt az útmutatót
+   - Ha rákérdez arra, hogy csináljon-e egy biztonsági másolatot (essential files backup), akkor nyomd meg az (A) gombot, hogy csináljon, majd nyomd meg az (A) gombot a folytatáshoz
+   - Ha rákérdez arra, hogy szeretnéd-e a valós dátumot és időt javítani (fix the RTC date&time), nyomd meg az (A) gombot, állítsd be a helyes dátumot és időt, majd nyomd meg az (A) gombot a folytatáshoz
+5. Ha látod a [root]-ot és a meghajtók listáját, nyomd meg a (Home) gombot, hogy megjelenjen a műveleti menü
+6. Válaszd a "Scripts..." opciót (_nem_ a Lua szkriptek)
+7. Válaszd az "finalize" opciót
+8. Kövesd a script utasításait és válaszolj meg minden kérdést
+   - Ha "Information #05: No title database" üzenetet látsz, nyomj (A) gombot, majd nyomd meg gombkombinációt ami az alsó képernyőn látható a folytatáshoz
+   - Ha hibát kapsz, kövesd a hibaüzenet lépéseit vagy tekintsd meg a [hibaelhárítás](troubleshooting-finalizing-setup) oldalt, majd nyisd meg a GodMode9-et a (Start) gomb nyomvatartásával bootoláskor, a szkript újra futtatásához
+9. Ha a szkript a "Setup complete!" üzenetet írja, nyomj (A) gombot az eszköz kikapcsolásához
+   - Ha NEM láttad a "Setup complete!" üzenetet, akkor a szkript nem volt sikeres és újra kell csinálnod ezt a részt a 3. lépéstől
+10. Helyezd az SD kártyád a számítógépbe
+11. Másold a `/gm9/backups/` mappát az SD kártyádról egy biztonságos helyre a számítógépeden
     - - Ez a mappa tartalmazza a kritkus mentés fájlokat és célszerű több helyre menteni (pl. felhőszolgáltatásba) ha lehetséges
     - A 2 SysNAND fájl a te NAND mentésed, és arra használható, hogy visszaállítsd a konzolod működő állapotba, ha egy szoftver probléma brickelné
     - Az `essential.exefs` fájl tartalmazza a konzolod rendszerre-egyedi fájljait és arra használhatod, hogy helyreállítsd az adataid egy hardver probléma esetén
-13. Ha még mindig megvannak, töröld a két `SysNAND` fájlt a `/gm9/backups/` mappából az SD kártyádon
+12. Ha még mindig megvannak, töröld a két `SysNAND` fájlt a `/gm9/backups/` mappából az SD kártyádon
     - Az`essential.exefs` fájl kis méretű és rajta tarthatod az SD kártyádon a könnyű eléréshez
 
 ___

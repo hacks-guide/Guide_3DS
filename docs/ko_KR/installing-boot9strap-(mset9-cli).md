@@ -167,6 +167,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    - "Removed trigger file"이라고 표시될 것입니다.
 3. `5`를 누르고, Enter를 눌러 MSET9을 삭제하세요
    - "Successfully removed MSET9!"이라고 표시될 것입니다
+   - If you see "FileNotFoundError: [Errno 2] No such file or directory:" followed by a long file path containing "Nintendo 3DS", [follow the corresponding section of this troubleshooting guide](troubleshooting-mset9#mset9-application-script)
 4. 엔터키를 눌러 MSET9 스크립트를 종료해 주세요
 
 <!--@include: ./_include/luma3ds-installed-note.md -->

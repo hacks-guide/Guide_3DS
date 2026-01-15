@@ -10,16 +10,6 @@ Python is not installed on the computer you are using. Download it from the [Pyt
 
 :::
 
-:::details ModuleNotFoundError: No module named 'pyfatfs'
-
-The pyfatfs module, which is needed to use the MSET9 installer on macOS, isn't installed on your computer.
-
-1. Open a separate Terminal window
-2. Type `python3 -m pip install pyfatfs`, then press Enter
-3. Start again from [Section I Step 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
-
-:::
-
 :::details HOME Menu extdata: Missing!
 
 Please power on your console with your SD inserted, then check the MSET9 status again.
@@ -52,7 +42,7 @@ Ensure that you have reset the title database.
 
 - Please power on your console with your SD inserted
 - Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-    - This will not wipe any of your data
+  - This will not wipe any of your data
 - If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
@@ -65,7 +55,7 @@ If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 1. Type the number corresponding to your console model and version, then press Enter
 2. Type `2` then press enter to check the MSET9 status
-    - This will create the dummy databases again
+   - This will create the dummy databases again
 3. Close the MSET9 script window
 4. Start again from [Section I Step 12](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
 
@@ -106,12 +96,12 @@ You have multiple ID0 folders. To determine the correct folder, follow these ins
 2. Reinsert your SD card into your console
 3. Power on your console
 4. Wait for the console to generate the SD card data
-    - Your applications will have disappeared. 這是正常的，且待會就會恢復正常。
+   - Your applications will have disappeared. 這是正常的，且待會就會恢復正常。
 5. Power off your console
 6. 將 SD 卡插入至電腦中
 7. 移動至 SD 卡的 `Nintendo 3DS` 資料夾中
 8. Write down the first few characters of the folder you see
-    - This is your true ID0, which we will keep in the real Nintendo 3DS folder
+   - This is your true ID0, which we will keep in the real Nintendo 3DS folder
 9. Delete the ID0 from the current `Nintendo 3DS` folder
 10. Move the true ID0 folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
 11. If it exists, move the `Private` folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
@@ -146,6 +136,18 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 
 ::::
 
+:::details FileNotFoundError: [Errno 2] No such file or directory
+
+To manually remove MSET9, follow these instructions:
+
+1. 移動至 SD 卡的 `Nintendo 3DS` 資料夾中
+2. Open the 32 character long folder that you see
+3. You should see two folders, delete the folder containing garbled text
+4. If the remaining folder ends with _user-id1, remove _user-id1 by renaming it
+5. MSET9 is now removed, consider this a completion of Section IV
+
+:::
+
 ## MSET9 (exploit)
 
 :::details Red screen after reinserting SD card (Section II Step 11)
@@ -158,8 +160,8 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Type the number corresponding to your console model and version, then press Enter
-    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
@@ -187,8 +189,8 @@ Follow these instructions to remove the trigger file and to retry Section II:
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. Type the number corresponding to your console model and version, then press Enter
-    - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
+   - The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
+   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console

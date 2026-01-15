@@ -100,26 +100,31 @@ Di bagian ini akan menggunakan naskah agar otomatis memasang _homebrew_, members
 
 1. Matikan daya konsol
 2. Tahan tombol (X) selagi menyalakan konsol. Ini akan masuk ke Finalizing Setup Helper
-   - Jika menyala ke HOME Menu, folder `payloads` mungkin salah letak atau dieja kurang benar
+   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled, or `x_finalize_helper.firm` may be in the wrong location
    - Jika ada galat, rujuk ke laman [sidik gangguan](troubleshooting-finalizing-setup)
-3. Jika Helper sudah berhasil, konsol akan menyala ke GodMode9
-   - Mulai dari sini, GodMode9 sudah bisa diakses dengan menahan START ketika menyalakan konsol
-4. Jika diminta membuat cadangan berkas esensial, tekan (A) untuk lakukan, lalu tekan (A) lagi sesudah selesai untuk lanjut
-5. Jika diminta membetulkan waktu & tanggal RTC, lakukan dengan menekan (A), lalu tekan (A) lagi untuk lanjut
-6. Tekan (Home) untuk membuka menu tindakan
-7. Pilih "Scripts..."
-8. Pilih "finalize"
-9. Ikuti sembulan perintah yang diminta dari naskah
-   - Jika muncul "Information #05: No title database", tekan (A) untuk impor dan tekan tombol sesuai layar untuk lanjut
-   - Jika ada galat, ikuti instruksi di pesan galat atau rujuk ke laman [sidik gangguan](troubleshooting-finalizing-setup)
-10. Sesudah naskah bertulis "Setup complete!", tekan (A) untuk matikan daya konsol
-    - Jika TIDAK muncul pesan "Setup complete!", naskahnya tidak berhasil dan harus ulangi bagian ini dari Langkah 3
-11. Sisipkan kartu SD ke komputer Anda
-12. Salin folder `/gm9/backups/` ke letak yang aman di komputer
+3. After a few seconds, your console should automatically boot into GodMode9
+   - From this point forward, you can access GodMode9 by holding (Start) while powering on your console
+   - Holding (X) on boot will no longer do anything
+4. If necessary, configure GodMode9:
+   - If you are prompted to select a language, use the D-Pad and press (A) to select English
+     - This language choice only affects GodMode9's menu options
+     - You can set it to your language of choice after completing this guide
+   - If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue
+   - Jika diminta membetulkan waktu & tanggal RTC, lakukan dengan menekan (A), lalu tekan (A) lagi untuk lanjut
+5. Once you see [root] and a list of drives, press (Home) to bring up the action menu
+6. Pilih "Scripts..." (_not_ Lua scripts)
+7. Pilih "finalize"
+8. Ikuti sembulan perintah yang diminta dari naskah
+   - If you see "Information #05: No title database", press (A) and enter the key combination on the bottom screen to proceed
+   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page, then open GodMode9 by holding (Start) on boot to re-run the script
+9. Sesudah naskah bertulis "Setup complete!", tekan (A) untuk matikan daya konsol
+   - Jika TIDAK muncul pesan "Setup complete!", naskahnya tidak berhasil dan harus ulangi bagian ini dari Langkah 3
+10. Sisipkan kartu SD ke komputer Anda
+11. Salin folder `/gm9/backups/` ke letak yang aman di komputer
     - Folder ini berisi cadangan berkas kritis dan _harus_ disalin ke berbagai tempat (yaitu: penyimpanan awan) jika bisa
     - Kedua berkas SysNAND ini cadangan NAND Anda dan **penting** untuk pemulihan konsol jika matot (_brick_) karena isu peranti lunak
     - Berkas `essential.exefs` berisi berkas unik sistem konsol dan bisa untuk memulihkan data jika terjadi kerusakan fisik
-13. Jika sudah disalin, boleh hapus dua berkas `SysNAND` dari folder `/gm9/backups/` di kartu SD
+12. Jika sudah disalin, boleh hapus dua berkas `SysNAND` dari folder `/gm9/backups/` di kartu SD
     - Ukuran `essential.exefs` itu kecil, jadi boleh dibiarkan di kartu SD agar mudah diakses
 
 ___

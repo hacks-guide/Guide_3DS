@@ -100,26 +100,31 @@ In this section, you will use a series of scripts to automate homebrew installat
 
 1. Power off your console
 2. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
-   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled or in the wrong location
+   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled, or `x_finalize_helper.firm` may be in the wrong location
    - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
-3. If the Helper was successful, your console will boot into GodMode9
-   - From this point forward, you can access GodMode9 by holding START while powering on your console
-4. 當提示重要檔案備份時，按下『A』繼續，並在完畢後按下『A』繼續
-5. 當提示修正 RTC 日期及時間時，按『A』繼續並設定日期及時間，再按『A』繼續
-6. 按『Home』鍵以叫出主選單
-7. 選擇『Scripts...』
-8. Select "finalize"
-9. Follow the prompts in the script, answering any questions that you are asked
-   - If you see "Information #05: No title database", press (A) to import and enter the buttons on-screen to proceed
-   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page
-10. Once the script says "Setup complete!", press (A) to power off the device
-    - If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
-11. 將 SD 卡插入至電腦中
-12. Copy the `/gm9/backups/` folder to a safe location on your computer
+3. After a few seconds, your console should automatically boot into GodMode9
+   - From this point forward, you can access GodMode9 by holding (Start) while powering on your console
+   - Holding (X) on boot will no longer do anything
+4. If necessary, configure GodMode9:
+   - If you are prompted to select a language, use the D-Pad and press (A) to select English
+     - This language choice only affects GodMode9's menu options
+     - You can set it to your language of choice after completing this guide
+   - If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue
+   - 當提示修正 RTC 日期及時間時，按『A』繼續並設定日期及時間，再按『A』繼續
+5. Once you see [root] and a list of drives, press (Home) to bring up the action menu
+6. 選擇『Scripts...』 (_not_ Lua scripts)
+7. Select "finalize"
+8. Follow the prompts in the script, answering any questions that you are asked
+   - If you see "Information #05: No title database", press (A) and enter the key combination on the bottom screen to proceed
+   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page, then open GodMode9 by holding (Start) on boot to re-run the script
+9. Once the script says "Setup complete!", press (A) to power off the device
+   - If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
+10. 將 SD 卡插入至電腦中
+11. Copy the `/gm9/backups/` folder to a safe location on your computer
     - This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
     - The two SysNAND files are your NAND backup and can be used to revert your console to a working state if it is bricked by a software issue
     - The `essential.exefs` file contains your console's system-unique files and can be used to recover your data in the event of a hardware failure
-13. If you still have them, delete the two `SysNAND` files from the `/gm9/backups/` folder from your SD card
+12. If you still have them, delete the two `SysNAND` files from the `/gm9/backups/` folder from your SD card
     - The `essential.exefs` file is small and may be kept on your SD card for ease of access
 
 ___
