@@ -46,6 +46,12 @@ If you change the region of your console:
 
     :::
 
+    ::: warning
+
+    Be sure to choose the CTRTransfer image for the region you want to change to, not your current region's image!
+
+    :::
+
 <!--@include: ./_include/ctrtransfer-images.md -->
 
 ## Instructions
