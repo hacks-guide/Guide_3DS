@@ -47,8 +47,8 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 * The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
 * The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 * The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
-* [safety_test.gm9](/gm9_scripts/safety_test.gm9)
-* [uninstall_cfw.gm9](/gm9_scripts/uninstall_cfw.gm9)
+* [safety_test.gm9](https://github.com/hacks-guide/Guide_3DS/releases/download/gm9-scripts/safety_test.gm9)
+* [uninstall_cfw.gm9](https://github.com/hacks-guide/Guide_3DS/releases/download/gm9-scripts/uninstall_cfw.gm9)
 
 ## Instructions
 
