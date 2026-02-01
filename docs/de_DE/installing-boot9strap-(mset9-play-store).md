@@ -20,7 +20,7 @@ On Android phones/tablets, the minimum Android version required is 6.0 (Marshmal
 
 :::
 
-## What You Need
+## Was du brauchst
 
 - The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
 - The following applications installed from the Google Play Store:
@@ -28,9 +28,9 @@ On Android phones/tablets, the minimum Android version required is 6.0 (Marshmal
   - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
   - If you wish, you can sideload these applications instead
 
-## Instructions
+## Anleitung
 
-### Section I - Prep Work
+### Abschnitt I - Vorbereitung
 
 In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
@@ -142,7 +142,7 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 
 :::
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Insert your SD card into your phone/tablet/computer
 3. Open the MSET9 Installer application
 4. Tap `Remove MSET9`

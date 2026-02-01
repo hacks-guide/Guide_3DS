@@ -20,14 +20,14 @@ If you are using an Android device as an SD card adapter for your computer, you 
 
 :::
 
-## What You Need
+## Was du brauchst
 
 - The latest release of [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (the MSET9 `.zip` file)
 - Any 3.x version of [Python](https://www.python.org/downloads/) **installed on your computer**
   - If you are on Windows, Python from the Microsoft Store cannot be used. Please install a version from python.org.
   - If you are on Linux or macOS, you may already have Python 3. Check by opening a Terminal window and entering `python3 -V`. If this returns a version number, it will work for this guide.
 
-## Instructions
+## Anleitung
 
 ::: info
 
@@ -35,7 +35,7 @@ On this page, you will use the MSET9 script, which is used to trigger MSET9. Whi
 
 :::
 
-### Section I - Prep Work
+### Abschnitt I - Vorbereitung
 
 In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
@@ -155,7 +155,7 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 
 :::
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke deine SD-Karte in deinen Computer
 
 <!--@include: ./_include/mset9-chorus.md -->

@@ -12,7 +12,7 @@ This process will reset your Mii data. If you wish to save any Miis that you hav
 
 :::
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Press and hold (Start), and while holding (Start), power on your console. Dies wird GodMode9 starten
 3. Navigiere zu `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
    - The `<ID0>` will be a folder with a 32-character long name

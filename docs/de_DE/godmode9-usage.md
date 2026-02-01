@@ -12,7 +12,7 @@ For support (in English) with GodMode9, as well as help with scripting and to ge
 
 :::
 
-## Required Reading
+## Lesen erforderlich
 
 GodMode9 ist ein Vollzugriffsdateibrowser für die Nintendo 3DS Konsole und gibt dir Zugriff auf deine SD Karte, auf die FAT Partitionen in deinem SysNAND und EmuNAND und im Grunde alles andere auch. Unter anderem kannst du Dateien kopieren, löschen, umbenennen und Ordner erstellen.
 
@@ -28,13 +28,13 @@ Einige der folgenden Anweisungen sind nur in der neuesten Version von GodMode9 z
 
 :::
 
-### What You Need
+### Was du brauchst
 
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 
-### Instructions
+### Anleitung
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke deine SD-Karte in deinen Computer
 3. Kopiere `GodMode9.firm`von der `GodMode9.zip`-Datei nach /luma/payloads/ auf deiner SD-Karte
 4. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
@@ -60,7 +60,7 @@ Your NAND backup has been successfully created.
 
 ## Restoring a NAND Backup
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke deine SD-Karte in deinen Computer
 3. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
 4. Reinsert your SD card into your console

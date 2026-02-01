@@ -6,7 +6,7 @@ For support (in English) with GodMode9, as well as help with scripting and to ge
 
 :::
 
-## Required Reading
+## Lesen erforderlich
 
 Aside from creating and restoring NAND backups, GodMode9 has the functionality to dump installed titles to an installable `.cia` file, to dump game cartridge data to a `.3ds` ROM file, and to directly install a game cartridge to the system.
 
@@ -18,13 +18,13 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 
 :::
 
-### What You Need
+### Was du brauchst
 
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 
-### Instructions
+### Anleitung
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke deine SD-Karte in deinen Computer
 3. Kopiere `GodMode9.firm`von der `GodMode9.zip`-Datei nach /luma/payloads/ auf deiner SD-Karte
 4. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte
@@ -113,7 +113,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Do the following process for each GBA VC game that you want to back up the save for:
    - Launch the GBA VC game
    - Exit the GBA VC game
-   - Power off your console
+   - Schalte deine Konsole aus
    - Press and hold (Start), and while holding (Start), power on your console. Dies wird GodMode9 starten
    - Navigiere zu `[S:] SYSNAND VIRTUAL`
    - Press (A) on `agbsave.bin` to select it
@@ -133,7 +133,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Führe den folgenden Prozess für jedes GBA VC Spiel durch, bei dem du einen Spielstand wiederherstellen möchtest:
    - Launch the GBA VC game
    - Exit the GBA VC game
-   - Power off your console
+   - Schalte deine Konsole aus
    - Press and hold (Start), and while holding (Start), power on your console. Dies wird GodMode9 starten
    - Navigiere zu `[0:] SDCARD` -> `gm9` -> `out`
    - Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it

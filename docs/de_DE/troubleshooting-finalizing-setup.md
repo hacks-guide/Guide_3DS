@@ -49,7 +49,7 @@ You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power of
 
 You need at least 1.3GB of free space to perform the NAND backup, which is a part of the script. If you don't have enough space, follow these steps:
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke deine SD-Karte in deinen Computer
 3. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
 4. Delete the Nintendo 3DS folder from the SD card
@@ -90,7 +90,7 @@ Press (A) to import a title database, unlock SysNAND writing by entering the but
 
 Make sure you have at least 1.3GB available in your SD card. If you don't have enough space, follow these steps:
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke deine SD-Karte in deinen Computer
 3. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
 4. Delete the Nintendo 3DS folder from the SD card

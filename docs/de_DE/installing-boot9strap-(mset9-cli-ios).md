@@ -20,11 +20,11 @@ As iPhones and iPads do not have an SD card slot, you will need an adapter to pl
 
 :::
 
-## What You Need
+## Was du brauchst
 
 - [iSH](https://apps.apple.com/us/app/ish-shell/id1436902243) from App Store
 
-## Instructions
+## Anleitung
 
 ::: info
 
@@ -32,7 +32,7 @@ On this page, you will use the MSET9 script, which is used to trigger MSET9. Whi
 
 :::
 
-### Section I - Prep Work
+### Abschnitt I - Vorbereitung
 
 In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
@@ -145,7 +145,7 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 
 :::
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Insert your SD card into your iPhone/iPad (using an adapter)
 
 <!--@include: ./_include/ish-chorus.md -->

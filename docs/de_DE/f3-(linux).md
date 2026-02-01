@@ -1,6 +1,6 @@
 # F3 (Linux)
 
-## Required Reading
+## Lesen erforderlich
 
 Dies ist ein Add-on-Abschnitt für die Überprüfung deiner SD-Karte auf Fehler mit F3.
 
@@ -8,11 +8,11 @@ Basierend auf der Größe der SD-Karte und der Geschwindigkeit deines Computer k
 
 Diese Seite ist nur für Linux-Nutzer gedacht. Falls du kein Linux-Nutzer bist, schaue dir stattdessen [H2testw (Windows)](h2testw-\(windows\)) oder [F3X (macOS)](f3x-\(mac\)) an.
 
-## What You Need
+## Was du brauchst
 
 - The latest version of [F3](https://github.com/AltraMayor/f3/releases/latest)
 
-## Instructions
+## Anleitung
 
 1. Entpacke die f3 `.zip`-Datei
 2. Wechsel mit `cd` in das f3-Verzeichnis

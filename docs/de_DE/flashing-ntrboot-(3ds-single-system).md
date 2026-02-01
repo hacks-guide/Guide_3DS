@@ -1,6 +1,6 @@
 # Flashing ntrboot (3DS Single System)
 
-## Required Reading
+## Lesen erforderlich
 
 Bevor du fortfährt stelle sicher, dass du alle Informationen zu [ntrboot](ntrboot) gelesen hast
 
@@ -12,17 +12,17 @@ In manchen seltenen Fällen ist es möglich, dass während des Flashens einer ge
 
 :::
 
-## What You Need
+## Was du brauchst
 
 - Your ntrboot compatible flashcart
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-## Instructions
+## Anleitung
 
-### Section I - Prep Work
+### Abschnitt I - Vorbereitung
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke die SD-Karte deiner Flashcart in deinen Computer
 3. Create a folder named `ntrboot` on the root of your flashcart's SD card
 4. Copy `boot9strap_ntr.firm` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your flashcart's SD card
@@ -44,7 +44,7 @@ In manchen seltenen Fällen ist es möglich, dass während des Flashens einer ge
 10. Select "Inject FIRM" to install boot9strap to your flashcart
 11. Input the key combo given to confirm
 12. Drücke (A), um fortzufahren
-13. Power off your console
+13. Schalte deine Konsole aus
 
 ___
 

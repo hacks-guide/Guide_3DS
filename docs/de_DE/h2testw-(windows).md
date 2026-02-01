@@ -1,6 +1,6 @@
 # H2testw (Windows)
 
-## Required Reading
+## Lesen erforderlich
 
 Dies ist ein Add-on-Abschnitt für die Überprüfung Ihrer SD-Karte für Fehler mit h2testw.
 
@@ -8,11 +8,11 @@ Basierend auf der Größe der SD-Karte und der Geschwindigkeit deines Computer k
 
 Diese Seite ist nur für Windowsnutzer gedacht. If you are not on windows, check out the [F3 (Linux)](f3-\(linux\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
 
-## What You Need
+## Was du brauchst
 
 - The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
-## Instructions
+## Anleitung
 
 1. Kopiere `h2testw.exe` aus der h2testw`.zip` auf dein Desktop
 2. Stecke deine SD-Karte in deinen Computer

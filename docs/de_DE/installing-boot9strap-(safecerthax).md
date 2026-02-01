@@ -14,13 +14,13 @@ This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ens
 
 :::
 
-## What You Need
+## Was du brauchst
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Die neueste Version vom [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (Direkter Download)
+- Die neueste Version von [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (Direkter Download)
+- Die neueste Version von [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (die Luma3DS `.zip` Datei)
 
-## Instructions
+## Anleitung
 
 ### Section I - Hardware Button Check
 
@@ -29,7 +29,7 @@ In this section, you will see whether your shoulder buttons are working on your 
 1. Power on your console
 2. Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
    - The camera applet should appear
-3. Power off your console
+3. Schalte deine Konsole aus
 
 ::: warning
 
@@ -43,7 +43,7 @@ In this section, you will copy the files needed to trigger the safecerthax explo
 
 1. Stecke deine SD-Karte in deinen Computer
 2. Copy everything from the Luma3DS `.zip` to the root of your SD card
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - Das Stammverzeichnis der SD-Karte bezieht sich auf das ursprüngliche Verzeichnis deiner SD-Karte, wo du den Nintendo 3DS Ordner sehen kannst, aber nicht in ihm drin bist
 3. Create a folder named `boot9strap` on the root of your SD card
 4. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 5. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
@@ -74,7 +74,7 @@ In this section, you will change your Internet connection settings to use a prox
 
 <!--@include: ./_include/addproxy.md -->
 
-1. Power off your console
+1. Schalte deine Konsole aus
 
 ### Section IV - safecerthax
 

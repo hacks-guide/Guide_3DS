@@ -1,6 +1,6 @@
 # Move EmuNAND
 
-## Required Reading
+## Lesen erforderlich
 
 Dies ist ein Zusatzabschnitt zum Verschieben des Inhaltes eines vorherigen EmuNAND in die neue SysNAND CFW plus Entfernung des alten EmuNAND. Beachte, dass die Begriffe EmuNAND und RedNAND sich auf leicht unterschiedliche Implementierungen [des selben Konzepts](http://3dbrew.org/wiki/NAND_Redirection) beziehen.
 
@@ -12,16 +12,16 @@ Du MUSST bereits eine installierte Version von Luma3DS und boot9strap haben um d
 
 :::
 
-## What You Need
+## Was du brauchst
 
 - An existing EmuNAND
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 
-## Instructions
+## Anleitung
 
-### Section I - Prep Work
+### Abschnitt I - Vorbereitung
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke deine SD-Karte in deinen Computer
 3. Kopiere `GodMode9.firm`von der `GodMode9.zip`-Datei nach /luma/payloads/ auf deiner SD-Karte
 4. Kopiere den Ordner `gm9` aus der GodMode9 `.zip` in das Stammverzeichnis deiner SD-Karte

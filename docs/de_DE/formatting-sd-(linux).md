@@ -1,6 +1,6 @@
 # Formatting SD (Linux)
 
-## Required Reading
+## Lesen erforderlich
 
 This is an add-on section for formatting an SD card to work with the 3DS.
 
@@ -8,7 +8,7 @@ If the 3DS already recognizes the SD card, this guide is not required.
 
 Diese Seite ist nur für Linux-Nutzer gedacht. If you are not on Linux, check out the [Formatting SD (Windows)](formatting-sd-\(windows\)) or [Formatting SD (Mac)](formatting-sd-\(mac\)) pages.
 
-## Instructions
+## Anleitung
 
 1. Make sure your SD card is **not** inserted
 2. Launch the Linux Terminal

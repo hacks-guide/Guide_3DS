@@ -1,18 +1,18 @@
 # Updating B9S
 
-## Required Reading
+## Lesen erforderlich
 
 Diese Seite ist für Nutzer, die bereits boot9strap nutzen, jedoch ihre Installation auf die aktuellste Version aktualisieren wollen.
 
-## What You Need
+## Was du brauchst
 
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Die neueste Version vom [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (Direkter Download)
+- Die neueste Version von [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (Direkter Download)
+- Die neueste Version von [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (die Luma3DS `.zip` Datei)
 
-## Instructions
+## Anleitung
 
-### Section I - Prep Work
+### Abschnitt I - Vorbereitung
 
 ::: info
 

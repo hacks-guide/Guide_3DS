@@ -144,7 +144,7 @@ To manually remove MSET9, follow these instructions:
 2. Open the 32 character long folder that you see
 3. You should see two folders, delete the folder containing garbled text
 4. If the remaining folder ends with _user-id1, remove _user-id1 by renaming it
-5. MSET9 is now removed, consider this a completion of Section IV
+5. MSET9 ha sido eliminado, puedes seguir como si hubieras completado la Sección IV
 
 :::
 

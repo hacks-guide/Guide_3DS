@@ -25,15 +25,15 @@ This exploit is known to be inconsistent: it works for some people, but not othe
 
 :::
 
-### What You Need
+### Was du brauchst
 
 - The [Super-skaterhax](https://skater.nintendohomebrew.com) `.zip` for your console's region and system version
 
-#### Section I - Prep Work
+#### Abschnitt I - Vorbereitung
 
 In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher.
 
-1. Power off your console
+1. Schalte deine Konsole aus
 
 2. Stecke deine SD-Karte in deinen Computer
 

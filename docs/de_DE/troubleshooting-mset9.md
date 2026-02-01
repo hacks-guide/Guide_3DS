@@ -97,7 +97,7 @@ You have multiple ID0 folders. To determine the correct folder, follow these ins
 3. Power on your console
 4. Wait for the console to generate the SD card data
    - Your applications will have disappeared. Das ist normal und wird gleich behoben
-5. Power off your console
+5. Schalte deine Konsole aus
 6. Stecke deine SD-Karte in deinen Computer
 7. Navigiere zum "Nintendo 3DS"-Ordner auf deiner SD-Karte
 8. Write down the first few characters of the folder you see

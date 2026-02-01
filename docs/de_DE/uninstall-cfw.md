@@ -1,6 +1,6 @@
 # Uninstall CFW
 
-## Required Reading
+## Lesen erforderlich
 
 This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.
 
@@ -43,19 +43,19 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 
 :::
 
-## What You Need
+## Was du brauchst
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- Die neueste Version von [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (die Luma3DS `.zip` Datei)
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 - The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 - [uninstall_cfw.gm9](/gm9_scripts/uninstall_cfw.gm9)
 
-## Instructions
+## Anleitung
 
-### Section I - Prep Work
+### Abschnitt I - Vorbereitung
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke deine SD-Karte in deinen Computer
 3. Copy everything from the Luma3DS `.zip` to the root of your SD card
 4. Kopiere `GodMode9.firm`von der `GodMode9.zip`-Datei nach /luma/payloads/ auf deiner SD-Karte
@@ -75,7 +75,7 @@ The purpose of this section is to check whether built-in DS mode applications wi
 3. Navigate to `Internet Settings` -> `Nintendo DS Connection Settings`, then click OK
 4. You should boot into the Nintendo DS Connection Setup menu
    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
-5. Power off your console
+5. Schalte deine Konsole aus
 
 #### DS Download Play Test
 
@@ -84,7 +84,7 @@ The purpose of this section is to check whether built-in DS mode applications wi
 3. Wähle "Nintendo DS" aus
 4. If your console loads into a "Download software via DS Download Play" menu, the test was successful
    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
-5. Power off your console
+5. Schalte deine Konsole aus
 
 ::: warning
 
@@ -113,7 +113,7 @@ The purpose of this section is to verify that the console will boot and that cri
 12. Select "User Name"
 13. If you are able to enter a new user name, the test was successful
     - If the keyboard does not appear, the screen freezes, or the console crashes, the test has failed
-14. Power off your console
+14. Schalte deine Konsole aus
 
 ::: danger
 

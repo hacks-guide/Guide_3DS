@@ -42,18 +42,18 @@ If your previous CFW setup was EmuNAND-based and you wish to move the contents o
 
 :::
 
-## What You Need
+## Was du brauchst
 
 - [x_finalize_helper.firm](https://github.com/hacks-guide/finalize/releases/latest/download/x_finalize_helper.firm) (direct download)
 - [finalize.romfs](https://github.com/hacks-guide/finalize/releases/latest/download/finalize.romfs) (direct download)
 
-## Instructions
+## Anleitung
 
-### Section I - Prep Work
+### Abschnitt I - Vorbereitung
 
 In this section, you will copy the files necessary to follow the rest of the instructions on this page.
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke deine SD-Karte in deinen Computer
 3. Copy `finalize.romfs` to the root of your SD card
 4. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
@@ -98,7 +98,7 @@ In this section, you will sync your 3DS internal clock with the actual time and 
 
 In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
    - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled, or `x_finalize_helper.firm` may be in the wrong location
    - If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page

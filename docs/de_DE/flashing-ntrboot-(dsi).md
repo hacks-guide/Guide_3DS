@@ -1,6 +1,6 @@
 # Flashing ntrboot (DSi)
 
-## Required Reading
+## Lesen erforderlich
 
 Bevor du fortfährt stelle sicher, dass du alle Informationen zu [ntrboot](ntrboot) gelesen hast
 
@@ -12,7 +12,7 @@ In manchen seltenen Fällen ist es möglich, dass während des Flashens einer ge
 
 :::
 
-## What You Need
+## Was du brauchst
 
 - Your ntrboot compatible flashcart
 - Two consoles
@@ -20,9 +20,9 @@ In manchen seltenen Fällen ist es möglich, dass während des Flashens einer ge
   - **The target 3DS**: the 3DS family console on stock firmware
 - The latest release of [ds_ntrboot_flasher](https://github.com/ntrteam/ds_ntrboot_flasher/releases/latest) (`ds_ntrboot_flasher_dsi.nds`)
 
-## Instructions
+## Anleitung
 
-### Section I - Prep Work
+### Abschnitt I - Vorbereitung
 
 1. Schalte den **Quell-DSi** aus
 2. Stecke die SD-Karte deiner Flashcart in deinen Computer

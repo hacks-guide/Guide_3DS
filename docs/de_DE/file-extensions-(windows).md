@@ -1,12 +1,12 @@
 # File Extensions (Windows)
 
-## Required Reading
+## Lesen erforderlich
 
 Dies ist ein Add-on-Abschnitt für das Deaktivieren des Windows Standart-Verhalten, Dateierweiterungen zu verstecken.
 
 Dies wird es einfach machen die benötigten Dateien in diesem Guide zu finden.
 
-## Instructions
+## Anleitung
 
 ### Windows 11
 

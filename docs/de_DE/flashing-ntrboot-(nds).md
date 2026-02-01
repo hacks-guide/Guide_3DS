@@ -1,6 +1,6 @@
 # Flashing ntrboot (NDS)
 
-## Required Reading
+## Lesen erforderlich
 
 Bevor du fortfährt stelle sicher, dass du alle Informationen zu [ntrboot](ntrboot) gelesen hast
 
@@ -12,7 +12,7 @@ In manchen seltenen Fällen ist es möglich, dass während des Flashens einer ge
 
 :::
 
-## What You Need
+## Was du brauchst
 
 - Your ntrboot compatible flashcart
 - Two consoles
@@ -21,9 +21,9 @@ In manchen seltenen Fällen ist es möglich, dass während des Flashens einer ge
 - The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
 - The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
 
-## Instructions
+## Anleitung
 
-### Section I - Prep Work
+### Abschnitt I - Vorbereitung
 
 1. Schalte den **Quell-NDS / NDSL** aus
 2. Stecke die SD-Karte deiner Flashcart in deinen Computer

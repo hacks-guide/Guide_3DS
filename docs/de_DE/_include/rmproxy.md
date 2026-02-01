@@ -7,4 +7,4 @@ In this section, you will restore the Internet settings back to normal.
 5. Click OK, then click Save
 6. When prompted, click "Test" to perform the connection test
    - The test should succeed
-7. Power off your console
+7. Schalte deine Konsole aus

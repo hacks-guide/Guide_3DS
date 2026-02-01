@@ -6,7 +6,7 @@ If your flashcart comes pre-flashed with ntrboot (or you have already flashed nt
 
 :::
 
-## Required Reading
+## Lesen erforderlich
 
 Um boot9strap mit ntrboot zu installieren benötigst du eine kompatible DS / DSi Flashkarte, worauf du ntrboot installieren kannst. Beachte dass manche Flashcarts schon mit ntrboot geliefert werden.
 

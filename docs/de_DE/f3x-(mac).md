@@ -1,6 +1,6 @@
 # F3X (Mac)
 
-## Required Reading
+## Lesen erforderlich
 
 Dies ist ein Add-on-Abschnitt für die Überprüfung Ihrer SD-Karte für Fehler mit h2testw.
 
@@ -14,11 +14,11 @@ Wenn du einen Mac auf macOS 10.13 (High Sierra) und höher hast, folge [F3XSwift
 
 :::
 
-## What You Need
+## Was du brauchst
 
 - The latest release of [F3X](https://github.com/insidegui/F3X/releases/latest)
 
-## Instructions
+## Anleitung
 
 1. Entpacke die F3X-`zip`-Datei
 2. Stecke deine SD-Karte in deinen Computer

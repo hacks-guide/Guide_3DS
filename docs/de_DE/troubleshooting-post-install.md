@@ -44,7 +44,7 @@ The steps below can be attempted in any order, but are listed from least to most
      - **KOR Region**: `000000A9`
      - **TWN Region**: `000000B1`
 4. Try booting into recovery mode and updating your system:
-   - Power off your console
+   - Schalte deine Konsole aus
    - Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
    - Power on your console
    - If you were successful, the console will boot to an "update your system" screen
@@ -71,7 +71,7 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 ARM11 exception handlers are disabled, or custom firmware is not installed. Try enabling ARM11 exception handlers:
 
-- Power off your console
+- Schalte deine Konsole aus
 - Hold (Select)
 - Power on your console, while still holding (Select)
 - If the "Disable ARM11 exception handlers" box is checked, uncheck it
@@ -111,7 +111,7 @@ Please take a photo of the error and join [Nintendo Homebrew on Discord](https:/
 :::details DSi / DS functionality is broken or has been replaced with Flipnote Studio
 
 1. Download the latest release of [TWLFix-CFW](https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest) (the `.3dsx` file)
-2. Power off your console
+2. Schalte deine Konsole aus
 3. Erstelle einen Ordner namens `3ds` im Stammverzeichnis deiner SD-Karte falls er noch nicht existiert
 4. Copy `TWLFix-CFW.3dsx` to the `/3ds/` folder on your SD card
 5. Reinsert your SD card into your console
@@ -160,7 +160,7 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 
 :::details Clear HOME Menu extdata
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke deine SD-Karte in deinen Computer
 3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 4. Delete the corresponding folder for your 3DS region:
@@ -176,7 +176,7 @@ Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance, 
 
 :::details Clear HOME Menu theme data
 
-1. Power off your console
+1. Schalte deine Konsole aus
 2. Stecke deine SD-Karte in deinen Computer
 3. Navigate to the `/Nintendo 3DS/<ID0>/<ID1>/extdata/00000000/` folder on your SD card
 4. Delete the corresponding folder for your 3DS region:
