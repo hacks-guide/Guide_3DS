@@ -50,7 +50,7 @@ If you change the region of your console:
 
 ## Instructions
 
-### Section I - Prep Work
+### Section I - Préparatifs
 
 <!--@include: ./_include/ctrtransfer-prep.md -->
 

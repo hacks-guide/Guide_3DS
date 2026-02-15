@@ -72,7 +72,7 @@ Follow these steps in order:
 6. When prompted, click "Test" to perform the connection test
    - The test should succeed
 7. Click "OK" to continue
-8. Press "Back" twice, then "Close" to go back to the HOME Menu
+8. Appuyez deux fois sur « Retour », puis « Fermer » pour revenir au Menu HOME
 9. Open the Internet Browser once
 10. If prompted about a system update, press OK
     - This won't actually update the system

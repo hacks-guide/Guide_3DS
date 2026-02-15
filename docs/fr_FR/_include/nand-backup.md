@@ -1,5 +1,5 @@
 1. Press (Home) to bring up the action menu
-2. Select "Scripts..."
+2. Sélectionnez "Scripts..."
 3. Select "GM9Megascript"
 4. Select "Backup Options"
 5. Select "SysNAND Backup"
@@ -22,4 +22,4 @@
     - These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
 18. Supprimez `<date>_<serialnumber>_sysnand_##.bin` et `<date>_<serialnumber>_sysnand_##.bin.sha` du dossier `/gm9/out/` de votre carte SD après l'avoir copié
     - The other backup files are negligible in size and may be kept on your SD card for ease of access
-19. Reinsert your SD card into your console
+19. Réinsérez votre carte SD dans votre console

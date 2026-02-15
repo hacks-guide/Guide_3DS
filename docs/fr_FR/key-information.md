@@ -32,7 +32,7 @@ Ce guide fonctionne avec toutes les consoles commerciales de la famille Nintendo
 
 :::
 
-Dans la plupart des cas, vous pouvez suivre ce guide tant que vous avez la possibilité de télécharger des fichiers depuis Internet et de les copier sur votre carte SD. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as phones and tablets running Android and iOS. Depending on your electronic device, you may need to purchase an SD card adapter to allow it to read your SD card.
+Dans la plupart des cas, vous pouvez suivre ce guide tant que vous avez la possibilité de télécharger des fichiers depuis Internet et de les copier sur votre carte SD. Cela inclut la plupart des appareils électroniques grand public, tels que les ordinateurs fonctionnant sous Windows, macOS, Linux et ChromeOS (Chromebook), ainsi que les téléphones et tablettes fonctionnant sous Android et iOS. Selon votre appareil électronique, vous devrez peut-être acheter un adaptateur de carte SD pour permettre à votre appareil de lire votre carte SD.
 
 ::::
 
@@ -50,7 +50,7 @@ La 3DS peut lire des cartes SD de n'importe quelle capacité (même celles supé
 
 ::: info
 
-It is highly recommended to **only use one SD card** with a console at any given time, as you cannot merge the contents of two SD cards later on. So, if your console already has an SD card, you should use that SD card to mod your console, or copy everything to a larger SD card before or after you mod it.
+Il est fortement recommandé de **n'utiliser qu'une seule carte SD** avec une console à la fois, car vous ne pouvez pas fusionner le contenu des deux cartes SD par la suite. Donc, si une carte SD est déjà dans votre console, vous devriez utiliser cette dernière pour modder votre console, ou copiez tout vers une carte SD de plus grande capacité avant ou après avoir moddé votre console.
 
 :::
 
@@ -62,7 +62,7 @@ Pour suivre ce guide, vous aurez besoin d'une carte SD d'une capacité d'au moin
 
 ::: info
 
-If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\)).
+Si vous le souhaitez, vous pouvez vérifier que votre carte SD ne contient aucune erreur avant de suivre ce guide à l'aide de [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), ou [F3XSwift (Mac)](f3xswift-\(mac\)).
 
 :::
 
@@ -144,7 +144,7 @@ Sur la plupart des systèmes d'exploitation, vous pouvez extraire des fichiers e
 
 ::: warning
 
-The Windows application "WinRAR" is specifically known to cause compatibility issues with the 3DS, particularly with custom firmware installation exploits. If you are on a Windows computer, you should use either the default File Explorer or 7-zip to extract files.
+L'application Windows "WinRAR" est particulièrement connue pour ses problèmes de compatibilité avec la 3DS, surtout avec les exploits d'installation de custom firmware. Si vous utilisez un ordinateur Windows, vous devriez utiliser l'Explorateur de fichiers (par défaut) ou 7-zip pour extraire des fichiers.
 
 :::
 
@@ -168,7 +168,7 @@ Si vous rencontrez un problème en suivant ce guide, vous pouvez obtenir de l'ai
 
 - Si vous avez des questions qui n'ont pas reçu de réponse sur cette page, leurs réponses peuvent être dans la [FAQ Pré-installation](faq#pre-installation-faq).
 - Si vous rencontrez un problème en suivant ce guide, vous pouvez consulter la page de [Dépannage](troubleshooting) pour trouver une solution.
-- If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+- Si les ressources que nous vous avons fournies ici ne vous ont pas aidées, vous pouvez obtenir une assistance individuelle sur [le Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
 ::: tip
 

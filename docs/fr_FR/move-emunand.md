@@ -19,13 +19,13 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 
 ## Instructions
 
-### Section I - Prep Work
+### Section I - Préparatifs
 
-1. Power off your console
+1. Éteignez votre console
 2. Insérez votre carte SD dans votre ordinateur
 3. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 4. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-5. Reinsert your SD card into your console
+5. Réinsérez votre carte SD dans votre console
 
 ### Section II - Backup SysNAND DSiWare Saves
 
@@ -37,7 +37,7 @@ If you do not have any DSiWare games or saves that you care about, skip this sec
 
 1. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
 2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is completed
-3. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+3. Si vous êtes invité à corriger la date et l’heure RTC, appuyez sur (A) pour le faire, puis réglez la date et l’heure, puis appuyez sur (A) pour continuer
    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide
 4. Navigate to `[2:] SYSNAND TWLN` -> `title`
 5. Hold (R) and press (A) at the same time on `00030004` to select the folder, then select "Copy to 0:/gm9/out"
@@ -166,7 +166,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 2. Insérez votre carte SD dans votre ordinateur
 3. Copy all your files back to your SD card
    - Ensure you replace the `boot.firm` file on your SD card with the one from your backup
-4. Reinsert your SD card into your console
+4. Réinsérez votre carte SD dans votre console
 5. Press (A) to remount your SD card
 6. Press (Start) to reboot
 

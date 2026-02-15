@@ -20,9 +20,9 @@ Notez que dans de rares circonstances, il est possible que le processus de flash
 
 ## Instructions
 
-### Section I - Prep Work
+### Section I - Préparatifs
 
-1. Power off your console
+1. Éteignez votre console
 2. Insert your flashcart's SD card into your computer
 3. Create a folder named `ntrboot` on the root of your flashcart's SD card
 4. Copy `boot9strap_ntr.firm` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your flashcart's SD card
@@ -44,7 +44,7 @@ Notez que dans de rares circonstances, il est possible que le processus de flash
 10. Select "Inject FIRM" to install boot9strap to your flashcart
 11. Input the key combo given to confirm
 12. Press (A) to continue
-13. Power off your console
+13. Éteignez votre console
 
 ___
 

@@ -8,21 +8,21 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 - A magnet that triggers the sleep mode of your console (if using a folding style console)
 - Your ntrboot flashed flashcart
-- The latest release of [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (direct download)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- La dernière version de [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (téléchargement direct)
+- La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (téléchargement direct)
+- La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier \`.zip' de Luma3DS)
 
 ## Instructions
 
-### Section I - Prep Work
+### Section I - Préparatifs
 
-1. Power off your console
+1. Éteignez votre console
 
 2. Insert your console's SD card into your computer
    - This is the SD card from your 3DS, _not_ the SD card from your flashcart
 
 3. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the root of your SD card and rename it to `boot.firm`
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n'est pas à l'intérieur de ce dernier
 
 4. Create a folder named `boot9strap` on the root of your console's SD card
 
@@ -34,27 +34,27 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
    :::
 
-6. Reinsert your SD card into your console
+6. Réinsérez votre carte SD dans votre console
 
-7. Power on your console
+7. Allumez votre console
 
 ### Section II - ntrboot
 
 1. Use the magnet to find the spot on your console where the sleep sensor is triggered
    - This step is not needed on the old 2DS (which has a sleep mode switch)
-2. Power off your console
+2. Éteignez votre console
 3. Insert your flashcart into your console
 4. Place the magnet on your console to trigger the sleep sensor
    - On old 2DS, you should instead enable the sleep mode switch
 5. Hold (Start) + (Select) + (X) + (Power) for several seconds, then release the buttons
    - It may take a few attempts to get this to work because the positioning is awkward
-6. If the exploit was successful, you will have booted into SafeB9SInstaller
+6. Si l'exploit a réussi, vous aurez démarré sur SafeB9SInstaller
 7. Remove the magnet from your console
    - On old 2DS, you should instead disable the sleep mode switch
 
-### Section III - Installing boot9strap
+### Section III - Installer boot9strap
 
-In this section, you will install custom firmware onto your console.
+Dans cette section, vous installerez un custom firmware sur votre console.
 
 1. Lorsque vous y êtes invité, entrez la combinaison de touches indiquée sur l'écran supérieur pour installer boot9strap
    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ntrboot)
@@ -65,9 +65,9 @@ In this section, you will install custom firmware onto your console.
 
 1. Insert your console's SD card into your computer
 2. Delete `boot.firm` from the root of your SD card
-3. Copy everything from the Luma3DS `.zip` to the root of your SD card
-4. Reinsert your SD card into your console
-5. Power on your console
+3. Copiez tout depuis le `.zip` de Luma3DS à la racine de votre carte SD
+4. Réinsérez votre carte SD dans votre console
+5. Allumez votre console
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
@@ -77,7 +77,7 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continuer vers [Finalisation de l'installation](finalizing-setup)
 
 :::
 
@@ -127,14 +127,14 @@ Do not follow this section until you have completed the rest of the instructions
 
 #### Instructions
 
-1. Power off your console
+1. Éteignez votre console
 2. Insérez votre carte SD dans votre ordinateur
    - This is the SD card from your 3DS, _not_ the SD card from your flashcart
 3. Create a folder named `ntrboot` on the root of your SD card
 4. Copy the `.bin` file from your flashrom backup `.zip` to the `/ntrboot/` folder on the root of your SD card
 5. Create a folder named `payloads` in the `luma` folder on your SD card
 6. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on your SD card
-7. Reinsert your SD card into your console
+7. Réinsérez votre carte SD dans votre console
 8. Insert your ntrboot compatible DS / DSi flashcart into your console
 9. Launch ntrboot_flasher by holding (Start) during boot
 10. Read the red screen warning

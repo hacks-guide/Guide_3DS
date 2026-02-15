@@ -49,15 +49,15 @@ You said 'No' to the "Make essential files backup?" prompt in GodMode9. Power of
 
 You need at least 1.3GB of free space to perform the NAND backup, which is a part of the script. If you don't have enough space, follow these steps:
 
-1. Power off your console
+1. Éteignez votre console
 2. Insérez votre carte SD dans votre ordinateur
 3. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
 4. Delete the Nintendo 3DS folder from the SD card
-5. Reinsert your SD card into your console
+5. Réinsérez votre carte SD dans votre console
 6. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
 7. Press the (Home) button
-8. Select "Scripts..."
-9. Select "finalize"
+8. Sélectionnez "Scripts..."
+9. Sélectionnez "finalize"
 10. Press (A) to create a NAND backup
     - This may take around fifteen minutes
 11. Press (A) again
@@ -70,11 +70,11 @@ You need at least 1.3GB of free space to perform the NAND backup, which is a par
 
 Now that you have your NAND backup in a safe place:
 
-1. Reinsert your SD card into your console
+1. Réinsérez votre carte SD dans votre console
 2. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
 3. Press the (Home) button
-4. Select "Scripts..."
-5. Select "finalize"
+4. Sélectionnez "Scripts..."
+5. Sélectionnez "finalize"
 6. Continue the script as normal
    - The NAND backup will be automatically skipped
 
@@ -90,11 +90,11 @@ Press (A) to import a title database, unlock SysNAND writing by entering the but
 
 Make sure you have at least 1.3GB available in your SD card. If you don't have enough space, follow these steps:
 
-1. Power off your console
+1. Éteignez votre console
 2. Insérez votre carte SD dans votre ordinateur
 3. Copy the `Nintendo 3DS` folder from the root of your SD card to your computer
 4. Delete the Nintendo 3DS folder from the SD card
-5. Reinsert your SD card into your console
+5. Réinsérez votre carte SD dans votre console
 6. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
 7. Perform a [NAND Backup](godmode9-usage#creating-a-nand-backup)
 8. Copy the files in `gm9/out` on your SD to a safe location on your computer
@@ -124,9 +124,9 @@ The script has detected that the Nintendo 3DS folder is missing AND that you hav
    - If you do not have a Nintendo 3DS folder, boot into the HOME Menu at least once with the SD card inserted to automatically generate it
 6. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
 7. Press (Home) to bring up the action menu
-8. Select "Scripts..."
-9. Select "finalize"
-10. Follow the prompts in the script, answering any questions that you are asked
+8. Sélectionnez "Scripts..."
+9. Sélectionnez "finalize"
+10. Suivez les instructions du script, en répondant aux questions qui vous sont posées
 
 :::
 

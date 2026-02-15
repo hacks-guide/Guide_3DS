@@ -1,6 +1,6 @@
 # Installing boot9strap (Hardmod)
 
-:::details Technical Details (optional)
+:::details Détails techniques (optionnel)
 
 An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/).
 
@@ -10,7 +10,7 @@ Using a hardmod, we can dump the NAND image, install custom firmware to the NAND
 
 :::
 
-## Compatibility Notes
+## Notes de compatibilité
 
 To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 
@@ -19,10 +19,10 @@ This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on _all_ versions that 
 ## Ce dont vous avez besoin
 
 - Your NAND image extracted using your [hardmod](https://gbatemp.net/threads/414498/)
-- The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
+- La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (téléchargement direct)
 - The latest version of [hardmod-b9s-installer](https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest)
   - Windows users can use the compiled `.exe`, while Mac and Linux users will need to have [Python 3](https://www.python.org/downloads/) installed to run the `.py`
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier \`.zip' de Luma3DS)
 - The `.firm` corresponding to your console and version:
 
 | Version(s)                                                     | Kernel                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Old 3DS or Old 2DS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      New 3DS or New 2DS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -61,18 +61,18 @@ This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on _all_ versions that 
 
 ## Instructions
 
-### Section I - Prep Work
+### Section I - Préparatifs
 
 In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
 
-1. Power off your console
+1. Éteignez votre console
 2. Insérez votre carte SD dans votre ordinateur
-3. Copy everything from the Luma3DS `.zip` to the root of your SD card
+3. Copiez tout depuis le `.zip` de Luma3DS à la racine de votre carte SD
 4. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer
 5. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
 6. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`
 7. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
-8. Reinsert your SD card into your console
+8. Réinsérez votre carte SD dans votre console
 9. Use your hardmod to create a NAND backup
 10. Move your NAND backup to the hardmod-b9s-installer folder on your computer and rename it to `NAND.bin`
 
@@ -84,7 +84,7 @@ In this section, you will install custom firmware to the dumped NAND image, and 
    - Windows Users: Run `install-b9s.exe`
    - Mac and Linux Users: Run `install-b9s.py`
 2. Flash your outputted `NAND-patched.bin` to your console with your hardmod
-3. Power off your console
+3. Éteignez votre console
 4. Disconnect your hardmod
 5. Press and hold (Select), and while holding (Select), power on your console
 
@@ -96,6 +96,6 @@ ___
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continuer vers [Finalisation de l'installation](finalizing-setup)
 
 :::

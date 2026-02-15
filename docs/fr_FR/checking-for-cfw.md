@@ -14,7 +14,7 @@ If your console has a menuhax-based CFW setup, you should [clear HOME Menu's ext
 
 ## Instructions
 
-1. Power off your console
+1. Éteignez votre console
 2. Hold the (Select) button
 3. Allumez votre console tout en maintenant le bouton (Select) enfoncé
 4. You should now see a configuration menu of some sort

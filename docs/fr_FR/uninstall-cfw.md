@@ -1,4 +1,4 @@
-# Uninstall CFW
+# Désinstallation du CFW
 
 ## Lecture Requise
 
@@ -45,7 +45,7 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 
 ## Ce dont vous avez besoin
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier \`.zip' de Luma3DS)
 - The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
 - The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
@@ -53,16 +53,16 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 
 ## Instructions
 
-### Section I - Prep Work
+### Section I - Préparatifs
 
-1. Power off your console
+1. Éteignez votre console
 2. Insérez votre carte SD dans votre ordinateur
-3. Copy everything from the Luma3DS `.zip` to the root of your SD card
+3. Copiez tout depuis le `.zip` de Luma3DS à la racine de votre carte SD
 4. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 5. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 6. Copy `DSiWareUninstaller.3dsx` to the `/3ds/` folder on your SD card
 7. Copy `safety_test.gm9` and `uninstall_cfw.gm9` to the `/gm9/scripts/` folder on your SD card
-8. Reinsert your SD card into your console
+8. Réinsérez votre carte SD dans votre console
 
 ### Section II - DS Mode Tests
 
@@ -70,21 +70,21 @@ The purpose of this section is to check whether built-in DS mode applications wi
 
 #### DS Connection Settings Test
 
-1. Power on your console
+1. Allumez votre console
 2. Lancez les Paramètres de la console
 3. Navigate to `Internet Settings` -> `Nintendo DS Connection Settings`, then click OK
 4. You should boot into the Nintendo DS Connection Setup menu
    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
-5. Power off your console
+5. Éteignez votre console
 
 #### DS Download Play Test
 
-1. Power on your console
+1. Allumez votre console
 2. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 3. Select "Nintendo DS"
 4. If your console loads into a "Download software via DS Download Play" menu, the test was successful
    - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
-5. Power off your console
+5. Éteignez votre console
 
 ::: warning
 
@@ -98,22 +98,22 @@ The purpose of this section is to verify that the console will boot and that cri
 
 1. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
 2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is complete
-3. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+3. Si vous êtes invité à corriger la date et l’heure RTC, appuyez sur (A) pour le faire, puis réglez la date et l’heure, puis appuyez sur (A) pour continuer
    - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
 4. Press (Home) to bring up the action menu
-5. Select "Scripts..."
+5. Sélectionnez "Scripts..."
 6. Select "safety_test"
 7. Read the text on-screen and press (A) to continue
 8. You should boot into the regular 3DS HOME Menu (any custom theme is irrelevant). If you do, continue these instructions
    - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
 9. Lancez les Paramètres de la console
    - If the console crashes at this point, the test has failed
-10. Select "Other Settings"
+10. Sélectionnez "Autres paramètres"
 11. Select "Profile"
 12. Select "User Name"
 13. If you are able to enter a new user name, the test was successful
     - If the keyboard does not appear, the screen freezes, or the console crashes, the test has failed
-14. Power off your console
+14. Éteignez votre console
 
 ::: danger
 
@@ -125,7 +125,7 @@ If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your key
 
 1. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
 2. Press (Home) to bring up the action menu
-3. Select "Scripts..."
+3. Sélectionnez "Scripts..."
 4. Select "GM9Megascript"
 5. Select "Backup Options"
 6. Select "SysNAND Backup"
@@ -145,7 +145,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 
 :::
 
-1. Power on your console
+1. Allumez votre console
 2. Lancez les Paramètres de la console
 3. Navigate to Data Management > Nintendo 3DS > Software
 4. In this list of software, delete any non-Nintendo content you installed while using CFW
@@ -157,12 +157,12 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 7. Exit the System Settings application
 8. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 9. Wait until you see the two buttons
-10. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
-11. Select "Miscellaneous options"
+10. Appuyez simultanément sur (L) + (Bas sur la croix directionnelle) + (Select) pour ouvrir le menu Rosalina
+11. Sélectionnez "Miscellaneous options"
 12. Select "Switch the hb. title to the current app."
-13. Press (B) to continue
-14. Press (B) to return to the Rosalina main menu
-15. Press (B) to exit the Rosalina menu
+13. Appuyez sur (B) pour continuer
+14. Appuyez sur (B) pour revenir au menu principal de Rosalina
+15. Appuyez sur (B) pour quitter le menu Rosalina
 16. Press (Home), then close Download Play
 17. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 18. Your console should load the Homebrew Launcher
@@ -174,7 +174,7 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 
 This section will ensure that all illegitimate tickets are removed, allowing eShop to work normally. This will remove all content from the 3DS and log you out of your NNID. Keep in mind that your console's encryption key will be shuffled, meaning that any old data will be rendered inaccessible, even if you have a backup of your SD contents.
 
-1. Power on your console
+1. Allumez votre console
 2. Lancez les Paramètres de la console
 3. Navigate to Other Settings -> Next Page (until the final page) -> Format System Memory
 4. Follow the prompts to format your 3DS
@@ -207,7 +207,7 @@ If you're removing CFW because:
 1. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
    - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
 2. Press (Home) to bring up the action menu
-3. Select "Scripts..."
+3. Sélectionnez "Scripts..."
 4. Select "uninstall_cfw"
 5. When prompted, press (A) to proceed
 6. Press (A) again to proceed

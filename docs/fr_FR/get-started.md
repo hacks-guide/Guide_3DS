@@ -1,9 +1,9 @@
 ---
 noneSelected: Le modèle de la console doit être sélectionné.
 invalidVersion: Il semblerait que ce numéro de version soit invalide.
-cfwPrefixDetected: Your console may already have custom firmware installed. Please retry Section I. If you still only reach the HOME menu, click the link below and ask, in English, for assistance.
-inviteLinkText: Nintendo Homebrew on Discord
-otherPrefix: (Other)
+cfwPrefixDetected: Il semble que votre console dispose déjà d'un custom firmware. Réessayez la Section I. Si vous n'arrivez toujours qu'au Menu HOME, merci de cliquer sur le lien ci-dessous et de faire une demande d'assistance en anglais.
+inviteLinkText: Nintendo Homebrew sur Discord
+otherPrefix: (Autres)
 head:
   [
     [ 'script', { src: '/assets/js/common.js' } ],

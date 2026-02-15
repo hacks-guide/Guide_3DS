@@ -8,15 +8,15 @@ Your SD card must be formatted as FAT32 to follow this guide, or else the 3DS wi
 
 ## Ce dont vous avez besoin
 
-- The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
+- La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier \`.zip' de Luma3DS)
 
 ## Instructions
 
 1. Insérez votre carte SD dans votre ordinateur
-2. Copy everything from the Luma3DS `.zip` (`boot.firm`, `boot.3dsx`, and `config`) to the root of your SD card. If any of the files exist, overwrite them with the new files.
-   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
-3. Reinsert your SD card into your console
-4. Power on your console
+2. Copy everything from the Luma3DS `.zip` (`boot.firm`, `boot.3dsx`, and `config`) to the root of your SD card. S'il y a déjà des fichiers existants, remplacez-les par les nouveaux fichiers.
+   - La racine de la carte SD représente le répertoire initial de la carte SD où vous pouvez voir le dossier Nintendo 3DS, mais ce n'est pas à l'intérieur de ce dernier
+3. Réinsérez votre carte SD dans votre console
+4. Allumez votre console
    - If you see the Luma3DS configuration menu, press (Start) to save and reboot
 
 ::: info

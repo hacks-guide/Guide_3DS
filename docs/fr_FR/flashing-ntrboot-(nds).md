@@ -23,7 +23,7 @@ Notez que dans de rares circonstances, il est possible que le processus de flash
 
 ## Instructions
 
-### Section I - Prep Work
+### Section I - Préparatifs
 
 1. Power off **the source NDS / NDSL**
 2. Insert your flashcart's SD card into your computer

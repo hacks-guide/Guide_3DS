@@ -11,13 +11,13 @@ head:
   ]
 ---
 
-# Installing boot9strap (MSET9)
+# Installation de boot9strap (MSET9)
 
-## Choose your operating system
+## Choisissez votre système d'exploitation
 
-The instructions for MSET9 differ depending on the computer, phone, or tablet **that you are using to mod your console**.
+Les instructions pour MSET9 diffèrent selon l'ordinateur, le téléphone ou la tablette **que vous utilisez pour modder votre console**.
 
-Choose the operating system of the device **that you will be using to mod your console**. The device will need a way to read and write files onto the 3DS SD card.
+Choisissez le système d'exploitation de l'appareil **que vous allez utiliser pour modder votre console**. L'appareil doit avoir un moyen de lire et d'écrire des fichiers sur la carte SD de la 3DS.
 
 |                                                                                                      Windows, macOS, Linux                                                                                                     |                                                                            Android, ChromeOS                                                                           |                                                                      iPhone, iPad                                                                      |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: |

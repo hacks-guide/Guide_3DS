@@ -24,7 +24,7 @@ GodMode9 is powerful software that has the capability to modify essentially anyt
 
 ::: info
 
-Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. If any of the files exist, overwrite them with the new files.
+Some of the instructions below are only applicable to the latest version of GodMode9, and as such you should follow this section to update your copy before continuing. S'il y a déjà des fichiers existants, remplacez-les par les nouveaux fichiers.
 
 :::
 
@@ -34,11 +34,11 @@ Some of the instructions below are only applicable to the latest version of GodM
 
 ### Instructions
 
-1. Power off your console
+1. Éteignez votre console
 2. Insérez votre carte SD dans votre ordinateur
 3. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 4. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-5. Reinsert your SD card into your console
+5. Réinsérez votre carte SD dans votre console
 
 ::: tip
 
@@ -60,13 +60,13 @@ Your NAND backup has been successfully created.
 
 ## Restoring a NAND Backup
 
-1. Power off your console
+1. Éteignez votre console
 2. Insérez votre carte SD dans votre ordinateur
 3. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
-4. Reinsert your SD card into your console
+4. Réinsérez votre carte SD dans votre console
 5. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
 6. Press (Home) to bring up the action menu
-7. Select "Scripts..."
+7. Sélectionnez "Scripts..."
 8. Select "GM9Megascript"
 9. Select "Restore Options"
 10. Select "SysNAND Restore (safe)"
@@ -162,7 +162,7 @@ This process will only log you out of your NNID. You will still not be able to u
 
 1. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
 2. Press (Home) to bring up the action menu
-3. Select "Scripts..."
+3. Sélectionnez "Scripts..."
 4. Select "GM9Megascript"
 5. Select "Scripts from Plailect's Guide"
 6. Select "Remove NNID"

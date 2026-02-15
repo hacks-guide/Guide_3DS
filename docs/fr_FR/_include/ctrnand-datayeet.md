@@ -2,7 +2,7 @@ This section will reset your system settings to its defaults. **Installed games 
 
 ::: danger
 
-Do NOT skip this section! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
+NE PAS sauter cette section ! This is **required** to prevent known issues relating to extended memory mode and applets on some consoles.
 
 :::
 
@@ -12,7 +12,7 @@ This process will reset your Mii data. If you wish to save any Miis that you hav
 
 :::
 
-1. Power off your console
+1. Éteignez votre console
 2. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
 3. Naviguez vers `[1:] SYSNAND CTRNAND` -> `data` -> `<ID0>` -> `sysdata`
    - The `<ID0>` will be a folder with a 32-character long name

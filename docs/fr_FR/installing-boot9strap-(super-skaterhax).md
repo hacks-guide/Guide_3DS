@@ -7,117 +7,117 @@ head:
   ]
 ---
 
-# Installing boot9strap (super-skaterhax)
+# Installation de boot9strap (super-skaterhax)
 
-:::details Technical Details (optional)
+:::details Détails techniques (optionnel)
 
-For technical details on the exploits that you will be using on this page, see [here](https://github.com/zoogie/super-skaterhax).
+Pour les détails techniques sur les exploits que vous utiliserez sur cette page, voir [ici](https://github.com/zoogie/super-skaterhax).
 
 :::
 
-### Compatibility Notes
+### Notes de compatibilité
 
-Super-skaterhax (when used to launch the Homebrew Launcher) is compatible with New models on version 11.15.0 and above in all regions.
+Super-skaterhax (lorsqu'il est utilisé pour lancer l'Homebrew Launcher) est compatible avec les modèles New 3DS en version 11.15.0 et plus dans toutes les régions.
 
 ::: info
 
-This exploit is known to be inconsistent: it works for some people, but not others. If you prefer to use a more consistent exploit (which may take longer, but will have the same end result), follow [MSET9](installing-boot9strap-\(mset9\)) instead.
+Cet exploit est connu pour être irrégulier : ça marche pour certaines personnes, mais pas pour d'autres. Si vous préférez utiliser un exploit plus régulier (ce qui pourra prendre plus de temps, mais aura le même résultat final), suivez [MSET9](installing-boot9strap-\(mset9\)) à la place.
 
 :::
 
 ### Ce dont vous avez besoin
 
-- The [Super-skaterhax](https://skater.nintendohomebrew.com) `.zip` for your console's region and system version
+- Le `.zip` [Super-skaterhax](https://skater.nintendohomebrew.com) pour la région et la version système de votre console
 
-#### Section I - Prep Work
+#### Section I - Préparatifs
 
-In this section, you will copy the files needed to trigger both super-skaterhax and the Homebrew Launcher.
+Dans cette section, vous copierez les fichiers nécessaires pour déclencher à la fois super-skaterhax et l'Homebrew Launcher.
 
-1. Power off your console
+1. Éteignez votre console
 
 2. Insérez votre carte SD dans votre ordinateur
 
-3. Copy everything from the Super-skaterhax `.zip` to the root of your SD card. If any of the files exist, overwrite them with the new files.
+3. Copiez tout depuis le `.zip` de Super-skaterhax à la racine de votre carte SD. S'il y a déjà des fichiers existants, remplacez-les par les nouveaux fichiers.
    ::: info
 
    ![](/images/screenshots/skaterhax/skater-root-layout.png)
 
    :::
 
-4. Reinsert your SD card into your console
+4. Réinsérez votre carte SD dans votre console
 
-5. Power on your console
+5. Allumez votre console
 
-6. Launch System Settings
+6. Ouvrez les Paramètres de la Console
 
-7. Select "Other Settings"
+7. Sélectionnez "Autres paramètres"
 
-8. Navigate to "Profile" -> "Region Settings"
-   - These settings will be temporarily changed to increase the success rate of the exploit
-   - You can restore your region settings back to normal once you have finished this page
-   - If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue
+8. Naviguez vers "Profil" -> "Paramètres de région"
+   - Ces paramètres seront temporairement modifiés pour augmenter le taux de réussite de l'exploit
+   - Vous pourrez restaurer les paramètres de votre région à la normale une fois que vous aurez terminé cette page
+   - Si vous recevez un [avertissement](/images/screenshots/skaterhax/country-change-notice.png) indiquant que vous perdrez l'accès aux fonctionnalités de l'identifiant Nintendo Network, vous pouvez sélectionner OK en toute sécurité pour continuer
 
-9. Select the following options according to your console's region ([image](/images/screenshots/skaterhax/skater-lang.png))
-   - USA: First select United States, then select Do Not Set
-   - EUR: First select United Kingdom, then select Do Not Set
-   - JPN: First select 日本, then select 設定しない
-   - KOR: First select 대한민국, then select 설정하지 않음
+9. Sélectionnez les options suivantes en fonction de la région de votre console ([image](/images/screenshots/skaterhax/country-change-notice.png))
+   - USA : Sélectionnez d'abord United States (États-Unis), puis sélectionnez Do Not Set (Ne pas choisir)
+   - EUR : Sélectionnez d'abord United Kingdom (Royaume-Uni), puis sélectionnez Do Not Set (Ne pas choisir)
+   - JPN: Sélectionnez d'abord 日本, puis sélectionnez 設定しない
+   - KOR: Sélectionnez d'abord 대한민국, puis sélectionnez 설정하지 않음
 
-10. Navigate to "Date & Time"
+10. Naviguez vers "Date et heure"
 
-11. Set "Today's Date" and "Current Time" to the current date and time
+11. Réglez la "Date d'aujourd'hui" et l'"Heure actuelle" à la date et heure actuelle
 
-12. Exit System Settings
+12. Quittez Paramètres de la console
 
 #### Section II - super-skaterhax
 
-In this section, you will visit the browser exploit webpage, which will launch the Homebrew Launcher.
+Dans cette section, vous allez visiter la page web d'exploit du Navigateur Internet, qui lancera l'Homebrew Launcher.
 
 ::: info
 
-A video detailing these steps is available [here](https://www.youtube.com/watch?v=DEcZB72vJts).
+Une vidéo en anglais détaillant ces étapes est disponible [ici](https://www.youtube.com/watch?v=DEcZB72vJts).
 
 :::
 
-1. Open the Internet Browser
-2. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-3. Tap `Settings` -> scroll down -> `Reset Save Data` -> `Clear All` -> `Clear` -> `OK`
-   - The browser will close
-4. Reopen the Internet Browser
-5. Tap `Next` -> `Google` -> `OK` -> `OK`
-6. Tap on the address bar at the top of the bottom screen
-7. Enter the URL corresponding to your console's region:
-   - **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
-   - **KOR**: `https://skater.686178.xyz/go/korea`
-8. Tap "Open"
-   - You should see the text "GO GO!". Do not click on it yet
-9. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-10. Tap on "Add to Bookmarks"
-11. Tap the 3-line (☰) icon on the bottom-right corner of the screen
-12. Tap on `Settings` -> `Delete Cookies` -> `Yes`
-13. Press (Home) to return to the HOME Menu, then immediately reopen the Internet Browser
-14. Wait for the page to fully load, then tap the "GO GO!" button on the top of the bottom screen
-15. Wait for the page to fully load, then press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
-16. If your console displays:
-    - **"The Homebrew Launcher" screen**: Continue to the next step
-    - **A white "Error has occurred" message box**: The exploit failed due to random chance. Open System Settings, change the language to a different one (if possible), then retry this section. You may have to repeat this sequence up to ten times
-      - On JPN/KOR region consoles, there is only one language setting. On those consoles, you should open System Settings, close it, then retry this section
-      - If the exploit is still unsuccessful after five attempts, there may be a problem with your files or prep work. Ensure that region and date/time are correct, and that you have been following this section **exactly**. If you used WinRAR to extract files to the SD card, re-extract the files using File Explorer or 7-zip instead
-      - If the exploit is still unsuccessful after ten attempts, follow [MSET9](installing-boot9strap-\(mset9\)) instead
-    - **A black screen that says "An error has occurred"**: Your file placement is incorrect. Ensure that the super-skaterhax files are on the root of the SD card
-    - **A yellow screen**: Homebrew Launcher failed to open due to random chance. Hold the POWER button until the console turns off, then retry this section
-    - **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. If this is the case, you should follow [MSET9](installing-boot9strap-\(mset9\)) instead
-17. Launch nimdsphax from the list of homebrew
-18. If the exploit was successful, you will have booted into SafeB9SInstaller
-    - If your console freezes on a red or green screen, hold the POWER button until it turns off, then retry this section
+1. Ouvrez le Navigateur Internet
+2. Appuyez sur l'icône à 3 lignes (☰) en bas à droite de l'écran
+3. Appuyez sur `Paramètres` -> faites défiler -> `Effacer données de sauvegarde` -> `Oui` -> `Réinitialiser` -> `OK`
+   - Le navigateur se fermera
+4. Rouvrez le Navigateur Internet
+5. Appuyez sur `Suite` -> `Google` -> `OK` -> `OK`
+6. Appuyez sur la barre d'adresse en haut de l'écran du bas
+7. Saisissez l'URL qui correspond à la région de votre console :
+   - **USA/EUR/JPN** : `https://skater.686178.xyz/go/super`
+   - **KOR** : `https://skater.686178.xyz/go/korea`
+8. Appuyez sur "Ouvrir"
+   - Vous devriez voir le texte "GO GO!". Il ne faut pas le cliquer pour le moment
+9. Appuyez sur l'icône à 3 lignes (☰) en bas à droite de l'écran
+10. Appuyez sur "Ajouter aux favoris"
+11. Appuyez sur l'icône à 3 lignes (☰) en bas à droite de l'écran
+12. Appuyez sur `Paramètres` -> `Effacer les cookies` (témoins) -> `Oui`
+13. Appuyez sur (Home) pour retourner au Menu HOME, puis rouvrez immédiatement le Navigateur Internet
+14. Attendez que la page se charge complètement, puis appuyez sur le bouton "GO GO!" en haut de l'écran du bas
+15. Attendez que la page se charge complètement, puis appuyez sur (A) pour ignorer le [pop-up](/images/screenshots/skaterhax/skater-popup.png)
+16. Si votre console affiche :
+    - **L'écran du Homebrew Launcher** : Continuez à l'étape suivante
+    - **Une boîte de message blanche qui affiche "Une erreur est survenue"** : L'exploit a échoué à cause du hasard. Ouvrez les Paramètres de la Console, changez la langue à une autre langue (si possible), puis réessayez cette section. Il va peut-être falloir répéter cette séquence jusqu'à dix fois
+      - Sur les consoles de la région JPN/KOR, il n'y a qu'une langue disponible. Sur ces consoles, vous devriez ouvrir les Paramètres de la Console, les fermer, puis réessayer cette section
+      - Si l'exploit échoue encore après cinq tentatives, il y a peut-être un problème avec vos fichiers ou vos préparations. Assurez-vous que la région et la date/heure sont correctes, et que vous avez bien suivi cette section **à la lettre**. Si vous avez utilisé WinRAR pour extraire les fichiers sur la carte SD, extrayez les fichiers de nouveau en utilisant l'Explorateur de fichiers ou 7-zip
+      - Si l'exploit échoue encore après dix tentatives, suivez [MSET9](installing-boot9strap-\(mset9\)) à la place
+    - **Un écran noir qui affiche "Une erreur est survenue"** : Votre placement des fichiers est incorrect. Assurez-vous que les fichiers super-skaterhax sont à la racine de la carte SD
+    - **Un écran jaune** : l'Homebrew Launcher n'a pas pu s'ouvrir à cause du hasard. Maintenez le bouton POWER jusqu'à ce que la console s'éteigne, puis réessayez cette section
+    - **[Le mot "Text"](/images/screenshots/skaterhax/skater-old3ds.png)** : Vous avez une Old 3DS, sur laquelle cet exploit **ne fonctionne pas**. Si c'est le cas, vous devriez suivre [MSET9](installing-boot9strap-\(mset9\)) à la place
+17. Lancez "nimdsphax" que vous trouverez dans la liste des homebrews
+18. Si l'exploit a réussi, vous devriez avoir démarré dans SafeB9SInstaller
+    - Si votre console se freeze (ne répond plus) sur un écran rouge ou vert, maintenez le bouton POWER jusqu'à ce qu'elle s'éteigne, puis réessayez cette section
 
-#### Section III - Installing boot9strap
+#### Section III - Installer boot9strap
 
-In this section, you will install custom firmware onto your console.
+Dans cette section, vous installerez un custom firmware sur votre console.
 
 1. Lorsque vous y êtes invité, entrez la combinaison de touches indiquée sur l'écran supérieur pour installer boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
-2. Once it is complete, press (A) to reboot your console
+   - Dans le cas où un message en rouge apparaîtrait lors d'une étape sur l'écran du bas et que vous n'êtes pas sollicité pour saisir une combinaison de boutons, [suivez ce guide de dépannage](troubleshooting-super-skaterhax)
+2. Une fois l'opération terminée, appuyez sur (A) pour redémarrer votre console
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
@@ -127,12 +127,12 @@ ___
 
 ::: info
 
-You may now restore your region settings back to normal.
+Vous pouvez maintenant restaurer vos paramètres régionaux habituels.
 
 :::
 
 ::: tip
 
-Continue to [Finalizing Setup](finalizing-setup)
+Continuer vers [Finalisation de l'installation](finalizing-setup)
 
 :::
