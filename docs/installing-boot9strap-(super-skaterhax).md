@@ -46,7 +46,7 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 1. Power on your console.
 1. Launch System Settings.
 1. Select `Other Settings`.
-1. Navigate to `Profile > Region Settings`.
+1. Navigate to `Profile` > `Region Settings`.
     * These settings will be temporarily changed to increase the success rate of the exploit.
     * You can restore your region settings back to normal once you have finished this page.
     * If you get a [warning](/images/screenshots/skaterhax/country-change-notice.png) that says you will lose access to Nintendo Network ID features, you can safely select OK to continue.
@@ -71,10 +71,10 @@ A video detailing these steps is available [on YouTube](https://www.youtube.com/
 
 1. Open the Internet Browser.
 1. Tap the 3-line (☰) icon on the bottom-right corner of the screen.
-1. Tap `Settings > scroll down > Reset Save Data > Clear All > Clear > OK`.
+1. Tap `Settings` > `scroll down` > `Reset Save Data` > `Clear All` > `Clear` > `OK`.
     * The browser will close.
 1. Reopen the Internet Browser.
-1. Tap `Next > Google > OK > OK`.
+1. Tap `Next` > `Google` > `OK` > `OK`.
 1. Tap on the address bar at the top of the bottom screen.
 1. Enter the URL corresponding to your console's region:
     * **USA/EUR/JPN**: `https://skater.686178.xyz/go/super`
@@ -84,7 +84,7 @@ A video detailing these steps is available [on YouTube](https://www.youtube.com/
 1. Tap the 3-line (☰) icon on the bottom-right corner of the screen.
 1. Tap on `Add to Bookmarks`.
 1. Tap the 3-line (☰) icon on the bottom-right corner of the screen.
-1. Tap on `Settings > Delete Cookies > Yes`.
+1. Tap on `Settings` > `Delete Cookies` > `Yes`.
 1. Press `HOME` to return to the HOME Menu, then immediately reopen the Internet Browser.
 1. Wait for the page to fully load, then tap the `GO GO!` button on the top of the bottom screen.
 1. Wait for the page to fully load, then press `A` to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png).

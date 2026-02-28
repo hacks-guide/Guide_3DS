@@ -18,7 +18,7 @@ The script will install the following applications:
 * **Universal-Updater** by Universal-Team *(on-device app store for downloading homebrew over Wi-Fi)*
 * **GodMode9** by d0k3 *(multipurpose tool for extracting data from internal memory or cartridges)*
 
-If you don't want one of these applications, you can remove them after you have finished this page by navigating to `System Settings > Data Management > Nintendo 3DS > Software`. (GodMode9 cannot be removed in this way and is generally required for other functions.)
+If you don't want one of these applications, you can remove them after you have finished this page by navigating to `System Settings` > `Data Management` > `Nintendo 3DS` > `Software`. (GodMode9 cannot be removed in this way and is generally required for other functions.)
 
 ::: details Source code links (optional)
 

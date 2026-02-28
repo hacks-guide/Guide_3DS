@@ -103,10 +103,10 @@ If you did not backup DSiWare Saves earlier, skip this section.
 
 :::
 
-1. Navigate to `[0:] SDCARD > gm9 > out`.
+1. Navigate to `[0:] SDCARD` > `gm9` > `out`.
 1. Press `Y` on the `00030004` folder to copy it.
 1. Press `B` twice to return to the main menu.
-1. Navigate to `[2:] SYSNAND TWLN > title`.
+1. Navigate to `[2:] SYSNAND TWLN` > `title`.
 1. Press `Y` to paste the `00030004` folder.
 1. Select `Copy path(s)`.
 1. Press `A` to unlock SysNAND (lvl1) writing, then input the key combo given.
@@ -136,7 +136,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
     * Exit the GBA VC game.
     * Boot your console while holding `START` to launch the Luma3DS chainloader menu.
     * Launch GodMode9 by pressing `A`.
-    * Navigate to `[0:] SDCARD > gm9`.
+    * Navigate to `[0:] SDCARD` > `gm9`.
     * Press `Y` on the `<TitleID>.gbavc.sav` file you wish to restore to copy it.
     * Press `B` to return to the main menu.
     * Navigate to `[S:] SYSNAND VIRTUAL`.

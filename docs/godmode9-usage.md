@@ -94,7 +94,7 @@ Note that it is not possible to inject files into Health & Safety that are large
 :::
 
 1. Press and hold `START`, and while holding `START`, power on your console. This will launch GodMode9.
-1. Navigate to `[0:] SDCARD > cias`.
+1. Navigate to `[0:] SDCARD` > `cias`.
 1. Press `A` on your `.cia` to select it.
 1. Select `CIA image options...`
 1. Select `Mount image to drive`.

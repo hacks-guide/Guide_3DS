@@ -135,7 +135,7 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
     * Exit the GBA VC game.
     * Power off your console.
     * Press and hold `START`, and while holding `START`, power on your console. This will launch GodMode9.
-    * Navigate to `[0:] SDCARD > gm9 > out`.
+    * Navigate to `[0:] SDCARD` > `gm9` > `out`.
     * Press `Y` on the `<TitleID>.gbavc.sav` file you wish to restore to copy it.
     * Press `B` to return to the main menu.
     * Navigate to `[S:] SYSNAND VIRTUAL`.
@@ -156,7 +156,7 @@ For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt
 :::
 
 1. Press and hold `START`, and while holding `START`, power on your console. This will launch GodMode9.
-1. Navigate to `[0:] SDCARD > cias`.
+1. Navigate to `[0:] SDCARD` > `cias`.
 1. Press `A` on the `.cia` file to select it, then select `CIA image options...`
 1. Select the option to perform the desired function:
     * **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card.

@@ -72,7 +72,7 @@ The purpose of this section is to check whether built-in DS mode applications wi
 
 1. Power on your console.
 1. Launch System Settings on your console.
-1. Navigate to `Internet Settings > Nintendo DS Connection Settings`, then click OK.
+1. Navigate to `Internet Settings` > `Nintendo DS Connection Settings`, then click OK.
 1. You should boot into the Nintendo DS Connection Setup menu.
     * If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed.
 1. Power off your console.
@@ -147,10 +147,10 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 
 1. Power on your console.
 1. Launch System Settings on your console.
-1. Navigate to `Data Management > Nintendo 3DS > Software`.
+1. Navigate to `Data Management` > `Nintendo 3DS` > `Software`.
 1. In this list of software, delete any non-Nintendo content you installed while using CFW.
     * This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did *not* install from the eShop.
-1. Navigate to `Data Management > DSiWare`.
+1. Navigate to `Data Management` > `DSiWare`.
 1. In this list of software, delete any non-Nintendo content you installed while using CFW.
     * This includes software such as TWiLightMenu++, along with any games and titles that you did *not* install from the eShop.
     * Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future.
@@ -176,7 +176,7 @@ This section will ensure that all illegitimate tickets are removed, allowing eSh
 
 1. Power on your console.
 1. Launch System Settings on your console.
-1. Navigate to `Other Settings > Next Page (until the final page) > Format System Memory`.
+1. Navigate to `Other Settings` > `Next Page (until the final page)` > `Format System Memory`.
 1. Follow the prompts to format your 3DS.
 
 ### Section VII - Running Uninstall Script

@@ -41,7 +41,7 @@ If this does not work, your SD card needs to be formatted:
 Ensure that you have reset the title database.
 
 * Please power on your console with your SD card inserted.
-* Launch System Settings and navigate to `Data Management > Nintendo 3DS > Software > Reset`. ([image](/images/screenshots/database-reset.jpg))
+* Launch System Settings and navigate to `Data Management` > `Nintendo 3DS` > `Software` > `Reset`. ([image](/images/screenshots/database-reset.jpg))
     * This will not wipe any of your data.
 * If you get a reset prompt, after resetting, power off your console and start again from [Section I, Step 14](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 

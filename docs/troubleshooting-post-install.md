@@ -198,7 +198,7 @@ If you are missing the Homebrew Launcher application from your HOME Menu, you ca
 
 ::: details Turning off Parental Controls
 
-You can disable the Parental Controls feature by going to `System Settings > Parental Controls` and inserting the PIN, then pressing `Clear Settings`, then `Delete` to remove it.
+You can disable the Parental Controls feature by going to `System Settings` > `Parental Controls` and inserting the PIN, then pressing `Clear Settings`, then `Delete` to remove it.
 However, if you do not know the PIN and therefore cannot access the console's settings, you will need to disable it. In order to do this, you need to obtain your console's master key (mkey):
 
 1. Go to [the MKEY generator](https://mkey.eiphax.tech/) site.
