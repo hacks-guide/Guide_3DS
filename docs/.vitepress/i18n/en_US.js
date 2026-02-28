@@ -254,7 +254,7 @@ const themeConfig = {
 		],
 	},
 	footer: {
-		copyright: 'Copyright © 2025 Nintendo Homebrew',
+		copyright: 'Copyright © 2026 Nintendo Homebrew',
 		items: [
 			{ text: localeData.pages["contribute"], link: `/contribute` },
 			{ text: localeData.pages["credits"], link: `/credits` },
@@ -266,7 +266,7 @@ const themeConfig = {
 
 export default {
 	lang: "en",
-	label: "English",
+	label: "🇺🇸 English",
     title: localeData.title,
     description: localeData.description,
     themeConfig: themeConfig,
