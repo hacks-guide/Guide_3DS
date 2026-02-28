@@ -20,10 +20,9 @@ This likely indicates that you already have custom firmware. You should [check f
 
 Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
-
-1. Launch the browser, then launch the browser settings
-1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-1. Try the exploit again
+1. Launch the browser, then launch the browser settings.
+1. Scroll to the bottom and select `Reset Save Data` (it may also be called `Initialize Save Data` or `Clear All Save Data`).
+1. Try the exploit again.
 
 :::
 
@@ -39,9 +38,9 @@ There may be an issue with your `arm11code.bin` file. Download the latest releas
 
 You can also try resetting your browser save data:
 
-1. Launch the browser, then launch the browser settings
-1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-1. Try the exploit again
+1. Launch the browser, then launch the browser settings.
+1. Scroll to the bottom and select `Reset Save Data` (it may also be called `Initialize Save Data` or `Clear All Save Data`).
+1. Try the exploit again.
 
 :::
 
@@ -49,9 +48,9 @@ You can also try resetting your browser save data:
 
 Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
 
-1. Launch the browser, then launch the browser settings
-1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-1. Try the exploit again
+1. Launch the browser, then launch the browser settings.
+1. Scroll to the bottom and select `Reset Save Data` (it may also be called `Initialize Save Data` or `Clear All Save Data`).
+1. Try the exploit again.
 
 :::
 
@@ -65,19 +64,19 @@ The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the pag
 
 Follow these steps in order:
 
-1. Launch System Settings on your console
-1. Navigate to `Internet Settings` -> `Connection Settings`
-1. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-1. Set "Proxy Settings" to "No"
-1. Click OK, then click Save
-1. When prompted, click "Test" to perform the connection test
-    + The test should succeed
-1. Click "OK" to continue
-1. Press "Back" twice, then "Close" to go back to the HOME Menu
-1. Open the Internet Browser once
-1. If prompted about a system update, press OK
-    + This won't actually update the system
-1. Start again from [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
+1. Launch System Settings on your console.
+1. Navigate to `Internet Settings > Connection Settings`.
+1. Click on your network connection slot and navigate to `Change Settings > Next Page (right arrow) > Proxy Settings`.
+1. Set Proxy Settings to `No`.
+1. Click `OK`, then click `Save`.
+1. When prompted, click `Test` to perform the connection test.
+    * The test should succeed.
+1. Click `OK` to continue.
+1. Press `Back` twice, then `Close` to go back to the HOME Menu.
+1. Open the Internet Browser once.
+1. If prompted about a system update, press `OK`.
+    * This won't actually update the system.
+1. Start again from [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth).
 
 :::
 
@@ -98,7 +97,9 @@ If this is unsuccessful, try using another SD card.
 <!--@include: ./_include/troubleshooting-khc-common.md -->
 
 ## Issues with SafeB9SInstaller
+
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->

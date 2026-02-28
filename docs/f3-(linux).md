@@ -14,15 +14,15 @@ This page is for Linux users only. If you are not on Linux, check out the [H2tes
 
 ## Instructions
 
-1. Unzip the f3 `.zip` file
-1. `cd` into the f3 directory
-1. Run `make` to compile F3
-1. Insert your SD card into your computer
-1. Mount your SD card
-1. Run `./f3write <your sd card mount point>`
+1. Unzip the f3 `.zip` file.
+1. `cd` into the f3 directory.
+1. Run `make` to compile F3.
+1. Insert your SD card into your computer.
+1. Mount your SD card.
+1. Run `./f3write <your SD card mount point>`.
 1. Wait until the process is complete. See below for an example output.
 
-~~~ bash
+```shell
 $ ./f3write /media/michel/6135-3363/
 Free space: 29.71 GB
 Creating file 1.h2w ... OK!
@@ -30,27 +30,28 @@ Creating file 1.h2w ... OK!
 Creating file 30.h2w ... OK!
 Free space: 0.00 Byte
 Average Writing speed: 4.90 MB/s
-~~~
+```
 
-1. Run `./f3read <your sd card mount point>`
+1. Run `./f3read <your SD card mount point>`
 1. Wait until the process is complete. See below for an example output.
 
-~~~ bash
+```shell
 $ ./f3read /media/michel/6135-3363/
-									SECTORS      ok/corrupted/changed/overwritten
+    SECTORS ok/corrupted/changed/overwritten
+
 Validating file 1.h2w ... 2097152/        0/      0/      0
 ...
 Validating file 30.h2w ... 1491904/        0/      0/      0
 
-	Data OK: 29.71 GB (62309312 sectors)
+Data OK: 29.71 GB (62309312 sectors)
 Data LOST: 0.00 Byte (0 sectors)
-					Corrupted: 0.00 Byte (0 sectors)
-	Slightly changed: 0.00 Byte (0 sectors)
-				Overwritten: 0.00 Byte (0 sectors)
+    Corrupted: 0.00 Byte (0 sectors)
+Slightly changed: 0.00 Byte (0 sectors)
+    Overwritten: 0.00 Byte (0 sectors)
 Average Reading speed: 9.42 MB/s
-~~~
+```
 
-___
+---
 
 ::: tip
 

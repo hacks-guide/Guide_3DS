@@ -14,40 +14,40 @@ If your console has a menuhax-based CFW setup, you should [clear HOME Menu's ext
 
 ## Instructions
 
-1. Power off your console
-1. Hold the (Select) button
-1. Power on your console while still holding the (Select) button
-1. You should now see a configuration menu of some sort
+1. Power off your console.
+1. Hold the `SELECT` button.
+1. Power on your console while still holding the `SELECT` button.
+1. You should now see a configuration menu of some sort.
 
 ## What to do next
 
 ::: tip
 
-If your console boots to the normal HOME Menu, return to [Get Started](get-started)
+If your console boots to the normal HOME Menu, return to [Get Started](get-started).
 
 :::
 
 ::: tip
 
-If you see a Luma3DS version of 7.0.5 or lower, continue to [A9LH to B9S](a9lh-to-b9s)
+If you see a Luma3DS version of 7.0.5 or lower, continue to [A9LH to B9S](a9lh-to-b9s).
 
 :::
 
 ::: tip
 
-If you see a Luma3DS version of 7.1, continue to [Updating B9S](updating-b9s)
+If you see a Luma3DS version of 7.1, continue to [Updating B9S](updating-b9s).
 
 :::
 
 ::: tip
 
-If you see a Luma3DS version of 8.0 or greater, continue to [Restoring / Updating CFW](restoring-updating-cfw)
+If you see a Luma3DS version of 8.0 or greater, continue to [Restoring / Updating CFW](restoring-updating-cfw).
 
 :::
 
 ::: warning
 
-If you see GodMode9, Decrypt9WIP, Hourglass9, or Luma3DS chainloader, you held (Start) by accident and should try these instructions again with (Select)
+If you see GodMode9, Decrypt9WIP, Hourglass9, or Luma3DS chainloader, you held `START` by accident and should try these instructions again with `SELECT`.
 
 :::
 

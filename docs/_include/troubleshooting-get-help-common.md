@@ -1,4 +1,4 @@
-___
+---
 
 ::: details Something else
 
