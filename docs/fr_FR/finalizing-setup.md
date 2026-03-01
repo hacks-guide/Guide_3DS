@@ -160,7 +160,7 @@ Pretendo est un service qui remplace les services en ligne du Nintendo Network, 
 
 **Note : Pretendo ne prend pas en charge chaque service en ligne, mais des travaux sont en cours pour y parvenir.**
 
-A list of games that Pretendo supports can be found [here](https://wiki.pretendo.zip/game-support-status).
+Une liste de jeux supportés par Pretendo se trouve [ici](https://wiki.pretendo.zip/game-support-status).
 
 ::: info
 

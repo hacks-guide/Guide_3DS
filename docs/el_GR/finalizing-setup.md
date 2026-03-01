@@ -100,23 +100,23 @@
 
 1. Απενεργοποιήστε την κονσόλα σας
 2. Κρατήστε πατημένο το (X) και ταυτόχρονα, ενεργοποιήστε την κονσόλα σας. Με αυτόν τον τρόπο, θα εκκινηθεί ο βοηθός ολοκλήρωσης εγκατάστασης
-   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled, or `x_finalize_helper.firm` may be in the wrong location
+   - Εάν γίνει εκκίνηση στο μενού «HOME», το όνομα του φακέλου `payloads` ενδέχεται να μην είναι γραμμένο σωστά ή το `x_finalize_helper.firm` ενδέχεται να μην βρίσκεται στη σωστή τοποθεσία
    - Εάν αντιμετωπίσετε κάποιο σφάλμα, συμβουλευτείτε τη σελίδα [Επίλυση προβλημάτων](troubleshooting-finalizing-setup)
 3. Μετά από μερικά δευτερόλεπτα, η κονσόλα σας θα πρέπει να εκκινηθεί αυτόματα στο GodMode9
-   - From this point forward, you can access GodMode9 by holding (Start) while powering on your console
-   - Holding (X) on boot will no longer do anything
-4. If necessary, configure GodMode9:
-   - If you are prompted to select a language, use the D-Pad and press (A) to select English
+   - Από εδώ και στο εξής, μπορείτε να έχετε πρόσβαση στο GodMode9 κρατώντας πατημένο το (Start) κατά την ενεργοποίηση της κονσόλας σας
+   - Το παρατεταμένο πάτημα του (X) κατά την εκκίνηση δεν θα κάνει πλέον τίποτα
+4. Εάν είναι απαραίτητο, ρυθμίστε το GodMode9:
+   - Εάν σας ζητηθεί να επιλέξετε μια γλώσσα, χρησιμοποιήστε το D-Pad και πατήστε το (A) για να επιλέξετε τα αγγλικά (English)
      - Αυτή η επιλογή γλώσσας επηρεάζει μόνο τις επιλογές του μενού του GodMode9
-     - You can set it to your language of choice after completing this guide
+     - Μπορείτε να ορίσετε τη γλώσσα της επιλογής σας μετά την ολοκλήρωση αυτού του οδηγού
    - Εάν σας ζητηθεί να δημιουργήσετε ένα αντίγραφο ασφαλείας των απαραίτητων αρχείων, πατήστε το (A) για να το κάνετε και έπειτα, πατήστε το (A) για να συνεχίσετε
    - Εάν σας ζητηθεί να διορθώσετε την ημερομηνία και την ώρα RTC, πατήστε το (A) για να το κάνετε και έπειτα, ορίστε την ημερομηνία και την ώρα. Τέλος, πατήστε το (A) για να συνεχίσετε
-5. Once you see [root] and a list of drives, press (Home) to bring up the action menu
+5. Μόλις δείτε το [root] και μια λίστα μονάδων δίσκου, πατήστε το (Home) για να εμφανιστεί το μενού ενεργειών
 6. Επιλέξτε «Scripts...» (_όχι_ «Lua scripts»)
 7. Επιλέξτε «finalize»
 8. Ακολουθήστε τις οδηγίες του script, απαντώντας σε όποιες ερωτήσεις σάς γίνουν
-   - If you see "Information #05: No title database", press (A) and enter the key combination on the bottom screen to proceed
-   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page, then open GodMode9 by holding (Start) on boot to re-run the script
+   - Εάν δείτε το μήνυμα «Information #05: No title database», πατήστε το (A) και εισαγάγετε τον συνδυασμό πλήκτρων που θα εμφανιστεί στην κάτω οθόνη για να συνεχίσετε
+   - Εάν αντιμετωπίσετε κάποιο σφάλμα, ακολουθήστε τις οδηγίες στο μήνυμα σφάλματος ή συμβουλευτείτε τη σελίδα [επίλυσης προβλημάτων](troubleshooting-finalizing-setup) και έπειτα, ανοίξτε το GodMode9 κρατώντας πατημένο το (Start) κατά την εκκίνηση, προκειμένου να εκτελέσετε εκ νέου το script
 9. Μόλις το script δηλώσει «Setup complete!», πατήστε το (A) για να απενεργοποιήσετε την κονσόλα σας
    - Εάν ΔΕΝ βλέπετε το μήνυμα «Setup complete!», το script δεν ήταν επιτυχές και θα χρειαστεί να επαναλάβετε αυτήν την ενότητα από το Βήμα 3
 10. Εισαγάγετε την κάρτα SD στον υπολογιστή σας

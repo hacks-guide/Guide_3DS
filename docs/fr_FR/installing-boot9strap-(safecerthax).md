@@ -6,7 +6,7 @@
 
 ## Notes de compatibilité
 
-safecerthax is compatible with all Old 3DS and Old 2DS consoles in all regions on system versions 1.0.0 through 11.14.0.
+safecerthax est compatible avec toutes les consoles Old 3DS et Old 2DS de toutes les régions des versions système 1.0.0 à 11.14.0.
 
 ::: info
 
@@ -66,7 +66,7 @@ Dans cette section, vous allez copier les fichiers requis pour déclencher l'exp
 
 ::: warning
 
-Cette section est OBLIGATOIRE ! Failure to setup the proxy may cause you to update your console to a newer firmware by mistake.
+Cette section est OBLIGATOIRE ! L'échec de configuration du proxy fera que votre console se mettra à jour vers le firmware le plus récent par erreur.
 
 :::
 
@@ -78,31 +78,31 @@ Dans cette section, vous allez modifier vos paramètres de connexion Internet po
 
 ### Section IV - safecerthax
 
-In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) where safecerthax will be triggered, which will launch you into the boot9strap (custom firmware) installer.
+Dans cette section, vous entrerez en mode sans échec (une fonctionnalité disponible sur toutes les consoles de la famille 3DS) où le safecerthax sera déclenché, qui lancera l'installateur de boot9strap (custom firmware).
 
-1. With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
-   - Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
-2. Press "OK" to accept the update
-   - There is no update. This is part of the exploit
-3. Press "I accept" to accept the terms and conditions
-4. The update will eventually fail, with the error code `003-1099`. Ne vous inquiétez pas, c'est normal.
-5. Press "OK" to close the error message
+1. Lorsque votre console est encore éteinte, maintenez les boutons suivants : (L) + (R) + (Haut sur la croix directionnelle) + (A), et tout en maintenant ces boutons enfoncés, allumez votre console
+   - - Maintenez les boutons enfoncés jusqu'à ce que la console démarre en mode sans échec (menu "Mise à jour")
+2. Appuyez sur "OK" pour accepter la mise à jour
+   - Il n'y à pas de mise à jour. Ceci fait partie de l'exploit
+3. Appuyez sur "J'accepte" pour accepter les conditions
+4. La mise à jour va échouer, avec un code d'erreur "003-1099". Ne vous inquiétez pas, c'est normal.
+5. Appuyez sur "OK" pour fermer le message d'erreur
 6. Si l'exploit a réussi, vous aurez démarré sur SafeB9SInstaller
-   - If the console freezes or crashes, force power off the console, then retry this section
+   - Si la console se bloque ou plante, forcez l'arrêt de la console, puis recommencez cette section
 
 ### Section V - Installation de boot9strap
 
 Dans cette section, vous installerez un custom firmware sur votre console.
 
 1. Lorsque vous y êtes invité, entrez la combinaison de touches indiquée sur l'écran supérieur pour installer boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-safecerthax)
+   - Dans le cas où un message en rouge apparaîtrait lors d'une étape sur l'écran du bas et que vous n'êtes pas sollicité pour saisir une combinaison de boutons, [suivez ce guide de dépannage](troubleshooting-safecerthax)
 2. Une fois l'opération terminée, appuyez sur (A) pour redémarrer votre console
 
 <!--@include: ./_include/configure-luma3ds.md -->
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 
-### Section VI - Restoring default proxy
+### Section V - Restauration du proxy par défaut
 
 <!--@include: ./_include/rmproxy.md -->
 
