@@ -12,19 +12,19 @@ These instructions are only valid for the "Installing boot9strap (super-skaterha
 
 ::: details "An error has occurred. Please save your data in any software currently in use, then restart the system."
 
-If no colors flash after pressing "GO GO!":
+If no colors flash after pressing `GO GO!`:
 
-+ Ensure that you have set your system date and [region](/images/screenshots/skaterhax/skater-lang.png) correctly
-+ Ensure that no other browser tabs are open, then restart the browser and try the exploit again
+1. Ensure that you have set your system date and [region](/images/screenshots/skaterhax/skater-lang.png) correctly.
+1. Ensure that no other browser tabs are open, then restart the browser and try the exploit again.
 
 If the screen flashes colors then freezes/crashes:
 
-+ Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region
-+ Try resetting your browser data:
-    1. Launch the browser, then launch the browser settings
-    1. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-    1. Try the exploit again
-+ Try changing the system language to something other than the current language
+1. Ensure that you have the correct copy of `arm11code.bin` and `browserhax_hblauncher_ropbin_payload.bin` for your console's version and region.
+1. Try resetting your browser data:
+    * Launch the browser, then launch the browser settings.
+    * Scroll to the bottom and select `Reset Save Data` (it may also be called `Initialize Save Data` or `Clear All Save Data`).
+    * Try the exploit again.
+1. Try changing the system language to something other than the current language.
 
 :::
 
@@ -55,7 +55,9 @@ Your Internet connection is blocking access to the skaterhax webpage. If possibl
 <!--@include: ./_include/troubleshooting-khc-common.md -->
 
 ## Issues with SafeB9SInstaller
+
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
+
 <!--@include: ./_include/troubleshooting-sb9si-common.md -->
 
 <!--@include: ./_include/troubleshooting-get-help-common.md -->

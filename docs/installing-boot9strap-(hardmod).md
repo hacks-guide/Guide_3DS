@@ -2,9 +2,9 @@
 
 ::: details Technical Details (optional)
 
-An excellent guide to getting a hardmod can be found [here](https://gbatemp.net/threads/414498/).
+An excellent guide to getting a hardmod can be found on [GBAtemp](https://gbatemp.net/threads/414498/).
 
-This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed [here](https://www.3dbrew.org/wiki/3DS_System_Flaws).
+This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed on [3DSbrew](https://www.3dbrew.org/wiki/3DS_System_Flaws).
 
 Using a hardmod, we can dump the NAND image, install custom firmware to the NAND image, then re-install the hacked NAND image to the console.
 
@@ -65,33 +65,34 @@ This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on *all* versions that 
 
 In this section, you will download the necessary files for the hardmod and dump the NAND image in preparation to install custom firmware.
 
-1. Power off your console
-1. Insert your SD card into your computer
-1. Copy everything from the Luma3DS `.zip` to the root of your SD card
-1. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer
-1. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
-1. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
-1. Reinsert your SD card into your console
-1. Use your hardmod to create a NAND backup
-1. Move your NAND backup to the hardmod-b9s-installer folder on your computer and rename it to `NAND.bin`
+1. Power off your console.
+1. Insert your SD card into your computer.
+1. Copy everything from the Luma3DS `.zip` to the root of your SD card.
+1. Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer `.zip` to your computer.
+1. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer.
+1. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`.
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer.
+1. Reinsert your SD card into your console.
+1. Use your hardmod to create a NAND backup.
+1. Move your NAND backup to the hardmod-b9s-installer folder on your computer and rename it to `NAND.bin`.
 
 ### Section II - Installing boot9strap
 
 In this section, you will install custom firmware to the dumped NAND image, and then install this NAND image back onto the console to install custom firmware on it.
 
-1. Run hardmod-b9s-installer
-    + Windows Users: Run `install-b9s.exe`
-    + Mac and Linux Users: Run `install-b9s.py`
-1. Flash your outputted `NAND-patched.bin` to your console with your hardmod
-1. Power off your console
-1. Disconnect your hardmod
-1. Press and hold (Select), and while holding (Select), power on your console
+1. Run hardmod-b9s-installer.
+    * Windows Users: Run `install-b9s.exe`.
+    * Mac and Linux Users: Run `install-b9s.py`.
+1. Flash your outputted `NAND-patched.bin` to your console with your hardmod.
+1. Power off your console.
+1. Disconnect your hardmod.
+1. Press and hold `SELECT`, and while holding `SELECT`, power on your console.
+
 <!--@include: ./_include/configure-luma3ds.md -->
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
 
-___
+---
 
 ::: tip
 

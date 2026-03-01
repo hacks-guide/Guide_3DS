@@ -59,6 +59,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/hacks-guide/Guide_3DS' }
     ]
   },
+  cleanUrls: true,
   vite: {
     resolve: {
       alias: [

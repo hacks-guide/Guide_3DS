@@ -47,7 +47,7 @@ The usage of this exploit, regardless of the flashing method, requires access to
 
 ::: info
 
-To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the console is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
+To test if a magnet will work, hold it on or around the `ABXY` buttons while the console is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
 
 :::
 
@@ -59,11 +59,7 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 
 :::
 
-___
-
 ## Methods
-
-___
 
 ### Flashing ntrboot (3DS Single System)
 
@@ -75,7 +71,7 @@ Continue to [Flashing ntrboot (3DS Single System)](flashing-ntrboot-(3ds-single-
 
 :::
 
-___
+---
 
 ### Flashing ntrboot (3DS Multi System)
 
@@ -87,7 +83,7 @@ Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-(3ds-multi-sy
 
 :::
 
-___
+---
 
 ### Flashing ntrboot (NDS)
 
@@ -99,7 +95,7 @@ Continue to [Flashing ntrboot (NDS)](flashing-ntrboot-(nds))
 
 :::
 
-___
+---
 
 ### Flashing ntrboot (DSi)
 

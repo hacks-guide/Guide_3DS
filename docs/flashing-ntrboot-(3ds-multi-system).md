@@ -25,33 +25,33 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 
 ### Section I - Prep Work
 
-1. Power off **the source 3DS**
-1. Insert **the source 3DS**'s SD card into your computer
-1. Create a folder named `ntrboot` on the root of your SD card
-1. Copy `boot9strap_ntr.firm` and `boot9strap_ntr.firm.sha` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your SD card
-1. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on **the source 3DS**'s SD card
-1. Reinsert **the source 3DS**'s SD card back into **the source 3DS**
-1. Insert your ntrboot compatible DS / DSi flashcart into **the source 3DS**
+1. Power off **the source 3DS**.
+1. Insert **the source 3DS**'s SD card into your computer.
+1. Create a folder named `ntrboot` on the root of your SD card.
+1. Copy `boot9strap_ntr.firm` and `boot9strap_ntr.firm.sha` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your SD card.
+1. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on **the source 3DS**'s SD card.
+1. Reinsert **the source 3DS**'s SD card back into **the source 3DS**.
+1. Insert your ntrboot compatible DS / DSi flashcart into **the source 3DS**.
 
 ### Section II - Flashing ntrboot
 
-1. Launch the Luma3DS chainloader by holding (Start) during boot on **the source 3DS**
-1. Select "ntrboot_flasher"
-1. Read the red screen warning
-1. Press (A) to continue
-1. Select your flashcart
-    + If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
-1. Select "Dump Flash"
-1. Wait until the process is completed
-1. Press (A) to continue
-1. Press (A) to return to the main menu
-1. Select "Inject Ntrboot"
-1. Press (A) for retail unit ntrboot
-1. Wait until the process is completed
-1. Press (A) to return to the main menu
-1. Press (B) to power off **the source 3DS**
+1. Launch the Luma3DS chainloader by holding `START` during boot on **the source 3DS**.
+1. Select `ntrboot_flasher`.
+1. Read the red screen warning.
+1. Press `A` to continue.
+1. Select your flashcart.
+    * If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option.
+1. Select `Dump Flash`.
+1. Wait until the process is completed.
+1. Press `A` to continue.
+1. Press `A` to return to the main menu.
+1. Select `Inject Ntrboot`.
+1. Press `A` for retail unit ntrboot.
+1. Wait until the process is completed.
+1. Press `A` to return to the main menu.
+1. Press `B` to power off **the source 3DS**.
 
-___
+---
 
 ::: tip
 
