@@ -56,11 +56,11 @@ In this section, you will copy the files necessary to follow the rest of the ins
 1. Power off your console
 1. Insert your SD card into your computer
 1. Copy `finalize.romfs` to the root of your SD card
-1. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
+1. Open the `luma` folder on your SD card and create a folder named `payloads` inside (if it does not already exist)
 1. Copy `x_finalize_helper.firm` to the `payloads` folder
 1. Reinsert your SD card into your console
 
-The screenshot below indicates the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.
+The screenshot below indicates the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card depending on your previous setup or the method that you followed.
 
 ::: info
 
@@ -86,10 +86,11 @@ In this section, you will sync your 3DS internal clock with the actual time and 
 
 1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
     + If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
-1. Select "Miscellaneous options"
-1. Select "Dump DSP firmware"
+1. Select `Miscellaneous options`
+1. Select `Dump DSP firmware`
 1. Press (B) to continue
-1. Select "Nullify user time offset"
+1. Select `Nullify user time offset`
+<!-- Did you forget to include the "Update date and time via RTC" option? -->
 1. Press (B) to continue
 1. Press (B) to return to the Rosalina main menu
 1. Press (B) to exit the Rosalina menu
@@ -99,26 +100,26 @@ In this section, you will sync your 3DS internal clock with the actual time and 
 In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. Power off your console
-1. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
+1. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper.
     + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled, or `x_finalize_helper.firm` may be in the wrong location
     + If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
 1. After a few seconds, your console should automatically boot into GodMode9
     + From this point forward, you can access GodMode9 by holding (Start) while powering on your console
     + Holding (X) on boot will no longer do anything
 1. If necessary, configure GodMode9:
-    + If you are prompted to select a language, use the D-Pad and press (A) to select English
+    + If you are prompted to select a language, use the D-Pad and press (A) to select `English`
         + This language choice only affects GodMode9's menu options
         + You can set it to your language of choice after completing this guide
     + If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue
     + If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
 1. Once you see [root] and a list of drives, press (Home) to bring up the action menu
-1. Select "Scripts..." (*not* Lua scripts)
-1. Select "finalize"
+1. Select `Scripts...` (*not* Lua scripts)
+1. Select `finalize`
 1. Follow the prompts in the script, answering any questions that you are asked
-    + If you see "Information #05: No title database", press (A) and enter the key combination on the bottom screen to proceed
+    + If you see `Information #05: No title database`, press (A) and enter the key combination on the bottom screen to proceed
     + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page, then open GodMode9 by holding (Start) on boot to re-run the script
-1. Once the script says "Setup complete!", press (A) to power off the device
-    + If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
+1. Once the script says `Setup complete!`, press (A) to power off the device
+    + If you do NOT see the `Setup complete!` message, the script was not successful and you will need to redo this section from Step 3
 1. Insert your SD card into your computer
 1. Copy the `/gm9/backups/` folder to a safe location on your computer
     + This folder contains critical file backups and should be backed up to multiple locations (i.e. cloud storage) if possible
@@ -156,9 +157,9 @@ Here are some key combos that you should know:
 
 ### Pretendo
 
-Pretendo is a replacement service for the Nintendo Network, which resurrects online services from the now shut down Nintendo Network. It also revives the Miiverse service, via juxtaposition. The official guide can be found [here](https://pretendo.network/docs/install/3ds).
+Pretendo is a replacement service for the Nintendo Network, which resurrects online services from the now shut down Nintendo Network. It also revives the Miiverse service via their replacement service, Juxtaposition. The official guide can be found [here](https://pretendo.network/docs/install/3ds).
 
-**Note: Pretendo does not support every online service, however work is being done to achieve this.**
+**NOTE: Pretendo does not support every online service, but work is being done to achieve this.**
 
 A list of games that Pretendo supports can be found [here](https://wiki.pretendo.zip/game-support-status).
 
