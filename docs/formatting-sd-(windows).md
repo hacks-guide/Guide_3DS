@@ -10,41 +10,9 @@ This page is for Windows users only. If you are not on Windows, check out the [F
 
 ## What You Need
 
-* **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-* **For SD cards 64GB or larger only:** The latest version of [rufus](https://github.com/pbatard/rufus/releases)
+* **For all SD card sizes**: The latest version of [rufus](https://github.com/pbatard/rufus/releases)
 
 ## Instructions
-
-### Section I - SD Card Formatter
-
-1. Insert your SD card into your computer
-1. If the SD card has any files and folders on it, copy everything to a folder on your computer
-1. Run `SD Card Formatter Setup` (the `.exe` file) in the downloaded `.zip` file with Administrator privileges, then install the program
-1. Run `SD Card Formatter` from the Start Menu
-1. Select your SD card's drive letter for "Select card"
-
-    ::: danger
-
-    Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!
-
-    :::
-
-1. Enter anything for "Volume label"
-1. Ensure that "Quick Format" is selected
-1. Click "Format"
-1. Click "OK"
-1. Wait for the format to finish
-1. Click "OK"
-1. Close SD Card Formatter
-1. If the SD card is 32GB or smaller and had any files and folders on it before the format, copy everything back from your computer
-
-::: info
-
-You're done formatting your SD card if it's **32GB or smaller.**
-
-:::
-
-### Section II - Rufus (ONLY for 64GB or larger)
 
 1. Run `rufus-<version>.exe` with administrator privileges
 1. Select your SD card under the "Device" section
