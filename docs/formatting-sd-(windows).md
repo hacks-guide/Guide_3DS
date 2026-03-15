@@ -28,8 +28,13 @@ This page is for Windows users only. If you are not on Windows, check out the [F
 1. Set "Target system" to "BIOS or UEFI"
 1. Click "Show advanced drive properties".
 1. Enter anything for "Volume label"
-1. Set "File system" to "Large FAT32"
-1. Set "Cluster size" to "64 kilobytes"
+1. For "File system" select:
+    + If the SD card is 2GB or lower: FAT
+    + If the SD card is 4GB - 32GB: FAT32
+    + If the SD card is larger than 32GB: Large FAT32
+1. For "Cluster size" select:
+    + If the SD card is 128GB or lower: 32 kilobytes
+    + If the SD card is larger than 128GB: 64 kilobytes
 1. Ensure that "Quick Format" is selected
 1. Disable "Create extended label and icon files"
 1. Set "Check device for bad blocks", where "1 pass" is sufficient
