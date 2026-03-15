@@ -33,8 +33,8 @@ This page is for Windows users only. If you are not on Windows, check out the [F
     + If the SD card is 4GB - 32GB: FAT32
     + If the SD card is larger than 32GB: Large FAT32
 1. For "Cluster size" select:
-    + If the SD card is 128GB or lower: 32 kilobytes
-    + If the SD card is larger than 128GB: 64 kilobytes
+    + If the SD card is smaller than 128GB: 32 kilobytes
+    + If the SD card is 128GB or larger: 64 kilobytes
 1. Ensure that "Quick Format" is selected
 1. Disable "Create extended label and icon files"
 1. Set "Check device for bad blocks", where "1 pass" is sufficient
