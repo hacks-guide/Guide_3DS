@@ -31,8 +31,8 @@ This page is for Windows users only. If you are not on Windows, check out the [F
 1. Set "File system" to "Large FAT32"
 1. Set "Cluster size" to "64 kilobytes"
 1. Ensure that "Quick Format" is selected
-1. Optionally set "Create extended label and icon files"
-1. Optionally set "Check device for bad blocks", where "1 pass" should be sufficient
+1. Disable "Create extended label and icon files"
+1. Set "Check device for bad blocks", where "1 pass" is sufficient
 1. Click "START"
 1. Wait for the format to finish
 1. Close the window
