@@ -100,7 +100,7 @@ In this section, you will sync your 3DS internal clock with the actual time and 
 In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. Power off your console
-1. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper.
+1. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
     + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled, or `x_finalize_helper.firm` may be in the wrong location
     + If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
 1. After a few seconds, your console should automatically boot into GodMode9
