@@ -10,7 +10,7 @@ head: [
 ]
 ---
 
-# Getting Started
+# Get Started
 
 Before starting this guide, we will see if custom firmware is already installed and check the current system version of your console.
 
