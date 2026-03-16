@@ -29,7 +29,7 @@ Thoroughly read all of the introductory pages (including this one!) before proce
 * Running homebrew software and games made for or ported to the Nintendo 3DS
 * Bypassing the region lock, allowing you to play games from other regions
 * HOME Menu customization, using community-created [themes and badges](https://themeplaza.art)
-* Modification of games (called "ROM hacks") through [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher))
+* Modification of games (e.g. ROM hacks, translations, QoL improvements) through [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher))
 * Save data editing, backup, and restore
 * Emulation of older consoles, as well as native playback of DS and GBA games
 * Installing your physical cartridges for digital use
