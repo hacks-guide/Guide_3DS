@@ -24,7 +24,7 @@ Lisez attentivement toutes les pages d'introduction (y compris celle-ci !) avant
 
 Un **custom firmware** ("CFW") est une modification complète du logiciel système de votre 3DS, comparable à "l'accès administrateur" sur un ordinateur. Il vous permet de faire tout ce que la 3DS est physiquement capable de faire, plutôt que d'être limité par ce que Nintendo vous permet de faire.
 
-Les utilisations populaires pour un custom firmware sont :
+Les usages répandus pour un custom firmware sont :
 
 - Exécution de logiciels homebrew et de jeux conçus pour ou portés sur la Nintendo 3DS
 - Outrepasser le verrouillage de la région, vous permettant de jouer à des jeux d'autres régions

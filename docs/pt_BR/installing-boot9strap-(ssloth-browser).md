@@ -83,6 +83,7 @@ Nesta seção, você vai visitar a página de exploit do navegador, que usará o
 
 4. Se o exploit for bem-sucedido, você terá entrado no SafeB9SInstaller
    - Se você receber um erro, [siga este guia de troubleshooting](troubleshooting-ssloth-browser)
+   - Se o troubleshooting falhar e seu console tiver **apenas** 2 botões de gatilho funcionais, siga **Apenas a seção IV** de [safecerthax](installing-boot9strap-\(safecerthax\).html#section-iv-safecerthax)
 
 ### Seção IV - Instalando boot9strap
 

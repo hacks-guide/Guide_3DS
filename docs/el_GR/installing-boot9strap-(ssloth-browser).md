@@ -83,6 +83,7 @@
 
 4. Εάν το exploit ήταν επιτυχές, θα έχει γίνει εκκίνηση στο SafeB9SInstaller
    - Εάν λάβετε κάποιο σφάλμα, [ακολουθήστε αυτόν τον οδηγό επίλυσης προβλημάτων](troubleshooting-ssloth-browser)
+   - Εάν η αντιμετώπιση προβλημάτων αποτύχει και η κονσόλα σας έχει **μόνο** 2 λειτουργικά κουμπιά ώμου, ακολουθήστε **μόνο την Ενότητα IV** του [safecerthax](installing-boot9strap-\(safecerthax\).html#section-iv-safecerthax)
 
 ### Ενότητα IV - Εγκατάσταση του boot9strap
 

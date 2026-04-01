@@ -83,6 +83,7 @@ Ebben a fejezetben meg fogod látogatni a browser exploit weboldalt, ami az univ
 
 4. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
    - Ha hibát kapsz, [nézd át a hibaelhárítási útmutatót](troubleshooting-ssloth-browser)
+   - Ha a problémaelhárítás sikertelen és a konzolodnak **csak** 2 működő váll gombja van, kövesd **csak a IV. részt** a [safecerthax](installing-boot9strap-\(safecerthax\).html#section-iv-safecerthax)-ból
 
 ### IV. rész - Boot9strap telepítése
 

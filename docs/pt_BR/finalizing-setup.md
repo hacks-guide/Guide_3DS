@@ -100,23 +100,23 @@ Nesta seção, você usará uma série de scripts para automatizar a instalaçã
 
 1. Desligue seu console
 2. Aperte e segure (X), e enquanto segura (X), ligue o console. Isto irá iniciar o Finalizing Setup Helper
-   - If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled, or `x_finalize_helper.firm` may be in the wrong location
+   - Se você inicializar no Menu HOME, sua pasta `payloads` pode estar com uma escrita incorreta, ou `x_finalize_helper.firm` pode estar no local errado
    - Se você encontrar um erro, consulte a página de [troubleshooting](troubleshooting-finalizing-setup)
-3. After a few seconds, your console should automatically boot into GodMode9
-   - From this point forward, you can access GodMode9 by holding (Start) while powering on your console
-   - Holding (X) on boot will no longer do anything
-4. If necessary, configure GodMode9:
-   - If you are prompted to select a language, use the D-Pad and press (A) to select English
-     - This language choice only affects GodMode9's menu options
-     - You can set it to your language of choice after completing this guide
-   - If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue
+3. Depois de alguns segundos, o seu console deve iniciar automaticamente no GodMode9
+   - A partir deste ponto, você pode acessar o GodMode9 segurando (Start) enquanto liga o console
+   - Segurar (X) na inicialização não fará mais nada
+4. Se necessário, configure o GodMode9:
+   - Se você for solicitado a selecionar um idioma, use o D-Pad e aperte (A) para selecionar English
+     - Esta escolha de idioma afeta apenas as opções de menu do GodMode9
+     - Você pode configurá-lo para o seu idioma preferido depois de completar este guia
+   - Se você for solicitado para criar backups de arquivos essenciais, aperte (A) para fazê-lo, então aperte (A) novamente para continuar
    - Se você for solicitado para consertar o RTC date&time, pressione (A) para consertar, então insira a data e a hora, depois pressione (A) para continuar
-5. Once you see [root] and a list of drives, press (Home) to bring up the action menu
-6. Selecione "Scripts..." (_not_ Lua scripts)
+5. Quando você ver [root] e uma lista de unidades, aperte (Home) para abrir o menu de ação
+6. Selecione "Scripts..." (_não_ Lua scripts)
 7. Selecione "finalize"
 8. Siga as instruções no script, respondendo a quaisquer perguntas que lhe sejam feitas
-   - If you see "Information #05: No title database", press (A) and enter the key combination on the bottom screen to proceed
-   - If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page, then open GodMode9 by holding (Start) on boot to re-run the script
+   - Se você ver "Information #05: No title database", pressione (A) para inserir a combinação de botões e aperte os botões na tela inferior para prosseguir
+   - Se encontrar um erro, siga as instruções na mensagem de erro ou consulte a página de [troubleshooting](troubleshooting-finalizing-setup), então abra o GodMode9 segurando (Start) durante a inicialização para executar novamente o script
 9. Uma vez que o script disser "Setup complete!", aperte (A) para desligar o dispositivo
    - Se você NÃO ver a mensagem "Setup complete!", o script não foi bem-sucedido e você terá que refazer esta seção a partir do Passo 3
 10. Insira o cartão SD no seu computador

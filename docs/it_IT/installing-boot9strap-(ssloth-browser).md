@@ -83,6 +83,7 @@ In questa sezione visiterai la pagina web dell'exploit del browser, che userà u
 
 4. Se l'exploit è andato a buon fine, si avvierà SafeB9SInstaller
    - Se ottieni un errore, [segui questa guida per risolvere il problema](troubleshooting-ssloth-browser)
+   - Se la risoluzione dei problemi fallisce e la console ha **solo** 2 pulsanti dorsali funzionanti, segui **solo la Sezione IV** di [safecerthax](installing-boot9strap-\(safecerthax\).html#section-iv-safecerthax)
 
 ### Sezione IV - Installazione di boot9strap
 

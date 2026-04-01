@@ -83,6 +83,7 @@ Dans cette section, vous allez visiter la page Web d'exploit du Navigateur Inter
 
 4. Si l'exploit a réussi, vous aurez démarré sur SafeB9SInstaller
    - Si vous rencontrez une erreur, [suivez ce guide de dépannage](troubleshooting-ssloth-browser)
+   - If troubleshooting fails and your console has **only** 2 working shoulder buttons, follow **only Section IV** of [safecerthax](installing-boot9strap-\(safecerthax\).html#section-iv-safecerthax)
 
 ### Section IV - Installer boot9strap
 
