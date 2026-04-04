@@ -31,7 +31,7 @@ If you are using an Android device as an SD card adapter for your computer, you 
 
 ::: info
 
-On this page, you will use the MSET9 script, which is used to trigger MSET9. While the script is in progress, user data will temporarily disappear but will return upon the completion of this page. If you get an error when running the script, the solution to that error can most likely be found on the [troubleshooting](troubleshooting-mset9) page.
+On this page, you will use the MSET9 script, which is used to trigger MSET9. While the script is in progress, user data will temporarily disappear, but it will return upon the completion of this page. If you get an error when running the script, the solution to that error can probably be found on the [troubleshooting](troubleshooting-mset9) page.
 
 :::
 
@@ -40,7 +40,7 @@ On this page, you will use the MSET9 script, which is used to trigger MSET9. Whi
 In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with almost no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. Your existing user data will disappear, but will come back when you are finished with this page.
 
 1. Insert your SD card into your computer
-1. Copy everything from the MSET9 `.zip` to the root of your SD card. If any of the files exist, overwrite them with the new files.
+1. Copy everything from the MSET9 `.zip` to the root of your SD card. If any of the files already exist, overwrite them with the new files.
 
     ::: info
 
@@ -68,17 +68,17 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 1. Type `1`, then press Enter to begin the process of creating the MSET9 ID1
 1. After reviewing the disclaimer, type `1` again and press Enter to accept it
     + If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
-1. If you see the message "Created hacked ID1.", press Enter to close the MSET9 script
-    + Your console will appear to lose most data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
+1. If you see the message `Created hacked ID1.`, press Enter to close the MSET9 script
+    + Your console will appear to lose most data (with no user-installed apps on HOME Menu). **This is expected.** Your data will come back at a later step.
 1. Reinsert your SD card into your console
 1. Power on your console
 1. Open Mii Maker
 1. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the HOME Menu
     + You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
-    + If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Exit Mii Maker and return to the HOME Menu
-1. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
-    + This will not wipe any of your data
-1. Power off your console by pressing the power button then tapping Power Off on the lower screen
+    + If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Exit Mii Maker and return to the HOME Menu.
+1. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> `Reset` ([image](/images/screenshots/database-reset.jpg))
+    + This will **not** wipe any of your data
+1. Power off your console by pressing the power button and then tapping Power Off on the lower screen
 1. Insert your SD card into your computer
 <!--@include: ./_include/mset9-chorus.md -->
 1. Type the number corresponding to your console model and version, then press Enter
@@ -118,7 +118,7 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 <!--@include: ./_include/mset9-chorus.md -->
 1. Type the number corresponding to your console model and version, then press Enter
 1. In the MSET9 window, type `3`, then press Enter to inject MSET9
-    + You should see "MSET9 successfully injected!"
+    + You should see `MSET9 successfully injected!`
 1. Press Enter to close the MSET9 script
 1. Reinsert your SD card into your console **without pressing any buttons or touching the screen**
 1. If the exploit was successful, you will have booted into SafeB9SInstaller 
@@ -150,12 +150,12 @@ Do NOT skip this section! If you skip it, applications may crash unexpectedly an
 <!--@include: ./_include/mset9-chorus.md -->
 1. Type the number corresponding to your console model and version, then press Enter
     + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), skip to Step 6
+    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you can skip to Step 6
 1. Type `4`, then press Enter to remove the trigger file
-    + You should see "Removed trigger file."
+    + You should see `Removed trigger file.`
 1. Type `5`, then press Enter to remove MSET9
-    + You should see "Successfully removed MSET9!"
-    + If you see "FileNotFoundError: [Errno 2] No such file or directory:" followed by a long file path containing "Nintendo 3DS", [follow the corresponding section of this troubleshooting guide](troubleshooting-mset9#mset9-application-script)
+    + You should see `Successfully removed MSET9!`
+    + If you see `FileNotFoundError: [Errno 2] No such file or directory:` followed by a long file path containing `Nintendo 3DS`, [follow the corresponding section of this troubleshooting guide](troubleshooting-mset9#mset9-application-script)
 1. Press Enter to close the MSET9 script
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
