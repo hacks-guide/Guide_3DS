@@ -44,9 +44,22 @@ In most cases, you can follow this guide as long as you are able to download fil
 
 :::
 
-The location of the SD card slot and the type of SD card that is accepted depends on the model of your 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
+The location of the SD card slot and the type of SD card that is accepted depends on the model of your 3DS. More information can be found on [Nintendo's official support page](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card). Note that on New 3DS and New 3DS XL consoles, you will need a screwdriver (JIS 00) to access the microSD card, which is located under the backplate.
 
-The 3DS can read SD cards of any capacity (even those larger than 32GB), but the card must be formatted as FAT32 (**not** exFAT or NTFS). You can use one of the following tools to format your SD card, depending on your operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)). SD cards larger than **128GB** are not recommended due to known issues with custom themes and GBA/DS graphics.
+Your (micro)SD card should conform to the following requirements:
+
+* **Brand**: Any name brand (SanDisk, Samsung, Kingston, Lexar, PNY, etc.)
+    * Beware of fake or illegitimate SD cards (e.g. Memory SD, PRO PLUS, SanDian, Extreme Pro), particularly those purchased from online marketplaces like AliExpress. See [here](https://www.flashcarts.net/microsd-fakes) for a guide on spotting fake SD cards. Using a fake or illegitimate SD card is very likely to result in things not working, or even **data loss**!
+* **Capacity**: Between 2GB and 128GB (inclusive)
+    * These cards will be labelled SD (<=2GB), SDHC (4GB-32GB), or SDXC (64GB+)
+    * Cards smaller than 2GB are insufficient due to the minimum size of a NAND dump (around 1GB), which is made at the end of this guide as a safety measure
+    * Cards 200GB or larger will still work, but are not recommended due to possible issues with DS/GBA graphics and custom themes
+* **Speed**: Any
+    * Currently, the cheapest cards on the market are **Class 10** (e.g. SanDisk Ultra). Faster cards are acceptable, but the 3DS cannot take advantage of their speed
+* **Format**: FAT32 with MBR
+    * Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
+
+For consoles that use a full-size SD card, a microSD card in an SD card adapter will work identically.
 
 ::: info
 
@@ -54,15 +67,9 @@ It is highly recommended to **only use one SD card** with a console at any given
 
 :::
 
-::: warning
-
-To follow this guide, you'll need an SD card with a capacity of at least **2GB**.
-
-:::
-
 ::: info
 
-If you want, you can check your SD card for errors before following this guide using [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), or [F3XSwift (Mac)](f3xswift-(mac)).
+If you want, you can check your SD card for errors/legitimacy before following this guide using [H2testw](h2testw-(windows))/[ValiDrive](https://www.grc.com/validrive.htm) (Windows), [F3 (Linux)](f3-(linux)), or [F3XSwift (Mac)](f3xswift-(mac)).
 
 :::
 
