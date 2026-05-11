@@ -88,7 +88,7 @@ These instructions must be followed **EXACTLY**, so double-check EVERYTHING you 
 
 1. Power on your console, ensuring System Settings is selected
     + If System Settings is not selected, **[hover over](/images/screenshots/mset9/hover-settings.png)** the System Settings icon using the D-Pad, power your console off, then back on
-1. Press (A) to launch System Settings
+1. Press <kbd>A</kbd> to launch System Settings
 1. Navigate to `Data Management` -> `Nintendo 3DS` -> `Extra Data` ([image](/images/screenshots/mset9/settings-extdata.png))
 1. **Do not press any buttons or touch the screen**
 1. **With the console STILL ON, and without pressing any buttons or touching the screen**, remove your SD card from your console
@@ -109,7 +109,7 @@ In this section, you will install custom firmware onto your console.
     + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-mset9#sighaxed-firm-was-not-installed-check-lower-screen-for-more-info)
     + If the top screen is blank **and** you see "Crypto Status - all checks passed" on the bottom screen, you will have to enter key combo blindly. Press the following buttons on your console in this order:
         + D-Pad Left, D-Pad Down, D-Pad Right, D-Pad Up, A
-1. Once it is complete (all seven steps on the bottom screen are green), press (A) to reboot your console
+1. Once it is complete (all seven steps on the bottom screen are green), press <kbd>A</kbd> to reboot your console
 <!--@include: ./_include/configure-luma3ds.md -->
 
 ### Section IV - Removing MSET9
