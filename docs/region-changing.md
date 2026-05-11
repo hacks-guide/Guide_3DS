@@ -56,7 +56,7 @@ If you change the region of your console:
 
 ### Section II - NAND Backup
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Press and hold <kbd>START</kbd>, and while holding <kbd>START</kbd>, power on your console. This will launch GodMode9
 <!--@include: ./_include/nand-backup.md -->
 
 ### Section III - CTRTransfer
