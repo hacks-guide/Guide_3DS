@@ -86,7 +86,7 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
 1. Tap on `Settings` -> `Delete Cookies` -> `Yes`
 1. Press (Home) to return to the HOME Menu, then immediately reopen the Internet Browser
 1. Wait for the page to fully load, then tap the "GO GO!" button on the top of the bottom screen
-1. Wait for the page to fully load, then press (A) to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
+1. Wait for the page to fully load, then press <kbd>A</kbd> to dismiss the [popup](/images/screenshots/skaterhax/skater-popup.png)
 1. If your console displays:
     + **"The Homebrew Launcher" screen**: Continue to the next step
     + **A white "Error has occurred" message box**: The exploit failed due to random chance. Open System Settings, change the language to a different one (if possible), then retry this section. You may have to repeat this sequence up to ten times
@@ -106,7 +106,7 @@ In this section, you will install custom firmware onto your console.
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
     + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
-1. Once it is complete, press (A) to reboot your console
+1. Once it is complete, press <kbd>A</kbd> to reboot your console
 <!--@include: ./_include/configure-luma3ds.md -->
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
