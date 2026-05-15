@@ -57,7 +57,7 @@ Your (micro)SD card should conform to the following requirements:
 - **Speed**: Any
   - Currently, the cheapest cards on the market are **Class 10** (e.g. SanDisk Ultra). Faster cards are acceptable, but the 3DS cannot take advantage of their speed
 - **Format**: FAT32 with MBR
-  - Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))
+  - Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
 
 For consoles that use a full-size SD card, a microSD card in an SD card adapter will work identically.
 
@@ -69,7 +69,7 @@ Sangat disarankan untuk **menggunakan satu kartu SD saja** dengan satu konsol, k
 
 ::: info
 
-If you want, you can check your SD card for errors/legitimacy before following this guide using [H2testw](h2testw-\(windows\))/[ValiDrive](https://www.grc.com/validrive.htm) (Windows), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\)).
+If you want, you can check your SD card for errors/legitimacy before following this guide using [H2testw](h2testw-(windows))/[ValiDrive](https://www.grc.com/validrive.htm) (Windows), [F3 (Linux)](f3-(linux)), or [F3XSwift (Mac)](f3xswift-(mac)).
 
 :::
 
@@ -147,11 +147,11 @@ Berkas yang akan diminta unduh biasanya `.zip`, ini format untuk mengemas banyak
 
 Jika disuruh "menyalin (berkas) dari (berkas).zip", berarti harus membuka (atau "ekstrak") berkas ZIP dulu. Sesudah menemukan berkas di dalam berkas ZIP, salin ke letak yang ditentukan di kartu SD.
 
-Di hampir semua sistem operasi, berkas bisa diekstrak dengan pencet dua kali. Jika itu tidak bisa, gunakan saja alat ekstraksi pihak ketiga ternama seperti [7-zip](https://7-zip.org/).
+Di hampir semua sistem operasi, berkas bisa diekstrak dengan pencet dua kali. If this doesn't work, you can install a reputable third-party extraction tool like [7-Zip](https://7-zip.org/) instead.
 
 ::: warning
 
-Aplikasi "WinRAR" Windows diketahui bermasalah, khususnya dengan berkas eksploit pemasang _custom firmware_ 3DS. Jika menggunakan komputer Windows, sebaiknya gunakan File Explorer atau 7-zip untuk mengekstrak berkas.
+Aplikasi "WinRAR" Windows diketahui bermasalah, khususnya dengan berkas eksploit pemasang _custom firmware_ 3DS. If you are on a Windows computer, you should use either the default File Explorer or 7-Zip to extract files.
 
 :::
 
@@ -165,7 +165,21 @@ Aplikasi "WinRAR" Windows diketahui bermasalah, khususnya dengan berkas eksploit
 
 :::
 
-Jika menggunakan Windows, ekstensi berkas disembunyikan secara bawaan sehingga susah mencari berkas yang dicari. Untuk mengaktifkan ekstensi, ikuti [instruksi ini](file-extensions-\(windows\)).
+Jika menggunakan Windows, ekstensi berkas disembunyikan secara bawaan sehingga susah mencari berkas yang dicari. Untuk mengaktifkan ekstensi, ikuti [instruksi ini](file-extensions-(windows)).
+
+::::
+
+:::: details What does it mean to "eject" an SD card?
+
+::: info
+
+![](/images/screenshots/onboarding/eject-windows.png)
+
+:::
+
+On most devices, your file manager will have an Eject (⏏️) button for your SD card. Using this option safely stops all activity and unmounts the card so it can be removed.
+
+This is **very** important because removing the SD card while it is in use can cause corruption and may negatively affect the outcome of exploits when modding your 3DS.
 
 ::::
 

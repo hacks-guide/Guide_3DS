@@ -40,13 +40,11 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 
 <!--@include: ./_include/ish-chorus.md -->
 
-    ```
     ::: info
     
     ![](/images/screenshots/mset9/mset9-ish-select.png)
     
     :::
-    ```
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és érintsd meg a Return-t
 

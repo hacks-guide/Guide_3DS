@@ -80,7 +80,7 @@ Si la disposition de votre carte SD est correcte, alors votre carte SD n'est pro
 3. Recopiez tout dans l'autre sens
 4. Recommencez depuis le début de [Section I](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
-::::
+
 
 :::details Error 02: Your SD is write protected
 
@@ -114,7 +114,7 @@ Une fois que vous avez fait cela, continuez depuis la [Section I Étape 3](insta
 
 <!--@include: ./_include/id1-check.md -->
 
-::::
+
 
 :::details Error 06: You need at least 16MB free
 
@@ -134,7 +134,7 @@ Un ou plusieurs fichiers dont MSET9 a besoin pour s'exécuter est manquant ou co
 
 <!--@include: ./_include/winerror234.md -->
 
-::::
+
 
 :::details FileNotFoundError: [Errno 2] No such file or directory
 

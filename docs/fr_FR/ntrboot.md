@@ -6,7 +6,7 @@ Si votre linker est déjà préflashé avec ntrboot (ou que vous avez déjà fla
 
 :::
 
-## Lecture Requise
+## Lecture requise
 
 L'installation de boot9strap à partir de ntrboot nécessite un linker compatible avec la NDS/DSi pour y flasher ntrboot. Notez que certains de ces linkers sont vendus préflashés avec ntrboot.
 

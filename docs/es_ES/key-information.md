@@ -147,11 +147,11 @@ Some of the files that you will be asked to download come in the `.zip` file for
 
 When you are told to "copy (file) from (file).zip", that means that you need to open (or "extract") the ZIP file. Inside the ZIP file will be the file you're looking for, after which you can copy it to the specified location on your SD card.
 
-On most operating systems, you can extract files by double-clicking the file. If this doesn't work, you can install a reputable third-party extraction tool like [7-zip](https://7-zip.org/) instead.
+On most operating systems, you can extract files by double-clicking the file. If this doesn't work, you can install a reputable third-party extraction tool like [7-Zip](https://7-zip.org/) instead.
 
 ::: warning
 
-La aplicación de Windows "WinRAR" es específicamente conocida por causar problemas de compatibilidad con la 3DS, particularmente con los exploits de instalación de custom firmware. Si usas una computadora con Windows, entonces usa el explorador de archivos o 7-zip para extraer archivos.
+La aplicación de Windows "WinRAR" es específicamente conocida por causar problemas de compatibilidad con la 3DS, particularmente con los exploits de instalación de custom firmware. If you are on a Windows computer, you should use either the default File Explorer or 7-Zip to extract files.
 
 :::
 
@@ -166,6 +166,20 @@ La aplicación de Windows "WinRAR" es específicamente conocida por causar probl
 :::
 
 If your computer is running Windows, file extensions may be hidden by default, which may make it harder to find the files you're looking for. To enable file extensions, follow [these instructions](file-extensions-(windows)).
+
+::::
+
+:::: details What does it mean to "eject" an SD card?
+
+::: info
+
+![](/images/screenshots/onboarding/eject-windows.png)
+
+:::
+
+On most devices, your file manager will have an Eject (⏏️) button for your SD card. Using this option safely stops all activity and unmounts the card so it can be removed.
+
+This is **very** important because removing the SD card while it is in use can cause corruption and may negatively affect the outcome of exploits when modding your 3DS.
 
 ::::
 

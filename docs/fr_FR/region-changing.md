@@ -1,6 +1,6 @@
 # Changement de région
 
-## Lecture Requise
+## Lecture requise
 
 Ceci est une section complémentaire sur comment changer la région de votre console. Ceci est réalisé en installant l'image CTRTransfer 11.15.0 de la région à laquelle vous souhaitez basculer. Après avoir installé l'image, vous pouvez mettre à jour votre console normalement vers le dernier firmware (11.17.0).
 

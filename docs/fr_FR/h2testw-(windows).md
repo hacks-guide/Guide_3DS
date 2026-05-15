@@ -1,6 +1,6 @@
 # H2testw (Windows)
 
-## Lecture Requise
+## Lecture requise
 
 Ceci est une section complémentaire sur comment vérifier que votre carte SD ne contient pas d'erreurs avec h2testw.
 

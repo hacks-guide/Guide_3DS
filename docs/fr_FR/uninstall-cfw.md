@@ -1,6 +1,6 @@
 # Désinstallation du CFW
 
-## Lecture Requise
+## Lecture requise
 
 Ceci supprimera complètement le CFW de votre console, y compris boot9strap et Luma3DS, dans le but de restaurer la console vers une non modifiée.
 

@@ -1,6 +1,6 @@
 # F3X (Mac)
 
-## Lecture Requise
+## Lecture requise
 
 Ceci est une section complémentaire sur comment vérifier que votre carte SD ne contient pas d'erreurs en utilisant F3X.
 

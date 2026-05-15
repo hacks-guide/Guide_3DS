@@ -1,6 +1,6 @@
 # Installation de boot9strap (ntrboot)
 
-## Lecture Requise
+## Lecture requise
 
 Pour utiliser les liens [magnet](https://fr.wikipedia.org/wiki/Magnet_(standard)) sur cette page, vous aurez besoin d'un client torrent comme [qBittorrent](https://www.qbittorrent.org/download.php) ou [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 

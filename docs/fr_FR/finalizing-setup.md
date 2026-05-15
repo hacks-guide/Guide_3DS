@@ -1,8 +1,8 @@
 # Finalisation de l'installation
 
-## Lecture Requise
+## Lecture requise
 
-Sur la page précédente, vous avez installé boot9strap, un chargeur de firmware personnalisé qui charge le fichier `boot.firm` depuis la carte SD ou la NAND (mémoire interne). Dans ce cas, nous utilisons Luma3DS de [LumaTeam](https://github.com/LumaTeam/) pour patcher la console, lui permettant d'exécuter des homebrew.
+Sur la page précédente, vous avez installé boot9strap, un lanceur de custom firmware qui charge le fichier `boot.firm` depuis la carte SD ou la NAND (mémoire interne). Dans ce cas, nous utilisons Luma3DS de [LumaTeam](https://github.com/LumaTeam/) comme notre `boot.firm` pour patcher la console, lui permettant d'exécuter des logiciels homebrew.
 
 Sur cette page, nous ferons des sauvegardes des fichiers système critiques et installerons certains homebrew. La plupart de ces étapes seront automatisées en utilisant un script que vous exécuterez sur votre console.
 
@@ -10,7 +10,7 @@ Sur cette page, nous ferons des sauvegardes des fichiers système critiques et i
 
 Le script installera les applications suivantes :
 
-- - **FBI** de Steveice10 _(installe les applications au format CIA)_
+- **FBI** de Steveice10 _(installe les applications au format CIA)_
 - **Homebrew Launcher Loader** de PabloMK7 _(lance le Homebrew Launcher, pour les homebrew au format 3DSX)_
 - **Anemone3DS** par astronautlevel2 _(installe des thèmes personnalisés, des écrans de démarrage et des badges)_
 - **Checkpoint** par BernardoGiordano/FlagBrew _(gère les données de sauvegarde de jeux 3DS/DS)_
@@ -20,9 +20,9 @@ Le script installera les applications suivantes :
 
 Si vous ne voulez pas une de ces applications, vous pouvez les supprimer une fois que vous avez terminé cette page en allant dans Paramètres de la console -> Gestion des données -> Nintendo 3DS -> Logiciels. (GodMode9 ne peut pas être supprimé de cette manière et est généralement requis pour d'autres fonctions.)
 
-::: details Liens du code source (facultatif)
+::: details Liens vers le code source (facultatif)
 
-Toutes les applications installées sur ce guide sont open source. Si vous êtes intéressé à voir comment ils fonctionnent, ou aimeriez laisser une étoile pour montrer votre appréciation, leur code source est lié ici :
+Toutes les applications installées sur ce guide sont open-source. Si vous êtes intéressé à voir comment ils fonctionnent, ou aimeriez laisser une étoile pour montrer votre appréciation, leur code source est lié ici :
 
 - [FBI](https://github.com/nh-server/FBI-NH)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
@@ -85,7 +85,7 @@ Dans cette section, vous allez mettre à jour votre console vers la dernière ve
 Dans cette section, vous synchroniserez l'horloge interne de votre 3DS avec l'heure réelle et allez dumper le firmware du son (ce qui est nécessaire pour que certains logiciels homebrew utilisent correctement le son).
 
 1. Appuyez simultanément sur (L) + (Bas sur la croix directionnelle) + (Select) pour ouvrir le menu Rosalina
-   - Si l'un de ces boutons est cassé, téléchargez [config.ini](/assets/config.ini) et mettez-le dans votre dossier `luma` en remplaçant le fichier existant. Ceci changera la combinaison de touches du menu Rosalina en (X) + (Y)
+   - Si l'un de ces boutons ne marche pas, téléchargez [config.ini](/assets/config.ini) et mettez-le dans votre dossier `luma` en remplaçant celui existant. Ceci changera la combinaison de touches du menu Rosalina en (X) + (Y)
 2. Sélectionnez "Miscellaneous options"
 3. Sélectionnez "Dump DSP firmware"
 4. Appuyez sur (B) pour continuer
@@ -118,10 +118,10 @@ Dans cette section, vous utiliserez une série de scripts pour automatiser l'ins
    - Si vous voyez "Information #05: No title database", appuyez sur (A) et entrez la combinaison de touches indiquée sur l'écran du bas pour continuer
    - Si vous rencontrez une erreur, suivez les instructions dans le message d'erreur ou consultez le guide de [dépannage](troubleshooting-finalizing-setup) puis ouvrez GodMode9 en maintenant (Start) au démarrage pour relancer le script
 9. Une fois que le script dit "Setup complete!", appuyez sur (A) pour éteindre la console
-   - Si vous ne voyez PAS le message "Setup complete!", le script a eut un problème et vous devrez refaire cette section à partir de l’étape 3
+   - Si vous ne voyez PAS le message "Setup complete!", le script a eu un problème et vous devrez refaire cette section à partir de l’Étape 3
 10. Insérez votre carte SD dans votre ordinateur
 11. Copiez le dossier `/gm9/backups/` vers un endroit sûr sur votre ordinateur
-    - Ce dossier contient des sauvegardes de fichiers critiques et doit être sauvegardé à plusieurs endroits (c’est-à-dire un stockage en cloud) si possible
+    - Ce dossier contient des sauvegardes de fichiers critiques et doit être sauvegardé à plusieurs endroits (comme un stockage dans le nuage) si possible
     - Les deux fichiers SysNAND constituent votre sauvegarde NAND et peuvent être utilisés pour rétablir le fonctionnement de votre console si elle est brickée (rendu inutilisable) par un problème logiciel
     - Le fichier `essential.exefs` contient les fichiers uniques au système de votre console et peut être utilisé pour récupérer vos données en cas de défaillance matérielle
 12. Si vous les avez toujours, supprimez les deux fichiers `SysNAND` du dossier `/gm9/backups/` de votre carte SD

@@ -147,11 +147,11 @@ Néhány fájl, amit le kell töltened `.zip` formátumú fájlként érkezik, a
 
 Ha azt az utasítás kapod, hogy "másolj (egy adott fájlt) a (fájl).zip-ből", az azt jelenti, hogy meg kell nyitnod (vagy "kicsomagolnod") a ZIP fájlt. A ZIP fájlon belül lesz a fájl, amit keresel, amit utána másolni tudsz a megadott útvonalra az SD kártyádra.
 
-A legtöbb operációs rendszeren dupla kattintással ki tudod csomagolni a fájlt. Ha ez nem működik, telepíthetsz egy megbízható kicsomagoló eszközt helyette, mint például a [7-zip](https://7-zip.org/).
+A legtöbb operációs rendszeren dupla kattintással ki tudod csomagolni a fájlt. Ha ez nem működik, telepíthetsz egy megbízható kicsomagoló eszközt helyette, mint például a [7-Zip](https://7-zip.org/).
 
 ::: warning
 
-A Windows-os "WinRAR" applikáció kifejezetten ismert, hogy kompatibilitási problémákat okoz a 3DS-el különösen az egyéni firmware telepítő exploitok esetében. Ha Windows számítógépen vagy, inkább használd az alapértelmezett Fájlkezelő-t vagy a 7-zip-et fájlok kicsomagolására.
+A Windows-os "WinRAR" applikáció kifejezetten ismert, hogy kompatibilitási problémákat okoz a 3DS-el különösen az egyéni firmware telepítő exploitok esetében. Ha Windows számítógépen vagy, inkább használd az alapértelmezett Fájlkezelő-t vagy a 7-Zip-et fájlok kicsomagolására.
 
 :::
 
@@ -166,6 +166,20 @@ A Windows-os "WinRAR" applikáció kifejezetten ismert, hogy kompatibilitási pr
 :::
 
 Ha a számítógéped Windows-t futtat, a fájl kiterjesztések előfordulhat, hogy alapértelmezetten elrejtettek, ami nehezebbé teheti azon fájlok megtalálását, amiket keresel. A fájlkiterjesztések megjelenítéséhez kövesd [ezeket a lépéseket](file-extensions-(windows)).
+
+::::
+
+:::: details Mit jelent az SD kártya "kiadása"?
+
+::: info
+
+![](/images/screenshots/onboarding/eject-windows.png)
+
+:::
+
+A legtöbb eszközön, a fájlkezelőben van egy Kiadás (⏏️) gomb az SD kártyához. Ezt az opciót használva az biztonságosan leállít minden tevékenységet és lecsatolja a kártyát, így az eltávolítható.
+
+Ez **nagyon** fontos, mert az SD kártya használat közbeni eltávolítása hibákat okozhat és negatívan befolyásolhatja az exploitokat, amikor moddolot a 3DS-ed.
 
 ::::
 

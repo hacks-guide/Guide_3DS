@@ -22,7 +22,7 @@ Chaque section est réduite par défaut. Cliquez ou appuyez sur le nom de la sec
 
 Ce guide fonctionne avec toutes les consoles commerciales de la famille Nintendo 3DS (y compris la 3DS, les 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL et New 2DS XL/LL), indépendamment de la région ou du firmware. Il n'est PAS compatible avec la famille de consoles DSi (DSi, DSi XL/LL). Pour les consoles de la famille DSi, veuillez consulter [ce guide](https://dsi.cfw.guide).
 
-::::
+
 
 :::: details De quel type d'ordinateur / matériel ai-je besoin pour suivre ce guide ?
 
@@ -34,7 +34,7 @@ Ce guide fonctionne avec toutes les consoles commerciales de la famille Nintendo
 
 Dans la plupart des cas, vous pouvez suivre ce guide tant que vous avez la possibilité de télécharger des fichiers depuis Internet et de les copier sur votre carte SD. Cela inclut la plupart des appareils électroniques grand public, tels que les ordinateurs fonctionnant sous Windows, macOS, Linux et ChromeOS (Chromebook), ainsi que les téléphones et tablettes fonctionnant sous Android et iOS. Selon votre appareil électronique, vous devrez peut-être acheter un adaptateur de carte SD pour permettre à votre appareil de lire votre carte SD.
 
-::::
+
 
 :::: details Quel type de carte SD ma console utilise-t-elle/a-t-elle besoin ?
 
@@ -73,7 +73,7 @@ Si vous le souhaitez, vous pouvez vérifier si votre carte SD comporte des erreu
 
 :::
 
-::::
+
 
 :::: warning
 
@@ -85,7 +85,7 @@ En bref, modder votre console est sans danger, mais _**vous seul êtes responsab
 
 :::
 
-::::
+
 
 ## Terminologie importante
 
@@ -121,7 +121,7 @@ Les signes **"plus grand que" et "plus petit que"** (\< et \>) sont également p
 
 :::
 
-::::
+
 
 :::: details Comment télécharger des fichiers depuis GitHub ?
 
@@ -133,7 +133,7 @@ Les signes **"plus grand que" et "plus petit que"** (\< et \>) sont également p
 
 Dans ce guide, vous copierez les fichiers qui sont téléchargés sur votre ordinateur ou votre téléphone, sur la carte SD de votre console. Beaucoup de ces fichiers proviennent de GitHub, qui est un site utilisé par les développeurs pour publier leurs logiciels open-source. Lorsque vous téléchargez des fichiers depuis GitHub, vous devriez télécharger le fichier qui _n'est pas_ le code source.
 
-::::
+
 
 :::: details Comment puis-je extraire/ouvrir un fichier ZIP ?
 
@@ -147,15 +147,15 @@ Certains des fichiers que l'on vous demandera de télécharger arrivent dans le 
 
 Quand on vous demande de "copier (fichier) depuis l'archive (fichier).zip", cela signifie que vous devez ouvrir (ou "extraire") le fichier ZIP. À l'intérieur du fichier ZIP se trouve le fichier que vous cherchez, après quoi vous pouvez le copier à l'emplacement spécifié sur votre carte SD.
 
-Sur la plupart des systèmes d'exploitation, vous pouvez extraire des fichiers en double-cliquant sur le fichier. Si cela ne fonctionne pas, vous pouvez installer un outil d'extraction tiers réputé comme [7-zip](https://7-zip.org/) à la place.
+Sur la plupart des systèmes d'exploitation, vous pouvez extraire des fichiers en double-cliquant sur le fichier. Si cela ne fonctionne pas, vous pouvez installer un outil d'extraction tiers réputé comme [7-Zip](https://7-zip.org/) à la place.
 
 ::: warning
 
-L'application Windows "WinRAR" est particulièrement connue pour ses problèmes de compatibilité avec la 3DS, surtout avec les exploits d'installation de custom firmware. Si vous utilisez un ordinateur Windows, vous devriez utiliser l'Explorateur de fichiers (par défaut) ou 7-zip pour extraire des fichiers.
+L'application Windows "WinRAR" est particulièrement connue pour ses problèmes de compatibilité avec la 3DS, surtout avec les exploits d'installation de custom firmware. Si vous utilisez un ordinateur Windows, vous devriez utiliser l'Explorateur de fichiers par défaut ou 7-Zip pour extraire des fichiers.
 
 :::
 
-::::
+
 
 :::: details Que sont les extensions de fichier ?
 
@@ -166,6 +166,20 @@ L'application Windows "WinRAR" est particulièrement connue pour ses problèmes 
 :::
 
 Si votre ordinateur exécute Windows, les extensions de fichiers peuvent être masquées par défaut, ce qui peut rendre plus difficile la recherche des fichiers que vous cherchez. Pour activer l'affichage des extensions de fichiers, suivez [ces instructions](file-extensions-(windows)).
+
+
+
+:::: details Que signifie "éjecter" une carte SD ?
+
+::: info
+
+![](/images/screenshots/onboarding/eject-windows.png)
+
+:::
+
+Sur la plupart des appareils, votre gestionnaire de fichiers possède un bouton Éjecter (⏏️) pour votre carte SD. Utiliser cette option arrête toute activité en toute sécurité et démonte la carte afin qu'elle puisse être retirée.
+
+Ceci est **très** important car retirer la carte SD alors qu'elle est en cours d'utilisation peut causer de la corruption et pourrait affecter négativement la réussite des exploits lorsque vous moddez votre 3DS.
 
 ::::
 

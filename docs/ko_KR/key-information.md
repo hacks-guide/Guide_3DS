@@ -57,7 +57,7 @@ Your (micro)SD card should conform to the following requirements:
 - **Speed**: Any
   - Currently, the cheapest cards on the market are **Class 10** (e.g. SanDisk Ultra). Faster cards are acceptable, but the 3DS cannot take advantage of their speed
 - **Format**: FAT32 with MBR
-  - Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))
+  - Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
 
 For consoles that use a full-size SD card, a microSD card in an SD card adapter will work identically.
 
@@ -69,7 +69,7 @@ For consoles that use a full-size SD card, a microSD card in an SD card adapter 
 
 ::: info
 
-If you want, you can check your SD card for errors/legitimacy before following this guide using [H2testw](h2testw-\(windows\))/[ValiDrive](https://www.grc.com/validrive.htm) (Windows), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\)).
+If you want, you can check your SD card for errors/legitimacy before following this guide using [H2testw](h2testw-(windows))/[ValiDrive](https://www.grc.com/validrive.htm) (Windows), [F3 (Linux)](f3-(linux)), or [F3XSwift (Mac)](f3xswift-(mac)).
 
 :::
 
@@ -147,11 +147,11 @@ SD 카드에 파일을 복사할 때 올바른 위치에 넣는 것이 중요합
 
 "(파일).zip에서 (파일)을 복사하세요"와 같은 말이 나오면, 이것은 해당 ZIP 파일을 열어야(혹은 "압축 해제"해야) 함을 뜻합니다. ZIP 파일 내에서 파일을 찾으면, 그 파일을 SD 카드의 특정 위치로 복사하면 됩니다.
 
-대부분의 환경에서는 파일을 두 번 클릭하는 것으로 파일 추출이 가능합니다. 만약 동작하지 않는다면, [7-zip](https://7-zip.org)과 같은 서드 파티 압축 해제 툴을 설치해 이용할 수 있습니다.
+대부분의 환경에서는 파일을 두 번 클릭하는 것으로 파일 추출이 가능합니다. If this doesn't work, you can install a reputable third-party extraction tool like [7-Zip](https://7-zip.org/) instead.
 
 ::: warning
 
-Windows 애플리케이션 "WinRAR"는 특히 3DS 커스텀 펌웨어 설치 취약점에 호환성 문제가 있는 것으로 알려졌습니다. Windows 컴퓨터를 사용한다면, 기본 파일 탐색기나 7-zip를 사용해 파일을 압축 해제하세요.
+Windows 애플리케이션 "WinRAR"는 특히 3DS 커스텀 펌웨어 설치 취약점에 호환성 문제가 있는 것으로 알려졌습니다. If you are on a Windows computer, you should use either the default File Explorer or 7-Zip to extract files.
 
 :::
 
@@ -165,7 +165,21 @@ Windows 애플리케이션 "WinRAR"는 특히 3DS 커스텀 펌웨어 설치 취
 
 :::
 
-만약 Windows를 사용하고 있다면, 파일 확장자는 기본적으로 숨겨져 있으며 이 때문에 파일을 찾기가 더욱 어렵습니다. 파일 확장자를 표시하려면, [이 설명](file-extensions-\(windows\))을 따라주세요.
+만약 Windows를 사용하고 있다면, 파일 확장자는 기본적으로 숨겨져 있으며 이 때문에 파일을 찾기가 더욱 어렵습니다. 파일 확장자를 표시하려면, [이 설명](file-extensions-(windows))을 따라주세요.
+
+::::
+
+:::: details What does it mean to "eject" an SD card?
+
+::: info
+
+![](/images/screenshots/onboarding/eject-windows.png)
+
+:::
+
+On most devices, your file manager will have an Eject (⏏️) button for your SD card. Using this option safely stops all activity and unmounts the card so it can be removed.
+
+This is **very** important because removing the SD card while it is in use can cause corruption and may negatively affect the outcome of exploits when modding your 3DS.
 
 ::::
 

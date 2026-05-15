@@ -6,7 +6,7 @@ Pour de l'aide (en anglais) sur GodMode9 ainsi que sur le scripting, et pour êt
 
 :::
 
-## Lecture Requise
+## Lecture requise
 
 Outre la création et la restauration de sauvegardes de la NAND, GodMode9 dispose des fonctionnalités suivantes : extraire les titres installés vers un fichier `.cia` installable, extraire les données des cartes de jeu dans un fichier ROM `.3ds`, et installer directement une carte de jeu sur la console.
 

@@ -1,6 +1,6 @@
 # F3XSwift (Mac)
 
-## Lecture Requise
+## Lecture requise
 
 Ceci est une section complémentaire sur comment vérifier si votre carte SD ne contient pas d'erreurs avec F3XSwift.
 

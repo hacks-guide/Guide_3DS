@@ -1,6 +1,6 @@
 # CTRTransfer
 
-## Lecture Requise
+## Lecture requise
 
 Ceci est une section complémentaire pour installer une image CTRTransfer 11.15.0 sur votre console.
 

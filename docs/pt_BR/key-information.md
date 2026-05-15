@@ -57,7 +57,7 @@ Your (micro)SD card should conform to the following requirements:
 - **Speed**: Any
   - Currently, the cheapest cards on the market are **Class 10** (e.g. SanDisk Ultra). Faster cards are acceptable, but the 3DS cannot take advantage of their speed
 - **Format**: FAT32 with MBR
-  - Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))
+  - Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
 
 For consoles that use a full-size SD card, a microSD card in an SD card adapter will work identically.
 
@@ -69,7 +69,7 @@ For consoles that use a full-size SD card, a microSD card in an SD card adapter 
 
 ::: info
 
-If you want, you can check your SD card for errors/legitimacy before following this guide using [H2testw](h2testw-\(windows\))/[ValiDrive](https://www.grc.com/validrive.htm) (Windows), [F3 (Linux)](f3-\(linux\)), or [F3XSwift (Mac)](f3xswift-\(mac\)).
+If you want, you can check your SD card for errors/legitimacy before following this guide using [H2testw](h2testw-(windows))/[ValiDrive](https://www.grc.com/validrive.htm) (Windows), [F3 (Linux)](f3-(linux)), or [F3XSwift (Mac)](f3xswift-(mac)).
 
 :::
 
@@ -147,11 +147,11 @@ Alguns dos arquivos que você deverá baixar vêm no formato de arquivo `.zip`, 
 
 Quando dizem para "copiar (arquivo) de (arquivo).zip" significa que você precisa abrir (ou "extrair") o arquivo ZIP. Dentro do arquivo ZIP estará o arquivo que você precisará e poderá copiá-lo para o local especificado do seu cartão SD.
 
-Na maioria dos sistemas operacionais, você pode extrair arquivos clicando duas vezes no arquivo. Se isso não funcionar, você pode instalar uma ferramenta de extração confiável de terceiros como o [7-zip](https://7-zip.org/).
+Na maioria dos sistemas operacionais, você pode extrair arquivos clicando duas vezes no arquivo. If this doesn't work, you can install a reputable third-party extraction tool like [7-Zip](https://7-zip.org/) instead.
 
 ::: warning
 
-O aplicativo para Windows "WinRAR" é conhecido especificamente por causar problemas de compatibilidade com o 3DS, particularmente com a instalação de custom firmware. Se estiver em um computador do Windows, use o Gerenciador de Arquivos padrão ou o 7-zip para extrair arquivos.
+O aplicativo para Windows "WinRAR" é conhecido especificamente por causar problemas de compatibilidade com o 3DS, particularmente com a instalação de custom firmware. If you are on a Windows computer, you should use either the default File Explorer or 7-Zip to extract files.
 
 :::
 
@@ -165,7 +165,21 @@ O aplicativo para Windows "WinRAR" é conhecido especificamente por causar probl
 
 :::
 
-Se seu computador for Windows, as extensões do arquivo podem estar ocultas por padrão, o que pode dificultar para achar os arquivos. Para exibir as extensões de arquivos, siga [estas instruções](file-extensions-\(windows\)).
+Se seu computador for Windows, as extensões do arquivo podem estar ocultas por padrão, o que pode dificultar para achar os arquivos. Para exibir as extensões de arquivos, siga [estas instruções](file-extensions-(windows)).
+
+::::
+
+:::: details What does it mean to "eject" an SD card?
+
+::: info
+
+![](/images/screenshots/onboarding/eject-windows.png)
+
+:::
+
+On most devices, your file manager will have an Eject (⏏️) button for your SD card. Using this option safely stops all activity and unmounts the card so it can be removed.
+
+This is **very** important because removing the SD card while it is in use can cause corruption and may negatively affect the outcome of exploits when modding your 3DS.
 
 ::::
 

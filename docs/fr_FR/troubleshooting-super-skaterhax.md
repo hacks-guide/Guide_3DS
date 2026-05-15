@@ -38,7 +38,7 @@ Le fichier `arm11code.bin` est absent ou mal placé. Assurez-vous de copier les 
 
 :::
 
-::::
+
 
 :::details Une exception est survenue ou "DLL_HEAP_INFORMATION" en appuyant sur GO! GO!
 

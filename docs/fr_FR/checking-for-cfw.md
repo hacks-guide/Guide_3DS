@@ -1,6 +1,6 @@
 # Vérification de la présence d'un CFW
 
-## Lecture Requise
+## Lecture requise
 
 Ceci est une section complémentaire pour vérifier si votre console possède déjà un custom firmware moderne.
 

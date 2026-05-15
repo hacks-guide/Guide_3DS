@@ -1,6 +1,6 @@
 # Déplacer une EmuNAND
 
-## Lecture Requise
+## Lecture requise
 
 Ceci est une section complémentaire pour déplacer le contenu d'une EmuNAND antérieure vers votre nouvelle SysNAND CFW, puis supprimer l'ancienne partition EmuNAND. Veuillez noter que les termes EmuNAND et RedNAND désignent deux implémentations différentes du [même concept](http://3dbrew.org/wiki/NAND_Redirection).
 

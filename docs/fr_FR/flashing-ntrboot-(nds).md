@@ -1,6 +1,6 @@
 # Flasher ntrboot (NDS)
 
-## Lecture Requise
+## Lecture requise
 
 Avant de continuer, assurez-vous d'avoir lu toutes les informations sur [ntrboot](ntrboot)
 

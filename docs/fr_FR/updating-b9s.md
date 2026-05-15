@@ -1,6 +1,6 @@
 # Mise à jour de B9S
 
-## Lecture Requise
+## Lecture requise
 
 Cette page s'adresse aux utilisateurs existants de boot9strap afin de mettre à jour leur installation de boot9strap vers la dernière version.
 

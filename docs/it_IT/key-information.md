@@ -151,7 +151,7 @@ Nella maggior parte dei sistemi operativi, per estrarre i file basta farci un do
 
 ::: warning
 
-L'applicazione "WinRAR" per Windows è nota per causare problemi di compatibilità con il 3DS, in particolare con gli exploit di installazione dei custom firmware. Se sei su Windows è necessario utilizzare l'Esplora Risorse predefinito o 7-zip per estrarre i file.
+L'applicazione "WinRAR" per Windows è nota per causare problemi di compatibilità con il 3DS, in particolare con gli exploit di installazione dei custom firmware. Se sei su Windows è necessario utilizzare l'Esplora Risorse predefinito o 7-Zip per estrarre i file.
 
 :::
 
@@ -166,6 +166,20 @@ L'applicazione "WinRAR" per Windows è nota per causare problemi di compatibilit
 :::
 
 Se hai un computer con Windows, le estensioni dopo il nome del file potrebbero essere nascoste per impostazione predefinita, rendendo più complicato trovare il file che stai cercando. Per abilitare le estensioni dopo il nome del file, segui [queste istruzioni](file-extensions-(windows)).
+
+::::
+
+:::: details Cosa significa "espellere" una scheda SD?
+
+::: info
+
+![](/images/screenshots/onboarding/eject-windows.png)
+
+:::
+
+Sulla maggior parte dei dispositivi, il gestore file avrà un pulsante Espelli (⏏️) per rimuovere la scheda SD. Questa opzione termina in modo sicuro tutti i processi attivi e smonta la scheda per poterla poi rimuovere.
+
+È **molto** importante in quanto rimuovere una scheda SD durante l'uso potrebbe corromperne i file e influenzare negativamente il comportamento degli exploit durante la modifica del tuo 3DS.
 
 ::::
 

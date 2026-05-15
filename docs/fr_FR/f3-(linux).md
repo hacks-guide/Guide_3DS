@@ -1,6 +1,6 @@
 # F3 (Linux)
 
-## Lecture Requise
+## Lecture requise
 
 Ceci est une section complémentaire sur comment vérifier si votre carte SD ne contient pas d'erreurs, en utilisant F3.
 

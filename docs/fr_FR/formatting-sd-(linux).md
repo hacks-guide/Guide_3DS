@@ -1,6 +1,6 @@
 # Formater la SD (Linux)
 
-## Lecture Requise
+## Lecture requise
 
 Ceci est une section complémentaire sur comment formater une carte SD pour être compatible avec la 3DS.
 

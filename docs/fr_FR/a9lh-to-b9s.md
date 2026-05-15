@@ -1,6 +1,6 @@
 # A9LH vers B9S
 
-## Lecture Requise
+## Lecture requise
 
 Cette page est faite pour que les utilisateurs actuels de arm9loaderhax puissent mettre à jour leurs consoles vers boot9strap.
 

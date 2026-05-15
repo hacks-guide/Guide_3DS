@@ -1,6 +1,6 @@
 # Flasher ntrboot (plusieurs 3DS)
 
-## Lecture Requise
+## Lecture requise
 
 Avant de commencer, assurez-vous d'avoir lu toutes les informations sur [ntrboot](ntrboot).
 

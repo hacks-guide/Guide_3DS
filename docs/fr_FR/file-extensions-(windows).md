@@ -1,6 +1,6 @@
 # Extensions de fichier (Windows)
 
-## Lecture Requise
+## Lecture requise
 
 Ceci est une section complémentaire sur comment désactiver le comportement Windows par défaut de cacher les extensions de fichier.
 

@@ -1,6 +1,6 @@
 # Formater la SD (Windows)
 
-## Lecture Requise
+## Lecture requise
 
 Ceci est une section complémentaire sur comment formater la carte SD afin qu'elle fonctionne sur 3DS.
 

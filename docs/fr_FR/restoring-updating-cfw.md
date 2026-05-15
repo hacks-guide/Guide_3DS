@@ -1,6 +1,6 @@
 # Restauration / Mise à jour du CFW
 
-## Lecture Requise
+## Lecture requise
 
 Cette page prépare les consoles avec une installation moderne de boot9strap existante pour la réinstallation et/ou la mise à jour des applications du custom firmware. Elle peut également être utilisée en cas de perte ou de corruption de la carte SD.
 

@@ -40,13 +40,11 @@ Dans cette section, vous préparerez l'exploit MSET9 en créant **temporairement
 
 <!--@include: ./_include/ish-chorus.md -->
 
-    ```
     ::: info
     
     ![](/images/screenshots/mset9/mset9-ish-select.png)
     
     :::
-    ```
 
 1. Saisissez le numéro correspondant au modèle et à la version de votre console, puis appuyez sur Entrée
 
