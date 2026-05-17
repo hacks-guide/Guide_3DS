@@ -10,13 +10,13 @@
 
 ::: warning
 
-Αυτή η σελίδα απαιτεί έναν υπολογιστή με Windows, Linux ή macOS. Εάν διαθέτετε ένα τηλέφωνο ή tablet με Android ή ένα Chromebook, ακολουθήστε τις οδηγίες της ενότητας [Εγκατάσταση του boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)). Εάν διαθέτετε ένα iPhone ή iPad, ακολουθήστε τα βήματα της ενότητας [Εγκατάσταση του boot9strap (MSET9 CLI iOS)](installing-boot9strap-\(mset9-cli-ios\)). Εάν δεν έχετε πρόσβαση σε καμία από αυτές τις συσκευές, θα πρέπει να χρησιμοποιήσετε ένα [εναλλακτικό exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
+Αυτή η σελίδα απαιτεί έναν υπολογιστή με Windows, Linux ή macOS. Εάν διαθέτετε ένα τηλέφωνο ή tablet με Android ή ένα Chromebook, ακολουθήστε τις οδηγίες της ενότητας [Εγκατάσταση του boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)). Εάν διαθέτετε ένα iPhone ή iPad, ακολουθήστε τα βήματα της ενότητας [Εγκατάσταση του boot9strap (MSET9 CLI iOS)](installing-boot9strap-(mset9-cli-ios)). Εάν δεν έχετε πρόσβαση σε καμία από αυτές τις συσκευές, θα πρέπει να χρησιμοποιήσετε ένα [εναλλακτικό exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits).
 
 :::
 
 ::: info
 
-Εάν χρησιμοποιείτε μια συσκευή Android ως προσαρμογέα κάρτας SD για τον υπολογιστή σας, δεν θα μπορέσετε να ακολουθήσετε τα βήματα αυτής της σελίδας λόγω ασυμβατοτήτων με το πρωτόκολλο μεταφοράς αρχείων του Android (MTP). Σε αυτήν την περίπτωση, ακολουθήστε τα βήματα της ενότητας [Εγκατάσταση του boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)).
+Εάν χρησιμοποιείτε μια συσκευή Android ως προσαρμογέα κάρτας SD για τον υπολογιστή σας, δεν θα μπορέσετε να ακολουθήσετε τα βήματα αυτής της σελίδας λόγω ασυμβατοτήτων με το πρωτόκολλο μεταφοράς αρχείων του Android (MTP). Σε αυτήν την περίπτωση, ακολουθήστε τα βήματα της ενότητας [Εγκατάσταση του boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)).
 
 :::
 

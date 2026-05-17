@@ -17,9 +17,9 @@ Kérjük kapcsold be a konzolod, miközben az SD kártya be van helyezve, majd e
 Ha ez nem működik, az SD kártyád formázni kell:
 
 1. Másolj mindent az SD kártyádról a PC-dre
-2. Formázd az SD kártyád ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)))
+2. Formázd az SD kártyád ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)))
 3. Másolj mindent vissza
-4. Kezd újra az [I. rész 7. lépésével](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+4. Kezd újra az [I. rész 7. lépésével](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 :::
 
@@ -30,9 +30,9 @@ A Mii Maker adat nem található az SD kártyán. Kérjük kapcsold be a konzolo
 Ha ez nem működik, az SD kártyád formázni kell:
 
 1. Másolj mindent az SD kártyádról a PC-dre
-2. Formázd az SD kártyád ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)))
+2. Formázd az SD kártyád ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)))
 3. Másolj mindent vissza
-4. Kezd újra az [I. rész 8. lépésével](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
+4. Kezd újra az [I. rész 8. lépésével](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 :::
 
@@ -43,12 +43,12 @@ Biztosítsd, hogy a cím adatbázisod resetelve legyen.
 - Kérjük kapcsold be a konzolod, miközben az SD kártya be van helyezve
 - Indítsd el a System Settings-et és navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
   - Ez nem fogja törölni az adataidat
-- Ha reset prompt-ot kapsz reset után, kapcsold ki a konzolod, majd kezd újra az [I. rész 14. lépésétől](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+- Ha reset prompt-ot kapsz reset után, kapcsold ki a konzolod, majd kezd újra az [I. rész 14. lépésétől](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 Ha nem kapsz reset promptot, az SD kártyádat formázni kell:
 
 1. Másolj mindent az SD kártyádról a PC-dre
-2. Formázd az SD kártyád ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)))
+2. Formázd az SD kártyád ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)))
 3. Másolj mindent vissza
 
 <!--@include: ./_include/mset9-chorus.md -->
@@ -57,7 +57,7 @@ Ha nem kapsz reset promptot, az SD kártyádat formázni kell:
 2. Írj `2`-öt és nyomj Enter-t az MSET9 állapotának ellenőrzéséhez
    - Ez létre fogja hozni a dummy adatbázisokat újra
 3. Zárd be az MSET9 szkript ablakát
-4. Kezd újra az [I. rész 12. lépésével](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
+4. Kezd újra az [I. rész 12. lépésével](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 :::
 
@@ -76,9 +76,9 @@ Emlékezz, az SD kártyádnak hasonlóan kell kinéznie:
 Ha az SD kártyád kiosztása megfelelő, akkor az SD kártyád valószínűleg nem olvasható a konzolod által és formázni kell:
 
 1. Másolj mindent az SD kártyádról a PC-dre
-2. Formázd az SD kártyád ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)))
+2. Formázd az SD kártyád ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)))
 3. Másolj mindent vissza
-4. Kezd újra az [I. rész elejétől](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+4. Kezd újra az [I. rész elejétől](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 ::::
 
@@ -106,7 +106,7 @@ Több ID0 mappád van. Ahhoz, hogy meghatározd melyik a helyes mappa, a követk
 10. Mozgasd a valódi ID0 mappát a `BACKUP_Nintendo 3DS` mappából a `Nintendo 3DS` mappába
 11. Ha létezik, mozgasd a `Private` mappát a `BACKUP_Nintendo 3DS` mappából a `Nintendo 3DS` mappába
 
-Ha ez kész, folytasd az [I. rész 3. lépésével](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
+Ha ez kész, folytasd az [I. rész 3. lépésével](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 :::
 
@@ -161,19 +161,19 @@ Valószínüleg hiányzik a `SafeB9S.bin` az SD kártyád gyökeréből vagy sé
 
 1. Írd be a konzolod modelljéhez és verziójához tartozó számot, és nyomj Enter-t
    - Az aktuális állapot [Injected](/images/screenshots/mset9/mset9-injected.png)-et kell mutasson
-   - Ha már eltávolítottad a trigger fájlt (vagy soha nem injektáltad), az aktuális állapot [Ready](/images/screenshots/mset9/mset9-ready.png)-t fog mutatni és megpróbálhatod [újracsinálni a II. részt](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+   - Ha már eltávolítottad a trigger fájlt (vagy soha nem injektáltad), az aktuális állapot [Ready](/images/screenshots/mset9/mset9-ready.png)-t fog mutatni és megpróbálhatod [újracsinálni a II. részt](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 2. Írj `4`-et és nyomj Enter-t
 3. Amikor az ablak azt mondja, hogy Removed trigger file", írj `0`-t majd nyomj Entert
 4. Tedd vissza az SD kártyát a konzoldba
 5. Kapcsold be a konzolod
-6. Térj vissza az [II. rész 1. lépéséhez](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+6. Térj vissza az [II. rész 1. lépéséhez](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 Alternatíva, az SD kártyád nem megfelelően formázott vagy partícionált. A trigger fájl eltávolítását követően formázd:
 
 1. Másolj mindent az SD kártyádról a PC-dre
-2. Formázd az SD kártyád ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)))
+2. Formázd az SD kártyád ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)))
 3. Másolj mindent vissza
-4. Kezd újra az [II. rész 1. lépésével](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+4. Kezd újra az [II. rész 1. lépésével](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 :::
 
@@ -195,14 +195,14 @@ Kövesd a következő lépéseket a trigger fájl ettávolításához, majd pró
 3. Amikor az ablak azt mondja, hogy Removed trigger file", írj `0`-t majd nyomj Entert
 4. Tedd vissza az SD kártyát a konzoldba
 5. Kapcsold be a konzolod
-6. Térj vissza az [II. rész 1. lépéséhez](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+6. Térj vissza az [II. rész 1. lépéséhez](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 Ha továbbra is megmarad ez a hiba és biztos vagy benne, hogy mindent jól csináltál, akkor biztosítsd, hogy a trigger fájl eltávolításra kerüljön és formázd az SD kártyád:
 
 1. Másolj mindent az SD kártyádról a PC-dre
-2. Formázd az SD kártyád ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)))
+2. Formázd az SD kártyád ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)))
 3. Másolj mindent vissza
-4. Kezd újra az [II. rész 1. lépésével](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+4. Kezd újra az [II. rész 1. lépésével](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 :::
 
@@ -224,13 +224,13 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 ::: tip
 
-Vissza a [Boot9strap telepítése (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))-hez
+Vissza a [Boot9strap telepítése (MSET9 CLI)](installing-boot9strap-(mset9-cli))-hez
 
 :::
 
 ::: tip
 
-Vissza a [Boot9strap telepítése (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))-hoz
+Vissza a [Boot9strap telepítése (MSET9 Play Store)](installing-boot9strap-(mset9-play-store))-hoz
 
 :::
 

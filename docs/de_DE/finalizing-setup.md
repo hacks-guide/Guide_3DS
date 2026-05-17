@@ -2,29 +2,29 @@
 
 ## Vorher Lesen
 
-On the previous page, you installed boot9strap, a custom firmware loader that loads the file `boot.firm` from SD card or NAND (internal memory). In this case, we are using Luma3DS by [LumaTeam](https://github.com/LumaTeam/) as our `boot.firm` to patch the console, allowing it to run homebrew software.
+Auf der letzten Seite hast du boot9strap installiert, einen Custom Firmware-Loader, der die Datei `boot.firm` von der SD-Karte oder vom NAND (internen Speicher) lädt. In diesem Fall verwenden wir Luma3DS von [LumaTeam](https://github.com/LumaTeam/), als `boot.firm`, um die Konsole so zu patchen, dass sie Homebrew Software ausführen kann.
 
-On this page, we will make critical system file backups and install some homebrew programs. Most of these steps will be automated using a script that you will run on your console.
+Auf dieser Seite werden wir Sicherheitskopien kritischer Systemdateien erstellen und einige Homebrew Programme installieren. Die meisten dieser Schritte werden mithilfe eines Skripts automatisiert, dass du auf deiner Konsole ausführen wirst.
 
 ::: info
 
-The script will install the following applications:
+Das Skript wird folgende Anwendungen installieren:
 
-- **FBI** by Steveice10 _(installs CIA formatted applications)_
-- **Homebrew Launcher Loader** by PabloMK7 _(runs Homebrew Launcher, for 3DSX format homebrew)_
-- **Anemone3DS** by astronautlevel2 _(installs custom themes, splashes, and badges)_
-- **Checkpoint** by BernardoGiordano/FlagBrew _(manages 3DS/DS game save data)_
-- **ftpd** by mtheall _(allows wireless 3DS SD card access over FTP)_
-- **Universal-Updater** by Universal-Team _(on-device app store for downloading homebrew over Wi-Fi)_
-- **GodMode9** by d0k3 _(multipurpose tool for extracting data from internal memory or cartridges)_
+- **FBI** von Steveice10 _(installiert Anwendungen im CIA Format)_
+- **Homebrew Launcher Loader** von PabloMK7 _(startet den Homebrew Launcher zum Ausführen von Homebrew im 3DSX Format)_
+- **Anemone3DS** von astronautlevel2 _(installiert benutzerdefinierte Designs, Splashes und Marken)_
+- **Checkpoint** von BernardoGiordano/FlagBrew _(verwaltet Speicherdaten von 3DS/DS Spielen)_
+- **ftpd** von mtheall _(erlaubt drahtlosen Zugriff auf die SD-Karte vom 3DS über FTP)_
+- **Universal-Updater** von Universal-Team _(App-Store auf der Konsole zum Herunterladen von Homebrew über WLAN)_
+- **GodMode9** von d0k3 _(Multifunktionstool zum Extrahieren von Daten aus dem internen Speicher oder Spielkarten)_
 
-If you don't want one of these applications, you can remove them after you have finished this page by navigating to System Settings -> Data Management -> Nintendo 3DS -> Software. (GodMode9 cannot be removed in this way and is generally required for other functions.)
+Wenn du eine dieser Anwendungen nicht möchtest, kannst du sie nach Befolgen dieser Anleitung entfernen, indem du dich zu Systemeinstellungen -> Datenverwaltung -> Nintendo 3DS -> Software begibst. (GodMode9 kann auf diese Weise nicht entfernt werden und wird in der Regel für andere Zwecke benötigt.)
 
-::: details Source code links (optional)
+::: details Quellcode-Links (optional)
 
-All applications installed on this guide are open-source. If you are interested in seeing how they work, or would like to leave a star to show your appreciation, their source code is linked here:
+Alle in dieser Anleitung installierten Anwendungen sind Open-Source. Wenn du dich dafür interessierst, wie sie funktionieren, oder wenn du als Dankeschön einen Stern geben möchtest, ist der Quellcode hier verlinkt:
 
-- [FBI](https://github.com/lifehackerhansol/FBI)
+- [FBI](https://github.com/nh-server/FBI-NH)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
 - [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
 - [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)
@@ -34,7 +34,7 @@ All applications installed on this guide are open-source. If you are interested 
 
 :::
 
-## Compatibility Notes
+## Kompatibilitätshinweise
 
 ::: info
 

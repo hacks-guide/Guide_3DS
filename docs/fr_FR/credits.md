@@ -1,23 +1,23 @@
-# Remerciements
+# Crédits
 
-This guide is currently maintained by: **lifehackerhansol, lilyuwuu, eip618, ihaveamac, and adrot**, with additional significant contributions from **Gruetzig, danny8376, MechanicalDragon0687, and the various #community-resources members** who provide valuable input.
+Ce guide est actuellement maintenu par : **lifehackerhansol, lilyuwuu, eip618, ihaveamac et adrot**, avec des contributions significatives supplémentaires de **Gruetzig, danny8376, MechanicalDragon0687 et les différents membres de #community-resources** qui fournissent une contribution précieuse.
 
-This guide uses homebrew software developed by **SciresM, TuxSH, AuroraWright, devkitPro, d0k3, PabloMK7, astronautlevel2, BernardoGiordano, mtheall, Universal-Team, ntrteam, jason0597, Steveice10 and MechanicalDragon0687**, as well as exploits authored/discovered by **SciresM, zoogie, luigoalma, PabloMK7, TuxSH, MrNbaYoh, nedwill, and plutooo**.
+Ce guide utilise des logiciels homebrew développés par **SciresM, TuxSH, AuroraWright, devkitPro, d0k3, PabloMK7, astronautlevel2, BernardoGiordano, mtheall, Universal-Team, ntrteam, jason0597, Steveice10 et MechanicalDragon0687**, ainsi que des exploits créés/découverts par **SciresM, zoogie, luigoalma, PabloMK7, TuxSH, MrNbaYoh, nedwill, et plutooo**.
 
-If we forgot to add you to this list of credits, [let us know](https://github.com/hacks-guide/Guide_3DS/issues)!
+Si nous avons oublié de vous ajouter à cette liste, [faites-le nous savoir](https://github.com/hacks-guide/Guide_3DS/issues)!
 
 ::: info
 
-**Special thanks to:**
+**Remerciements particuliers à :**
 
-- **Plailect**, the original creator and maintainer of this guide
-- [The guide translators](https://crowdin.com/project/3ds-guide), who make this guide more accessible around the world
-- Anyone who has ever submitted an issue, pull request, or otherwise informed us about problems on this guide
-- The historical contributors to this guide, without whom this guide would not exist today
+- **Plailect**, le créateur et mainteneur originel de ce guide
+- [Les traducteurs du guide](https://crowdin.com/project/3ds-guide), qui rendent ce guide plus accessible à travers le monde
+- Quiconque ayant déjà soumis une issue, une pull request ou nous a informé autrement de problèmes de ce guide
+- Les contributeurs historiques de ce guide, sans qui ce guide n'existerait pas aujourd'hui
 
 :::
 
-:::details Historical contributors
+:::details Contributeurs historiques
 
 ```
 + #Cakey on freenode

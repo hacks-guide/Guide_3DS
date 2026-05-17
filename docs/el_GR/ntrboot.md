@@ -2,7 +2,7 @@
 
 ::: tip
 
-Εάν η flashcart σας έχει προφορτωμένο το ntrboot (ή έαν το έχετε ήδη φορτώσει στη flashcart σας), μπορείτε να μεταβείτε στην [Εγκατάσταση του boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\)) για οδηγίες σχετικά με τη χρήση του.
+Εάν η flashcart σας έχει προφορτωμένο το ntrboot (ή έαν το έχετε ήδη φορτώσει στη flashcart σας), μπορείτε να μεταβείτε στην [Εγκατάσταση του boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) για οδηγίες σχετικά με τη χρήση του.
 
 :::
 
@@ -71,7 +71,7 @@ ___
 
 ::: tip
 
-Συνέχεια στη [Φόρτωση του ntrboot (ένα σύστημα 3DS)](flashing-ntrboot-\(3ds-single-system\))
+Συνέχεια στη [Φόρτωση του ntrboot (ένα σύστημα 3DS)](flashing-ntrboot-(3ds-single-system))
 
 :::
 
@@ -83,7 +83,7 @@ ___
 
 ::: tip
 
-Συνέχεια στη [Φόρτωση του ntrboot (πολλαπλά συστήματα 3DS)](flashing-ntrboot-\(3ds-multi-system\))
+Συνέχεια στη [Φόρτωση του ntrboot (πολλαπλά συστήματα 3DS)](flashing-ntrboot-(3ds-multi-system))
 
 :::
 
@@ -95,7 +95,7 @@ ___
 
 ::: tip
 
-Συνέχεια στη [Φόρτωση του ntrboot (NDS)](flashing-ntrboot-\(nds\))
+Συνέχεια στη [Φόρτωση του ntrboot (NDS)](flashing-ntrboot-(nds))
 
 :::
 
@@ -107,6 +107,6 @@ ___
 
 ::: tip
 
-Συνέχεια στη [Φόρτωση του ntrboot (DSi)](flashing-ntrboot-\(dsi\))
+Συνέχεια στη [Φόρτωση του ntrboot (DSi)](flashing-ntrboot-(dsi))
 
 :::

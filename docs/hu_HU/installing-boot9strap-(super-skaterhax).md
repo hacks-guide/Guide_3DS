@@ -1,10 +1,5 @@
 ---
-head:
-  [
-    [ 'script', { src: '/assets/js/common.js' } ],
-    [ 'script', { src: '/assets/js/skater-link.js' } ],
-    [ 'script', { src: '/assets/js/link-common.js' } ]
-  ]
+head: [ [ 'script', { src: '/assets/js/common.js' } ], [ 'script', { src: '/assets/js/skater-link.js' } ], [ 'script', { src: '/assets/js/link-common.js' } ] ]
 ---
 
 # Boot9strap telepítése (super-skaterhax)
@@ -21,7 +16,7 @@ A super-skaterhax (ami a Homebrew Launcher indítására használt) kompatibilis
 
 ::: info
 
-Erről az expliotról ismert, hogy inkonzisztens: működik egyeseknek, de nem másoknak. Ha egy sokkal konzisztensebb megoldás használatát preferálod (ami tovább tart, de ugyanaz lesz a végeredménye), akkor használd az [MSET9](installing-boot9strap-\(mset9\)) metódust helyette.
+Erről az expliotról ismert, hogy inkonzisztens: működik egyeseknek, de nem másoknak. Ha egy sokkal konzisztensebb megoldás használatát preferálod (ami tovább tart, de ugyanaz lesz a végeredménye), akkor használd az [MSET9](installing-boot9strap-(mset9)) metódust helyette.
 
 :::
 
@@ -103,10 +98,10 @@ Egy videó ami részletesen bemutatja a lépéseket elérhető [itt](https://www
     - **Egy fehér "Error has occurred" üzenetdoboz**: Az exploit sikertelen volt egy véletlen esély miatt. Nyisd meg a System Settings-t és módosítsd a nyelvet egy másikra (ha lehetséges) majd próbáld újra ezt a részt. Elképzelhető, hogy tízszer is meg kell ismételned ezt a részt
       - A JPN/KOR régiós konzolokon csak egy nyelv van a beállításokban. Ezeken a konzolokon meg kell nyitnod a System Settings-t, majd bezárnod és újra próbálnod ezt a részt
       - Ha az exploit sikertelen volt több, mint öt alkalommal, lehet, hogy problémák vannak a fájljaiddal vagy az előkészületekkel. Ügyelj arra, hogy a régió és a dátum/idő helyes legyen, és hogy ezt a részt **pontosan** követed. Ha WinRAR-t használtál a fájlok kicsomagolásához az SD kártyára, akkor csomagold ki újra azokat a Fájlkezelő vagy a 7-zip programmal helyette
-      - Ha az exploit tíz próbálkozást követően még mindig sikertelen, kövesd az [MSET9](installing-boot9strap-\(mset9\))-et helyette
+      - Ha az exploit tíz próbálkozást követően még mindig sikertelen, kövesd az [MSET9](installing-boot9strap-(mset9))-et helyette
     - **Egy fekete képernyő mondja "An error has occurred"**: A fájlok nem jó helyre lettek rakva. Biztosítsd, hogy a super-skaterhax fájlok az SD kártya gyökerébe kerüljenek
     - **Egy sárga képernyő**: Homebrew Launcher véletlen esély miatt nem tudott megnyílni. Tartsd nyomva a POWER gombot, amíg ki nem kapcsol a konzol, és próbáld újra ezt a részt
-    - **[A "Text"szöveg](/images/screenshots/skaterhax/skater-old3ds.png)**: Old 3DS-ed van és ez az exploit **nem fog működni**. Ha ez az eset, használd az [MSET9](installing-boot9strap-\(mset9\))-et helyette
+    - **[A "Text"szöveg](/images/screenshots/skaterhax/skater-old3ds.png)**: Old 3DS-ed van és ez az exploit **nem fog működni**. Ha ez az eset, használd az [MSET9](installing-boot9strap-(mset9))-et helyette
 17. Indítsd el a nimdsphax-et a homebrew listájáról
 18. Ha az exploit sikerrel járt, készüléked bebootolja a SafeB9SInstallert
     - Ha a konzolod lefagy egy vörös vagy zöld képernyőn, tartsd nyomva a POWER gombot, amíg ki nem kapcsol, és próbáld újra ezt a részt

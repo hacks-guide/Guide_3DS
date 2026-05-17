@@ -6,7 +6,7 @@ Esta es una sección adicional para formatear tu tarjeta SD de manera que funcio
 
 Si la 3DS ya reconoce la tarjeta SD, entonces esta guía no es necesaria.
 
-Esta página es solo para usuarios de Windows. Si no estas usando Windows, revisa las páginas [Formatear una tarjeta SD (Linux)](formatting-sd-\(linux\)), o [Formatear una tarjeta SD (Mac)](formatting-sd-\(mac\)).
+Esta página es solo para usuarios de Windows. Si no estas usando Windows, revisa las páginas [Formatear una tarjeta SD (Linux)](formatting-sd-(linux)), o [Formatear una tarjeta SD (Mac)](formatting-sd-(mac)).
 
 ## Lo que necesitas
 

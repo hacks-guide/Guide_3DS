@@ -1,8 +1,8 @@
-# Updating B9S
+# Mise à jour de B9S
 
-## Lecture Requise
+## Lecture requise
 
-This page is for existing boot9strap users to update their installation of boot9strap to the latest version.
+Cette page s'adresse aux utilisateurs existants de boot9strap afin de mettre à jour leur installation de boot9strap vers la dernière version.
 
 ## Ce dont vous avez besoin
 
@@ -16,14 +16,14 @@ This page is for existing boot9strap users to update their installation of boot9
 
 ::: info
 
-For all steps in this section, overwrite any existing files on your SD card.
+Pour toutes les étapes de cette section, remplacez tous les fichiers existants sur votre carte SD.
 
 :::
 
 1. Insérez votre carte SD dans votre ordinateur
 2. Créez un dossier nommé `boot9strap` à la racine de votre carte SD
-3. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis le fichier ".zip" de boot9strap vers le dossier `/boot9strap/` sur votre carte SD
-4. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the root of your SD card and rename it to `boot.firm`
+3. Copiez `boot9strap.firm` et `boot9strap.firm.sha` depuis l'archive boot9strap `.zip` vers le dossier `/boot9strap/` sur votre carte SD
+4. Copiez `SafeB9SInstaller.firm` depuis l'archive SafeB9SInstaller`.zip` vers la racine de votre carte SD et renommez-le en `boot.firm`
 5. Réinsérez votre carte SD dans votre console
 
    ::: info
@@ -32,24 +32,24 @@ For all steps in this section, overwrite any existing files on your SD card.
 
    :::
 
-### Section II - Installing boot9strap
+### Section II - Installation de boot9strap
 
 1. Allumez votre console
-   - This should automatically launch SafeB9SInstaller
-2. Lorsque vous y êtes invité, entrez la combinaison de touches indiquée sur l'écran supérieur pour installer boot9strap
-   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-updating-b9s)
-3. Once it is completed, force your console to power off by holding down the power button
-   - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
+   - Cela devrait automatiquement lancer SafeB9SInstaller
+2. Lorsque vous y êtes invité, entrez la combinaison de boutons donnée sur l'écran du haut pour installer boot9strap
+   - Dans le cas où un message en rouge apparaîtrait lors d'une étape sur l'écran du bas et que vous n'êtes pas sollicité pour saisir une combinaison de boutons, [suivez ce guide de dépannage](troubleshooting-updating-b9s)
+3. Une fois terminé, forcez votre console à s'éteindre en maintenant le bouton Power enfoncé
+   - Votre console ne démarrera que sur l'écran SafeB9SInstaller jusqu'à ce que la section suivante soit complétée
 
-### Section III - Update Luma3DS
+### Section III - Mise à jour de Luma3DS
 
 1. Insérez votre carte SD dans votre ordinateur
-2. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
+2. Copiez tout depuis l'archive Luma3DS `.zip` vers la racine de votre carte SD, en remplaçant les fichiers existants
 3. Réinsérez votre carte SD dans votre console
 4. Allumez votre console
-5. If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot
-   - Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
-   - For the purpose of this guide, these settings will be left on default settings
+5. Si votre console a démarré dans le menu de configuration de Luma3DS, appuyez sur (Start) pour enregistrer et redémarrer
+   - Le menu de configuration de Luma3DS sont les paramètres du custom firmware Luma3DS. Beaucoup de ces paramètres peuvent être utiles pour la personnalisation ou le débogage
+   - Pour les besoins de ce guide, ces paramètres seront laissés par défaut
 
 ___
 

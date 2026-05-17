@@ -38,6 +38,7 @@ export default defineConfig({
   locales: {
     root: i18n.en_US,
     el_GR: i18n.el_GR,
+    fr_FR: i18n.fr_FR,
     hu_HU: i18n.hu_HU,
     it_IT: i18n.it_IT,
     ko_KR: i18n.ko_KR,
@@ -98,7 +99,6 @@ export default defineConfig({
     'es_ES/**',
     'et_EE/**',
     'fi_FI/**',
-    'fr_FR/**',
     'he_IL/**',
     'hr_HR/**',
     'id_ID/**',

@@ -2,7 +2,7 @@
 
 ::: tip
 
-Als je flashkaart al geflashed is met ntrboot bij aankoop (of je hebt je flashkaart al geflashed met ntrboot), kan je doorgaan naar [Boot9strap installeren (ntrboot)](installing-boot9strap-\(ntrboot\)) voor instructies over hoe het te gebruiken.
+Als je flashkaart al geflashed is met ntrboot bij aankoop (of je hebt je flashkaart al geflashed met ntrboot), kan je doorgaan naar [Boot9strap installeren (ntrboot)](installing-boot9strap-(ntrboot)) voor instructies over hoe het te gebruiken.
 
 :::
 
@@ -71,7 +71,7 @@ Deze methode vereist niets meer dan je stock, unhacked 3DS en een compatibele fl
 
 ::: tip
 
-Ga verder naar [ntrboot installeren (3DS 1 systeem)](flashing-ntrboot-\(3ds-single-system\))
+Ga verder naar [ntrboot installeren (3DS 1 systeem)](flashing-ntrboot-(3ds-single-system))
 
 :::
 
@@ -83,7 +83,7 @@ This method requires temporary access to a second 3DS family console that is alr
 
 ::: tip
 
-Ga verder naar [ntrboot installeren (3DS meerdere systemen)](flashing-ntrboot-\(3ds-multi-system\))
+Ga verder naar [ntrboot installeren (3DS meerdere systemen)](flashing-ntrboot-(3ds-multi-system))
 
 :::
 
@@ -95,7 +95,7 @@ Met deze methode heb je tijdelijk toegang nodig tot een Nintendo DS of een Ninte
 
 ::: tip
 
-Ga verder naar [ntrboot installeren (NDS)](flashing-ntrboot-\(nds\))
+Ga verder naar [ntrboot installeren (NDS)](flashing-ntrboot-(nds))
 
 :::
 
@@ -107,6 +107,6 @@ Voor deze methode heb je tijdelijk toegang nodig tot een Nintendo DSi die werkt 
 
 ::: tip
 
-Ga verder naar [ntrboot installeren (DSi)](flashing-ntrboot-\(dsi\))
+Ga verder naar [ntrboot installeren (DSi)](flashing-ntrboot-(dsi))
 
 :::

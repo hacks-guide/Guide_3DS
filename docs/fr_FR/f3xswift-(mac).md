@@ -1,48 +1,48 @@
 # F3XSwift (Mac)
 
-## Lecture Requise
+## Lecture requise
 
-This is an add-on section for checking your SD card for errors using F3XSwift.
+Ceci est une section complémentaire sur comment vérifier si votre carte SD ne contient pas d'erreurs avec F3XSwift.
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+Selon la taille de votre carte SD et la vitesse de votre ordinateur, ce processus peut prendre jusqu'à plusieurs heures !
 
-This page is for Mac users only. If you are not on Mac, check out the [H2testw (Windows)](h2testw-\(windows\)) or [F3 (Linux)](f3-\(linux\)) pages.
+Cette page est seulement pour les utilisateurs de Mac. Si vous n'utilisez pas un Mac, jetez un œil aux pages [H2testw (Windows)](h2testw-(windows)) ou [F3 (Linux)](f3-(linux)).
 
 ::: info
 
-F3XSwift is only compatible with macOS 10.13 (High Sierra) and above. If you have an older version of macOS, follow [F3X (Mac)](f3x-\(mac\)) instead.
+F3XSwift est compatible uniquement avec macOS 10.13 (High Sierra) ou ultérieur. Si vous avez une version de macOS plus ancienne, suivez plutôt [F3X (Mac)](f3x-(mac)).
 
 :::
 
 ## Ce dont vous avez besoin
 
-- The latest release of [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
+- La dernière version de [F3XSwift](https://github.com/vrunkel/F3XSwift/releases/latest)
 
 ## Instructions
 
 1. Insérez votre carte SD dans votre ordinateur
-2. Run the F3XSwift app
-3. Select your SD card from the list of volumes
-4. Click "Test"
-5. Click "Open" to confirm writing to your SD card
-6. Wait until the process is complete
+2. Exécutez l'appli F3XSwift
+3. Sélectionnez votre carte SD de la liste des volumes
+4. Cliquez sur "Test"
+5. Cliquez sur "Open" pour confirmer l'écriture sur votre carte SD
+6. Attendez que le processus soit terminé
 
 ___
 
 ::: tip
 
-If the test shows the result `Success! Your card is ok!`, your SD card is good and you can delete all `.h2w` files on your SD card.
+Si le test affiche le résultat `Success! Your card is ok!`, votre carte SD est saine et vous pouvez supprimer tous les fichiers `.h2w` sur la carte SD.
 
 :::
 
 ::: danger
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+Si le test montre un autre résultat, votre carte SD est peut-être corrompue ou endommagée et vous devrez peut-être la remplacer !
 
 :::
 
 ::: tip
 
-Return to [Get Started](get-started)
+Retourner à [Pour commencer](get-started)
 
 :::

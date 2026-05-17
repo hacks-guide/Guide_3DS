@@ -16,7 +16,7 @@
 
 :::details I am on the latest system version. Is my console hackable without any external hardware/prerequisites?
 
-**Yes!** New 3DS / New 3DS XL / New 2DS XL can use [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), while 3DS / 3DS XL / 2DS can use [MSET9](installing-boot9strap-\(mset9\)).
+**Yes!** New 3DS / New 3DS XL / New 2DS XL can use [super-skaterhax](installing-boot9strap-(super-skaterhax)), while 3DS / 3DS XL / 2DS can use [MSET9](installing-boot9strap-(mset9)).
 
 :::
 
@@ -82,7 +82,7 @@ You will need at least 1.5GB of free SD card space to follow this guide in its e
 
 You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
 
-If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
+If you've purchased a new SD card for use with your console, you should format the new SD card ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))), then copy and paste everything from your old SD card to the new SD card. You can do this before or after you've modded the console.
 
 :::
 
@@ -112,7 +112,7 @@ If you are using Luma3DS, your custom firmware loader (boot9strap) will _never_ 
 
 :::details How do I upgrade my SD card?
 
-Copy and paste your SD card contents to a new SD card formatted as FAT32. Voor SD-kaarten die groter zijn dan 128GB, wordt een allocation size van 65536 aanbevolen. SD-kaarten groter dan 128 GB worden niet aanbevolen als gevolg van bekende problemen met GBA beelden en custom themes. Specific formatting instructions are available here: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
+Copy and paste your SD card contents to a new SD card formatted as FAT32. Voor SD-kaarten die groter zijn dan 128GB, wordt een allocation size van 65536 aanbevolen. SD-kaarten groter dan 128 GB worden niet aanbevolen als gevolg van bekende problemen met GBA beelden en custom themes. Specific formatting instructions are available here: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)).
 
 :::
 

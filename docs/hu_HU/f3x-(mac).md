@@ -6,11 +6,11 @@ Ez egy kiegészítő rész, amelyben F3X segítségével keresünk hibákat az S
 
 Az SD kártyád méretétől és a számítógéped sebességétől függően ez a folyamat több óráig is eltarthat!
 
-Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac-ed van, nézd meg a [H2testw (windows)](h2testw-\(windows\)) vagy az [F3 (Linux)](f3-\(linux\)) oldalt.
+Ez az oldal Mac felhasználókra vonatkozik. Ha nem Mac-ed van, nézd meg a [H2testw (windows)](h2testw-(windows)) vagy az [F3 (Linux)](f3-(linux)) oldalt.
 
 ::: info
 
-Ha Mac-et használsz macOS 10.13 (High Sierra) vagy újabb verzióval, akkor kövesd az [F3XSwift (Mac)](f3xswift-\(mac\)) útmutatót helyette.
+Ha Mac-et használsz macOS 10.13 (High Sierra) vagy újabb verzióval, akkor kövesd az [F3XSwift (Mac)](f3xswift-(mac)) útmutatót helyette.
 
 :::
 

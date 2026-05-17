@@ -18,13 +18,20 @@ Before starting this guide, we will see if custom firmware is already installed 
 ### Section I - CFW Check
 
 1. 将主机关机
-2. 按住 “Select” 键
-3. Power on your console while still holding the (Select) button
-4. If you do not see a custom menu (your console just boots to the HOME Menu), you may proceed to the next section
+2. Insert your SD card into your console
+3. 按住 “Select” 键
+4. Power on your console while still holding the (Select) button
+5. If you do not see a custom menu (your console just boots to the HOME Menu), you may proceed to the next section
 
 ::: warning
 
 If you see the Luma3DS configuration screen or any other custom menu (e.g. GodMode9, Decrypt9WIP), STOP - you already have custom firmware! [点这里继续](checking-for-cfw#what-to-do-next)。
+
+:::
+
+::: warning
+
+If, when the console boots to the HOME Menu, you see the error "Could not detect an SD card", ensure that your SD card is properly formatted: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))
 
 :::
 

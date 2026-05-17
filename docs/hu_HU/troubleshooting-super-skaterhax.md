@@ -48,7 +48,7 @@ Ez valószínűleg azt jelzi, hogy már van egyedi firmware-ed. Érdemes elvége
 
 :::details Error 032-1035 amikor próbálod a skaterhax weboldalt megtekinteni
 
-Az internet kapcsolatod blokkolja a hozzáférést a weboldalhoz. Ha lehetséges próbálkozz egy mobil hotspottal. Ha nincs másik internet kapcsolatod elérhető, kövesd az [MSET9](installing-boot9strap-\(mset9\))-et helyette.
+Az internet kapcsolatod blokkolja a hozzáférést a weboldalhoz. Ha lehetséges próbálkozz egy mobil hotspottal. Ha nincs másik internet kapcsolatod elérhető, kövesd az [MSET9](installing-boot9strap-(mset9))-et helyette.
 
 :::
 
@@ -66,7 +66,7 @@ Az internet kapcsolatod blokkolja a hozzáférést a weboldalhoz. Ha lehetséges
 
 ::: tip
 
-Vissza a [Boot9strap telepítése (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))-hez
+Vissza a [Boot9strap telepítése (super-skaterhax)](installing-boot9strap-(super-skaterhax))-hez
 
 :::
 

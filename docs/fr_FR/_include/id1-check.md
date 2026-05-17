@@ -1,6 +1,6 @@
-This occurs when you use multiple SD cards with the same 3DS and then merge the SD card contents together. Both are "valid", but the 3DS can only read one at a time.
+Cela se produit lorsque vous utilisez plusieurs cartes SD avec la même 3DS, puis que vous fusionnez le contenu des cartes SD ensemble. Les deux sont "valides", mais la 3DS ne peut en lire qu'un à la fois.
 
-You will need to determine which one contains your data. First of all, back up all of the folders, in case something goes wrong:
+Vous devrez déterminer quel dossier contient vos données. Tout d'abord, sauvegardez tous les dossiers, au cas où quelque chose tournerait mal :
 
 ::: info
 
@@ -8,7 +8,7 @@ You will need to determine which one contains your data. First of all, back up a
 
 :::
 
-Now, delete all but one of the folders from your SD card. Generally, you will want to delete the **smallest** one(s), as the one with all your data will probably have more space occupied. You can compare which folder is occupying more space by right-clicking it and clicking "Properties":
+Maintenant, supprimez tous les dossiers, sauf un, de votre carte SD. Généralement, vous voudrez supprimer le(s) **plus petit(s)**, car celui avec toutes vos données aura probablement plus d'espace occupé. Vous pouvez comparer quel dossier occupe plus d'espace en cliquant dessus avec le bouton droit de la souris et en cliquant sur "Propriétés" :
 
 ::: info
 
@@ -22,7 +22,7 @@ Now, delete all but one of the folders from your SD card. Generally, you will wa
 
 :::
 
-Your SD card should now look something like this:
+Votre carte SD devrait maintenant ressembler à ceci :
 
 ::: info
 
@@ -30,4 +30,4 @@ Your SD card should now look something like this:
 
 :::
 
-Now, put your SD card into your 3DS and turn it on. If your data is still there, you deleted the right folder and have now determined your correct ID1. If everything has disappeared, go back into the backup folder that you made earlier and try the other folder.
+Maintenant, mettez votre carte SD dans votre 3DS et allumez-la. Si vos données sont toujours là, vous avez supprimé le bon dossier et vous avez maintenant déterminé votre ID1 correct. Si tout a disparu, retournez dans le dossier de sauvegarde que vous avez fait précédemment et essayez l'autre dossier.

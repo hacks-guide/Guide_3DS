@@ -6,7 +6,7 @@ Ez egy kiegészítő rész az SD kártya formázásához, hogy az működjön a 
 
 Ha a 3DS már felismeri az SD kártyát, ez az útmutató nem szükséges.
 
-Ez az oldal Linux felhasználókra vonatkozik. Ha nem Linux rendszeren vagy, kövesd az [SD formázás (Windows)](formatting-sd-\(windows\)) vagy [SD formázás (Mac)](formatting-sd-\(mac\)) útmutatókat.
+Ez az oldal Linux felhasználókra vonatkozik. Ha nem Linux rendszeren vagy, kövesd az [SD formázás (Windows)](formatting-sd-(windows)) vagy [SD formázás (Mac)](formatting-sd-(mac)) útmutatókat.
 
 ## Lépések
 

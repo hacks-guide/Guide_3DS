@@ -44,9 +44,22 @@ Na maioria dos casos você pode seguir este guia desde que você consiga baixar 
 
 :::
 
-O local de inserção do cartão SD e tipo de cartão SD aceito dependem do modelo de seu 3DS. Mais informações podem ser encontradas na [página oficial de suporte da Nintendo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card).
+O local de inserção do cartão SD e tipo de cartão SD aceito dependem do modelo de seu 3DS. Mais informações podem ser encontradas na [página oficial de suporte da Nintendo](https://en-americas-support.nintendo.com/app/answers/detail/a_id/271/~/how-to-insert-an-sd-card-or-microsd-card). Note that on New 3DS and New 3DS XL consoles, you will need a screwdriver (JIS 00) to access the microSD card, which is located under the backplate.
 
-O 3DS pode ler cartões SD de qualquer capacidade (mesmo os maiores que 32GB), mas o cartão precisa estar formatado como FAT32 (**não** como exFAT ou NTFS). Você pode usar uma das ferramentas a seguir para formatar seu cartão SD, dependendo do seu sistema operacional: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). Cartões SD maiores que **128GB** não são recomendados devido a problemas conhecidos com temas personalizados e gráficos de GBA/DS.
+Your (micro)SD card should conform to the following requirements:
+
+- **Brand**: Any name brand (SanDisk, Samsung, Kingston, Lexar, PNY, etc.)
+  - Beware of fake or illegitimate SD cards (e.g. Memory SD, PRO PLUS, SanDian, Extreme Pro), particularly those purchased from online marketplaces like AliExpress. See [here](https://www.flashcarts.net/microsd-fakes) for a guide on spotting fake SD cards. Using a fake or illegitimate SD card is very likely to result in things not working, or even **data loss**!
+- **Capacity**: Between 2GB and 128GB (inclusive)
+  - These cards will be labelled SD (<=2GB), SDHC (4GB-32GB), or SDXC (64GB+)
+  - Cards smaller than 2GB are insufficient due to the minimum size of a NAND dump (around 1GB), which is made at the end of this guide as a safety measure
+  - Cards 200GB or larger will still work, but are not recommended due to possible issues with DS/GBA graphics and custom themes
+- **Speed**: Any
+  - Currently, the cheapest cards on the market are **Class 10** (e.g. SanDisk Ultra). Faster cards are acceptable, but the 3DS cannot take advantage of their speed
+- **Format**: FAT32 with MBR
+  - Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
+
+For consoles that use a full-size SD card, a microSD card in an SD card adapter will work identically.
 
 ::: info
 
@@ -54,15 +67,9 @@ O 3DS pode ler cartões SD de qualquer capacidade (mesmo os maiores que 32GB), m
 
 :::
 
-::: warning
-
-Para seguir este guia, você precisará de um cartão SD com capacidade de pelo menos **2GB**.
-
-:::
-
 ::: info
 
-Se você quiser, você pode verificar erros no seu cartão SD antes de seguir este guia usando [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), ou [F3XSwift (Mac)](f3xswift-\(mac\)).
+If you want, you can check your SD card for errors/legitimacy before following this guide using [H2testw](h2testw-(windows))/[ValiDrive](https://www.grc.com/validrive.htm) (Windows), [F3 (Linux)](f3-(linux)), or [F3XSwift (Mac)](f3xswift-(mac)).
 
 :::
 
@@ -140,11 +147,11 @@ Alguns dos arquivos que você deverá baixar vêm no formato de arquivo `.zip`, 
 
 Quando dizem para "copiar (arquivo) de (arquivo).zip" significa que você precisa abrir (ou "extrair") o arquivo ZIP. Dentro do arquivo ZIP estará o arquivo que você precisará e poderá copiá-lo para o local especificado do seu cartão SD.
 
-Na maioria dos sistemas operacionais, você pode extrair arquivos clicando duas vezes no arquivo. Se isso não funcionar, você pode instalar uma ferramenta de extração confiável de terceiros como o [7-zip](https://7-zip.org/).
+Na maioria dos sistemas operacionais, você pode extrair arquivos clicando duas vezes no arquivo. If this doesn't work, you can install a reputable third-party extraction tool like [7-Zip](https://7-zip.org/) instead.
 
 ::: warning
 
-O aplicativo para Windows "WinRAR" é conhecido especificamente por causar problemas de compatibilidade com o 3DS, particularmente com a instalação de custom firmware. Se estiver em um computador do Windows, use o Gerenciador de Arquivos padrão ou o 7-zip para extrair arquivos.
+O aplicativo para Windows "WinRAR" é conhecido especificamente por causar problemas de compatibilidade com o 3DS, particularmente com a instalação de custom firmware. If you are on a Windows computer, you should use either the default File Explorer or 7-Zip to extract files.
 
 :::
 
@@ -158,7 +165,21 @@ O aplicativo para Windows "WinRAR" é conhecido especificamente por causar probl
 
 :::
 
-Se seu computador for Windows, as extensões do arquivo podem estar ocultas por padrão, o que pode dificultar para achar os arquivos. Para exibir as extensões de arquivos, siga [estas instruções](file-extensions-\(windows\)).
+Se seu computador for Windows, as extensões do arquivo podem estar ocultas por padrão, o que pode dificultar para achar os arquivos. Para exibir as extensões de arquivos, siga [estas instruções](file-extensions-(windows)).
+
+::::
+
+:::: details What does it mean to "eject" an SD card?
+
+::: info
+
+![](/images/screenshots/onboarding/eject-windows.png)
+
+:::
+
+On most devices, your file manager will have an Eject (⏏️) button for your SD card. Using this option safely stops all activity and unmounts the card so it can be removed.
+
+This is **very** important because removing the SD card while it is in use can cause corruption and may negatively affect the outcome of exploits when modding your 3DS.
 
 ::::
 

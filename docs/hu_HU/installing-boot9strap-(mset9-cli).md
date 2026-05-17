@@ -10,13 +10,13 @@ Az [MSET9](https://github.com/zoogie/MSET9) egy exploit a System Setting alkalma
 
 ::: warning
 
-Ez a metódus Windows, Linux vagy MacOS számítógépet igényel. Ha Android telefonod/tableted vagy Chromebook-od van, kövesd a [Boot9strap telepítése (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)) oldalt helyette. Ha iPhone vagy iPad készüléked van, kövesd a [Boot9strap telepítése (MSET9 CLI iOS)](installing-boot9strap-\(mset9-cli-ios\)) oldalt helyette. Ha nem férsz hozzá ezen eszközök egyikéhez sem, akkor [alternatív exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) kell használnod.
+Ez a metódus Windows, Linux vagy MacOS számítógépet igényel. Ha Android telefonod/tableted vagy Chromebook-od van, kövesd a [Boot9strap telepítése (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)) oldalt helyette. Ha iPhone vagy iPad készüléked van, kövesd a [Boot9strap telepítése (MSET9 CLI iOS)](installing-boot9strap-(mset9-cli-ios)) oldalt helyette. Ha nem férsz hozzá ezen eszközök egyikéhez sem, akkor [alternatív exploit](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) kell használnod.
 
 :::
 
 ::: info
 
-Ha egy Android-eszközt használsz SD-kártya adapterként a számítógépedhez, akkor az Android fájlátviteli protokoll (MTP) inkompatibilitása miatt nem tudod követni ezt az oldalt. Ha ez az eset, használd [Boot9strap telepítése (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)) módszert helyette.
+Ha egy Android-eszközt használsz SD-kártya adapterként a számítógépedhez, akkor az Android fájlátviteli protokoll (MTP) inkompatibilitása miatt nem tudod követni ezt az oldalt. Ha ez az eset, használd [Boot9strap telepítése (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)) módszert helyette.
 
 :::
 

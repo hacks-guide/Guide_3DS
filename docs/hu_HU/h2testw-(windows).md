@@ -6,7 +6,7 @@ Ez egy kiegészítő rész, amelyben h2testw segítségével keresünk hibákat 
 
 Az SD kártyád méretétől és a számítógéped sebességétől függően ez a folyamat több óráig is eltarthat!
 
-Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windowsod van, nézd meg az [F3 (Linux)](f3-\(linux\)) vagy az [F3X (Mac)](f3x-\(mac\)) oldalt.
+Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windowsod van, nézd meg az [F3 (Linux)](f3-(linux)) vagy az [F3X (Mac)](f3x-(mac)) oldalt.
 
 ## Amire szükséged lesz
 

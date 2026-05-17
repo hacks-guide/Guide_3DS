@@ -2,7 +2,7 @@
 
 ::: tip
 
-Se la tua flashcart ha installato nativamente ntrboot (o se hai già installato ntrboot nella tua flashcart), puoi saltare direttamente all'[Installazione di boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\)).
+Se la tua flashcart ha installato nativamente ntrboot (o se hai già installato ntrboot nella tua flashcart), puoi saltare direttamente all'[Installazione di boot9strap (ntrboot)](installing-boot9strap-(ntrboot)).
 
 :::
 
@@ -71,7 +71,7 @@ Questo metodo richiede soltanto un 3DS non ancora modificato e una flashcart com
 
 ::: tip
 
-Prosegui con il [Flash di ntrboot (Singolo 3DS)](flashing-ntrboot-\(3ds-single-system\))
+Prosegui con il [Flash di ntrboot (Singolo 3DS)](flashing-ntrboot-(3ds-single-system))
 
 :::
 
@@ -83,7 +83,7 @@ Questo metodo richiede l'accesso temporaneo ad una seconda console su cui è ins
 
 ::: tip
 
-Prosegui con il [Flash di ntrboot (Con più 3DS)](flashing-ntrboot-\(3ds-multi-system\))
+Prosegui con il [Flash di ntrboot (Con più 3DS)](flashing-ntrboot-(3ds-multi-system))
 
 :::
 
@@ -95,7 +95,7 @@ Questo metodo richiede momentaneamente l'utilizzo di un Nintendo DS o DS Lite co
 
 ::: tip
 
-Prosegui con il [Flash di ntrboot (NDS)](flashing-ntrboot-\(nds\))
+Prosegui con il [Flash di ntrboot (NDS)](flashing-ntrboot-(nds))
 
 :::
 
@@ -107,6 +107,6 @@ Questo metodo richiede momentaneamente l'utilizzo di un Nintendo DSi compatibile
 
 ::: tip
 
-Prosegui con il [Flash di ntrboot (DSi)](flashing-ntrboot-\(dsi\))
+Prosegui con il [Flash di ntrboot (DSi)](flashing-ntrboot-(dsi))
 
 :::

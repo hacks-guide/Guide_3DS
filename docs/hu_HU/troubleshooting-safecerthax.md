@@ -14,7 +14,7 @@ Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz
 
 ::: tip
 
-Vissza a [Boot9strap telepítése (safecerthax)](installing-boot9strap-\(safecerthax\)) oldalhoz
+Vissza a [Boot9strap telepítése (safecerthax)](installing-boot9strap-(safecerthax)) oldalhoz
 
 :::
 

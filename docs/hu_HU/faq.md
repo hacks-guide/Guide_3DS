@@ -16,7 +16,7 @@
 
 :::details A legújabb verziójú rendszeren vagyok. Hackelhető a konzolom külső hardver vagy előfeltételek használata nélkül?
 
-**Igen!** ANew 3DS / New 3DS XL / New 2DS XL használhatja a [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), míg a 3DS / 3DS XL / 2DS használhatja az [MSET9](installing-boot9strap-\(mset9\)) exploitot.
+**Igen!** ANew 3DS / New 3DS XL / New 2DS XL használhatja a [super-skaterhax](installing-boot9strap-(super-skaterhax)), míg a 3DS / 3DS XL / 2DS használhatja az [MSET9](installing-boot9strap-(mset9)) exploitot.
 
 :::
 
@@ -82,7 +82,7 @@ Legalább 1.5GB szabad hely kell az SD kártyán az útmutató teljes végrehajt
 
 Csak 1 db SD kártyát javasolt használnod a 3DS-hez bármikor. Ha egy másik SD kártyát használsz a konzolod moddolására, létre fogsz hozni egy másik 'profilt' a moddolt szoftvernek, ami elérhetetlen lesz az eredeti SD kártyádról. Azonban **a konzolod moddolt marad**, mivel a mod a belső memóriába telepített (nem az SD kártyára).
 
-Ha új SD kártyát vásároltál a konzoloddal használathoz, formáznod kell az új SD kártyát ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), majd másolj át mindent a régi SD kártyáról az új SD kártyára. Ezt moddolás előtt és utána is megteheted.
+Ha új SD kártyát vásároltál a konzoloddal használathoz, formáznod kell az új SD kártyát ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))), majd másolj át mindent a régi SD kártyáról az új SD kártyára. Ezt moddolás előtt és utána is megteheted.
 
 :::
 
@@ -112,7 +112,7 @@ Ha Luma3DS-t használsz, az egyedi firmware loader (boot9strap) _soha_ nem kerü
 
 :::details Hogyan bővíthetem nagyobbra az SD kártyám?
 
-Másold át az SD kártyád tartalmát egy új FAT32-re formázott SD kártyára. A 128GB-os kártyák esetén a 65536 allokációs méret javasolt. 128GB-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt a GBA grafikával és az egyedi témákkal. Specifikus formázási útmutatók itt: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
+Másold át az SD kártyád tartalmát egy új FAT32-re formázott SD kártyára. A 128GB-os kártyák esetén a 65536 allokációs méret javasolt. 128GB-nál nagyobb SD kártyák nem javasoltak az ismert problémák miatt a GBA grafikával és az egyedi témákkal. Specifikus formázási útmutatók itt: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)).
 
 :::
 

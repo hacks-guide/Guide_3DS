@@ -1,53 +1,53 @@
 # Désinstallation du CFW
 
-## Lecture Requise
+## Lecture requise
 
-This will completely remove CFW from your console, including boot9strap and Luma3DS, for the purpose of restoring the console to stock.
+Ceci supprimera complètement le CFW de votre console, y compris boot9strap et Luma3DS, dans le but de restaurer la console vers une non modifiée.
 
-Any unsigned (illegitimate) games will be rendered unusable and will be removed during this process. Use a [save manager](https://github.com/FlagBrew/Checkpoint/releases/latest) to back up any saves that you care about.
+Tous les jeux non signés (illégitimes) seront rendus inutilisables et seront supprimés pendant ce processus. Utilisez un [gestionnaire de sauvegardes](https://github.com/FlagBrew/Checkpoint/releases/latest) pour conserver toutes les sauvegardes des jeux qui vous tiennent à cœur.
 
 ::: danger
 
-If you're removing CFW because:
+Si vous supprimez le CFW parce que :
 
-- You want to re-install it
-- You want to change SD cards
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
-- Your console is unable to boot to HOME Menu
-- Your system is crashing randomly
-- You want to update your system firmware/CFW install
+- Vous voulez le réinstaller
+- Vous voulez changer de carte SD
+- Votre carte SD a été perdue ou corrompue
+- L'un de vos jeux est cassé
+- L'une de vos applications système est cassée
+- Votre console ne peut pas démarrer sur le menu HOME
+- Votre système plante aléatoirement
+- Vous voulez mettre à jour votre firmware système/installation CFW
 
-<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+<u>**STOP!!!**</u> Désinstaller le custom firmware est un risque inutile qui va, au mieux, faire perdre votre temps et au pire <u>**BRICKER**</u> votre console. Une meilleure idée serait de demander de l'aide sur [le Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
 :::
 
 ::: danger
 
-Si vous avez effectué l'UNE des opérations suivantes :
+Si vous avez effectué N'IMPORTE LAQUELLE des actions qui suivent :
 
-- [Changed the region](region-changing) of the console
-- Installed a custom keyboard
-- Installed a custom HOME Menu (_not_ a custom theme)
-- Manually changed the encryption key (`movable.sed`) of the console
-- Unbanned the console
+- [Changé la région](region-changing) de la console
+- Installé un clavier personnalisé
+- Installé un menu HOME personnalisé (_pas_ un thème personnalisé)
+- Modifié manuellement la clé de chiffrement (`movable.sed`) de la console
+- Débanni la console
 
-then uninstalling CFW <u>**WILL BRICK YOUR CONSOLE**</u>. If this applies to you, [restore a clean NAND backup](godmode9-usage#restoring-a-nand-backup) before continuing.
+alors désinstaller le CFW <u>**BRICKERA VOTRE CONSOLE**</u>. Si cela est votre cas, [restaurez une sauvegarde propre de la NAND](godmode9-usage#restoring-a-nand-backup) avant de continuer.
 
 :::
 
 ::: warning
 
-These instructions will only work on consoles with a Luma3DS version of 8.0 or higher. If you have an older version of Luma, you must upgrade your setup before following these instructions. Follow [this page](checking-for-cfw) to find your upgrade instructions.
+Ces instructions ne fonctionneront que sur les consoles avec une version de Luma3DS de 8.0 ou ultérieur. Si vous avez une ancienne version de Luma, vous devez mettre à jour votre configuration avant de suivre ces instructions. Suivez [cette page](checking-for-cfw) pour trouver vos instructions de mise à jour.
 
 :::
 
 ## Ce dont vous avez besoin
 
-- La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier \`.zip' de Luma3DS)
-- The latest release of [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (the GodMode9 `.zip` file)
-- The latest release of [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
+- La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier `.zip` de Luma3DS)
+- La dernière version de [GodMode9](https://github.com/d0k3/GodMode9/releases/latest) (le fichier `.zip` de GodMode9)
+- La dernière version de [DSiWare Uninstaller](https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest)
 - [safety_test.gm9](/gm9_scripts/safety_test.gm9)
 - [uninstall_cfw.gm9](/gm9_scripts/uninstall_cfw.gm9)
 
@@ -58,174 +58,174 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 1. Éteignez votre console
 2. Insérez votre carte SD dans votre ordinateur
 3. Copiez tout depuis le `.zip` de Luma3DS à la racine de votre carte SD
-4. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
-5. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
-6. Copy `DSiWareUninstaller.3dsx` to the `/3ds/` folder on your SD card
-7. Copy `safety_test.gm9` and `uninstall_cfw.gm9` to the `/gm9/scripts/` folder on your SD card
+4. Copiez `GodMode9.firm` depuis l'archive de GodMode9 `.zip vers le dossier `/luma/payloads/\` sur votre carte SD
+5. Copiez le dossier `gm9` depuis l'archive de GodMode9 `.zip` vers la racine de votre carte SD
+6. Copiez `DSiWareUninstaller.3dsx` vers le dossier `/3ds/` sur votre carte SD
+7. Copiez `safety_test.gm9` et `uninstall_cfw.gm9` vers le dossier `/gm9/scripts/` sur votre carte SD
 8. Réinsérez votre carte SD dans votre console
 
-### Section II - DS Mode Tests
+### Section II - Tests du mode DS
 
-The purpose of this section is to check whether built-in DS mode applications will continue to work once CFW is uninstalled. If you skip this section, DS mode or its functions may be inaccessible until CFW is reinstalled.
+Le but de cette section est de vérifier si les applications intégrées en mode DS continueront de fonctionner une fois le CFW désinstallé. Si vous sautez cette section, le mode DS ou ses fonctions peuvent être inaccessibles jusqu'à ce que le CFW soit réinstallé.
 
-#### DS Connection Settings Test
+#### Test des Paramètres de connexion DS
 
 1. Allumez votre console
 2. Lancez les Paramètres de la console
-3. Navigate to `Internet Settings` -> `Nintendo DS Connection Settings`, then click OK
-4. You should boot into the Nintendo DS Connection Setup menu
-   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+3. Naviguez vers `Paramètres Internet` -> `Connexions Nintendo DS`, puis sélectionnez "OK
+4. Vous devriez démarrer dans le menu de configuration des Connexions Nintendo DS
+   - Si votre console affiche la version japonaise de Flipnote Studio, un écran noir, ou un message d'erreur, le test a échoué
 5. Éteignez votre console
 
-#### DS Download Play Test
+#### Test du Mode Téléchargement DS
 
 1. Allumez votre console
-2. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
-3. Select "Nintendo DS"
-4. If your console loads into a "Download software via DS Download Play" menu, the test was successful
-   - If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed
+2. Lancez l'application Mode Téléchargement (![](/images/download-play-icon.png){height="24px" width="24px"})
+3. Sélectionnez "Nintendo DS"
+4. Si votre console charge le menu "Télécharger un logiciel via le téléchargement DS", le test a réussi
+   - Si votre console affiche la version japonaise de Flipnote Studio, un écran noir, ou un message d'erreur, le test a échoué
 5. Éteignez votre console
 
 ::: warning
 
-If either of these tests has failed, DS mode, DS Download Play, and/or DS Connection Settings may be inaccessible once CFW is uninstalled! You should [fix DS mode](troubleshooting-post-install) before continuing.
+Si l'un de ces tests a échoué, le mode DS, le Téléchargement DS, et/ou les Paramètres de connexions Nintendo DS peuvent être inaccessibles une fois le CFW désinstallé ! Vous devriez [réparer le mode DS](troubleshooting-post-install) avant de continuer.
 
 :::
 
-### Section III - Safety Test
+### Section III - Test de sécurité
 
-The purpose of this section is to verify that the console will boot and that critical system functions, like System Settings and the keyboard, will work once CFW is uninstalled. **If you skip this section, you may BRICK your console!**
+L'objectif de cette section est de vérifier que la console démarrera et que les fonctions systèmes critiques, comme les Paramètres de la console et le clavier fonctionneront une fois que le CFW sera désinstallé. **Si vous sautez cette section, vous pouvez BRICKER votre console !**
 
-1. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
-2. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is complete
+1. Appuyez sur et maintenez (Start), et tout en maintenant (Start), allumez votre console. Ceci lancera GodMode9
+2. Si vous êtes invité à créer une sauvegarde des fichiers essentiels, appuyez sur (A) pour le faire, puis appuyez sur (A) pour continuer une fois qu'elle est terminée
 3. Si vous êtes invité à corriger la date et l’heure RTC, appuyez sur (A) pour le faire, puis réglez la date et l’heure, puis appuyez sur (A) pour continuer
-   - Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
-4. Press (Home) to bring up the action menu
+   - Notez que, si vous avez dû corriger la date et l'heure RTC, vous devrez corriger l'heure dans les Paramètres de la console aussi après ce guide
+4. Appuyez sur (Home) pour faire apparaître le menu d’actions
 5. Sélectionnez "Scripts..."
-6. Select "safety_test"
-7. Read the text on-screen and press (A) to continue
-8. You should boot into the regular 3DS HOME Menu (any custom theme is irrelevant). If you do, continue these instructions
-   - If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
+6. Sélectionnez "safety_test"
+7. Lisez le texte à l'écran et appuyez sur (A) pour continuer
+8. Votre console devrait démarrer dans le menu HOME 3DS habituel (la présence d'un thème personnalisé n'a aucune importance). Si c'est le cas, suivez ces instructions
+   - Si votre console ne démarre pas dans le menu HOME habituel de la 3DS (écran noir, écran d'erreur, etc.), la désinstallation du CFW **BRICKERA VOTRE CONSOLE !**
 9. Lancez les Paramètres de la console
-   - If the console crashes at this point, the test has failed
+   - Si la console plante à ce stade, le test a échoué
 10. Sélectionnez "Autres paramètres"
-11. Select "Profile"
-12. Select "User Name"
-13. If you are able to enter a new user name, the test was successful
-    - If the keyboard does not appear, the screen freezes, or the console crashes, the test has failed
+11. Sélectionnez "Profil"
+12. Sélectionnez "Pseudo"
+13. Si vous êtes en mesure de saisir un nouveau pseudo, le test a réussi
+    - Si le clavier n'apparaît pas, l'écran se fige, ou la console plante, le test a échoué
 14. Éteignez votre console
 
 ::: danger
 
-If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your keyboard is inaccessible, **DO NOT continue with these instructions**! Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask (in English) for someone there to assist you.
+Si votre console ne démarre PAS dans le menu HOME habituel de la 3DS, ou si les Paramètres de la console et/ou votre clavier sont inaccessibles, **ARRÊTEZ de suivre ces instructions** ! Rejoignez [le Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) et demandez (en anglais) que quelqu'un vous aide.
 
 :::
 
-### Section IV - NAND Backup
+### Section IV - Sauvegarde de la NAND
 
-1. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
-2. Press (Home) to bring up the action menu
+1. Appuyez sur et maintenez (Start), et tout en maintenant (Start), allumez votre console. Ceci lancera GodMode9
+2. Appuyez sur (Home) pour faire apparaître le menu d’actions
 3. Sélectionnez "Scripts..."
-4. Select "GM9Megascript"
-5. Select "Backup Options"
-6. Select "SysNAND Backup"
-7. Press (A) to confirm
-   - This process will take some time
-   - If you get an error, ensure you have at least 1.3GB of free space on your SD card
-8. Press (B) to return to the main menu
-9. Select “Exit”
-10. Press (Home) to bring up the action menu
-11. Select "Poweroff system" to power off your console
+4. Sélectionnez "GM9Megascript"
+5. Sélectionnez "Backup Options"
+6. Sélectionnez "SysNAND Backup"
+7. Appuyez sur (A) pour confirmer
+   - Ce processus prendra un certain temps
+   - Si vous avez une erreur, assurez-vous d'avoir au moins 1,3 Go d'espace libre sur votre carte SD
+8. Appuyez sur (B) pour revenir au menu principal
+9. Sélectionnez “Exit”
+10. Appuyez sur (Home) pour faire apparaître le menu d’actions
+11. Sélectionnez "Poweroff system" pour éteindre votre console
 
-### Section V - Removing illegitimate content
+### Section V - Suppression du contenu illégitime
 
 ::: warning
 
-This section will remove illegitimate content, like homebrew and dumped cartridges. If you have save data that you care about, back it up with a save manager before continuing!
+Cette section supprimera le contenu illégitime, comme les homebrew et les cartouches extraites. Si vous avez des données de sauvegarde qui vous intéressent, sauvegardez-les avec un gestionnaire de sauvegardes avant de continuer !
 
 :::
 
 1. Allumez votre console
 2. Lancez les Paramètres de la console
-3. Navigate to Data Management > Nintendo 3DS > Software
-4. In this list of software, delete any non-Nintendo content you installed while using CFW
-   - This includes common system software such as FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint, and others, along with any games and titles that you did _not_ install from the eShop
-5. Navigate to `Data Management` -> `DSiWare`
-6. In this list of software, delete any non-Nintendo content you installed while using CFW
-   - This includes software such as TWiLightMenu++, along with any games and titles that you did _not_ install from the eShop
-   - Failure to remove all CFW software from both the 3DS and DSiWare sections before uninstalling CFW may prevent or disable access to the Data Management menu after uninstalling CFW, which will make it difficult to re-install CFW in the future
-7. Exit the System Settings application
-8. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
-9. Wait until you see the two buttons
+3. Naviguez dans Gestion des données > Nintendo 3DS > Logiciels
+4. Dans cette liste de logiciels, supprimez tout contenu non-Nintendo que vous avez installé lors de l'utilisation du CFW
+   - Cela inclut des applications systèmes communes telles que FBI, Anemone3DS, Luma Updater, Homebrew Launcher, Checkpoint et d'autres, ainsi que tous les jeux que vous n'avez _pas_ installé depuis l'eShop
+5. Naviguez vers `Gestion des données` -> `DSiWare`
+6. Dans cette liste de logiciels, supprimez tout contenu non-Nintendo que vous avez installé lors de l'utilisation du CFW
+   - Cela inclut des logiciels tels que TWiLightMenu++, ainsi que tous les jeux et titres que vous n'avez _pas_ installé depuis l'eShop
+   - Ne pas supprimer tous les logiciels CFW des sections 3DS et DSiWare avant de désinstaller le CFW peut empêcher ou désactiver l'accès au menu de Gestion des données après la désinstallation du CFW, ce qui rendra difficile la réinstallation future d'un CFW
+7. Quittez l'application Paramètres de la console
+8. Lancez l'application Mode téléchargement (![](/images/download-play-icon.png){height="24px" width="24px"})
+9. Attendez jusqu'à ce que vous voyiez les deux boutons
 10. Appuyez simultanément sur (L) + (Bas sur la croix directionnelle) + (Select) pour ouvrir le menu Rosalina
 11. Sélectionnez "Miscellaneous options"
-12. Select "Switch the hb. title to the current app."
+12. Sélectionnez "Switch the hb. title to the current app."
 13. Appuyez sur (B) pour continuer
 14. Appuyez sur (B) pour revenir au menu principal de Rosalina
 15. Appuyez sur (B) pour quitter le menu Rosalina
-16. Press (Home), then close Download Play
-17. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
-18. Your console should load the Homebrew Launcher
-19. Launch DSiWare Uninstaller from the list of homebrew
-20. Follow the prompts and allow the program to uninstall
-21. Once the process has succeeded, exit the Homebrew Launcher and power off your console
+16. Appuyez sur (Home), puis fermez Mode téléchargement
+17. Lancez l'application Mode téléchargement (![](/images/download-play-icon.png){height="24px" width="24px"})
+18. Votre console devrait charger le Homebrew Launcher
+19. Lancez DSiWare Uninstaller depuis la liste de homebrew
+20. Suivez les instructions et autorisez le programme à désinstaller
+21. Une fois le processus réussi, quittez le Homebrew Launcher et éteignez votre console
 
-### Section VI - System Format
+### Section VI - Formatage de la console
 
-This section will ensure that all illegitimate tickets are removed, allowing eShop to work normally. This will remove all content from the 3DS and log you out of your NNID. Keep in mind that your console's encryption key will be shuffled, meaning that any old data will be rendered inaccessible, even if you have a backup of your SD contents.
+Cette section vous assurera que tous les tickets illégitimes sont supprimés, ce qui permettra à l'eShop de fonctionner normalement. Cela supprimera tout le contenu de la 3DS et vous déconnectera de votre identifiant Nintendo Network (NNID). Gardez à l'esprit qu'une nouvelle clé de chiffrement de votre console sera générée, ce qui signifie que toutes les anciennes données deviendront inutilisables, même si vous avez une sauvegarde du contenu de votre carte SD.
 
 1. Allumez votre console
 2. Lancez les Paramètres de la console
-3. Navigate to Other Settings -> Next Page (until the final page) -> Format System Memory
-4. Follow the prompts to format your 3DS
+3. Naviguez vers Autres paramètres -> Page suivante (jusqu'à la dernière page) -> Formater la console
+4. Suivez les instructions pour formater votre 3DS
 
-### Section VII - Running Uninstall Script
+### Section VII - Exécution du script de désinstallation
 
 ::: warning
 
-This is your final opportunity to verify that all safety steps above have been followed! Please ensure that you have followed all sections on this page, **especially** `Section III - Safety Test`, before continuing.
+C'est votre dernière occasion de vérifier que toutes les étapes de sécurité ci-dessus ont été suivies ! Veuillez vous assurer que vous avez suivi toutes les sections sur cette page, **en particulier** `Section III - Test de sécurité`, avant de continuer.
 
 :::
 
 ::: danger
 
-If you're removing CFW because:
+Si vous supprimez le CFW parce que :
 
-- You want to re-install it
-- You want to change SD cards
-- Your SD card was lost or corrupted
-- One of your games is broken
-- One of your system applications is broken
-- Your console is unable to boot to HOME Menu
-- Your system is crashing randomly
-- You want to update your system firmware/CFW install
+- Vous voulez le réinstaller
+- Vous voulez changer de carte SD
+- Votre carte SD a été perdue ou corrompue
+- L'un de vos jeux est cassé
+- L'une de vos applications système est cassée
+- Votre console ne peut pas démarrer vers le menu HOME
+- Votre système plante aléatoirement
+- Vous voulez mettre à jour votre firmware système/installation CFW
 
-<u>**STOP!!!**</u> Uninstalling custom firmware is an unnecessary risk that will at best waste your time and at worst <u>**BRICK**</u> your console. A better idea would be to ask for help at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+<u>**STOP!!!**</u> Désinstaller le custom firmware est un risque inutile qui va, au mieux, faire perdre votre temps et au pire <u>**BRICKER**</u> votre console. Une meilleure idée serait de demander de l'aide sur [le Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. Ceci lancera GodMode9
-   - If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
-2. Press (Home) to bring up the action menu
+1. Appuyez sur et maintenez (Start), et tout en maintenant (Start), allumez votre console. Ceci lancera GodMode9
+   - Si vous voyez plutôt le chainloader de Luma3DS, utilisez la croix directionnelle et le bouton (A) pour sélectionner GodMode9
+2. Appuyez sur (Home) pour faire apparaître le menu d’actions
 3. Sélectionnez "Scripts..."
-4. Select "uninstall_cfw"
-5. When prompted, press (A) to proceed
-6. Press (A) again to proceed
-7. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
-8. Press (A) to continue
-9. Press (A) to relock write permissions if prompted
-10. Press (Start) to reboot your console
+4. Sélectionnez "uninstall_cfw"
+5. Lorsque vous y êtes invité, appuyez sur (A)
+6. Appuyez sur (A) pour continuer
+7. Appuyez sur (A) pour autoriser l'écriture sur votre SysNAND (lvl3), puis entrez la combinaison de boutons donnée
+8. Appuyez sur (A) pour continuer
+9. Appuyez (A) pour reverrouiller l'autorisation en écriture si vous y êtes invité
+10. Appuyez sur (Start) pour redémarrer votre console
 
 ___
 
 ::: tip
 
-All custom firmware has been removed from your console.
+Tous les custom firmwares ont été supprimés de votre console.
 
 :::
 
 ::: info
 
-You can now remove any extra files and folders from the root of your SD card that are _not_ the `Nintendo 3DS`, `DCIM`, or `private` folders.
+Vous pouvez maintenant supprimer tous les fichiers et dossiers supplémentaires de la racine de votre carte SD qui ne sont _pas_ les dossiers "Nintendo 3DS", "DCIM" ou "private".
 
 :::

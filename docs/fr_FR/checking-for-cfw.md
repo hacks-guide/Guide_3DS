@@ -1,58 +1,58 @@
-# Checking for CFW
+# Vérification de la présence d'un CFW
 
-## Lecture Requise
+## Lecture requise
 
-This is an add-on section to check if your console already has a modern custom firmware.
+Ceci est une section complémentaire pour vérifier si votre console possède déjà un custom firmware moderne.
 
-If your console already has an arm9loaderhax or boot9strap based custom firmware, you will need to follow the instructions indicated to upgrade your setup to a modern one.
+Si votre console possède déjà un custom firmware basé sur arm9loaderhax ou boot9strap, vous devrez suivre les instructions indiquées pour mettre à jour votre configuration vers une configuration moderne.
 
 ::: info
 
-If your console has a menuhax-based CFW setup, you should [clear HOME Menu's extdata](troubleshooting-post-install), then follow all instructions on your SysNAND. You probably have a menuhax-based setup if your system version when booting without an SD card is 9.2.0-20.
+Si votre console a une configuration CFW basée sur menuhax, vous devriez [effacer les données extdata du menu HOME] (troubleshooting-post-install), puis suivre toutes les instructions sur votre SysNAND. Vous avez probablement une configuration basée sur menuhax si la version du système de votre console lorsque vous démarrez sans carte SD est 9.2.0-20.
 
 :::
 
 ## Instructions
 
 1. Éteignez votre console
-2. Hold the (Select) button
+2. Maintenez le bouton (Select)
 3. Allumez votre console tout en maintenant le bouton (Select) enfoncé
-4. You should now see a configuration menu of some sort
+4. Vous devriez maintenant voir une sorte de menu de configuration
 
-## What to do next
+## Que faire ensuite
 
 ::: tip
 
-If your console boots to the normal HOME Menu, return to [Get Started](get-started)
+Si votre console démarre sur le menu HOME normal, retournez à [Pour commencer](get-started)
 
 :::
 
 ::: tip
 
-If you see a Luma3DS version of 7.0.5 or lower, continue to [A9LH to B9S](a9lh-to-b9s)
+Si vous voyez la version 7.0.5 ou antérieure de Luma3DS, continuez vers [A9LH vers B9S](a9lh-to-b9s)
 
 :::
 
 ::: tip
 
-If you see a Luma3DS version of 7.1, continue to [Updating B9S](updating-b9s)
+Si vous voyez la version 7.1 de Luma3DS, continuez vers [Mise à jour de B9S](updating-b9s)
 
 :::
 
 ::: tip
 
-If you see a Luma3DS version of 8.0 or greater, continue to [Restoring / Updating CFW](restoring-updating-cfw)
+Si vous voyez la version 8.0 ou toute autre version ultérieure de Luma3DS, continuez vers [Restauration / Mise à jour du CFW](restoring-updating-cfw)
 
 :::
 
 ::: warning
 
-If you see GodMode9, Decrypt9WIP, Hourglass9, or Luma3DS chainloader, you held (Start) by accident and should try these instructions again with (Select)
+Si vous voyez GodMode9, Decrypt9WIP, ou Hourglass9, vous avez maintenu (Start) par accident et devriez réessayer ces instructions avec (Select)
 
 :::
 
 ::: danger
 
-If you see something not described by the above options, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+Si vous constatez quelque chose qui n'est pas décrit dans les options ci-dessus, rejoignez [le Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) et demandez, en anglais, de l'aide.
 
 :::

@@ -6,11 +6,11 @@ Esta es una sección adicional para revisar la tarjeta SD en busca de errores me
 
 Dependiendo del tamaño de la tarjeta SD y la velocidad de tu computadora, ¡este proceso podría tardar varias horas!
 
-Esta página es sólo para usuarios de Mac. Si no estás en Mac, revisa las páginas [H2testw (Windows)](h2testw-\(windows\)) o [F3 (Linux)](f3-\(linux\)).
+Esta página es sólo para usuarios de Mac. Si no estás en Mac, revisa las páginas [H2testw (Windows)](h2testw-(windows)) o [F3 (Linux)](f3-(linux)).
 
 ::: info
 
-Si estás usando una Mac con macOS 10.13 (High Sierra) o superior, ve a [F3XSwift (Mac)](f3xswift-\(mac\)) en vez de aquí.
+Si estás usando una Mac con macOS 10.13 (High Sierra) o superior, ve a [F3XSwift (Mac)](f3xswift-(mac)) en vez de aquí.
 
 :::
 

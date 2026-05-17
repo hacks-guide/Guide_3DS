@@ -76,7 +76,7 @@ Follow these steps in order:
 9. Open the Internet Browser once
 10. If prompted about a system update, press OK
     - This won't actually update the system
-11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+11. Start again from [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
 
 :::
 
@@ -88,7 +88,7 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 
 :::details Failed to mount the SD card!
 
-Maak een back-up van je data en herformatteer je SD-kaart als FAT32 met het aanbevolen hulpmiddel afhankelijk van je besturingssysteem: ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)) of [Linux](formatting-sd-\(linux\))). MiniTool Partition Wizard en het formatteer programma van HP (HPUSBDisk) zijn ervoor bekend om problemen te veroorzaken met 3DS SD-kaarten.
+Maak een back-up van je data en herformatteer je SD-kaart als FAT32 met het aanbevolen hulpmiddel afhankelijk van je besturingssysteem: ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)) of [Linux](formatting-sd-(linux))). MiniTool Partition Wizard en het formatteer programma van HP (HPUSBDisk) zijn ervoor bekend om problemen te veroorzaken met 3DS SD-kaarten.
 
 Mocht dit niet lukken, gebruik dan een andere SD-kaart.
 
@@ -108,7 +108,7 @@ Mocht dit niet lukken, gebruik dan een andere SD-kaart.
 
 ::: tip
 
-Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-(ssloth-browser))
 
 :::
 

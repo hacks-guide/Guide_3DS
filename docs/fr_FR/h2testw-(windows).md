@@ -1,43 +1,43 @@
 # H2testw (Windows)
 
-## Lecture Requise
+## Lecture requise
 
-This is an add-on section for checking your SD card for errors using h2testw.
+Ceci est une section complémentaire sur comment vérifier que votre carte SD ne contient pas d'erreurs avec h2testw.
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+Selon la taille de votre carte SD et la vitesse de votre ordinateur, ce processus peut prendre jusqu'à plusieurs heures !
 
-Cette section est dédiée aux utilisateurs de Windows uniquement. If you are not on windows, check out the [F3 (Linux)](f3-\(linux\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
+Cette section est dédiée aux utilisateurs de Windows uniquement. Si votre ordinateur n'est pas sous Windows, jetez un œil aux pages [F3 (Linux)](f3-(linux)) ou [F3XSwift (Mac)](f3xswift-(mac)).
 
 ## Ce dont vous avez besoin
 
-- The latest version of [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
+- La dernière version de [h2testw](https://www.heise.de/ct/Redaktion/bo/downloads/h2testw_1.4.zip)
 
 ## Instructions
 
-1. Copy `h2testw.exe` from the h2testw `.zip` to your desktop
+1. Copiez `h2testw.exe` depuis l'archive h2testw `.zip` vers votre bureau
 2. Insérez votre carte SD dans votre ordinateur
-3. Run `h2testw.exe`
-4. Select "English"
-5. Click "Select target"
-6. Select your SD card's drive letter
-7. Ensure "all available space" is selected
-8. Click "Write + Verify"
-9. Wait until the process is completed
+3. Exécutez `h2testw.exe`
+4. Sélectionnez "English"
+5. Cliquez sur "Select target"
+6. Sélectionnez la lettre de lecteur de votre carte SD
+7. Assurez-vous que "all available space" est sélectionné
+8. Cliquez sur "Write + Verify"
+9. Attendez que le processus soit terminé
 
 ::: tip
 
-If the test shows the result `Test finished without errors`, your SD card is good and you can delete all `.h2w` files on your SD card.
+Si le test affiche le résultat `Test finished without errors`, votre carte SD est saine et vous pouvez supprimer tous les fichiers `.h2w` sur votre carte SD.
 
 :::
 
 ::: danger
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+Si le test montre un autre résultat, votre carte SD est peut-être corrompue ou endommagée et vous devrez peut-être la remplacer !
 
 :::
 
 ::: tip
 
-Return to [Get Started](get-started)
+Retourner à [Pour commencer](get-started)
 
 :::

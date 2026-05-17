@@ -1,15 +1,10 @@
 ---
-head:
-  [
-    [ 'script', { src: '/assets/js/common.js' } ],
-    [ 'script', { src: '/assets/js/skater-link.js' } ],
-    [ 'script', { src: '/assets/js/link-common.js' } ]
-  ]
+head: [ [ 'script', { src: '/assets/js/common.js' } ], [ 'script', { src: '/assets/js/skater-link.js' } ], [ 'script', { src: '/assets/js/link-common.js' } ] ]
 ---
 
 # Installation de boot9strap (super-skaterhax)
 
-:::details Détails techniques (optionnel)
+:::details Détails techniques (facultatif)
 
 Pour les détails techniques sur les exploits que vous utiliserez sur cette page, voir [ici](https://github.com/zoogie/super-skaterhax).
 
@@ -17,11 +12,11 @@ Pour les détails techniques sur les exploits que vous utiliserez sur cette page
 
 ### Notes de compatibilité
 
-Super-skaterhax (lorsqu'il est utilisé pour lancer l'Homebrew Launcher) est compatible avec les modèles New 3DS en version 11.15.0 et plus dans toutes les régions.
+Super-skaterhax (lorsqu'il est utilisé pour lancer le Homebrew Launcher) est compatible avec les modèles New 3DS en version 11.15.0 ou ultérieur dans toutes les régions.
 
 ::: info
 
-Cet exploit est connu pour être irrégulier : ça marche pour certaines personnes, mais pas pour d'autres. Si vous préférez utiliser un exploit plus régulier (ce qui pourra prendre plus de temps, mais aura le même résultat final), suivez [MSET9](installing-boot9strap-\(mset9\)) à la place.
+Cet exploit est connu pour être irrégulier : il marche pour certaines personnes, mais pas pour d'autres. Si vous préférez utiliser un exploit plus régulier (ce qui pourra prendre plus de temps, mais aura le même résultat final), suivez [MSET9](installing-boot9strap-(mset9)) à la place.
 
 :::
 
@@ -48,7 +43,7 @@ Dans cette section, vous copierez les fichiers nécessaires pour déclencher à 
 
 5. Allumez votre console
 
-6. Ouvrez les Paramètres de la Console
+6. Ouvrez les Paramètres de la console
 
 7. Sélectionnez "Autres paramètres"
 
@@ -71,7 +66,7 @@ Dans cette section, vous copierez les fichiers nécessaires pour déclencher à 
 
 #### Section II - super-skaterhax
 
-Dans cette section, vous allez visiter la page web d'exploit du Navigateur Internet, qui lancera l'Homebrew Launcher.
+Dans cette section, vous allez visiter la page web d'exploit du navigateur, qui lancera l'Homebrew Launcher.
 
 ::: info
 
@@ -95,7 +90,7 @@ Une vidéo en anglais détaillant ces étapes est disponible [ici](https://www.y
 10. Appuyez sur "Ajouter aux favoris"
 11. Appuyez sur l'icône à 3 lignes (☰) en bas à droite de l'écran
 12. Appuyez sur `Paramètres` -> `Effacer les cookies` (témoins) -> `Oui`
-13. Appuyez sur (Home) pour retourner au Menu HOME, puis rouvrez immédiatement le Navigateur Internet
+13. Appuyez sur (Home) pour retourner au menu HOME, puis rouvrez immédiatement le Navigateur Internet
 14. Attendez que la page se charge complètement, puis appuyez sur le bouton "GO GO!" en haut de l'écran du bas
 15. Attendez que la page se charge complètement, puis appuyez sur (A) pour ignorer le [pop-up](/images/screenshots/skaterhax/skater-popup.png)
 16. Si votre console affiche :
@@ -103,19 +98,19 @@ Une vidéo en anglais détaillant ces étapes est disponible [ici](https://www.y
     - **Une boîte de message blanche qui affiche "Une erreur est survenue"** : L'exploit a échoué à cause du hasard. Ouvrez les Paramètres de la Console, changez la langue à une autre langue (si possible), puis réessayez cette section. Il va peut-être falloir répéter cette séquence jusqu'à dix fois
       - Sur les consoles de la région JPN/KOR, il n'y a qu'une langue disponible. Sur ces consoles, vous devriez ouvrir les Paramètres de la Console, les fermer, puis réessayer cette section
       - Si l'exploit échoue encore après cinq tentatives, il y a peut-être un problème avec vos fichiers ou vos préparations. Assurez-vous que la région et la date/heure sont correctes, et que vous avez bien suivi cette section **à la lettre**. Si vous avez utilisé WinRAR pour extraire les fichiers sur la carte SD, extrayez les fichiers de nouveau en utilisant l'Explorateur de fichiers ou 7-zip
-      - Si l'exploit échoue encore après dix tentatives, suivez [MSET9](installing-boot9strap-\(mset9\)) à la place
+      - Si l'exploit échoue encore après dix tentatives, suivez [MSET9](installing-boot9strap-(mset9)) à la place
     - **Un écran noir qui affiche "Une erreur est survenue"** : Votre placement des fichiers est incorrect. Assurez-vous que les fichiers super-skaterhax sont à la racine de la carte SD
-    - **Un écran jaune** : l'Homebrew Launcher n'a pas pu s'ouvrir à cause du hasard. Maintenez le bouton POWER jusqu'à ce que la console s'éteigne, puis réessayez cette section
-    - **[Le mot "Text"](/images/screenshots/skaterhax/skater-old3ds.png)** : Vous avez une Old 3DS, sur laquelle cet exploit **ne fonctionne pas**. Si c'est le cas, vous devriez suivre [MSET9](installing-boot9strap-\(mset9\)) à la place
-17. Lancez "nimdsphax" que vous trouverez dans la liste des homebrews
+    - **Un écran jaune** : Le Homebrew Launcher n'a pas pu s'ouvrir par pur hasard. Maintenez le bouton POWER jusqu'à ce que la console s'éteigne, puis réessayez cette section
+    - **[Le mot "Text"](/images/screenshots/skaterhax/skater-old3ds.png)** : Vous avez une Old 3DS, sur laquelle cet exploit **ne fonctionne pas**. Si c'est le cas, vous devriez suivre [MSET9](installing-boot9strap-(mset9)) à la place
+17. Lancez "nimdsphax" que vous trouverez dans la liste de homebrew
 18. Si l'exploit a réussi, vous devriez avoir démarré dans SafeB9SInstaller
-    - Si votre console se freeze (ne répond plus) sur un écran rouge ou vert, maintenez le bouton POWER jusqu'à ce qu'elle s'éteigne, puis réessayez cette section
+    - Si votre console se fige sur un écran rouge ou vert, maintenez le bouton POWER jusqu'à ce qu'elle s'éteigne, puis réessayez cette section
 
-#### Section III - Installer boot9strap
+#### Section III - Installation de boot9strap
 
 Dans cette section, vous installerez un custom firmware sur votre console.
 
-1. Lorsque vous y êtes invité, entrez la combinaison de touches indiquée sur l'écran supérieur pour installer boot9strap
+1. Lorsque vous y êtes invité, entrez la combinaison de boutons donnée sur l'écran du haut pour installer boot9strap
    - Dans le cas où un message en rouge apparaîtrait lors d'une étape sur l'écran du bas et que vous n'êtes pas sollicité pour saisir une combinaison de boutons, [suivez ce guide de dépannage](troubleshooting-super-skaterhax)
 2. Une fois l'opération terminée, appuyez sur (A) pour redémarrer votre console
 

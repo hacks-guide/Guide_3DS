@@ -16,7 +16,7 @@
 
 :::details Estoy en la última versión del sistema. ¿Puedo modificar mi consola sin ningún hardware externo o requisitos previos?
 
-**¡Sí!** En los modelos New 3DS / New 3DS XL / New 2DS XL se puede con [super-skaterhax](installing-boot9strap-\(super-skaterhax\)), mientras que en modelos 3DS común / 3DS XL / 2DS se puede con [MSET9](installing-boot9strap-\(mset9\)).
+**¡Sí!** En los modelos New 3DS / New 3DS XL / New 2DS XL se puede con [super-skaterhax](installing-boot9strap-(super-skaterhax)), mientras que en modelos 3DS común / 3DS XL / 2DS se puede con [MSET9](installing-boot9strap-(mset9)).
 
 :::
 
@@ -82,7 +82,7 @@ Necesitarás al menos 1,5 GB de espacio libre en la tarjeta SD para seguir est
 
 Con una 3DS deberías usar solamente una tarjeta SD a la vez. Si usas otra tarjeta SD para modificar tu consola, se creará otro "perfil" para tu software modificado, el cual será inaccesible en tu tarjeta SD anterior. Sin embargo, **tu consola permanecerá modificada**, ya que la modificación se instala a la memoria interna (no en la tarjeta SD).
 
-Si has comprado una nueva tarjeta SD para usar con tu consola, deberías formatear la nueva tarjeta SD ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))), y luego copiar y pegar todos los archivos de tu antigua tarjeta SD a la nueva tarjeta SD. Puedes hacer esto antes o después de modificar la consola.
+Si has comprado una nueva tarjeta SD para usar con tu consola, deberías formatear la nueva tarjeta SD ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))), y luego copiar y pegar todos los archivos de tu antigua tarjeta SD a la nueva tarjeta SD. Puedes hacer esto antes o después de modificar la consola.
 
 :::
 
@@ -112,7 +112,7 @@ Si estás usando Luma3DS, el cargador de custom frimware (boot9strap) _nunca_ se
 
 :::details ¿Cómo puedo actualizar mi tarjeta SD?
 
-Copia y pega el contenido de tu tarjeta SD en una nueva tarjeta SD formateada en formato FAT32. Para tarjetas de 128 GB se recomienda un tamaño de asignación de 65536 bytes. Las tarjetas SD de tamaño mayor a 128GB no se recomiendan debido a problemas conocidos con gráficos en juegos de GBA y temas personalizados. Puedes encontrar las instrucciones específicas de formateo aquí: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)).
+Copia y pega el contenido de tu tarjeta SD en una nueva tarjeta SD formateada en formato FAT32. Para tarjetas de 128 GB se recomienda un tamaño de asignación de 65536 bytes. Las tarjetas SD de tamaño mayor a 128GB no se recomiendan debido a problemas conocidos con gráficos en juegos de GBA y temas personalizados. Puedes encontrar las instrucciones específicas de formateo aquí: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)).
 
 :::
 

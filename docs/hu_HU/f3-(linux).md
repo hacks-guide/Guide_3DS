@@ -6,7 +6,7 @@ Ez egy kiegészítő rész, amelyben F3 segítségével keresünk hibákat az SD
 
 Az SD kártyád méretétől és a számítógéped sebességétől függően ez a folyamat több óráig is eltarthat!
 
-Ez az oldal Linux felhasználókra vonatkozik. Ha nem Linuxod van, nézd meg a [H2testw (Windows)](h2testw-\(windows\)) vagy az [F3X (Mac)](f3x-\(mac\)) oldalt.
+Ez az oldal Linux felhasználókra vonatkozik. Ha nem Linuxod van, nézd meg a [H2testw (Windows)](h2testw-(windows)) vagy az [F3X (Mac)](f3x-(mac)) oldalt.
 
 ## Amire szükséged lesz
 

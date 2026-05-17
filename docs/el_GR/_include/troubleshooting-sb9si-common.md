@@ -2,7 +2,7 @@
 
 :::details MicroSD Card - init failed
 
-Η κάρτα SD σας έχει πιθανότατα παράξενη συμπεριφορά. Δοκιμάστε να διαμορφώσετε εκ νέου την κάρτα SD σας ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). Αν αυτό δεν λειτουργήσει, δοκιμάστε με μια άλλη κάρτα SD.
+Η κάρτα SD σας έχει πιθανότατα παράξενη συμπεριφορά. Δοκιμάστε να διαμορφώσετε εκ νέου την κάρτα SD σας ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). Αν αυτό δεν λειτουργήσει, δοκιμάστε με μια άλλη κάρτα SD.
 
 :::
 

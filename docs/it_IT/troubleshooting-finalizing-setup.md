@@ -102,7 +102,7 @@ Assicurati di avere almeno 1.3GB disponibili nella tua scheda SD. Se non hai abb
 10. Copia la cartella `Nintendo 3DS` dal tuo computer nella directory principale della tua scheda SD
 11. Elimina la cartella `Nintendo 3DS` dal tuo computer
 
-Se riieni di avere abbastanza spazio sulla tua scheda SD, questa potrebbe essere danneggiata o difettosa. Verifica la presenza di eventuali errori nella tua scheda SD seguendo la guida corretta per il sistema operativo del tuo computer: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)).
+Se riieni di avere abbastanza spazio sulla tua scheda SD, questa potrebbe essere danneggiata o difettosa. Verifica la presenza di eventuali errori nella tua scheda SD seguendo la guida corretta per il sistema operativo del tuo computer: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
 
 :::
 

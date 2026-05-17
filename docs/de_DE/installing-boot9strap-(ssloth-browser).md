@@ -12,7 +12,7 @@ For technical details on the exploits that you will be using on this page, see [
 
 :::
 
-## Compatibility Notes
+## Kompatibilitätshinweise
 
 SSLoth allows users on version 11.13.0 and below to bypass the browser version check, allowing the use of new-browserhax or old-browserhax (compatible with versions 11.4.0 through 11.13.0 in all regions), which can then be used in conjunction with universal-otherapp.
 
@@ -83,6 +83,7 @@ In this section, you will visit the browser exploit webpage, which will use univ
 
 4. Wenn der Exploit erfolgreich war, wird SafeBS9Installer gestartet
    - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+   - If troubleshooting fails and your console has **only** 2 working shoulder buttons, follow **only Section IV** of [safecerthax](installing-boot9strap-(safecerthax).html#section-iv-safecerthax)
 
 ### Section IV - Installing boot9strap
 

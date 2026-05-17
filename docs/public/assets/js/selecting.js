@@ -28,7 +28,7 @@ function can_soundhax(major, minor, native, region, model) {
 function can_ssloth(major, minor, native, region, model) {
     let do_redirect = false;
     if(major == 11) {
-        if(["U", "E", "J"].includes(region)) {
+        if(["U", "E"].includes(region)) {
             if
                 (
                 (minor == 4 && native == 37) ||
@@ -89,18 +89,20 @@ function can_safecerthax(major, minor, native, region, model) {
 
 // super-skaterhax
 // N3DS only
-// EUR/JPN/USA: 11.15-11.17
+// EUR/USA: 11.15-11.17
+// JPN: browserhax broken due to error 032-0420
 // KOR: 11.15-11.16 only, KOR does not have 11.17
 // CHN/TWN has no N3DS
 function can_superskaterhax(major, minor, native, region, model) {
     let do_redirect = false;
     // N3DS only
     if(model == DEVICE_N3DS) {
-        if (major == 11) {
-            if (minor >= 15) do_redirect = true;
+        if(["U", "E", "K"].includes(region)) {
+            if (major == 11) {
+                if (minor >= 15) do_redirect = true;
+            }
         }
     }
-
     if (do_redirect) {
         window.location.href = "installing-boot9strap-(super-skaterhax)";
         return true;
@@ -136,7 +138,8 @@ function can_mset9(major, minor, native, region, model) {
         - All models
     - SSLoth-Browser
         - 11.4 - 11.13 with matching NVer for each version
-        - USA, JPN, EUR, KOR
+        - USA, EUR, KOR
+        - 2026/04: Broken on JPN
         - All models
     - safecerthax
         - 11.4 - 11.14
@@ -144,7 +147,8 @@ function can_mset9(major, minor, native, region, model) {
         - O3DS only
     - super-skaterhax
         - 11.15 - 11.17
-        - USA / EUR / JPN / KOR
+        - USA / EUR / KOR
+        - 2026/04: Broken on JPN
         - N3DS only
     - MSET9
         - 11.4 - 11.17

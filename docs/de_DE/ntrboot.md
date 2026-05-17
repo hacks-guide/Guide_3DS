@@ -2,7 +2,7 @@
 
 ::: tip
 
-If your flashcart comes pre-flashed with ntrboot (or you have already flashed ntrboot to your flashcart), you can skip to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\)) for instructions on how to use it.
+If your flashcart comes pre-flashed with ntrboot (or you have already flashed ntrboot to your flashcart), you can skip to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot)) for instructions on how to use it.
 
 :::
 
@@ -71,7 +71,7 @@ Diese Methode erfordert nichts weiter außer deinem ungehacktem 3DS und einer ko
 
 ::: tip
 
-Fortfahren mit [ntrboot flashen (Einzelnes 3DS-System)](flashing-ntrboot-\(3ds-single-system\))
+Fortfahren mit [ntrboot flashen (Einzelnes 3DS-System)](flashing-ntrboot-(3ds-single-system))
 
 :::
 
@@ -83,7 +83,7 @@ This method requires temporary access to a second 3DS family console that is alr
 
 ::: tip
 
-Fortfahren mit [ntrboot flashen (Mehrere 3DS-Systeme)](flashing-ntrboot-\(3ds-multi-system\))
+Fortfahren mit [ntrboot flashen (Mehrere 3DS-Systeme)](flashing-ntrboot-(3ds-multi-system))
 
 :::
 
@@ -95,7 +95,7 @@ Diese Methode erfordert temporären Zugriff auf einen Nintendo DS oder Nintendo 
 
 ::: tip
 
-Fortfahren mit [ntrboot flashen (NDS)](flashing-ntrboot-\(nds\))
+Fortfahren mit [ntrboot flashen (NDS)](flashing-ntrboot-(nds))
 
 :::
 
@@ -107,6 +107,6 @@ Diese Methode erfordert temporären Zugriff auf einen Nintendo DSi, welcher mit 
 
 ::: tip
 
-Fortfahren mit [ntrboot flashen (DSi)](flashing-ntrboot-\(dsi\))
+Fortfahren mit [ntrboot flashen (DSi)](flashing-ntrboot-(dsi))
 
 :::

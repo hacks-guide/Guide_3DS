@@ -6,7 +6,7 @@ Esta es una sección adicional para revisar la tarjeta SD en busca de errores me
 
 Dependiendo del tamaño de la tarjeta SD y la velocidad de tu computadora, ¡este proceso podría tardar varias horas!
 
-Esta página es sólo para usuarios de Linux. Si no estás en Linux, revisa las páginas [H2testw (Windows)](h2testw-\(windows\)) o [F3XSwift (Mac)](f3xswift-\(mac\)).
+Esta página es sólo para usuarios de Linux. Si no estás en Linux, revisa las páginas [H2testw (Windows)](h2testw-(windows)) o [F3XSwift (Mac)](f3xswift-(mac)).
 
 ## Lo que necesitas
 

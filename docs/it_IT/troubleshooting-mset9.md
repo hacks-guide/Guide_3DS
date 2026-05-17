@@ -17,9 +17,9 @@ Accendi la console con la scheda SD inserita, quindi controlla nuovamente lo sta
 Se non funziona, la scheda SD deve essere formattata:
 
 1. Copia tutto dalla scheda SD sul tuo PC
-2. Formatta la scheda SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Formatta la scheda SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Ricopia tutto nella scheda SD
-4. Ricomincia dalla [Sezione I Passo 7](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+4. Ricomincia dalla [Sezione I Passo 7](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 :::
 
@@ -30,9 +30,9 @@ I dati del Centro di creazione Mii non sono stati trovati sulla scheda SD. Accen
 Se non funziona, la scheda SD deve essere formattata:
 
 1. Copia tutto dalla scheda SD sul tuo PC
-2. Formatta la scheda SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Formatta la scheda SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Ricopia tutto nella scheda SD
-4. Ricomincia dalla [Sezione I Passo 8](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
+4. Ricomincia dalla [Sezione I Passo 8](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 :::
 
@@ -43,12 +43,12 @@ Assicurati di aver resettato il database dei titoli.
 - Accendi la console con la scheda SD inserita
 - Avvia le Impostazioni della console e vai su `Gestione dati` -> `Nintendo 3DS` -> `Software` -> Reset ([immagine](/images/screenshots/database-reset.jpg))
   - Non verranno cancellati i tuoi dati
-- Se ricevi una conferma di ripristino, al termine spegni e riaccendi la console e ricomincia dalla [Sezione I Passo 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+- Se ricevi una conferma di ripristino, al termine spegni e riaccendi la console e ricomincia dalla [Sezione I Passo 14](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 Se _non_ ricevi una conferma di ripristino, la tua scheda SD deve essere formattata:
 
 1. Copia tutto dalla scheda SD sul tuo PC
-2. Formatta la scheda SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Formatta la scheda SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Ricopia tutto nella scheda SD
 
 <!--@include: ./_include/mset9-chorus.md -->
@@ -57,7 +57,7 @@ Se _non_ ricevi una conferma di ripristino, la tua scheda SD deve essere formatt
 2. Digita `2` quindi premi Invio per controllare lo stato di MSET9
    - Verranno ricreati nuovamente i database fittizi
 3. Chiudi la finestra dello script MSET9
-4. Ricomincia dalla [Sezione I Passo 12](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
+4. Ricomincia dalla [Sezione I Passo 12](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 :::
 
@@ -76,9 +76,9 @@ Ricorda, la tua scheda SD dovrebbe assomigliare a questo:
 Se il contenuto della scheda SD è corretto, la scheda SD molto probabilmente non sta venendo letta dalla console e deve essere formattata:
 
 1. Copia tutto dalla scheda SD sul tuo PC
-2. Formatta la scheda SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Formatta la scheda SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Ricopia tutto nella scheda SD
-4. Ricomincia dall'inizio della [Sezione I](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+4. Ricomincia dall'inizio della [Sezione I](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 ::::
 
@@ -106,7 +106,7 @@ Hai più cartelle ID0. Per determinare la cartella corretta, segui queste istruz
 10. Sposta la vera cartella ID0 dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
 11. Se esiste, sposta la cartella `Private` dalla cartella `BACKUP_Nintendo 3DS` nella cartella `Nintendo 3DS`
 
-Al termine, continua dalla [Sezione I Passo 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
+Al termine, continua dalla [Sezione I Passo 3](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 :::
 
@@ -161,19 +161,19 @@ Potrebbe mancarti il file `SafeB9S.bin` dalla directory principale della tua sch
 
 1. Digita il numero corrispondente al modello di console e alla versione, quindi premi Invio
    - Lo stato attuale dovrebbe visualizzare [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - Se hai già rimosso il file scatenante (o non l'hai mai iniettato), lo stato attuale mostrerà [Ready](/images/screenshots/mset9/mset9-ready.png), e puoi [riprovare la Sezione II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+   - Se hai già rimosso il file scatenante (o non l'hai mai iniettato), lo stato attuale mostrerà [Ready](/images/screenshots/mset9/mset9-ready.png), e puoi [riprovare la Sezione II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 2. Digita `4`, quindi premi Invio
 3. Una volta che la finestra dice "Removed trigger file", digita `0` quindi premi Invio
 4. Reinserisci la scheda SD nella console
 5. Accendi la tua console
-6. Ritorna alla [Sezione II Passo 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+6. Ritorna alla [Sezione II Passo 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 Altrimenti, la scheda SD potrebbe essere formattata o partizionata in modo errato. Dopo aver rimosso il file scatenante, formattala:
 
 1. Copia tutto dalla scheda SD sul tuo PC
-2. Formatta la scheda SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Formatta la scheda SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Ricopia tutto nella scheda SD
-4. Ricomincia dalla [Sezione II Passo 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+4. Ricomincia dalla [Sezione II Passo 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 :::
 
@@ -195,14 +195,14 @@ Segui queste istruzioni per rimuovere il file scatenante e riprova la Sezione II
 3. Una volta che la finestra dice "Removed trigger file", digita `0` quindi premi Invio
 4. Reinserisci la scheda SD nella console
 5. Accendi la tua console
-6. Ritorna alla [Sezione II Passo 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+6. Ritorna alla [Sezione II Passo 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 Se continui ad avere questo problema e sei sicuro di avere fatto tutto correttamente, assicurati che il file scatenante sia stato rimosso e formatta la tua scheda SD:
 
 1. Copia tutto dalla scheda SD sul tuo PC
-2. Formatta la scheda SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Formatta la scheda SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Ricopia tutto nella scheda SD
-4. Ricomincia dalla [Sezione II Passo 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+4. Ricomincia dalla [Sezione II Passo 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 :::
 
@@ -224,13 +224,13 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 
 ::: tip
 
-Ritorna a [Installazione di boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
+Ritorna a [Installazione di boot9strap (MSET9 CLI)](installing-boot9strap-(mset9-cli))
 
 :::
 
 ::: tip
 
-Ritorna a [Installazione di boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
+Ritorna a [Installazione di boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store))
 
 :::
 

@@ -24,7 +24,7 @@ Jika ada aplikasi yang tidak diinginkan, nanti bisa dihapus setelah selesai pand
 
 Semua aplikasi di panduan ini bersumber terbuka. Jika ingin melihat cara kerja kodenya, atau ingin ditandai bintang sebagai terima kasih, kode sumbernya ditaut di sini:
 
-- [FBI](https://github.com/lifehackerhansol/FBI)
+- [FBI](https://github.com/nh-server/FBI-NH)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
 - [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
 - [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)

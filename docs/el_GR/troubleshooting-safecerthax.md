@@ -14,7 +14,7 @@
 
 ::: tip
 
-Επιστροφή στην [Εγκατάσταση του boot9strap (safecerthax)](installing-boot9strap-\(safecerthax\))
+Επιστροφή στην [Εγκατάσταση του boot9strap (safecerthax)](installing-boot9strap-(safecerthax))
 
 :::
 

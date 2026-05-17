@@ -1,21 +1,21 @@
 ::: info
 
-If you haven't already, make sure you have a working Internet connection set up on your console.
+Si vous ne l'avez pas déjà fait, assurez-vous d'avoir une connexion Internet fonctionnelle configurée sur votre console.
 
 :::
 
 ::: tip
 
-A visual guide is available for this section [here](/images/screenshots/set-proxy.png).
+Un guide visuel est disponible pour cette section [ici](/images/screenshots/set-proxy.png).
 
 :::
 
 1. Lancez l'application Paramètres de la console
-2. Navigate to `Internet Settings` -> `Connection Settings`
-3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
+2. Naviguez vers `Paramètres Internet` -> `Paramètres de connexion`
+3. Cliquez sur votre emplacement de connexion réseau et allez dans `Modifier` -> `Page suivante (flèche à droite)` -> \`Serveur proxy"
 4. Réglez "Serveur proxy" sur "Oui", puis cliquez sur `Paramètres avancés`
-5. Set the Proxy Server to `ssloth.nintendohomebrew.com`, and the Port to `8080`
-6. Click OK, then click Save
-7. When prompted, click "Test" to perform the connection test
-   - The test should succeed
-8. Click "OK" to continue
+5. Définissez le serveur Proxy à `ssloth.nintendohomebrew.com` et le port à `8080`
+6. Cliquez sur OK, puis sur Sauvegarder
+7. Lorsque vous y êtes invité, cliquez sur "Tester" pour effectuer le test de connexion
+   - Le test devrait réussir
+8. Cliquez sur "OK" pour continuer

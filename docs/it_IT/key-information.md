@@ -44,9 +44,22 @@ Nella maggior parte dei casi, puoi seguire questa guida a patto che tu possa sca
 
 :::
 
-La posizione dello slot della scheda SD e il tipo di scheda SD da usare dipendono dal modello del tuo 3DS. Ulteriori informazioni sono disponibili alla [pagina ufficiale di supporto Nintendo](https://www.nintendo.com/it-it/Assistenza/Nintendo-3DS-e-Nintendo-2DS/Uso/Schede-SD/Usare-le-schede-SD/Usare-le-schede-SD-826532.html).
+La posizione dello slot della scheda SD e il tipo di scheda SD da usare dipendono dal modello del tuo 3DS. Ulteriori informazioni sono disponibili alla [pagina ufficiale di supporto Nintendo](https://www.nintendo.com/it-it/Assistenza/Nintendo-3DS-e-Nintendo-2DS/Uso/Schede-SD/Usare-le-schede-SD/Usare-le-schede-SD-826532.html). Ricorda che su console New 3DS e New 3DS XL avrai bisogno di un cacciavite (JIS 00) per accedere alla scheda microSD, posizionata sotto la placca posteriore.
 
-Il 3DS può leggere schede SD di qualunque capienza (anche più grandi di 32GB), tuttavia la scheda dev'essere formattata con filesystem FAT32 (**non** exFAT né NTFS). Puoi usare una delle seguenti applicazioni per formattare la tua scheda SD, a seconda del tuo sistema operativo: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). SD più grandi di **128GB** non sono consigliate a causa di problemi noti con i temi personalizzati e con la grafica GBA/DS.
+La tua scheda (micro)SD deve avere i seguenti requisiti:
+
+- **Marca**: Qualunque marca conosciuta (SanDisk, Samsung, Kingston, Lexar, PNY, ecc.)
+  - Fai attenzione alle schede SD fasulle o illegittime (es: Memory SD, PRO PLUS, SanDian, Extreme Pro), in particolar modo a quelle comprate in negozi online come AliExpress. Guarda [qui](https://www.flashcarts.net/microsd-fakes) per una guida su come identificare le schede SD fasulle. Usare una scheda SD finta o illegittima causerà molto probabilmente problemi di funzionamento, o anche la **perdita di dati**!
+- **Capienza**: Fra i 2GB e i 128GB (inclusi)
+  - Queste schede sono definite SD (<=2GB), SDHC (4GB-32GB), o SDXC (64GB+)
+  - Schede con una capienza minore di 2GB sono insufficienti a causa della grandezza minima di un dump della NAND (circa 1GB), che viene fatto alla fine di questa guida per ragioni di sicurezza
+  - Schede con capienza maggiore o uguale a 200GB funzionano comunque, ma non sono consigliate per i frequenti errori su grafiche DS/GBA e i temi personalizzati
+- **Velocità**: Qualsiasi
+  - Attualmente, le schede più economiche nel mercato sono quelle di **Classe 10** (es. SanDisk Ultra). Schede più veloci vanno bene comunque, ma il 3DS non può sfruttarne la velocità
+- **Formattazione**: FAT32 con partizionamento MBR
+  - Le schede di 32GB o inferiori dovrebbero essere già formattate in questo modo, mentre quelle più grandi dovranno essere formattate manualmente: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
+
+Per le console che utilizzano una scheda SD di dimensione standard, una scheda microSD in un adattatore per schede SD funzionerà alla stessa maniera.
 
 ::: info
 
@@ -54,15 +67,9 @@ Si consiglia vivamente di **utilizzare solo una scheda SD** con una console in q
 
 :::
 
-::: warning
-
-Per seguire questa guida, ti servirà una scheda SD di almeno **2GB**.
-
-:::
-
 ::: info
 
-Se vuoi, puoi verificare che la tua scheda SD sia priva di errori prima di seguire questa guida usando [H2testw (Windows)](h2testw-\(windows\)), [F3 (Linux)](f3-\(linux\)), o [F3XSwift (Mac)](f3xswift-\(mac\)).
+Se vuoi, puoi verificare che la tua scheda SD sia legittima e priva di errori prima di seguire questa guida usando [H2testw](h2testw-(windows))/[ValiDrive](https://www.grc.com/validrive.htm) (Windows), [F3 (Linux)](f3-(linux)), o [F3XSwift (Mac)](f3xswift-(mac)).
 
 :::
 
@@ -144,7 +151,7 @@ Nella maggior parte dei sistemi operativi, per estrarre i file basta farci un do
 
 ::: warning
 
-L'applicazione "WinRAR" per Windows è nota per causare problemi di compatibilità con il 3DS, in particolare con gli exploit di installazione dei custom firmware. Se sei su Windows è necessario utilizzare l'Esplora Risorse predefinito o 7-zip per estrarre i file.
+L'applicazione "WinRAR" per Windows è nota per causare problemi di compatibilità con il 3DS, in particolare con gli exploit di installazione dei custom firmware. Se sei su Windows è necessario utilizzare l'Esplora Risorse predefinito o 7-Zip per estrarre i file.
 
 :::
 
@@ -158,7 +165,21 @@ L'applicazione "WinRAR" per Windows è nota per causare problemi di compatibilit
 
 :::
 
-Se hai un computer con Windows, le estensioni dopo il nome del file potrebbero essere nascoste per impostazione predefinita, rendendo più complicato trovare il file che stai cercando. Per abilitare le estensioni dopo il nome del file, segui [queste istruzioni](file-extensions-\(windows\)).
+Se hai un computer con Windows, le estensioni dopo il nome del file potrebbero essere nascoste per impostazione predefinita, rendendo più complicato trovare il file che stai cercando. Per abilitare le estensioni dopo il nome del file, segui [queste istruzioni](file-extensions-(windows)).
+
+::::
+
+:::: details Cosa significa "espellere" una scheda SD?
+
+::: info
+
+![](/images/screenshots/onboarding/eject-windows.png)
+
+:::
+
+Sulla maggior parte dei dispositivi, il gestore file avrà un pulsante Espelli (⏏️) per rimuovere la scheda SD. Questa opzione termina in modo sicuro tutti i processi attivi e smonta la scheda per poterla poi rimuovere.
+
+È **molto** importante in quanto rimuovere una scheda SD durante l'uso potrebbe corromperne i file e influenzare negativamente il comportamento degli exploit durante la modifica del tuo 3DS.
 
 ::::
 

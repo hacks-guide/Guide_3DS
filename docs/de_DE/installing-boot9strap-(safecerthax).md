@@ -4,7 +4,7 @@
 
 :::
 
-## Compatibility Notes
+## Kompatibilitätshinweise
 
 safecerthax is compatible with all Old 3DS and Old 2DS consoles in all regions on system versions 1.0.0 through 11.14.0.
 
@@ -33,7 +33,7 @@ In this section, you will see whether your shoulder buttons are working on your 
 
 ::: warning
 
-If the camera did NOT appear, you cannot follow this method. If this is the case, use [Installing boot9strap (MSET9)](installing-boot9strap-\(mset9\)) instead.
+If the camera did NOT appear, you cannot follow this method. If this is the case, use [Installing boot9strap (MSET9)](installing-boot9strap-(mset9)) instead.
 
 :::
 

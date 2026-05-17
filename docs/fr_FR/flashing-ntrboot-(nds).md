@@ -1,59 +1,59 @@
-# Flashing ntrboot (NDS)
+# Flasher ntrboot (NDS)
 
-## Lecture Requise
+## Lecture requise
 
-Before proceeding, ensure you have read all of the information on [ntrboot](ntrboot)
+Avant de continuer, assurez-vous d'avoir lu toutes les informations sur [ntrboot](ntrboot)
 
-This method requires temporary access to a Nintendo DS or Nintendo DS Lite that is compatible with your flashcart. This method uses the flashcart to run the ntrboot flasher `.nds` file on your NDS.
+Cette méthode nécessite l'accès temporaire à une Nintendo DS ou une Nintendo DS Lite qui est compatible avec votre linker. Cette méthode utilise l'aide du linker pour exécuter le fichier flasheur ntrboot `.nds` sur votre NDS.
 
 ::: danger
 
-Notez que dans de rares circonstances, il est possible que le processus de flash sur un linker contrefait le **brique** et le rende inutilisable de manière permanente. C'est peu probable, mais néanmoins, seuls les linkers originaux listés sont pris en charge. To reduce the chance of receiving a counterfeit card, it is recommended that you use a reputable site to buy your flashcart (such as [NDS Card](https://www.nds-card.com/)).
+Notez que dans de rares circonstances, il est possible que le processus de flash **bricke** un linker contrefait et le rende inutilisable de manière permanente. C'est peu probable, mais néanmoins, seuls les linkers originaux listés sont pris en charge. Pour réduire les chances de recevoir un linker contrefait, il est recommandé d'utiliser un site réputé pour acheter votre linker (comme [NDS Card](https://www.nds-card.com/)).
 
 :::
 
 ## Ce dont vous avez besoin
 
-- Your ntrboot compatible flashcart
-- Two consoles
-  - **The source NDS / NDSL**: the Nintendo DS or Nintendo DS Lite which is compatible with your flashcart
-  - **The target 3DS**: the 3DS family console on stock firmware
-- The v1.3 release of [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (direct download)
-- The latest release of [ntrboot_flasher_nds](https://github.com/jason0597/ntrboot_flasher_nds/releases/latest) (`ntrboot_flasher_nds.nds`)
+- Votre linker compatible avec ntrboot
+- Deux consoles
+  - **La NDS / NDSL source** : La Nintendo DS ou Nintendo DS Lite qui est compatible avec votre linker
+  - **La 3DS cible** : La console de la famille 3DS sur un firmware non modifié
+- La version 1.3 de [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip) (télechargement direct)
+- La dernière version de [boot9strap-ntr](https://github.com/SciresM/boot9strap/releases/download/1.3/boot9strap-1.3-ntr.zip)
 
 ## Instructions
 
 ### Section I - Préparatifs
 
-1. Power off **the source NDS / NDSL**
-2. Insert your flashcart's SD card into your computer
-3. Create a folder named `ntrboot` on the root of your flashcart's SD card
-4. Copy `boot9strap_ntr.firm` from the boot9strap ntr `.zip` to the `/ntrboot/` folder on your flashcart's SD card
-5. Copy `ntrboot_flasher_nds.nds` to your flashcart's SD card
-6. Reinsert your flashcart's SD card back into your flashcart
-7. Insert your ntrboot compatible DS / DSi flashcart into **the source NDS / NDSL**
+1. Éteignez **la NDS / NDSL source**
+2. Insérez la carte SD de votre linker dans votre ordinateur
+3. Créez un dossier nommé `ntrboot` à la racine de la carte SD de votre linker
+4. Copiez `boot9strap_ntr.firm` depuis l'archive boot9strap ntr `.zip` vers le dossier `/ntrboot/` sur la carte SD de votre linker
+5. Copiez `ntrboot_flasher_nds.nds` vers la carte SD de votre linker
+6. Réinsérez la carte SD de votre linker dans votre linker
+7. Insérez votre linker DS / DSi compatible avec ntrboot dans **la NDS ou NDSL source**
 
-### Section II - Flashing ntrboot
+### Section II - Flasher ntrboot
 
-1. Launch `ntrboot_flasher_nds.nds` on **the source NDS / NDSL** using your flashcart
-2. Press (A) to continue
+1. Lancez `ntrboot_flasher_nds.nds` sur **la NDS / NDSL source** en utilisant votre linker
+2. Appuyez sur (A) pour continuer
 3. Utilisez (Haut) et (Bas) pour sélectionner votre linker
-4. Press (A) to continue
-5. Select "Dump flash" to make a backup of your flashcart's memory
-6. Input the key combo given to confirm
-7. Press (A) to continue
+4. Appuyez sur (A) pour continuer
+5. Sélectionnez "Dump flash" pour créer une sauvegarde de la mémoire de votre linker
+6. Entrez la combinaison de boutons donnée pour confirmer
+7. Appuyez sur (A) pour continuer
 8. Utilisez (Haut) et (Bas) pour sélectionner votre linker
-9. Press (A) to continue
-10. Select "Inject FIRM" to install boot9strap to your flashcart
-11. Input the key combo given to confirm
-12. Press (A) to continue
-13. Power off **the source NDS / NDSL**
-14. Eject your flashcart from **the source NDS / NDSL**
+9. Appuyez sur (A) pour continuer
+10. Sélectionnez "Inject FIRM" pour installer boot9strap sur votre linker
+11. Entrez la combinaison de boutons donnée pour confirmer
+12. Appuyez sur (A) pour continuer
+13. Éteignez **la NDS / NDSL source**
+14. Éjectez votre linker de **la NDS / NDSL source**
 
 ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Continuer vers [Installation de boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
 
 :::

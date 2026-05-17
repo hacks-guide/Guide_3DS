@@ -102,7 +102,7 @@ Győződj meg róla, hogy legalább 1.3 GB szabad hely van az SD kártyádon. Ha
 10. Másold a `Nintendo 3DS` mappát a számítógépedről az SD kártyád gyökerébe
 11. Töröld a `Nintendo 3DS` mappát a számítógépedről
 
-Ha van elég szabad hely az SD kártyádon, az SD kártya lehet sérült vagy hibás. Ellenőrizd az SD kártyádat hibákra valamelyik programmal az alábbiak közül az operációs rendszerednek megfelelően: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)).
+Ha van elég szabad hely az SD kártyádon, az SD kártya lehet sérült vagy hibás. Ellenőrizd az SD kártyádat hibákra valamelyik programmal az alábbiak közül az operációs rendszerednek megfelelően: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
 
 :::
 

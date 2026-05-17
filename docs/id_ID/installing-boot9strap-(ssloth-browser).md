@@ -83,6 +83,7 @@ Di bagian ini akan membuka laman web eksploit Browser dengan universal-otherapp 
 
 4. Jika eksploit berhasil akan muncul SafeB9SInstaller
    - Jika muncul galat, [ikuti panduan sidik gangguan ini](troubleshooting-ssloth-browser)
+   - If troubleshooting fails and your console has **only** 2 working shoulder buttons, follow **only Section IV** of [safecerthax](installing-boot9strap-\(safecerthax\).html#section-iv-safecerthax)
 
 ### Bagian IV - Memasang boot9strap
 

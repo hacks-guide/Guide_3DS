@@ -6,11 +6,11 @@ Dies ist ein Add-on-Abschnitt für die Überprüfung Ihrer SD-Karte für Fehler 
 
 Basierend auf der Größe der SD-Karte und der Geschwindigkeit deines Computer kann dieser Prozess mehrere Stunden dauern!
 
-Diese Seite ist nur für macOS-Nutzer. Wenn du nicht einen Mac benutzt, sieh dir [H2testw (Windows)](h2testw-\(windows\)) oder [F3 (Linux)](f3-\(linux\)) an.
+Diese Seite ist nur für macOS-Nutzer. Wenn du nicht einen Mac benutzt, sieh dir [H2testw (Windows)](h2testw-(windows)) oder [F3 (Linux)](f3-(linux)) an.
 
 ::: info
 
-Wenn du einen Mac auf macOS 10.13 (High Sierra) und höher hast, folge [F3XSwift (Mac)](f3xswift-\(mac\)).
+Wenn du einen Mac auf macOS 10.13 (High Sierra) und höher hast, folge [F3XSwift (Mac)](f3xswift-(mac)).
 
 :::
 

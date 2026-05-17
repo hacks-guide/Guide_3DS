@@ -29,7 +29,7 @@ A custom firmware gyakori felhasználásai a következők:
 - Homebrew szoftver és játékok futtatásához, amik a Nintendo 3DS-re készültek vagy portoltak
 - A régió korlátozás megkerülése, lehetővé téve más régiós játékok futtatását
 - HOME Menü egyedivé tétel, a közösség által készített [témákkal és jelvényekkel](https://themeplaza.art)
-- Játékok módosítása ("ROM hackek") a [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-\(Only-version-8.0-and-higher\))-en keresztül
+- Játékok módosítása ("ROM hackek") a [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher))-en keresztül
 - Játékmentések szerkesztése, biztonsági mentése és visszaállítása
 - Régebbi konzolok emulációja, valamint natív DS és GBA játék futtatás
 - Fizikai cartridge-ek telepítése digitális használatra

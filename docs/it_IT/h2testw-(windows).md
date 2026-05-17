@@ -6,7 +6,7 @@ In questa sezione aggiuntiva verrà spiegato come verificare la presenza di erro
 
 A seconda delle dimensioni della tua scheda SD e della velocità del tuo computer, questo procedimento può durare diverse ore!
 
-Questa pagina è solo per utenti Windows. Se non sei su Windows, usa [F3 (Linux)](f3-\(linux\)) o [F3XSwift (Mac)](f3xswift-\(mac\)).
+Questa pagina è solo per utenti Windows. Se non sei su Windows, usa [F3 (Linux)](f3-(linux)) o [F3XSwift (Mac)](f3xswift-(mac)).
 
 ## Cosa serve
 

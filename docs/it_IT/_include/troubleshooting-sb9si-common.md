@@ -2,7 +2,7 @@
 
 :::details MicroSD Card - init failed
 
-La tua scheda SD ha probabilmente qualcosa che non va. Prova a riformattarla ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). Se questo non risolve il problema, prova una scheda SD diversa.
+La tua scheda SD ha probabilmente qualcosa che non va. Prova a riformattarla ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). Se questo non risolve il problema, prova una scheda SD diversa.
 
 :::
 

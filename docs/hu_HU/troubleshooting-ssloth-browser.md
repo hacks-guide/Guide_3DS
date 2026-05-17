@@ -76,7 +76,7 @@ Kövesd az alábbi lépéseket:
 9. Nyisd meg az Internet Browser-t egyszer
 10. Ha kérdezi a rendszer frissítést, nyomj OK-t
     - Ez nem fogja frissíteni a rendszert
-11. Kezd előlről a [II. résszel](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+11. Kezd előlről a [II. résszel](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
 
 :::
 
@@ -88,7 +88,7 @@ Probléma lehet az arm11code.bin`fájloddal. Töltsd le újra a legutolsó kiad�
 
 :::details Failed to mount the SD card!
 
-Mentsd az adataidat, majd formázd újra az SD kártyád FAT32 formátumra, az ajánlott alkalmazással az operációs rendszerednek megfelelően. ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). A MiniTool Partition Wizard-ról és a HP formázó eszközről (HPUSBDisk) ismert, hogy problémákat okoznak a 3DS SD kártyákkal.
+Mentsd az adataidat, majd formázd újra az SD kártyád FAT32 formátumra, az ajánlott alkalmazással az operációs rendszerednek megfelelően. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). A MiniTool Partition Wizard-ról és a HP formázó eszközről (HPUSBDisk) ismert, hogy problémákat okoznak a 3DS SD kártyákkal.
 
 Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
@@ -108,7 +108,7 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
 ::: tip
 
-Vissza a [Boot9strap telepítése (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\)) oldalhoz
+Vissza a [Boot9strap telepítése (SSLoth-Browser)](installing-boot9strap-(ssloth-browser)) oldalhoz
 
 :::
 

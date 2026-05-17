@@ -29,7 +29,7 @@ hero:
 - Εκτέλεση λογισμικού homebrew και παιχνιδιών που έχουν δημιουργηθεί ή μεταφερθεί στο Nintendo 3DS
 - Παράκαμψη του κλειδώματος περιοχής, επιτρέποντάς σας να παίζετε παιχνίδια από άλλες περιοχές
 - Προσαρμογή του μενού «HOME» με [θέματα και εμβλήματα](https://themeplaza.art) της κοινότητας
-- Τροποποίηση παιχνιδιών («ROM hacks») μέσω του [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-\(Only-version-8.0-and-higher\))
+- Τροποποίηση παιχνιδιών («ROM hacks») μέσω του [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher))
 - Επεξεργασία, αντιγραφή και επαναφορά αποθηκευμένων δεδομένων
 - Εξομοίωση παλαιότερων κονσολών, καθώς και εγγενή εκτέλεση παιχνιδιών DS και GBA
 - Εγκατάσταση φυσικών κασετών για ψηφιακή χρήση

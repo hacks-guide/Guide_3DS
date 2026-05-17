@@ -6,7 +6,7 @@ In questa sezione aggiuntiva verrà spiegato come verificare la presenza di erro
 
 A seconda delle dimensioni della tua scheda SD e della velocità del tuo computer, questo procedimento può durare diverse ore!
 
-Questa pagina è solo per utenti Linux. Se non sei su Linux, usa [H2testw (Windows)](h2testw-\(windows\)) o [F3XSwift (Mac)](f3xswift-\(mac\)).
+Questa pagina è solo per utenti Linux. Se non sei su Linux, usa [H2testw (Windows)](h2testw-(windows)) o [F3XSwift (Mac)](f3xswift-(mac)).
 
 ## Cosa serve
 

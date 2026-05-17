@@ -6,7 +6,7 @@ Dies ist ein Add-on-Abschnitt für die Überprüfung Ihrer SD-Karte für Fehler 
 
 Basierend auf der Größe der SD-Karte und der Geschwindigkeit deines Computer kann dieser Prozess mehrere Stunden dauern!
 
-Diese Seite ist nur für Windowsnutzer gedacht. If you are not on windows, check out the [F3 (Linux)](f3-\(linux\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
+Diese Seite ist nur für Windowsnutzer gedacht. If you are not on windows, check out the [F3 (Linux)](f3-(linux)) or [F3XSwift (Mac)](f3xswift-(mac)) pages.
 
 ## Was du brauchst
 

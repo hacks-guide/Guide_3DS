@@ -24,7 +24,7 @@ Se non desideri alcune di queste applicazioni, puoi rimuoverle al termine di que
 
 Tutte le applicazioni installate con questa guida sono open-source. Se sei interessato a vederne il funzionamento, o vuoi lasciare una stella per dimostrare il tuo apprezzamento, il loro codice sorgente si trova qui:
 
-- [FBI](https://github.com/lifehackerhansol/FBI)
+- [FBI](https://github.com/nh-server/FBI-NH)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
 - [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
 - [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)

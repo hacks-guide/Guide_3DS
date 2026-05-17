@@ -18,13 +18,20 @@ Sebelum memulai panduan ini, kita periksa dulu berapa versi sistem konsol dan ap
 ### Bagian I - Periksa CFW
 
 1. Matikan daya konsol
-2. Tahan tombol (Select)
-3. Nyalakan daya konsol selagi tetap menahan tombol (Select)
-4. Jika tidak muncul menu kustom (konsol hanya menyala ke HOME Menu), boleh lanjut ke bagian berikutnya
+2. Insert your SD card into your console
+3. Tahan tombol (Select)
+4. Nyalakan daya konsol selagi tetap menahan tombol (Select)
+5. Jika tidak muncul menu kustom (konsol hanya menyala ke HOME Menu), boleh lanjut ke bagian berikutnya
 
 ::: warning
 
 Jika muncul konfigurasi Luma3DS atau menu kustom lainnya (misal: GodMode9, Decrypt9WIP), BERHENTI - konsol sudah _custom firmware_! Lanjut saja dari [sini](checking-for-cfw#what-to-do-next).
+
+:::
+
+::: warning
+
+If, when the console boots to the HOME Menu, you see the error "Could not detect an SD card", ensure that your SD card is properly formatted: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))
 
 :::
 

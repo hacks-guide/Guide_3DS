@@ -10,7 +10,7 @@ Using a hardmod, we can dump the NAND image, install custom firmware to the NAND
 
 :::
 
-## Compatibility Notes
+## Kompatibilitätshinweise
 
 To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this page, you will need a torrent client like [qBittorrent](https://www.qbittorrent.org/download.php) or [Deluge](http://dev.deluge-torrent.org/wiki/Download).
 

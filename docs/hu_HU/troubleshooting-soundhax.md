@@ -1,13 +1,5 @@
 ---
-head:
-  [
-    [ 'script', { src: '/assets/js/common.js' } ],
-    [
-        'script',
-        { src: '/assets/js/soundhax-frankenfirm-link.js' }
-      ],
-    [ 'script', { src: '/assets/js/link-common.js' } ]
-  ]
+head: [ [ 'script', { src: '/assets/js/common.js' } ], [ 'script', { src: '/assets/js/soundhax-frankenfirm-link.js' } ], [ 'script', { src: '/assets/js/link-common.js' } ] ]
 ---
 
 # Hibaelhárítás (Soundhax)
@@ -64,7 +56,7 @@ Ha ez sikertelen, próbálkozz egy másik SD kártyával.
 
 ::: tip
 
-Vissza [Boot9strap telepítése (Soundhax)](installing-boot9strap-\(soundhax\))-hoz
+Vissza [Boot9strap telepítése (Soundhax)](installing-boot9strap-(soundhax))-hoz
 
 :::
 

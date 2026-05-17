@@ -33,7 +33,7 @@ Ebben a fejezetben tesztelni fogod azt, hogy működnek-e a váll gombok a konzo
 
 ::: warning
 
-Ez a módszer nem használható, ha a kamera NEM jelenik meg. Ha ez az eset, használd [Boot9strap telepítése (MSET9)](installing-boot9strap-\(mset9\)) módszert helyette.
+Ez a módszer nem használható, ha a kamera NEM jelenik meg. Ha ez az eset, használd [Boot9strap telepítése (MSET9)](installing-boot9strap-(mset9)) módszert helyette.
 
 :::
 

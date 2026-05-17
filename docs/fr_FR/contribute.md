@@ -1,24 +1,24 @@
 # Contribuer
 
-We're glad to hear that you'd like to contribute to 3ds.hacks.guide! Here are a few ways that you can do so:
+Nous sommes ravis d'apprendre que vous souhaiteriez contribuer à 3ds.hacks.guide ! Voici quelques façons de le faire :
 
 ## Maintenance
 
-This guide is open-source; our repository is available [here](https://github.com/hacks-guide/Guide_3DS). If you've noticed an issue on this guide, you can file an issue to make us aware, or file a pull request to make the necessary changes yourself. You can also have a chat with us in the #guide-meta channel at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+Ce guide est open source ; notre dépôt est disponible [ici](https://github.com/hacks-guide/Guide_3DS). Si vous avez remarqué un problème dans ce guide, vous pouvez ouvrir une issue pour nous faire savoir, ou créer une pull request pour effectuer vous-même les changements nécessaires. Vous pouvez également venir discuter avec nous dans le salon #guide-meta sur [le Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp).
 
-## Translations
+## Traductions
 
-If you'd like to translate this guide into other languages (or help keep the existing translations up-to-date), check out our [Crowdin](https://crowdin.com/project/3ds-guide).
+Si vous souhaitez traduire ce guide dans d'autres langues (ou aider à maintenir à jour les traductions existantes), consultez notre [Crowdin](https://fr.crowdin.com/project/3ds-guide).
 
 ## Seeding
 
-A number of files on this guide are only available as torrents. If you'd like to help seed these torrents to ensure their availability in the future, you can download the `.zip` file containing all our `.torrent` files: [torrents.zip](/assets/torrents.zip) (last updated 2023-03-16)
+Certains fichiers sur ce guide ne sont disponibles que sous forme de torrents. Si vous souhaitez aider à seed ces torrents pour assurer leur disponibilité à l'avenir, vous pouvez télécharger le fichier `.zip` contenant tous nos fichiers `.torrent` : [torrents.zip](/assets/torrents.zip) (dernière mise à jour le 16/03/2023)
 
-There is also an [RSS feed](/rss.xml) that may be updated for future torrents, which you can subscribe to.
+Il existe également un [flux RSS](/rss.xml) qui peut être mis à jour pour les futurs torrents, auquel vous pouvez vous abonner.
 
-## Donations
+## Dons
 
-Maintaining this guide (as well as our support channels) is primarily a volunteer effort, so if this guide has helped you in some way, donations are greatly appreciated!
+Maintenir ce guide (ainsi que nos canaux de support) est avant tout un effort bénévole, alors si ce guide vous a aidé d'une certaine manière, les dons sont grandement appréciés !
 
 ::: tip
 

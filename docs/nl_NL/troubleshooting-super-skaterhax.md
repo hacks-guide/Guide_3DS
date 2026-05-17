@@ -48,7 +48,7 @@ This likely indicates that you already have custom firmware. Je zou best [contro
 
 :::details Error 032-1035 when trying to view the skaterhax webpage
 
-Your Internet connection is blocking access to the skaterhax webpage. If possible, try a mobile hotspot. If you do not have another Internet connection available, follow [MSET9](installing-boot9strap-\(mset9\)) instead.
+Your Internet connection is blocking access to the skaterhax webpage. If possible, try a mobile hotspot. If you do not have another Internet connection available, follow [MSET9](installing-boot9strap-(mset9)) instead.
 
 :::
 
@@ -66,7 +66,7 @@ Your Internet connection is blocking access to the skaterhax webpage. If possibl
 
 ::: tip
 
-Go back to [Installing boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+Go back to [Installing boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax))
 
 :::
 

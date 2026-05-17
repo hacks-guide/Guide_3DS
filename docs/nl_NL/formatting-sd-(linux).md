@@ -6,7 +6,7 @@ Dit is een extra sectie voor het formatteren van een SD-kaart om deze te doen we
 
 Als de 3DS de SD kaart al herkent, is deze handleiding niet nodig.
 
-Deze pagina is alleen voor Linux gebruikers. Als je geen Linux gebruikt, zie dan de [Formatteer SD (Windows)](formatting-sd-\(windows\)) of [Formatteer SD (Mac)](formatting-sd-\(mac\)) pagina's.
+Deze pagina is alleen voor Linux gebruikers. Als je geen Linux gebruikt, zie dan de [Formatteer SD (Windows)](formatting-sd-(windows)) of [Formatteer SD (Mac)](formatting-sd-(mac)) pagina's.
 
 ## Instructions
 

@@ -1,48 +1,48 @@
 # F3X (Mac)
 
-## Lecture Requise
+## Lecture requise
 
-This is an add-on section for checking your SD card for errors using F3X.
+Ceci est une section complémentaire sur comment vérifier que votre carte SD ne contient pas d'erreurs en utilisant F3X.
 
-Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!
+Selon la taille de votre carte SD et la vitesse de votre ordinateur, ce processus peut prendre jusqu'à plusieurs heures !
 
-This page is for Mac users only. If you are not on Mac, check out the [H2testw (Windows)](h2testw-\(windows\)) or [F3 (Linux)](f3-\(linux\)) pages.
+Cette page est seulement pour les utilisateurs de Mac. Si vous n'utilisez pas un Mac, jetez un œil aux pages [H2testw (Windows)](h2testw-(windows)) ou [F3 (Linux)](f3-(linux)).
 
 ::: info
 
-If you're using a Mac on macOS 10.13 (High Sierra) and above, follow [F3XSwift (Mac)](f3xswift-\(mac\)) instead.
+Si vous utilisez un Mac sous macOS 10.13 (High Sierra) ou ultérieur, suivez plutôt [F3XSwift (Mac)](f3xswift-(mac)).
 
 :::
 
 ## Ce dont vous avez besoin
 
-- The latest release of [F3X](https://github.com/insidegui/F3X/releases/latest)
+- La dernière version de [F3X](https://github.com/insidegui/F3X/releases/latest)
 
 ## Instructions
 
-1. Unzip the F3X `.zip` file
+1. Décompressez le fichier `.zip` de F3X
 2. Insérez votre carte SD dans votre ordinateur
-3. Run the F3X app
-4. Select your SD card
-5. Press "Start Test"
-6. Wait until the process is complete.
+3. Lancez l'application F3X
+4. Sélectionnez votre carte SD
+5. Appuyez sur "Start Test"
+6. Attendez la fin de l'opération.
 
 ___
 
 ::: tip
 
-If the test shows the result `Success! Your card is ok!`, your SD card is good and you can delete all `.h2w` files on your SD card.
+Si le test affiche le résultat `Success! Your card is ok!` votre carte SD est saine et vous pouvez supprimer tous les fichiers `.h2w` sur la carte SD.
 
 :::
 
 ::: danger
 
-If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!
+Si le test montre un autre résultat, votre carte SD est peut-être corrompue ou endommagée et vous devrez peut-être la remplacer !
 
 :::
 
 ::: tip
 
-Return to [Get Started](get-started)
+Retourner à [Pour commencer](get-started)
 
 :::

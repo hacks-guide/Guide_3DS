@@ -14,7 +14,7 @@ Ez az oldal hibaelhárítási tanácsokat ad sűrűn előforduló problémákhoz
 
 ::: tip
 
-Vissza a [Boot9strap telepítésére (ntrboot)](installing-boot9strap-\(ntrboot\))
+Vissza a [Boot9strap telepítésére (ntrboot)](installing-boot9strap-(ntrboot))
 
 :::
 

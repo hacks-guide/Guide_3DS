@@ -1,4 +1,4 @@
 À partir d'ici, votre console démarrera sur Luma3DS par défaut.
 
-- Luma3DS does not look any different from the normal HOME Menu. Si votre console a démarré dans le menu HOME, elle exécute un custom firmware.
-- On the next page, you will install useful homebrew applications to complete your setup.
+- Luma3DS ne paraît pas différent du menu HOME normal. Si votre console a démarré dans le menu HOME, elle exécute un custom firmware.
+- Sur la page suivante, vous installerez des applications homebrew utiles pour compléter votre installation.

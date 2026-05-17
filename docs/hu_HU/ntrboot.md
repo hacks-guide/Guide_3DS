@@ -2,7 +2,7 @@
 
 ::: tip
 
-Ha a flashkártyád gyárilag flashelve van az ntrboot-tal (vagy már magad ráflashelted), ugorhatsz a [boot9strap telepítése (ntrboot)](installing-boot9strap-\(ntrboot\)) című útmutatóra, amiben megtudhatod, hogyan kell használni.
+Ha a flashkártyád gyárilag flashelve van az ntrboot-tal (vagy már magad ráflashelted), ugorhatsz a [boot9strap telepítése (ntrboot)](installing-boot9strap-(ntrboot)) című útmutatóra, amiben megtudhatod, hogyan kell használni.
 
 :::
 
@@ -71,7 +71,7 @@ Ehhez a módszerhez mindössze egy gyári állapotú 3DS-re és egy kompatibilis
 
 ::: tip
 
-Tovább az [ntrboot flashelése (egy 3DS)](flashing-ntrboot-\(3ds-single-system\)) oldalra
+Tovább az [ntrboot flashelése (egy 3DS)](flashing-ntrboot-(3ds-single-system)) oldalra
 
 :::
 
@@ -83,7 +83,7 @@ Ehhez a módszerhez szükséged lesz átmenetileg egy második 3DS-családból s
 
 ::: tip
 
-Tovább az [ntrboot flashelése (több 3DS)](flashing-ntrboot-\(3ds-multi-system\)) oldalra
+Tovább az [ntrboot flashelése (több 3DS)](flashing-ntrboot-(3ds-multi-system)) oldalra
 
 :::
 
@@ -95,7 +95,7 @@ Ehhez a módszerhez szükséged lesz átmenetileg egy Nintendo DS vagy egy Ninte
 
 ::: tip
 
-Tovább az [ntrboot flashelése (NDS)](flashing-ntrboot-\(nds\)) oldalra
+Tovább az [ntrboot flashelése (NDS)](flashing-ntrboot-(nds)) oldalra
 
 :::
 
@@ -107,6 +107,6 @@ Ehhez a módszerhez szükséged lesz átmenetileg egy Nintendo DSi készülékre
 
 ::: tip
 
-Tovább az [ntrboot flashelése (DSi)](flashing-ntrboot-\(dsi\)) oldalra
+Tovább az [ntrboot flashelése (DSi)](flashing-ntrboot-(dsi)) oldalra
 
 :::

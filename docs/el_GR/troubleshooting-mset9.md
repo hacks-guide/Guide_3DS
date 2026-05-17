@@ -17,9 +17,9 @@
 Αν αυτό δεν λειτουργήσει, η κάρτα SD σας πρέπει να διαμορφωθεί:
 
 1. Αντιγράψτε τα πάντα από την κάρτα SD στον υπολογιστή σας
-2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Αντιγράψτε τα πάντα πίσω στην κάρτα SD
-4. Ξεκινήστε ξανά από το [Βήμα 7 της Ενότητας I](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+4. Ξεκινήστε ξανά από το [Βήμα 7 της Ενότητας I](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 :::
 
@@ -30,9 +30,9 @@
 Αν αυτό δεν λειτουργήσει, η κάρτα SD σας πρέπει να διαμορφωθεί:
 
 1. Αντιγράψτε τα πάντα από την κάρτα SD στον υπολογιστή σας
-2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Αντιγράψτε τα πάντα πίσω στην κάρτα SD
-4. Ξεκινήστε ξανά από το [Βήμα 8 της Ενότητας I](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
+4. Ξεκινήστε ξανά από το [Βήμα 8 της Ενότητας I](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 :::
 
@@ -43,12 +43,12 @@
 - Ενεργοποιήστε την κονσόλα σας, έχοντας εισαγάγει την SD σας
 - Εκκινήστε την εφαρμογή «System Settings» και μεταβείτε στο `Data Management` -> `Nintendo 3DS` -> `Software` -> «Reset» ([εικόνα](/images/screenshots/database-reset.jpg))
   - Αυτή η ενέργεια δεν θα διαγράψει τα δεδομένα σας
-- Εάν λάβετε ένα μήνυμα προτροπής για επαναφορά, μετά την επαναφορά, απενεργοποιήστε την κονσόλα σας και ξεκινήστε ξανά από το [Βήμα 14 της Ενότητας I](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+- Εάν λάβετε ένα μήνυμα προτροπής για επαναφορά, μετά την επαναφορά, απενεργοποιήστε την κονσόλα σας και ξεκινήστε ξανά από το [Βήμα 14 της Ενότητας I](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 Εάν _δεν_ λάβετε κάποιο μήνυμα προτροπής για επαναφορά, η κάρτα SD πρέπει να διαμορφωθεί:
 
 1. Αντιγράψτε τα πάντα από την κάρτα SD στον υπολογιστή σας
-2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Αντιγράψτε τα πάντα πίσω στην κάρτα SD
 
 <!--@include: ./_include/mset9-chorus.md -->
@@ -57,7 +57,7 @@
 2. Πληκτρολογήστε `2` και πατήστε το Enter για να ελέγξετε την κατάσταση του MSET9
    - Αυτή η ενέργεια θα δημιουργήσει ξανά τις εικονικές βάσεις δεδομένων
 3. Κλείστε το παράθυρο του script «MSET9»
-4. Ξεκινήστε ξανά από το [Bήμα 12 της Eνότητας I](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
+4. Ξεκινήστε ξανά από το [Bήμα 12 της Eνότητας I](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 :::
 
@@ -76,9 +76,9 @@
 Εάν η διάταξη της κάρτας SD είναι σωστή, τότε η κονσόλα σας δεν διαβάζει πιθανότατα την κάρτα SD και πρέπει να τη διαμορφώσετε:
 
 1. Αντιγράψτε τα πάντα από την κάρτα SD στον υπολογιστή σας
-2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Αντιγράψτε τα πάντα πίσω στην κάρτα SD
-4. Ξεκινήστε ξανά από την αρχή της [Ενότητας I](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+4. Ξεκινήστε ξανά από την αρχή της [Ενότητας I](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 ::::
 
@@ -106,7 +106,7 @@
 10. Μετακινήστε τον πραγματικό φάκελο ID0 από τον φάκελο `BACKUP_Nintendo 3DS` στον φάκελο `Nintendo 3DS`
 11. Εάν υπάρχει, μετακινήστε τον φάκελο `Private` από τον φάκελο `BACKUP_Nintendo 3DS` στον φάκελο `Nintendo 3DS`
 
-Μόλις το κάνετε αυτό, συνεχίστε από το [Βήμα 3 της Ενότητας I](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
+Μόλις το κάνετε αυτό, συνεχίστε από το [Βήμα 3 της Ενότητας I](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 :::
 
@@ -161,19 +161,19 @@
 
 1. Πληκτρολογήστε τον αριθμό που αντιστοιχεί στο μοντέλο και την έκδοση της κονσόλας σας και πατήστε το Enter
    - Η τρέχουσα κατάσταση θα πρέπει να εμφανίζει [Injected](/images/screenshots/mset9/mset9-injected.png)
-   - Εάν έχετε ήδη αφαιρέσει το αρχείο ενεργοποίησης (ή δεν κάνατε ποτέ εισαγωγή του), η τρέχουσα κατάσταση θα εμφανίζει [Ready](/images/screenshots/mset9/mset9-ready.png) και μπορείτε να [επαναλάβετε τις οδηγίες της Ενότητας II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+   - Εάν έχετε ήδη αφαιρέσει το αρχείο ενεργοποίησης (ή δεν κάνατε ποτέ εισαγωγή του), η τρέχουσα κατάσταση θα εμφανίζει [Ready](/images/screenshots/mset9/mset9-ready.png) και μπορείτε να [επαναλάβετε τις οδηγίες της Ενότητας II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 2. Πληκτρολογήστε `4` και πατήστε το Enter
 3. Μόλις το παράθυρο εμφανίσει το μήνυμα «Removed trigger file», πληκτρολογήστε `0` και πατήστε το Enter
 4. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 5. Ενεργοποιήστε την κονσόλα σας
-6. Επιστρέψτε στο [Βήμα 1 της Ενότητας II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+6. Επιστρέψτε στο [Βήμα 1 της Ενότητας II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 Εναλλακτικά, η κάρτα SD ενδέχεται να έχει διαμορφωθεί ή διαμεριστεί εσφαλμένα. Μετά την αφαίρεση του αρχείου ενεργοποίησης, διαμορφώστε τη:
 
 1. Αντιγράψτε τα πάντα από την κάρτα SD στον υπολογιστή σας
-2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Αντιγράψτε τα πάντα πίσω στην κάρτα SD
-4. Ξεκινήστε ξανά από το [Βήμα 1 της Ενότητας II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+4. Ξεκινήστε ξανά από το [Βήμα 1 της Ενότητας II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 :::
 
@@ -195,14 +195,14 @@
 3. Μόλις το παράθυρο εμφανίσει το μήνυμα «Removed trigger file», πληκτρολογήστε `0` και πατήστε το Enter
 4. Εισαγάγετε ξανά την κάρτα SD στην κονσόλα σας
 5. Ενεργοποιήστε την κονσόλα σας
-6. Επιστρέψτε στο [Βήμα 1 της Ενότητας II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+6. Επιστρέψτε στο [Βήμα 1 της Ενότητας II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 Αν εξακολουθείτε να αντιμετωπίζετε αυτό το ζήτημα και έχετε βεβαιωθεί ότι κάνατε τα πάντα σωστά, επιβεβαιώστε ότι το αρχείο ενεργοποίησης έχει αφαιρεθεί και διαμορφώστε την κάρτα SD σας:
 
 1. Αντιγράψτε τα πάντα από την κάρτα SD στον υπολογιστή σας
-2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. Διαμορφώστε την κάρτα SD ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. Αντιγράψτε τα πάντα πίσω στην κάρτα SD
-4. Ξεκινήστε ξανά από το [Βήμα 1 της Ενότητας II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+4. Ξεκινήστε ξανά από το [Βήμα 1 της Ενότητας II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 :::
 
@@ -224,13 +224,13 @@
 
 ::: tip
 
-Επιστροφή στην [Εγκατάσταση του boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))
+Επιστροφή στην [Εγκατάσταση του boot9strap (MSET9 CLI)](installing-boot9strap-(mset9-cli))
 
 :::
 
 ::: tip
 
-Επιστροφή στην [Εγκατάσταση του boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\))
+Επιστροφή στην [Εγκατάσταση του boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store))
 
 :::
 

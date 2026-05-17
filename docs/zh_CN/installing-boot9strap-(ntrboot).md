@@ -19,20 +19,20 @@
 1. 将主机关机
 
 2. 将你主机的 SD 卡插入你的电脑
-    - This is the SD card from your 3DS, _not_ the SD card from your flashcart
+   - This is the SD card from your 3DS, _not_ the SD card from your flashcart
 
 3. 将 SafeB9SInstaller `.zip` 中的 `SafeB9SInstaller.firm` 复制到 SD 卡的根目录下，然后重命名为 `boot.firm`
-    - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
+   - The root of the SD card refers to the initial directory on your SD card where you can see the Nintendo 3DS folder, but are not inside of it
 
 4. 在你主机 SD 卡根目录创建一个名为 `boot9strap` 的文件夹
 
 5. 从boot9strap `.zip` 压缩包中复制 `boot9strap.firm` 和 `boot9strap.firm.sha` 到你主机 SD 卡的 `/boot9strap/` 文件夹中
 
-    ::: info
+   ::: info
 
-    ![](/images/screenshots/boot9strap-ntrboot-file-layout.png)
+   ![](/images/screenshots/boot9strap-ntrboot-file-layout.png)
 
-    :::
+   :::
 
 6. Reinsert your SD card into your console
 
@@ -41,25 +41,25 @@
 ### Section II - ntrboot
 
 1. Use the magnet to find the spot on your console where the sleep sensor is triggered
-    - This step is not needed on the old 2DS (which has a sleep mode switch)
+   - This step is not needed on the old 2DS (which has a sleep mode switch)
 2. 将主机关机
 3. Insert your flashcart into your console
 4. Place the magnet on your console to trigger the sleep sensor
-    - On old 2DS, you should instead enable the sleep mode switch
+   - On old 2DS, you should instead enable the sleep mode switch
 5. 按住 “Start” + “Select” + “X” + “电源键” 几秒钟，然后放开
-    - It may take a few attempts to get this to work because the positioning is awkward
+   - It may take a few attempts to get this to work because the positioning is awkward
 6. 如果一切成功的话，你将自动进入 SafeB9SInstaller
 7. Remove the magnet from your console
-    - On old 2DS, you should instead disable the sleep mode switch
+   - On old 2DS, you should instead disable the sleep mode switch
 
 ### Section III - Installing boot9strap
 
 In this section, you will install custom firmware onto your console.
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
-    - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ntrboot)
+   - If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ntrboot)
 2. Once it is completed, force your console to power off by holding down the power button
-    - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
+   - Your console will only boot to the SafeB9SInstaller screen until the next section is completed
 
 ### Section IV - Configuring Luma3DS
 
@@ -95,9 +95,9 @@ ___
 
 - The latest release of [ntrboot_flasher](https://github.com/ntrteam/ntrboot_flasher/releases/latest) (`ntrboot_flasher.firm`)
 - The flashrom backup corresponding to your flashcart
-    - Note that if you followed [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-system\)), the flashrom backup already exists in the correct location and does not need to be downloaded
-    - Note that if you followed [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single-system\)) or [Flashing ntrboot (NDS)](flashing-ntrboot-\(nds\)), the flashrom backup already exists on your flashcart's SD card and should be copied to the location specified below
-    - If you do not know which HW revision you have, just try each for your cart of them. 只有正确的版本才可以在主菜单中启动烧录卡，刷入错误的版本不会导致烧录卡损坏
+  - Note that if you followed [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-\(3ds-multi-system\)), the flashrom backup already exists in the correct location and does not need to be downloaded
+  - Note that if you followed [Flashing ntrboot (3DS Single System)](flashing-ntrboot-\(3ds-single-system\)) or [Flashing ntrboot (NDS)](flashing-ntrboot-\(nds\)), the flashrom backup already exists on your flashcart's SD card and should be copied to the location specified below
+  - If you do not know which HW revision you have, just try each for your cart of them. 只有正确的版本才可以在主菜单中启动烧录卡，刷入错误的版本不会导致烧录卡损坏
 
 | Flashcart                                                        | Hardware Revision |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Flashrom                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ---------------------------------------------------------------- | :---------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -129,7 +129,7 @@ ___
 
 1. 将主机关机
 2. 将你的 SD 卡插入到电脑
-    - This is the SD card from your 3DS, _not_ the SD card from your flashcart
+   - This is the SD card from your 3DS, _not_ the SD card from your flashcart
 3. 在 SD 卡根目录创建一个名为 `ntrboot` 的文件夹
 4. 从烧录卡备份 `.zip` 压缩包中复制 `.bin` 文件到你的 SD 卡的 `/ntrboot/` 文件夹
 5. 在SD卡的 `luma` 文件夹里创建 `payloads` 文件夹

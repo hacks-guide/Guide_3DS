@@ -18,13 +18,20 @@ head:
 ### 섹션 I - CFW 확인
 
 1. 콘솔의 전원을 꺼 주세요
-2. (Select) 버튼을 길게 눌러 주세요
-3. (Select) 버튼을 계속 눌러 있는 상태에서 콘솔의 전원을 켜 주세요
-4. 커스텀 메뉴가 아닌 HOME 메뉴로 부팅이 되었다면 다음 섹션으로 진행할 수 있습니다
+2. Insert your SD card into your console
+3. (Select) 버튼을 길게 눌러 주세요
+4. (Select) 버튼을 계속 눌러 있는 상태에서 콘솔의 전원을 켜 주세요
+5. 커스텀 메뉴가 아닌 HOME 메뉴로 부팅이 되었다면 다음 섹션으로 진행할 수 있습니다
 
 ::: warning
 
 만약 Luma3DS 구성 화면 또는 기타 커스텀 메뉴 (예: GodMode9/Decrypt9WIP)가 표시되면 멈추세요 - 커스텀 펌웨어가 이미 설치되어 있습니다! [이 섹션](checking-for-cfw#what-to-do-next)으로 진행해 주세요.
+
+:::
+
+::: warning
+
+If, when the console boots to the HOME Menu, you see the error "Could not detect an SD card", ensure that your SD card is properly formatted: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))
 
 :::
 

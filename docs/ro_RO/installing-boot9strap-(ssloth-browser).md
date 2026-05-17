@@ -83,6 +83,7 @@ In this section, you will visit the browser exploit webpage, which will use univ
 
 4. Dacă exploit-ul a avut succes, veți porni în SafeB9SInstaller
    - If you get an error, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
+   - If troubleshooting fails and your console has **only** 2 working shoulder buttons, follow **only Section IV** of [safecerthax](installing-boot9strap-\(safecerthax\).html#section-iv-safecerthax)
 
 ### Section IV - Installing boot9strap
 

@@ -24,7 +24,7 @@ Ha nem szeretnéd ezeket az alkalmazásokat, eltávolíthatod őket, miután bef
 
 Minden az ebből az útmutatóból telepített alkalmazás nyílt forrású. Ha érdekel, hogy hogyan működnek, vagy szeretnél egy csillagot hagyni elismerésedül, a forráskód elérhető a linkekről innen:
 
-- [FBI](https://github.com/lifehackerhansol/FBI)
+- [FBI](https://github.com/nh-server/FBI-NH)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
 - [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
 - [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)

@@ -48,7 +48,7 @@ Probabilmente significa che hai già un custom firmware. Dovresti [verificare la
 
 :::details Errore 032-1035 quando si tenta di visualizzare la pagina web di skaterhax
 
-La tua connessione Internet sta bloccando l'accesso alla pagina web di skaterhax. Se possibile, prova ad usare un hotspot mobile. Se non disponi di un'altra connessione a Internet, segui [MSET9](installing-boot9strap-\(mset9\)).
+La tua connessione Internet sta bloccando l'accesso alla pagina web di skaterhax. Se possibile, prova ad usare un hotspot mobile. Se non disponi di un'altra connessione a Internet, segui [MSET9](installing-boot9strap-(mset9)).
 
 :::
 
@@ -66,7 +66,7 @@ La tua connessione Internet sta bloccando l'accesso alla pagina web di skaterhax
 
 ::: tip
 
-Torna a [Installazione di boot9strap (super-skaterhax)](installing-boot9strap-\(super-skaterhax\))
+Torna a [Installazione di boot9strap (super-skaterhax)](installing-boot9strap-(super-skaterhax))
 
 :::
 

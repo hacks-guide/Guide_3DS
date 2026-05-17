@@ -14,7 +14,7 @@
 
 ::: tip
 
-Επιστροφή στην [Εγκατάσταση του boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Επιστροφή στην [Εγκατάσταση του boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
 
 :::
 

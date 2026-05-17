@@ -1,10 +1,5 @@
 ---
-head:
-  [
-    [ 'script', { src: '/assets/js/common.js' } ],
-    [ 'script', { src: '/assets/js/skater-link.js' } ],
-    [ 'script', { src: '/assets/js/link-common.js' } ]
-  ]
+head: [ [ 'script', { src: '/assets/js/common.js' } ], [ 'script', { src: '/assets/js/skater-link.js' } ], [ 'script', { src: '/assets/js/link-common.js' } ] ]
 ---
 
 # Instalar boot9strap (super-skaterhax)
@@ -21,7 +16,7 @@ Super-skaterhax (como método para iniciar Homebrew Launcher) es compatible con 
 
 ::: info
 
-Este exploit tiene resultados inconsistentes; para algunos funciona, para otros no. Si prefieres usar un exploit más consistente (cuál podría tardar más, aunque tendrá el mismo resultado final), entonces sigue [MSET9](installing-boot9strap-\(mset9\)).
+Este exploit tiene resultados inconsistentes; para algunos funciona, para otros no. Si prefieres usar un exploit más consistente (cuál podría tardar más, aunque tendrá el mismo resultado final), entonces sigue [MSET9](installing-boot9strap-(mset9)).
 
 :::
 
@@ -103,10 +98,10 @@ En esta sección, visitarás la página web del exploit para el navegador, la cu
     - **Un cuadro en blanco que dice "Error has occurred"**: el exploit falló. Abre la configuración de la consola, cambia el idioma a uno distinto (si es posible) y vuelve a intentarlo. Puede que tengas que repetir esta secuencia hasta diez veces
       - En las consolas con región JPN/KOR, solo hay un idioma disponible. En esas consolas, deberás abrir la configuración de la consola, cerrarlo y volver a intentarlo
       - Si el exploit sigue fallando después de cinco intentos, podría haber un problema con los archivos o preparativos. Asegúrate de que la región y la fecha sean correctas, y de que has estado siguiendo esta sección **exactamente paso por paso**. Si usaste WinRAR para extraer los archivos a la tarjeta SD, vuelve a extraer los archivos usando el Explorador de archivos o 7-zip en su lugar
-      - Si el exploit sigue fallando después de diez intentos, sigue [MSET9](installing-boot9strap-\(mset9\)) en cambio
+      - Si el exploit sigue fallando después de diez intentos, sigue [MSET9](installing-boot9strap-(mset9)) en cambio
     - **Una pantalla negra que dice "An error has occurred"**: Los archivos no están colocados correctamente. Asegúrate de que los archivos de super-skaterhax se encuentran en la raíz de la tarjeta SD
     - **Una pantalla amarilla**: el Homebrew Launcher no pudo abrirse. Mantén el botón POWER hasta que la consola se apague e inténtalo de nuevo
-    - **[La palabra "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: Posees una Old 3DS, en la que el exploit **no es compatible**. Si este es el caso, entones debes de usar el exploit [MSET9](installing-boot9strap-\(mset9\))
+    - **[La palabra "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: Posees una Old 3DS, en la que el exploit **no es compatible**. Si este es el caso, entones debes de usar el exploit [MSET9](installing-boot9strap-(mset9))
 17. Inicia nimdsphax desde la lista de homebrew
 18. Si el exploit fue exitoso, habrás iniciado SafeB9SInstaller
     - Si tu consola se queda congelada en una pantalla roja o verde, mantén el botón POWER hasta que se apague y vuelve a intentarlo

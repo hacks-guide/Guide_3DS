@@ -24,7 +24,7 @@
 
 이 가이드에서 설치하는 모든 애플리케이션들은 모두 오픈 소스입니다. 만약 이 애플리케이션들의 작동 방식이 궁금하거나, 또는 Star를 남겨 감사의 의미를 전하고 싶다면, 소스 코드가 아래 링크되어 있으니 참고하세요:
 
-- [FBI](https://github.com/lifehackerhansol/FBI)
+- [FBI](https://github.com/nh-server/FBI-NH)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
 - [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
 - [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)

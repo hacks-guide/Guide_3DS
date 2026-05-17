@@ -33,7 +33,7 @@ In questa sezione verificherai se i pulsanti dorsali della tua console funzionan
 
 ::: warning
 
-Se la fotocamera NON è apparsa, non è possibile seguire questo metodo. In questo caso, utilizza invece [Installazione di boot9strap (MSET9)](installing-boot9strap-\(mset9\)).
+Se la fotocamera NON è apparsa, non è possibile seguire questo metodo. In questo caso, utilizza invece [Installazione di boot9strap (MSET9)](installing-boot9strap-(mset9)).
 
 :::
 

@@ -6,11 +6,11 @@ In questa sezione aggiuntiva verrà spiegato come verificare la presenza di erro
 
 A seconda delle dimensioni della tua scheda SD e della velocità del tuo computer, questo procedimento può durare diverse ore!
 
-Questa pagina è solo per utenti Mac. Se non sei su Mac, segui le sezioni [H2testw (Windows)](h2testw-\(windows\)) o [F3 (Linux)](f3-\(linux\)).
+Questa pagina è solo per utenti Mac. Se non sei su Mac, segui le sezioni [H2testw (Windows)](h2testw-(windows)) o [F3 (Linux)](f3-(linux)).
 
 ::: info
 
-Se stai usando un Mac su macOS 10.13 (High Sierra) o successivo, segui invece [F3XSwift (Mac)](f3xswift-\(mac\)).
+Se stai usando un Mac su macOS 10.13 (High Sierra) o successivo, segui invece [F3XSwift (Mac)](f3xswift-(mac)).
 
 :::
 

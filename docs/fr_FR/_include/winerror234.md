@@ -1,10 +1,10 @@
-When creating the MSET9 ID1 on Windows 10 and above, the script may fail with this error:
+Lors de la création de l'ID1 MSET9 sur Windows 10 et supérieur, le script peut échouer avec cette erreur :
 
 ![](/images/screenshots/troubleshooting/234.png)
 
-This occurs because of the beta UTF-8 support in Windows. You must disable it to run MSET9:
+Cela se produit à cause du support bêta de l'UTF-8 dans Windows. Vous devez le désactiver pour exécuter MSET9 :
 
-1. Hit **Windows Key + R** to open up the Run dialogue, type `intl.cpl` then click "OK"
+1. Appuyez sur **Windows + R** pour ouvrir la boîte de dialogue Exécuter, tapez `intl.cpl` puis cliquez sur "OK"
 
    ::: info
 
@@ -12,7 +12,7 @@ This occurs because of the beta UTF-8 support in Windows. You must disable it to
 
    :::
 
-2. Click on `Administrative`, then `Change System Locale`
+2. Cliquez sur `Administration`, puis sur `Modifier les paramètres régionaux...`
 
    ::: info
 
@@ -26,7 +26,7 @@ This occurs because of the beta UTF-8 support in Windows. You must disable it to
 
    :::
 
-3. Uncheck the box next to `Beta: Use Unicode UTF-8 for worldwide language support` then click "OK"
+3. Décochez la case à côté de `Bêta: Utiliser le format Unicode UTF-8 pour une prise en charge des langues à l'échelle mondiale` puis cliquez sur "Ok"
 
    ::: info
 
@@ -34,7 +34,7 @@ This occurs because of the beta UTF-8 support in Windows. You must disable it to
 
    :::
 
-4. Click "Restart Now"
+4. Cliquez sur "Redémarrer maintenant"
 
    ::: info
 
@@ -42,4 +42,4 @@ This occurs because of the beta UTF-8 support in Windows. You must disable it to
 
    :::
 
-After your PC has rebooted, try creating the MSET9 ID1 again.
+Une fois que votre PC a redémarré, essayez de créer à nouveau l'ID1 MSET9.

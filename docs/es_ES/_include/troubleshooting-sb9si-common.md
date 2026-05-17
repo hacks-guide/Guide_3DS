@@ -2,7 +2,7 @@
 
 :::details MicroSD Card - init failed (La tarjeta microSD fallo en inicializarse)
 
-Lo más probable es que tu tarjeta SD esté actuando de forma extraña. Prueba a formatearla de nuevo ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). Si esto no funciona, prueba con otra tarjeta SD.
+Lo más probable es que tu tarjeta SD esté actuando de forma extraña. Prueba a formatearla de nuevo ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). Si esto no funciona, prueba con otra tarjeta SD.
 
 :::
 

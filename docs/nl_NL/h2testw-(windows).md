@@ -6,7 +6,7 @@ Dit is een extra gedeelte speciaal voor het checken van je SD-kaart op fouten, m
 
 Afhankelijk van de grootte van je SD kaart en de snelheid van je computer, kan dit proces tot wel enkele uren duren!
 
-Deze pagina is alleen voor windows-gebruikers. Als je geen Windows gebruikt, bekijk dan de [F3 (Linux)](f3-\(linux\)) of de [F3X (Mac)](f3xswift-\(mac\)) pagina.
+Deze pagina is alleen voor windows-gebruikers. Als je geen Windows gebruikt, bekijk dan de [F3 (Linux)](f3-(linux)) of de [F3X (Mac)](f3xswift-(mac)) pagina.
 
 ## What You Need
 

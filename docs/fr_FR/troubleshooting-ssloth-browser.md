@@ -1,102 +1,102 @@
-# Troubleshooting (SSLoth-Browser)
+# Dépannage (SSLoth-Browser)
 
-This page offers troubleshooting advice for commonly encountered issues with the "Installing boot9strap (SSLoth-Browser)" page, which is used on system versions between 11.4.0 and 11.13.0. If you are unable to solve your issue with the advice on this page, please join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and describe your issue, including what you have already tried.
+Cette page offre des conseils de dépannage pour les problèmes couramment rencontrés avec la page "Installation de boot9strap (SSLoth-Browser)", qui est utilisée sur les versions du système entre 11.4.0 et 11.13.0. Si les conseils donnés sur cette page ne vous permettent pas de résoudre votre problème, nous vous invitons à rejoindre [le Discord de Nintendo Homebrew](https://discord.gg/MWxPgEp) et à y décrire votre problème ainsi que ce que vous avez déjà essayé.
 
 ::: warning
 
-These instructions are only valid for the "Installing boot9strap (SSLoth-Browser)" page. If you are using a **New 3DS** on version **11.15.0 through 11.17.0**, you should follow [troubleshooting instructions for Installing boot9strap (super-skaterhax)](troubleshooting-super-skaterhax) instead.
+Ces instructions ne sont valides que pour la page "Installation de boot9strap (SSLoth-Browser)". Si vous utilisez une **New 3DS** en version **11.15.0 à 11.17.0**, vous devriez suivre [les instructions de dépannage pour l'installation de boot9strap (super-skaterhax)](troubleshooting-super-skaterhax) à la place.
 
 :::
 
 ## SSLoth-Browser
 
-:::details Red/purple/pink and white screen after running Browserhax
+:::details Écran rouge/violet/rose et blanc après avoir exécuté Browserhax
 
-This likely indicates that you already have custom firmware. You should [check for CFW](checking-for-cfw).
-
-:::
-
-:::details Green screen after running Browserhax
-
-Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
-
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+Cela indique que vous avez probablement déjà un custom firmware. Vous devriez [vérifier la présence d'un CFW](checking-for-cfw).
 
 :::
 
-:::details "An error has occurred. Hold down the POWER button to turn off the power..." (black screen with text)
+:::details Écran vert après avoir exécuté Browserhax
 
-The file `arm11code.bin` is missing or misplaced. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
+Les exploits basés sur le navigateur (comme celui-ci) sont souvent instables et plantent fréquemment, mais ils peuvent parfois être corrigés en effectuant les étapes suivantes.
 
-:::
-
-:::details "An error has occurred, forcing the software to close..." (white message box)
-
-There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
-
-You can also try resetting your browser save data:
-
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+1. Lancez le navigateur, puis accédez aux paramètres du navigateur
+2. Faites défiler vers le bas et sélectionnez "Effacer données de sauvegarde" (il peut aussi être nommé "Initialiser les données enregistrées" ou "Vider toutes les données enregistrées")
+3. Retentez l'exploit
 
 :::
 
-:::details Opening the browserhax QR code or URL crashes
+:::details "Une erreur est survenue. Maintenez le bouton POWER enfoncé pour éteindre la console..." (écran noir avec texte)
 
-Browser based exploits (such as this one) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.
-
-1. Launch the browser, then launch the browser settings
-2. Scroll to the bottom and select "Reset Save Data" (it may also be called "Initialize Save Data" or "Clear All Save Data")
-3. Try the exploit again
+Le fichier `arm11code.bin` est absent ou mal placé. Téléchargez la dernière version de [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), placez `otherapp.bin` à la racine de votre carte SD et renommez-le en `arm11code.bin`. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
 
 :::
 
-:::details System Update prompt when opening browser
+:::details "Le logiciel a été arrêté car une erreur est survenue..." (boîte de message blanche)
 
-The SSLoth proxy was incorrectly configured. Re-do the SSLoth section on the page.
+Il y a peut-être un problème avec votre fichier `arm11code.bin`. Téléchargez la dernière version de [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), placez `otherapp.bin` à la racine de votre carte SD et renommez-le en `arm11code.bin`. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
+
+Vous pouvez également essayer de réinitialiser les données de votre navigateur :
+
+1. Lancez le navigateur, puis accédez aux paramètres du navigateur
+2. Faites défiler vers le bas et sélectionnez "Effacer données de sauvegarde" (il peut aussi être nommé "Initialiser les données enregistrées" ou "Vider toutes les données enregistrées")
+3. Retentez l'exploit
 
 :::
 
-:::details Error 032-0420 when opening browser
+:::details L'ouverture du QR code ou de l'URL de browserhax plante
 
-Follow these steps in order:
+Les exploits basés sur le navigateur (comme celui-ci) sont souvent instables et plantent fréquemment, mais ils peuvent parfois être corrigés en effectuant les étapes suivantes.
+
+1. Lancez le navigateur, puis accédez aux paramètres du navigateur
+2. Faites défiler vers le bas et sélectionnez "Effacer données de sauvegarde" (il peut aussi être nommé "Initialiser les données enregistrées" ou "Vider toutes les données enregistrées")
+3. Retentez l'exploit
+
+:::
+
+:::details Demande de mise à jour de la console lors de l'ouverture du navigateur
+
+Le proxy SSLoth a été mal configuré. Refaites la section SSLoth de la page.
+
+:::
+
+:::details Erreur 032-0420 lors de l'ouverture du navigateur
+
+Suivez ces étapes dans l'ordre :
 
 1. Lancez les Paramètres de la console
-2. Navigate to `Internet Settings` -> `Connection Settings`
-3. Click on your network connection slot and navigate to `Change Settings` -> `Next Page (right arrow)` -> `Proxy Settings`
-4. Set "Proxy Settings" to "No"
-5. Click OK, then click Save
-6. When prompted, click "Test" to perform the connection test
-   - The test should succeed
-7. Click "OK" to continue
-8. Appuyez deux fois sur « Retour », puis « Fermer » pour revenir au Menu HOME
-9. Open the Internet Browser once
-10. If prompted about a system update, press OK
-    - This won't actually update the system
-11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+2. Naviguez vers `Paramètres Internet` -> `Paramètres de connexion`
+3. Cliquez sur votre emplacement de connexion réseau et naviguez vers `Modifier` -> `Page suivante (flèche à droite)` -> \`Serveur proxy"
+4. Réglez "Serveur proxy" sur "Non"
+5. Cliquez sur OK, puis sur Sauvegarder
+6. Lorsque vous y êtes invité, cliquez sur "Tester" pour effectuer le test de connexion
+   - Le test devrait réussir
+7. Cliquez sur "OK" pour continuer
+8. Appuyez deux fois sur « Retour », puis « Fermer » pour retourner au menu HOME
+9. Ouvrez le Navigateur Internet une fois
+10. Si vous êtes invité à mettre à jour votre console, appuyez sur OK
+    - Cela ne mettra pas à jour la console
+11. Recommencez à partir de la [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
 
 :::
 
-:::details Frozen on "Doing agbhax..."
+:::details Figé sur "Doing agbhax..."
 
-There may be an issue with your `arm11code.bin` file. Re-download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place it on the root of your SD card, and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
+Il y a peut-être un problème avec votre fichier `arm11code.bin`. Retéléchargez la dernière version de [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), placez le fichier à la racine de votre carte SD et renommez-le en `arm11code.bin`. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
 
 :::
 
 :::details Failed to mount the SD card!
 
-Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
+Sauvegardez vos données et reformatez votre carte SD en FAT32 avec l'outil recommandé selon votre système d'exploitation ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard et l'outil de formatage d'HP (HPUSBDisk) sont connus pour causer des problèmes avec les cartes SD des 3DS.
 
-If this is unsuccessful, try using another SD card.
+Si cela échoue, essayez d'utiliser une autre carte SD.
 
 :::
 
 <!--@include: ./_include/troubleshooting-khc-common.md -->
 
-## Issues with SafeB9SInstaller
+## Problèmes avec SafeB9SInstaller
 
 <!--@include: ./_include/troubleshooting-sb9si-bin.md -->
 
@@ -108,7 +108,7 @@ If this is unsuccessful, try using another SD card.
 
 ::: tip
 
-Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+Retourner à [Installation de boot9strap (SSLoth-Browser)](installing-boot9strap-(ssloth-browser))
 
 :::
 

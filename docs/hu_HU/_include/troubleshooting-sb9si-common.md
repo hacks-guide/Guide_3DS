@@ -2,7 +2,7 @@
 
 :::details MicroSD Card - init failed
 
-Az SD kártyád furán viselkedik. Próbáld meg újraformázni az SD kártyád ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). Ha ez nem működik, próbálj egy másik SD kártyát.
+Az SD kártyád furán viselkedik. Próbáld meg újraformázni az SD kártyád ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). Ha ez nem működik, próbálj egy másik SD kártyát.
 
 :::
 

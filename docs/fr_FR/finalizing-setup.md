@@ -1,30 +1,30 @@
-# Finalisation de la configuration
+# Finalisation de l'installation
 
-## Lecture obligatoire
+## Lecture requise
 
-Sur la page précédente, vous avez installé boot9strap, un chargeur de firmware personnalisé qui charge le fichier `boot.firm` depuis la carte SD ou la NAND (mémoire interne). Dans ce cas, nous utilisons Luma3DS de [LumaTeam](https://github.com/LumaTeam/) pour patcher la console, lui permettant d'exécuter des homebrew.
+Sur la page précédente, vous avez installé boot9strap, un lanceur de custom firmware qui charge le fichier `boot.firm` depuis la carte SD ou la NAND (mémoire interne). Dans ce cas, nous utilisons Luma3DS de [LumaTeam](https://github.com/LumaTeam/) comme notre `boot.firm` pour patcher la console, lui permettant d'exécuter des logiciels homebrew.
 
-Sur cette page, nous ferons des sauvegardes des fichiers système critiques et installerons certains homebrews. La plupart de ces étapes seront automatisées en utilisant un script que vous exécuterez sur votre console.
+Sur cette page, nous ferons des sauvegardes des fichiers système critiques et installerons certains homebrew. La plupart de ces étapes seront automatisées en utilisant un script que vous exécuterez sur votre console.
 
 ::: info
 
 Le script installera les applications suivantes :
 
-- - **FBI** de Steveice10 _(installe les applications au format CIA)_
-- **Homebrew Launcher Loader** de PabloMK7 _(lance l'Homebrew Launcher, pour les homebrews au format 3DSX)_
+- **FBI** de Steveice10 _(installe les applications au format CIA)_
+- **Homebrew Launcher Loader** de PabloMK7 _(lance le Homebrew Launcher, pour les homebrew au format 3DSX)_
 - **Anemone3DS** par astronautlevel2 _(installe des thèmes personnalisés, des écrans de démarrage et des badges)_
 - **Checkpoint** par BernardoGiordano/FlagBrew _(gère les données de sauvegarde de jeux 3DS/DS)_
 - **ftpd** par mtheall _(permet l'accès de la carte SD 3DS via sans fil via FTP)_
 - **Universal-Updater** par Universal-Team _(magasin d'application sur la console pour télécharger des homebrew via Wi-Fi)_
-- **GodMode9** par d0k3 _(outil pour extraire des données de la mémoire interne ou des cartouches)_
+- **GodMode9** par d0k3 _(outil polyvalent pour extraire des données de la mémoire interne ou des cartouches)_
 
 Si vous ne voulez pas une de ces applications, vous pouvez les supprimer une fois que vous avez terminé cette page en allant dans Paramètres de la console -> Gestion des données -> Nintendo 3DS -> Logiciels. (GodMode9 ne peut pas être supprimé de cette manière et est généralement requis pour d'autres fonctions.)
 
-::: details Liens du code source (facultatif)
+::: details Liens vers le code source (facultatif)
 
-Toutes les applications installées sur ce guide sont open source. Si vous êtes intéressé à voir comment ils fonctionnent, ou aimeriez laisser une étoile pour montrer votre appréciation, leur code source est lié ici :
+Toutes les applications installées sur ce guide sont open-source. Si vous êtes intéressé à voir comment ils fonctionnent, ou aimeriez laisser une étoile pour montrer votre appréciation, leur code source est lié ici :
 
-- [FBI](https://github.com/lifehackerhansol/FBI)
+- [FBI](https://github.com/nh-server/FBI-NH)
 - [Homebrew Launcher Loader](https://github.com/PabloMK7/homebrew_launcher_dummy)
 - [Anemone3DS](https://github.com/astronautlevel2/Anemone3DS)
 - [Checkpoint](https://github.com/bernardogiordano/checkpoint/releases)
@@ -38,7 +38,7 @@ Toutes les applications installées sur ce guide sont open source. Si vous êtes
 
 ::: info
 
-Si votre configuration CFW précédente était basée sur EmuNAND et que vous souhaitez déplacer le contenu de votre EmuNAND/RedNAND vers SysNAND, suivez [Transférer votre EmuNAND](move-emunand) avant de suivre cette page. Si vous ne savez pas ce qu’est une EmuNAND, cela ne s’applique pas à vous.
+Si votre configuration CFW précédente était basée sur EmuNAND et que vous souhaitez déplacer le contenu de votre EmuNAND/RedNAND vers SysNAND, suivez [Déplacer une EmuNAND](move-emunand) avant de suivre cette page. Si vous ne savez pas ce qu’est une EmuNAND, cela ne s’applique pas à vous.
 
 :::
 
@@ -56,7 +56,7 @@ Dans cette section, vous allez copier les fichiers nécessaires pour suivre le r
 1. Éteignez votre console
 2. Insérez votre carte SD dans votre ordinateur
 3. Copiez `finalize.romfs` à la racine de votre carte SD
-4. Ouvrez le dossier `luma` sur votre carte SD et créez un dossier nommé `payloads` à l'intérieur s'il n'existe pas déjà
+4. Ouvrez le dossier `luma` sur votre carte SD et créez un dossier nommé `payloads` à l'intérieur, s'il n'existe pas déjà
 5. Copiez `x_finalize_helper.firm` dans le dossier `payloads`
 6. Réinsérez votre carte SD dans votre console
 
@@ -85,7 +85,7 @@ Dans cette section, vous allez mettre à jour votre console vers la dernière ve
 Dans cette section, vous synchroniserez l'horloge interne de votre 3DS avec l'heure réelle et allez dumper le firmware du son (ce qui est nécessaire pour que certains logiciels homebrew utilisent correctement le son).
 
 1. Appuyez simultanément sur (L) + (Bas sur la croix directionnelle) + (Select) pour ouvrir le menu Rosalina
-   - Si l'un de ces boutons est cassé, téléchargez [config.ini](/assets/config.ini) et mettez-le dans votre dossier `luma` en remplaçant le fichier existant. Ceci changera la combinaison de touches du menu Rosalina en (X) + (Y)
+   - Si l'un de ces boutons ne marche pas, téléchargez [config.ini](/assets/config.ini) et mettez-le dans votre dossier `luma` en remplaçant celui existant. Ceci changera la combinaison de touches du menu Rosalina en (X) + (Y)
 2. Sélectionnez "Miscellaneous options"
 3. Sélectionnez "Dump DSP firmware"
 4. Appuyez sur (B) pour continuer
@@ -99,33 +99,33 @@ Dans cette section, vous synchroniserez l'horloge interne de votre 3DS avec l'he
 Dans cette section, vous utiliserez une série de scripts pour automatiser l'installation des homebrew, le nettoyage de la carte SD et la sauvegarde des fichiers système.
 
 1. Éteignez votre console
-2. Allumez votre console tout en maintenant le bouton (X). Ceci lancera l'assistant de finalisation de l'installation (Finalizing Setup Helper)
+2. Appuyez sur et maintenez (X), et tout en maintenant (X), allumez votre console. Ceci lancera l'assistant de finalisation de l'installation (Finalizing Setup Helper)
    - Si vous démarrez dans le menu HOME, votre dossier `payloads` est peut-être mal orthographié ou `x_finalize_helper.firm` se trouve au mauvais endroit
    - Si vous rencontrez une erreur, consultez la page de [dépannage](troubleshooting-finalizing-setup)
-3. After a few seconds, your console should automatically boot into GodMode9
+3. Après quelques secondes, votre console devrait avoir automatiquement démarré dans GodMode9
    - À partir de ce moment, vous pouvez accéder GodMode9 en allumant votre console tout en maintenant le bouton (Start)
    - Maintenir (X) au démarrage ne fera plus rien
 4. Si nécessaire, configurez GodMode9:
-   - If you are prompted to select a language, use the D-Pad and press (A) to select English
-     - This language choice only affects GodMode9's menu options
-     - You can set it to your language of choice after completing this guide
+   - Si vous êtes invité à sélectionner une langue, utilisez la croix directionnelle et appuyez sur (A) pour sélectionner l'anglais
+     - Ce choix de langue n'affecte que les options de menu de GodMode9
+     - Vous pouvez sélectionner la langue de votre choix après avoir terminé ce guide
    - S'il vous est demandé de créer une sauvegarde de fichiers essentiels ("essential files backup"), appuyez sur (A) pour la faire, puis appuyez sur (A) pour continuer
    - Si vous êtes invité à corriger la date et l’heure RTC, appuyez sur (A) pour le faire, puis réglez la date et l’heure, puis appuyez sur (A) pour continuer
-5. Quand vous voyez [root] et une liste de lecteurs, appuyez sur (Home) pour aller dans le menu d'actions
+5. Quand vous voyez [root] et une liste de lecteurs, appuyez sur (Home) pour faire apparaître le menu d'actions
 6. Sélectionnez "Scripts..." (_pas_ l'option "Lua scripts")
 7. Sélectionnez "finalize"
 8. Suivez les instructions du script, en répondant aux questions qui vous sont posées
-   - Si vous voyez "Information #05: No title database", appuyez sur (A) pour importer et entrez la combinaison de touches indiquée sur l'écran du bas pour continuer
+   - Si vous voyez "Information #05: No title database", appuyez sur (A) et entrez la combinaison de touches indiquée sur l'écran du bas pour continuer
    - Si vous rencontrez une erreur, suivez les instructions dans le message d'erreur ou consultez le guide de [dépannage](troubleshooting-finalizing-setup) puis ouvrez GodMode9 en maintenant (Start) au démarrage pour relancer le script
 9. Une fois que le script dit "Setup complete!", appuyez sur (A) pour éteindre la console
-   - Si vous ne voyez PAS le message "Setup complete!", le script a eut un problème et vous devrez refaire cette section à partir de l’étape 3
+   - Si vous ne voyez PAS le message "Setup complete!", le script a eu un problème et vous devrez refaire cette section à partir de l’Étape 3
 10. Insérez votre carte SD dans votre ordinateur
 11. Copiez le dossier `/gm9/backups/` vers un endroit sûr sur votre ordinateur
-    - Ce dossier contient des sauvegardes de fichiers critiques et doit être sauvegardé à plusieurs endroits (c’est-à-dire un stockage en cloud) si possible
+    - Ce dossier contient des sauvegardes de fichiers critiques et doit être sauvegardé à plusieurs endroits (comme un stockage dans le nuage) si possible
     - Les deux fichiers SysNAND constituent votre sauvegarde NAND et peuvent être utilisés pour rétablir le fonctionnement de votre console si elle est brickée (rendu inutilisable) par un problème logiciel
     - Le fichier `essential.exefs` contient les fichiers uniques au système de votre console et peut être utilisé pour récupérer vos données en cas de défaillance matérielle
 12. Si vous les avez toujours, supprimez les deux fichiers `SysNAND` du dossier `/gm9/backups/` de votre carte SD
-    - Le fichier `essential.exefs` est petit et peut être conservé sur votre carte SD pour faciliter l’accès
+    - Le fichier `essential.exefs` est petit et peut être conservé sur votre carte SD pour la facilité d’accès
 
 ___
 
@@ -145,12 +145,12 @@ Vous vous demandez ce que vous pouvez faire avec votre nouvelle console moddée 
 
 ::: info
 
-Voici quelques combinaisons de touches que vous devriez connaître :
+Voici quelques combinaisons de boutons que vous devriez connaître :
 
 - Maintenir (Select) au démarrage lancera le menu de configuration de Luma3DS.
 - Maintenir (Start) au démarrage lancera GodMode9, ou si vous avez plusieurs payloads dans `/luma/payloads/`, le chainloader Luma3DS.
 - Par défaut, appuyer sur (L) + (Bas sur la croix directionnelle) + (Select) en mode 3DS lancera le menu Rosalina, où vous pouvez vérifier les informations de la console, prendre des captures d'écran, activer des codes de triche, etc. Cela peut être modifié à partir du menu Rosalina.
-- Maintenir (Start) + (Select) + (X) au  démarrage fera afficher une couleur à la LED de notification à des fins de débogage. Voir le journal des [modifications](https://github.com/SciresM/boot9strap/releases/tag/1.4) pour une liste.
+- Maintenir (Start) + (Select) + (X) au démarrage fera afficher une couleur à la DEL de notification à des fins de débogage. Voir le journal des [modifications](https://github.com/SciresM/boot9strap/releases/tag/1.4) pour une liste.
 
 :::
 
@@ -160,10 +160,10 @@ Pretendo est un service qui remplace les services en ligne du Nintendo Network, 
 
 **Note : Pretendo ne prend pas en charge chaque service en ligne, mais des travaux sont en cours pour y parvenir.**
 
-A list of games that Pretendo supports can be found [here](https://wiki.pretendo.zip/game-support-status).
+Une liste de jeux supportés par Pretendo se trouve [ici](https://wiki.pretendo.zip/game-support-status).
 
 ::: info
 
-For information on using GodMode9's various features, check out the [GodMode9 Usage](godmode9-usage) and [Dumping Titles and Game Cartridges](dumping-titles-and-game-cartridges) pages.
+Pour des informations sur l’utilisation des différentes fonctionnalités de GodMode9, consultez les pages d'[Utilisation de GodMode9](godmode9-usage) et d'[Extraction des titres et des cartes de jeu](dumping-titles-and-game-cartridges).
 
 :::

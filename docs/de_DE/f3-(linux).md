@@ -6,7 +6,7 @@ Dies ist ein Add-on-Abschnitt für die Überprüfung deiner SD-Karte auf Fehler 
 
 Basierend auf der Größe der SD-Karte und der Geschwindigkeit deines Computer kann dieser Prozess mehrere Stunden dauern!
 
-Diese Seite ist nur für Linux-Nutzer gedacht. Falls du kein Linux-Nutzer bist, schaue dir stattdessen [H2testw (Windows)](h2testw-\(windows\)) oder [F3X (macOS)](f3x-\(mac\)) an.
+Diese Seite ist nur für Linux-Nutzer gedacht. Falls du kein Linux-Nutzer bist, schaue dir stattdessen [H2testw (Windows)](h2testw-(windows)) oder [F3X (macOS)](f3x-(mac)) an.
 
 ## Was du brauchst
 

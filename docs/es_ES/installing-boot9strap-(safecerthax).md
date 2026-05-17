@@ -33,7 +33,7 @@ En esta sección, verás si tus botones laterales funcionan en tu consola. Esto 
 
 ::: warning
 
-Si la cámara NO ha aparecido, no puedes utilizar este método. Si este es el caso, utiliza [Instalar boot9strap (MSET9)](installing-boot9strap-\(mset9\)).
+Si la cámara NO ha aparecido, no puedes utilizar este método. Si este es el caso, utiliza [Instalar boot9strap (MSET9)](installing-boot9strap-(mset9)).
 
 :::
 
