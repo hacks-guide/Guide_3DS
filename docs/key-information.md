@@ -49,7 +49,7 @@ The location of the SD card slot and the type of SD card that is accepted depend
 Your (micro)SD card should conform to the following requirements:
 
 * **Brand**: Any name brand (SanDisk, Samsung, Kingston, Lexar, PNY, etc.)
-    * Beware of fake or illegitimate SD cards (e.g. Memory SD, PRO PLUS, SanDian, Extreme Pro), particularly those purchased from online marketplaces like AliExpress. See [here](https://www.flashcarts.net/microsd-fakes) for a guide on spotting fake SD cards. Using a fake or illegitimate SD card is very likely to result in things not working, or even **data loss**!
+    * Beware of fake or illegitimate SD cards (e.g. Memory SD, PRO PLUS, SanDian, Extreme Pro), particularly those purchased from online marketplaces like AliExpress. See [flashcards.net](https://www.flashcarts.net/microsd-fakes) for a guide on spotting fake SD cards. Using a fake or illegitimate SD card is very likely to result in things not working, or even **data loss**!
 * **Capacity**: Between 2GB and 128GB (inclusive)
     * These cards will be labelled SD (<=2GB), SDHC (4GB-32GB), or SDXC (64GB+)
     * Cards smaller than 2GB are insufficient due to the minimum size of a NAND dump (around 1GB), which is made at the end of this guide as a safety measure

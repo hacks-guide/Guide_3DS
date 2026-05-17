@@ -15,7 +15,7 @@ While the ntrboot exploit works independently of the system version, the ntrboot
 Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
 
 | Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | Other Notes |
-|-|-:|:-:|:-:|:-:|-|
+|--------------- | ------------: | :----------: | :-----------: | :-----------: | ----------- |
 | [**Ace3DS X**](https://www.nds-card.com/ProShow.asp?ProID=575) | $24.99 | No | ALL | ALL | **Comes pre-flashed with ntrboot** (external switch to switch between ntrboot ("3DS") and NDS modes); do not manually flash with ntrboot. This cart needs an SD card inserted to function for both ntrboot and regular NDS firmware. |
 | [**R4i-SDHC B9S** (r4i-sdhc.com)](https://www.nds-card.com/ProShow.asp?ProID=574) | Out of Stock | September 3, 2024 | ALL | ALL | **Comes pre-flashed with ntrboot**; can be flashed back to an NDS flashcart. |
 | [**DSTT** (ndstt.com)](https://www.nds-card.com/ProShow.asp?ProID=157) | $19.99 | No | None | None | Only models with [certain flash chips](https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6) are compatible with ntrboot. |
