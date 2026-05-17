@@ -10,8 +10,36 @@
 1. Copy `faketik.3dsx` to the `/3ds/` folder on your SD card.
 1. Reinsert your SD card into your console.
 
-::: info
+::: tip
 
-![](/images/screenshots/ctrtransfer-root-layout.png)
+Your SD card should contain the below listed files and folders. It does not have to contain these and only these contents.
 
 :::
+
+```shell
+💾 SD CARD
+├── 📁 3ds
+│   ├── 📄 FBI.3dsx
+│   └── 📄 faketik.3dsx
+├── 📁 config
+│   └── 📁 ssl
+│       └── 📄 cacert.pem
+├── 📁 gm9
+│   ├── 📁 in
+│   │   ├── 📄 11.15.0-47[region]_ctrtransfer_[model].bin.sha
+│   │   └── 📄 11.15.0-47[region]_ctrtransfer_[model].bin
+│   ├── 📁 scripts
+│   │   ├── 📄 ctrtransfer.gm9
+│   │   ├── 📄 GM9Megascript.gm9
+│   │   └── 📄 NANDManager.gm9
+│   └── 📁 support
+│       ├── 📄 decTitleKeys.bin.here
+│       └── 📄 seeddb.bin.here
+├── 📁 luma
+│   ├── 📁 payloads
+│   │   └── 📄 GodMode9.firm
+│   └── 📄 config.ini
+├── 📁 Nintendo 3DS
+├── 📄 boot.3dsx
+└── 📄 boot.firm
+```
