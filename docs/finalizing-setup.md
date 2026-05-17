@@ -85,7 +85,7 @@ In this section, you will update your system to the latest version, which is saf
 In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
 
 1. Press `Left Shoulder + D-Pad DOWN + SELECT` at the same time to open the Rosalina menu.
-    * If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to `X` + `Y`.
+    * If one of these buttons is broken, download [config.ini](/assets/config.ini){download} and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to `X` + `Y`.
 1. Select `Miscellaneous options`.
 1. Select `Dump DSP firmware`.
 1. Press `B` to continue.
