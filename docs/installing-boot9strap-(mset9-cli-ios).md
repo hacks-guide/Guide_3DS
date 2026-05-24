@@ -81,7 +81,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
     + If the screen says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-ish-not-ready.png):
         + Type `2`, then tap Return to check the MSET9 status and follow the directions indicated
-        + Once you have resolved the issue, return to Section I Step 14
+        + Once you have resolved the issue, return to Section I Step 16
         + For more information, check the [troubleshooting](troubleshooting-mset9) page
 1. Type `0`, then tap Return to close the script
 1. Reinsert your SD card into your console
