@@ -76,7 +76,7 @@ SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹
 9. 인터넷 브라우저를 한 번 열어주세요
 10. 시스템 업데이트에 관한 창이 표시되면, 'OK'을 눌러주세요
     - 실제로 시스템이 업데이트되지는 않습니다
-11. [섹션 II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)로 돌아가 다시 진행해주세요
+11. [섹션 II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)로 돌아가 다시 진행해주세요
 
 :::
 
@@ -88,7 +88,7 @@ SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹
 
 :::details Failed to mount the SD card!
 
-데이터를 모두 백업하고 시스템별로 권장되는 프로그램을 이용해 SD카드를 FAT32로 다시 포맷해 주세요. ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))) MiniTool Partition Wizard나 HP formatting tool(HPUSBDisk)는 3DS용 SD 카드에 문제를 발생시킨다는 것이 알려져 있습니다.
+데이터를 모두 백업하고 시스템별로 권장되는 프로그램을 이용해 SD카드를 FAT32로 다시 포맷해 주세요. ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))) MiniTool Partition Wizard나 HP formatting tool(HPUSBDisk)는 3DS용 SD 카드에 문제를 발생시킨다는 것이 알려져 있습니다.
 
 만약 해결되지 않는다면, 다른 SD 카드를 이용해 보세요.
 
@@ -108,7 +108,7 @@ SSLoth 프록시 설정이 잘못 설정되었습니다. 페이지의 SSLoth 섹
 
 ::: tip
 
-[boot9strap 설치 (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))로 돌아갑니다
+[boot9strap 설치 (SSLoth-Browser)](installing-boot9strap-(ssloth-browser))로 돌아갑니다
 
 :::
 

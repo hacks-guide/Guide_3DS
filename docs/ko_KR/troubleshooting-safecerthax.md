@@ -14,7 +14,7 @@
 
 ::: tip
 
-[boot9strap 설치 (safecerthax)](installing-boot9strap-\(safecerthax\))로 돌아갑니다
+[boot9strap 설치 (safecerthax)](installing-boot9strap-(safecerthax))로 돌아갑니다
 
 :::
 

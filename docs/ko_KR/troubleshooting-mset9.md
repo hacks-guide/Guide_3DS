@@ -17,9 +17,9 @@ SD 카드를 삽입한 채로 콘솔의 전원을 켜고, MSET9의 상태를 다
 만약 이래도 작동하지 않으면, SD 카드를 포맷해야 합니다:
 
 1. SD 카드의 전체 데이터를 PC에 복사해두세요
-2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. PC에 복사해둔 데이터를 다시 SD 카드에 복사해 주세요
-4. [섹션 I 7단계](installing-boot9strap-\(mset9-cli\)#section-i---prep-work) 부터 다시 시작하세요.
+4. [섹션 I 7단계](installing-boot9strap-(mset9-cli)#section-i---prep-work) 부터 다시 시작하세요.
 
 :::
 
@@ -30,9 +30,9 @@ Mii Maker data was not found on the SD card. Please power on your console with y
 만약 이래도 작동하지 않으면, SD 카드를 포맷해야 합니다:
 
 1. SD 카드의 전체 데이터를 PC에 복사해두세요
-2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. PC에 복사해둔 데이터를 다시 SD 카드에 복사해 주세요
-4. [섹션 I 8단계](installing-boot9strap-\(mset9-cli\)#section-i---prep-work) 부터 다시 시작하세요.
+4. [섹션 I 8단계](installing-boot9strap-(mset9-cli)#section-i---prep-work) 부터 다시 시작하세요.
 
 :::
 
@@ -43,12 +43,12 @@ Ensure that you have reset the title database.
 - Please power on your console with your SD inserted
 - 본체 설정을 실행한 후 `데이터 관리` -> `Nintendo 3DS 데이터 관리` -> `소프트웨어 관리` -> 초기화 ([영어 사진](/images/screenshots/database-reset.jpg))로 이동해 주세요.
   - 이 과정은 데이터를 삭제하지 않습니다.
-- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 1. SD 카드의 전체 데이터를 PC에 복사해두세요
-2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. PC에 복사해둔 데이터를 다시 SD 카드에 복사해 주세요
 
 <!--@include: ./_include/mset9-chorus.md -->
@@ -57,7 +57,7 @@ If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 2. Type `2` then press enter to check the MSET9 status
    - This will create the dummy databases again
 3. Close the MSET9 script window
-4. Start again from [Section I Step 12](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
+4. Start again from [Section I Step 12](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 :::
 
@@ -76,9 +76,9 @@ Remember, your SD card should look like this:
 If your SD card layout is correct, then your SD card most likely isn't being read by your console and needs to be formatted:
 
 1. SD 카드의 전체 데이터를 PC에 복사해두세요
-2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. PC에 복사해둔 데이터를 다시 SD 카드에 복사해 주세요
-4. Start again from the beginning of [Section I](installing-boot9strap-\(mset9-cli\)#section-i---prep-work)
+4. Start again from the beginning of [Section I](installing-boot9strap-(mset9-cli)#section-i---prep-work)
 
 ::::
 
@@ -106,7 +106,7 @@ You have multiple ID0 folders. To determine the correct folder, follow these ins
 10. Move the true ID0 folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
 11. If it exists, move the `Private` folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
 
-Once you've done this, continue from [Section I Step 3](installing-boot9strap-\(mset9-cli\)#section-i---prep-work).
+Once you've done this, continue from [Section I Step 3](installing-boot9strap-(mset9-cli)#section-i---prep-work).
 
 :::
 
@@ -161,19 +161,19 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 
 1. 콘솔의 모델과 버전을 입력한 다음 엔터키를 눌러주세요
    - 현재 상태가 [Injected](/images/screenshots/mset9/mset9-injected.png)로 표시되어야 합니다
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 2. Type `4`, then press Enter
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
 5. 콘솔의 전원을 켜 주세요
-6. Return to [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+6. Return to [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 Alternatively, your SD card may be improperly formatted or partitioned. After removing the trigger file, format it:
 
 1. SD 카드의 전체 데이터를 PC에 복사해두세요
-2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. PC에 복사해둔 데이터를 다시 SD 카드에 복사해 주세요
-4. Start again from from [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+4. Start again from from [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 :::
 
@@ -195,14 +195,14 @@ Follow these instructions to remove the trigger file and to retry Section II:
 3. Once the window says "Removed trigger file", type `0` and then press Enter
 4. Reinsert the SD card into your console
 5. 콘솔의 전원을 켜 주세요
-6. Return to [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+6. Return to [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 If you continue to have this issue and are sure that you did everything correctly, ensure the trigger file is removed and format your SD card:
 
 1. SD 카드의 전체 데이터를 PC에 복사해두세요
-2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-\(windows\)), [Linux](formatting-sd-\(linux\)), [macOS](formatting-sd-\(mac\)))
+2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. PC에 복사해둔 데이터를 다시 SD 카드에 복사해 주세요
-4. Start again from from [Section II Step 1](installing-boot9strap-\(mset9-cli\)#section-ii---mset9)
+4. Start again from from [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
 
 :::
 
@@ -224,13 +224,13 @@ If you continue to have this issue and are sure that you did everything correctl
 
 ::: tip
 
-[boot9strap 설치 (MSET9 CLI)](installing-boot9strap-\(mset9-cli\))로 돌아갑니다
+[boot9strap 설치 (MSET9 CLI)](installing-boot9strap-(mset9-cli))로 돌아갑니다
 
 :::
 
 ::: tip
 
-[boot9strap 설치 (MSET9 Play 스토어)](installing-boot9strap-\(mset9-play-store\))로 돌아갑니다
+[boot9strap 설치 (MSET9 Play 스토어)](installing-boot9strap-(mset9-play-store))로 돌아갑니다
 
 :::
 

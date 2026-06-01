@@ -102,7 +102,7 @@ SD 카드에 1.3GB 이상의 빈 공간이 있는지 확인해주세요. 빈 공
 10. 컴퓨터에서 SD 카드의 루트로 복사해 두었던 `Nintendo 3DS` 폴더를 다시 복사해 주세요
 11. 컴퓨터에서 `Nintendo 3DS` 폴더를 지워주세요
 
-SD 카드의 용량이 충분하다면, SD 카드가 손상되었거나 불량일 수 있습니다. 컴퓨터의 운영 체제에 따라 SD 카드에 오류가 있는지를 확인해주세요: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)).
+SD 카드의 용량이 충분하다면, SD 카드가 손상되었거나 불량일 수 있습니다. 컴퓨터의 운영 체제에 따라 SD 카드에 오류가 있는지를 확인해주세요: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
 
 :::
 

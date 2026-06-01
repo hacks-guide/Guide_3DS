@@ -14,7 +14,7 @@
 
 ::: tip
 
-[boot9strap 설치 (ntrboot)](installing-boot9strap-\(ntrboot\))로 돌아갑니다
+[boot9strap 설치 (ntrboot)](installing-boot9strap-(ntrboot))로 돌아갑니다
 
 :::
 

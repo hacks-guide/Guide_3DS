@@ -6,7 +6,7 @@
 
 만약 3DS가 이미 SD 카드를 인식한다면, 이 가이드는 따를 필요가 없습니다.
 
-이 페이지는 Windows 사용자만 이용할 수 있습니다. 만약 Windows에서 하는 것이 아니라면, [SD 포맷하기 (Linux)](formatting-sd-\(linux\))나 [SD 포맷하기 (Mac)](formatting-sd-\(mac\)) 페이지들을 찾아봐 주세요.
+이 페이지는 Windows 사용자만 이용할 수 있습니다. 만약 Windows에서 하는 것이 아니라면, [SD 포맷하기 (Linux)](formatting-sd-(linux))나 [SD 포맷하기 (Mac)](formatting-sd-(mac)) 페이지들을 찾아봐 주세요.
 
 ## 준비물
 

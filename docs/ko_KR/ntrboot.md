@@ -2,7 +2,7 @@
 
 ::: tip
 
-만약 ntrboot가 미리 플래시된 플래시카드을 구입했거나, 이미 ntrboot를 플래시카드로 설치했다면, [boot9strap 설치 (ntrboot)](installing-boot9strap-\(ntrboot\)) 를 따라 주시기 바랍니다.
+만약 ntrboot가 미리 플래시된 플래시카드을 구입했거나, 이미 ntrboot를 플래시카드로 설치했다면, [boot9strap 설치 (ntrboot)](installing-boot9strap-(ntrboot)) 를 따라 주시기 바랍니다.
 
 :::
 
@@ -71,7 +71,7 @@ ___
 
 ::: tip
 
-[ntrboot 플래싱 (단일 3DS)](flashing-ntrboot-\(3ds-single-system\)) 로 계속합니다
+[ntrboot 플래싱 (단일 3DS)](flashing-ntrboot-(3ds-single-system)) 로 계속합니다
 
 :::
 
@@ -83,7 +83,7 @@ ___
 
 ::: tip
 
-[ntrboot 플래싱 (3DS 두 대)](flashing-ntrboot-\(3ds-multi-system\)) 로 계속합니다
+[ntrboot 플래싱 (3DS 두 대)](flashing-ntrboot-(3ds-multi-system)) 로 계속합니다
 
 :::
 
@@ -95,7 +95,7 @@ ___
 
 ::: tip
 
-[ntrboot 플래싱 (NDS)](flashing-ntrboot-\(nds\)) 로 계속합니다
+[ntrboot 플래싱 (NDS)](flashing-ntrboot-(nds)) 로 계속합니다
 
 :::
 
@@ -107,6 +107,6 @@ ___
 
 ::: tip
 
-[ntrboot 플래싱 (DSi)](flashing-ntrboot-\(dsi\)) 로 계속합니다
+[ntrboot 플래싱 (DSi)](flashing-ntrboot-(dsi)) 로 계속합니다
 
 :::

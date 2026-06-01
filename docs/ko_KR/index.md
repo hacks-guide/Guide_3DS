@@ -29,7 +29,7 @@ hero:
 - 닌텐도 3DS를 위한, 또는 3DS용으로 포트된 홈브류 소프트웨어와 게임 실행
 - 타 국가의 게임을 플레이할 수 있도록 하는, 지역 코드 해제
 - 타 사용자들이 만든 [테마와 배지](https://themeplaza.art)를 사용한 HOME 메뉴 꾸미기
-- [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-\(Only-version-8.0-and-higher\))를 이용한 게임 개조 ("ROM 핵")
+- [LayeredFS](https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/Using-Luma3DS'-layeredfs-(Only-version-8.0-and-higher))를 이용한 게임 개조 ("ROM 핵")
 - 세이브 데이터 편집, 백업 및 복구
 - 옛날 콘솔의 에뮬레이션 및 DS / GBA 게임의 플레이
 - 카트리지판 게임의 디지털 설치

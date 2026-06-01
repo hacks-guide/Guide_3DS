@@ -1,13 +1,5 @@
 ---
-head:
-  [
-    [ 'script', { src: '/assets/js/common.js' } ],
-    [
-        'script',
-        { src: '/assets/js/soundhax-frankenfirm-link.js' }
-      ],
-    [ 'script', { src: '/assets/js/link-common.js' } ]
-  ]
+head: [ [ 'script', { src: '/assets/js/common.js' } ], [ 'script', { src: '/assets/js/soundhax-frankenfirm-link.js' } ], [ 'script', { src: '/assets/js/link-common.js' } ] ]
 ---
 
 # 문제 해결 (Soundhax)
@@ -64,7 +56,7 @@ If none of these fix your issue, join [Nintendo Homebrew on Discord](https://dis
 
 ::: tip
 
-[boot9strap 설치 (Soundhax)](installing-boot9strap-\(soundhax\))로 돌아갑니다
+[boot9strap 설치 (Soundhax)](installing-boot9strap-(soundhax))로 돌아갑니다
 
 :::
 

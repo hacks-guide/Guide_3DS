@@ -6,11 +6,11 @@
 
 SD 카드의 용량과 컴퓨터의 속도에 따라 최대 몇 시간이 걸릴 수 있습니다!
 
-이 페이지는 Mac 사용자를 위한 페이지입니다. Mac 사용자가 아니라면 [H2testw (Windows)](h2testw-\(windows\)) 또는 [F3 (Linux)](f3-\(linux\)) 페이지를 확인해 주세요.
+이 페이지는 Mac 사용자를 위한 페이지입니다. Mac 사용자가 아니라면 [H2testw (Windows)](h2testw-(windows)) 또는 [F3 (Linux)](f3-(linux)) 페이지를 확인해 주세요.
 
 ::: info
 
-macOS 10.13 (High Sierra) 이상의 Mac을 사용한다면, [F3XSwift (Mac)](f3xswift-\(mac\)) 를 따라주시길 바랍니다.
+macOS 10.13 (High Sierra) 이상의 Mac을 사용한다면, [F3XSwift (Mac)](f3xswift-(mac)) 를 따라주시길 바랍니다.
 
 :::
 

@@ -1,14 +1,5 @@
 ---
-head:
-  [
-    [
-        'link',
-        {
-            rel: 'stylesheet',
-            href: '/assets/css/dark-apple-invert.css'
-          }
-      ]
-  ]
+head: [ [ 'link', { rel: 'stylesheet', href: '/assets/css/dark-apple-invert.css' } ] ]
 ---
 
 # boot9strap 설치 (MSET9)
@@ -19,6 +10,6 @@ MSET9는 **콘솔 해킹에 사용하는** 컴퓨터, 스마트폰 또는 태블
 
 **콘솔 해킹에 사용할** 운영 체제를 선택해 주세요. 이 기기는 3DS SD 카드에 파일을 읽거나 저장할수 있어야 합니다.
 
-|                                                                                                      Windows, macOS, Linux                                                                                                     |                                                                            Android, ChromeOS                                                                           |                                                                      iPhone, iPad                                                                      |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![Windows](/images/windows.png)](installing-boot9strap-\(mset9-cli\)) <br><br> [![macOS](/images/macos.png)](installing-boot9strap-\(mset9-cli\)) <br><br> [![Linux](/images/linux.png)](installing-boot9strap-\(mset9-cli\)) | [![Android](/images/android.png)](installing-boot9strap-\(mset9-play-store\)) <br><br> [![chromeOS](/images/chromeos.png)](installing-boot9strap-\(mset9-play-store\)) | [![iPhone](/images/iphone.svg)](installing-boot9strap-\(mset9-cli-ios\)) <br><br> [![iPad](/images/ipad.svg)](installing-boot9strap-\(mset9-cli-ios\)) |
+|                                                                                                                                                            Windows, macOS, Linux                                                                                                                                                           |                                                                                                                Android, ChromeOS                                                                                                               |                                                                                                          iPhone, iPad                                                                                                          |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [![Windows](/images/windows.png)](installing-boot9strap-(mset9-cli)) <br><br> [![macOS](/images/macos.png)](installing-boot9strap-(mset9-cli)) <br><br> [![Linux](/images/linux.png)](installing-boot9strap-(mset9-cli)) | [![Android](/images/android.png)](installing-boot9strap-(mset9-play-store)) <br><br> [![chromeOS](/images/chromeos.png)](installing-boot9strap-(mset9-play-store)) | [![iPhone](/images/iphone.svg)](installing-boot9strap-(mset9-cli-ios)) <br><br> [![iPad](/images/ipad.svg)](installing-boot9strap-(mset9-cli-ios)) |

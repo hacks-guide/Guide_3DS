@@ -10,13 +10,13 @@
 
 ::: warning
 
-이 방법은 Windows OS, Linux, 혹은 macOS를 사용하는 컴퓨터가 필요합니다. 안드로이드 폰, 태블릿, 혹은 크롬북을 가지고 있을 경우, [boot9strap 설치 (MSET9 Play 스토어)](installing-boot9strap-\(mset9-play-store\))를 참조해 주세요. If you have an iPhone or iPad, follow [Installing boot9strap (MSET9 CLI iOS)](installing-boot9strap-\(mset9-cli-ios\)) instead. 만약 이 장비들 중 하나도 사용할 수 없는 상황이라면, [다른 취약점](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits)을 사용해야 할 수 있습니다.
+이 방법은 Windows OS, Linux, 혹은 macOS를 사용하는 컴퓨터가 필요합니다. 안드로이드 폰, 태블릿, 혹은 크롬북을 가지고 있을 경우, [boot9strap 설치 (MSET9 Play 스토어)](installing-boot9strap-(mset9-play-store))를 참조해 주세요. If you have an iPhone or iPad, follow [Installing boot9strap (MSET9 CLI iOS)](installing-boot9strap-(mset9-cli-ios)) instead. 만약 이 장비들 중 하나도 사용할 수 없는 상황이라면, [다른 취약점](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits)을 사용해야 할 수 있습니다.
 
 :::
 
 ::: info
 
-If you are using an Android device as an SD card adapter for your computer, you will not be able to follow this page due to incompatibilities with Android's file transfer protocol (MTP). If this is the case, follow [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)) instead.
+If you are using an Android device as an SD card adapter for your computer, you will not be able to follow this page due to incompatibilities with Android's file transfer protocol (MTP). If this is the case, follow [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)) instead.
 
 :::
 

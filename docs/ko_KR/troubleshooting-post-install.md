@@ -22,7 +22,7 @@
 - **다홍색**: SD 카드에서 `boot.firm`을 찾지 못했습니다. 내부 메모리에 있는 `boot.firm`을 확인했으나, 파일이 손상되었습니다.
 - **빨간색**: `boot.firm` 파일을 찾았지만, SD 카드와 내부 메모리에 있는 파일 모두가 손상되었습니다.
 
-[Luma3DS의 최신 버전](https://github.com/LumaTeam/Luma3DS/releases/latest)을 다운받아 압축을 해제해, 새 `boot.firm` 파일을 SD 카드의 루트 디렉토리에 넣어주세요. (파일이 이미 있다면 덮어씌워주세요.) `boot.firm` 파일이 계속 문제가 있는 것으로 인식된다면, SD 카드에 문제가 있는지 확인해야 할 수 있습니다: ([Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), or [macOS](f3xswift-\(mac\))) 또, WinRAR로 압축 해제한 파일은 3DS에서 문제를 자주 일으키는 것으로 알려져 있습니다.
+[Luma3DS의 최신 버전](https://github.com/LumaTeam/Luma3DS/releases/latest)을 다운받아 압축을 해제해, 새 `boot.firm` 파일을 SD 카드의 루트 디렉토리에 넣어주세요. (파일이 이미 있다면 덮어씌워주세요.) `boot.firm` 파일이 계속 문제가 있는 것으로 인식된다면, SD 카드에 문제가 있는지 확인해야 할 수 있습니다: ([Windows](h2testw-(windows)), [Linux](f3-(linux)), or [macOS](f3xswift-(mac))) 또, WinRAR로 압축 해제한 파일은 3DS에서 문제를 자주 일으키는 것으로 알려져 있습니다.
 
 순간적르로 백라이트가 켜졌다 꺼지면서 "퍽 소리"가 들린다면, 콘솔의 하드웨어 문제인 것입니다. (백라이트 케이블이 연결이 끊기는 등) 이 경우 특정 각도로 콘솔을 들면 부팅될 수도 있습니다.
 
@@ -86,8 +86,8 @@ SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 
 
 1. 콘솔의 전원을 종료하고, SD 카드를 분리한 뒤, 다시 장착하고 전원을 켜 보세요
 2. 콘솔의 전원을 종료하고, SD 카드를 분리한 뒤, PC에 장착하세요. 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest)를 다운받아 `Luma3DS.zip`에서 `boot.firm` 파일을 복사해 SD 카드의 루트에 넣어주세요. 이미 있다면 덮어씌워주세요
-3. 콘솔의 전원을 끄고, SD 카드를 분리한 뒤, PC에 장착해 운영 체제에 따른 방식으로 포멧해 주세요: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\)). _(이 과정은 SD 카드의 데이터를 모두 삭제합니다)_
-4. 컴퓨터의 운영 체제에 따라 SD 카드에 오류가 있는지를 확인해주세요: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)). SD 카드에 오류가 있다고 표시되면, SD 카드를 교체해야 합니다
+3. 콘솔의 전원을 끄고, SD 카드를 분리한 뒤, PC에 장착해 운영 체제에 따른 방식으로 포멧해 주세요: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)). _(이 과정은 SD 카드의 데이터를 모두 삭제합니다)_
+4. 컴퓨터의 운영 체제에 따라 SD 카드에 오류가 있는지를 확인해주세요: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). SD 카드에 오류가 있다고 표시되면, SD 카드를 교체해야 합니다
 5. SD 카드 슬롯이 파손되었을 수 있습니다. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance
 
 :::

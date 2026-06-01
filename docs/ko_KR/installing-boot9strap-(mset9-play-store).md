@@ -10,7 +10,7 @@
 
 ::: warning
 
-이 작업은 Android 휴대폰/태블릿 또는 크롬북을 요구합니다. If you have an iPhone or iPad, follow [Installing boot9strap (MSET9 CLI iOS)](installing-boot9strap-\(mset9-cli-ios\)) instead. 만약 윈도우나 macOS, 리눅스가 가동되는 컴퓨터를 가지고 있다면, 이 방법 대신 [boot9strap 설치 (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)) 를 따르세요. 만약 이 장비들 중 하나도 사용할 수 없는 상황이라면, [다른 취약점](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits)을 사용해야 할 수 있습니다.
+이 작업은 Android 휴대폰/태블릿 또는 크롬북을 요구합니다. If you have an iPhone or iPad, follow [Installing boot9strap (MSET9 CLI iOS)](installing-boot9strap-(mset9-cli-ios)) instead. 만약 윈도우나 macOS, 리눅스가 가동되는 컴퓨터를 가지고 있다면, 이 방법 대신 [boot9strap 설치 (MSET9 CLI)](installing-boot9strap-(mset9-cli)) 를 따르세요. 만약 이 장비들 중 하나도 사용할 수 없는 상황이라면, [다른 취약점](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits)을 사용해야 할 수 있습니다.
 
 :::
 

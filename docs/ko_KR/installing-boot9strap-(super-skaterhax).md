@@ -1,10 +1,5 @@
 ---
-head:
-  [
-    [ 'script', { src: '/assets/js/common.js' } ],
-    [ 'script', { src: '/assets/js/skater-link.js' } ],
-    [ 'script', { src: '/assets/js/link-common.js' } ]
-  ]
+head: [ [ 'script', { src: '/assets/js/common.js' } ], [ 'script', { src: '/assets/js/skater-link.js' } ], [ 'script', { src: '/assets/js/link-common.js' } ] ]
 ---
 
 # boot9strap 설치 (super-skaterhax)
@@ -21,7 +16,7 @@ head:
 
 ::: info
 
-This exploit is known to be inconsistent: it works for some people, but not others. 좀 더 일관된 취약점을 사용하고 싶다면 대신 더 오래 걸릴 수 있지만 최종 결과는 동일한 [MSET9](installing-boot9strap-\(mset9\)) 취약점을 진행하세요.
+This exploit is known to be inconsistent: it works for some people, but not others. 좀 더 일관된 취약점을 사용하고 싶다면 대신 더 오래 걸릴 수 있지만 최종 결과는 동일한 [MSET9](installing-boot9strap-(mset9)) 취약점을 진행하세요.
 
 :::
 
@@ -103,10 +98,10 @@ This exploit is known to be inconsistent: it works for some people, but not othe
     - **하얀색 "오류가 발생했습니다" 메시지 상자**: 랜덤 확률로 인해 취약점이 실패했습니다. 본체 설정을 열고, (가능하다면) 언어를 다른 것으로 바꾼 후, 이 단계를 다시 시도해보세요. You may have to repeat this sequence up to ten times
       - JPN/KOR 지역 콘솔의 경우, 언어 설정이 1가지 뿐입니다. 이런 콘솔에서는, 본체 설정을 연 후, 닫고, 다시 단계를 진행해보세요
       - If the exploit is still unsuccessful after five attempts, there may be a problem with your files or prep work. Ensure that region and date/time are correct, and that you have been following this section **exactly**. If you used WinRAR to extract files to the SD card, re-extract the files using File Explorer or 7-zip instead
-      - If the exploit is still unsuccessful after ten attempts, follow [MSET9](installing-boot9strap-\(mset9\)) instead
+      - If the exploit is still unsuccessful after ten attempts, follow [MSET9](installing-boot9strap-(mset9)) instead
     - **"오류가 발생했습니다"라고 나오는 검정색 화면**: 파일 배치가 올바르지 않습니다. Ensure that the super-skaterhax files are on the root of the SD card
     - **A yellow screen**: Homebrew Launcher failed to open due to random chance. Hold the POWER button until the console turns off, then retry this section
-    - **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. 이 경우, [MSET9](installing-boot9strap-\(mset9\)) 취약점을 진행해야 합니다
+    - **[The word "Text"](/images/screenshots/skaterhax/skater-old3ds.png)**: You have an Old 3DS, where this exploit **does not work**. 이 경우, [MSET9](installing-boot9strap-(mset9)) 취약점을 진행해야 합니다
 17. 홈브류 목록에서 nimdsphax를 실행해 주세요
 18. 익스플로잇이 성공적이었다면 SafeB9SInstaller로 부팅되었을 것입니다
     - 콘솔이 적색 혹은 녹색 화면에서 멈출 경우, 전원 버튼을 꾹 눌러 강제 종료한 다음, 이 섹션을 다시 진행해 주세요

@@ -2,7 +2,7 @@
 
 :::details MicroSD Card - init failed
 
-SD 카드에 이상이 있을 가능성이 높습니다. 다시 포맷해 보세요 ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). 이렇게까지 했는데도 효과가 없으면, 다른 SD 카드로 시도해보세요.
+SD 카드에 이상이 있을 가능성이 높습니다. 다시 포맷해 보세요 ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). 이렇게까지 했는데도 효과가 없으면, 다른 SD 카드로 시도해보세요.
 
 :::
 

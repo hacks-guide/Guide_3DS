@@ -4,11 +4,7 @@ invalidVersion: 올바른 시스템 버전으로 확인되지 않습니다.
 cfwPrefixDetected: Your console may already have custom firmware installed. Please retry Section I. If you still only reach the HOME menu, click the link below and ask, in English, for assistance.
 inviteLinkText: Nintendo Homebrew on Discord
 otherPrefix: (기타)
-head:
-  [
-    [ 'script', { src: '/assets/js/common.js' } ],
-    [ 'script', { src: '/assets/js/selecting.js' } ]
-  ]
+head: [ [ 'script', { src: '/assets/js/common.js' } ], [ 'script', { src: '/assets/js/selecting.js' } ] ]
 ---
 
 # 시작하기
@@ -31,7 +27,7 @@ head:
 
 ::: warning
 
-If, when the console boots to the HOME Menu, you see the error "Could not detect an SD card", ensure that your SD card is properly formatted: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))
+If, when the console boots to the HOME Menu, you see the error "Could not detect an SD card", ensure that your SD card is properly formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
 
 :::
 
@@ -55,4 +51,4 @@ If, when the console boots to the HOME Menu, you see the error "Could not detect
 아래의 방식은 모든 버전과 호환되나, 추가 하드웨어를 필요로 합니다.
 
 1. [ntrboot](ntrboot) - 호환되는 DS 플래시카드 필요
-2. [boot9strap 설치 (하드모드)](installing-boot9strap-\(hardmod\)) - 납땜 필요
+2. [boot9strap 설치 (하드모드)](installing-boot9strap-(hardmod)) - 납땜 필요
