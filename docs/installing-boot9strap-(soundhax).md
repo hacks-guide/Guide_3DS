@@ -39,7 +39,7 @@ In this section, you will copy the files needed to trigger both Soundhax and uni
 1. Copy `otherapp.bin` to the root of your SD card
 1. Copy everything from the Luma3DS `.zip` to the root of your SD card
 1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `boot9strap` folder on your SD card
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 1. Reinsert your SD card into your console
 1. Power on your console
@@ -58,7 +58,7 @@ In this section, you will copy the files needed to trigger both Soundhax and uni
 
 ### Section II - Launching SafeB9SInstaller
 
-In this section, you will launch Soundhax through the Nintendo 3DS Sound app, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
+In this section, you will launch Soundhax through the Nintendo 3DS Sound app, which will use universal-otherapp to launch the boot9strap installer.
 
 1. Launch Nintendo 3DS Sound
 
@@ -70,8 +70,8 @@ In this section, you will launch Soundhax through the Nintendo 3DS Sound app, wh
 
 1. If you've never opened Nintendo 3DS Sound before and get tips on how to use it from a bird icon, go through all of the bird tips, then close the app normally and relaunch it
     + In this situation, launching Soundhax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
-1. Go to `/SDCARD`, then play "<3 nedwill 2016"
-    + This may take many (up to 10) tries
+1. Go to `/SDCARD`, then play `<3 nedwill 2016`
+    + This may take up to 10 tries
     + If you see the message "Could not play", you are either on a system version incompatible with Soundhax or downloaded the wrong Soundhax release
     + If it freezes, force the console to power off by holding the power button, then try again
     + If you get a different error, [follow this troubleshooting guide](troubleshooting-soundhax)
