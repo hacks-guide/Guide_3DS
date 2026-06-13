@@ -77,7 +77,6 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
     + If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
 1. If the check passed, you'll see `Inject trigger file` become [highlighted](/images/screenshots/mset9/inject-trigger-highlighted.png) and you can continue to the next step. **Do not inject trigger yet.** Put your phone/tablet/computer aside for now
 1. Eject your SD card from your phone/tablet/computer
-    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 
 ### Section II - MSET9

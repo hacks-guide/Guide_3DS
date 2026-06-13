@@ -98,7 +98,6 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
         + For more information, check the [troubleshooting](troubleshooting-mset9) page
 1. Type `0`, then press Enter to close the script
 1. Eject your SD card from your computer
-    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 
 ### Section II - MSET9
