@@ -49,7 +49,7 @@ The location of the SD card slot and the type of SD card that is accepted depend
 Your (micro)SD card should conform to the following requirements:
 
 * **Brand**: Any name brand (SanDisk, Samsung, Kingston, Lexar, PNY, etc.)
-    * Beware of fake or illegitimate SD cards (e.g. Memory SD, PRO PLUS, SanDian, Extreme Pro), particularly those purchased from online marketplaces like AliExpress. See [here](https://www.flashcarts.net/microsd-fakes) for a guide on spotting fake SD cards. Using a fake or illegitimate SD card is very likely to result in things not working, or even **data loss**!
+    * Beware of fake or illegitimate SD cards (e.g. Memory SD, PRO PLUS, SanDian, Extreme Pro), particularly those purchased from online marketplaces like AliExpress. See [flashcards.net](https://www.flashcarts.net/microsd-fakes) for a guide on spotting fake SD cards. Using a fake or illegitimate SD card is very likely to result in things not working, or even **data loss**!
 * **Capacity**: Between 2GB and 128GB (inclusive)
     * These cards will be labelled SD (<=2GB), SDHC (4GB-32GB), or SDXC (64GB+)
     * Cards smaller than 2GB are insufficient due to the minimum size of a NAND dump (around 1GB), which is made at the end of this guide as a safety measure
@@ -79,9 +79,9 @@ If you want, you can check your SD card for errors/legitimacy before following t
 
 ::: details Potential risks (Disclaimer)
 
-By modding your console, you subject it to the remote (but non-zero) possibility of the console being bricked (rendered non-functional). ___Incorrect file placement will NOT brick your console___, but purposely skipping instructions might.
+By modding your console, you subject it to the remote (but non-zero) possibility of the console being bricked (rendered non-functional). ***Incorrect file placement will NOT brick your console***, but purposely skipping instructions might.
 
-In short: Modding your console is safe, but it's ___your responsibility___ if something goes wrong.
+In short: Modding your console is safe, but it's ***your responsibility*** if something goes wrong.
 
 :::
 
@@ -94,7 +94,6 @@ In short: Modding your console is safe, but it's ___your responsibility___ if so
 Following this guide alone should not result in data loss, but SD card corruption is always a possibility. You should make a backup of your SD card contents (especially the `Nintendo 3DS` folder) if you have important data.
 
 :::
-
 
 :::: details What does "root of SD" or "/luma/" mean?
 
@@ -114,7 +113,7 @@ You may also see folder names indicated like this: `/folder/`. The slashes are u
 
 :::
 
-**Angle brackets** (\< and \>) are also occasionally used to refer to system-specific identifiers. For example, if the guide says `<ID0>`, it is referring to the system-specific identifier inside of the `Nintendo 3DS` folder, rather than a folder literally named "ID0":
+**Angle brackets** (\< and \>) are also occasionally used to refer to system-specific identifiers. For example, if the guide says `<ID0>`, it is referring to the system-specific identifier inside of the `Nintendo 3DS` folder, rather than a folder literally named `ID0`:
 
 ::: info
 
@@ -146,7 +145,7 @@ In this guide, you will copy files that are downloaded on your computer/phone to
 
 Some of the files that you will be asked to download come in the `.zip` file format, which is used to package multiple files into one file.
 
-When you are told to "copy (file) from (file).zip", that means that you need to open (or "extract") the ZIP file. Inside the ZIP file will be the file you're looking for, after which you can copy it to the specified location on your SD card.
+When you are told to `copy (file) from (file).zip`, that means that you need to open (or "extract") the ZIP file. Inside the ZIP file will be the file you're looking for, after which you can copy it to the specified location on your SD card.
 
 On most operating systems, you can extract files by double-clicking the file. If this doesn't work, you can install a reputable third-party extraction tool like [7-Zip](https://7-zip.org/) instead.
 
@@ -188,9 +187,9 @@ This is **very** important because removing the SD card while it is in use can c
 
 If you experience an issue while following this guide, there are many ways that you can get help!
 
-+ If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
-+ If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
-+ If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
+* If you have any questions that haven't been answered on this page, their answers might be in the [Pre-Installation FAQ](faq#pre-installation-faq).
+* If you experience an issue while following this guide, you can check the [Troubleshooting](troubleshooting) page for a solution.
+* If the resources we've provided here aren't helping, you can get one-on-one support over at [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp).
 
 ::: tip
 

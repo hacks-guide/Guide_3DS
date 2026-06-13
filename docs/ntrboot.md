@@ -15,7 +15,7 @@ While the ntrboot exploit works independently of the system version, the ntrboot
 Note that carts with a "Time Bomb" will no longer be able to launch `.nds` files when they detect that the system clock has passed a date determined by the flashcart firmware. One method to bypass this is to set the system clock to an earlier date.
 
 | Flashcart Name | Current Price | "Time Bomb"? | 3DS Versions? | DSi Versions? | Other Notes |
-|-|-:|:-:|:-:|:-:|-|
+|--------------- | ------------: | :----------: | :-----------: | :-----------: | ----------- |
 | [**Ace3DS X**](https://www.nds-card.com/ProShow.asp?ProID=575) | $24.99 | No | ALL | ALL | **Comes pre-flashed with ntrboot** (external switch to switch between ntrboot ("3DS") and NDS modes); do not manually flash with ntrboot. This cart needs an SD card inserted to function for both ntrboot and regular NDS firmware. |
 | [**R4i-SDHC B9S** (r4i-sdhc.com)](https://www.nds-card.com/ProShow.asp?ProID=574) | Out of Stock | September 3, 2024 | ALL | ALL | **Comes pre-flashed with ntrboot**; can be flashed back to an NDS flashcart. |
 | [**DSTT** (ndstt.com)](https://www.nds-card.com/ProShow.asp?ProID=157) | $19.99 | No | None | None | Only models with [certain flash chips](https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6) are compatible with ntrboot. |
@@ -47,7 +47,7 @@ The usage of this exploit, regardless of the flashing method, requires access to
 
 ::: info
 
-To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the console is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
+To test if a magnet will work, hold it on or around the `ABXY` buttons while the console is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
 
 :::
 
@@ -59,11 +59,7 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 
 :::
 
-___
-
 ## Methods
-
-___
 
 ### Flashing ntrboot (3DS Single System)
 
@@ -75,7 +71,7 @@ Continue to [Flashing ntrboot (3DS Single System)](flashing-ntrboot-(3ds-single-
 
 :::
 
-___
+---
 
 ### Flashing ntrboot (3DS Multi System)
 
@@ -87,7 +83,7 @@ Continue to [Flashing ntrboot (3DS Multi System)](flashing-ntrboot-(3ds-multi-sy
 
 :::
 
-___
+---
 
 ### Flashing ntrboot (NDS)
 
@@ -99,7 +95,7 @@ Continue to [Flashing ntrboot (NDS)](flashing-ntrboot-(nds))
 
 :::
 
-___
+---
 
 ### Flashing ntrboot (DSi)
 

@@ -125,7 +125,7 @@ Yes, system transfers can be performed through the official System Transfer func
 ::: details How do I change the system language of a Japanese 3DS?
 
 The only way to change the system language of a Japanese 3DS to a language other than Japanese is to perform a [region change](region-changing). Note that this is very likely to break the Nintendo eShop on your console, which means you will be unable to update your games whether they are in-region or out-of-region. You will also be unable to access Pokémon Bank (if you have it installed), as it relies on eShop access.
- 
+
 :::
 
 ::: details How do I update homebrew applications?
@@ -134,7 +134,7 @@ It depends on the format of the homebrew application. Generally speaking:
 
 * Homebrew in **CIA format** can be updated by installing the new CIA, which will usually overwrite the old one. If the old CIA is not overwritten, you can delete the old one from Data Management as you would any other 3DS title.
 * Homebrew in **3DSX format** can be updated by replacing the 3DSX file in `/3ds/` with a fresh copy. If the homebrew application includes additional assets, you may need to place that folder somewhere else. Refer to the documentation of the homebrew application.
-* For updating Luma3DS, see [this page](restoring-updating-cfw). For updating GodMode9, see [this page](godmode9-usage#updating-godmode9).
+* For updating Luma3DS, see the [CFW update guide](restoring-updating-cfw). For updating GodMode9, see the [GM9 update guide](godmode9-usage#updating-godmode9).
 
 :::
 

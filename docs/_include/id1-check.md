@@ -8,7 +8,7 @@ You will need to determine which one contains your data. First of all, back up a
 
 :::
 
-Now, delete all but one of the folders from your SD card. Generally, you will want to delete the **smallest** one(s), as the one with all your data will probably have more space occupied. You can compare which folder is occupying more space by right-clicking it and clicking "Properties":
+Now, delete all but one of the folders from your SD card. Generally, you will want to delete the **smallest** one(s), as the one with all your data will probably have more space occupied. You can compare which folder is occupying more space by right-clicking it and clicking `Properties`:
 
 ::: info
 
