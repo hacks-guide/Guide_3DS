@@ -41,6 +41,8 @@ In this section, you will copy the files needed to trigger both super-skaterhax 
 
     :::
 
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 1. Power on your console
 1. Launch System Settings

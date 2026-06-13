@@ -38,6 +38,8 @@ In this section, you will copy the files needed to trigger both browserhax and u
 1. Create a folder named `boot9strap` on the root of your SD card
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 1. Power on your console
 

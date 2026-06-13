@@ -59,6 +59,8 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
     + If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
 1. If you see the message "Created hacked ID1.", tap Return to close the MSET9 script
     + Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
+1. Eject your SD card from your iPhone/iPad
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 1. Power on your console
 1. Open Mii Maker
@@ -84,6 +86,8 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
         + Once you have resolved the issue, return to Section I Step 14
         + For more information, check the [troubleshooting](troubleshooting-mset9) page
 1. Type `0`, then tap Return to close the script
+1. Eject your SD card from your iPhone/iPad
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 
 ### Section II - MSET9
