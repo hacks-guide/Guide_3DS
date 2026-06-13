@@ -63,10 +63,10 @@ In this section, you will change your Internet connection settings to use a prox
 
 In this section, you will visit the browser exploit webpage, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
 
-1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
+1. On the HOME Menu, press the <kbd>L+R</kbd> buttons at the same time to open the camera
     + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
 1. Tap the QR code button and scan [this QR code](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L)
-    + When you get a prompt with error code `012-1511`, `032-1809` or `032-1820`, press (A) to allow the connection
+    + When you get a prompt with error code `012-1511`, `032-1809` or `032-1820`, press <kbd>A</kbd> to allow the connection
     + If you get a crash or a different error code, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
 
     ::: danger
@@ -86,7 +86,7 @@ In this section, you will install custom firmware onto your console.
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
     + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-ssloth-browser)
-1. Once it is complete, press (A) to reboot your console
+1. Once it is complete, press <kbd>A</kbd> to reboot your console
 <!--@include: ./_include/configure-luma3ds.md -->
 
 ### Section V - Restoring default proxy

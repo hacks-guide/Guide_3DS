@@ -40,11 +40,11 @@ Insert the game cartridge you intend to dump into your console
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Press and hold <kbd>START</kbd>, and while holding <kbd>START</kbd>, power on your console. This will launch GodMode9
 1. Navigate to `[C:] GAMECART`
 1. Follow the steps applicable to your game cartridge:
-    + **3DS Game Cartridge:** Press (A) on `<TitleID>.trim.3ds` to select it
-    + **NDS Game Cartridge:** Press (A) on `<TitleID>.nds` to select it
+    + **3DS Game Cartridge:** Press <kbd>A</kbd> on `<TitleID>.trim.3ds` to select it
+    + **NDS Game Cartridge:** Press <kbd>A</kbd> on `<TitleID>.nds` to select it
         + Trimmed dumps are not recommended for NDS games in general, as they can cause various playback issues
 1. Select "Copy to 0:/gm9/out"
 1. Your non-installable `.3ds` or `.nds` formatted file will be outputted to the `/gm9/out/` folder on your SD card
@@ -57,10 +57,10 @@ This will only work for 3DS games; it is not possible to install an NDS game car
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Press and hold <kbd>START</kbd>, and while holding <kbd>START</kbd>, power on your console. This will launch GodMode9
 1. Navigate to `[C:] GAMECART`
-1. Press (A) on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Install game image"
-1. Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given
+1. Press <kbd>A</kbd> on `[TitleID].trim.3ds` to select it, then select "NCSD image options...", then select "Install game image"
+1. Press <kbd>A</kbd> to unlock SysNAND (lvl1) writing, then input the key combo given
 1. Once the process is complete, your game will show up in the HOME Menu as an installed title.
 
 ## Dumping a 3DS Game Cartridge to .CIA
@@ -71,9 +71,9 @@ This should only be used if [Installing a Game Cartridge Directly to the System]
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Press and hold <kbd>START</kbd>, and while holding <kbd>START</kbd>, power on your console. This will launch GodMode9
 1. Navigate to `[C:] GAMECART`
-1. Press (A) on `<TitleID>.trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
+1. Press <kbd>A</kbd> on `<TitleID>.trim.3ds` to select it, then select "NCSD image options...", then select "Build CIA from file"
 1. Your installable `.cia` formatted file will be outputted to the `/gm9/out/` folder on your SD card
 
 ## Dumping an Installed Title
@@ -84,8 +84,8 @@ This allows dumping of both System- and User-installed digital titles, such as o
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. Press (Home) to bring up the action menu
+1. Press and hold <kbd>START</kbd>, and while holding <kbd>START</kbd>, power on your console. This will launch GodMode9
+1. Press <kbd>HOME</kbd> to bring up the action menu
 1. Select "Title manager"
 1. Select one of the following depending on the type of title you wish to dump
     + **User Installed Title**: `[A:] SD CARD`
@@ -105,7 +105,7 @@ The game will be outputted to the `/gm9/out/` folder on your SD card with the na
 
 ::: info
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing <kbd>HOME</kbd> to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
 
 :::
 
@@ -113,19 +113,19 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
     + Launch the GBA VC game
     + Exit the GBA VC game
     + Power off your console
-    + Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+    + Press and hold <kbd>START</kbd>, and while holding <kbd>START</kbd>, power on your console. This will launch GodMode9
     + Navigate to `[S:] SYSNAND VIRTUAL`
-    + Press (A) on `agbsave.bin` to select it
+    + Press <kbd>A</kbd> on `agbsave.bin` to select it
     + Select "AGBSAVE options..."
     + Select "Dump GBA VC save"
-    + Press (A) to continue
-    + Press (Start) to reboot your console
+    + Press <kbd>A</kbd> to continue
+    + Press <kbd>START</kbd> to reboot your console
 
 ## Restore GBA VC Saves
 
 ::: info
 
-To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
+To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing <kbd>HOME</kbd> to bring up the action menu, selecting `Title manager`, and selecting `[A:] SD CARD`.
 
 :::
 
@@ -133,16 +133,16 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
     + Launch the GBA VC game
     + Exit the GBA VC game
     + Power off your console
-    + Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+    + Press and hold <kbd>START</kbd>, and while holding <kbd>START</kbd>, power on your console. This will launch GodMode9
     + Navigate to `[0:] SDCARD` -> `gm9` -> `out`
-    + Press (Y) on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
-    + Press (B) to return to the main menu
+    + Press <kbd>Y</kbd> on the `<TitleID>.gbavc.sav` file you wish to restore to copy it
+    + Press <kbd>B</kbd> to return to the main menu
     + Navigate to `[S:] SYSNAND VIRTUAL`
-    + Press (A) on `agbsave.bin` to select it
+    + Press <kbd>A</kbd> on `agbsave.bin` to select it
     + Select "AGBSAVE options..."
     + Select "Inject GBA VC save"
-    + Press (A) to continue
-    + Press (Start) to reboot your console
+    + Press <kbd>A</kbd> to continue
+    + Press <kbd>START</kbd> to reboot your console
     + Launch the GBA VC game
     + Exit the GBA VC game
 
@@ -154,9 +154,9 @@ For organizational purposes, copy each `.cia` file you wish to encrypt / decrypt
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Press and hold <kbd>START</kbd>, and while holding <kbd>START</kbd>, power on your console. This will launch GodMode9
 1. Navigate to `[0:] SDCARD` -> `cias`
-1. Press (A) on the `.cia` file to select it, then select "CIA image options..."
+1. Press <kbd>A</kbd> on the `.cia` file to select it, then select "CIA image options..."
 1. Select the option to perform the desired function:
     + **Encrypt to 0:/gm9/out:** Create an encrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card
     + **Decrypt to 0:/gm9/out:** Create a decrypted copy of the selected `.cia` file in the `/gm9/out/` folder on your SD card

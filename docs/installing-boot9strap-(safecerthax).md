@@ -28,7 +28,7 @@ This exploit will not work on the New 3DS, New 3DS XL, or New 2DS XL. Please ens
 In this section, you will see whether your shoulder buttons are working on your console. This will determine whether your console is compatible with this method.
 
 1. Power on your console
-1. Once you see the HOME Menu, press the (Left Shoulder) and (Right Shoulder) buttons at the same time
+1. Once you see the HOME Menu, press the <kbd>L+R</kbd> buttons at the same time
     + The camera applet should appear
 1. Power off your console
 
@@ -80,7 +80,7 @@ In this section, you will change your Internet connection settings to use a prox
 
 In this section, you will enter Safe Mode (a feature available on all 3DS family consoles) where safecerthax will be triggered, which will launch you into the boot9strap (custom firmware) installer.
 
-1. With your console still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), and while holding these buttons together, power on your console
+1. With your console still powered off, hold the following buttons: <kbd>L+R+Up+A</kbd>, and while holding these buttons together, power on your console
     + Keep holding the buttons until the console boots into Safe Mode (a "system update" menu)
 1. Press "OK" to accept the update
     + There is no update. This is part of the exploit
@@ -96,7 +96,7 @@ In this section, you will install custom firmware onto your console.
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
     + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-safecerthax)
-1. Once it is complete, press (A) to reboot your console
+1. Once it is complete, press <kbd>A</kbd> to reboot your console
 <!--@include: ./_include/configure-luma3ds.md -->
 
 <!--@include: ./_include/luma3ds-installed-note.md -->

@@ -14,9 +14,9 @@ If the script found no user tickets, continue to the next section.
     + Select "\<current directory>"
     + Select "Install and delete all tickets"
     + Wait. The system may appear to freeze, just give it time.
-    + Press (A) to confirm
-    + Press (B) to decline installing tickets from CDN.
-1. Press (Home) to exit FBI
+    + Press <kbd>A</kbd> to confirm
+    + Press <kbd>B</kbd> to decline installing tickets from CDN.
+1. Press <kbd>HOME</kbd> to exit FBI
 1. Re-open the Homebrew Launcher, either through the Homebrew Launcher icon on the HOME Menu or by re-following Section IV of this page
 1. Launch faketik from the list of homebrew
-1. Once faketik has finished processing, press (Start) to exit faketik
+1. Once faketik has finished processing, press <kbd>START</kbd> to exit faketik

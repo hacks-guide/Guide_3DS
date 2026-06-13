@@ -90,14 +90,14 @@ If either of these tests has failed, DS mode, DS Download Play, and/or DS Connec
 ### Section III - Safety Test
 The purpose of this section is to verify that the console will boot and that critical system functions, like System Settings and the keyboard, will work once CFW is uninstalled. **If you skip this section, you may BRICK your console!**
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it is complete
-1. If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
+1. Press and hold <kbd>START</kbd>, and while holding <kbd>START</kbd>, power on your console. This will launch GodMode9
+1. If you are prompted to create an essential files backup, press <kbd>A</kbd> to do so, then press <kbd>A</kbd> to continue once it is complete
+1. If you are prompted to fix the RTC date&time, press <kbd>A</kbd> to do so, then set the date and time, then press <kbd>A</kbd> to continue
     + Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after following this guide
-1. Press (Home) to bring up the action menu
+1. Press <kbd>HOME</kbd> to bring up the action menu
 1. Select "Scripts..."
 1. Select "safety_test"
-1. Read the text on-screen and press (A) to continue
+1. Read the text on-screen and press <kbd>A</kbd> to continue
 1. You should boot into the regular 3DS HOME Menu (any custom theme is irrelevant). If you do, continue these instructions
     + If you do not boot into the regular 3DS HOME Menu (black screen, error screen, etc.), uninstalling CFW **WILL BRICK YOUR CONSOLE!**
 1. Launch System Settings on your console
@@ -117,18 +117,18 @@ If you do NOT boot into the regular 3DS HOME Menu, or System Settings / your key
 
 ### Section IV - NAND Backup
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-1. Press (Home) to bring up the action menu
+1. Press and hold <kbd>START</kbd>, and while holding <kbd>START</kbd>, power on your console. This will launch GodMode9
+1. Press <kbd>HOME</kbd> to bring up the action menu
 1. Select "Scripts..."
 1. Select "GM9Megascript"
 1. Select "Backup Options"
 1. Select "SysNAND Backup"
-1. Press (A) to confirm
+1. Press <kbd>A</kbd> to confirm
     + This process will take some time
     + If you get an error, ensure you have at least 1.3GB of free space on your SD card
-1. Press (B) to return to the main menu
+1. Press <kbd>B</kbd> to return to the main menu
 1. Select “Exit”
-1. Press (Home) to bring up the action menu
+1. Press <kbd>HOME</kbd> to bring up the action menu
 1. Select "Poweroff system" to power off your console
 
 ### Section V - Removing illegitimate content
@@ -151,13 +151,13 @@ This section will remove illegitimate content, like homebrew and dumped cartridg
 1. Exit the System Settings application
 1. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 1. Wait until you see the two buttons
-1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
+1. Press <kbd>L+Down+Select</kbd> at the same time to open the Rosalina menu
 1. Select "Miscellaneous options"
 1. Select "Switch the hb. title to the current app."
-1. Press (B) to continue
-1. Press (B) to return to the Rosalina main menu
-1. Press (B) to exit the Rosalina menu
-1. Press (Home), then close Download Play
+1. Press <kbd>B</kbd> to continue
+1. Press <kbd>B</kbd> to return to the Rosalina main menu
+1. Press <kbd>B</kbd> to exit the Rosalina menu
+1. Press <kbd>HOME</kbd>, then close Download Play
 1. Launch the Download Play application (![](/images/download-play-icon.png){height="24px" width="24px"})
 1. Your console should load the Homebrew Launcher
 1. Launch DSiWare Uninstaller from the list of homebrew
@@ -198,17 +198,17 @@ If you're removing CFW because:
 
 :::
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
-    + If you instead see the Luma3DS chainloader, use the D-Pad and the (A) button to select GodMode9
-1. Press (Home) to bring up the action menu
+1. Press and hold <kbd>START</kbd>, and while holding <kbd>START</kbd>, power on your console. This will launch GodMode9
+    + If you instead see the Luma3DS chainloader, use the D-Pad and the <kbd>A</kbd> button to select GodMode9
+1. Press <kbd>HOME</kbd> to bring up the action menu
 1. Select "Scripts..."
 1. Select "uninstall_cfw"
-1. When prompted, press (A) to proceed
-2. Press (A) again to proceed
-1. Press (A) to unlock SysNAND (lvl3) writing, then input the key combo given
-1. Press (A) to continue
-1. Press (A) to relock write permissions if prompted
-1. Press (Start) to reboot your console
+1. When prompted, press <kbd>A</kbd> to proceed
+2. Press <kbd>A</kbd> again to proceed
+1. Press <kbd>A</kbd> to unlock SysNAND (lvl3) writing, then input the key combo given
+1. Press <kbd>A</kbd> to continue
+1. Press <kbd>A</kbd> to relock write permissions if prompted
+1. Press <kbd>START</kbd> to reboot your console
 
 ___
 
