@@ -11,7 +11,7 @@ Cette section est dédiée aux utilisateurs de Windows uniquement. Si vous n'uti
 ## Ce dont vous avez besoin
 
 - **Pour toutes les tailles de carte SD**: La dernière version de [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **Pour les cartes SD de 64 Go ou plus uniquement :** la dernière version de [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- **Pour les cartes SD de 64 Go ou plus uniquement :** la dernière version de [guiformat](https://nintendohomebrew.com/guiformat)
 
 ## Instructions
 

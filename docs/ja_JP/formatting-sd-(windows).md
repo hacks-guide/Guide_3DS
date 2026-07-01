@@ -6,12 +6,12 @@
 
 3DSがすでにSDカードを認識している場合は、この操作は必要ありません。
 
-このページはWindowsユーザー向けです。 Windowsをお使いでない場合、[SDカードをフォーマット (Linux)](formatting-sd-\(linux\)) または [SDカードをフォーマット (Mac)](formatting-sd-\(mac\)) をご覧ください。
+このページはWindowsユーザー向けです。 Windowsをお使いでない場合、[SDカードをフォーマット (Linux)](formatting-sd-(linux)) または [SDカードをフォーマット (Mac)](formatting-sd-(mac)) をご覧ください。
 
 ## What You Need
 
 - **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- **For SD cards 64GB or larger only:** The latest version of [guiformat](https://nintendohomebrew.com/guiformat)
 
 ## Instructions
 

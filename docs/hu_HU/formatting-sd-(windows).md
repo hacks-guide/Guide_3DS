@@ -11,7 +11,7 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
 ## Amire szükséged lesz
 
 - **Minden SD kártya méret esetén:** Az [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/) legfrissebb verziója
-- **csak 64GB vagy nagyobb SD kártya esetén:** A [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm) legfrissebb verziója
+- **64GB vagy nagyobb SD kártya esetén:** A [guiformat](https://nintendohomebrew.com/guiformat) legfrissebb verziója
 
 ## Lépések
 

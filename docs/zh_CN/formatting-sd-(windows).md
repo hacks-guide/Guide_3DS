@@ -6,12 +6,12 @@
 
 如果 3DS 已经识别到了 SD 卡，那么就不需要做这个教程了。
 
-本节教程仅限 Windows 用户。 如果你没有在用 Windows，那么请看看[格式化 SD 卡（通过 Linux 操作系统）](formatting-sd-\(linux\))或[格式化 SD 卡（通过 Mac 操作系统）](formatting-sd-\(mac\)) 。
+本节教程仅限 Windows 用户。 如果你没有在用 Windows，那么请看看[格式化 SD 卡（通过 Linux 操作系统）](formatting-sd-(linux))或[格式化 SD 卡（通过 Mac 操作系统）](formatting-sd-(mac)) 。
 
 ## What You Need
 
 - **For all SD card sizes**: The latest version of [SD Formatter](https://www.sdcard.org/downloads/formatter/sd-memory-card-formatter-for-windows-download/)
-- **For SD cards 64GB or larger only:** The latest version of [guiformat](http://ridgecrop.co.uk/index.htm?guiformat.htm)
+- **For SD cards 64GB or larger only:** The latest version of [guiformat](https://nintendohomebrew.com/guiformat)
 
 ## Instructions
 
