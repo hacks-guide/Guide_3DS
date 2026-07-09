@@ -20,14 +20,14 @@ If you're using a Mac on macOS 10.13 (High Sierra) and above, follow [F3XSwift (
 
 ## Instructions
 
-1. Unzip the F3X `.zip` file
-1. Insert your SD card into your computer
-1. Run the F3X app
-1. Select your SD card
-1. Press "Start Test"
+1. Unzip the F3X `.zip` file.
+1. Insert your SD card into your computer.
+1. Run the F3X app.
+1. Select your SD card.
+1. Press `Start Test`.
 1. Wait until the process is complete.
 
-___
+---
 
 ::: tip
 

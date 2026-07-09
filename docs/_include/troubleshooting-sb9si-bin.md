@@ -1,4 +1,3 @@
-
 ### Before opening SafeB9SInstaller
 
 ::: details Failed to open SafeB9SInstaller.bin

@@ -40,7 +40,8 @@ As a part of this process, your system settings will be reset to its defaults. T
 
 ### Section II - NAND Backup
 
-1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
+1. Press and hold `START`, and while holding `START`, power on your console. This will launch GodMode9.
+
 <!--@include: ./_include/nand-backup.md -->
 
 ### Section III - CTRTransfer
@@ -59,7 +60,7 @@ As a part of this process, your system settings will be reset to its defaults. T
 
 <!--@include: ./_include/ctrnand-datayeet.md -->
 
-___
+---
 
 ::: tip
 

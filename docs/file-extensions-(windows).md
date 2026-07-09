@@ -10,10 +10,10 @@ This will make it easier for you to find the referenced files in the rest of thi
 
 ### Windows 11
 
-1. Launch File Explorer by opening any directory, such as your SD card directory
-1. Click the "View" option in the toolbar
-1. Go to "Show"
-1. Click "File name extensions" to enable it
+1. Launch File Explorer by opening any directory, such as your SD card directory.
+1. Click the `View` option in the toolbar.
+1. Go to `Show`.
+1. Click `File name extensions` to enable it.
 
     ::: info
 
@@ -23,9 +23,9 @@ This will make it easier for you to find the referenced files in the rest of thi
 
 ### Windows 10 / 8.1 / 8
 
-1. Launch File Explorer by opening any directory, such as your SD card directory
-1. Click the "View" option on the ribbon menu
-1. Check the box labeled "File name extensions"
+1. Launch File Explorer by opening any directory, such as your SD card directory.
+1. Click the `View` option on the ribbon menu.
+1. Check the box labeled `File name extensions`.
 
     ::: info
 
@@ -35,22 +35,22 @@ This will make it easier for you to find the referenced files in the rest of thi
 
 ### Windows 7
 
-1. Open the start menu by clicking on it or using the Windows key
-1. Search for "Folder Options" and select the corresponding result
+1. Open the start menu by clicking on it or using the Windows key.
+1. Search for `Folder Options` and select the corresponding result.
 
     ::: info
 
     ![](/images/screenshots/windows-7-folder-options-start-menu.png)
-    
+
     :::
 
-1. Click the "View" option at the top of the Folder Options menu
-1. Uncheck the box labeled "Hide extensions for known file types"
+1. Click the `View` option at the top of the Folder Options menu.
+1. Uncheck the box labeled `Hide extensions for known file types`.
 
     ::: info
 
     ![](/images/screenshots/windows-7-folder-options.png)
-    
+
     :::
 
 ::: tip

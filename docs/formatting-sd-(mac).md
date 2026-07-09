@@ -12,11 +12,11 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 
 ### OS X El Capitan (10.11) and later
 
-1. Insert your SD card into your computer
-1. If the SD card has any files and folders on it, copy everything to a folder on your computer
-1. Run the Disk Utility app
-1. In the top-left "View" menu, choose "Show All Devices"
-1. Select your SD card in the left panel
+1. Insert your SD card into your computer.
+1. If the SD card has any files and folders on it, copy everything to a folder on your computer.
+1. Run the Disk Utility app.
+1. In the top-left `View` menu, choose `Show All Devices`.
+1. Select your SD card in the left panel.
 
     ::: danger
 
@@ -24,22 +24,22 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 
     :::
 
-1. Click "Erase" at the top
-1. Enter anything for "Name"
-1. Ensure that "Format" is set to "MS-DOS (FAT)"
-1. Ensure that "Scheme" is set to "Master Boot Record"
-    + If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
-1. Click "Erase"
-1. Wait for the format to finish
-1. Click "Close"
-1. If the SD card had any files and folders on it before the format, copy everything back from your computer
+1. Click `Erase` at the top.
+1. Enter anything for `Name`.
+1. Ensure that `Format` is set to `MS-DOS (FAT)`.
+1. Ensure that `Scheme` is set to `Master Boot Record`.
+    * If `Scheme` does not appear, click `Cancel` and make sure to choose the device instead of a volume.
+1. Click `Erase`.
+1. Wait for the format to finish.
+1. Click `Close`.
+1. If the SD card had any files and folders on it before the format, copy everything back from your computer.
 
 ### OS X Yosemite (10.10) and earlier
 
-1. Insert your SD card into your computer
-1. If the SD card has any files and folders on it, copy everything to a folder on your computer
-1. Run the Disk Utility app
-1. Select your SD card in the left panel
+1. Insert your SD card into your computer.
+1. If the SD card has any files and folders on it, copy everything to a folder on your computer.
+1. Run the Disk Utility app.
+1. Select your SD card in the left panel.
 
     ::: danger
 
@@ -47,21 +47,21 @@ This page is for Mac users only. If you are not on Mac, check out the [Formattin
 
     :::
 
-1. Click "Partition" at the top
-    + If "Partition" does not appear, make sure to choose the device instead of a volume
-1. Ensure that "Partition Layout" is set to "1 Partition"
-1. Enter anything for "Name"
-1. Ensure that "Format" is set to "MS-DOS (FAT)"
-1. Click "Options" below the partition table
-1. Choose "Master Boot Record"
-1. Click "OK"
-1. Click "Apply"
-1. Click "Partition"
-1. Wait for the format to finish
-1. Close Disk Utility
-1. If the SD card had any files and folders on it before the format, copy everything back from your computer
+1. Click `Partition` at the top.
+    * If `Partition` does not appear, make sure to choose the device instead of a volume.
+1. Ensure that `Partition Layout` is set to `1 Partition`.
+1. Enter anything for `Name`.
+1. Ensure that `Format` is set to `MS-DOS (FAT)`.
+1. Click `Options` below the partition table.
+1. Choose `Master Boot Record`.
+1. Click `OK`.
+1. Click `Apply`.
+1. Click `Partition`.
+1. Wait for the format to finish.
+1. Close Disk Utility.
+1. If the SD card had any files and folders on it before the format, copy everything back from your computer.
 
 ## Troubleshooting
 
 * SD card remains undetected by console or continues to display the wrong capacity after formatting
-    + Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
+    * Your SD card may be partitioned or have unallocated space. Follow the instructions on the [hacks.guide Wiki](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
