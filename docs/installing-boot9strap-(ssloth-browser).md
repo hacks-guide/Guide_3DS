@@ -2,11 +2,11 @@
 
 ::: details Technical Details (optional)
 
-In order to exploit the Browser application, we need to bypass the browser version check, which is designed to disallow the use of the browser without updating to the latest system version.
+In order to exploit the Internet Browser application, we need to bypass the browser version check, which is designed to disallow the use of the browser without updating to the latest system version.
 
 A public proxy server is available, which, with the help of the SSLoth exploit, can bypass this check.
 
-Once the bypass is active, an exploit webpage will be accessible which will do the rest of the job.
+Once the bypass is active, an exploit webpage will be accessible (which will do the rest of the job).
 
 For technical details on the exploits that you will be using on this page, see [here](https://github.com/MrNbaYoh/3ds-ssloth) (SSLoth) and [here](https://github.com/TuxSH/universal-otherapp) (universal-otherapp).
 
@@ -36,7 +36,7 @@ In this section, you will copy the files needed to trigger both browserhax and u
     + If you do not see the `.bin` extension, do not add it to the end of the filename
 1. Copy everything from the Luma3DS `.zip` to the root of your SD card
 1. Create a folder named `boot9strap` on the root of your SD card
-1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
+1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `boot9strap` folder on your SD card
 1. Copy `SafeB9SInstaller.bin` from the SafeB9SInstaller `.zip` to the root of your SD card
 1. Reinsert your SD card into your console
 1. Power on your console
@@ -61,7 +61,7 @@ In this section, you will change your Internet connection settings to use a prox
 
 ### Section III - Launching SafeB9SInstaller
 
-In this section, you will visit the browser exploit webpage, which will use universal-otherapp to launch the boot9strap (custom firmware) installer.
+In this section, you will visit the browser exploit webpage, which will use universal-otherapp to launch the boot9strap installer.
 
 1. On the HOME Menu, press the Left and Right shoulder buttons at the same time to open the camera
     + If you are unable to open the camera, open the Internet Browser and manually type the URL instead (`https://zoogie.github.io/web/nbhax/`)
