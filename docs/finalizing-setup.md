@@ -84,40 +84,40 @@ In this section, you will update your system to the latest version, which is saf
 
 In this section, you will sync your 3DS internal clock with the actual time and dump the sound firmware (which is necesssary for some homebrew software to use sound properly).
 
-1. Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu
-    + If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to (X) + (Y)
+1. Press <kbd>L+Down+Select</kbd> at the same time to open the Rosalina menu
+    + If one of these buttons is broken, download [config.ini](/assets/config.ini) and put it in your `luma` folder, replacing the existing one. This will change the Rosalina menu key combination to <kbd>X+Y</kbd>
 1. Select "Miscellaneous options"
 1. Select "Dump DSP firmware"
-1. Press (B) to continue
+1. Press <kbd>B</kbd> to continue
 1. Select "Nullify user time offset"
-1. Press (B) to continue
-1. Press (B) to return to the Rosalina main menu
-1. Press (B) to exit the Rosalina menu
+1. Press <kbd>B</kbd> to continue
+1. Press <kbd>B</kbd> to return to the Rosalina main menu
+1. Press <kbd>B</kbd> to exit the Rosalina menu
 
 ### Section IV - Setup Script
 
 In this section, you will use a series of scripts to automate homebrew installation, SD card cleanup, and system file backup.
 
 1. Power off your console
-1. Press and hold (X), and while holding (X), power on your console. This will launch the Finalizing Setup Helper
+1. Press and hold <kbd>X</kbd>, and while holding <kbd>X</kbd>, power on your console. This will launch the Finalizing Setup Helper
     + If you boot to the HOME Menu, your `payloads` folder may be incorrectly spelled, or `x_finalize_helper.firm` may be in the wrong location
     + If you encounter an error, consult the [troubleshooting](troubleshooting-finalizing-setup) page
 1. After a few seconds, your console should automatically boot into GodMode9
-    + From this point forward, you can access GodMode9 by holding (Start) while powering on your console
-    + Holding (X) on boot will no longer do anything
+    + From this point forward, you can access GodMode9 by holding <kbd>START</kbd> while powering on your console
+    + Holding <kbd>X</kbd> on boot will no longer do anything
 1. If necessary, configure GodMode9:
-    + If you are prompted to select a language, use the D-Pad and press (A) to select English
+    + If you are prompted to select a language, use the D-Pad and press <kbd>A</kbd> to select English
         + This language choice only affects GodMode9's menu options
         + You can set it to your language of choice after completing this guide
-    + If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue
-    + If you are prompted to fix the RTC date&time, press (A) to do so, then set the date and time, then press (A) to continue
-1. Once you see [root] and a list of drives, press (Home) to bring up the action menu
+    + If you are prompted to create an essential files backup, press <kbd>A</kbd> to do so, then press <kbd>A</kbd> to continue
+    + If you are prompted to fix the RTC date&time, press <kbd>A</kbd> to do so, then set the date and time, then press <kbd>A</kbd> to continue
+1. Once you see [root] and a list of drives, press <kbd>HOME</kbd> to bring up the action menu
 1. Select "Scripts..." (*not* Lua scripts)
 1. Select "finalize"
 1. Follow the prompts in the script, answering any questions that you are asked
-    + If you see "Information #05: No title database", press (A) and enter the key combination on the bottom screen to proceed
-    + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page, then open GodMode9 by holding (Start) on boot to re-run the script
-1. Once the script says "Setup complete!", press (A) to power off the device
+    + If you see "Information #05: No title database", press <kbd>A</kbd> and enter the key combination on the bottom screen to proceed
+    + If you encounter an error, follow the instructions in the error message or consult the [troubleshooting](troubleshooting-finalizing-setup) page, then open GodMode9 by holding <kbd>START</kbd> on boot to re-run the script
+1. Once the script says "Setup complete!", press <kbd>A</kbd> to power off the device
     + If you do NOT see the message "Setup complete!", the script was not successful and you will need to redo this section from Step 3
 1. Insert your SD card into your computer
 1. Copy the `/gm9/backups/` folder to a safe location on your computer
@@ -147,10 +147,10 @@ Trying to figure out what to do with your newly modded device? Visit [our wiki](
 
 Here are some key combos that you should know:
 
-+ Holding (Select) on boot will launch the Luma3DS configuration menu.
-+ Holding (Start) on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
-+ By default, pressing (Left Shoulder) + (Down D-Pad) + (Select) while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. This can be changed from the Rosalina menu.
-+ Holding (Start) + (Select) + (X) on boot will make the notification LED show a color for debug purposes. See the [changelog](https://github.com/SciresM/boot9strap/releases/tag/1.4) for a list.
++ Holding <kbd>SELECT</kbd> on boot will launch the Luma3DS configuration menu.
++ Holding <kbd>START</kbd> on boot will launch GodMode9, or if you have multiple payloads in `/luma/payloads/`, the Luma3DS chainloader.
++ By default, pressing <kbd>L+Down+Select</kbd> while in 3DS mode will open the Rosalina menu, where you can check system information, take screenshots, enable cheats, and more. This can be changed from the Rosalina menu.
++ Holding <kbd>START+SELECT+X</kbd> on boot will make the notification LED show a color for debug purposes. See the [changelog](https://github.com/SciresM/boot9strap/releases/tag/1.4) for a list.
 
 :::
 

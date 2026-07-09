@@ -86,7 +86,7 @@ In this section, you will install custom firmware to the dumped NAND image, and 
 1. Flash your outputted `NAND-patched.bin` to your console with your hardmod
 1. Power off your console
 1. Disconnect your hardmod
-1. Press and hold (Select), and while holding (Select), power on your console
+1. Press and hold <kbd>SELECT</kbd>, and while holding <kbd>SELECT</kbd>, power on your console
 <!--@include: ./_include/configure-luma3ds.md -->
 
 <!--@include: ./_include/luma3ds-installed-note.md -->

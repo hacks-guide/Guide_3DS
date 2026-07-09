@@ -47,7 +47,7 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
 1. Reinsert your SD card into your console
 1. Power on your console
-1. If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot
+1. If your console has booted into the Luma3DS configuration menu, press <kbd>START</kbd> to save and reboot
     + Luma3DS configuration menu are settings for the Luma3DS custom firmware. Many of these settings may be useful for customization or debugging
     + For the purpose of this guide, these settings will be left on default settings
 

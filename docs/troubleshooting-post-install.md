@@ -45,7 +45,7 @@ The steps below can be attempted in any order, but are listed from least to most
         + **TWN Region**: `000000B1`
 1. Try booting into recovery mode and updating your system:
     + Power off your console
-    + Hold (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A)
+    + Hold <kbd>L+R+Up+A</kbd>
     + Power on your console
     + If you were successful, the console will boot to an "update your system" screen
 1. Follow the [CTRTransfer](ctrtransfer) guide
@@ -71,8 +71,8 @@ There are a number of reasons as to why this could be happening. In any case, th
 
 ARM11 exception handlers are disabled, or custom firmware is not installed. Try enabling ARM11 exception handlers:
 + Power off your console
-+ Hold (Select)
-+ Power on your console, while still holding (Select)
++ Hold <kbd>SELECT</kbd>
++ Power on your console, while still holding <kbd>SELECT</kbd>
 + If the "Disable ARM11 exception handlers" box is checked, uncheck it
 
 :::
@@ -114,8 +114,8 @@ Please take a photo of the error and join [Nintendo Homebrew on Discord](https:/
 1. Reinsert your SD card into your console
 1. Open the Homebrew Launcher
 1. Launch TWLFix-CFW from the list of homebrew
-1. Press (A) to uninstall the broken TWL titles
-1. Press (Start) to reboot the console
+1. Press <kbd>A</kbd> to uninstall the broken TWL titles
+1. Press <kbd>START</kbd> to reboot the console
 1. Update your console by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"
     + The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them
 1. Once the update is complete, tap "OK" to reboot the console

@@ -1,21 +1,21 @@
-1. Press (Home) to bring up the action menu
+1. Press <kbd>HOME</kbd> to bring up the action menu
 1. Select "Scripts..."
 1. Select "GM9Megascript"
 1. Select "Backup Options"
 1. Select "SysNAND Backup"
-1. Press (A) to confirm
+1. Press <kbd>A</kbd> to confirm
     + This process will take some time
     + If you get an error, look for your issue in the [troubleshooting guide](troubleshooting-finalizing-setup.html)
-1. Press (A) to continue
-1. Press (B) to return to the main menu
+1. Press <kbd>A</kbd> to continue
+1. Press <kbd>B</kbd> to return to the main menu
 1. Select "Exit"
-1. Press (A) to relock write permissions if prompted
+1. Press <kbd>A</kbd> to relock write permissions if prompted
 1. Navigate to `[S:] SYSNAND VIRTUAL`
-1. Press (A) on `essential.exefs` to select it
+1. Press <kbd>A</kbd> on `essential.exefs` to select it
 1. Select "Copy to 0:/gm9/out"
-    + If you see "Destination already exists", press (A) on "Overwrite file(s)"
-1. Press (A) to continue
-1. Hold (R) and press (Start) at the same time to power off your console
+    + If you see "Destination already exists", press <kbd>A</kbd> on "Overwrite file(s)"
+1. Press <kbd>A</kbd> to continue
+1. Hold <kbd>R</kbd> and press <kbd>START</kbd> at the same time to power off your console
 1. Insert your SD card into your computer
 1. Copy `<date>_<serialnumber>_sysnand_##.bin`, `<date>_<serialnumber>_sysnand_##.bin.sha`, and `essential.exefs` from the `/gm9/out/` folder on your SD card to a safe location on your computer
     + Copy these backups to multiple locations (such as online file storage, an external hard drive, etc.)

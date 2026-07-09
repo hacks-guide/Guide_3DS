@@ -41,7 +41,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 1. Insert your flashcart into your console
 1. Place the magnet on your console to trigger the sleep sensor
     + On old 2DS, you should instead enable the sleep mode switch
-1. Hold (Start) + (Select) + (X) + (Power) for several seconds, then release the buttons
+1. Hold <kbd>START+SELECT+X+POWER</kbd> for several seconds, then release the buttons
     + It may take a few attempts to get this to work because the positioning is awkward
 1. If the exploit was successful, you will have booted into SafeB9SInstaller
 1. Remove the magnet from your console
@@ -131,13 +131,13 @@ Do not follow this section until you have completed the rest of the instructions
 1. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on your SD card
 1. Reinsert your SD card into your console
 1. Insert your ntrboot compatible DS / DSi flashcart into your console
-1. Launch ntrboot_flasher by holding (Start) during boot
+1. Launch ntrboot_flasher by holding <kbd>START</kbd> during boot
 1. Read the red screen warning
-1. Press (A) to continue
+1. Press <kbd>A</kbd> to continue
 1. Select your flashcart
     + If you do not see your flashcart in the list at the top, read the bottom screen for more info on each option
 1. Select "Restore Flash"
-1. Press (A) to proceed
+1. Press <kbd>A</kbd> to proceed
 1. Wait until the process is completed
-1. Press (A) to return to the main menu
-1. Press (B) to power off your console
+1. Press <kbd>A</kbd> to return to the main menu
+1. Press <kbd>B</kbd> to power off your console

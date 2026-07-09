@@ -33,12 +33,12 @@ Note that in some rare circumstances, it may be possible for the flashing proces
 ### Section II - Flashing ntrboot
 
 1. Launch `ds_ntrboot_flasher_dsi.nds` on **the source DSi** using your flashcart
-1. Press (A) to continue
-1. Use (Up) and (Down) to select your flashcart
-1. Press (A) to continue
-1. Press (A) to "inject ntrboothax"
-1. Press (A) to select "RETAIL"
-1. Press (A) to continue
+1. Press <kbd>A</kbd> to continue
+1. Use <kbd>Up</kbd> and <kbd>Down</kbd> to select your flashcart
+1. Press <kbd>A</kbd> to continue
+1. Press <kbd>A</kbd> to "inject ntrboothax"
+1. Press <kbd>A</kbd> to select "RETAIL"
+1. Press <kbd>A</kbd> to continue
 1. Select "EXIT"
 
 ___

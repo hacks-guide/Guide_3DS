@@ -47,7 +47,7 @@ The usage of this exploit, regardless of the flashing method, requires access to
 
 ::: info
 
-To test if a magnet will work, hold it on or around the (A)(B)(X)(Y) buttons while the console is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
+To test if a magnet will work, hold it on or around the <kbd>ABXY</kbd> buttons while the console is powered on to see if it triggers sleep mode. If it does, both displays will go black as long as the magnet is held in that spot.
 
 :::
 

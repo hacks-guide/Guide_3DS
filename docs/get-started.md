@@ -18,8 +18,8 @@ Before starting this guide, we will see if custom firmware is already installed 
 
 1. Power off your console
 1. Insert your SD card into your console
-1. Hold the (Select) button
-1. Power on your console while still holding the (Select) button
+1. Hold the <kbd>Select</kbd> button
+1. Power on your console while still holding the <kbd>Select</kbd> button
 1. If you do not see a custom menu (your console just boots to the HOME Menu), you may proceed to the next section
 
 ::: warning
