@@ -33,7 +33,7 @@ The file `arm11code.bin` is missing or misplaced. Download the latest release of
 
 :::
 
-::: details "An error has occurred, forcing the software to close..." (white message box)
+::: details White message box error
 
 There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
 
