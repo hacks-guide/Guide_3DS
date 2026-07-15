@@ -36,6 +36,8 @@ If you are using a **DSpico** or an **Ace3DS X**, ensure that you have a blank m
 
     :::
 
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 1. Power on your console
 
@@ -67,6 +69,8 @@ In this section, you will install custom firmware onto your console.
 1. Insert your console's SD card into your computer
 1. Delete `boot.firm` from the root of your SD card
 1. Copy everything from the Luma3DS `.zip` to the root of your SD card
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 1. Power on your console
 <!--@include: ./_include/configure-luma3ds.md -->
@@ -144,6 +148,8 @@ Do not follow this section until you have completed the rest of the instructions
 1. Copy the `.bin` file from your flashrom backup `.zip` to the `/ntrboot/` folder on the root of your SD card
 1. Create a folder named `payloads` in the `luma` folder on your SD card
 1. Copy `ntrboot_flasher.firm` to the `/luma/payloads/` folder on your SD card
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 1. Insert your ntrboot compatible DS / DSi flashcart into your console
 1. Launch ntrboot_flasher by holding (Start) during boot

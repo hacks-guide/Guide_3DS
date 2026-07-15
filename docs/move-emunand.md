@@ -25,6 +25,8 @@ You MUST have already installed Luma3DS and boot9strap to use this.
 1. Insert your SD card into your computer
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 
 ### Section II - Backup SysNAND DSiWare Saves
@@ -164,6 +166,8 @@ To identify a `<TitleID>.gbavc.sav` file's Title ID, you can get a listing of al
 1. Insert your SD card into your computer
 1. Copy all your files back to your SD card
     + Ensure you replace the `boot.firm` file on your SD card with the one from your backup
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 1. Press (A) to remount your SD card
 1. Press (Start) to reboot
