@@ -32,7 +32,7 @@ Berkas `arm11code.bin` belum ada atau salah taruh. Unduh versi terkini dari [uni
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (kotak pesan putih)
+:::details White message box error
 
 Berkas `otherapp.bin` mungkin bermasalah. Unduh versi terkini dari [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), lalu taruh `otherapp.bin` di akar kartu SD dan ubah nama menjadi `arm11code.bin`. Jangan tambah ekstensi `.bin` jika tidak terlihat di ujung.
 
@@ -76,7 +76,7 @@ Ikuti langkah ini berurutan:
 9. Buka Internet Browser satu kali
 10. Jika diminta memperbarui sistem, tekan OK
     - Ini sebenarnya tidak memperbarui sistem
-11. Mulai lagi dari [Bagian II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+11. Mulai lagi dari [Bagian II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
 
 :::
 
@@ -88,7 +88,7 @@ Berkas `otherapp.bin` mungkin bermasalah. Unduh ulang versi terkini dari [univer
 
 :::details Failed to mount the SD card!
 
-**Cadangkan dulu data**, lalu format ulang kartu SD ke FAT32 dengan alat anjuran yang sesuai sistem operasi ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). MiniTool Partition Wizard dan alat format merek HP (HPUSBDisk) diketahui ada isu dengan kartu SD 3DS.
+**Cadangkan dulu data**, lalu format ulang kartu SD ke FAT32 dengan alat anjuran yang sesuai sistem operasi ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard dan alat format merek HP (HPUSBDisk) diketahui ada isu dengan kartu SD 3DS.
 
 Jika ini tidak berhasil, coba kartu SD lain.
 
@@ -108,7 +108,7 @@ Jika ini tidak berhasil, coba kartu SD lain.
 
 ::: tip
 
-Kembali ke [Memasang boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+Kembali ke [Memasang boot9strap (SSLoth-Browser)](installing-boot9strap-(ssloth-browser))
 
 :::
 

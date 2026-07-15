@@ -12,6 +12,12 @@ Pour utiliser les liens [magnet](https://fr.wikipedia.org/wiki/Magnet_(standard)
 - La dernière version de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (téléchargement direct)
 - La dernière version de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (le fichier \`.zip' de Luma3DS)
 
+::: warning
+
+If you are using a **DSpico** or an **Ace3DS X**, ensure that you have a blank microSD card inserted into its microSD card slot. You do not need to put any files onto this microSD card; these cartridges require a microSD card to be inserted in order to trigger ntrboot.
+
+:::
+
 ## Instructions
 
 ### Section I - Préparatifs
@@ -44,7 +50,7 @@ Pour utiliser les liens [magnet](https://fr.wikipedia.org/wiki/Magnet_(standard)
    - Cette étape n’est pas nécessaire sur les old 2DS (qui ont un interrupteur de mode veille)
 2. Éteignez votre console
 3. Insérez votre linker dans votre console
-4. Placer l’aimant sur votre appareil pour déclencher le capteur de veille
+4. Place the magnet near the (A)(B)(X)(Y) buttons on your console to trigger the sleep sensor
    - Sur une Old 2DS, vous devriez à la place activer l'interrupteur de mode veille
 5. Maintenez les boutons (Start) + (Select) + (X) + (Power) pendant plusieurs secondes, puis relâchez-les
    - Cela peut demander plusieurs essais pour que cela fonctionne car le positionnement des boutons est peu commode
@@ -85,11 +91,19 @@ ___
 
 Ce qui suit est une section facultative qui vous permettra de restaurer votre linker à son état d’origine (afin qu’il puisse être utilisé pour ses fonctions d'origine).
 
+::: warning
+
+**DSpico users** do not need to follow this section, as the hybrid firmware works for both ntrboot and normal flashcart use.
+
+**Ace3DS X users** can flip the switch on the cartridge the other way to return to normal flashcart mode.
+
+:::
+
 Notez que l’Acekard 2i conserve sa capacité de lancer des fichiers « .nds » tout en ayant l'exploit ntrboot installé. Cela s’applique uniquement lorsque l’Acekard 2i est dans une 3DS avec un custom firmware ou une NDS ! Tant que ntrboot est installé sur l’Acekard 2i, il lui sera impossible de lancer des fichiers `.nds` sur une 3DS non modifiée ou une DSi.
 
 Ne suivez pas cette section tant que vous n'avez pas fini le reste des instructions de cette page.
 
-### Section V - Suppression de ntrboot
+### Section V (optional) - Removing ntrboot
 
 #### Ce dont vous avez besoin
 

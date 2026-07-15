@@ -4,11 +4,7 @@ invalidVersion: This doesn't seem to be a valid system version.
 cfwPrefixDetected: Your console may already have custom firmware installed. Please retry Section I. If you still only reach the HOME menu, click the link below and ask, in English, for assistance.
 inviteLinkText: Nintendo Homebrew on Discord
 otherPrefix: (Other)
-head:
-  [
-    [ 'script', { src: '/assets/js/common.js' } ],
-    [ 'script', { src: '/assets/js/selecting.js' } ]
-  ]
+head: [ [ 'script', { src: '/assets/js/common.js' } ], [ 'script', { src: '/assets/js/selecting.js' } ] ]
 ---
 
 # Get Started
@@ -31,7 +27,7 @@ If you see the Luma3DS configuration screen or any other custom menu (e.g. GodMo
 
 ::: warning
 
-If, when the console boots to the HOME Menu, you see the error "Could not detect an SD card", ensure that your SD card is properly formatted: [Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))
+If, when the console boots to the HOME Menu, you see the error "Could not detect an SD card", ensure that your SD card is properly formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
 
 :::
 
@@ -55,4 +51,4 @@ If possible, you should follow the method given by the prompt above.
 Otherwise, methods that work on all versions are available, but require additional hardware:
 
 1. [ntrboot](ntrboot) - requires compatible DS flashcart
-2. [Installing boot9strap (Hardmod)](installing-boot9strap-\(hardmod\)) - requires soldering
+2. [Installing boot9strap (Hardmod)](installing-boot9strap-(hardmod)) - requires soldering

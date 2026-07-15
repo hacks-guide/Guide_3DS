@@ -1,6 +1,6 @@
 ::: info
 
-Se lo script non ha trovato alcun ticket utente, prosegui alla sezione successiva.
+If the script found no user tickets, skip to Step 9 of this section to run faketik.
 
 :::
 

@@ -32,7 +32,7 @@ A `arm11code.bin` fájl hiányzik, vagy rossz helyen van. Töltsd le a legutols�
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (fehér üzenet ablak)
+:::details White message box error
 
 Probléma lehet az arm11code.bin`fájloddal. Töltsd le a legutolsó kiadását az [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)-nak és rakd az`otherapp.bin`fájlt az SD kártyád gyökerébe, majd nevezd át`arm11code.bin`-re. Ne add hozzá a `.bin\` kiterjesztést, ha nem látod.
 

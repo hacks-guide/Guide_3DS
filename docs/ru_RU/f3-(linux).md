@@ -6,7 +6,7 @@
 
 В зависимости от размера SD-карты и скорости компьютера этот процесс может занять до нескольких часов!
 
-Этот раздел предназначен только для пользователей Linux. If you are not on Linux, check out the [H2testw (Windows)](h2testw-\(windows\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
+Этот раздел предназначен только для пользователей Linux. If you are not on Linux, check out the [H2testw (Windows)](h2testw-(windows)) or [F3XSwift (Mac)](f3xswift-(mac)) pages.
 
 ## What You Need
 

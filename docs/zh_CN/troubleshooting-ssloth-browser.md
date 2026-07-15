@@ -32,7 +32,7 @@ The file `arm11code.bin` is missing or misplaced. Download the latest release of
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details White message box error
 
 There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. 如果你下到的东西看不到 `.bin` 后缀，请不要重命名它。
 
@@ -76,7 +76,7 @@ Follow these steps in order:
 9. Open the Internet Browser once
 10. If prompted about a system update, press OK
     - This won't actually update the system
-11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+11. Start again from [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
 
 :::
 
@@ -88,7 +88,7 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 
 :::details Failed to mount the SD card!
 
-备份好你 SD 卡上的文件，然后根据你的操作系统选择一个工具来重新格式化 SD 卡为 FAT32 格式：[Windows](formatting-sd-\(windows\))、[macOS](formatting-sd-\(mac\))、[Linux](formatting-sd-\(linux\))。 目前已知 MiniTool Partition Wizard 和惠普格式化工具（HPUSBDisk）格出来的 SD 卡给 3DS 使用会出问题。
+备份好你 SD 卡上的文件，然后根据你的操作系统选择一个工具来重新格式化 SD 卡为 FAT32 格式：[Windows](formatting-sd-(windows))、[macOS](formatting-sd-(mac))、[Linux](formatting-sd-(linux))。 目前已知 MiniTool Partition Wizard 和惠普格式化工具（HPUSBDisk）格出来的 SD 卡给 3DS 使用会出问题。
 
 如果还是不行，尝试换一张 SD 卡。
 
@@ -108,7 +108,7 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 
 ::: tip
 
-Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-(ssloth-browser))
 
 :::
 

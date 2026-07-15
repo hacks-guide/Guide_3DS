@@ -12,6 +12,12 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
 - A [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) legfrissebb verziója (közvetlen letöltés)
 - A [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) legújabb kiadása (a Luma3DS `.zip` fájl)
 
+::: warning
+
+If you are using a **DSpico** or an **Ace3DS X**, ensure that you have a blank microSD card inserted into its microSD card slot. You do not need to put any files onto this microSD card; these cartridges require a microSD card to be inserted in order to trigger ntrboot.
+
+:::
+
 ## Lépések
 
 ### I. rész - Előkészületek
@@ -44,7 +50,7 @@ Ahhoz, hogy használhasd a [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme
    - Erre a lépésre nincsen szükség az Old 2DS esetében (amin van alvó üzemmód kapcsoló)
 2. Kapcsold ki a konzolod
 3. Helyezd a flashkártyádat a konzolodba
-4. Helyezd a mágnest a konzolodra, hogy előidézd az alvó állapotot
+4. Place the magnet near the (A)(B)(X)(Y) buttons on your console to trigger the sleep sensor
    - Old 2DS készülék esetében egyszerűen csak aktiváld az alvó üzemmódot a kapcsolóval
 5. Tartsd lenyomva a (Start) + (Select) + (X) + (Bekapcsológomb) kombinációt pár másodpercig, majd engedd fel őket
    - Elképzelhető, hogy ez csak sokadjára sikerül csak a gombok elhelyezése miatt
@@ -85,11 +91,19 @@ ___
 
 A következő rész tetszőlegesen választható, melynek célja, hogy a flashkártyádat az eredeti állapotába állítsd vissza (így azt az eredeti rendeltetése szerint használhatod tovább).
 
+::: warning
+
+**DSpico users** do not need to follow this section, as the hybrid firmware works for both ntrboot and normal flashcart use.
+
+**Ace3DS X users** can flip the switch on the cartridge the other way to return to normal flashcart mode.
+
+:::
+
 Vedd figyelembe, hogy az Acekard 2i annak ellenére képes az `.nds` fájlok elindítására, hogy az ntrboot exploit telepítve van rajta. Ez viszont csak akkor igaz, ha az Acekard 2i-t NDS-en, vag y3DS-en használjuk valamiféle egyedi firmware-en! Amíg az ntrboot exploit telepítve van az Acekard 2i-n, az nem lesz képes a `.nds` fájlok elindítására DSi, illetve gyári állapotú 3DS készülékeken.
 
 Ne hajtsd végre az itt leírt utasításokat mindaddig, amíg nem végeztél az ezeket megelőzőekkel az oldalon.
 
-### V. rész - ntrboot eltávolítása
+### Section V (optional) - Removing ntrboot
 
 #### Amire szükséged lesz
 

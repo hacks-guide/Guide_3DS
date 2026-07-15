@@ -32,7 +32,7 @@
 
 :::
 
-:::details "에러가 발생하여 소프트웨어를 종료합니다..." (하얀 메시지 창)
+:::details White message box error
 
 `arm11code.bin`에 문제가 있을 수 있습니다. 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest)을 내려받아 `otherapp.bin` 파일을 SD 카드의 최상위 디렉토리에 복사하고, 이름을 `arm11code.bin`으로 변경해 주세요. `.bin` 확장자는 보이지 않는 이상 추가하지 말아 주세요.
 

@@ -1,6 +1,6 @@
 ::: info
 
-Jika naskah tidak ketemu ticket pengguna, lanjut ke bagian berikutnya.
+If the script found no user tickets, skip to Step 9 of this section to run faketik.
 
 :::
 

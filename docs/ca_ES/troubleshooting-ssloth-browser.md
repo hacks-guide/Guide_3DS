@@ -32,7 +32,7 @@ The file `arm11code.bin` is missing or misplaced. Download the latest release of
 
 :::
 
-:::details "An error has occurred, forcing the software to close..." (white message box)
+:::details White message box error
 
 There may be an issue with your `arm11code.bin` file. Download the latest release of [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), place `otherapp.bin` on the root of your SD card and rename it to `arm11code.bin`. Do not add the `.bin` extension if you do not already see it.
 
@@ -76,7 +76,7 @@ Follow these steps in order:
 9. Open the Internet Browser once
 10. If prompted about a system update, press OK
     - This won't actually update the system
-11. Start again from [Section II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+11. Start again from [Section II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
 
 :::
 
@@ -88,7 +88,7 @@ There may be an issue with your `arm11code.bin` file. Re-download the latest rel
 
 :::details Failed to mount the SD card!
 
-Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
+Back up your data and reformat your SD card as FAT32 with the recommended tool depending on your operating system ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard and the HP formatting tool (HPUSBDisk) are known to cause issues with 3DS SD cards.
 
 If this is unsuccessful, try using another SD card.
 
@@ -108,7 +108,7 @@ If this is unsuccessful, try using another SD card.
 
 ::: tip
 
-Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+Go back to [Installing boot9strap (SSLoth-Browser)](installing-boot9strap-(ssloth-browser))
 
 :::
 

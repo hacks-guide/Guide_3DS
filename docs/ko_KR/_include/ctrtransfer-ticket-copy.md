@@ -1,6 +1,6 @@
 ::: info
 
-스크립트가 유저 티켓을 발견하지 못했다면, 다음 단계로 진행하세요.
+If the script found no user tickets, skip to Step 9 of this section to run faketik.
 
 :::
 

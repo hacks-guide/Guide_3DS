@@ -32,7 +32,7 @@ O arquivo `arm11code.bin` está faltando ou fora do lugar apropriado. Baixe a ú
 
 :::
 
-:::details "Ocorreu um erro, forçando o software a fechar..." (caixa de mensagem branca)
+:::details White message box error
 
 Pode haver um erro com seu arquivo `arm11code.bin`. Baixe a última versão do [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), coloque `otherapp.bin` na raíz do cartão SD e renomeie-o para `arm11code.bin`. Não adicione a extensão `.bin` se você não a vê.
 
@@ -76,7 +76,7 @@ Siga estas etapas em ordem:
 9. Abra o navegador de internet uma vez
 10. Se aparecer uma solicitação de atualização do sistema, pressione OK
     - Isso não vai atualizar o sistema
-11. Inicie novamente pela [Seção II](installing-boot9strap-\(ssloth-browser\).html#section-ii---ssloth)
+11. Inicie novamente pela [Seção II](installing-boot9strap-(ssloth-browser).html#section-ii---ssloth)
 
 :::
 
@@ -88,7 +88,7 @@ Pode haver um erro com seu arquivo `arm11code.bin`. Baixe novamente a última ve
 
 :::details Failed to mount the SD card!
 
-Faça o backup de seus dados e formate novamente seu cartão SD como FAT32 com a ferramenta recomendada dependendo do seu sistema operacional ([Windows](formatting-sd-\(windows\)), [macOS](formatting-sd-\(mac\)), [Linux](formatting-sd-\(linux\))). MiniTool Partition Wizard e a ferramenta de formatação da HP (HPUSBDisk) são conhecidas por causar problemas com cartões SD para 3DS.
+Faça o backup de seus dados e formate novamente seu cartão SD como FAT32 com a ferramenta recomendada dependendo do seu sistema operacional ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))). MiniTool Partition Wizard e a ferramenta de formatação da HP (HPUSBDisk) são conhecidas por causar problemas com cartões SD para 3DS.
 
 Se isso falhar, tente usar outro cartão SD.
 
@@ -108,7 +108,7 @@ Se isso falhar, tente usar outro cartão SD.
 
 ::: tip
 
-Voltar para [Instalando boot9strap (SSLoth-Browser)](installing-boot9strap-\(ssloth-browser\))
+Voltar para [Instalando boot9strap (SSLoth-Browser)](installing-boot9strap-(ssloth-browser))
 
 :::
 

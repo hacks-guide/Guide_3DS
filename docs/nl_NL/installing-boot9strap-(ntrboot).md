@@ -12,6 +12,12 @@ Om de [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links op deze pagin
 - The latest release of [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (direct download)
 - The latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (the Luma3DS `.zip` file)
 
+::: warning
+
+If you are using a **DSpico** or an **Ace3DS X**, ensure that you have a blank microSD card inserted into its microSD card slot. You do not need to put any files onto this microSD card; these cartridges require a microSD card to be inserted in order to trigger ntrboot.
+
+:::
+
 ## Instructions
 
 ### Section I - Prep Work
@@ -44,7 +50,7 @@ Om de [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links op deze pagin
    - This step is not needed on the old 2DS (which has a sleep mode switch)
 2. Zet je console uit
 3. Insert your flashcart into your console
-4. Place the magnet on your console to trigger the sleep sensor
+4. Place the magnet near the (A)(B)(X)(Y) buttons on your console to trigger the sleep sensor
    - On old 2DS, you should instead enable the sleep mode switch
 5. Houd (Start) + (Select) + (X) + (Power) ingedrukt voor een paar secondes, en laat dan de knoppen los
    - It may take a few attempts to get this to work because the positioning is awkward
@@ -85,11 +91,19 @@ ___
 
 Het volgende is een optionele sectie waarmee je je flashkaart terug zet naar de originele status (om de originele functies te gebruiken).
 
+::: warning
+
+**DSpico users** do not need to follow this section, as the hybrid firmware works for both ntrboot and normal flashcart use.
+
+**Ace3DS X users** can flip the switch on the cartridge the other way to return to normal flashcart mode.
+
+:::
+
 De acekard 2i kan nog steeds `.nds` bestanden starten terwijl ntrboot geinstalleerd is. Dit werkt alleen wanneer de Acekard2i in NDS modus is of op een CFW 3DS! Terwijl de ntrboot exploit geinstalleerd is op de Acekard 2i, kan het niet `.nds` bestanden starten op de DSi of een normale 3DS.
 
 Volg niet deze sectie tot je de rest van de instructies gevolgt hebt.
 
-### Section V - Removing ntrboot
+### Section V (optional) - Removing ntrboot
 
 #### What You Need
 

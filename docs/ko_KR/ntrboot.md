@@ -1,27 +1,59 @@
 # ntrboot
 
+## 중요
+
+ntrboot refers to the ability for all 3DS family consoles to boot into a special, recovery-mode cartridge to perform actions before any other part of the operating system loads. It is commonly used for data recovery and unbricking, but can also be used to install boot9strap, a custom firmware loader.
+
+To use ntrboot, a compatible cartridge (normally a 'flashcart') is required. Many flashcarts from the NDS or DSi era can be repurposed for ntrboot, while new ones can be purchased for roughly $20 USD.
+
+No matter how you run ntrboot, you will need a small **magnet** that is strong enough to to put the console into sleep mode (except on the Old 2DS, which uses a sleep switch). 자석이 사용 가능한지 확인해 보려면 켜져 있는 상태로 (A)(B)(X)(Y) 버튼 근처에 자석을 대서 슬립 모드로 전환되는지 확인해 보세요. 사용 가능하다면 자석을 대고 있는 동안 화면이 검은색으로 될 것입니다.
+
+## Recommended for new purchases
+
+If you don't already have a flashcart, or if your flashcart is incompatible with ntrboot, it is recommended to purchase one of these.
+
+Cartridges may be available for a cheaper price through a local distributor or on AliExpress. For more information, see the [NTRBoot Quick Start Guide](https://www.flashcarts.net/ntrboot-ds-carts?tab=flashable#flashcarts) (in English only).
+
+| 플래시카트                                                          |                  Price | Notes                                                                                                                                                                                                                                                 |
+| -------------------------------------------------------------- | ---------------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**DSpico**](https://www.nds-card.com/ProShow.asp?ProID=658)   | $25.99 | **Must be flashed using a computer** (using a microUSB or USB-C cable, depending on the cartridge). This cart needs a microSD card inserted to function for both ntrboot and regular NDS firmware. |
+| [**Ace3DS X**](https://www.nds-card.com/ProShow.asp?ProID=575) | $24.99 | **이미 ntrboot이 플래시 되어 있음** (ntrboot과 NDS모드 전환하는 내부 스위치 있음); 따로 ntrboot을 플래싱하지 마세요. This cart needs a microSD card inserted to function for both ntrboot and regular NDS firmware.                   |
+
 ::: tip
 
-만약 ntrboot가 미리 플래시된 플래시카드을 구입했거나, 이미 ntrboot를 플래시카드로 설치했다면, [boot9strap 설치 (ntrboot)](installing-boot9strap-(ntrboot)) 를 따라 주시기 바랍니다.
+If you have a DSpico, you will need to flash it with an ntrboot-compatible firmware. To do so:
+
+- Download [DSpico_Hybrid_B9S-1.3_GCD.uf2](https://github.com/coderkei/dspico-hybrid-fw/releases/download/1.4/DSpico_Hybrid_B9S-1.3_GCD.uf2)
+- Remove the microSD card from your DSpico
+- Connect the DSpico to your computer using a microUSB or USB-C cable (depending on the cartridge)
+  - A `RPI-RP2` drive should appear on your computer
+- Copy `DSpico_Hybrid_B9S-1.3_GCD.uf2` to the root of the `RPI-RP2` drive (not inside any folder)
+  - The drive should automatically disconnect itself after a few seconds
+- **After the drive has disconnected itself**, disconnect the DSpico from your computer and reinsert the microSD card
+  - The hybrid firmware has been successfully flashed
+    :::
+
+::: tip
+
+Once your cartridge is flashed with ntrboot, you can continue to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot)). You can ignore the rest of this page.
 
 :::
 
-## 중요
+## Other Flashcarts
 
-ntrboot로 boot9strap을 설치하기 위해서는 호환되는 DS/ DSi 가 필요합니다. 이러한 플래시 카드 중 몇몇은 이미 ntrboot이 플래싱 되어 있습니다.
+If you already have a flashcart that _isn't_ a DSpico or Ace3DS X, you can check this list to see if it can be flashed with ntrboot.
 
 ntrboot 취약점이 콘솔 버전과 독립적으로 작동하는 반면에, ntrboot 플래싱 프로그램(카트리지에 ntrboot을 설치하는 프로그램) 은 그렇지 않습니다. 이것은 플래시카드가 지원하는 콘솔과 콘솔 버전에 따라 오로지 특정한 방법만 가능할 수도 있습니다.
 
 "시한폭탄"이 있는 카드는 플래시카드 펌웨어에 저장된 특정 날짜를 콘솔 시간이 지난것을 감지하면 더 이상 `.nds` 파일을 실행 할 수 없습니다. 이것을 우회하는 방법은 콘솔의 시간을 앞으로 되돌리는 것입니다.
 
-| 플래시카드 이름                                                                                                                     |                  현재 가격 |                      "시한폭탄"여부                      |                                  3DS 버전 호환 여부                                 |                            DSi 버전 호환 여부                           | 기타                                                                                                                                                                                                                                                         |
+| 플래시카트                                                                                                                        |                  Price |                      "시한폭탄"여부                      |                                  3DS 버전 호환 여부                                 |                            DSi 버전 호환 여부                           | 기타                                                                                                                                                                                                                                                         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------: | :------------------------------------------------: | :---------------------------------------------------------------------------: | :---------------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**Ace3DS X**](https://www.nds-card.com/ProShow.asp?ProID=575)                                                               | $24.99 |                         없음                         |                                       모두                                      |                                 모두                                | **이미 ntrboot이 플래시 되어 있음** (ntrboot과 NDS모드 전환하는 내부 스위치 있음); 따로 ntrboot을 플래싱하지 마세요. 이 카드는 SD 카드가 삽입되있어야 ntrboot와 일반 DS 모드가 작동합니다.                                                                         |
 | [**R4i-SDHC B9S** (r4i-sdhc.com)](https://www.nds-card.com/ProShow.asp?ProID=574)         |           Out of Stock |                     2024년 9월 3일                    |                                       모두                                      |                                 모두                                | **이미 ntrboot이 플래싱 되어 있음**; 다시 NDS 플래시카드로 플래싱될 수 있음                                                                                                                                                                                                         |
 | [**DSTT** (ndstt.com)](https://www.nds-card.com/ProShow.asp?ProID=157)                    | $19.99 |                         없음                         |                                       안됨                                      |                                 안됨                                | [특정 플래시 칩 모델](https://gist.github.com/aspargas2/fa2a70aed3a7fe33f1f10bc264d9fab6)만 ntrboot와 호환 됩니다.                                                                                                                                        |
 | [**R4i-SDHC 3DS RTS** (r4i-sdhc.com)](https://www.nds-card.com/ProShow.asp?ProID=146)     | $20.99 | 1.85b: 2024년 9월 3일 |                                       모두                                      |                                 모두                                |                                                                                                                                                                                                                                                            |
 | [**R4iSDHC GOLD Pro 20XX** (r4isdhc.com)](https://www.nds-card.com/ProShow.asp?ProID=490) | $22.99 |  4.0b: 2024년 9월 3일 |                                       모두                                      |                                 모두                                | 2014 또는 그 이후 년도 번호가 적혀 있는 r4isdhc **.com** 카드만 호환됩니다.                                                                                                                                                                      |
-| **Ace3DS Plus**                                                                                                              |                        |                         없음                         |                                       모두                                      |                                 모두                                | 이 카드는 SD 카드가 삽입되있어야 ntrboot와 일반 DS 모드가 작동합니다.                                                                                                                                                                                              |
+| **Ace3DS Plus**                                                                                                              |                        |                         없음                         |                                       모두                                      |                                 모두                                | This cart needs a microSD card inserted to function for both ntrboot and regular NDS firmware.                                                                                                                                             |
 | **Acekard 2i**                                                                                                               |                        |                         없음                         |       <= 4.3.0       | <= 1.4.4 |                                                                                                                                                                                                                                                            |
 | **Gateway Blue**                                                                                                             |                        |                         없음                         | 4.1.0 - 4.5.0 |                                 모두                                |                                                                                                                                                                                                                                                            |
 | **Infinity 3 R4i** (r4infinity.com)                                                       |                        |                         없음                         |                                       모두                                      |                                 모두                                |                                                                                                                                                                                                                                                            |
@@ -41,15 +73,7 @@ ntrboot 취약점이 콘솔 버전과 독립적으로 작동하는 반면에, nt
 
 시작하기 전에 플래시카드가 `.nds` 파일을 실행 할 수 있는지 확인해 주세요. 몇몇 플래시카드는 펌웨어나 "커널"이 플래시카드의 SD 카드에 복사되어 있어야 합니다. 자세한 내용은 당신의 플래시카드의 설명서를 참조해 주시길 바랍니다.
 
-특정 방법에서는 추가적인 호환성 정보가 있을 수 있습니다.
-
 이 방법을 사용하기 위해서는 작은 자석이 필요합니다. (슬립 스위치가 있는 2DS는 예외) 왜냐하면 이 방법은 슬립 모드 상태에서 버튼을 사용해야 하기 때문입니다.
-
-::: info
-
-자석이 사용 가능한지 확인해 보려면 켜져 있는 상태로 (A)(B)(X)(Y) 버튼 근처에 자석을 대서 슬립 모드로 전환되는지 확인해 보세요. 사용 가능하다면 자석을 대고 있는 동안 화면이 검은색으로 될 것입니다.
-
-:::
 
 NTRboot가 플래시 카트리지에 플래싱되어 있는 동안에는 플래시카드의 기능을 사용할 수 없다는 점을 명심하십시오. (단, NDS에서 또는 커스텀 펌웨어가 설치된 3SD 에서 Acekard 2i의 경우는 예외입니다.) 이것은 대부분의 플래시카드가 심지어 홈 메뉴에서 표시되지도 않을것을 의미합니다. 작업이 끝난뒤 ntrboot를 제거할 수 있는 방법이 뒤에 제시되어 있습니다.
 
@@ -58,12 +82,6 @@ NTRboot가 플래시 카트리지에 플래싱되어 있는 동안에는 플래�
 아주 드문 경우지만 설치를 시도한 플래시카드가 짝퉁일 경우 설치 과정 중 카트리지가 **벽돌**이 되고 이후 카트리지를 사용할 수 없게되는 경우가 있습니다. 그러하기 때문에 매우 적은 확율이지만 정품 플래시카트만 지원 됩니다. 복재품 카드를 주문할 가능성을 줄이기 위하여, [NDS Card](https://www.nds-card.com/)같이 신뢰할 수 있는 사이트를 이용하여 구매 하시길 바랍니다.
 
 :::
-
-___
-
-## 방법
-
-___
 
 ### ntrboot 플래싱 (단일 3DS)
 

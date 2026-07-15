@@ -13,6 +13,12 @@
 - 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (직접 다운로드)
 - 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (Luma3DS `.zip` 파일)
 
+::: warning
+
+If you are using a **DSpico** or an **Ace3DS X**, ensure that you have a blank microSD card inserted into its microSD card slot. You do not need to put any files onto this microSD card; these cartridges require a microSD card to be inserted in order to trigger ntrboot.
+
+:::
+
 ## 진행 방법
 
 ### 섹션 I - 준비 작업
@@ -45,7 +51,7 @@
    - 이 단계는 구형 2DS에서 필효하지 않습니다 (슬립모드 스위치가 있는 모델)
 2. 콘솔의 전원을 꺼 주세요
 3. 플래시카트를 콘솔에 삽입해 주세요
-4. 자석을 콘솔에 놓아 슬립센서를 작동시켜 주세요
+4. Place the magnet near the (A)(B)(X)(Y) buttons on your console to trigger the sleep sensor
    - 구형 2DS에서는, 이것 대신 슬립모드 스위치를 켜 주세요
 5. (Start) + (Select) + (X) + (전원) 버튼을 몇초간 누르고 놓아 주세요
    - 이 작업을 하는데에 자세가 불편해서 여러번 시도해야 할 수 있습니다
@@ -86,11 +92,19 @@ ___
 
 다음 단계는 플래시카트를 원상복구를 하기 위한 선택 사항 섹션입니다 (원래 기능으로 되돌리기 위한).
 
+::: warning
+
+**DSpico users** do not need to follow this section, as the hybrid firmware works for both ntrboot and normal flashcart use.
+
+**Ace3DS X users** can flip the switch on the cartridge the other way to return to normal flashcart mode.
+
+:::
+
 Acekard 2i는 ntrboot 익스플로잇이 설치된 상태에도 `.nds` 파일을 실행하는 기능을 유지합니다. 이것은 Acekard 2i가 NDS 혹은 커스텀 펌웨어 3DS에 있을때만 적용됩니다! Acekard 2i에 ntrboot 익스플로잇이 설치되어 있는 동안, DSi 또는 순정 3DS에서는 `.nds` 파일을 실행할 수 없습니다.
 
 이 페이지의 남은 진행단계를 완료한 후 진행해 주시기 바랍니다.
 
-### 섹션 V - ntrboot 제거
+### Section V (optional) - Removing ntrboot
 
 #### 준비물
 

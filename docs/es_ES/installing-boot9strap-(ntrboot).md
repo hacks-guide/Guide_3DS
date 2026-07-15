@@ -12,6 +12,12 @@ Para utilizar los enlaces [magnéticos](https://es.wikipedia.org/wiki/Magnet) de
 - La última versión de [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (descarga directa)
 - La última versión de [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (el archivo `.zip` de Luma3DS)
 
+::: warning
+
+If you are using a **DSpico** or an **Ace3DS X**, ensure that you have a blank microSD card inserted into its microSD card slot. You do not need to put any files onto this microSD card; these cartridges require a microSD card to be inserted in order to trigger ntrboot.
+
+:::
+
 ## Instrucciones
 
 ### Sección I - Preparativos
@@ -44,7 +50,7 @@ Para utilizar los enlaces [magnéticos](https://es.wikipedia.org/wiki/Magnet) de
    - This step is not needed on the old 2DS (which has a sleep mode switch)
 2. Apaga la consola
 3. Insert your flashcart into your console
-4. Place the magnet on your console to trigger the sleep sensor
+4. Place the magnet near the (A)(B)(X)(Y) buttons on your console to trigger the sleep sensor
    - On old 2DS, you should instead enable the sleep mode switch
 5. Hold (Start) + (Select) + (X) + (Power) for several seconds, then release the buttons
    - It may take a few attempts to get this to work because the positioning is awkward
@@ -85,11 +91,19 @@ ___
 
 The following is an optional section that will allow you to restore your flashcart to its original state (to allow it to be used for its standard functions).
 
+::: warning
+
+**DSpico users** do not need to follow this section, as the hybrid firmware works for both ntrboot and normal flashcart use.
+
+**Ace3DS X users** can flip the switch on the cartridge the other way to return to normal flashcart mode.
+
+:::
+
 Note that the Acekard 2i retains its ability to launch `.nds` files while having the ntrboot exploit installed. This only applies when the Acekard 2i is in an NDS or custom firmware 3DS! While the ntrboot exploit is installed to the Acekard 2i, it will be unable to launch `.nds` files on DSi or stock 3DS systems.
 
 Do not follow this section until you have completed the rest of the instructions on this page.
 
-### Section V - Removing ntrboot
+### Section V (optional) - Removing ntrboot
 
 #### Lo que necesitas
 

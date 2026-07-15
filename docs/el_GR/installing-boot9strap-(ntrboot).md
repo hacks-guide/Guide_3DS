@@ -12,6 +12,12 @@
 - Την πιο πρόσφατη έκδοση του [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (απευθείας λήψη)
 - Την πιο πρόσφατη έκδοση του [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (το αρχείο `.zip` του Luma3DS)
 
+::: warning
+
+If you are using a **DSpico** or an **Ace3DS X**, ensure that you have a blank microSD card inserted into its microSD card slot. You do not need to put any files onto this microSD card; these cartridges require a microSD card to be inserted in order to trigger ntrboot.
+
+:::
+
 ## Οδηγίες
 
 ### Ενότητα I - Προετοιμασία
@@ -44,7 +50,7 @@
    - Αυτό το βήμα δεν απαιτείται για το Old 2DS (το οποίο διαθέτει έναν διακόπτη λειτουργίας ύπνου)
 2. Απενεργοποιήστε την κονσόλα σας
 3. Εισαγάγετε τη flashcart σας στην κονσόλα σας
-4. Τοποθέτησε τον μαγνήτη στην κονσόλα σας για να ενεργοποιήσετε τον αισθητήρα ύπνου
+4. Place the magnet near the (A)(B)(X)(Y) buttons on your console to trigger the sleep sensor
    - Στο Old 2DS, θα πρέπει να ενεργοποιήσετε τον διακόπτη λειτουργίας ύπνου
 5. Κρατήστε πατημένα τα (Start) + (Select) + (X) + (Κουμπί ισχύος) για αρκετά δευτερόλεπτα και έπειτα, αφήστε τα κουμπιά
    - Ενδέχεται να χρειαστούν μερικές προσπάθειες για να εκτελεστεί αυτό το βήμα, εξαιτίας της θέσης των κουμπιών
@@ -85,11 +91,19 @@ ___
 
 Η ακόλουθη ενότητα είναι προαιρετική και θα σας επιτρέψει να επαναφέρετε τη flashcart σας στην αρχική της κατάσταση (ώστε να μπορεί να χρησιμοποιηθεί για τις τυπικές λειτουργίες της).
 
+::: warning
+
+**DSpico users** do not need to follow this section, as the hybrid firmware works for both ntrboot and normal flashcart use.
+
+**Ace3DS X users** can flip the switch on the cartridge the other way to return to normal flashcart mode.
+
+:::
+
 Σημειώστε ότι η Acekard 2i διατηρεί τη δυνατότητά της να εκκινεί αρχεία `.nds` ενώ είναι εγκατεστημένο το exploit «ntrboot». Αυτό ισχύει μόνο όταν η Acekard 2i χρησιμοποιείται σε ένα NDS ή ένα 3DS με custom firmware! Όσο το exploit «ntrboot» είναι εγκατεστημένο στη Acekard 2i, δεν θα μπορεί να εκκινήσει αρχεία `.nds` σε συστήματα DSi ή μη τροποποιημένα 3DS.
 
 Μην ακολουθήσετε αυτήν την ενότητα μέχρι να ολοκληρώσετε τις υπόλοιπες οδηγίες αυτής της σελίδας.
 
-### Ενότητα V - Αφαίρεση του ntrboot
+### Section V (optional) - Removing ntrboot
 
 #### Τι χρειάζεστε
 

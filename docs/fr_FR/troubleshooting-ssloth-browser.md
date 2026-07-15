@@ -32,7 +32,7 @@ Le fichier `arm11code.bin` est absent ou mal placé. Téléchargez la dernière 
 
 :::
 
-:::details "Le logiciel a été arrêté car une erreur est survenue..." (boîte de message blanche)
+:::details White message box error
 
 Il y a peut-être un problème avec votre fichier `arm11code.bin`. Téléchargez la dernière version de [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest), placez `otherapp.bin` à la racine de votre carte SD et renommez-le en `arm11code.bin`. N'ajoutez pas l'extension `.bin` si vous ne la voyez pas déjà.
 

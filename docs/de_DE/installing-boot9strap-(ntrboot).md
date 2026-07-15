@@ -12,6 +12,12 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 - Die neueste Version von [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (Direkter Download)
 - Die neueste Version von [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (die Luma3DS `.zip` Datei)
 
+::: warning
+
+If you are using a **DSpico** or an **Ace3DS X**, ensure that you have a blank microSD card inserted into its microSD card slot. You do not need to put any files onto this microSD card; these cartridges require a microSD card to be inserted in order to trigger ntrboot.
+
+:::
+
 ## Anleitung
 
 ### Abschnitt I - Vorbereitung
@@ -44,7 +50,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
    - This step is not needed on the old 2DS (which has a sleep mode switch)
 2. Schalte deine Konsole aus
 3. Insert your flashcart into your console
-4. Place the magnet on your console to trigger the sleep sensor
+4. Place the magnet near the (A)(B)(X)(Y) buttons on your console to trigger the sleep sensor
    - On old 2DS, you should instead enable the sleep mode switch
 5. Halte (Start) + (Select) + (X) + (Powerknopf) für mehrere Sekunden gedrückt und lass sie danach wieder los
    - It may take a few attempts to get this to work because the positioning is awkward
@@ -85,11 +91,19 @@ ___
 
 Das Folgende ist optional und erlaubt es dir, deine Flashkarte in den Ursprungszustand zu versetzen (für das Verwenden ihrer Standardfunktionen).
 
+::: warning
+
+**DSpico users** do not need to follow this section, as the hybrid firmware works for both ntrboot and normal flashcart use.
+
+**Ace3DS X users** can flip the switch on the cartridge the other way to return to normal flashcart mode.
+
+:::
+
 Beachte, dass die Acekard 2i ihre Fähigkeit behält, `.nds`-Dateien zu starten, selbst während der ntrboot-Exploit installiert ist. Dies gilt nur, wenn die Acekard 2i in einem NDS oder einem 3DS mit Custom Firmware ist! Während der ntrboot-Exploit auf der Acekard 2i installiert ist, kann diese keine `.nds`-Dateien auf DSi oder unmodifizierten 3DS-Konsolen starten.
 
 Folge diesen Schritten erst, wenn du den Rest der Anweisungen auf dieser Seite abgeschlossen hast.
 
-### Section V - Removing ntrboot
+### Section V (optional) - Removing ntrboot
 
 #### Was du brauchst
 
