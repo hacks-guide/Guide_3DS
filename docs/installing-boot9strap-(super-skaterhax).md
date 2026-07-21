@@ -91,6 +91,7 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
     + **"The Homebrew Launcher" screen**: Continue to the next step
     + **A white "Error has occurred" message box**: The exploit failed due to random chance. Open System Settings, change the language to a different one (if possible), then retry this section. You may have to repeat this sequence up to ten times
         + On JPN/KOR region consoles, there is only one language setting. On those consoles, you should open System Settings, close it, then retry this section
+        + Changing the language to Spanish usually fixes this issue on USA region consoles
         + If the exploit is still unsuccessful after five attempts, there may be a problem with your files or prep work. Ensure that region and date/time are correct, and that you have been following this section **exactly**. If you used WinRAR to extract files to the SD card, re-extract the files using File Explorer or 7-zip instead
         + If the exploit is still unsuccessful after ten attempts, follow [MSET9](installing-boot9strap-(mset9)) instead
     + **A black screen that says "An error has occurred"**: Your file placement is incorrect. Ensure that the super-skaterhax files are on the root of the SD card
