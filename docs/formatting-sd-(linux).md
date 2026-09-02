@@ -20,7 +20,7 @@ Several Linux distributions may provide more user-friendly methods for formattin
 
 ## Instructions
 
-1. Insert your SD card into your computer.
+1. Insert your SD card into your computer
 1. If the SD card has any files and folders on it, copy everything to a folder on your computer
 1. Eject your SD card from your computer
 1. Launch the Linux Terminal
