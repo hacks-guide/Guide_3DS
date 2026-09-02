@@ -6,11 +6,22 @@ This is an add-on section for formatting an SD card to work with the 3DS.
 
 If the 3DS already recognizes the SD card, this guide is not required.
 
+::: warning
+
 This page is for Linux users only. If you are not on Linux, check out the [Formatting SD (Windows)](formatting-sd-(windows)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages.
+
+:::
+
+::: info
+
+Several Linux distributions may provide more user-friendly methods for formatting SD cards than this guide provides, some of which can be [found here](https://wiki.hacks.guide/wiki/Formatting_an_SD_card/Linux). In particular, if you are on SteamOS (e.g. Steam Deck, Steam Machine), check out the [Formatting SD (KDE Partition Manager)](formatting-sd-(kde)) page.
+
+:::
 
 ## Instructions
 
 1. Make sure your SD card is **not** inserted
+1. If the SD card has any files and folders on it, copy everything to a folder on your computer
 1. Launch the Linux Terminal
 1. Type `watch "lsblk"`
 1. Insert your SD card into your computer
@@ -30,6 +41,7 @@ This page is for Linux users only. If you are not on Linux, check out the [Forma
         + This creates a single FAT32 partition with 32 KB cluster size on the SD card
     + 128GB or higher: `sudo mkfs.fat /dev/(device name from above) -s 128 -F 32`
         + This creates a single FAT32 partition with 64 KB cluster size on the SD card
+1. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ## Troubleshooting
 
