@@ -102,7 +102,7 @@ Make sure you have at least 1.3GB available in your SD card. If you don't have e
 10. Copy the `Nintendo 3DS` folder from your computer to the root of your SD card
 11. Delete the `Nintendo 3DS` folder from your computer
 
-If you have enough space on your SD card, your SD might be corrupted or faulty. Check your SD card for any errors by following the guide according to your computer's operating system: [Windows](h2testw-\(windows\)), [Linux](f3-\(linux\)), [macOS](f3xswift-\(mac\)).
+If you have enough space on your SD card, your SD might be corrupted or faulty. Check your SD card for any errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)).
 
 :::
 

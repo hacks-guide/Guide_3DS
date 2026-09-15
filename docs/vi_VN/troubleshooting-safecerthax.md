@@ -14,7 +14,7 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 ::: tip
 
-Go back to [Installing boot9strap (safecerthax)](installing-boot9strap-\(safecerthax\))
+Go back to [Installing boot9strap (safecerthax)](installing-boot9strap-(safecerthax))
 
 :::
 

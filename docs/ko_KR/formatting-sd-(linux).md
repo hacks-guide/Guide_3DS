@@ -6,30 +6,43 @@
 
 만약 3DS가 이미 SD 카드를 인식한다면, 이 가이드는 따를 필요가 없습니다.
 
-이 페이지는 Linux 사용자를 위한 페이지입니다. 만약 Linux에서 하는 것이 아니라면, [SD 포맷하기 (Windows)](formatting-sd-(windows))나 [SD 포맷하기 (Mac)](formatting-sd-(mac)) 페이지들을 찾아봐 주세요.
+::: warning
+
+이 페이지는 Linux 사용자를 위한 페이지입니다. If you are not on Linux, check out the [Formatting SD (Windows)](formatting-sd-(windows)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages.
+
+:::
+
+::: info
+
+Several Linux distributions may provide more user-friendly methods for formatting SD cards than this guide provides, some of which can be [found here](https://wiki.hacks.guide/wiki/Formatting_an_SD_card/Linux). In particular, if you are on SteamOS (e.g. Steam Deck, Steam Machine), check out the [Formatting SD (KDE Partition Manager)](formatting-sd-(kde)) page.
+
+:::
 
 ## 진행 방법
 
-1. SD 카드가 삽입되어 있지 **않아야** 합니다
-2. Linux 터미널을 시작해 주세요
-3. `watch "lsblk"`를 입력해 주세요
-4. SD 카드를 컴퓨터에 삽입해 주세요
-5. 출력값을 확인해 주세요. 아래와 같이 보일 것입니다:
+1. SD 카드를 컴퓨터에 삽입해 주세요
+2. If the SD card has any files and folders on it, copy everything to a folder on your computer
+3. Eject your SD card from your computer
+4. Linux 터미널을 시작해 주세요
+5. `watch "lsblk"`를 입력해 주세요
+6. SD 카드를 컴퓨터에 삽입해 주세요
+7. 출력값을 확인해 주세요. 아래와 같이 보일 것입니다:
    ```
    NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
    mmcblk0     179:0    0   3,8G  0 disk
    └─mmcblk0p1 179:1    0   3,7G  0 part /run/media/user/FFFF-FFFF
    ```
-6. 장치 이름을 기록해 두세요. 위 예시에서는 `mmcblk0p1`입니다.
+8. 장치 이름을 기록해 두세요. 위 예시에서는 `mmcblk0p1`입니다.
    - `RO` 값이 1이라면, 잠금 슬라이드가 내려가 있지는 않은지 확인해 주세요
-7. CTRL + C 를 입력해 메뉴를 닫으세요
-8. SD 카드 포멧을 위해 다음을 실행하세요:
-   - 2GB 이하: `sudo mkfs.fat /dev/(device name from above) -s 64 -F 16`
-     - 이것은 32KB 클러스터 크기를 가진 FAT16 파티션을 SD카드에 생성합니다
-   - 4GB - 128GB: `sudo mkfs.fat /dev/(device name from above) -s 64 -F 32`
-     - 이것은 32KB 클러스터 크기를 가진 FAT32 파티션을 SD카드에 생성합니다
-   - 128GB 이상: `sudo mkfs.fat /dev/(device name from above) -s 128 -F 32`
-     - 이것은 64KB 클러스터 크기를 가진 FAT32 파티션을 SD카드에 생성합니다
+9. CTRL + C 를 입력해 메뉴를 닫으세요
+10. SD 카드 포멧을 위해 다음을 실행하세요:
+    - 2GB 이하: `sudo mkfs.fat /dev/(device name from above) -s 64 -F 16`
+      - 이것은 32KB 클러스터 크기를 가진 FAT16 파티션을 SD카드에 생성합니다
+    - 4GB - 128GB: `sudo mkfs.fat /dev/(device name from above) -s 64 -F 32`
+      - 이것은 32KB 클러스터 크기를 가진 FAT32 파티션을 SD카드에 생성합니다
+    - 128GB 이상: `sudo mkfs.fat /dev/(device name from above) -s 128 -F 32`
+      - 이것은 64KB 클러스터 크기를 가진 FAT32 파티션을 SD카드에 생성합니다
+11. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ## 문제 해결
 

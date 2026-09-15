@@ -32,7 +32,7 @@ Este guia funciona com todos os consoles de varejo da família de consoles do Ni
 
 :::
 
-Na maioria dos casos você pode seguir este guia desde que você consiga baixar arquivos da internet e copiá-los para seu cartão SD. Isso inclui a maioria dos dispositivos eletrônicos de consumidor, como computadores executando Windows, macOS, Linux e chromeOS (Chromebooks), bem como telefones e tablets executando Android e iOS. Dependendo do seu dispositivo eletrônico, talvez seja necessário comprar um adaptador de cartão SD para permitir que ele leia seu cartão SD.
+Na maioria dos casos você pode seguir este guia desde que você consiga baixar arquivos da internet e copiá-los para seu cartão SD. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux (including SteamOS), and ChromeOS (Chromebooks), as well as phones and tablets running Android and iOS. Dependendo do seu dispositivo eletrônico, talvez seja necessário comprar um adaptador de cartão SD para permitir que ele leia seu cartão SD.
 
 ::::
 
@@ -57,7 +57,7 @@ Seu cartão (micro)SD deve estar de acordo com os seguintes requisitos:
 - **Velocidade**: Qualquer
   - Atualmente, os cartões mais baratos no mercado são os **Classe 10** (por exemplo, SanDisk Ultra). Cartões mais rápidos são aceitáveis, mas o 3DS não pode aproveitar suas velocidades
 - **Formato**: FAT32 com MBR
-  - Cartões que são 32GB ou menores já devem estar formatados dessa forma, enquanto cartões SD maiores terão de ser formatados manualmente: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
+  - Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) (including SteamOS)
 
 Para consoles que usam um cartão SD de tamanho comum, um cartão microSD em um adaptador de cartão SD funcionará de forma idêntica.
 

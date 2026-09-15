@@ -32,7 +32,7 @@ Ce guide fonctionne avec toutes les consoles commerciales de la famille Nintendo
 
 :::
 
-Dans la plupart des cas, vous pouvez suivre ce guide tant que vous avez la possibilité de télécharger des fichiers depuis Internet et de les copier sur votre carte SD. Cela inclut la plupart des appareils électroniques grand public, tels que les ordinateurs fonctionnant sous Windows, macOS, Linux et ChromeOS (Chromebook), ainsi que les téléphones et tablettes fonctionnant sous Android et iOS. Selon votre appareil électronique, vous devrez peut-être acheter un adaptateur de carte SD pour permettre à votre appareil de lire votre carte SD.
+Dans la plupart des cas, vous pouvez suivre ce guide tant que vous avez la possibilité de télécharger des fichiers depuis Internet et de les copier sur votre carte SD. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux (including SteamOS), and ChromeOS (Chromebooks), as well as phones and tablets running Android and iOS. Selon votre appareil électronique, vous devrez peut-être acheter un adaptateur de carte SD pour permettre à votre appareil de lire votre carte SD.
 
 
 
@@ -57,7 +57,7 @@ Votre carte (micro)SD devrait se conformer aux exigences suivantes :
 - **Vitesse** : N'importe
   - Actuellement, les cartes les moins chères en vente sont les **Class 10** (par ex. SanDisk Ultra). Des cartes plus rapides sont acceptables, mais la 3DS ne pourra pas tirer parti de leur vitesse
 - **Format** : FAT32 avec MBR
-  - Les cartes de 32 Go ou moins devraient être déjà formatées de cette manière, tandis que les cartes SD plus grandes devront être manuellement formatées : [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
+  - Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) (including SteamOS)
 
 Pour les consoles qui utilisent une carte SD grand-format, une carte microSD dans un adaptateur pour carte SD fonctionnera de la même manière.
 

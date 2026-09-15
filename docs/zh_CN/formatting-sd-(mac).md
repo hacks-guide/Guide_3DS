@@ -6,7 +6,11 @@
 
 如果 3DS 已经识别到了 SD 卡，那么就不需要做这个教程了。
 
-本页教程仅限 Mac 用户。 如果你没有在用 Mac，那么请看看[格式化 SD 卡（通过 Windows 操作系统）](formatting-sd-\(windows\))或[格式化 SD 卡（通过 Linux 操作系统）](formatting-sd-\(linux\)) 。
+::: warning
+
+本页教程仅限 Mac 用户。 If you are not on Mac, check out the [Formatting SD (Windows)](formatting-sd-(windows)) or [Formatting SD (Linux)](formatting-sd-(linux)) pages.
+
+:::
 
 ## Instructions
 
@@ -14,77 +18,77 @@
 
 1. 将你的 SD 卡插入到电脑
 
-2. 如果 SD 卡上有一些文件或文件夹，请将它们全部复制到你的电脑上
+2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
-3. 运行磁盘工具（Disk Utility）
+3. Run the Disk Utility app
 
-4. 选择左上角“视图”菜单里的“显示所有主机（Show All Devices）”
+4. In the top-left "View" menu, choose "Show All Devices"
 
-5. 在左侧面板中选择你的 SD 卡
+5. Select your SD card in the left panel
 
    ::: danger
 
-   请确保你选对了驱动器，否则你可能会把别的驱动器格式化了！
+   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
    :::
 
-6. 点击顶部的“擦除（Erase）”
+6. Click "Erase" at the top
 
-7. 在“名称（Name）”一行随便输入一些内容
+7. Enter anything for "Name"
 
-8. 确保“格式（Format）”设置为 “MS-DOS (FAT)”
+8. Ensure that "Format" is set to "MS-DOS (FAT)"
 
-9. 确保“方案（Scheme）”设置为“主启动记录（Master Boot Record）”
+9. Ensure that "Scheme" is set to "Master Boot Record"
    - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
 
-10. 点击“擦除（Erase）”
+10. Click "Erase"
 
-11. 等待格式化完成
+11. Wait for the format to finish
 
-12. 点击“Close”
+12. Click "Close"
 
-13. 如果先前你从 SD 卡上复制了一些文件或文件夹到电脑上，请将它们全部复制回 SD 卡
+13. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ### OS X Yosemite (10.10) and earlier
 
 1. 将你的 SD 卡插入到电脑
 
-2. 如果 SD 卡上有一些文件或文件夹，请将它们全部复制到你的电脑上
+2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
-3. 运行磁盘工具（Disk Utility）
+3. Run the Disk Utility app
 
-4. 在左侧面板中选择你的 SD 卡
+4. Select your SD card in the left panel
 
    ::: danger
 
-   请确保你选对了驱动器，否则你可能会把别的驱动器格式化了！
+   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
    :::
 
-5. 点击顶部的“分区（Partition）”
+5. Click "Partition" at the top
    - If "Partition" does not appear, make sure to choose the device instead of a volume
 
-6. 确保“分区布局（Partition Layout）”设置为“1 分区（1 Partition）”
+6. Ensure that "Partition Layout" is set to "1 Partition"
 
-7. 在“名称（Name）”一行随便输入一些内容
+7. Enter anything for "Name"
 
-8. 确保“格式（Format）”设置为 “MS-DOS (FAT)”
+8. Ensure that "Format" is set to "MS-DOS (FAT)"
 
-9. 点击分区表下面的“选项（Options）”
+9. Click "Options" below the partition table
 
-10. 选择“主启动记录（Master Boot Record）”
+10. Choose "Master Boot Record"
 
-11. 点击“OK”
+11. Click "OK"
 
-12. 点击“应用（Apply）”
+12. Click "Apply"
 
-13. 点击“分区（Partition）”
+13. Click "Partition"
 
-14. 等待格式化完成
+14. Wait for the format to finish
 
-15. 关闭磁盘工具
+15. Close Disk Utility
 
-16. 如果先前你从 SD 卡上复制了一些文件或文件夹到电脑上，请将它们全部复制回 SD 卡
+16. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ## 问题排查
 

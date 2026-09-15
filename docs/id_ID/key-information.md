@@ -32,7 +32,7 @@ Panduan ini bisa untuk semua jenis konsol ecer Nintendo 3DS (termasuk 3DS, 3DS X
 
 :::
 
-Mengikuti panduan di sini harus bisa mengunduh berkas dari Internet dan menyalinnya ke kartu SD. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux, and chromeOS (Chromebooks), as well as phones and tablets running Android and iOS. Depending on your electronic device, you may need to purchase an SD card adapter to allow it to read your SD card.
+Mengikuti panduan di sini harus bisa mengunduh berkas dari Internet dan menyalinnya ke kartu SD. This includes most consumer electronic devices, such as computers running Windows, macOS, Linux (including SteamOS), and ChromeOS (Chromebooks), as well as phones and tablets running Android and iOS. Depending on your electronic device, you may need to purchase an SD card adapter to allow it to read your SD card.
 
 ::::
 
@@ -57,7 +57,7 @@ Your (micro)SD card should conform to the following requirements:
 - **Speed**: Any
   - Currently, the cheapest cards on the market are **Class 10** (e.g. SanDisk Ultra). Faster cards are acceptable, but the 3DS cannot take advantage of their speed
 - **Format**: FAT32 with MBR
-  - Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
+  - Cards that are 32GB or smaller should already be formatted in this way, while larger SD cards will have to be manually formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) (including SteamOS)
 
 For consoles that use a full-size SD card, a microSD card in an SD card adapter will work identically.
 

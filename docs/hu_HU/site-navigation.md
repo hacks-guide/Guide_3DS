@@ -48,6 +48,7 @@
 - [ntrboot flashelése (több 3DS)](flashing-ntrboot-(3ds-multi-system))
 - [ntrboot flashelése (DSi)](flashing-ntrboot-(dsi))
 - [ntrboot flashelése (NDS)](flashing-ntrboot-(nds))
+- [SD formázás (KDE Partition Manager)](formatting-sd-(kde))
 - [SD formázás (Linux)](formatting-sd-(linux))
 - [SD formázás (Mac)](formatting-sd-(mac))
 - [SD formázás (Windows)](formatting-sd-(windows))

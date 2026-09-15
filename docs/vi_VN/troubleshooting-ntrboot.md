@@ -14,7 +14,7 @@ This page offers troubleshooting advice for commonly encountered issues with the
 
 ::: tip
 
-Go back to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Go back to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
 
 :::
 

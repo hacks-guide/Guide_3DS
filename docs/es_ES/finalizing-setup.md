@@ -135,13 +135,19 @@ ___
 
 :::
 
+::: tip
+
+If you appreciate this guide, we accept [Donations](contribute#donations).
+
+:::
+
+### Información y notas
+
 ::: info
 
 ¿Estás intentando averiguar que hacer con tu dispositivo recientemente modificado? ¡Visita [nuestra wiki](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
 
 :::
-
-### Información y notas
 
 ::: info
 

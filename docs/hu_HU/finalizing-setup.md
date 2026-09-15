@@ -135,13 +135,19 @@ Kész vagy! Az egyedi firmware most már teljesen be van állítva a konzolodon.
 
 :::
 
+::: tip
+
+If you appreciate this guide, we accept [Donations](contribute#donations).
+
+:::
+
+### Információk és megjegyzések
+
 ::: info
 
 Próbálod kitalálni, mit tegyél a frissen módosított eszközöddel? Látogasd meg a [wiki-nket](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
 
 :::
-
-### Információk és megjegyzések
 
 ::: info
 

@@ -6,7 +6,11 @@ Ez egy kiegészítő rész az SD kártya formázásához, hogy az működjön a 
 
 Ha a 3DS már felismeri az SD kártyát, ez az útmutató nem szükséges.
 
+::: warning
+
 Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy, kövesd az [SD formázás (Linux)](formatting-sd-(linux)) vagy [SD formázás (Mac)](formatting-sd-(mac)) útmutatókat.
+
+:::
 
 ## Amire szükséged lesz
 
@@ -25,8 +29,8 @@ Ez az oldal Windows felhasználókra vonatkozik. Ha nem Windows rendszeren vagy,
    :::
 
 3. Válassz méretet az "Allocation unit size" alatt
-   - Ha az SD kártya 64GB, válaszd a 32768-ot
-   - Ha az SD kártya nagyobb, mint 64GB, válaszd a 65536-ot
+   - Ha az SD kártya 64 GB, válaszd a 32768-ot
+   - Ha az SD kártya nagyobb, mint 64 GB, válaszd a 65536-ot
 
 4. Írj be valamit "Volume label"-nek
 

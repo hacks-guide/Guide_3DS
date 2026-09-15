@@ -135,13 +135,19 @@ Hai finito! Il custom firmware nella tua console è stato completamente configur
 
 :::
 
+::: tip
+
+If you appreciate this guide, we accept [Donations](contribute#donations).
+
+:::
+
+### Informazioni e note
+
 ::: info
 
 Stai cercando di capire cosa fare con la tua console appena modificata? Visita [la nostra wiki](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
 
 :::
-
-### Informazioni e note
 
 ::: info
 

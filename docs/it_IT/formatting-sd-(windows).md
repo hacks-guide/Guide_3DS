@@ -6,7 +6,11 @@ Questa è una sezione aggiuntiva per la formattazione di una scheda SD per il 3D
 
 Se il 3DS riconosce già la scheda SD, questa parte non è necessaria.
 
+::: warning
+
 Questa pagina è solo per utenti Windows. Se non stai utilizzando Windows, puoi seguire la guida alle pagine [Formattazione SD (Linux)](formatting-sd-(linux)) o [Formattazione SD (Mac)](formatting-sd-(mac)).
+
+:::
 
 ## Cosa serve
 
@@ -32,7 +36,7 @@ Questa pagina è solo per utenti Windows. Se non stai utilizzando Windows, puoi 
 
 5. Assicurati che "Quick Format" sia selezionato
 
-6. Seleziona "Start"
+6. Clicca "Start"
 
 7. Clicca "OK"
 

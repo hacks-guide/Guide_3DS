@@ -6,7 +6,11 @@
 
 3DSがすでにSDカードを認識している場合は、この操作は必要ありません。
 
-このページはWindowsユーザー向けです。 Windowsをお使いでない場合、[SDカードをフォーマット (Linux)](formatting-sd-(linux)) または [SDカードをフォーマット (Mac)](formatting-sd-(mac)) をご覧ください。
+::: warning
+
+This page is for Windows users only. If you are not on Windows, check out the [Formatting SD (Linux)](formatting-sd-(linux)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages.
+
+:::
 
 ## What You Need
 
@@ -20,7 +24,7 @@
 
    ::: danger
 
-   ドライブレターが正しく選択されていることを確認しましょう。正しく選択されていないと、違ったドライブを消してしまう可能性があります。
+   Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!
 
    :::
 
@@ -28,19 +32,19 @@
    - If the SD card is 64GB, choose 32768
    - If the SD card is larger than 64GB, choose 65536
 
-4. 「ボリュームラベル」は何でも構いません。
+4. Enter anything for "Volume label"
 
-5. 「クイックフォーマット」が選択されていることを確認して下さい。
+5. Ensure that "Quick Format" is selected
 
 6. Click "Start"
 
-7. OK をクリックします
+7. Click "OK"
 
-8. フォーマットが完了するのを待ちます
+8. Wait for the format to finish
 
-9. 「閉じる」をクリックします
+9. Click "Close"
 
-10. フォーマット前に、SDカードにファイルとフォルダがあった場合は、コンピュータからすべてをコピーして戻して下さい。
+10. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ## トラブルシューティング
 

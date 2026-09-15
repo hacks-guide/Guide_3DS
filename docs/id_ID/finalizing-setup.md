@@ -135,13 +135,19 @@ Selesai dah! _Custom firmware_ konsol kini sudah disetel.
 
 :::
 
+::: tip
+
+If you appreciate this guide, we accept [Donations](contribute#donations).
+
+:::
+
+### Informasi dan Catatan
+
 ::: info
 
 Bingung harus apa dengan konsol baru dimodif? Kunjungi [wiki kami](https://wiki.hacks.guide/wiki/3DS:Things_to_do)!
 
 :::
-
-### Informasi dan Catatan
 
 ::: info
 

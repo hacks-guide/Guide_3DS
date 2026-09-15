@@ -20,6 +20,12 @@
 
 :::
 
+::: info
+
+Εάν χρησιμοποιείτε μια συσκευή SteamOS (π.χ. Steam Deck ή Steam Machine), θα πρέπει να εισέλθετε στη [λειτουργία επιφάνειας εργασίας (Desktop Mode)](https://help.steampowered.com/en/faqs/view/671A-4453-E8D2-323C) και να ακολουθήσετε τις οδηγίες για Linux σε αυτήν τη σελίδα. Η Python 3 είναι ήδη εγκατεστημένη στο SteamOS, οπότε δεν χρειάζεται να κάνετε λήψη της.
+
+:::
+
 ## Τι χρειάζεστε
 
 - Την πιο πρόσφατη έκδοση του [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (το αρχείο `.zip` με όνομα «MSET9»)

@@ -6,7 +6,11 @@ Dit is een extra sectie voor het formatteren van een SD-kaart om deze te doen we
 
 Als de 3DS de SD kaart al herkent, is deze handleiding niet nodig.
 
-Deze pagina is alleen voor Mac-gebruikers. Als je geen Mac gebruikt, bekijk dan de [SD formatteren (Windows)](formatting-sd-(windows)) of [SD formatteren (Linux)](formatting-sd-(linux)) pagina.
+::: warning
+
+Deze pagina is alleen voor Mac-gebruikers. If you are not on Mac, check out the [Formatting SD (Windows)](formatting-sd-(windows)) or [Formatting SD (Linux)](formatting-sd-(linux)) pages.
+
+:::
 
 ## Instructions
 
@@ -14,77 +18,77 @@ Deze pagina is alleen voor Mac-gebruikers. Als je geen Mac gebruikt, bekijk dan 
 
 1. Plaats je SD kaart in je computer
 
-2. Als de SD kaart bestanden en mappen erop heeft, kopieer dan alles naar een map op uw computer
+2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
-3. Voer het Disk Hulpprogramma uit
+3. Run the Disk Utility app
 
-4. In het linkerbovenste "Weergeven" menu, kies "Alle apparaten weergeven"
+4. In the top-left "View" menu, choose "Show All Devices"
 
-5. Selecteer je SD-kaart in het linkerpaneel
+5. Select your SD card in the left panel
 
    ::: danger
 
-   Zorg ervoor dat je het juiste apparaat kiest, anders kan je per ongeluk de verkeerde schijf verwijderen!
+   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
    :::
 
-6. Klik boven op "Wissen"
+6. Click "Erase" at the top
 
-7. Voer iets in voor "Naam"
+7. Enter anything for "Name"
 
-8. Zorg ervoor dat "Formaat" is ingesteld op "MS-DOS (FAT)"
+8. Ensure that "Format" is set to "MS-DOS (FAT)"
 
-9. Zorg ervoor dat "Scheme" is ingesteld op "Master Boot Record"
+9. Ensure that "Scheme" is set to "Master Boot Record"
    - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
 
-10. Klik op "Wissen"
+10. Click "Erase"
 
-11. Wacht tot het formatteren is voltooid
+11. Wait for the format to finish
 
-12. Klik op "Close"
+12. Click "Close"
 
-13. Als de SD-kaart al bestanden en mappen voor het formatteren bevatte, kopieer dan alles terug van uw computer
+13. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ### OS X Yosemite (10.10) and earlier
 
 1. Plaats je SD kaart in je computer
 
-2. Als de SD kaart bestanden en mappen erop heeft, kopieer dan alles naar een map op uw computer
+2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
-3. Voer het Disk Hulpprogramma uit
+3. Run the Disk Utility app
 
-4. Selecteer je SD-kaart in het linkerpaneel
+4. Select your SD card in the left panel
 
    ::: danger
 
-   Zorg ervoor dat je het juiste apparaat kiest, anders kan je per ongeluk de verkeerde schijf verwijderen!
+   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
    :::
 
-5. Klik op "Partitie" bovenaan
+5. Click "Partition" at the top
    - If "Partition" does not appear, make sure to choose the device instead of a volume
 
-6. Zorg ervoor dat "Partition Layout" is ingesteld op "1 Partition"
+6. Ensure that "Partition Layout" is set to "1 Partition"
 
-7. Voer iets in voor "Naam"
+7. Enter anything for "Name"
 
-8. Zorg ervoor dat "Formaat" is ingesteld op "MS-DOS (FAT)"
+8. Ensure that "Format" is set to "MS-DOS (FAT)"
 
-9. Klik op "Opties" onder de partitie tabel
+9. Click "Options" below the partition table
 
-10. Kies "Master Boot Record"
+10. Choose "Master Boot Record"
 
-11. Klik op "OK"
+11. Click "OK"
 
-12. Klik op "Toepassen"
+12. Click "Apply"
 
-13. Klik op "Partitie"
+13. Click "Partition"
 
-14. Wacht tot het formatteren is voltooid
+14. Wait for the format to finish
 
-15. Sluit Schijf hulpprogramma
+15. Close Disk Utility
 
-16. Als de SD-kaart al bestanden en mappen voor het formatteren bevatte, kopieer dan alles terug van uw computer
+16. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ## Probleemoplossing
 

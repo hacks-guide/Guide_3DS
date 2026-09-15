@@ -135,13 +135,19 @@ ___
 
 :::
 
+::: tip
+
+If you appreciate this guide, we accept [Donations](contribute#donations).
+
+:::
+
+### 정보와 메모
+
 ::: info
 
 개조된 콘솔로 뭘 할 수 있는지 알고 싶으시다면 [위키](https://wiki.hacks.guide/wiki/3DS:Things_to_do)를 방문해 보세요!
 
 :::
-
-### 정보와 메모
 
 ::: info
 

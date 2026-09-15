@@ -6,7 +6,11 @@
 
 如果您的 3DS 已能正常讀取該 SD 卡，那您則不需遵守此指南。
 
-本教學僅適用於 Windows 使用者。 如果您的系統不是 Windows，請參閱 [格式化 SD 卡 (透過 Linux)](formatting-sd-(linux)) 或 [格式化 (透過 Mac)](formatting-sd-(mac))。
+::: warning
+
+This page is for Windows users only. If you are not on Windows, check out the [Formatting SD (Linux)](formatting-sd-(linux)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages.
+
+:::
 
 ## What You Need
 
@@ -20,7 +24,7 @@
 
    ::: danger
 
-   請確保您選擇的裝置是您的 SD 卡，否則您可能會不小心格式化錯的磁碟！
+   Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!
 
    :::
 
@@ -28,19 +32,19 @@
    - If the SD card is 64GB, choose 32768
    - If the SD card is larger than 64GB, choose 65536
 
-4. 如有需要，請為您的 SD 卡輸入新名稱
+4. Enter anything for "Volume label"
 
-5. 請勾選『Quick Format』
+5. Ensure that "Quick Format" is selected
 
 6. Click "Start"
 
-7. 點選『OK』
+7. Click "OK"
 
-8. 等待格式化完成
+8. Wait for the format to finish
 
-9. 點選『Close』
+9. Click "Close"
 
-10. 如果此 SD 卡中先前含有任何檔案及資料夾，請將這些檔案從電腦中複製回 SD 卡中
+10. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ## 疑難排解
 

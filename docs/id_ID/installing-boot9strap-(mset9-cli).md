@@ -10,13 +10,19 @@
 
 ::: warning
 
-Laman ini perlu komputer bersistem Windows, Linux, atau macOS. Atau jika punya ponsel/tablet Android atau Chromebook, ikuti saja [Memasang boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)). If you have an iPhone or iPad, follow [Installing boot9strap (MSET9 CLI iOS)](installing-boot9strap-\(mset9-cli-ios\)) instead. Jika tidak punya perangkat tersebut, berarti perlu [eksploit yang lain](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) (gunakan penerjemah).
+Laman ini perlu komputer bersistem Windows, Linux, atau macOS. Atau jika punya ponsel/tablet Android atau Chromebook, ikuti saja [Memasang boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)). If you have an iPhone or iPad, follow [Installing boot9strap (MSET9 CLI iOS)](installing-boot9strap-(mset9-cli-ios)) instead. Jika tidak punya perangkat tersebut, berarti perlu [eksploit yang lain](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) (gunakan penerjemah).
 
 :::
 
 ::: info
 
-If you are using an Android device as an SD card adapter for your computer, you will not be able to follow this page due to incompatibilities with Android's file transfer protocol (MTP). If this is the case, follow [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)) instead.
+If you are using an Android device as an SD card adapter for your computer, you will not be able to follow this page due to incompatibilities with Android's file transfer protocol (MTP). If this is the case, follow [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)) instead.
+
+:::
+
+::: info
+
+If you are using a SteamOS device (e.g. Steam Deck or Steam Machine), you should enter [Desktop Mode](https://help.steampowered.com/en/faqs/view/671A-4453-E8D2-323C) and follow the Linux instructions on this page. Python 3 is already installed on SteamOS, so there is no need to download it.
 
 :::
 

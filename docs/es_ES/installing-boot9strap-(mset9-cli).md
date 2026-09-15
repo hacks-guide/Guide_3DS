@@ -20,6 +20,12 @@ If you are using an Android device as an SD card adapter for your computer, you 
 
 :::
 
+::: info
+
+If you are using a SteamOS device (e.g. Steam Deck or Steam Machine), you should enter [Desktop Mode](https://help.steampowered.com/en/faqs/view/671A-4453-E8D2-323C) and follow the Linux instructions on this page. Python 3 is already installed on SteamOS, so there is no need to download it.
+
+:::
+
 ## Lo que necesitas
 
 - La última versión de [MSET9](https://github.com/hacks-guide/MSET9/releases/latest) (El archivo MSET9 `.zip`)

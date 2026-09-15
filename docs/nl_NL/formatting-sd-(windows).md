@@ -6,7 +6,11 @@ Dit is een extra sectie voor het formatteren van een SD-kaart om deze te doen we
 
 Als de 3DS de SD kaart al herkent, is deze handleiding niet nodig.
 
-Deze pagina is alleen voor windows-gebruikers. Als je geen Windows gebruikt, bekijk dan de [SD formatteren (Linux)](formatting-sd-(linux)) of [SD formatteren (Mac)](formatting-sd-(mac)) pagina's.
+::: warning
+
+This page is for Windows users only. If you are not on Windows, check out the [Formatting SD (Linux)](formatting-sd-(linux)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages.
+
+:::
 
 ## What You Need
 
@@ -20,7 +24,7 @@ Deze pagina is alleen voor windows-gebruikers. Als je geen Windows gebruikt, bek
 
    ::: danger
 
-   Zorg ervoor dat je de juiste stationsletter kiest, anders kan je per ongeluk de verkeerde schijf verwijderen!
+   Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!
 
    :::
 
@@ -28,19 +32,19 @@ Deze pagina is alleen voor windows-gebruikers. Als je geen Windows gebruikt, bek
    - If the SD card is 64GB, choose 32768
    - If the SD card is larger than 64GB, choose 65536
 
-4. Voer iets in voor "Volume label"
+4. Enter anything for "Volume label"
 
-5. Zorg ervoor dat "Quick Format" is geselecteerd
+5. Ensure that "Quick Format" is selected
 
 6. Click "Start"
 
-7. Klik op "OK"
+7. Click "OK"
 
-8. Wacht tot het formatteren is voltooid
+8. Wait for the format to finish
 
-9. Klik op "Close"
+9. Click "Close"
 
-10. Als de SD-kaart al bestanden en mappen voor het formatteren bevatte, kopieer dan alles terug van uw computer
+10. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ## Probleemoplossing
 

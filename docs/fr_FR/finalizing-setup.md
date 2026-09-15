@@ -135,13 +135,19 @@ Vous avez terminé ! Le custom firmware est maintenant entièrement installé et
 
 :::
 
+::: tip
+
+If you appreciate this guide, we accept [Donations](contribute#donations).
+
+:::
+
+### Informations et notes
+
 ::: info
 
 Vous vous demandez ce que vous pouvez faire avec votre nouvelle console moddée ? Visitez [notre wiki](https://wiki.hacks.guide/wiki/3DS:Things_to_do) (en anglais)!
 
 :::
-
-### Informations et notes
 
 ::: info
 

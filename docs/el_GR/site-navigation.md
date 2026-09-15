@@ -48,6 +48,7 @@
 - [Φόρτωση του ntrboot (πολλαπλά συστήματα 3DS)](flashing-ntrboot-(3ds-multi-system))
 - [Φόρτωση του ntrboot (DSi)](flashing-ntrboot-(dsi))
 - [Φόρτωση του ntrboot (NDS)](flashing-ntrboot-(nds))
+- [Διαμόρφωση της SD (Διαχειριστής κατατμήσεων του KDE)](formatting-sd-(kde))
 - [Διαμόρφωση της SD (Linux)](formatting-sd-(linux))
 - [Διαμόρφωση της SD (Mac)](formatting-sd-(mac))
 - [Διαμόρφωση της SD (Windows)](formatting-sd-(windows))

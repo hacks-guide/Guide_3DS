@@ -32,7 +32,7 @@ Ez az útmutató minden kereskedelmi konzollal működik a Nintendo 3DS konzol c
 
 :::
 
-A legtöbb esetben követheted ezt az útmutatót egészen addig, amíg képes vagy letölteni fájlokat az internetről és SD kártyára másolni. Ez magába foglalja a legtöbb elektronikus eszközt, mint például a Windows, macOS, Linux vagy chromeOS (Chromebooks) operációs rendszert futtató számítógépeket, továbbá telefonokat és tableteket Android vagy iOS rendszerrel. Az elektronikus eszközödtől függően szükséged lehet egy SD kárya adapterre, ami lehetővé teszi, hogy olvassa az SD kártyádat.
+A legtöbb esetben követheted ezt az útmutatót egészen addig, amíg képes vagy letölteni fájlokat az internetről és SD kártyára másolni. Ez magába foglalja a legtöbb elektronikus eszközt, mint például a Windows, macOS, Linux (beleértve a SteamOS-t) vagy ChromeOS (Chromebooks) operációs rendszert futtató számítógépeket, továbbá telefonokat és tableteket Android vagy iOS rendszerrel. Az elektronikus eszközödtől függően szükséged lehet egy SD kárya adapterre, ami lehetővé teszi, hogy olvassa az SD kártyádat.
 
 ::::
 
@@ -57,7 +57,7 @@ Az SD/microSD kártyádnak a következő követelményeknek kell megfelelnie:
 - **Sebesség**: Bármilyen
   - Jelenleg a legolcsóbb kártya a piacon **Class 10** (pl. SanDisk Ultra). Gyorsabb kártyák elfogadhatók, de a 3DS nem tudja kihasználni a nagyobb sebességük
 - **Formátum**: FAT32 MBR-rel
-  - A 32 GB vagy kisebb kártyák eleve erre vannak formázvam míg a nagyobb SD kártyákat valószínűleg maniálisan kell formázni: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
+  - A 32 GB vagy kisebb kártyák eleve erre vannak formázvam míg a nagyobb SD kártyákat valószínűleg maniálisan kell formázni: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) (beleértve a SteamOS-t)
 
 A teljes méretű SD kártyát használó konzolok esetében egy microSD kárty egy adapterben azzal egyenértékűen működik.
 

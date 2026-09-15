@@ -6,87 +6,91 @@
 
 만약 3DS가 이미 SD 카드를 인식한다면, 이 가이드는 따를 필요가 없습니다.
 
-이 페이지는 Mac 사용자를 위한 페이지입니다. 만약 Mac에서 하는 것이 아니라면, [SD 포맷하기 (Windows)](formatting-sd-(windows))나 [SD 포맷하기 (Linux)](formatting-sd-(linux)) 페이지들을 찾아봐 주세요.
+::: warning
+
+이 페이지는 Mac 사용자를 위한 페이지입니다. If you are not on Mac, check out the [Formatting SD (Windows)](formatting-sd-(windows)) or [Formatting SD (Linux)](formatting-sd-(linux)) pages.
+
+:::
 
 ## 진행 방법
 
-### OS X El Capitan (10.11) 및 이후 버전
+### OS X El Capitan (10.11) and later
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
 
-2. 만약 SD 카드에 파일이나 폴더가 있다면, 모든 것을 컴퓨터 내 한 폴더에 복사하세요
+2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
-3. 디스크 유틸리티 앱을 실행해 주세요
+3. Run the Disk Utility app
 
-4. 위 왼쪽 "보기" 메뉴에서 "모든 기기 보기"를 선택해 주세요
+4. In the top-left "View" menu, choose "Show All Devices"
 
-5. 왼쪽 패널에서 SD 카드를 선택해 주세요
+5. Select your SD card in the left panel
 
    ::: danger
 
-   올바른 디바이스를 선택하는 것을 확인하세요. 잘못하면 다른 드라이브를 포맷할 수도 있습니다!
+   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
    :::
 
-6. 위쪽에 "지우기"를 선택해 주세요
+6. Click "Erase" at the top
 
-7. "이름" 란에 아무 이름을 입력해 주세요
+7. Enter anything for "Name"
 
-8. "포맷" 창이 "MS-DOS ( FAT )"으로 설정되있는 것을 확인해 주세요
+8. Ensure that "Format" is set to "MS-DOS (FAT)"
 
-9. "설계" 창이 "마스터 부트 레코드"로 설정되있는 것을 확인해 주세요
-   - 만약 "설계" 가 표시되지 않으면, "취소"를 선택하고 디바이스가 아닌 볼륨을 선택해 주세요
+9. Ensure that "Scheme" is set to "Master Boot Record"
+   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
 
-10. "지우기"를 선택해 주세요
+10. Click "Erase"
 
-11. 포맷이 완료되는 것을 기다리세요
+11. Wait for the format to finish
 
-12. "Close"를 클릭하세요
+12. Click "Close"
 
-13. 만약 SD 카드에 파일이나 폴더가 있었다면, 백업한 폴더에서 파일들을 다시 넣으세요
+13. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
-### OS X Yosemite (10.10) 및 이전 버전
+### OS X Yosemite (10.10) and earlier
 
 1. SD 카드를 컴퓨터에 삽입해 주세요
 
-2. 만약 SD 카드에 파일이나 폴더가 있다면, 모든 것을 컴퓨터 내 한 폴더에 복사하세요
+2. If the SD card has any files and folders on it, copy everything to a folder on your computer
 
-3. 디스크 유틸리티 앱을 실행해 주세요
+3. Run the Disk Utility app
 
-4. 왼쪽 패널에서 SD 카드를 선택해 주세요
+4. Select your SD card in the left panel
 
    ::: danger
 
-   올바른 디바이스를 선택하는 것을 확인하세요. 잘못하면 다른 드라이브를 포맷할 수도 있습니다!
+   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
    :::
 
-5. 위쪽에 "파티션"을 선택해 주세요
-   - 만약 "파티션" 이 표시되지 않으면, 볼륨이 아닌 디바이스를 선택해 주세요
+5. Click "Partition" at the top
+   - If "Partition" does not appear, make sure to choose the device instead of a volume
 
-6. "볼륨 설게" 창이 "1개외 파티션"으로 설정되있는 것을 확인해 주세요
+6. Ensure that "Partition Layout" is set to "1 Partition"
 
-7. "이름" 란에 아무 이름을 입력해 주세요
+7. Enter anything for "Name"
 
-8. "포맷" 창이 "MS-DOS ( FAT )"으로 설정되있는 것을 확인해 주세요
+8. Ensure that "Format" is set to "MS-DOS (FAT)"
 
-9. 파티션 테이블 이하에 "옵션"을 선택해 주세요
+9. Click "Options" below the partition table
 
-10. "마스터 부트 레코드"를 선택해 주세요
+10. Choose "Master Boot Record"
 
-11. "OK"를 클릭하세요
+11. Click "OK"
 
-12. "적용"을 클릭하세요
+12. Click "Apply"
 
-13. "파티션"을 클릭하세요
+13. Click "Partition"
 
-14. 포맷이 완료되는 것을 기다리세요
+14. Wait for the format to finish
 
-15. 디스크 유틸리티를 종료해 주세요
+15. Close Disk Utility
 
-16. 만약 SD 카드에 파일이나 폴더가 있었다면, 백업한 폴더에서 파일들을 다시 넣으세요
+16. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ## 문제 해결
 
 - SD 카드를 콘솔에서 여전히 감지되지 않거나 포맷 이후로도 엉뚱한 용량을 표시할 경우
-  - SD 카드가 나뉘었거나 미할당 공간이 있을 가능성이 있습니다. [해당 링크](https://wiki.hacks.guide/wiki/SD_Clean/Mac)의 가이드를 따라 SD 카드를 다시 포맷해 주세요
+  - SD 카드가 나뉘었거나 미할당 공간이 있을 가능성이 있습니다. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.

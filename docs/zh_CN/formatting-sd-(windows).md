@@ -6,7 +6,11 @@
 
 如果 3DS 已经识别到了 SD 卡，那么就不需要做这个教程了。
 
-本节教程仅限 Windows 用户。 如果你没有在用 Windows，那么请看看[格式化 SD 卡（通过 Linux 操作系统）](formatting-sd-(linux))或[格式化 SD 卡（通过 Mac 操作系统）](formatting-sd-(mac)) 。
+::: warning
+
+This page is for Windows users only. If you are not on Windows, check out the [Formatting SD (Linux)](formatting-sd-(linux)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages.
+
+:::
 
 ## What You Need
 
@@ -20,7 +24,7 @@
 
    ::: danger
 
-   请确保你选对了驱动器盘符，否则你可能会把别的驱动器格式化了！
+   Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!
 
    :::
 
@@ -28,19 +32,19 @@
    - If the SD card is 64GB, choose 32768
    - If the SD card is larger than 64GB, choose 65536
 
-4. 在“Volume label”一行随便输入一些东西
+4. Enter anything for "Volume label"
 
-5. 确保“Quick Format”被勾选
+5. Ensure that "Quick Format" is selected
 
 6. Click "Start"
 
-7. 点击“OK”
+7. Click "OK"
 
-8. 等待格式化完成
+8. Wait for the format to finish
 
-9. 点击“Close”
+9. Click "Close"
 
-10. 如果先前你从 SD 卡上复制了一些文件或文件夹到电脑上，请将它们全部复制回 SD 卡
+10. If the SD card had any files and folders on it before the format, copy everything back from your computer
 
 ## 问题排查
 

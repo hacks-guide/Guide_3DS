@@ -48,6 +48,7 @@
 - [ntrboot 플래싱 (3DS 두 대)](flashing-ntrboot-(3ds-multi-system))
 - [ntrboot 플래싱 (DSi)](flashing-ntrboot-(dsi))
 - [ntrboot 플래싱 (NDS)](flashing-ntrboot-(nds))
+- [Formatting SD (KDE Partition Manager)](formatting-sd-(kde))
 - [SD 포맷하기 (Linux)](formatting-sd-(linux))
 - [SD 포맷하기 (Mac)](formatting-sd-(mac))
 - [SD 포맷하기 (Windows)](formatting-sd-(windows))

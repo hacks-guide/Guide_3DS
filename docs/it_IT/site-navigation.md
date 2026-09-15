@@ -48,6 +48,7 @@
 - [Flash di ntrboot (Con più 3DS)](flashing-ntrboot-(3ds-multi-system))
 - [Flash di ntrboot (DSi)](flashing-ntrboot-(dsi))
 - [Flash di ntrboot (NDS)](flashing-ntrboot-(nds))
+- [Formattazione SD (KDE Partition Manager)](formatting-sd-(kde))
 - [Formattazione SD (Linux)](formatting-sd-(linux))
 - [Formattazione SD (Mac)](formatting-sd-(mac))
 - [Formattazione SD (Windows)](formatting-sd-(windows))

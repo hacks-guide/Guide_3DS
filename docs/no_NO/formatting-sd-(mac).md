@@ -6,7 +6,11 @@ This is an add-on section for formatting an SD card to work with the 3DS.
 
 If the 3DS already recognizes the SD card, this guide is not required.
 
-Denne siden er kun for Mac-brukere. If you are not on Mac, check out the [Formatting SD (Windows)](formatting-sd-\(windows\)) or [Formatting SD (Linux)](formatting-sd-\(linux\)) pages.
+::: warning
+
+Denne siden er kun for Mac-brukere. If you are not on Mac, check out the [Formatting SD (Windows)](formatting-sd-(windows)) or [Formatting SD (Linux)](formatting-sd-(linux)) pages.
+
+:::
 
 ## Instructions
 
@@ -22,11 +26,11 @@ Denne siden er kun for Mac-brukere. If you are not on Mac, check out the [Format
 
 5. Select your SD card in the left panel
 
-    ::: danger
+   ::: danger
 
-    Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
+   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
-    :::
+   :::
 
 6. Click "Erase" at the top
 
@@ -35,7 +39,7 @@ Denne siden er kun for Mac-brukere. If you are not on Mac, check out the [Format
 8. Ensure that "Format" is set to "MS-DOS (FAT)"
 
 9. Ensure that "Scheme" is set to "Master Boot Record"
-    - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
+   - If "Scheme" does not appear, click "Cancel" and make sure to choose the device instead of a volume
 
 10. Click "Erase"
 
@@ -55,14 +59,14 @@ Denne siden er kun for Mac-brukere. If you are not on Mac, check out the [Format
 
 4. Select your SD card in the left panel
 
-    ::: danger
+   ::: danger
 
-    Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
+   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
 
-    :::
+   :::
 
 5. Click "Partition" at the top
-    - If "Partition" does not appear, make sure to choose the device instead of a volume
+   - If "Partition" does not appear, make sure to choose the device instead of a volume
 
 6. Ensure that "Partition Layout" is set to "1 Partition"
 
@@ -89,4 +93,4 @@ Denne siden er kun for Mac-brukere. If you are not on Mac, check out the [Format
 ## Troubleshooting
 
 - SD card remains undetected by console or continues to display the wrong capacity after formatting
-    - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
+  - Your SD card may be partitioned or have unallocated space. Follow the instructions [here](https://wiki.hacks.guide/wiki/SD_Clean/Mac) to reformat your SD card.
