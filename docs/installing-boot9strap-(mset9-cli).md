@@ -54,6 +54,8 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
     :::
 
+    + **Linux only**: Move `MSET9-Linux.desktop` from the SD card to your Desktop folder.
+
 <!--@include: ./_include/mset9-chorus.md -->
     ::: info
 
