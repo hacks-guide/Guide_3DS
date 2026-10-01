@@ -1,6 +1,6 @@
-import { fr_FR as localeData } from './strings'
+import { hu_HU as localeData } from './strings/index.mjs'
 
-const locale = "fr_FR";
+const locale = "hu_HU";
 
 const sidebar_common = {
 	text: localeData.other,
@@ -244,8 +244,8 @@ const themeConfig = {
 };
 
 export default {
-	lang: "fr",
-	label: "Français",
+	lang: "hu",
+	label: "Magyar",
     title: localeData.title,
     description: localeData.description,
     themeConfig: themeConfig
