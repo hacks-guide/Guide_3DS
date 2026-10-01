@@ -137,7 +137,7 @@ Kész vagy! Az egyedi firmware most már teljesen be van állítva a konzolodon.
 
 ::: tip
 
-If you appreciate this guide, we accept [Donations](contribute#donations).
+Amennyiben hasznosnak véled ezt az útmutatót, elfogadunk [adományokat](contribute#donations).
 
 :::
 

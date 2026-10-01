@@ -54,6 +54,8 @@ Nesta seção, você vai preparar o exploit MSET9 através da criação **tempor
 
    :::
 
+   - **Linux only**: Move `MSET9-Linux.desktop` from the SD card to your Desktop folder.
+
 <!--@include: ./_include/mset9-chorus.md -->
 
 ```

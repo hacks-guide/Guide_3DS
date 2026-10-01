@@ -6,7 +6,7 @@ Ceci est une section complémentaire sur comment vérifier que votre carte SD ne
 
 Selon la taille de votre carte SD et la vitesse de votre ordinateur, ce processus peut prendre jusqu'à plusieurs heures !
 
-Cette section est dédiée aux utilisateurs de Windows uniquement. Si votre ordinateur n'est pas sous Windows, jetez un œil aux pages [F3 (Linux)](f3-(linux)) ou [F3XSwift (Mac)](f3xswift-(mac)).
+This page is for Windows users only. Si votre ordinateur n'est pas sous Windows, jetez un œil aux pages [F3 (Linux)](f3-(linux)) ou [F3XSwift (Mac)](f3xswift-(mac)).
 
 ## Ce dont vous avez besoin
 

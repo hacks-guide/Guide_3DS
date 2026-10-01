@@ -54,6 +54,8 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 
    :::
 
+   - **csak Linux**: Mozgasd az `MSET9-Linux.desktop`-ot az SD kártyáról az Asztal (Desktop) mappába.
+
 <!--@include: ./_include/mset9-chorus.md -->
 
 ```

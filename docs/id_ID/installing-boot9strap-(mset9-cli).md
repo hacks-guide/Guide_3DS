@@ -54,6 +54,8 @@ Di bagian ini akan menyiapkan eksploit MSET9 dengan membuat profil HOME Menu bar
 
    :::
 
+   - **Linux only**: Move `MSET9-Linux.desktop` from the SD card to your Desktop folder.
+
 <!--@include: ./_include/mset9-chorus.md -->
 
 ```

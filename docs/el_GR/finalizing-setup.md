@@ -137,7 +137,7 @@ ___
 
 ::: tip
 
-If you appreciate this guide, we accept [Donations](contribute#donations).
+Εάν εκτιμάτε αυτόν τον οδηγό, δεχόμαστε [Δωρεές](contribute#donations).
 
 :::
 

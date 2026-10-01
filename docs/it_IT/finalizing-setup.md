@@ -137,7 +137,7 @@ Hai finito! Il custom firmware nella tua console è stato completamente configur
 
 ::: tip
 
-If you appreciate this guide, we accept [Donations](contribute#donations).
+Se hai gradito questa guida, accettiamo [donazioni](contribute#donations).
 
 :::
 

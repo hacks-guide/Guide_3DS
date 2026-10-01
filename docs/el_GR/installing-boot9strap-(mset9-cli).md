@@ -54,6 +54,8 @@
 
    :::
 
+   - **Μόνο για Linux:** Μετακινήστε το `MSET9-Linux.desktop` από την κάρτα SD στον φάκελο επιφάνειας εργασίας σας.
+
 <!--@include: ./_include/mset9-chorus.md -->
 
 ```
