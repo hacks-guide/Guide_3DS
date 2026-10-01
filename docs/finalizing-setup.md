@@ -58,6 +58,8 @@ In this section, you will copy the files necessary to follow the rest of the ins
 1. Copy `finalize.romfs` to the root of your SD card
 1. Open the `luma` folder on your SD card and create a folder named `payloads` inside, if it does not already exist
 1. Copy `x_finalize_helper.firm` to the `payloads` folder
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 
 The screenshot below indicates the minimum SD card layout that is required to follow this page. You may have extra files or folders on your SD card, depending on your previous setup or the method that you followed.

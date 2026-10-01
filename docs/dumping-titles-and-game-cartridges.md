@@ -28,6 +28,8 @@ These instructions are written for use with GodMode9 v2.0.0 or later. If you hav
 1. Insert your SD card into your computer
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 
 ## Dumping a Game Cartridge

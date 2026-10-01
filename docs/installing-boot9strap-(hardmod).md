@@ -72,6 +72,8 @@ In this section, you will download the necessary files for the hardmod and dump 
 1. Copy your downloaded `.firm` to the hardmod-b9s-installer folder on your computer
 1. Rename your downloaded `.firm` in the hardmod-b9s-installer folder on your computer to `current.firm`
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the hardmod-b9s-installer folder on your computer
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 1. Use your hardmod to create a NAND backup
 1. Move your NAND backup to the hardmod-b9s-installer folder on your computer and rename it to `NAND.bin`
