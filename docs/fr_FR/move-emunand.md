@@ -164,7 +164,7 @@ Pour identifier le Title ID d'un fichier `<TitleID>.gbavc.sav`, vous pouvez obte
 
 1. Maintenez (R) et appuyez sur (B) en même temps pour éjecter votre carte SD
 2. Insérez votre carte SD dans votre ordinateur
-3. Copiez tous vos fichiers vers votre carte SD
+3. Recopiez tous vos fichiers vers votre carte SD
    - Assurez-vous de remplacer le fichier `boot.firm` sur votre carte SD avec le 'boot.firm' de votre sauvegarde
 4. Réinsérez votre carte SD dans votre console
 5. Appuyez sur (A) pour remonter votre carte SD

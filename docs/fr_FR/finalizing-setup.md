@@ -137,7 +137,7 @@ Vous avez terminé ! Le custom firmware est maintenant entièrement installé et
 
 ::: tip
 
-If you appreciate this guide, we accept [Donations](contribute#donations).
+Si vous appréciez ce guide, nous acceptons les [Donations](contribute#donations).
 
 :::
 

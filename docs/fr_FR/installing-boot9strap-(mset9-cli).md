@@ -22,7 +22,7 @@ Si vous utilisez un appareil Android comme adaptateur de carte SD pour votre ord
 
 ::: info
 
-If you are using a SteamOS device (e.g. Steam Deck or Steam Machine), you should enter [Desktop Mode](https://help.steampowered.com/en/faqs/view/671A-4453-E8D2-323C) and follow the Linux instructions on this page. Python 3 is already installed on SteamOS, so there is no need to download it.
+Si vous utilisez un périphérique SteamOS (par ex. Steam Deck ou une Steam Machine), vous devez entrer en [Mode Bureau] (https://help.steampowered.com/fr/faqs/view/671A-4453-E8D2-323C) et suivre les instructions Linux sur cette page. Python 3 est déjà installé sur SteamOS, il n'est donc pas nécessaire de le télécharger.
 
 :::
 
@@ -54,7 +54,7 @@ Dans cette section, vous préparerez l'exploit MSET9 en créant **temporairement
 
    :::
 
-   - **Linux only**: Move `MSET9-Linux.desktop` from the SD card to your Desktop folder.
+   - **Linux seulement** : Déplacez `MSET9-Linux.desktop` depuis la carte SD vers votre dossier du bureau.
 
 <!--@include: ./_include/mset9-chorus.md -->
 

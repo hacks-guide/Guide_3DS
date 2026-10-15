@@ -120,7 +120,7 @@ Le script a détecté que le dossier Nintendo 3DS est manquant ET que vous avez 
 2. Maintenez (R) appuyé et appuyez sur (Start) en même temps pour éteindre votre console
 3. Copiez le contenu de `/gm9/backups/` vers un endroit en sûreté sur votre ordinateur
 4. Supprimez `/gm9/backups/` de votre carte SD
-5. Si vous avez déplacé votre dossier Nintendo 3DS de votre carte SD pour y arriver, copiez-le vers votre carte SD
+5. Si vous avez déplacé votre dossier Nintendo 3DS de votre carte SD pour y arriver, recopiez-le vers votre carte SD
    - Si vous n'avez pas de dossier Nintendo 3DS, démarrez dans le menu HOME au moins une fois avec la carte SD insérée pour le générer automatiquement
 6. Appuyez sur et maintenez (Start), et tout en maintenant (Start), allumez votre console. Ceci lancera GodMode9
 7. Appuyez sur (Home) pour faire apparaître le menu d’actions

@@ -1,16 +1,16 @@
-# Formatting SD (KDE Partition Manager)
+# Formater la SD (Gestionnaire de partitions de KDE)
 
 ## Lecture requise
 
 ::: info
 
-If you are using a SteamOS device (e.g. Steam Deck or Steam Machine), you should enter [Desktop Mode](https://help.steampowered.com/en/faqs/view/671A-4453-E8D2-323C) to follow the instructions on this page.
+Si vous utilisez un appareil SteamOS (par ex. Steam Deck ou Steam Machine), vous devriez passer en [Mode Bureau] (https://help.steampowered.com/fr/faqs/view/671A-4453-E8D2-323C) et suivre les instructions Linux sur cette page.
 
 :::
 
 ::: warning
 
-This page is for Linux users that have access to KDE Partition Manager only. If you are not on Linux, check out the [Formatting SD (Windows)](formatting-sd-(windows)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages. If you are on Linux but don't have access to KDE Partition Manager, follow the instructions on the [Formatting SD (Linux)](formatting-sd-(linux)) page.
+Cette page est seulement pour les utilisateurs de Linux qui ont accès au Gestionnaire de partitions de KDE. Si vous n'êtes pas sous Linux, consultez les pages [Formater la SD (Windows)](formatting-sd-(windows)) ou [Formater la SD (Mac)](formatting-sd-(mac)). Si vous êtes sous Linux mais que vous n'avez pas accès au Gestionnaire de partitions de KDE, suivez les instructions sur la page [Formater la SD (Linux)](formatting-sd-(linux)).
 
 :::
 
@@ -18,23 +18,23 @@ This page is for Linux users that have access to KDE Partition Manager only. If 
 
 1. Insérez votre carte SD dans votre ordinateur
 
-2. If the SD card has any files and folders on it, copy everything to a folder on your computer
+2. Si la carte SD contient quelconques fichiers ou dossiers, copiez-les tous vers un dossier sur votre ordinateur
 
-3. Eject your SD card from your computer
+3. Éjectez la carte SD de votre ordinateur
 
-4. Open KDE Partition Manager, inputting your password as needed
+4. Ouvrez le Gestionnaire de partitions de KDE, en saisissant votre mot de passe si nécessaire
 
-5. Insert your SD card and click `Refresh Devices`
-   - The new device that shows up in the left pane is your SD card
+5. Insérez votre carte SD et cliquez sur `Rafraichir la liste des périphériques`
+   - Le nouvel appareil qui apparaît dans le volet de gauche est votre carte SD
 
-6. Click your SD card, then click the `New Partition Table` button at the top of the window
+6. Cliquez sur votre carte SD, puis cliquez sur le bouton `Nouvelle table de partitions` en haut de la fenêtre
    ::: danger
 
-   Make sure you choose the correct device, otherwise you might accidentally erase the wrong drive!
+   Assurez-vous d'avoir choisi le bon périphérique, sinon vous pourriez effacer accidentellement le mauvais lecteur !
 
    :::
 
-7. When asked, choose `MS-Dos`. Do **NOT** use GPT.
+7. Quand demandé, choisissez `MS-Dos`. N'utilisez **PAS** le GPT.
 
    ::: info
 
@@ -42,9 +42,9 @@ This page is for Linux users that have access to KDE Partition Manager only. If 
 
    :::
 
-8. Right click the `unallocated` space in the right pane and select `New`
+8. Faites un clic droit sur l'espace `non alloué` dans le volet de droite et sélectionnez `Nouveau`
 
-9. When selecting your filesystem, choose `FAT32` from the drop-down menu. The window should look like this:
+9. Lorsque vous sélectionnez votre système de fichiers, choisissez `FAT32` dans le menu déroulant. La fenêtre devrait ressembler à ceci :
 
    ::: info
 
@@ -52,8 +52,8 @@ This page is for Linux users that have access to KDE Partition Manager only. If 
 
    :::
 
-10. Click `OK`, then click `Apply`, then `Apply Pending Operations`
+10. Cliquez sur `OK`, puis cliquez sur `Appliquer`, puis `	Applique les opérations en attente`
 
-11. Eject and reinsert your SD card
+11. Éjectez et réinsérez votre carte SD
 
-12. If the SD card had any files and folders on it before the format, copy everything back from your computer
+12. Si la carte SD contenait des fichiers et dossiers avant le formatage, recopiez-les sur la carte SD depuis votre ordinateur

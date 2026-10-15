@@ -8,21 +8,21 @@ Si la carte SD est déjà reconnue par la 3DS, ce guide n'est pas nécessaire.
 
 ::: warning
 
-Cette page est uniquement destinée aux utilisateurs de Linux. If you are not on Linux, check out the [Formatting SD (Windows)](formatting-sd-(windows)) or [Formatting SD (Mac)](formatting-sd-(mac)) pages.
+Cette page est seulement pour les utilisateurs de Linux. Si vous n'êtes pas sous Linux, consultez les pages [Formater la SD (Windows)](formatting-sd-(windows)) ou [Formater la SD (Mac)](formatting-sd-(mac)).
 
 :::
 
 ::: info
 
-Several Linux distributions may provide more user-friendly methods for formatting SD cards than this guide provides, some of which can be [found here](https://wiki.hacks.guide/wiki/Formatting_an_SD_card/Linux). In particular, if you are on SteamOS (e.g. Steam Deck, Steam Machine), check out the [Formatting SD (KDE Partition Manager)](formatting-sd-(kde)) page.
+Plusieurs distributions Linux peuvent fournir des méthodes plus conviviales pour le formatage des cartes SD que celles que fournit ce guide, dont certaines peuvent être [trouvées ici] (https://wiki.hacks.guide/wiki/Formatting_an_SD_card/Linux). En particulier, si vous êtes sous SteamOS (par ex. Steam Deck, Steam Machine), consultez la page [Formater la SD (Gestionnaire de partitions de KDE)](formatting-sd-(kde)).
 
 :::
 
 ## Instructions
 
 1. Insérez votre carte SD dans votre ordinateur
-2. If the SD card has any files and folders on it, copy everything to a folder on your computer
-3. Eject your SD card from your computer
+2. Si la carte SD contient des fichiers et des dossiers, copiez-les tous vers un dossier sur votre ordinateur
+3. Éjectez la carte SD de votre ordinateur
 4. Lancez le terminal Linux
 5. Tapez `watch "lsblk"`
 6. Insérez votre carte SD dans votre ordinateur
@@ -42,7 +42,7 @@ Several Linux distributions may provide more user-friendly methods for formattin
       - Cela crée une seule partition FAT32 avec une taille de cluster de 32 Ko sur la carte SD
     - 128 Go ou plus: `sudo mkfs.fat /dev/(nom de l'appareil ci-dessus) -s 128 -F 32`
       - Cela crée une seule partition FAT32 avec une taille de cluster de 64 Ko sur la carte SD
-11. If the SD card had any files and folders on it before the format, copy everything back from your computer
+11. Si la carte SD contenait des fichiers et dossiers avant le formatage, recopiez-les sur la carte SD depuis votre ordinateur
 
 ## Dépannage
 
