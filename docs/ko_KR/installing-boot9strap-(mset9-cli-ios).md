@@ -34,7 +34,7 @@ As iPhones and iPads do not have an SD card slot, you will need an adapter to pl
 
 ### 섹션 I - 준비 작업
 
-In this section, you will prepare the MSET9 exploit by **temporarily** creating a new HOME Menu profile with no user data, and then setting up that profile with only the minimum data required for MSET9 to trigger. 현재 존재하는 유저 데이터는 사라지지만, 이 페이지의 작업을 끝낸다면 다시 복구될 것입니다．
+이 섹션에서는 사용자 데이터가 없는 새로운 HOME 메뉴 프로필을 **임시로** 생성하여 MSET9 익스플로잇을 준비한 다음, MSET9을 실행하는 데 필요한 최소한의 데이터만으로 해당 프로필을 설정합니다. 현재 존재하는 유저 데이터는 사라지지만, 이 페이지의 작업을 끝낸다면 다시 복구될 것입니다．
 
 1. Insert your SD card into your iPhone/iPad (using an adapter)
 
@@ -46,9 +46,9 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
     
     :::
 
-1. Type the number corresponding to your console model and version, then tap Return
+1. 콘솔 모델과 버전에 해당하는 숫자를 입력한 다음 Return을 탭해 주세요
 
-   - The screen should change to this:
+   - 화면이 다음과 같이 변경되어야 합니다:
 
    ::: info
 
@@ -57,11 +57,11 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    :::
 
    - 화면에 표시된 모델과 버전이 정확한지 확인해 주세요
-2. Type `1`, then tap Return to begin the process of creating the MSET9 ID1
-3. After reviewing the disclaimer, type `1` again and tap Return to accept it
+2. `1`을 입력한 다음 Return을 탭하여 MSET9 ID1 생성 프로세스를 시작해 주세요
+3. 면책 조항을 검토한 후 `1`을 다시 입력하고 Return을 탭하여 수락해 주세요
    - 에러 발생시, [문제 해결](troubleshooting-mset9)을 확인 후 다시 시도해 주세요
-4. If you see the message "Created hacked ID1.", tap Return to close the MSET9 script
-   - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **이건 예상된 결과입니다.** 이후 과정을 거치면서 원본 데이터는 복구될 것입니다
+4. "Created hacked ID1." 메시지가 표시되면 Return을 탭하여 MSET9 스크립트를 닫아 주세요
+   - 3DS의 HOME 메뉴에 데이터가 없거나 사용자가 설치한 앱이 없는 것처럼 보일 것입니다. **이건 예상된 결과입니다.** 이후 과정을 거치면서 원본 데이터는 복구될 것입니다
 5. SD 카드를 콘솔에 다시 삽입해 주세요
 6. 콘솔의 전원을 켜 주세요
 7. Mii 스튜디오를 열어주세요
@@ -70,14 +70,14 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    - [(영어 사진) 일반적인](/images/screenshots/mset9/mii-existing.png) Mii 스튜디오 화면을 보게된다면, 데이터가 이미 존재하는 것입니다. Mii 스튜디오를 종료한 후 HOME 메뉴로 돌아가세요.
 9. 본체 설정을 실행한 후 `데이터 관리` -> `Nintendo 3DS 데이터 관리` -> `소프트웨어 관리` -> 초기화 ([영어 사진](/images/screenshots/database-reset.jpg))로 이동해 주세요.
    - 이 과정은 데이터를 삭제하지 않습니다.
-10. Power off your console by pressing the power button then tapping Power Off on the lower screen
+10. 전원 버튼을 누른 다음 하단 화면에서 전원 끄기를 탭하여 콘솔의 전원을 꺼 주세요
 11. Insert your SD card into your iPhone/iPad (using an adapter)
 
 <!--@include: ./_include/ish-chorus.md -->
 
-1. Type the number corresponding to your console model and version, then tap Return
+1. 콘솔 모델과 버전에 해당하는 숫자를 입력한 다음 Return을 탭해 주세요
 
-   - The screen should change to this and display `Ready`:
+   - 화면이 다음과 같이 변경되고 `Ready`가 표시되어야 합니다:
 
    ::: info
 
@@ -85,11 +85,11 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
    :::
 
-   - If the screen says [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-ish-not-ready.png):
-     - Type `2`, then tap Return to check the MSET9 status and follow the directions indicated
+   - 화면에 [Not ready - check MSET9 status for more details](/images/screenshots/mset9/mset9-ish-not-ready.png)가 표시되면:
+     - `2`를 입력한 다음 Return을 탭하여 MSET9 상태를 확인하고 표시된 지침을 따라 주세요
      - 문제가 해결되었다면, 섹션 I 14단계로 가 주세요
      - 더 많은 정보를 얻으려면, [문제 해결](troubleshooting-mset9) 페이지를 확인하세요
-2. Type `0`, then tap Return to close the script
+2. `0`을 입력한 다음 Return을 탭하여 스크립트를 닫아 주세요
 3. SD 카드를 콘솔에 다시 삽입해 주세요
 
 ### 섹션 II - MSET9
@@ -108,7 +108,7 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 3. `데이터 관리` -> `Nintendo 3DS` -> `추가 데이터 관리`로 들어가주세요. ([영어 사진](/images/screenshots/mset9/settings-extdata.png))
 4. **절대 어떠한 버튼도 만지지 말고 스크린도 터치하지 마세요**
 5. **어떠한 버튼도 하단 화면도 건드리지 않은 상태에서, 기기의 전원이 여전히 켜진 상태에서** SD 카드를 기기에서 제거해 주세요
-   - The menu will refresh and say that no SD card is inserted
+   - 메뉴가 새로 고침되고 SD 카드가 삽입되지 않았다고 표시됩니다
 6. Insert your SD card into your iPhone/iPad (using an adapter)
 
 <!--@include: ./_include/ish-chorus.md -->

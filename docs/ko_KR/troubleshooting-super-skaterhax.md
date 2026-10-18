@@ -48,7 +48,7 @@
 
 :::details Error 032-1035 when trying to view the skaterhax webpage
 
-Your Internet connection is blocking access to the skaterhax webpage. If possible, try a mobile hotspot. If you do not have another Internet connection available, follow [MSET9](installing-boot9strap-(mset9)) instead.
+인터넷 연결이 skaterhax 웹 페이지에 대한 액세스를 차단하고 있습니다. 가능하면 모바일 핫스팟을 사용해 보세요. 다른 인터넷 연결을 사용할 수 없는 경우 [MSET9](installing-boot9strap-(mset9))을 따라 주세요.
 
 :::
 

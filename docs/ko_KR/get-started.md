@@ -1,7 +1,7 @@
 ---
 noneSelected: 시스템 모델을 선택하세요.
 invalidVersion: 올바른 시스템 버전으로 확인되지 않습니다.
-cfwPrefixDetected: Your console may already have custom firmware installed. Please retry Section I. If you still only reach the HOME menu, click the link below and ask, in English, for assistance.
+cfwPrefixDetected: 콘솔에 커스텀 펌웨어가 이미 설치되어 있을 수 있습니다. 섹션 I을 다시 시도해 주세요. 그래도 HOME 메뉴에만 도달한다면, 아래 링크를 클릭하여 영어로 도움을 요청하세요.
 inviteLinkText: Nintendo Homebrew on Discord
 otherPrefix: (기타)
 head: [ [ 'script', { src: '/assets/js/common.js' } ], [ 'script', { src: '/assets/js/selecting.js' } ] ]
@@ -14,7 +14,7 @@ head: [ [ 'script', { src: '/assets/js/common.js' } ], [ 'script', { src: '/asse
 ### 섹션 I - CFW 확인
 
 1. 콘솔의 전원을 꺼 주세요
-2. Insert your SD card into your console
+2. SD 카드를 콘솔에 삽입해 주세요
 3. (Select) 버튼을 길게 눌러 주세요
 4. (Select) 버튼을 계속 눌러 있는 상태에서 콘솔의 전원을 켜 주세요
 5. 커스텀 메뉴가 아닌 HOME 메뉴로 부팅이 되었다면 다음 섹션으로 진행할 수 있습니다
@@ -27,7 +27,7 @@ head: [ [ 'script', { src: '/assets/js/common.js' } ], [ 'script', { src: '/asse
 
 ::: warning
 
-If, when the console boots to the HOME Menu, you see the error "Could not detect an SD card", ensure that your SD card is properly formatted: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
+만약 콘솔이 HOME 메뉴로 부팅될 때 "Could not detect an SD card" 오류가 표시되면 SD 카드가 제대로 포맷되었는지 확인해 주세요: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))
 
 :::
 

@@ -102,7 +102,7 @@ SD 카드가 읽혔는지 확인하려면 SELECT를 누른 채 부팅해 아래 
 
 :::details 다른 에러
 
-Please take a photo of the error and join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+오류 화면의 사진을 찍고 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)에 참가하여 도움을 요청해 주세요.
 
 :::
 
@@ -140,7 +140,7 @@ Please take a photo of the error and join [Nintendo Homebrew on Discord](https:/
 :::details 앱을 실행할 때 오류 화면이 표시됩니다
 
 [여기 (영어)](https://wiki.hacks.guide/wiki/3DS:Error_screens/Luma3DS_exception_screen)에서 오류 화면을 찾아보세요.
-If you weren't able to find your error or the instructions didn't work, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance.
+오류를 찾을 수 없거나 지침이 작동하지 않으면 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)에 참가하여 추가 지원을 요청해 주세요.
 
 :::
 

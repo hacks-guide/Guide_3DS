@@ -35,13 +35,13 @@
 
 :::details Error #24: SD is write-protected
 
-SD 카드가 [쓰기 금지](/images/sdlock.png) 상태가 아닌지 확인해 주세요. If the SD card is not locked and you continue to get this error, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+SD 카드가 [쓰기 금지](/images/sdlock.png) 상태가 아닌지 확인해 주세요. SD 카드가 잠겨 있지 않은데도 이 오류가 계속 발생하면 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)에 참가하여 도움을 요청해 주세요.
 
 :::
 
 :::details Error #02: Missing essential.exefs
 
-GodMode9에서 "Make essential files backup?" 알림에서 No를 선택했을 때 뜹니다. Power off your console, power it on while holding (Start) to re-enter GodMode9, say 'Yes' to the prompt, then try again.
+GodMode9에서 "Make essential files backup?" 알림에서 No를 선택했을 때 뜹니다. 콘솔의 전원을 끄고, (Start)를 누른 상태로 전원을 켜서 GodMode9으로 다시 진입한 다음, 프롬프트에서 'Yes'를 선택하고 다시 시도해 주세요.
 
 :::
 
@@ -108,7 +108,7 @@ SD 카드의 용량이 충분하다면, SD 카드가 손상되었거나 불량�
 
 :::details Error #12: Copy (file).db fail
 
-SD 카드가 [쓰기 금지](/images/sdlock.png) 상태가 아닌지 확인해 주세요. If the SD card is not locked and you continue to get this error, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for assistance.
+SD 카드가 [쓰기 금지](/images/sdlock.png) 상태가 아닌지 확인해 주세요. SD 카드가 잠겨 있지 않은데도 이 오류가 계속 발생하면 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)에 참가하여 도움을 요청해 주세요.
 
 :::
 

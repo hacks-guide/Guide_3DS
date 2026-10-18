@@ -24,8 +24,8 @@ This page is for Linux users that have access to KDE Partition Manager only. If 
 
 4. Open KDE Partition Manager, inputting your password as needed
 
-5. Insert your SD card and click `Refresh Devices`
-   - The new device that shows up in the left pane is your SD card
+5. SD 카드를 삽입하고 `Refresh Devices`를 클릭해 주세요
+   - 왼쪽 창에 표시되는 새 장치가 SD 카드입니다
 
 6. Click your SD card, then click the `New Partition Table` button at the top of the window
    ::: danger

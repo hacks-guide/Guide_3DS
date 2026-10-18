@@ -16,13 +16,13 @@
 
 ::: info
 
-If you are using an Android device as an SD card adapter for your computer, you will not be able to follow this page due to incompatibilities with Android's file transfer protocol (MTP). If this is the case, follow [Installing boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)) instead.
+컴퓨터용 SD 카드 어댑터로 안드로이드 기기를 사용하는 경우 안드로이드의 파일 전송 프로토콜(MTP)과의 호환성 문제로 인해 이 페이지를 따를 수 없습니다. 이 경우 [boot9strap 설치 (MSET9 Play 스토어)](installing-boot9strap-(mset9-play-store))를 따라 주세요.
 
 :::
 
 ::: info
 
-If you are using a SteamOS device (e.g. Steam Deck or Steam Machine), you should enter [Desktop Mode](https://help.steampowered.com/en/faqs/view/671A-4453-E8D2-323C) and follow the Linux instructions on this page. Python 3 is already installed on SteamOS, so there is no need to download it.
+SteamOS 기기(예: Steam Deck 또는 Steam Machine)를 사용하는 경우 [데스크톱 모드](https://help.steampowered.com/en/faqs/view/671A-4453-E8D2-323C)로 진입하여 이 페이지의 Linux 지침을 따라야 합니다. SteamOS에는 Python 3이 이미 설치되어 있으므로 다운로드할 필요가 없습니다.
 
 :::
 

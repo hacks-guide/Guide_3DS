@@ -80,7 +80,7 @@ NNID는 닌텐도 네트워크 ID의 약칭이며, 본 가이드에서 NNID 걱�
 
 :::details 새로운 SD 카드를 사용해야 할까요, 아니면 원래 가지고 있던 것을 사용해야 할까요?
 
-You should only use one SD card with a 3DS at any given time. If you use another SD card to mod your console, you will create another 'profile' for your modded software, which will be inaccessible on your original SD card. However, **your console will remain modded**, since the mod is installed to internal memory (not the SD card).
+한 번에 하나의 SD 카드만 3DS와 함께 사용해야 합니다. 다른 SD 카드를 사용하여 콘솔을 개조하면 개조된 소프트웨어에 대한 또 다른 '프로필'이 생성되며, 이는 원래 SD 카드에서는 액세스할 수 없습니다. 그러나 개조는 (SD 카드가 아닌) 내부 메모리에 설치되므로 **콘솔은 개조된 상태로 유지됩니다**.
 
 만약 새로운 SD 카드를 구입했을 경우, 새로운 SD 카드를 포맷하고 ([Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux))), 그 후 이전 SD 카드에서 새로운 SD 카드로 모든 파일을 복사 붙여넣기 하면 됩니다. 콘솔을 커펌하기 전이나 후애도 가능합니다.
 

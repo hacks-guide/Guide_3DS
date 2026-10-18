@@ -53,6 +53,6 @@ Luma3DS 버전이 8.0 또는 그 이상이면, [CFW 복구 / 업데이트](resto
 
 ::: danger
 
-If you see something not described by the above options, join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) and ask, in English, for help.
+위의 옵션에 설명되지 않은 것이 표시되면 [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp)에 참가하여 영어로 도움을 요청해 주세요.
 
 :::

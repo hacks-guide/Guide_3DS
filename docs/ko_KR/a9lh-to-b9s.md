@@ -33,7 +33,7 @@
 
 ::: info
 
-For all steps in this section, if any of the files already exist, overwrite them with the new files.
+이 섹션의 모든 단계에서 파일이 이미 존재하는 경우 새 파일로 덮어쓰세요.
 
 :::
 

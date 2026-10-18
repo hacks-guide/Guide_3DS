@@ -25,7 +25,7 @@ SD 카드를 삽입한 채로 콘솔의 전원을 켜고, MSET9의 상태를 다
 
 :::details Mii Maker extdata: Missing!
 
-Mii Maker data was not found on the SD card. Please power on your console with your SD inserted, then launch Mii Maker, then check the MSET9 status again.
+SD 카드에서 Mii Maker 데이터를 찾을 수 없습니다. SD 카드를 삽입한 상태로 콘솔의 전원을 켜고, Mii Maker를 실행한 다음, MSET9 상태를 다시 확인해 주세요.
 
 만약 이래도 작동하지 않으면, SD 카드를 포맷해야 합니다:
 
@@ -38,14 +38,14 @@ Mii Maker data was not found on the SD card. Please power on your console with y
 
 :::details Title database: Not initialized!
 
-Ensure that you have reset the title database.
+타이틀 데이터베이스를 초기화했는지 확인해 주세요.
 
-- Please power on your console with your SD inserted
+- SD 카드를 삽입한 상태로 콘솔의 전원을 켜 주세요
 - 본체 설정을 실행한 후 `데이터 관리` -> `Nintendo 3DS 데이터 관리` -> `소프트웨어 관리` -> 초기화 ([영어 사진](/images/screenshots/database-reset.jpg))로 이동해 주세요.
   - 이 과정은 데이터를 삭제하지 않습니다.
-- If you get a reset prompt, after resetting, power off your console and start again from [Section I Step 14](installing-boot9strap-(mset9-cli)#section-i---prep-work)
+- 초기화 프롬프트가 표시되면 초기화 후 콘솔의 전원을 끄고 [섹션 I 14단계](installing-boot9strap-(mset9-cli)#section-i---prep-work)부터 다시 시작해 주세요
 
-If you do _not_ getting a reset prompt, your SD card needs to be formatted:
+초기화 프롬프트가 표시되지 _않으면_ SD 카드를 포맷해야 합니다:
 
 1. SD 카드의 전체 데이터를 PC에 복사해두세요
 2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
@@ -63,9 +63,9 @@ If you do _not_ getting a reset prompt, your SD card needs to be formatted:
 
 :::: details Error 01: Couldn't find Nintendo 3DS folder
 
-You are not running MSET9 from the root of the SD card, or the SD card is missing the Nintendo 3DS folder.
+SD 카드의 루트에서 MSET9을 실행하지 않거나, SD 카드에 Nintendo 3DS 폴더가 없습니다.
 
-Remember, your SD card should look like this:
+SD 카드는 다음과 같이 보여야 합니다:
 
 ::: info
 
@@ -73,7 +73,7 @@ Remember, your SD card should look like this:
 
 :::
 
-If your SD card layout is correct, then your SD card most likely isn't being read by your console and needs to be formatted:
+SD 카드 레이아웃이 올바른 경우 콘솔이 SD 카드를 읽지 못하고 있을 가능성이 높으므로 포맷이 필요합니다:
 
 1. SD 카드의 전체 데이터를 PC에 복사해두세요
 2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
@@ -84,29 +84,29 @@ If your SD card layout is correct, then your SD card most likely isn't being rea
 
 :::details Error 02: Your SD is write protected
 
-Write-protection is enabled on this SD card. If you are using a full-size SD card, ensure that the lock is flipped in the [upright position](/images/sdlock.png). Otherwise, try ejecting and reinserting your SD card.
+이 SD 카드에 쓰기 금지가 활성화되어 있습니다. 풀 사이즈 SD 카드를 사용하는 경우 잠금 장치가 [위쪽 위치](/images/sdlock.png)로 전환되어 있는지 확인해 주세요. 그렇지 않으면 SD 카드를 뺐다가 다시 삽입해 보세요.
 
 :::
 
 :::details Error 04: You don't have 1 ID0, you have (#)!
 
-You have multiple ID0 folders. To determine the correct folder, follow these instructions:
+여러 개의 ID0 폴더가 있습니다. 올바른 폴더를 확인하려면 다음 지침을 따르세요:
 
 1. `Nintendo 3DS` 폴더를 `BACKUP_Nintendo 3DS` 폴더로 이름을 변경해 주세요
 2. SD 카드를 콘솔에 다시 삽입해 주세요
 3. 콘솔의 전원을 켜 주세요
 4. 콘솔이 SD 카드 데이터를 생성할 때까지 기다려 주세요
-   - Your applications will have disappeared. 이는 정상이며, 잠시 후에 고쳐질 것입니다.
+   - 애플리케이션이 사라졌을 것입니다. 이는 정상이며, 잠시 후에 고쳐질 것입니다.
 5. 콘솔의 전원을 꺼 주세요
 6. SD 카드를 컴퓨터에 삽입해 주세요
 7. SD 카드의 `Nintendo 3DS` 폴더를 열어 주세요
-8. Write down the first few characters of the folder you see
-   - This is your true ID0, which we will keep in the real Nintendo 3DS folder
-9. Delete the ID0 from the current `Nintendo 3DS` folder
-10. Move the true ID0 folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
-11. If it exists, move the `Private` folder from the `BACKUP_Nintendo 3DS` folder to the `Nintendo 3DS` folder
+8. 보이는 폴더의 첫 몇 글자를 적어 주세요
+   - 이것이 진짜 ID0이며, 실제 Nintendo 3DS 폴더에 보관할 것입니다
+9. 현재 `Nintendo 3DS` 폴더에서 ID0을 삭제해 주세요
+10. `BACKUP_Nintendo 3DS` 폴더에서 진짜 ID0 폴더를 `Nintendo 3DS` 폴더로 이동해 주세요
+11. `Private` 폴더가 존재하는 경우 `BACKUP_Nintendo 3DS` 폴더에서 `Nintendo 3DS` 폴더로 이동해 주세요
 
-Once you've done this, continue from [Section I Step 3](installing-boot9strap-(mset9-cli)#section-i---prep-work).
+이 작업을 완료한 후 [섹션 I 3단계](installing-boot9strap-(mset9-cli)#section-i---prep-work)부터 계속해 주세요.
 
 :::
 
@@ -118,15 +118,15 @@ Once you've done this, continue from [Section I Step 3](installing-boot9strap-(m
 
 :::details Error 06: You need at least 16MB free
 
-Your SD card does not have enough space to trigger MSET9. Free up some space and try again.
+SD 카드에 MSET9을 실행하기에 충분한 공간이 없습니다. 공간을 확보하고 다시 시도해 주세요.
 
-At the end of this guide, you will need at least 1.3GB to make a NAND backup, so it's best to free up at least that much.
+이 가이드의 마지막에는 NAND 백업을 만들기 위해 최소 1.3GB가 필요하므로 최소한 그 정도의 공간을 확보하는 것이 가장 좋습니다.
 
 :::
 
 :::details Error 07: One or more files are missing or malformed!
 
-One or more files that MSET9 needs to run is missing or corrupted. Re-download the [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest) and extract it to the root of your SD card, replacing all existing files, then try again.
+MSET9을 실행하는 데 필요한 하나 이상의 파일이 누락되었거나 손상되었습니다. [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest)을 다시 다운로드하고 SD 카드의 루트에 압축을 풀어 기존 파일을 모두 교체한 다음 다시 시도해 주세요.
 
 :::
 
@@ -138,13 +138,13 @@ One or more files that MSET9 needs to run is missing or corrupted. Re-download t
 
 :::details FileNotFoundError: [Errno 2] No such file or directory
 
-To manually remove MSET9, follow these instructions:
+MSET9을 수동으로 제거하려면 다음 지침을 따르세요:
 
 1. SD 카드의 `Nintendo 3DS` 폴더를 열어 주세요
-2. Open the 32 character long folder that you see
-3. You should see two folders, delete the folder containing garbled text
-4. If the remaining folder ends with _user-id1, remove _user-id1 by renaming it
-5. MSET9 is now removed, consider this a completion of Section IV
+2. 보이는 32자 길이의 폴더를 열어 주세요
+3. 두 개의 폴더가 보일 것입니다. 깨진 텍스트가 포함된 폴더를 삭제해 주세요
+4. 남은 폴더가 _user-id1로 끝나는 경우 이름을 변경하여 _user-id1을 제거해 주세요
+5. 이제 MSET9이 제거되었습니다. 이것을 섹션 IV의 완료로 간주하세요
 
 :::
 
@@ -152,36 +152,36 @@ To manually remove MSET9, follow these instructions:
 
 :::details Red screen after reinserting SD card (Section II Step 11)
 
-You may be missing `SafeB9S.bin` from the root of your SD card, or the file may be corrupted. Copy it from the MSET9 `.zip`, replacing any existing files then follow these instructions to remove the trigger file:
+SD 카드의 루트에서 `SafeB9S.bin`이 누락되었거나 파일이 손상되었을 수 있습니다. MSET9 `.zip`에서 복사하여 기존 파일을 교체한 다음 다음 지침에 따라 트리거 파일을 제거해 주세요:
 
-1. Force power off your console by holding the Power button for 20 seconds
+1. 전원 버튼을 20초간 길게 눌러 콘솔의 전원을 강제로 꺼 주세요
 2. SD 카드를 컴퓨터에 삽입해 주세요
 
 <!--@include: ./_include/mset9-chorus.md -->
 
 1. 콘솔의 모델과 버전을 입력한 다음 엔터키를 눌러주세요
    - 현재 상태가 [Injected](/images/screenshots/mset9/mset9-injected.png)로 표시되어야 합니다
-   - If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
-2. Type `4`, then press Enter
-3. Once the window says "Removed trigger file", type `0` and then press Enter
-4. Reinsert the SD card into your console
+   - 트리거 파일을 이미 제거했거나(또는 처음부터 주입하지 않은 경우) 현재 상태는 [Ready](/images/screenshots/mset9/mset9-ready.png)로 표시되며 [섹션 II를 다시 시도](installing-boot9strap-(mset9-cli)#section-ii---mset9)할 수 있습니다
+2. `4`를 입력한 다음 엔터를 눌러 주세요
+3. 창에 "Removed trigger file"이 표시되면 `0`을 입력한 다음 엔터를 눌러 주세요
+4. SD 카드를 콘솔에 다시 삽입해 주세요
 5. 콘솔의 전원을 켜 주세요
-6. Return to [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+6. [섹션 II 1단계](installing-boot9strap-(mset9-cli)#section-ii---mset9)로 돌아가 주세요
 
-Alternatively, your SD card may be improperly formatted or partitioned. After removing the trigger file, format it:
+또는 SD 카드가 잘못 포맷되거나 파티션되었을 수 있습니다. 트리거 파일을 제거한 후 포맷해 주세요:
 
 1. SD 카드의 전체 데이터를 PC에 복사해두세요
 2. SD 카드를 포맷해 주세요 ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 3. PC에 복사해둔 데이터를 다시 SD 카드에 복사해 주세요
-4. Start again from from [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+4. [섹션 II 1단계](installing-boot9strap-(mset9-cli)#section-ii---mset9)부터 다시 시작해 주세요
 
 :::
 
 :::details System Settings loading infinitely after reinserting the SD card
 
-You most likely did something different from the MSET9 instructions, selected the wrong model/version, or your SD card needs to be formatted. Ensure you are choosing the correct [model](/images/3dsmodels.png) and firmware version when opening the script.
+MSET9 지침과 다른 작업을 수행했거나, 잘못된 모델/버전을 선택했거나, SD 카드를 포맷해야 할 가능성이 높습니다. 스크립트를 열 때 올바른 [모델](/images/3dsmodels.png) 및 펌웨어 버전을 선택했는지 확인해 주세요.
 
-Follow these instructions to remove the trigger file and to retry Section II:
+트리거 파일을 제거하고 섹션 II를 다시 시도하려면 다음 지침을 따르세요:
 
 1. Force power off your console by holding the Power button for 20 seconds
 2. SD 카드를 컴퓨터에 삽입해 주세요
