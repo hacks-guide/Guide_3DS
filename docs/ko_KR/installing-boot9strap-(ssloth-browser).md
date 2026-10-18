@@ -21,7 +21,7 @@ SSLoth는 시스템 버전 11.13.0 및 이전 버전에 있는 사용자가 브�
 - 최신 버전의 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/download/v0.0.7/SafeB9SInstaller-20170605-122940.zip) (직접 다운로드)
 - 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/download/1.4/boot9strap-1.4.zip) (직접 다운로드)
 - 최신 버전의 [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest) (Luma3DS `.zip` 파일)
-- 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest`) (`otherapp.bin`)
+- 최신 버전의 [universal-otherapp](https://github.com/TuxSH/universal-otherapp/releases/latest) (`otherapp.bin`)
 
 ## 진행 방법
 
