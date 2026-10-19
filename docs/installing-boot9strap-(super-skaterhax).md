@@ -105,8 +105,10 @@ A video detailing these steps is available [here](https://www.youtube.com/watch?
 In this section, you will install custom firmware onto your console.
 
 1. When prompted, input the key combo given on the top screen to install boot9strap
-    + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax)
-1. Once it is complete, press (A) to reboot your console
+    + If a step on the lower screen has red-colored text, and you are not prompted to input a key combo, [follow this troubleshooting guide](troubleshooting-super-skaterhax#sighaxed-firm-was-not-installed-check-lower-screen-for-more-info)
+    + If the top screen is blank **and** you see "Crypto Status - all checks passed" on the bottom screen, you will have to enter the key combo blindly. Press the following buttons on your console in this order:
+        + D-Pad Left, D-Pad Down, D-Pad Right, D-Pad Up, A 
+1. Once it is complete (all seven steps on the bottom screen are green), press (A) to reboot your console
 <!--@include: ./_include/configure-luma3ds.md -->
 
 <!--@include: ./_include/luma3ds-installed-note.md -->
