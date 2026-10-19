@@ -1,6 +1,6 @@
-import { el_GR as localeData } from './strings'
+import { pt_BR as localeData } from './strings/index.mjs'
 
-const locale = "el_GR";
+const locale = "pt_BR";
 
 const sidebar_common = {
 	text: localeData.other,
@@ -244,8 +244,8 @@ const themeConfig = {
 };
 
 export default {
-	lang: "el",
-	label: "Ελληνικά",
+	lang: "pt",
+	label: "Português do Brasil",
     title: localeData.title,
     description: localeData.description,
     themeConfig: themeConfig

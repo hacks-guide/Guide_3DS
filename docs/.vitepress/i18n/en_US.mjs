@@ -1,4 +1,4 @@
-import { en_US as localeData } from './strings'
+import { en_US as localeData } from './strings/index.mjs'
 
 const sidebar_common = {
 	text: localeData.other,
