@@ -170,6 +170,8 @@ If your computer is running Windows, file extensions may be hidden by default, w
 
 ::::
 
+<a id="eject-sd-card"></a>
+
 :::: details What does it mean to "eject" an SD card?
 
 ::: info

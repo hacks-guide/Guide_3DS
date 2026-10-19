@@ -60,6 +60,8 @@ These instructions will only work on consoles with a Luma3DS version of 8.0 or h
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
 1. Copy `DSiWareUninstaller.3dsx` to the `/3ds/` folder on your SD card
 1. Copy `safety_test.gm9` and `uninstall_cfw.gm9` to the `/gm9/scripts/` folder on your SD card
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 
 ### Section II - DS Mode Tests
