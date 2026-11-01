@@ -38,7 +38,7 @@ Les usages répandus pour un custom firmware sont :
 
 Ce guide va :
 
-- Installer **boot9strap** et le **custom firmware Luma3DS** sur des consoles 3DS/2DS commerciales non modifiées
+- Installer **boot9strap** et le **custom firmware Luma3DS** sur des consoles 3DS/2DS du commerce non modifiées
   - Luma3DS supprimera automatiquement le verrouillage régional et vous permettra d'exécuter des logiciels non signés
 - Installer divers logiciels homebrew, tels qu'un programme d'installation de packages, un gestionnaire de fichiers de sauvegarde et une boutique d'applications homebrew
 - Faire des sauvegardes de fichiers système critiques qui peuvent aider à éviter les bricks (et à récupérer les données le cas échéant)

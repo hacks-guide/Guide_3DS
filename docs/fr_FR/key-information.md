@@ -20,7 +20,7 @@ Chaque section est réduite par défaut. Cliquez ou appuyez sur le nom de la sec
 
 :::
 
-Ce guide fonctionne avec toutes les consoles commerciales de la famille Nintendo 3DS (y compris la 3DS, les 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL et New 2DS XL/LL), indépendamment de la région ou du firmware. Il n'est PAS compatible avec la famille de consoles DSi (DSi, DSi XL/LL). Pour les consoles de la famille DSi, veuillez consulter [ce guide](https://dsi.cfw.guide).
+Ce guide fonctionne avec toutes les consoles du commerce de la famille Nintendo 3DS (y compris la 3DS, les 3DS XL/LL, 2DS, New 3DS, New 3DS XL/LL et New 2DS XL/LL), indépendamment de la région ou du firmware. Il n'est PAS compatible avec la famille de consoles DSi (DSi, DSi XL/LL). Pour les consoles de la famille DSi, veuillez consulter [ce guide](https://dsi.cfw.guide).
 
 
 

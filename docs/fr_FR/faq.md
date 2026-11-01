@@ -22,7 +22,7 @@
 
 :::details Avec quelles consoles ce guide est-il compatible ?
 
-Ce guide est compatible avec toutes les consoles de la famille 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Si votre version du système affiche "0.0.0-0", alors vous pourriez être en possession d'une console pour développeur.
+Ce guide est compatible avec toutes les consoles du commerce de la famille 3DS (3DS, 3DS XL, 2DS, New 3DS, New 3DS XL, New 2DS XL). Si votre version du système affiche "0.0.0-0", alors vous pourriez être en possession d'une console pour développeur.
 
 :::
 
