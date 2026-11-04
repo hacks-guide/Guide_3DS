@@ -54,6 +54,8 @@ For all steps in this section, if any of the files already exist, overwrite them
     
     :::
 
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 
 ### Section II - Installing boot9strap

@@ -22,4 +22,6 @@
     + These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future
 1. Delete `<date>_<serialnumber>_sysnand_##.bin` and `<date>_<serialnumber>_sysnand_##.bin.sha` from the `/gm9/out/` folder on your SD card after copying it
     + The other backup files are negligible in size and may be kept on your SD card for ease of access
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
