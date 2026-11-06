@@ -62,6 +62,14 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 1. Reinsert your SD card into your console
 1. Power on your console
 1. Open Mii Maker
+    + Ensure that you open Mii Maker, not Mii Plaza. Mii Maker can be identified using this logo:
+
+    ::: info
+
+    ![](/images/screenshots/mset9/miimaker.jpg)
+
+    :::
+
 1. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the HOME Menu
     + You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
     + If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Exit Mii Maker and return to the HOME Menu
