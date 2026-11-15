@@ -77,20 +77,31 @@ Dans cette section, vous préparerez l'exploit MSET9 en créant **temporairement
    :::
 
    - Assurez-vous que le modèle et la version corrects de la console sont affichés
+
 2. Tapez `1`, puis appuyez sur Entrée pour commencer le processus de création du MSET9 ID1
+
 3. Après avoir examiné l'avertissement, tapez `1` à nouveau et appuyez sur Entrée pour l'accepter
    - Si vous avez une erreur, consultez le [dépannage](troubleshooting-mset9), puis réessayez
+
 4. Si vous voyez le message "Created hacked ID1.", appuyez sur Entrée pour fermer le script MSET9
    - Votre console paraîtra vide / sans aucune application installée par l'utilisateur sur le menu HOME. **Cela est attendu.** Vos données reviendront à une étape ultérieure
+
 5. Réinsérez votre carte SD dans votre console
+
 6. Allumez votre console
+
 7. Ouvrez l'Éditeur Mii
+   - Ensure that you open Mii Maker, not Mii Plaza. Mii Maker can be identified using the ![Mii Maker](/images/screenshots/mset9/miimaker.png){height="24px" width="24px"} logo
+
 8. Attendez que votre console atteigne l'écran [Bienvenue dans l'Éditeur Mii](/images/screenshots/mset9/mii-welcome.png), puis quittez l'Éditeur Mii et retournez au menu HOME
    - Vous verrez peut-être [cet écran](/images/screenshots/mset9/mii-extdata.png), qui indique que les données nécessaires ont été créées
    - Si vous atteignez l'écran de l'Éditeur Mii [normal](/images/screenshots/mset9/mii-existing.png), alors les données existent déjà. Quittez l'Éditeur Mii et retournez au menu HOME
+
 9. Lancez les paramètres du système et accédez à `Gestion des données` -> `Nintendo 3DS` -> `Logiciel` -> Réinitialiser ([image](/images/screenshots/database-reset.jpg))
    - Cela n'effacera aucune de vos données
+
 10. Éteignez votre console en appuyant sur le bouton POWER puis appuyez sur Éteindre sur l'écran tactile
+
 11. Insérez votre carte SD dans votre ordinateur
 
 <!--@include: ./_include/mset9-chorus.md -->

@@ -77,20 +77,31 @@ In questa sezione preparerai l'exploit MSET9 creando **temporaneamente** un nuov
    :::
 
    - Assicurarsi che siano visualizzati il modello di console e la versione corretti
+
 2. Digita `1`, quindi premi Invio per iniziare il processo di creazione dell'ID1 di MSET9
+
 3. Dopo aver letto il disclaimer, digita di nuovo `1` e premi Invio per accettarlo
    - Se ottieni un errore, controlla la pagina [Risoluzione dei problemi](troubleshooting-mset9), quindi riprova
+
 4. Se vedi il messaggio "Created hacked ID1.", premi Invio per chiudere lo script di MSET9
    - La tua console sembrerà aver perso la maggior parte dei dati, e non appariranno le applicazioni installate dall'utente nel menu HOME. **È normale.** I tuoi dati saranno ripristinati in un secondo momento
+
 5. Reinserisci la scheda SD nella tua console
+
 6. Accendi la tua console
+
 7. Avvia il Centro di creazione Mii
+   - Ensure that you open Mii Maker, not Mii Plaza. Mii Maker can be identified using the ![Mii Maker](/images/screenshots/mset9/miimaker.png){height="24px" width="24px"} logo
+
 8. Attendi che la console raggiunga la schermata [Benvenuto al Centro di creazione Mii](/images/screenshots/mset9/mii-welcome.png), quindi esci per tornare al menu HOME
    - Potresti vedere [questa schermata](/images/screenshots/mset9/mii-extdata.png), che indica che i dati necessari sono stati creati
    - Se raggiungi la [normale](/images/screenshots/mset9/mii-existing.png) schermata del Centro di creazione Mii vuol dire che i dati esistono già. Esci dal Centro di creazione Mii e torna al menu HOME
+
 9. Avvia le Impostazioni della console e vai su `Gestione dati` -> `Nintendo 3DS` -> `Software` -> Reset ([immagine](/images/screenshots/database-reset.jpg))
    - Non verranno cancellati i tuoi dati
+
 10. Spegni la console premendo il pulsante di accensione, quindi tocca "Spegni" sullo schermo inferiore
+
 11. Inserisci la scheda SD nel tuo computer
 
 <!--@include: ./_include/mset9-chorus.md -->

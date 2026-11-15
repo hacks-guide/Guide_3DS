@@ -4,7 +4,7 @@
 
 この後を読む前に、[ntrboot](ntrboot) の情報を全て読んだことを確認してください。
 
-この方法は、改造されていない3DSと対応しているフラッシュカード以外の必要の物は必要ありません。 この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルを実行します。 このことは、`.nds`を3DSで実行するのにフラッシュカードが対応していることが必要です。 [ntrboot](ntrboot) にあるフラッシュカードの対応表を見てください。
+この方法は、改造されていない3DSと対応しているフラッシュカード以外の必要の物は必要ありません。この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルを実行します。このことは、`.nds`を3DSで実行するのにフラッシュカードが対応していることが必要です。 [ntrboot](ntrboot) にあるフラッシュカードの対応表を見てください。
 
 ::: danger
 
@@ -50,6 +50,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
 
 :::

@@ -74,6 +74,7 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
 12. Kapcsold be a konzolod
 
 13. Nyisd meg a Mii Maker alkalmazást
+    - Legyél biztos abban, hogy a Mii Maker-t nyitod meg, nem a Mii Plaza-t. A Mii Maker azonosítható a ![Mii Maker](/images/screenshots/mset9/miimaker.png){height="24px" width="24px"} logóval
 
 14. Várj amíg a konzolod elérí a [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) képernyőt, majd lépj ki a Mii Maker-ből és térj vissza a HOME képernyőre
     - [Ezt a képernyőt láthatod](/images/screenshots/mset9/mii-extdata.png), ami azt mutatja, hogy a szükséges adatok létrejöttek

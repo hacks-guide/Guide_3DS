@@ -77,20 +77,31 @@ Ebben a lépésben előkészülsz az MSET9 exploitra azzal, hogy **átmenetileg*
    :::
 
    - Legyél biztos abban, hogy a helyes model és verzió megjelenített
+
 2. Írj `1`-et és nyomj Enter-t, hogy elkezd az MSET9 ID1 létrehozásának folyamatát
+
 3. A nyilatkozatot elolvasását követően írj `1`-est és nyomj Enter-t annak elfogadásához
    - Ha hibát kapsz, nézd meg a [hibaelhárítási útmutatót](troubleshooting-mset9), majd próbáld újra
+
 4. Ha a "Created hacked ID1." üzenetet látod, nyomj Enter-t az MSET9 szkript bezárásához
    - A konzolod úgy fog tűnni, hogy elvesztette a legtöbb adatot / nincs felhasználó által telepített alkalmazást a HOME menüben. **Ez elvárt működés** Az adataid visszatérnek egy későbbi lépésben
+
 5. Tedd vissza az SD kártyád a konzoldba
+
 6. Kapcsold be a konzolod
+
 7. Nyisd meg a Mii Maker alkalmazást
+   - Legyél biztos abban, hogy a Mii Maker-t nyitod meg, nem a Mii Plaza-t. A Mii Maker azonosítható a ![Mii Maker](/images/screenshots/mset9/miimaker.png){height="24px" width="24px"} logóval
+
 8. Várj amíg a konzolod elérí a [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) képernyőt, majd lépj ki a Mii Maker-ből és térj vissza a HOME képernyőre
    - [Ezt a képernyőt láthatod](/images/screenshots/mset9/mii-extdata.png), ami azt mutatja, hogy a szükséges adatok létrejöttek
    - Ha a [normál](/images/screenshots/mset9/mii-existing.png) Mii Maker képernyőre jutottál, akkor az adat már létezik. Lépj ki a Mii Maker-ből, és térj vissza a HOME menübe
+
 9. Indítsd el a System Settings-et és navigálj ide: `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
    - Ez nem fogja törölni az adataidat
+
 10. Kapcsold ki a konzolod a power gomb megnyomásával, majd a Power Off felirat megérintésével az alsó képernyőn
+
 11. Helyezd az SD kártyád a számítógépbe
 
 <!--@include: ./_include/mset9-chorus.md -->

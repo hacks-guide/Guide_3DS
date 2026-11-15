@@ -10,7 +10,7 @@
 
 ::: warning
 
-This page requires an iPhone or iPad running iOS/iPadOS 14.0 or higher. Jika punya komputer bersistem Windows, macOS, atau Linux, ikuti saja [Memasang boot9strap (MSET9 CLI)](installing-boot9strap-\(mset9-cli\)). Atau jika punya ponsel/tablet Android atau Chromebook, ikuti saja [Memasang boot9strap (MSET9 Play Store)](installing-boot9strap-\(mset9-play-store\)). Jika tidak punya perangkat tersebut, berarti perlu [eksploit yang lain](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) (gunakan penerjemah).
+This page requires an iPhone or iPad running iOS/iPadOS 14.0 or higher. Jika punya komputer bersistem Windows, macOS, atau Linux, ikuti saja [Memasang boot9strap (MSET9 CLI)](installing-boot9strap-(mset9-cli)). Atau jika punya ponsel/tablet Android atau Chromebook, ikuti saja [Memasang boot9strap (MSET9 Play Store)](installing-boot9strap-(mset9-play-store)). Jika tidak punya perangkat tersebut, berarti perlu [eksploit yang lain](https://wiki.hacks.guide/wiki/3DS:Alternate_Exploits) (gunakan penerjemah).
 
 :::
 
@@ -40,13 +40,11 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
 
 <!--@include: ./_include/ish-chorus.md -->
 
-    ```
     ::: info
     
     ![](/images/screenshots/mset9/mset9-ish-select.png)
     
     :::
-    ```
 
 1. Type the number corresponding to your console model and version, then tap Return
 
@@ -59,20 +57,31 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    :::
 
    - Pastikan versi dan model yang tampil itu sesuai konsol
+
 2. Type `1`, then tap Return to begin the process of creating the MSET9 ID1
+
 3. After reviewing the disclaimer, type `1` again and tap Return to accept it
    - Jika galat, periksa ke [sidik gangguan](troubleshooting-mset9), lalu coba lagi
+
 4. If you see the message "Created hacked ID1.", tap Return to close the MSET9 script
    - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **Memang seperti ini.** Data akan kembali di langkah berikutnya
+
 5. Sisip kembali kartu SD ke konsol
+
 6. Nyalakan daya konsol
+
 7. Buka Mii Maker
+   - Ensure that you open Mii Maker, not Mii Plaza. Mii Maker can be identified using the ![Mii Maker](/images/screenshots/mset9/miimaker.png){height="24px" width="24px"} logo
+
 8. Tunggu konsol sampai layar [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png), lalu keluar dari Mii Maker dan balik ke HOME Menu
    - Mungkin muncul [layar ini](/images/screenshots/mset9/mii-extdata.png), ini menandakan data yang perlu sudah dibuat
    - Jika hanya sampai layar Mii Maker [biasa](/images/screenshots/mset9/mii-existing.png), berarti sudah ada data. Keluar dari Mii Maker dan balik ke HOME Menu
+
 9. Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
    - Ini tidak akan menghapus data
+
 10. Matikan daya konsol dengan menekan tombol daya lalu sentuh Power Off di layar bawah
+
 11. Insert your SD card into your iPhone/iPad (using an adapter)
 
 <!--@include: ./_include/ish-chorus.md -->

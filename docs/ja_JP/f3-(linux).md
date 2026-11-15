@@ -6,7 +6,7 @@
 
 SDカードのサイズとコンピュータのパフォーマンスによって、かかる時間は異なり、数時間もかかる場合があります！
 
-このページはLinuxユーザー向けです。 If you are not on Linux, check out the [H2testw (Windows)](h2testw-\(windows\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
+このページはLinuxユーザー向けです。 If you are not on Linux, check out the [H2testw (Windows)](h2testw-(windows)) or [F3XSwift (Mac)](f3xswift-(mac)) pages.
 
 ## What You Need
 
@@ -20,7 +20,7 @@ SDカードのサイズとコンピュータのパフォーマンスによって
 4. パソコンにSDカードを入れます
 5. SDカードをマウントします
 6. `./f3write <SDカードのマウントポイント>`を実行します
-7. 処理が完了するまで待ちます。 下記はサンプル出力です。
+7. 処理が完了するまで待ちます。下記はサンプル出力です。
 
 ```bash
 $ ./f3write /media/michel/6135-3363/
@@ -33,7 +33,7 @@ Average Writing speed: 4.90 MB/s
 ```
 
 1. `./f3read <SDカードのマウントポイント>`を実行します
-2. 処理が完了するまで待ちます。 下記はサンプル出力です。
+2. 処理が完了するまで待ちます。下記はサンプル出力です。
 
 ```bash
 $ ./f3read /media/michel/6135-3363/

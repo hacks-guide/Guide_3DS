@@ -57,20 +57,31 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    :::
 
    - Ensure that the correct console model and version is displayed
+
 2. Type `1`, then tap Return to begin the process of creating the MSET9 ID1
+
 3. After reviewing the disclaimer, type `1` again and tap Return to accept it
    - If you get an error, check the [troubleshooting](troubleshooting-mset9), then try again
+
 4. If you see the message "Created hacked ID1.", tap Return to close the MSET9 script
    - Your 3DS will appear to have no data / no user-installed apps on HOME Menu. **This is expected.** Your data will come back at a later step
+
 5. Reinsert your SD card into your console
+
 6. Power on your console
+
 7. Open Mii Maker
+   - Ensure that you open Mii Maker, not Mii Plaza. Mii Maker can be identified using the ![Mii Maker](/images/screenshots/mset9/miimaker.png){height="24px" width="24px"} logo
+
 8. Wait for your console to reach the [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) screen, then exit Mii Maker and return to the HOME Menu
    - You may see [this screen](/images/screenshots/mset9/mii-extdata.png), which indicates the necessary data has been created
    - If you just reach the [normal](/images/screenshots/mset9/mii-existing.png) Mii Maker screen, then the data already exists. Exit Mii Maker and return to the HOME Menu
+
 9. Launch System Settings and navigate to `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([image](/images/screenshots/database-reset.jpg))
    - This will not wipe any of your data
+
 10. Power off your console by pressing the power button then tapping Power Off on the lower screen
+
 11. Insert your SD card into your iPhone/iPad (using an adapter)
 
 <!--@include: ./_include/ish-chorus.md -->

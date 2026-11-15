@@ -2,7 +2,7 @@
 
 ## Cookies
 
-このサイトでは、ガイドの指示に従ってルーティングユーザーの改造を容易にするためにCookieを使用しています。 クッキーを使用すると、ページのサイドバーが現状の進行状況をサイトに表示し、ユーザーが手順をより簡単にナビゲートできるようになります。
+このサイトでは、ガイドの指示に従ってルーティングユーザーの改造を容易にするためにCookieを使用しています。クッキーを使用すると、ページのサイドバーが現状の進行状況をサイトに表示し、ユーザーが手順をより簡単にナビゲートできるようになります。
 
 ## Embedded Content From Other Websites
 
@@ -12,7 +12,7 @@ This site may include embedded content (e.g. videos, images, articles, etc.). �
 
 ## Analytics
 
-このサイトでは、Googleアナリティクスを使用してトラフィックを監視し、分析しています。 このサイトはGithub Pagesによってホストされており、ユーザーに関するデータを収集し、Cookieを使用することがあります。 追加のサードパーティの追跡を埋め込み、このサイトとのやり取りを監視します。 Github Pages についての詳細は、[GitHub Privacy Statement](https://help.github.com/en/articles/github-privacy-statement)を参照してください。
+このサイトでは、Googleアナリティクスを使用してトラフィックを監視し、分析しています。このサイトはGithub Pagesによってホストされており、ユーザーに関するデータを収集し、Cookieを使用することがあります。 追加のサードパーティの追跡を埋め込み、このサイトとのやり取りを監視します。 Github Pages についての詳細は、[GitHub Privacy Statement](https://help.github.com/en/articles/github-privacy-statement)を参照してください。
 
 ## Information Collected
 
@@ -20,7 +20,7 @@ This site may include embedded content (e.g. videos, images, articles, etc.). �
 
 ## Third-Party Websites
 
-このサイトは、ユーザーが使用または参照するために他のサイトにリンクすることがあります。 このサイトは他のサイトのプライバシーポリシーには責任を負いません。 他のウェブサイトのプライバシーポリシーは、このポリシーと異なる場合があることにご注意ください。
+このサイトは、ユーザーが使用または参照するために他のサイトにリンクすることがあります。このサイトは他のサイトのプライバシーポリシーには責任を負いません。他のウェブサイトのプライバシーポリシーは、このポリシーと異なる場合があることにご注意ください。
 
 ## Changes to Privacy Policy
 

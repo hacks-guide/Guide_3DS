@@ -74,6 +74,7 @@
 12. Ενεργοποιήστε την κονσόλα σας
 
 13. Ανοίξτε το Mii Maker
+    - Βεβαιωθείτε ότι έχετε ανοίξει το Mii Maker, όχι το Mii Plaza. Μπορείτε να αναγνωρίσετε το Mii Maker από το λογότυπο του ![Mii Maker](/images/screenshots/mset9/miimaker.png){height="24px" width="24px"}
 
 14. Περιμένετε μέχρι η κονσόλα σας να φτάσει στην οθόνη [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png) και έπειτα, κλείστε το Mii Maker και επιστρέψτε στο μενού «HOME»
     - Ενδέχεται να δείτε [αυτήν την οθόνη](/images/screenshots/mset9/mii-extdata.png), η οποία υποδεικνύει ότι έχουν δημιουργηθεί τα απαραίτητα δεδομένα

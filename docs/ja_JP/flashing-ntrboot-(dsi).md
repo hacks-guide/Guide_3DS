@@ -4,7 +4,7 @@
 
 この後を読む前に、[ntrboot](ntrboot) の情報を全て読んだことを確認してください。
 
-この方法では、フラッシュカードと互換性のあるNintendoDSiにアクセスする必要があります。 この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルをDSiにて実行します。 このことは、`.nds`をDSiで実行するのにフラッシュカードが対応していることが必要です。 [ntrboot](ntrboot) にあるフラッシュカードの対応表を見てください。
+この方法では、フラッシュカードと互換性のあるNintendoDSiにアクセスする必要があります。この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルをDSiにて実行します。このことは、`.nds`をDSiで実行するのにフラッシュカードが対応していることが必要です。 [ntrboot](ntrboot) にあるフラッシュカードの対応表を見てください。
 
 ::: danger
 
@@ -45,6 +45,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
 
 :::

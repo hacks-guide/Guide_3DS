@@ -77,20 +77,31 @@ In this section, you will prepare the MSET9 exploit by **temporarily** creating 
    :::
 
    - 화면에 표시된 모델과 버전이 정확한지 확인해 주세요
+
 2. `1`을 입력 후, 엔터 버튼을 눌러 MSET9 ID1을 생성하는 과정을 시작하세요
+
 3. 면책 사항을 확인한 뒤, `1`을 다시 누른 후 엔터를 눌러 수락하세요
    - 에러 발생시, [문제 해결](troubleshooting-mset9)을 확인 후 다시 시도해 주세요
+
 4. "Created hacked ID1." 이라는 메시지가 나오면, 엔터를 눌러 MSET9 스크립트를 닫아주세요
    - Your console will appear to lose most data / no user-installed apps on HOME Menu. **이건 예상된 결과입니다.** 이후 과정을 거치면서 원본 데이터는 복구될 것입니다
+
 5. SD 카드를 콘솔에 다시 삽입해 주세요
+
 6. 콘솔의 전원을 켜 주세요
+
 7. Mii 스튜디오를 열어주세요
+   - Ensure that you open Mii Maker, not Mii Plaza. Mii Maker can be identified using the ![Mii Maker](/images/screenshots/mset9/miimaker.png){height="24px" width="24px"} logo
+
 8. 콘솔이 [Mii 스튜디오에 오신 것을 환영합니다! (영어 사진)](/images/screenshots/mset9/mii-welcome.png) 화면까지 오면, Mii 스튜디오를 종료하고 HOME 메뉴로 나가주세요
    - [이 화면 (영어)](/images/screenshots/mset9/mii-extdata.png)을 보게 될 것입니다. 필요한 파일을 작성하고 있는 것이니 기다려주세요
    - [(영어 사진) 일반적인](/images/screenshots/mset9/mii-existing.png) Mii 스튜디오 화면을 보게된다면, 데이터가 이미 존재하는 것입니다. Mii 스튜디오를 종료한 후 HOME 메뉴로 돌아가세요.
+
 9. 본체 설정을 실행한 후 `데이터 관리` -> `Nintendo 3DS 데이터 관리` -> `소프트웨어 관리` -> 초기화 ([영어 사진](/images/screenshots/database-reset.jpg))로 이동해 주세요.
    - 이 과정은 데이터를 삭제하지 않습니다.
+
 10. Power off your console by pressing the power button then tapping Power Off on the lower screen
+
 11. SD 카드를 컴퓨터에 삽입해 주세요
 
 <!--@include: ./_include/mset9-chorus.md -->

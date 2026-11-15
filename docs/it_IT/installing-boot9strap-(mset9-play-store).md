@@ -74,6 +74,7 @@ In questa sezione preparerai l'exploit MSET9 creando **temporaneamente** un nuov
 12. Accendi la tua console
 
 13. Avvia il Centro di creazione Mii
+    - Ensure that you open Mii Maker, not Mii Plaza. Mii Maker can be identified using the ![Mii Maker](/images/screenshots/mset9/miimaker.png){height="24px" width="24px"} logo
 
 14. Attendi che la console raggiunga la schermata [Benvenuto al Centro di creazione Mii](/images/screenshots/mset9/mii-welcome.png), quindi esci per tornare al menu HOME
     - Potresti vedere [questa schermata](/images/screenshots/mset9/mii-extdata.png), che indica che i dati necessari sono stati creati

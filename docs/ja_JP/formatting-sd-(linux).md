@@ -26,7 +26,7 @@ Several Linux distributions may provide more user-friendly methods for formattin
 4. Linuxの"端末"を起動します
 5. \`watch "lsblk"と入力します。
 6. パソコンにSDカードを入れます
-7. 出力を見ます。 以下のように出力されているでしょう。:
+7. 出力を見ます。以下のように出力されているでしょう。:
    ```
    NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
    mmcblk0     179:0    0   3,8G  0 disk

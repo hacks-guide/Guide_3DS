@@ -77,20 +77,31 @@ Di bagian ini akan menyiapkan eksploit MSET9 dengan membuat profil HOME Menu bar
    :::
 
    - Pastikan versi dan model yang tampil itu sesuai konsol
+
 2. Ketik `1`, lalu tekan Enter untuk memulai proses membuat ID1 MSET9
+
 3. Setelah membaca sangkalan yang ada, ketik `1` dan tekan Enter untuk iya
    - Jika galat, periksa ke [sidik gangguan](troubleshooting-mset9), lalu coba lagi
+
 4. Jika muncul pesan "Created hacked ID1.", tekan Enter untuk menutup naskah MSET9
    - Konsol akan seperti kehilangan aplikasi terpasang / data di HOME Menu. **Memang seperti ini.** Data akan kembali di langkah berikutnya
+
 5. Sisip kembali kartu SD ke konsol
+
 6. Nyalakan daya konsol
+
 7. Buka Mii Maker
+   - Ensure that you open Mii Maker, not Mii Plaza. Mii Maker can be identified using the ![Mii Maker](/images/screenshots/mset9/miimaker.png){height="24px" width="24px"} logo
+
 8. Tunggu konsol sampai layar [Welcome to Mii Maker](/images/screenshots/mset9/mii-welcome.png), lalu keluar dari Mii Maker dan balik ke HOME Menu
    - Mungkin muncul [layar ini](/images/screenshots/mset9/mii-extdata.png), ini menandakan data yang perlu sudah dibuat
    - Jika hanya sampai layar Mii Maker [biasa](/images/screenshots/mset9/mii-existing.png), berarti sudah ada data. Keluar dari Mii Maker dan balik ke HOME Menu
+
 9. Buka System Settings dan navigasi ke `Data Management` -> `Nintendo 3DS` -> `Software` -> Reset ([gambar](/images/screenshots/database-reset.jpg))
    - Ini tidak akan menghapus data
+
 10. Matikan daya konsol dengan menekan tombol daya lalu sentuh Power Off di layar bawah
+
 11. Sisipkan kartu SD ke komputer Anda
 
 <!--@include: ./_include/mset9-chorus.md -->

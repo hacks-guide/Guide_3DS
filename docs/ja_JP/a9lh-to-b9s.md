@@ -4,7 +4,7 @@
 
 This page is for existing arm9loaderhax users to update their consoles to boot9strap.
 
-今後、すべてのLuma3DSのリリースは`.firm`のフォーマットでのみ配信されます。このフォーマットはboot9strapとsighaxだけがサポートしています。 もし、今後もリリースを受け取りたいなら、このページのガイドを使ってアップデートしてください。
+今後、すべてのLuma3DSのリリースは`.firm`のフォーマットでのみ配信されます。このフォーマットはboot9strapとsighaxだけがサポートしています。もし、今後もリリースを受け取りたいなら、このページのガイドを使ってアップデートしてください。
 
 ## What You Need
 
@@ -16,7 +16,7 @@ To use the [magnet](https://wikipedia.org/wiki/Magnet_URI_scheme) links on this 
 
 ::: info
 
-なお、New 3DSのarm9loaderhaxを消去するには`secret_sector.bin`は必須です。boot9strapのインストールには使用しません。 また、New 3DSでなければ`secret_sector.bin`は必要ありません。
+なお、New 3DSのarm9loaderhaxを消去するには`secret_sector.bin`は必須です。boot9strapのインストールには使用しません。また、New 3DSでなければ`secret_sector.bin`は必要ありません。
 
 :::
 

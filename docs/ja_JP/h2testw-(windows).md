@@ -6,7 +6,7 @@
 
 SDカードのサイズとコンピュータのパフォーマンスによって、かかる時間は異なり、数時間もかかる場合があります！
 
-このページはWindowsユーザー向けです。 If you are not on windows, check out the [F3 (Linux)](f3-\(linux\)) or [F3XSwift (Mac)](f3xswift-\(mac\)) pages.
+This page is for Windows users only. If you are not on windows, check out the [F3 (Linux)](f3-(linux)) or [F3XSwift (Mac)](f3xswift-(mac)) pages.
 
 ## What You Need
 

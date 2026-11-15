@@ -4,7 +4,7 @@
 
 この後を読む前に、[ntrboot](ntrboot) の情報を全て読んだことを確認してください。
 
-この方法では、フラッシュカードと互換性のあるNintendoDSもしくはNintendoDS Liteにアクセスする必要があります。 この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルをNDSにて実行します。
+この方法では、フラッシュカードと互換性のあるNintendoDSもしくはNintendoDS Liteにアクセスする必要があります。この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルをNDSにて実行します。
 
 ::: danger
 
@@ -54,6 +54,6 @@ ___
 
 ::: tip
 
-Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-\(ntrboot\))
+Continue to [Installing boot9strap (ntrboot)](installing-boot9strap-(ntrboot))
 
 :::

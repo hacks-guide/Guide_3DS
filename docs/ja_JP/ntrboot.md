@@ -45,7 +45,7 @@ If you already have a flashcart that _isn't_ a DSpico or Ace3DS X, you can check
 
 While the ntrboot exploit works independently of the system version, the ntrboot flasher (which installs the exploit to the cart) is not. This means that, depending on the versions and consoles supported by your flashcart, only certain methods may be available to you.
 
-「Time Bomb」があるカートは、起動できなくなる日付があることに注意してください。 システムクロックがフラッシュカードのファームウェアによって決定された日付に達したことを検出すると、.nds\`ファイルが起動できなくなります。 これを避ける1つの方法は、システムクロックを以前の日付に設定することです。
+「Time Bomb」があるカートは、起動できなくなる日付があることに注意してください。 システムクロックがフラッシュカードのファームウェアによって決定された日付に達したことを検出すると、.nds\`ファイルが起動できなくなります。これを避ける1つの方法は、システムクロックを以前の日付に設定することです。
 
 | Flashcart                                                                                                                    |                  Price |                       "Time Bomb"?                       |                                 3DS Versions?                                 |                           DSi Versions?                           | Other Notes                                                                                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------: | :------------------------------------------------------: | :---------------------------------------------------------------------------: | :---------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -71,7 +71,7 @@ While the ntrboot exploit works independently of the system version, the ntrboot
 
 :::
 
-Ensure your flashcart is able to launch `.nds` files on your console before beginning. フラッシュカードによっては、ファームウェアまたはカーネルファイルをフラッシュカードのSDカードにコピーする必要がある場合があります。 詳細については、特定のフラッシュカートの手順を参照してください。
+Ensure your flashcart is able to launch `.nds` files on your console before beginning. フラッシュカードによっては、ファームウェアまたはカーネルファイルをフラッシュカードのSDカードにコピーする必要がある場合があります。詳細については、特定のフラッシュカートの手順を参照してください。
 
 The usage of this exploit, regardless of the flashing method, requires access to a small magnet if the target console is of a folding style (any 3DS family system that is not the old 2DS with a sleep switch). This is because the exploit requires your console to enter sleep mode while still having access to the buttons.
 
@@ -85,7 +85,7 @@ ntrbootエクスプロイトがインストールされている間は、フラ�
 
 ### Flashing ntrboot (3DS Single System)
 
-この方法は、改造されていない3DSと対応しているフラッシュカード以外の必要の物は必要ありません。 この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルを実行します。 このことは、`.nds`を3DSで実行するのにフラッシュカードが対応していることが必要です。 詳細については、上記のflashcartの表を参照してください。
+この方法は、改造されていない3DSと対応しているフラッシュカード以外の必要の物は必要ありません。この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルを実行します。このことは、`.nds`を3DSで実行するのにフラッシュカードが対応していることが必要です。詳細については、上記のflashcartの表を参照してください。
 
 ::: tip
 
@@ -109,7 +109,7 @@ ___
 
 ### Flashing ntrboot (NDS)
 
-この方法では、フラッシュカードと互換性のあるNintendoDSもしくはNintendoDS Liteにアクセスする必要があります。 この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルをNDSにて実行します。
+この方法では、フラッシュカードと互換性のあるNintendoDSもしくはNintendoDS Liteにアクセスする必要があります。この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルをNDSにて実行します。
 
 ::: tip
 
@@ -121,7 +121,7 @@ ___
 
 ### Flashing ntrboot (DSi)
 
-この方法では、フラッシュカードと互換性のあるNintendoDSiにアクセスする必要があります。 この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルをDSiにて実行します。 このことは、`.nds`をDSiで実行するのにフラッシュカードが対応していることが必要です。 詳細については、上記のflashcartの表を参照してください。
+この方法では、フラッシュカードと互換性のあるNintendoDSiにアクセスする必要があります。この方法は、フラッシュカードを使い、ntrbootフラッシャーが入っている`.nds`ファイルをDSiにて実行します。このことは、`.nds`をDSiで実行するのにフラッシュカードが対応していることが必要です。詳細については、上記のflashcartの表を参照してください。
 
 ::: tip
 
