@@ -24,6 +24,8 @@ For all steps in this section, overwrite any existing files on your SD card.
 1. Create a folder named `boot9strap` on the root of your SD card
 1. Copy `boot9strap.firm` and `boot9strap.firm.sha` from the boot9strap `.zip` to the `/boot9strap/` folder on your SD card
 1. Copy `SafeB9SInstaller.firm` from the SafeB9SInstaller `.zip` to the root of your SD card and rename it to `boot.firm`
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 
     ::: info
@@ -45,6 +47,8 @@ For all steps in this section, overwrite any existing files on your SD card.
 
 1. Insert your SD card into your computer
 1. Copy everything from the Luma3DS `.zip` to the root of your SD card, replacing any existing files
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 1. Power on your console
 1. If your console has booted into the Luma3DS configuration menu, press (Start) to save and reboot
