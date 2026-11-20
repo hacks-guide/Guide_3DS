@@ -12,7 +12,7 @@ The steps detailed here generally assume that your console has a modern custom f
 
 ### Power/notification light indicators
 
-::: details My console powers off when I try to turn it on, and/or the notification LED shows a color on boot
+:::: details My console powers off when I try to turn it on, and/or the notification LED shows a color on boot
 
 There is an issue with your `boot.firm` file. If you're running [boot9strap 1.4](https://github.com/SciresM/boot9strap/releases/tag/1.4), your 3DS notification LED may flash a certain color. This color is used to diagnose issues involving your `boot.firm` file on SD card or internal memory. On older versions of boot9strap, the blue light will power off almost immediately when trying to turn on the console.
 
@@ -26,7 +26,13 @@ You can get a new `boot.firm` file by downloading the [latest release of Luma3DS
 
 If you hear a "popping sound", potentially accompanied with the backlight turning on for a split second, there is a hardware issue with your console (such as a disconnected backlight cable). You may be able to get your console to boot by holding it at certain angles.
 
+::: warning
+
+If your console began to show a magenta or red notification LED on boot out of the blue (i.e., you did not make any changes to `boot.firm`), it may be a sign of hardware (RAM) failure. You can check for RAM failure by following the instructions [here](https://wiki.hacks.guide/wiki/3DS:Hardware_test).
+
 :::
+
+::::
 
 ::: details My console gets stuck on a black screen with blue power light staying on
 
@@ -79,14 +85,18 @@ ARM11 exception handlers are disabled, or custom firmware is not installed. Try 
 
 ::: details HOME Menu is missing installed applications
 
-This could be caused by various reasons, but most likely because your SD card is not being read by the system.
-You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your console is booting from the internal memory and not from the SD card.
-If this is the case, attempt the steps below, which are listed from easiest to hardest:
+This can have multiple causes: most likely your SD card is not being read, you recently attempted to delete an application from System Settings, or the title database was corrupted.
+
+You can check if your SD is being read by holding SELECT on boot and checking the yellow text on the bottom screen; if it says "Booted from CTRNAND via B9S", then your console is booting from the internal memory and not from the SD card. If this is the case, attempt the steps below, which are listed from easiest to hardest:
+
 1. Power off your console, remove the SD card, re-insert it, then power on your console
 1. Power off your console, remove the SD card, insert it on your computer, download the latest release of [Luma3DS](https://github.com/LumaTeam/Luma3DS/releases/latest), extract `boot.firm` from the `Luma3DS.zip` and place it on the root of your SD card (replacing any existing file)
 1. Power off your console, remove the SD card, insert it on your computer and reformat your SD card according to your computer's operating system: [Windows](formatting-sd-(windows)), [macOS](formatting-sd-(mac)), [Linux](formatting-sd-(linux)) *(this will wipe your SD card data)*
 1. Test your SD card for errors by following the guide according to your computer's operating system: [Windows](h2testw-(windows)), [Linux](f3-(linux)), [macOS](f3xswift-(mac)). If your SD card is marked as faulty, then you will have to replace your SD card
 1. Your SD card slot may be broken. Join [Nintendo Homebrew on Discord](https://discord.gg/MWxPgEp) for further assistance
+
+If you instead see "Booted from SD via B9S", your console is reading the SD card and your HOME Menu issues are likely caused by something else. For more information, follow this [wiki page](https://wiki.hacks.guide/wiki/3DS:Missing_Titles).
+
 
 :::
 
