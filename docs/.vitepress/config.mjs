@@ -6,7 +6,7 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vitepress'
 
-import * as i18n from './i18n'
+import * as i18n from './i18n/index.mjs'
 
 process.env.VITE_EXTRA_EXTENSIONS = 'ini,gm9'
 

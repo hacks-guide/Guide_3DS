@@ -1,4 +1,4 @@
-import { it_IT as localeData } from './strings'
+import { it_IT as localeData } from './strings/index.mjs'
 
 const locale = "it_IT";
 
