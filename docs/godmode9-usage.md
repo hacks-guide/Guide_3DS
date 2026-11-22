@@ -38,6 +38,8 @@ Some of the instructions below are only applicable to the latest version of GodM
 1. Insert your SD card into your computer
 1. Copy `GodMode9.firm` from the GodMode9 `.zip` to the `/luma/payloads/` folder on your SD card
 1. Copy the `gm9` folder from the GodMode9 `.zip` to the root of your SD card
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 
 ::: tip
@@ -62,6 +64,8 @@ Your NAND backup has been successfully created.
 1. Power off your console
 1. Insert your SD card into your computer
 1. Copy `<date>_<serialnumber>_sysnand_##.bin` from your computer to the `/gm9/out/` folder on your SD card
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 1. Press and hold (Start), and while holding (Start), power on your console. This will launch GodMode9
 1. Press (Home) to bring up the action menu

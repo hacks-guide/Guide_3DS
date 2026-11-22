@@ -8,6 +8,8 @@
 1. Copy `ctrtransfer.gm9` to the `/gm9/scripts/` folder on your SD card
 1. Copy `FBI.3dsx` to the `/3ds/` folder on your SD card
 1. Copy `faketik.3dsx` to the `/3ds/` folder on your SD card
+1. Eject your SD card from your computer
+    + See [Key Information](key-information#eject-sd-card) if you are unsure how to safely eject an SD card
 1. Reinsert your SD card into your console
 
 ::: info
