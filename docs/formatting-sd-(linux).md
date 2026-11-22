@@ -44,10 +44,12 @@ Several Linux distributions provide more user-friendly methods for formatting SD
     + You can check if they are installed by running `sudo parted --help` and `sudo mkfs.vfat`, respectively
 1. Type `sudo parted /dev/<device name> mklabel msdos`, then press Enter
 1. Type `sudo parted -a opt /dev/<device name> mkpart primary fat32 0% 100%`, then press Enter
-1. Type `sudo mkfs.vfat /dev/<partition name> -s 64`, then press Enter to reformat the new partition
-    + If the SD card is over 64GB in size, use `128` instead of `64`
+1. Depending on the size of your SD card, type the following, then press Enter to reformat the new partition:
+    + 2GB or smaller: `sudo mkfs.vfat /dev/<device name> -s 64 -F 16`
+    + 4GB to 64GB: `sudo mkfs.vfat /dev/<device name> -s 64 -F 32`
+    + 128GB or larger: `sudo mkfs.vfat /dev/<device name> -s 128 -F 32`
 1. Type `sudo eject /dev/<device name>`, press Enter, then remove and reinsert the SD card
-1. If the SD card had any files and folders on it before the format, copy everything back from your computer
+1. If the SD card had any files and folders on it before the format, copy everything from your backup to the SD card
 
 ## Troubleshooting
 
