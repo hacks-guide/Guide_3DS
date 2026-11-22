@@ -37,7 +37,7 @@ If, when the console boots to the HOME Menu, you see the error "Could not detect
 ### Section II - System Version Check
 
 1. Launch System Settings on your console
-1. Your system version will be displayed on the bottom right of the top screen (e.g. "Ver. 11.17.0-50U")
+1. Your system version will be displayed on the bottom right of the top screen (e.g. `Ver. 11.17.0-50U`)
 
 ### Section III - Select a Method
 
@@ -53,5 +53,5 @@ If possible, you should follow the method given by the prompt above.
 
 Otherwise, methods that work on all versions are available, but require additional hardware:
 
-1. [ntrboot](ntrboot) - requires compatible DS flashcart
-1. [Installing boot9strap (Hardmod)](installing-boot9strap-(hardmod)) - requires soldering
++ [ntrboot](ntrboot) - requires compatible DS flashcart
++ [Installing boot9strap (Hardmod)](installing-boot9strap-(hardmod)) - requires soldering
