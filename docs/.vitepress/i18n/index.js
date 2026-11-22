@@ -1,4 +1,5 @@
 import en_US from './en_US'
+import ja_JP from './ja_JP'
 import el_GR from './el_GR'
 import fr_FR from './fr_FR'
 import hu_HU from './hu_HU'
@@ -8,6 +9,7 @@ import pt_BR from './pt_BR'
 
 export { 
     en_US,
+    ja_JP,
     el_GR,
     fr_FR,
     hu_HU,
