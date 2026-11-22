@@ -50,7 +50,6 @@ If you do *not* getting a reset prompt, your SD card needs to be formatted:
 1. Format the SD Card ([Windows](formatting-sd-(windows)), [Linux](formatting-sd-(linux)), [macOS](formatting-sd-(mac)))
 1. Copy everything back
 <!--@include: ./_include/mset9-chorus.md -->
-1. Type the number corresponding to your console model and version, then press Enter
 1. Type `2` then press enter to check the MSET9 status
     + This will create the dummy databases again
 1. Close the MSET9 script window
@@ -82,6 +81,12 @@ If your SD card layout is correct, then your SD card most likely isn't being rea
 ::: details Error 02: Your SD is write protected
 
 Write-protection is enabled on this SD card. If you are using a full-size SD card, ensure that the lock is flipped in the [upright position](/images/sdlock.png). Otherwise, try ejecting and reinserting your SD card.
+
+:::
+
+::: details Error 03: One or more files are missing or malformed!
+
+One or more files that MSET9 needs to run is missing or corrupted. Re-download the [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest) and extract it to the root of your SD card, replacing all existing files, then try again.
 
 :::
 
@@ -121,12 +126,6 @@ At the end of this guide, you will need at least 1.3GB to make a NAND backup, so
 
 :::
 
-::: details Error 07: One or more files are missing or malformed!
-
-One or more files that MSET9 needs to run is missing or corrupted. Re-download the [MSET9 Release `.zip`](https://github.com/hacks-guide/MSET9/releases/latest) and extract it to the root of your SD card, replacing all existing files, then try again.
-
-:::
-
 :::: details Error 18: Windows Locale Settings are broken!
 
 <!--@include: ./_include/winerror234.md -->
@@ -154,11 +153,9 @@ You may be missing `SafeB9S.bin` from the root of your SD card, or the file may 
 1. Force power off your console by holding the Power button for 20 seconds
 1. Insert your SD card into your computer
 <!--@include: ./_include/mset9-chorus.md -->
-1. Type the number corresponding to your console model and version, then press Enter
-    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
-1. Type `4`, then press Enter
-1. Once the window says "Removed trigger file", type `0` and then press Enter
+1. The script will [automatically remove the trigger file](/images/screenshots/mset9/mset9-removed-trigger-file.png)
+    + If you never injected the trigger file in the first place, the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you may [retry Section II](installing-boot9strap-(mset9-cli)#section-ii---mset9)
+1. Type `0` and then press Enter
 1. Reinsert the SD card into your console
 1. Power on your console
 1. Return to [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
@@ -181,11 +178,10 @@ Follow these instructions to remove the trigger file and to retry Section II:
 1. Force power off your console by holding the Power button for 20 seconds
 1. Insert your SD card into your computer
 <!--@include: ./_include/mset9-chorus.md -->
-1. Type the number corresponding to your console model and version, then press Enter
-    + The current state should display [Injected](/images/screenshots/mset9/mset9-injected.png)
-    + If you have already removed the trigger file (or never injected in the first place), the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png), and you are ready to retry Section II
-1. Type `4`, then press Enter
-1. Once the window says "Removed trigger file", type `0` and then press Enter
+1. The script will [automatically remove the trigger file](/images/screenshots/mset9/mset9-removed-trigger-file.png)
+    + If you never injected the trigger file in the first place, the current state will show [Ready](/images/screenshots/mset9/mset9-ready.png)
+    + If you have **selected the wrong console model/version**, type `1` and and press Enter, then select the correct version
+1. Type `0` and then press Enter
 1. Reinsert the SD card into your console
 1. Power on your console
 1. Return to [Section II Step 1](installing-boot9strap-(mset9-cli)#section-ii---mset9)
